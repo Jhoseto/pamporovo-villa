@@ -212,7 +212,7 @@ export function ScrollPanelExperience() {
         <div className="container mx-auto">
           <p className="eyebrow mb-3 text-center text-[var(--gold)]">Виртуална разходка</p>
           <h2 className="mb-16 text-center font-serif text-4xl font-bold text-white md:text-5xl">
-            Обиколка из вилата
+            Нашето предложение
           </h2>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {EXPERIENCE_PANELS.map(panel => (
@@ -246,7 +246,7 @@ export function ScrollPanelExperience() {
         <div className="absolute left-4 top-20 z-20 md:left-10 md:top-24">
           <p className="eyebrow text-[var(--gold)]">Виртуална разходка</p>
           <h2 className="mt-2 font-serif text-2xl font-bold text-white md:text-4xl">
-            Обиколка из вилата
+            Нашето предложение
           </h2>
           <p className="mt-2 max-w-xs text-sm text-white/70">
             Скролирайте, за да разгледате всичко важно във всяка вила

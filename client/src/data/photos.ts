@@ -3,7 +3,9 @@ const P = "/photos" as const;
 
 export type SitePhoto = { src: string; alt: string };
 
-export const HERO_PHOTO: SitePhoto = { src: `${P}/hero.jpg`, alt: "Хол с камина и трапезария" };
+export type HeroPhoto = SitePhoto & { webpSrc: string; pngSrc: string };
+
+export const HERO_PHOTO: HeroPhoto = { src: `${P}/hero.jpg`, webpSrc: `${P}/hero.webp`, pngSrc: `${P}/hero.png`, alt: "Хол с камина и трапезария" };
 
 export const VILLA_PHOTOS: Record<
   "villa-edno" | "villa-dve" | "villa-tri",

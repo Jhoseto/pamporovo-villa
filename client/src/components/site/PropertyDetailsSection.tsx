@@ -8,7 +8,7 @@ export function PropertyDetailsSection() {
       id="about"
       eyebrow="За нас"
       title="Pamporovo Villa"
-      subtitle="Три еднотипни вили в к.к. Пампорово — Вила едно, Вила две и Вила три"
+      subtitle="Три вили под наем в к.к. Пампорово "
       overlap
       splitTitle
     >
@@ -17,10 +17,6 @@ export function PropertyDetailsSection() {
           <p>{VILLA_ABOUT.intro}</p>
           <p>{VILLA_ABOUT.details}</p>
           <p>{VILLA_ABOUT.hosts}</p>
-          <p className="text-base text-muted-foreground">
-            Разгледайте всяка вила в секцията{" "}
-            <strong className="text-foreground">3D преживяване</strong> по-долу.
-          </p>
         </div>
       </ScrollReveal>
 

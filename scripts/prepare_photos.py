@@ -102,20 +102,31 @@ def resolve(num: int) -> Path:
     return match
 
 
-def save_jpg(src: Path, dest: Path, max_width: int = 1920) -> None:
+def save_jpg(src: Path, dest: Path, max_width: int = 1920, quality: int = 86) -> None:
     with Image.open(src) as im:
         im = im.convert("RGB")
         if im.width > max_width:
             ratio = max_width / im.width
             im = im.resize((max_width, int(im.height * ratio)), Image.Resampling.LANCZOS)
         dest.parent.mkdir(parents=True, exist_ok=True)
-        im.save(dest, "JPEG", quality=86, optimize=True)
+        im.save(dest, "JPEG", quality=quality, optimize=True)
+
+
+def save_hero_assets(src: Path, out_dir: Path) -> None:
+    """Hero at native resolution — PNG/WebP avoid extra JPEG artifacts on full-screen."""
+    out_dir.mkdir(parents=True, exist_ok=True)
+    with Image.open(src) as im:
+        rgb = im.convert("RGB")
+        rgb.save(out_dir / "hero.jpg", "JPEG", quality=95, subsampling=0, optimize=True)
+        rgb.save(out_dir / "hero.webp", "WEBP", quality=92, method=6)
+        rgb.save(out_dir / "hero.png", optimize=True)
 
 
 def main() -> None:
     if OUT.exists():
-        for f in OUT.glob("*.jpg"):
-            f.unlink()
+        for f in OUT.iterdir():
+            if f.suffix.lower() in {".jpg", ".webp", ".png"}:
+                f.unlink()
 
     index_map: dict[int, str] = {}
 
@@ -124,8 +135,7 @@ def main() -> None:
         save_jpg(resolve(num), dest)
         index_map[num] = f"/photos/{num:02d}.jpg"
 
-    hero_src = OUT / "hero.jpg"
-    save_jpg(resolve(HERO_NUM), hero_src, max_width=2400)
+    save_hero_assets(resolve(HERO_NUM), OUT)
 
     for villa_id, num in VILLA_NUMS.items():
         save_jpg(resolve(num), OUT / f"{villa_id}.jpg", max_width=1920)
@@ -136,7 +146,9 @@ def main() -> None:
         "",
         "export type SitePhoto = { src: string; alt: string };",
         "",
-        f'export const HERO_PHOTO: SitePhoto = {{ src: `${{P}}/hero.jpg`, alt: "{ALTS[HERO_NUM]}" }};',
+        "export type HeroPhoto = SitePhoto & { webpSrc: string; pngSrc: string };",
+        "",
+        f'export const HERO_PHOTO: HeroPhoto = {{ src: `${{P}}/hero.jpg`, webpSrc: `${{P}}/hero.webp`, pngSrc: `${{P}}/hero.png`, alt: "{ALTS[HERO_NUM]}" }};',
         "",
         "export const VILLA_PHOTOS: Record<",
         '  "villa-edno" | "villa-dve" | "villa-tri",',

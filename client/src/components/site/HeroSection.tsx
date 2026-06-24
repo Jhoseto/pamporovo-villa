@@ -34,18 +34,23 @@ export function HeroSection() {
     <section
       ref={ref}
       id="hero"
-      className="relative flex min-h-[100svh] items-center justify-center overflow-hidden bg-[var(--ink)] md:min-h-[700px]"
+      className="relative flex h-[100dvh] min-h-[100dvh] w-full items-center justify-center overflow-hidden bg-[var(--ink)]"
     >
       <motion.div
         className="absolute inset-0 will-change-transform"
         style={reducedMotion ? undefined : { y: bgY }}
       >
-        <div
-          className="ken-burns h-full w-full bg-cover bg-center"
-          style={{ backgroundImage: `url(${HERO_PHOTO.src})` }}
-          role="img"
-          aria-label={HERO_PHOTO.alt}
-        />
+        <picture className="block h-full w-full">
+          <source srcSet={HERO_PHOTO.webpSrc} type="image/webp" />
+          <img
+            src={HERO_PHOTO.pngSrc}
+            alt={HERO_PHOTO.alt}
+            className="hero-photo h-full w-full object-cover object-center"
+            fetchPriority="high"
+            decoding="async"
+            draggable={false}
+          />
+        </picture>
       </motion.div>
 
       <motion.div
@@ -123,8 +128,7 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: siteReady ? 0.9 : 0, ease: [0.22, 1, 0.36, 1] }}
         >
-          Три еднотипни вили под наем в к.к. Пампорово — Вила едно, Вила две и
-          Вила три, в най-слънчевия планински курорт в България
+          Три вили под наем в най-слънчевия планински курорт в България
         </motion.p>
 
         <motion.div

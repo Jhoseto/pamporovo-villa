@@ -11,13 +11,13 @@ import {
   Wifi,
 } from "lucide-react";
 
-export type { SitePhoto } from "./photos";
+export type { HeroPhoto, SitePhoto } from "./photos";
 export { GALLERY_IMAGES, HERO_PHOTO, VILLA_PHOTOS } from "./photos";
 
 export const SITE = {
   name: "Pamporovo Villa",
   nameBg: "Pamporovo Villa",
-  tagline: "3 еднотипни вили под наем",
+  tagline: "3 вили под наем",
   location: "к.к. Пампорово · местност Райковски ливади",
   logo: "/logo.png",
   email: "pamporovovilla@gmail.com",
@@ -68,7 +68,7 @@ export const VILLAS: Villa[] = [
 
 export const VILLA_ABOUT = {
   intro:
-    "Добре дошли в Pamporovo Villa — три еднотипни луксозни вили в к.к. Пампорово, в тиха борова гора, в най-слънчевия курорт в България. Подходящи както за зимна, така и за незабравима лятна почивка.",
+    "Добре дошли в Pamporovo Villa — три луксозни вили в к.к. Пампорово, в тиха борова гора, в най-слънчевия курорт в България. Подходящи както за зимна, така и за незабравима лятна почивка.",
   details:
     "Посрещаме гостите си целогодишно. Всяка вила е напълно обзаведена с много любов и внимание към всеки детайл, за да се чувствате уютно като вкъщи.",
   layout:
@@ -89,8 +89,8 @@ export type Amenity = {
 export const AMENITIES: Amenity[] = [
   {
     icon: Home,
-    title: "3 еднотипни вили",
-    description: "Вила едно, Вила две и Вила три — всяка с 2 спални и до 6 гости",
+    title: "3 вили",
+    description: "Вила 1, Вила 2 и Вила 3 — всяка с 2 спални и до 6 гости",
   },
   {
     icon: Flame,
@@ -215,8 +215,8 @@ export const HOUSE_RULES = {
   highlights: [
     "Вилата работи 24/7, целогодишно. При настаняване е необходим документ за самоличност.",
     "Късно освобождаване след 11:00 е безплатно при налична възможност.",
-    "Дърва за камината: 15 лв. на торба — по заявка или при настаняване.",
-    "Тихи часове: 23:00 – 07:00. Пушене във вилата е забранено (освен на двете тераси) — глоба 100 лв.",
+    "Дърва за камината: 10 евро на торба — по заявка или при настаняване.",
+    "Тихи часове: 23:00 – 07:00. Пушене във вилата е забранено (освен на двете тераси) — глоба 50 евро",
     "Без домашни любимци. На терена има видеонаблюдение.",
   ],
   prohibited: [
@@ -240,7 +240,7 @@ export const CONTACT = {
   phone: "+359879501660",
   phoneDisplay: "+359 879 501 660",
   email: SITE.email,
-  address: "к.к. Пампорово, п.к. 4870, местност Райковски ливади",
+  address: "к.к. Пампорово, местност Райковски ливади",
 };
 
 export const PROPERTY_LOCATION = {
@@ -250,10 +250,10 @@ export const PROPERTY_LOCATION = {
 };
 
 export const DISTANCES = [
-  { label: "До центъра на Пампорово", value: "2 км" },
-  { label: "До Смолян", value: "10 км" },
-  { label: "До Пловдив", value: "85 км" },
-  { label: "До София", value: "220 км" },
+  { value: "2 км", label: "До центъра на Пампорово" },
+  { value: "10 км", label: "От Смолян" },
+  { value: "85 км", label: "От Пловдив" },
+  { value: "220 км", label: "От София" },
 ];
 
 export const PAMPOROVO_INFO =

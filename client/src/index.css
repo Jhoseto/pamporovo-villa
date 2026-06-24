@@ -283,6 +283,12 @@
       0 32px 80px -20px oklch(0.55 0.15 50 / 0.15);
   }
 
+  .hero-photo {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    image-rendering: auto;
+  }
+
   .ken-burns {
     animation: ken-burns 22s ease-in-out infinite alternate;
   }
