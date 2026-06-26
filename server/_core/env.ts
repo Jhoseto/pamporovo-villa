@@ -1,10 +1,17 @@
+import dotenv from "dotenv";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const envPath = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../../.env");
+dotenv.config({ path: envPath, quiet: true });
+
 export const ENV = {
-  appId: process.env.VITE_APP_ID ?? "",
-  cookieSecret: process.env.JWT_SECRET ?? "",
   databaseUrl: process.env.DATABASE_URL ?? "",
-  oAuthServerUrl: process.env.OAUTH_SERVER_URL ?? "",
-  ownerOpenId: process.env.OWNER_OPEN_ID ?? "",
+  jwtSecret: process.env.JWT_SECRET ?? "",
   isProduction: process.env.NODE_ENV === "production",
-  forgeApiUrl: process.env.BUILT_IN_FORGE_API_URL ?? "",
-  forgeApiKey: process.env.BUILT_IN_FORGE_API_KEY ?? "",
+  vapidPublicKey: process.env.VAPID_PUBLIC_KEY ?? "",
+  vapidPrivateKey: process.env.VAPID_PRIVATE_KEY ?? "",
+  vapidSubject: process.env.VAPID_SUBJECT ?? "mailto:pamporovovilla@gmail.com",
+  masterAdminUsername: process.env.MASTER_ADMIN_USERNAME ?? "Rado",
+  masterAdminPassword: process.env.MASTER_ADMIN_PASSWORD ?? "Admin2626",
 };

@@ -64,14 +64,16 @@ export function Preloader({ onComplete }: PreloaderProps) {
           <motion.img
             src={SITE.logo}
             alt={SITE.name}
-            className="relative h-16 w-auto md:h-20"
+            width={1024}
+            height={250}
+            className="preloader-logo relative w-auto md:h-20"
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           />
 
           <motion.p
-            className="eyebrow relative mt-4 text-white/40"
+            className="preloader-tagline eyebrow relative mt-4 text-white/40"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
@@ -79,7 +81,7 @@ export function Preloader({ onComplete }: PreloaderProps) {
             {SITE.tagline} · {SITE.location}
           </motion.p>
 
-          <div className="relative mt-12 h-0.5 w-48 overflow-hidden rounded-full bg-white/10">
+          <div className="preloader-progress relative mt-12 h-0.5 w-48 overflow-hidden rounded-full bg-white/10">
             <div
               className="h-full rounded-full bg-gradient-to-r from-[var(--gold)]/50 via-[var(--gold)] to-[var(--gold)]/50 transition-[width] duration-100"
               style={{ width: `${progress}%` }}

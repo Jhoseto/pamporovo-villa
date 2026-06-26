@@ -1,4 +1,4 @@
-import { MapPin, Navigation } from "lucide-react";
+import { ExternalLink, MapPin, Navigation } from "lucide-react";
 import { CONTACT, DISTANCES, PAMPOROVO_INFO, PROPERTY_LOCATION } from "@/data/siteContent";
 import { MapView } from "@/components/Map";
 import { SectionShell } from "./SectionShell";
@@ -9,8 +9,9 @@ export function LocationSection() {
     <SectionShell
       id="location"
       eyebrow="Локация"
-      title="Къде се намираме"
-      subtitle="к.к. Пампорово, местност Райковски ливади — в тиха борова гора"
+      title="На крачка от всичко, далеч от шума"
+      subtitle="к.к. Пампорово, местност Райковски ливади — сгушени в боровата гора"
+      overlap
     >
       <ScrollReveal className="mb-10">
         <p className="mx-auto max-w-3xl text-center text-lg leading-relaxed text-foreground/75">
@@ -18,47 +19,60 @@ export function LocationSection() {
         </p>
       </ScrollReveal>
 
-      <div className="grid items-stretch gap-8 lg:grid-cols-[1fr_360px]">
-        <ScrollReveal direction="left">
-          <div className="overflow-hidden rounded-3xl border border-border/60 shadow-[0_32px_80px_-20px_rgba(0,0,0,0.15)]">
+      <ScrollReveal>
+        <div className="mx-auto max-w-6xl overflow-hidden rounded-3xl border border-border/50 shadow-[0_24px_60px_-24px_rgba(0,0,0,0.15)]">
+          <div className="relative">
             <MapView
-              className="h-[420px] md:h-[500px]"
+              variant="premium"
+              className="w-full"
               initialCenter={{ lat: PROPERTY_LOCATION.lat, lng: PROPERTY_LOCATION.lng }}
-              initialZoom={14}
+              initialZoom={PROPERTY_LOCATION.zoom}
               mapTitle={PROPERTY_LOCATION.label}
-              onMapReady={map => {
-                if (!window.google?.maps?.marker) return;
-                new window.google.maps.marker.AdvancedMarkerElement({
-                  map,
-                  position: { lat: PROPERTY_LOCATION.lat, lng: PROPERTY_LOCATION.lng },
-                  title: PROPERTY_LOCATION.label,
-                });
-              }}
             />
-          </div>
-        </ScrollReveal>
 
-        <ScrollReveal direction="right" delay={120} className="flex flex-col gap-4">
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-black/70 via-black/35 to-transparent p-6 pt-14 md:p-8 md:pt-16">
+              <div className="pointer-events-auto flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+                <div className="max-w-md">
+                  <p className="eyebrow mb-2 text-[var(--gold)]">Pamporovo Villa</p>
+                  <p className="font-serif text-xl font-bold text-white md:text-2xl">
+                    {PROPERTY_LOCATION.label}
+                  </p>
+                  <p className="mt-2 font-display text-sm leading-relaxed tracking-wide text-white/80 md:text-base">
+                    {CONTACT.address}
+                  </p>
+                </div>
+                <a
+                  href={PROPERTY_LOCATION.directionsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="premium-btn inline-flex shrink-0 items-center justify-center gap-2 self-start px-6 py-3.5 text-sm sm:self-auto"
+                >
+                  <Navigation className="h-4 w-4" />
+                  Навигирай до нас
+                  <ExternalLink className="h-3.5 w-3.5 opacity-70" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ScrollReveal>
+
+      <ScrollReveal delay={120} className="mt-8 md:mt-10">
+        <div className="mx-auto grid max-w-6xl grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
           {DISTANCES.map(item => (
-            <div key={item.label} className="floating-card flex items-center gap-4 p-6">
-              <div className="rounded-full bg-primary/10 p-3 text-primary">
-                <Navigation className="h-5 w-5" />
+            <div
+              key={item.label}
+              className="floating-card flex flex-col items-center p-5 text-center md:p-6"
+            >
+              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-full border border-[var(--gold)]/30 bg-[var(--gold)]/10">
+                <MapPin className="h-4 w-4 text-[var(--gold)]" />
               </div>
-              <div>
-                <p className="eyebrow text-muted-foreground">{item.label}</p>
-                <p className="font-serif text-2xl font-bold">{item.value}</p>
-              </div>
+              <p className="font-serif text-2xl font-bold text-foreground md:text-3xl">{item.value}</p>
+              <p className="eyebrow mt-2 text-muted-foreground">{item.label}</p>
             </div>
           ))}
-          <div className="floating-card flex items-start gap-4 p-6">
-            <MapPin className="mt-1 h-6 w-6 shrink-0 text-primary" />
-            <div>
-              <p className="font-semibold">{PROPERTY_LOCATION.label}</p>
-              <p className="text-foreground/70">{CONTACT.address}</p>
-            </div>
-          </div>
-        </ScrollReveal>
-      </div>
+        </div>
+      </ScrollReveal>
     </SectionShell>
   );
 }

@@ -5,10 +5,9 @@ import { createServer } from "http";
 import net from "net";
 import path from "path";
 import { createExpressMiddleware } from "@trpc/server/adapters/express";
-import { registerOAuthRoutes } from "./oauth";
-import { registerStorageProxy } from "./storageProxy";
 import { appRouter } from "../routers";
 import { createContext } from "./context";
+import { runSeedIfNeeded } from "../seed";
 import { serveStatic, setupVite } from "./vite";
 
 dotenv.config({ path: path.resolve(import.meta.dirname, "../../.env"), quiet: true });
@@ -33,14 +32,12 @@ async function findAvailablePort(startPort: number = 3000): Promise<number> {
 }
 
 async function startServer() {
+  await runSeedIfNeeded();
+
   const app = express();
   const server = createServer(app);
-  // Configure body parser with larger size limit for file uploads
   app.use(express.json({ limit: "50mb" }));
   app.use(express.urlencoded({ limit: "50mb", extended: true }));
-  registerStorageProxy(app);
-  registerOAuthRoutes(app);
-  // tRPC API
   app.use(
     "/api/trpc",
     createExpressMiddleware({
@@ -48,17 +45,10 @@ async function startServer() {
       createContext,
     })
   );
-  const distPublicPath = path.resolve(
-    import.meta.dirname,
-    "../..",
-    "dist",
-    "public"
-  );
-  const hasProductionBuild = fs.existsSync(
-    path.join(distPublicPath, "index.html")
-  );
-  const useVite =
-    process.env.NODE_ENV !== "production" || !hasProductionBuild;
+
+  const distPublicPath = path.resolve(import.meta.dirname, "../..", "dist", "public");
+  const hasProductionBuild = fs.existsSync(path.join(distPublicPath, "index.html"));
+  const useVite = process.env.NODE_ENV !== "production" || !hasProductionBuild;
 
   if (useVite) {
     await setupVite(app, server);

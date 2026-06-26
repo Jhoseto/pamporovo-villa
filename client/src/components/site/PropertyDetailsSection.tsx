@@ -7,8 +7,8 @@ export function PropertyDetailsSection() {
     <SectionShell
       id="about"
       eyebrow="За нас"
-      title="Pamporovo Villa"
-      subtitle="Три вили под наем в к.к. Пампорово "
+      title="Вашият дом високо в Родопите"
+      subtitle="Три вили, една грижа — да се чувствате като у дома"
       overlap
       splitTitle
     >
@@ -24,7 +24,7 @@ export function PropertyDetailsSection() {
         {PROPERTY_STATS.map((stat, i) => (
           <ScrollReveal key={stat.label} delay={i * 100}>
             <div className="text-center">
-              <p className="font-serif text-4xl font-bold text-primary md:text-5xl">{stat.suffix}</p>
+              <p className="font-serif text-4xl font-bold text-[var(--gold)] md:text-5xl">{stat.suffix}</p>
               <p className="eyebrow mt-3 text-muted-foreground">{stat.label}</p>
             </div>
           </ScrollReveal>

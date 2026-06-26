@@ -40,6 +40,13 @@ export function MagneticButton({
   };
 
   const isFullWidth = className?.includes("w-full");
+  const hasResponsiveWidth = /\b(?:sm|md|lg|xl|2xl):w-auto\b/.test(className ?? "");
+
+  const wrapperClassName = cn(
+    isFullWidth && hasResponsiveWidth && "block w-full sm:inline-block sm:w-auto",
+    isFullWidth && !hasResponsiveWidth && "block w-full",
+    !isFullWidth && "inline-block"
+  );
 
   if (reducedMotion) {
     return (
@@ -52,7 +59,7 @@ export function MagneticButton({
   return (
     <motion.div
       ref={ref}
-      className={cn(isFullWidth ? "block w-full" : "inline-block")}
+      className={wrapperClassName}
       style={{ x: springX, y: springY }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}

@@ -1,0 +1,23 @@
+# Опционално: локален MySQL без XAMPP/Laragon
+# Изисква Docker Desktop. После:
+#   docker compose up -d
+#   DATABASE_URL=mysql://pamporovo:pamporovo@127.0.0.1:3306/pamporovo_villa
+#   pnpm db:push
+
+services:
+  mysql:
+    image: mysql:8.4
+    restart: unless-stopped
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: pamporovo_villa
+      MYSQL_USER: pamporovo
+      MYSQL_PASSWORD: pamporovo
+    volumes:
+      - pamporovo_mysql_data:/var/lib/mysql
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+
+volumes:
+  pamporovo_mysql_data:

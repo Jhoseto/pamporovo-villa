@@ -1,18 +1,17 @@
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
-import { ChevronDown, Sparkles, Tag } from "lucide-react";
+import { ChevronDown, Sparkles } from "lucide-react";
 import { useRef } from "react";
 import { HERO_PHOTO, SITE } from "@/data/siteContent";
-import { useOffersModal } from "@/contexts/OffersModalContext";
 import { useSiteReady } from "@/contexts/SiteReadyContext";
 import { scrollToSection } from "@/lib/scroll";
 import { GoldenParticles } from "./GoldenParticles";
+import { HeroContactWidget, HeroGlassPanel, HeroWeatherWidget } from "./HeroGlassWidgets";
 import { MagneticButton } from "./MagneticButton";
 import { SplitText } from "./SplitText";
 
 export function HeroSection() {
   const ref = useRef<HTMLElement>(null);
   const siteReady = useSiteReady();
-  const { openOffers } = useOffersModal();
   const reducedMotion = useReducedMotion();
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -34,7 +33,7 @@ export function HeroSection() {
     <section
       ref={ref}
       id="hero"
-      className="relative flex h-[100dvh] min-h-[100dvh] w-full items-center justify-center overflow-hidden bg-[var(--ink)]"
+      className="hero-section relative flex w-full flex-col items-stretch justify-center overflow-hidden bg-[var(--ink)]"
     >
       <motion.div
         className="absolute inset-0 will-change-transform"
@@ -64,25 +63,33 @@ export function HeroSection() {
       <GoldenParticles />
       <div className="film-grain pointer-events-none absolute inset-0" />
 
-      {!reducedMotion && siteReady && (
+      {siteReady && (
         <>
           <motion.div
-            className="glass-panel absolute left-[8%] top-[20%] hidden h-28 w-44 rounded-2xl border-white/10 md:block"
-            initial={{ opacity: 0, x: -40, rotateY: -15 }}
+            className="hero-glass-float-left absolute left-[6%] top-[18%] z-[5] hidden w-[14.75rem] lg:block"
+            initial={motionInitial ?? { opacity: 0, x: -40, rotateY: -12 }}
             animate={{ opacity: 1, x: 0, rotateY: 0 }}
-            transition={{ duration: 1.2, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          />
+            transition={{ duration: 1.2, delay: reducedMotion ? 0 : 0.6, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <HeroGlassPanel>
+              <HeroWeatherWidget />
+            </HeroGlassPanel>
+          </motion.div>
           <motion.div
-            className="glass-panel absolute bottom-[25%] right-[6%] hidden h-36 w-52 rounded-2xl border-white/10 md:block"
-            initial={{ opacity: 0, x: 40, rotateY: 15 }}
+            className="hero-glass-float-right absolute bottom-[22%] right-[5%] z-[5] hidden w-[16.5rem] lg:block"
+            initial={motionInitial ?? { opacity: 0, x: 40, rotateY: 12 }}
             animate={{ opacity: 1, x: 0, rotateY: 0 }}
-            transition={{ duration: 1.2, delay: 0.9, ease: [0.22, 1, 0.36, 1] }}
-          />
+            transition={{ duration: 1.2, delay: reducedMotion ? 0 : 0.9, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <HeroGlassPanel>
+              <HeroContactWidget />
+            </HeroGlassPanel>
+          </motion.div>
         </>
       )}
 
       <motion.div
-        className="relative z-10 mx-auto max-w-5xl px-6 py-24 text-center text-white"
+        className="hero-content relative z-10 mx-auto flex w-full max-w-5xl flex-1 flex-col justify-center px-[max(1rem,env(safe-area-inset-left,0px))] pb-[calc(4.5rem+env(safe-area-inset-bottom,0px))] pt-[calc(5rem+env(safe-area-inset-top,0px))] text-center text-white sm:px-6 sm:pb-20 md:px-6 md:py-24"
         style={reducedMotion ? undefined : { y: contentY, opacity: contentOpacity }}
       >
         <motion.div
@@ -90,13 +97,15 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
-          <p className="eyebrow mb-6 inline-flex items-center gap-2 text-[var(--gold)]">
-            <Sparkles className="h-3.5 w-3.5" />
-            Смолян · Пампорово · {SITE.tagline}
+          <p className="eyebrow mx-auto mb-4 max-w-[16rem] text-[0.65rem] leading-relaxed text-[var(--gold)] sm:mb-6 sm:max-w-none sm:text-[0.7rem]">
+            <span className="inline-flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
+              <Sparkles className="h-3 w-3 shrink-0 sm:h-3.5 sm:w-3.5" />
+              <span>Смолян · Пампорово · {SITE.tagline}</span>
+            </span>
           </p>
         </motion.div>
 
-        <h1 className="mb-8 font-serif text-5xl font-bold leading-[1.05] tracking-tight md:text-7xl lg:text-8xl">
+        <h1 className="mb-5 font-serif text-[2.15rem] font-bold leading-[1.08] tracking-tight sm:mb-8 sm:text-5xl md:text-7xl lg:text-8xl">
           {siteReady ? (
             <>
               <SplitText
@@ -123,23 +132,23 @@ export function HeroSection() {
         </h1>
 
         <motion.p
-          className="mx-auto mb-12 max-w-2xl text-lg font-light leading-relaxed text-white/85 md:text-xl"
+          className="hero-subtitle mx-auto mb-7 max-w-[20rem] text-[0.9375rem] font-light leading-relaxed text-white/85 sm:mb-10 sm:max-w-2xl sm:text-lg md:text-xl"
           initial={entrance(0.35)}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: siteReady ? 0.9 : 0, ease: [0.22, 1, 0.36, 1] }}
         >
-          Три вили под наем в най-слънчевия планински курорт в България
+          Три самостоятелни вили сред боровете на Пампорово — вашият дом в планината, през цялата година
         </motion.p>
 
         <motion.div
-          className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:flex-wrap"
+          className="hero-actions mx-auto flex w-full max-w-xs flex-col items-stretch gap-2.5 sm:max-w-none sm:flex-row sm:flex-nowrap sm:items-center sm:justify-center sm:gap-4"
           initial={entrance(0.5)}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: siteReady ? 1.05 : 0, ease: [0.22, 1, 0.36, 1] }}
         >
           <MagneticButton
             size="lg"
-            className="premium-btn px-10 py-7 text-lg"
+            className="premium-btn h-auto min-h-[2.875rem] w-full px-5 py-3.5 text-sm sm:w-auto sm:min-h-0 sm:px-10 sm:py-7 sm:text-lg"
             onClick={() => scrollToSection("experience")}
           >
             Започни разходката
@@ -147,33 +156,37 @@ export function HeroSection() {
           <MagneticButton
             size="lg"
             variant="outline"
-            className="border-white/30 bg-white/5 px-10 py-7 text-lg text-white backdrop-blur-sm hover:bg-white/10 hover:text-white"
+            className="h-auto min-h-[2.875rem] w-full border-white/30 bg-white/5 px-5 py-3.5 text-sm text-white backdrop-blur-sm hover:bg-white/10 hover:text-white sm:w-auto sm:min-h-0 sm:px-10 sm:py-7 sm:text-lg"
             onClick={() => scrollToSection("booking")}
           >
             Резервирай
           </MagneticButton>
-          <MagneticButton
-            size="lg"
-            variant="outline"
-            className="border-[var(--gold)]/50 bg-[var(--gold)]/10 px-8 py-7 text-lg text-[var(--gold)] backdrop-blur-sm hover:bg-[var(--gold)]/20 hover:text-[var(--gold)]"
-            onClick={openOffers}
-          >
-            <Tag className="mr-2 h-4 w-4" />
-            Топ оферти
-          </MagneticButton>
         </motion.div>
+
+        {siteReady && (
+          <motion.div
+            className="mx-auto mt-6 w-full max-w-sm lg:hidden"
+            initial={entrance(0.62)}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: siteReady && !reducedMotion ? 1.15 : 0, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <HeroGlassPanel>
+              <HeroContactWidget />
+            </HeroGlassPanel>
+          </motion.div>
+        )}
       </motion.div>
 
       <motion.button
         type="button"
         onClick={() => scrollToSection("experience")}
-        className="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2 text-white/70 transition hover:text-white md:bottom-10"
+        className="absolute bottom-[max(1rem,env(safe-area-inset-bottom,0px))] left-1/2 z-10 hidden -translate-x-1/2 flex-col items-center gap-1.5 text-white/70 transition hover:text-white sm:flex md:bottom-10"
         initial={motionInitial}
         animate={{ opacity: 1 }}
         transition={{ delay: siteReady ? 1.4 : 0 }}
         aria-label="Продължи към разходката"
       >
-        <span className="eyebrow text-[10px]">Скрол</span>
+        <span className="eyebrow text-[10px]">Надолу</span>
         <ChevronDown className="h-6 w-6 animate-bounce motion-reduce:animate-none" />
       </motion.button>
     </section>

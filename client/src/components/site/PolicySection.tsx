@@ -6,17 +6,21 @@ export function PolicySection() {
   return (
     <SectionShell
       id="policy"
-      eyebrow="Политика"
-      title="Политика на Pamporovo Villa"
-      subtitle="Моля, запознайте се с правилата преди настаняване"
+      eyebrow="Добре е да знаете"
+      title="Няколко думи преди да дойдете"
+      subtitle="Кратки и ясни правила, за да е спокойно и приятно за всички"
       dark
+      darkOverlap
     >
       <div className="grid gap-8 lg:grid-cols-2">
         <ScrollReveal direction="left">
           <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm">
             <h3 className="mb-4 font-serif text-xl font-bold text-white">Настаняване и престой</h3>
+            <p className="mb-4 text-white/65">
+              Искаме престоят ви да е лек и безгрижен — затова държим нещата прости и прозрачни.
+            </p>
             <p className="mb-4 text-white/70">
-              Check-in: <strong className="text-white">{HOUSE_RULES.checkIn}</strong> · Check-out:{" "}
+              Настаняване: <strong className="text-white">{HOUSE_RULES.checkIn}</strong> · Напускане:{" "}
               <strong className="text-white">{HOUSE_RULES.checkOut}</strong>
             </p>
             <ul className="space-y-3 text-white/75">
@@ -32,7 +36,7 @@ export function PolicySection() {
 
         <ScrollReveal direction="right" delay={120}>
           <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm">
-            <h3 className="mb-4 font-serif text-xl font-bold text-white">Забранено</h3>
+            <h3 className="mb-4 font-serif text-xl font-bold text-white">Молим ви да избягвате</h3>
             <ul className="space-y-3 text-white/75">
               {HOUSE_RULES.prohibited.map(rule => (
                 <li key={rule} className="flex gap-2">
@@ -42,8 +46,8 @@ export function PolicySection() {
               ))}
             </ul>
             <p className="mt-6 text-sm text-white/50">
-              Благодарим ви, че избрахте Pamporovo Villa. Гостите, нарушаващи правилата, могат да
-              бъдат настанени да напуснат без възстановяване на сумата.
+              Благодарим ви, че избрахте Pamporovo Villa. Грижата за дома е взаимна — пазейки го,
+              го пазим хубав за всеки следващ гост. Имате въпрос? Винаги сме насреща.
             </p>
           </div>
         </ScrollReveal>

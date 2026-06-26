@@ -7,9 +7,11 @@ export function AmenitiesSection() {
     <SectionShell
       id="amenities"
       eyebrow="Удобства"
-      title="Удобства и услуги"
-      subtitle="Всяко пространство е проектирано за пълен комфорт и релакс"
+      title="Всичко необходимо за един спокоен престой"
+      subtitle="Помислили сме за дребните неща, за да можете вие да мислите само за почивката"
+      backgroundImage="/photos/56.jpg"
       dark
+      darkOverlap
       splitTitle
     >
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">

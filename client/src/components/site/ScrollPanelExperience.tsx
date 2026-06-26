@@ -5,8 +5,10 @@ import {
   useTransform,
   type MotionValue,
 } from "framer-motion";
+import { ChevronDown, ChevronUp } from "lucide-react";
 import { useRef, useState } from "react";
 import { EXPERIENCE_PANELS, type ExperiencePanel } from "@/data/experiencePanels";
+import { skipExperienceTour } from "@/lib/scroll";
 import { cn } from "@/lib/utils";
 
 function PanelLayer({
@@ -71,7 +73,7 @@ function PanelLayer({
       >
         {/* Background depth layer */}
         <motion.div
-          className="absolute -inset-4 rounded-[2rem] border border-white/10 bg-white/5 backdrop-blur-sm"
+          className="pointer-events-none absolute -inset-4 rounded-[2rem] border border-white/10 bg-white/[0.03]"
           style={{ translateZ: depthPanelZ, rotateZ: index % 2 === 0 ? -2 : 2 }}
         />
 
@@ -108,15 +110,6 @@ function PanelLayer({
                 </p>
               </div>
             </div>
-
-            {/* Decorative frame overlap */}
-            <div
-              className={cn(
-                "pointer-events-none absolute h-32 w-48 rounded-2xl border border-white/20 bg-white/5 backdrop-blur-md",
-                index % 2 === 0 ? "-left-4 top-12" : "-right-4 bottom-32"
-              )}
-              style={{ transform: `translateZ(40px)` }}
-            />
           </div>
 
           {/* Overlapping side panel — highlights (outside clip) */}
@@ -184,6 +177,36 @@ function ScrollProgress({
   );
 }
 
+function SkipTourButton({
+  direction,
+  className,
+}: {
+  direction: "up" | "down";
+  className?: string;
+}) {
+  const isUp = direction === "up";
+  const Icon = isUp ? ChevronUp : ChevronDown;
+  const label = isUp ? "Продължете нагоре" : "Продължете надолу";
+
+  return (
+    <button
+      type="button"
+      onClick={() => skipExperienceTour(direction)}
+      aria-label={isUp ? "Пропусни разходката и продължи нагоре" : "Пропусни разходката и продължи надолу"}
+      className={cn(
+        "eyebrow z-30 flex items-center gap-2 rounded-full border border-white/20 bg-black/45 px-4 py-2.5 text-[10px] text-white/75 backdrop-blur-md transition",
+        "hover:border-[var(--gold)]/50 hover:bg-black/60 hover:text-white",
+        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--gold)]/60",
+        className
+      )}
+    >
+      {isUp && <Icon className="h-3.5 w-3.5 shrink-0" aria-hidden />}
+      {label}
+      {!isUp && <Icon className="h-3.5 w-3.5 shrink-0" aria-hidden />}
+    </button>
+  );
+}
+
 export function ScrollPanelExperience() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -204,15 +227,16 @@ export function ScrollPanelExperience() {
     setActiveIndex(idx);
   });
 
-  const scrollHintOpacity = useTransform(scrollYProgress, [0.85, 1], [1, 0]);
+  const headerOpacity = useTransform(scrollYProgress, [0, 0.06, 0.12], [1, 0.4, 0]);
+  const headerY = useTransform(scrollYProgress, [0, 0.12], [0, -16]);
 
   if (reducedMotion) {
     return (
-      <section id="experience" className="immersive-section bg-[var(--ink)] py-24">
+      <section id="experience" className="scroll-section-fullscreen immersive-section bg-[var(--ink)] py-24">
         <div className="container mx-auto">
           <p className="eyebrow mb-3 text-center text-[var(--gold)]">Виртуална разходка</p>
           <h2 className="mb-16 text-center font-serif text-4xl font-bold text-white md:text-5xl">
-            Нашето предложение
+            Влезте, преди да сте дошли
           </h2>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {EXPERIENCE_PANELS.map(panel => (
@@ -235,23 +259,29 @@ export function ScrollPanelExperience() {
     <section
       id="experience"
       ref={containerRef}
-      className="relative bg-[var(--ink)]"
-      style={{ height: `${EXPERIENCE_PANELS.length * 100}vh` }}
+      className="scroll-section-fullscreen relative bg-[var(--ink)]"
+      style={{ height: `${EXPERIENCE_PANELS.length * 100}dvh` }}
       aria-label="Виртуална 3D разходка"
     >
-      <div className="relative sticky top-0 h-screen overflow-x-hidden">
+      <div
+        id="experience-viewport"
+        className="relative sticky top-0 h-[100dvh] min-h-[100dvh] overflow-x-hidden"
+      >
         <div className="ambient-grid absolute inset-0 opacity-30" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,var(--ink)_75%)]" />
 
-        <div className="absolute left-4 top-20 z-20 md:left-10 md:top-24">
+        <motion.div
+          className="pointer-events-none absolute left-4 top-20 z-20 md:left-10 md:top-24"
+          style={{ opacity: headerOpacity, y: headerY }}
+        >
           <p className="eyebrow text-[var(--gold)]">Виртуална разходка</p>
           <h2 className="mt-2 font-serif text-2xl font-bold text-white md:text-4xl">
-            Нашето предложение
+            Влезте, преди да сте дошли
           </h2>
           <p className="mt-2 max-w-xs text-sm text-white/70">
-            Скролирайте, за да разгледате всичко важно във всяка вила
+            Превъртете и обиколете вилата стая по стая
           </p>
-        </div>
+        </motion.div>
 
         <ScrollProgress
           scrollYProgress={scrollYProgress}
@@ -271,12 +301,13 @@ export function ScrollPanelExperience() {
           ))}
         </div>
 
-        <motion.div
-          className="absolute bottom-8 left-1/2 z-20 -translate-x-1/2 text-center"
-          style={{ opacity: scrollHintOpacity }}
-        >
-          <p className="eyebrow motion-reduce:animate-none animate-pulse text-white/60">Продължете надолу</p>
-        </motion.div>
+        <div className="pointer-events-none absolute inset-x-0 top-4 z-30 flex justify-center px-4 md:top-6">
+          <SkipTourButton direction="up" className="pointer-events-auto" />
+        </div>
+
+        <div className="pointer-events-none absolute inset-x-0 bottom-6 z-30 flex justify-center px-4 md:bottom-8">
+          <SkipTourButton direction="down" className="pointer-events-auto motion-reduce:animate-none animate-pulse" />
+        </div>
       </div>
     </section>
   );

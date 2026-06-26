@@ -1,0 +1,114 @@
+import webpush from "web-push";
+import { ENV } from "./env";
+import * as db from "../db";
+
+export type PushPayload = {
+  title: string;
+  body: string;
+  url: string;
+  tag: string;
+};
+
+let configured = false;
+
+function ensureConfigured() {
+  if (configured) return;
+  if (!ENV.vapidPublicKey || !ENV.vapidPrivateKey) {
+    console.warn("[Push] VAPID keys not configured — push disabled");
+    return;
+  }
+  webpush.setVapidDetails(ENV.vapidSubject, ENV.vapidPublicKey, ENV.vapidPrivateKey);
+  configured = true;
+}
+
+export function getVapidPublicKey(): string | null {
+  return ENV.vapidPublicKey || null;
+}
+
+export async function notifyAdmins(payload: PushPayload, excludeAdminUserId?: number) {
+  ensureConfigured();
+  if (!configured) return;
+
+  const subscriptions = await db.getPushSubscriptions(excludeAdminUserId);
+  if (subscriptions.length === 0) return;
+
+  const message = JSON.stringify({
+    title: payload.title,
+    body: payload.body,
+    icon: "/admin/icons/icon-192.svg",
+    badge: "/admin/icons/badge-72.svg",
+    tag: payload.tag,
+    renotify: true,
+    requireInteraction: true,
+    vibrate: [200, 100, 200, 100, 200],
+    silent: false,
+    data: { url: payload.url },
+  });
+
+  await Promise.allSettled(
+    subscriptions.map(async sub => {
+      try {
+        await webpush.sendNotification(
+          {
+            endpoint: sub.endpoint,
+            keys: { p256dh: sub.p256dh, auth: sub.auth },
+          },
+          message,
+          { urgency: "high", TTL: 86400 }
+        );
+      } catch (error: unknown) {
+        const status = (error as { statusCode?: number })?.statusCode;
+        if (status === 404 || status === 410) {
+          await db.deletePushSubscription(sub.endpoint);
+        }
+        console.warn("[Push] Failed to send:", error);
+      }
+    })
+  );
+}
+
+export async function notifyNewWebsiteBooking(booking: {
+  id: number;
+  guestName: string;
+  villaId: string;
+  checkInDate: string;
+  checkOutDate: string;
+}) {
+  await notifyAdmins({
+    title: "Ново запитване за резервация",
+    body: `${booking.guestName} · ${booking.villaId} · ${formatRange(booking.checkInDate, booking.checkOutDate)}`,
+    url: `/admin/bookings/${booking.id}`,
+    tag: `booking-${booking.id}`,
+  });
+}
+
+export async function notifyManualBooking(
+  booking: {
+    id: number;
+    guestName: string;
+    villaId: string;
+    checkInDate: string;
+    checkOutDate: string;
+    status: string;
+  },
+  createdByAdminId: number,
+  creatorUsername: string
+) {
+  await notifyAdmins(
+    {
+      title: `Нова резервация от ${creatorUsername}`,
+      body: `${booking.guestName} · ${booking.villaId} · ${formatRange(booking.checkInDate, booking.checkOutDate)} · ${booking.status}`,
+      url: `/admin/bookings/${booking.id}`,
+      tag: `booking-${booking.id}`,
+    },
+    createdByAdminId
+  );
+}
+
+function formatRange(checkIn: string, checkOut: string): string {
+  const fmt = (d: string) => {
+    const [y, m, day] = d.slice(0, 10).split("-");
+    return `${day}.${m}.${y}`;
+  };
+  return `${fmt(checkIn)} – ${fmt(checkOut)}`;
+}

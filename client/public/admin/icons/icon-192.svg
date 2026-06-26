@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" role="img" aria-label="Pamporovo Villa Admin">
+  <rect width="192" height="192" rx="36" fill="#f8f6f2"/>
+  <path d="M96 36 L156 88 V156 H36 V88 Z" fill="#9a7342"/>
+  <rect x="78" y="112" width="36" height="44" rx="4" fill="#ffffff"/>
+  <circle cx="96" cy="78" r="10" fill="#ffffff"/>
+</svg>

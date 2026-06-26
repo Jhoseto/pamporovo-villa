@@ -1,43 +1,42 @@
-import { int, mysqlEnum, mysqlTable, text, timestamp, varchar, date } from "drizzle-orm/mysql-core";
+import {
+  boolean,
+  date,
+  int,
+  mysqlEnum,
+  mysqlTable,
+  text,
+  timestamp,
+  uniqueIndex,
+  varchar,
+} from "drizzle-orm/mysql-core";
 
-/**
- * Core user table backing auth flow.
- * Extend this file with additional tables as your product grows.
- * Columns use camelCase to match both database fields and generated types.
- */
-export const users = mysqlTable("users", {
-  /**
-   * Surrogate primary key. Auto-incremented numeric value managed by the database.
-   * Use this for relations between tables.
-   */
+export const adminUsers = mysqlTable("admin_users", {
   id: int("id").autoincrement().primaryKey(),
-  /** Manus OAuth identifier (openId) returned from the OAuth callback. Unique per user. */
-  openId: varchar("openId", { length: 64 }).notNull().unique(),
-  name: text("name"),
-  email: varchar("email", { length: 320 }),
-  loginMethod: varchar("loginMethod", { length: 64 }),
-  role: mysqlEnum("role", ["user", "admin"]).default("user").notNull(),
-  createdAt: timestamp("createdAt").defaultNow().notNull(),
-  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
-  lastSignedIn: timestamp("lastSignedIn").defaultNow().notNull(),
+  username: varchar("username", { length: 64 }).notNull().unique(),
+  passwordHash: varchar("password_hash", { length: 255 }).notNull(),
+  isMaster: boolean("is_master").default(false).notNull(),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
 });
 
-export type User = typeof users.$inferSelect;
-export type InsertUser = typeof users.$inferInsert;
+export type AdminUser = typeof adminUsers.$inferSelect;
+export type InsertAdminUser = typeof adminUsers.$inferInsert;
 
-/**
- * Booking requests table for Pamporovo Villa reservations
- */
 export const bookingRequests = mysqlTable("booking_requests", {
   id: int("id").autoincrement().primaryKey(),
+  villaId: varchar("villa_id", { length: 32 }).notNull(),
   checkInDate: date("check_in_date").notNull(),
   checkOutDate: date("check_out_date").notNull(),
   numberOfGuests: int("number_of_guests").notNull(),
   guestName: varchar("guest_name", { length: 255 }).notNull(),
-  guestEmail: varchar("guest_email", { length: 320 }).notNull(),
-  guestPhone: varchar("guest_phone", { length: 20 }).notNull(),
-  specialRequests: text("special_requests"),
+  guestEmail: varchar("guest_email", { length: 320 }),
+  guestPhone: varchar("guest_phone", { length: 32 }),
+  guestNote: text("guest_note"),
+  adminNote: text("admin_note"),
   status: mysqlEnum("status", ["pending", "confirmed", "rejected"]).default("pending").notNull(),
+  source: mysqlEnum("source", ["website", "manual"]).default("website").notNull(),
+  createdByAdminId: int("created_by_admin_id"),
+  processedAt: timestamp("processed_at"),
+  processedByAdminId: int("processed_by_admin_id"),
   createdAt: timestamp("created_at").defaultNow().notNull(),
   updatedAt: timestamp("updated_at").defaultNow().onUpdateNow().notNull(),
 });
@@ -45,20 +44,60 @@ export const bookingRequests = mysqlTable("booking_requests", {
 export type BookingRequest = typeof bookingRequests.$inferSelect;
 export type InsertBookingRequest = typeof bookingRequests.$inferInsert;
 
-/**
- * Inquiry messages table for general inquiries
- */
-export const inquiries = mysqlTable("inquiries", {
+export const villaPricing = mysqlTable(
+  "villa_pricing",
+  {
+    id: int("id").autoincrement().primaryKey(),
+    villaId: varchar("villa_id", { length: 32 }).notNull(),
+    tierKey: varchar("tier_key", { length: 32 }).notNull(),
+    tierLabel: varchar("tier_label", { length: 128 }).notNull(),
+    winterPerNight: int("winter_per_night").notNull(),
+    summerPerNight: int("summer_per_night").notNull(),
+    sortOrder: int("sort_order").notNull(),
+    updatedAt: timestamp("updated_at").defaultNow().onUpdateNow().notNull(),
+  },
+  table => [uniqueIndex("villa_tier_idx").on(table.villaId, table.tierKey)]
+);
+
+export type VillaPricing = typeof villaPricing.$inferSelect;
+export type InsertVillaPricing = typeof villaPricing.$inferInsert;
+
+export const pricingExtras = mysqlTable("pricing_extras", {
   id: int("id").autoincrement().primaryKey(),
-  visitorName: varchar("visitor_name", { length: 255 }).notNull(),
-  visitorEmail: varchar("visitor_email", { length: 320 }).notNull(),
-  visitorPhone: varchar("visitor_phone", { length: 20 }),
-  subject: varchar("subject", { length: 255 }).notNull(),
-  message: text("message").notNull(),
-  status: mysqlEnum("status", ["new", "read", "responded"]).default("new").notNull(),
+  key: varchar("key", { length: 64 }).notNull().unique(),
+  label: varchar("label", { length: 128 }).notNull(),
+  amountEur: int("amount_eur").notNull(),
+  updatedAt: timestamp("updated_at").defaultNow().onUpdateNow().notNull(),
+});
+
+export type PricingExtra = typeof pricingExtras.$inferSelect;
+
+export const offers = mysqlTable("offers", {
+  id: int("id").autoincrement().primaryKey(),
+  slug: varchar("slug", { length: 64 }).notNull().unique(),
+  title: varchar("title", { length: 255 }).notNull(),
+  priceEur: int("price_eur").notNull(),
+  oldPriceEur: int("old_price_eur").notNull(),
+  period: varchar("period", { length: 255 }).notNull(),
+  description: text("description").notNull(),
+  includesJson: text("includes_json").notNull(),
+  isPublished: boolean("is_published").default(false).notNull(),
+  sortOrder: int("sort_order").default(0).notNull(),
   createdAt: timestamp("created_at").defaultNow().notNull(),
   updatedAt: timestamp("updated_at").defaultNow().onUpdateNow().notNull(),
 });
 
-export type Inquiry = typeof inquiries.$inferSelect;
-export type InsertInquiry = typeof inquiries.$inferInsert;
+export type Offer = typeof offers.$inferSelect;
+export type InsertOffer = typeof offers.$inferInsert;
+
+export const pushSubscriptions = mysqlTable("push_subscriptions", {
+  id: int("id").autoincrement().primaryKey(),
+  adminUserId: int("admin_user_id").notNull(),
+  endpoint: varchar("endpoint", { length: 512 }).notNull().unique(),
+  p256dh: varchar("p256dh", { length: 255 }).notNull(),
+  auth: varchar("auth", { length: 255 }).notNull(),
+  userAgent: varchar("user_agent", { length: 512 }),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+});
+
+export type PushSubscription = typeof pushSubscriptions.$inferSelect;

@@ -1,8 +1,8 @@
-import { useCallback, useState } from "react";
+import { lazy, Suspense, useCallback, useState } from "react";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
+import { Route, Router, Switch, useLocation } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { Preloader } from "./components/site/Preloader";
 import { SmoothScrollProvider } from "./components/site/SmoothScrollProvider";
@@ -11,7 +11,9 @@ import { OffersModalProvider } from "./contexts/OffersModalContext";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 
-function Router() {
+const AdminApp = lazy(() => import("./pages/admin/AdminApp"));
+
+function SiteRouter() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
@@ -21,25 +23,56 @@ function Router() {
   );
 }
 
-function App() {
+function PublicApp() {
   const [appReady, setAppReady] = useState(false);
   const handlePreloaderComplete = useCallback(() => setAppReady(true), []);
 
   return (
-    <ErrorBoundary>
+    <>
       {!appReady && <Preloader onComplete={handlePreloaderComplete} />}
       <SmoothScrollProvider enabled={appReady}>
         <SiteReadyProvider ready={appReady}>
           <ThemeProvider defaultTheme="light">
-            <TooltipProvider>
-              <Toaster />
-              <OffersModalProvider>
-                <Router />
-              </OffersModalProvider>
-            </TooltipProvider>
+            <OffersModalProvider>
+              <SiteRouter />
+            </OffersModalProvider>
           </ThemeProvider>
         </SiteReadyProvider>
       </SmoothScrollProvider>
+    </>
+  );
+}
+
+function AppShell() {
+  const [location] = useLocation();
+  const isAdmin = location.startsWith("/admin");
+
+  if (isAdmin) {
+    return (
+      <Suspense
+        fallback={
+          <div className="admin-shell flex min-h-screen items-center justify-center">
+            <div className="admin-skeleton h-12 w-48 rounded-xl" />
+          </div>
+        }
+      >
+        <AdminApp />
+      </Suspense>
+    );
+  }
+
+  return <PublicApp />;
+}
+
+function App() {
+  return (
+    <ErrorBoundary>
+      <Router>
+        <TooltipProvider>
+          <Toaster />
+          <AppShell />
+        </TooltipProvider>
+      </Router>
     </ErrorBoundary>
   );
 }
