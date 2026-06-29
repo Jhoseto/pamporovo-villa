@@ -14,6 +14,7 @@ const getBookingById = vi.fn().mockResolvedValue({
 vi.mock("./db", () => ({
   insertBooking: (...args: unknown[]) => insertBooking(...args),
   getBookingById: (...args: unknown[]) => getBookingById(...args),
+  upsertContactFromGuest: vi.fn().mockResolvedValue(null),
 }));
 
 vi.mock("./_core/push", () => ({
@@ -46,7 +47,7 @@ const validBooking = {
   numberOfGuests: 4,
   guestName: "John Doe",
   guestEmail: "john@example.com",
-  guestPhone: "+359 87 123 4567",
+  guestPhone: "359871234567",
   guestNote: "Early check-in if possible",
 };
 
@@ -60,7 +61,7 @@ describe("booking.createRequest", () => {
     const result = await caller.booking.createRequest(validBooking);
 
     expect(result.success).toBe(true);
-    expect(result.message).toContain("successfully");
+    expect(result.message).toContain("успешно");
     expect(insertBooking).toHaveBeenCalledOnce();
   });
 
@@ -75,7 +76,7 @@ describe("booking.createRequest", () => {
       })
     ).rejects.toMatchObject({
       code: "BAD_REQUEST",
-      message: expect.stringContaining("Check-out date"),
+      message: expect.stringContaining("напускане"),
     });
   });
 

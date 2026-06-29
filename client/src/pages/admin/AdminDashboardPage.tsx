@@ -1,61 +1,80 @@
 import { useMemo, useState } from "react";
 import { endOfMonth, endOfWeek, format, startOfMonth, startOfWeek } from "date-fns";
-import { AdminCalendar } from "@/components/admin/AdminCalendar";
+import { AdminBlockDatesPanel } from "@/components/admin/AdminBlockDatesPanel";
+import { AdminCalendar, type CalendarBooking } from "@/components/admin/AdminCalendar";
+import { AdminDashboardOverview } from "@/components/admin/AdminDashboardOverview";
 import { Button } from "@/components/ui/button";
-import { Switch } from "@/components/ui/switch";
-import { Label } from "@/components/ui/label";
 import { trpc } from "@/lib/trpc";
+import { type BookingStatusKey } from "@/lib/adminLabels";
 import { VILLA_IDS, VILLA_LABELS, type VillaId } from "@shared/villas";
 import { cn } from "@/lib/utils";
 
+const statusTabs: { key: BookingStatusKey | undefined; label: string }[] = [
+  { key: undefined, label: "Всички" },
+  { key: "pending", label: "Чакащи" },
+  { key: "confirmed", label: "Потвърдени" },
+  { key: "completed", label: "Гостували" },
+  { key: "rejected", label: "Отказани" },
+];
+
 export default function AdminDashboardPage() {
   const [villaFilter, setVillaFilter] = useState<VillaId | "all">("all");
-  const [hideRejected, setHideRejected] = useState(true);
+  const [statusFilter, setStatusFilter] = useState<BookingStatusKey | undefined>();
   const [month, setMonth] = useState(() => startOfMonth(new Date()));
 
   const fromDate = format(startOfWeek(startOfMonth(month), { weekStartsOn: 1 }), "yyyy-MM-dd");
   const toDate = format(endOfWeek(endOfMonth(month), { weekStartsOn: 1 }), "yyyy-MM-dd");
 
-  const { data: bookings = [], isLoading } = trpc.admin.bookings.calendar.useQuery({
-    fromDate,
-    toDate,
-  });
+  const { data, isLoading } = trpc.admin.bookings.calendar.useQuery(
+    { fromDate, toDate },
+    { staleTime: 0 }
+  );
 
-  const { data: stats } = trpc.admin.bookings.stats.useQuery();
-
-  const upcoming = useMemo(() => {
-    const today = format(new Date(), "yyyy-MM-dd");
-    return bookings
-      .filter(b => b.status === "confirmed" && b.checkInDate >= today)
-      .slice(0, 5);
-  }, [bookings]);
+  const calendarEvents = useMemo((): CalendarBooking[] => {
+    const bookings = data?.bookings ?? [];
+    const blocks = (data?.blocks ?? []).map(
+      (block): CalendarBooking => ({
+        id: -block.id,
+        villaId: block.villaId,
+        checkInDate: block.startDate,
+        checkOutDate: block.endDate,
+        guestName: block.note?.trim() || "Блокирано",
+        status: "blocked",
+      })
+    );
+    return [...bookings, ...blocks];
+  }, [data]);
 
   return (
     <div className="space-y-6">
-      <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+      <AdminDashboardOverview />
+
+      <div className="admin-page-header">
         <div>
-          <h1 className="font-serif text-3xl font-bold text-[var(--admin-fg)]">Календар</h1>
-          <p className="text-[var(--admin-muted)]">Преглед на заетостта по вили</p>
+          <h1>Календар</h1>
+          <p>Преглед на заетостта по вили</p>
         </div>
-        <div className="flex flex-wrap items-center gap-4">
-          <div className="admin-stat-pill">
-            <span className="text-xs uppercase tracking-wide text-[var(--admin-muted)]">Чакащи</span>
-            <strong className="text-xl">{stats?.pending ?? 0}</strong>
-          </div>
-          <div className="flex items-center gap-2">
-            <Switch id="hide-rejected" checked={hideRejected} onCheckedChange={setHideRejected} />
-            <Label htmlFor="hide-rejected" className="text-sm">
-              Скрий отказани
-            </Label>
-          </div>
-        </div>
+      </div>
+
+      <div className="flex flex-wrap gap-2">
+        {statusTabs.map(tab => (
+          <Button
+            key={tab.label}
+            size="sm"
+            variant={statusFilter === tab.key ? "default" : "outline"}
+            className={cn("admin-chip", statusFilter === tab.key && "admin-chip--active")}
+            onClick={() => setStatusFilter(tab.key)}
+          >
+            {tab.label}
+          </Button>
+        ))}
       </div>
 
       <div className="flex flex-wrap gap-2">
         <Button
           size="sm"
           variant={villaFilter === "all" ? "default" : "outline"}
-          className={cn(villaFilter === "all" && "admin-btn-primary")}
+          className={cn("admin-chip", villaFilter === "all" && "admin-chip--active")}
           onClick={() => setVillaFilter("all")}
         >
           Всички
@@ -65,7 +84,7 @@ export default function AdminDashboardPage() {
             key={id}
             size="sm"
             variant={villaFilter === id ? "default" : "outline"}
-            className={cn(villaFilter === id && "admin-btn-primary")}
+            className={cn("admin-chip", villaFilter === id && "admin-chip--active")}
             onClick={() => setVillaFilter(id)}
           >
             {VILLA_LABELS[id]}
@@ -77,29 +96,15 @@ export default function AdminDashboardPage() {
         <div className="admin-skeleton h-[520px] rounded-2xl" />
       ) : (
         <AdminCalendar
-          bookings={bookings}
+          bookings={calendarEvents}
           villaFilter={villaFilter}
-          hideRejected={hideRejected}
+          statusFilter={statusFilter}
           month={month}
           onMonthChange={setMonth}
         />
       )}
 
-      {upcoming.length > 0 && (
-        <div className="rounded-2xl border border-[var(--admin-border)] bg-[var(--admin-card)] p-5">
-          <h3 className="font-serif text-xl font-bold">Предстоящи настанявания</h3>
-          <ul className="mt-3 space-y-2">
-            {upcoming.map(b => (
-              <li key={b.id} className="flex flex-wrap items-center justify-between gap-2 text-sm">
-                <span className="font-medium">{b.guestName}</span>
-                <span className="text-[var(--admin-muted)]">
-                  {VILLA_LABELS[b.villaId as VillaId]} · {b.checkInDate} → {b.checkOutDate}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+      <AdminBlockDatesPanel />
     </div>
   );
 }

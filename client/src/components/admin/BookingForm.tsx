@@ -2,6 +2,7 @@ import { VILLAS } from "@/data/siteContent";
 import type { VillaId } from "@shared/villas";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { PhoneInput } from "@/components/ui/phone-input";
 import { Textarea } from "@/components/ui/textarea";
 import {
   Select,
@@ -10,6 +11,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+
+import type { BookingStatusKey } from "@/lib/adminLabels";
 
 export type BookingFormValues = {
   villaId: VillaId;
@@ -21,17 +24,24 @@ export type BookingFormValues = {
   guestPhone: string;
   guestNote: string;
   adminNote: string;
-  status: "pending" | "confirmed";
+  status: "pending" | "confirmed" | "completed";
 };
 
 type Props = {
   values: BookingFormValues;
   onChange: (values: BookingFormValues) => void;
   showStatus?: boolean;
+  showCompletedStatus?: boolean;
   guestOptional?: boolean;
 };
 
-export function BookingForm({ values, onChange, showStatus = true, guestOptional = false }: Props) {
+export function BookingForm({
+  values,
+  onChange,
+  showStatus = true,
+  showCompletedStatus = false,
+  guestOptional = false,
+}: Props) {
   const set = <K extends keyof BookingFormValues>(key: K, value: BookingFormValues[K]) =>
     onChange({ ...values, [key]: value });
 
@@ -93,7 +103,8 @@ export function BookingForm({ values, onChange, showStatus = true, guestOptional
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="confirmed">Потвърдена</SelectItem>
-              <SelectItem value="pending">Чакаща</SelectItem>
+              {showCompletedStatus && <SelectItem value="completed">Гостували</SelectItem>}
+              <SelectItem value="pending">Непотвърдена</SelectItem>
             </SelectContent>
           </Select>
         </div>
@@ -105,7 +116,7 @@ export function BookingForm({ values, onChange, showStatus = true, guestOptional
       </div>
 
       <div className="space-y-2">
-        <Label>Email{guestOptional ? " (по избор)" : ""}</Label>
+        <Label>Имейл{guestOptional ? " (по избор)" : ""}</Label>
         <Input
           type="email"
           value={values.guestEmail}
@@ -115,7 +126,7 @@ export function BookingForm({ values, onChange, showStatus = true, guestOptional
       </div>
       <div className="space-y-2">
         <Label>Телефон{guestOptional ? " (по избор)" : ""}</Label>
-        <Input value={values.guestPhone} onChange={e => set("guestPhone", e.target.value)} className="admin-input" />
+        <PhoneInput value={values.guestPhone} onChange={e => set("guestPhone", e.target.value)} className="admin-input" />
       </div>
 
       <div className="space-y-2 md:col-span-2">

@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Route, Switch, useLocation } from "wouter";
+import { Redirect, Route, Switch, useLocation } from "wouter";
 import { AdminLayout } from "@/components/admin/AdminLayout";
 import { AdminThemeProvider } from "@/contexts/AdminThemeContext";
 import { initAdminThemeFromStorage } from "@/hooks/useAdminTheme";
@@ -13,36 +13,84 @@ import AdminPricingPage from "./AdminPricingPage";
 import AdminOffersPage from "./AdminOffersPage";
 import AdminUsersPage from "./AdminUsersPage";
 import AdminSettingsPage from "./AdminSettingsPage";
+import AdminContactsPage from "./AdminContactsPage";
+import AdminContactNewPage from "./AdminContactNewPage";
+import AdminContactDetailPage from "./AdminContactDetailPage";
 
 initAdminThemeFromStorage();
 
-function AdminGuard({ children }: { children: React.ReactNode }) {
-  const [, setLocation] = useLocation();
-  const { data: me, isLoading, isError } = trpc.admin.auth.me.useQuery(undefined, {
+function useAdminSession() {
+  return trpc.admin.auth.me.useQuery(undefined, {
     retry: false,
+    staleTime: 30_000,
   });
+}
 
-  useEffect(() => {
-    if (!isLoading && (isError || !me)) {
-      setLocation("/admin/login");
-    }
-  }, [isLoading, isError, me, setLocation]);
+function AdminBootScreen() {
+  return (
+    <div className="admin-login flex min-h-screen items-center justify-center">
+      <div className="admin-glass-card admin-skeleton h-14 w-52 rounded-2xl" />
+    </div>
+  );
+}
 
-  if (isLoading) {
-    return (
-      <div className="admin-shell flex min-h-screen items-center justify-center">
-        <div className="admin-skeleton h-12 w-48 rounded-xl" />
-      </div>
-    );
-  }
+function AdminConnectionError() {
+  return (
+    <div className="admin-login flex min-h-screen flex-col items-center justify-center gap-4 px-4">
+      <p className="text-center text-[var(--admin-muted)]">Неуспешна връзка със сървъра</p>
+      <button
+        type="button"
+        className="admin-btn-primary rounded-xl px-4 py-2 text-sm"
+        onClick={() => window.location.reload()}
+      >
+        Опитай отново
+      </button>
+    </div>
+  );
+}
 
-  if (!me) return null;
+function AdminGuard({ children }: { children: React.ReactNode }) {
+  const { data: me, isLoading, isError } = useAdminSession();
+
+  if (isLoading) return <AdminBootScreen />;
+  if (isError) return <AdminConnectionError />;
+  if (!me) return <Redirect to="/admin" replace />;
 
   return <AdminLayout>{children}</AdminLayout>;
 }
 
+function AdminHome() {
+  const { data: me, isLoading, isError } = useAdminSession();
+
+  if (isLoading) return <AdminBootScreen />;
+  if (isError) return <AdminConnectionError />;
+  if (!me) return <AdminLoginPage />;
+
+  return (
+    <AdminLayout>
+      <AdminDashboardPage />
+    </AdminLayout>
+  );
+}
+
+function MasterGuard({ children }: { children: React.ReactNode }) {
+  const { data: me } = useAdminSession();
+
+  if (!me?.isMaster) {
+    return (
+      <div className="admin-glass-card mx-auto max-w-lg p-6 text-center">
+        <p className="text-[var(--admin-muted)]">Само главният администратор има достъп до тази страница.</p>
+      </div>
+    );
+  }
+
+  return <>{children}</>;
+}
+
 export default function AdminApp() {
   useEffect(() => {
+    document.title = "Административен панел — Pamporovo Villa";
+
     const meta = document.createElement("meta");
     meta.name = "robots";
     meta.content = "noindex,nofollow";
@@ -58,56 +106,89 @@ export default function AdminApp() {
     apple.content = "yes";
     document.head.appendChild(apple);
 
+    const mobileCapable = document.createElement("meta");
+    mobileCapable.name = "mobile-web-app-capable";
+    mobileCapable.content = "yes";
+    document.head.appendChild(mobileCapable);
+
     return () => {
       document.documentElement.classList.remove("admin-mode", "admin-dark");
+      meta.remove();
+      manifest.remove();
+      apple.remove();
+      mobileCapable.remove();
     };
   }, []);
 
   return (
     <AdminThemeProvider>
       <Switch>
-      <Route path="/admin/login" component={AdminLoginPage} />
-      <Route path="/admin/bookings/new">
-        <AdminGuard>
-          <AdminBookingNewPage />
-        </AdminGuard>
-      </Route>
-      <Route path="/admin/bookings/:id">
-        <AdminGuard>
-          <AdminBookingDetailPage />
-        </AdminGuard>
-      </Route>
-      <Route path="/admin/bookings">
-        <AdminGuard>
-          <AdminBookingsPage />
-        </AdminGuard>
-      </Route>
-      <Route path="/admin/pricing">
-        <AdminGuard>
-          <AdminPricingPage />
-        </AdminGuard>
-      </Route>
-      <Route path="/admin/offers">
-        <AdminGuard>
-          <AdminOffersPage />
-        </AdminGuard>
-      </Route>
-      <Route path="/admin/users">
-        <AdminGuard>
-          <AdminUsersPage />
-        </AdminGuard>
-      </Route>
-      <Route path="/admin/settings">
-        <AdminGuard>
-          <AdminSettingsPage />
-        </AdminGuard>
-      </Route>
-      <Route path="/admin">
-        <AdminGuard>
-          <AdminDashboardPage />
-        </AdminGuard>
-      </Route>
-    </Switch>
+        <Route path="/admin/login" component={AdminLoginRoute} />
+        <Route path="/admin/bookings/new">
+          <AdminGuard>
+            <AdminBookingNewPage />
+          </AdminGuard>
+        </Route>
+        <Route path="/admin/bookings/:id">
+          <AdminGuard>
+            <AdminBookingDetailPage />
+          </AdminGuard>
+        </Route>
+        <Route path="/admin/bookings">
+          <AdminGuard>
+            <AdminBookingsPage />
+          </AdminGuard>
+        </Route>
+        <Route path="/admin/pricing">
+          <AdminGuard>
+            <AdminPricingPage />
+          </AdminGuard>
+        </Route>
+        <Route path="/admin/offers">
+          <AdminGuard>
+            <AdminOffersPage />
+          </AdminGuard>
+        </Route>
+        <Route path="/admin/users">
+          <AdminGuard>
+            <MasterGuard>
+              <AdminUsersPage />
+            </MasterGuard>
+          </AdminGuard>
+        </Route>
+        <Route path="/admin/contacts/new">
+          <AdminGuard>
+            <AdminContactNewPage />
+          </AdminGuard>
+        </Route>
+        <Route path="/admin/contacts/:id">
+          <AdminGuard>
+            <AdminContactDetailPage />
+          </AdminGuard>
+        </Route>
+        <Route path="/admin/contacts">
+          <AdminGuard>
+            <AdminContactsPage />
+          </AdminGuard>
+        </Route>
+        <Route path="/admin/settings">
+          <AdminGuard>
+            <AdminSettingsPage />
+          </AdminGuard>
+        </Route>
+        <Route path="/admin/" component={AdminHome} />
+        <Route path="/admin" component={AdminHome} />
+      </Switch>
     </AdminThemeProvider>
   );
+}
+
+function AdminLoginRoute() {
+  const { data: me, isLoading, isError } = useAdminSession();
+
+  if (isLoading) return <AdminBootScreen />;
+  if (isError) return <AdminConnectionError />;
+  if (me) return <Redirect to="/admin" replace />;
+
+  return <AdminLoginPage />;
 }

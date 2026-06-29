@@ -8,6 +8,7 @@ import { createExpressMiddleware } from "@trpc/server/adapters/express";
 import { appRouter } from "../routers";
 import { createContext } from "./context";
 import { runSeedIfNeeded } from "../seed";
+import { validateEnv } from "./env";
 import { serveStatic, setupVite } from "./vite";
 
 dotenv.config({ path: path.resolve(import.meta.dirname, "../../.env"), quiet: true });
@@ -32,10 +33,14 @@ async function findAvailablePort(startPort: number = 3000): Promise<number> {
 }
 
 async function startServer() {
+  validateEnv();
   await runSeedIfNeeded();
 
   const app = express();
   const server = createServer(app);
+  if (process.env.TRUST_PROXY === "1" || process.env.NODE_ENV === "production") {
+    app.set("trust proxy", 1);
+  }
   app.use(express.json({ limit: "50mb" }));
   app.use(express.urlencoded({ limit: "50mb", extended: true }));
   app.use(

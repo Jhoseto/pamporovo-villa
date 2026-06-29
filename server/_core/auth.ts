@@ -37,20 +37,28 @@ function getJwtSecret() {
   return new TextEncoder().encode(secret);
 }
 
-export async function createAdminSessionToken(userId: number): Promise<string> {
-  return new SignJWT({ sub: String(userId), type: "admin" })
+export async function createAdminSessionToken(user: AdminUser): Promise<string> {
+  return new SignJWT({
+    sub: String(user.id),
+    type: "admin",
+    tv: user.tokenVersion ?? 0,
+  })
     .setProtectedHeader({ alg: "HS256" })
     .setIssuedAt()
     .setExpirationTime("7d")
     .sign(getJwtSecret());
 }
 
-export async function verifyAdminSessionToken(token: string): Promise<number | null> {
+export async function verifyAdminSessionToken(
+  token: string
+): Promise<{ userId: number; tokenVersion: number } | null> {
   try {
     const { payload } = await jwtVerify(token, getJwtSecret());
     if (payload.type !== "admin" || typeof payload.sub !== "string") return null;
     const id = parseInt(payload.sub, 10);
-    return Number.isFinite(id) ? id : null;
+    if (!Number.isFinite(id)) return null;
+    const tokenVersion = typeof payload.tv === "number" ? payload.tv : 0;
+    return { userId: id, tokenVersion };
   } catch {
     return null;
   }
@@ -61,9 +69,11 @@ export async function getAdminFromRequest(req: {
 }): Promise<AdminUser | null> {
   const token = getCookieValue(req as import("express").Request, ADMIN_COOKIE_NAME);
   if (!token) return null;
-  const userId = await verifyAdminSessionToken(token);
-  if (!userId) return null;
-  return (await db.getAdminUserById(userId)) ?? null;
+  const session = await verifyAdminSessionToken(token);
+  if (!session) return null;
+  const user = await db.getAdminUserById(session.userId);
+  if (!user || (user.tokenVersion ?? 0) !== session.tokenVersion) return null;
+  return user;
 }
 
 export type SafeAdminUser = Pick<AdminUser, "id" | "username" | "isMaster" | "createdAt">;

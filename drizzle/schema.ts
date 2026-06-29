@@ -1,6 +1,7 @@
 import {
   boolean,
   date,
+  index,
   int,
   mysqlEnum,
   mysqlTable,
@@ -15,31 +16,45 @@ export const adminUsers = mysqlTable("admin_users", {
   username: varchar("username", { length: 64 }).notNull().unique(),
   passwordHash: varchar("password_hash", { length: 255 }).notNull(),
   isMaster: boolean("is_master").default(false).notNull(),
+  tokenVersion: int("token_version").default(0).notNull(),
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
 
 export type AdminUser = typeof adminUsers.$inferSelect;
 export type InsertAdminUser = typeof adminUsers.$inferInsert;
 
-export const bookingRequests = mysqlTable("booking_requests", {
-  id: int("id").autoincrement().primaryKey(),
-  villaId: varchar("villa_id", { length: 32 }).notNull(),
-  checkInDate: date("check_in_date").notNull(),
-  checkOutDate: date("check_out_date").notNull(),
-  numberOfGuests: int("number_of_guests").notNull(),
-  guestName: varchar("guest_name", { length: 255 }).notNull(),
-  guestEmail: varchar("guest_email", { length: 320 }),
-  guestPhone: varchar("guest_phone", { length: 32 }),
-  guestNote: text("guest_note"),
-  adminNote: text("admin_note"),
-  status: mysqlEnum("status", ["pending", "confirmed", "rejected"]).default("pending").notNull(),
-  source: mysqlEnum("source", ["website", "manual"]).default("website").notNull(),
-  createdByAdminId: int("created_by_admin_id"),
-  processedAt: timestamp("processed_at"),
-  processedByAdminId: int("processed_by_admin_id"),
-  createdAt: timestamp("created_at").defaultNow().notNull(),
-  updatedAt: timestamp("updated_at").defaultNow().onUpdateNow().notNull(),
-});
+export const bookingRequests = mysqlTable(
+  "booking_requests",
+  {
+    id: int("id").autoincrement().primaryKey(),
+    villaId: varchar("villa_id", { length: 32 }).notNull(),
+    checkInDate: date("check_in_date").notNull(),
+    checkOutDate: date("check_out_date").notNull(),
+    numberOfGuests: int("number_of_guests").notNull(),
+    guestName: varchar("guest_name", { length: 255 }).notNull(),
+    guestEmail: varchar("guest_email", { length: 320 }),
+    guestPhone: varchar("guest_phone", { length: 32 }),
+    guestPhoneNormalized: varchar("guest_phone_normalized", { length: 32 }),
+    guestNote: text("guest_note"),
+    adminNote: text("admin_note"),
+    adminTagsJson: text("admin_tags_json").default("[]").notNull(),
+    totalAmountEur: int("total_amount_eur"),
+    depositPaidEur: int("deposit_paid_eur").default(0),
+    status: mysqlEnum("status", ["pending", "confirmed", "completed", "rejected"]).default("pending").notNull(),
+    source: mysqlEnum("source", ["website", "manual"]).default("website").notNull(),
+    createdByAdminId: int("created_by_admin_id"),
+    processedAt: timestamp("processed_at"),
+    processedByAdminId: int("processed_by_admin_id"),
+    createdAt: timestamp("created_at").defaultNow().notNull(),
+    updatedAt: timestamp("updated_at").defaultNow().onUpdateNow().notNull(),
+  },
+  table => [
+    index("booking_villa_status_idx").on(table.villaId, table.status),
+    index("booking_dates_idx").on(table.checkInDate, table.checkOutDate),
+    index("booking_status_idx").on(table.status),
+    index("booking_guest_phone_norm_idx").on(table.guestPhoneNormalized),
+  ]
+);
 
 export type BookingRequest = typeof bookingRequests.$inferSelect;
 export type InsertBookingRequest = typeof bookingRequests.$inferInsert;
@@ -101,3 +116,48 @@ export const pushSubscriptions = mysqlTable("push_subscriptions", {
 });
 
 export type PushSubscription = typeof pushSubscriptions.$inferSelect;
+
+export const blockedDates = mysqlTable(
+  "blocked_dates",
+  {
+    id: int("id").autoincrement().primaryKey(),
+    villaId: varchar("villa_id", { length: 32 }).notNull(),
+    startDate: date("start_date").notNull(),
+    endDate: date("end_date").notNull(),
+    note: varchar("note", { length: 255 }),
+    createdByAdminId: int("created_by_admin_id"),
+    createdAt: timestamp("created_at").defaultNow().notNull(),
+  },
+  table => [index("blocked_villa_dates_idx").on(table.villaId, table.startDate)]
+);
+
+export type BlockedDate = typeof blockedDates.$inferSelect;
+export type InsertBlockedDate = typeof blockedDates.$inferInsert;
+
+export const clientContacts = mysqlTable(
+  "client_contacts",
+  {
+    id: int("id").autoincrement().primaryKey(),
+    fullName: varchar("full_name", { length: 255 }).notNull(),
+    phone: varchar("phone", { length: 32 }),
+    phoneNormalized: varchar("phone_normalized", { length: 32 }),
+    email: varchar("email", { length: 320 }),
+    notes: text("notes"),
+    isVip: boolean("is_vip").default(false).notNull(),
+    createdAt: timestamp("created_at").defaultNow().notNull(),
+    updatedAt: timestamp("updated_at").defaultNow().onUpdateNow().notNull(),
+  },
+  table => [
+    index("client_contacts_phone_idx").on(table.phoneNormalized),
+    index("client_contacts_name_idx").on(table.fullName),
+  ]
+);
+
+export type ClientContact = typeof clientContacts.$inferSelect;
+export type InsertClientContact = typeof clientContacts.$inferInsert;
+
+export const adminReminderLog = mysqlTable("admin_reminder_log", {
+  id: int("id").autoincrement().primaryKey(),
+  reminderKey: varchar("reminder_key", { length: 64 }).notNull().unique(),
+  sentAt: timestamp("sent_at").defaultNow().notNull(),
+});

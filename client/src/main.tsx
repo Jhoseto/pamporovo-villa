@@ -20,6 +20,11 @@ function loadAnalytics() {
 
 loadAnalytics();
 
+if (typeof window !== "undefined") {
+  history.scrollRestoration = "manual";
+  window.scrollTo(0, 0);
+}
+
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {

@@ -11,6 +11,9 @@ export function Preloader({ onComplete }: PreloaderProps) {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
     document.body.style.overflow = "hidden";
 
     const prefersReducedMotion = window.matchMedia(
@@ -18,6 +21,7 @@ export function Preloader({ onComplete }: PreloaderProps) {
     ).matches;
 
     if (prefersReducedMotion) {
+      window.scrollTo(0, 0);
       setProgress(100);
       setVisible(false);
       document.body.style.overflow = "";
@@ -36,6 +40,9 @@ export function Preloader({ onComplete }: PreloaderProps) {
       if (elapsed < duration) {
         requestAnimationFrame(tick);
       } else {
+        window.scrollTo(0, 0);
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
         setVisible(false);
         document.body.style.overflow = "";
         onComplete();

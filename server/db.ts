@@ -1,28 +1,45 @@
-import { and, asc, desc, eq, gte, like, lte, ne, or, sql } from "drizzle-orm";
+import { and, asc, desc, eq, gt, gte, like, lte, ne, or, sql } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
 import {
   adminUsers,
+  adminReminderLog,
+  blockedDates,
   bookingRequests,
+  clientContacts,
   offers,
   pricingExtras,
   pushSubscriptions,
   villaPricing,
   type AdminUser,
+  type BlockedDate,
   type BookingRequest,
+  type ClientContact,
   type InsertAdminUser,
+  type InsertBlockedDate,
   type InsertBookingRequest,
+  type InsertClientContact,
   type InsertOffer,
   type InsertVillaPricing,
   type Offer,
   type VillaPricing,
 } from "../drizzle/schema";
+import { contactFieldsFromGuest, guestPhoneNormalized, buildVipLookup } from "./contactHelpers";
+import { normalizeEmail, phoneSearchPatterns, storedPhoneDigits } from "@shared/phoneNormalize";
 
 let _db: ReturnType<typeof drizzle> | null = null;
 
 function parseDateOnly(value: string | Date): Date {
   if (value instanceof Date) return value;
   const [y, m, d] = value.slice(0, 10).split("-").map(Number);
-  return new Date(y!, m! - 1, d);
+  return new Date(Date.UTC(y!, m! - 1, d));
+}
+
+export function parseDateOnlyForDb(value: string | Date): Date {
+  return parseDateOnly(value);
+}
+
+function escapeLikePattern(value: string): string {
+  return value.replace(/[%_\\]/g, "\\$&");
 }
 
 export async function getDb() {
@@ -76,24 +93,80 @@ export async function listAdminUsers(): Promise<AdminUser[]> {
 
 export async function deleteAdminUser(id: number) {
   const db = await requireDb();
+  await deletePushSubscriptionsForAdmin(id);
   await db.delete(adminUsers).where(eq(adminUsers.id, id));
 }
 
 export async function updateAdminPassword(id: number, passwordHash: string) {
   const db = await requireDb();
-  await db.update(adminUsers).set({ passwordHash }).where(eq(adminUsers.id, id));
+  const user = await getAdminUserById(id);
+  if (!user) return;
+  await db
+    .update(adminUsers)
+    .set({ passwordHash, tokenVersion: (user.tokenVersion ?? 0) + 1 })
+    .where(eq(adminUsers.id, id));
 }
 
 // --- Bookings ---
 
 export type BookingListFilters = {
-  status?: "pending" | "confirmed" | "rejected";
+  status?: "pending" | "confirmed" | "completed" | "rejected";
   villaId?: string;
   source?: "website" | "manual";
   search?: string;
   fromDate?: string;
   toDate?: string;
+  offset?: number;
+  limit?: number;
 };
+
+function buildBookingConditions(filters: BookingListFilters) {
+  const conditions = [];
+
+  if (filters.status) conditions.push(eq(bookingRequests.status, filters.status));
+  if (filters.villaId) conditions.push(eq(bookingRequests.villaId, filters.villaId));
+  if (filters.source) conditions.push(eq(bookingRequests.source, filters.source));
+  if (filters.fromDate) conditions.push(gte(bookingRequests.checkInDate, parseDateOnly(filters.fromDate)));
+  if (filters.toDate) conditions.push(lte(bookingRequests.checkOutDate, parseDateOnly(filters.toDate)));
+  if (filters.search?.trim()) {
+    const q = `%${escapeLikePattern(filters.search.trim())}%`;
+    conditions.push(
+      or(
+        like(bookingRequests.guestName, q),
+        like(bookingRequests.guestPhone, q),
+        like(bookingRequests.guestEmail, q)
+      )!
+    );
+  }
+  return conditions;
+}
+
+export async function countBookings(filters: Omit<BookingListFilters, "offset" | "limit"> = {}): Promise<number> {
+  const db = await requireDb();
+  const conditions = buildBookingConditions(filters);
+  const query = db.select({ count: sql<number>`count(*)` }).from(bookingRequests);
+  const rows =
+    conditions.length > 0 ? await query.where(and(...conditions)) : await query;
+  return Number(rows[0]?.count ?? 0);
+}
+
+export async function listBookings(filters: BookingListFilters = {}): Promise<BookingRequest[]> {
+  const db = await requireDb();
+  const conditions = buildBookingConditions(filters);
+  const limit = filters.limit ?? 50;
+  const offset = filters.offset ?? 0;
+
+  const query = db
+    .select()
+    .from(bookingRequests)
+    .orderBy(desc(bookingRequests.createdAt))
+    .limit(limit)
+    .offset(offset);
+  if (conditions.length > 0) {
+    return query.where(and(...conditions));
+  }
+  return query;
+}
 
 export async function insertBooking(
   data: Omit<InsertBookingRequest, "checkInDate" | "checkOutDate"> & {
@@ -102,8 +175,11 @@ export async function insertBooking(
   }
 ): Promise<number> {
   const db = await requireDb();
+  const guestPhone = storedPhoneDigits(data.guestPhone);
   const result = await db.insert(bookingRequests).values({
     ...data,
+    guestPhone,
+    guestPhoneNormalized: guestPhoneNormalized(guestPhone),
     checkInDate: parseDateOnly(data.checkInDate),
     checkOutDate: parseDateOnly(data.checkOutDate),
   });
@@ -116,33 +192,6 @@ export async function getBookingById(id: number): Promise<BookingRequest | undef
   return rows[0];
 }
 
-export async function listBookings(filters: BookingListFilters = {}, limit = 200): Promise<BookingRequest[]> {
-  const db = await requireDb();
-  const conditions = [];
-
-  if (filters.status) conditions.push(eq(bookingRequests.status, filters.status));
-  if (filters.villaId) conditions.push(eq(bookingRequests.villaId, filters.villaId));
-  if (filters.source) conditions.push(eq(bookingRequests.source, filters.source));
-  if (filters.fromDate) conditions.push(gte(bookingRequests.checkInDate, parseDateOnly(filters.fromDate)));
-  if (filters.toDate) conditions.push(lte(bookingRequests.checkOutDate, parseDateOnly(filters.toDate)));
-  if (filters.search?.trim()) {
-    const q = `%${filters.search.trim()}%`;
-    conditions.push(
-      or(
-        like(bookingRequests.guestName, q),
-        like(bookingRequests.guestPhone, q),
-        like(bookingRequests.guestEmail, q)
-      )!
-    );
-  }
-
-  const query = db.select().from(bookingRequests).orderBy(desc(bookingRequests.createdAt)).limit(limit);
-  if (conditions.length > 0) {
-    return query.where(and(...conditions));
-  }
-  return query;
-}
-
 export async function updateBooking(
   id: number,
   data: Partial<
@@ -153,11 +202,26 @@ export async function updateBooking(
   >
 ) {
   const db = await requireDb();
-  const { checkInDate, checkOutDate, ...rest } = data;
+  const { checkInDate, checkOutDate, guestPhone, ...rest } = data;
   const patch: Partial<InsertBookingRequest> = { ...rest };
   if (checkInDate != null) patch.checkInDate = parseDateOnly(checkInDate);
   if (checkOutDate != null) patch.checkOutDate = parseDateOnly(checkOutDate);
+  if (guestPhone !== undefined) {
+    patch.guestPhone = storedPhoneDigits(guestPhone);
+    patch.guestPhoneNormalized = guestPhoneNormalized(patch.guestPhone);
+  }
   await db.update(bookingRequests).set(patch).where(eq(bookingRequests.id, id));
+}
+
+export async function getAllConfirmedBookings(villaId?: string): Promise<BookingRequest[]> {
+  const db = await requireDb();
+  const conditions = [eq(bookingRequests.status, "confirmed")];
+  if (villaId) conditions.push(eq(bookingRequests.villaId, villaId));
+  return db
+    .select()
+    .from(bookingRequests)
+    .where(and(...conditions))
+    .orderBy(asc(bookingRequests.checkInDate));
 }
 
 export async function getConfirmedBookingsForVilla(
@@ -183,7 +247,7 @@ export async function getCalendarBookings(fromDate: string, toDate: string): Pro
     .where(
       and(
         lte(bookingRequests.checkInDate, parseDateOnly(toDate)),
-        gte(bookingRequests.checkOutDate, parseDateOnly(fromDate))
+        gt(bookingRequests.checkOutDate, parseDateOnly(fromDate))
       )
     )
     .orderBy(asc(bookingRequests.checkInDate));
@@ -196,6 +260,143 @@ export async function countPendingBookings(): Promise<number> {
     .from(bookingRequests)
     .where(eq(bookingRequests.status, "pending"));
   return Number(rows[0]?.count ?? 0);
+}
+
+export async function getConfirmedCheckInsOn(date: string): Promise<BookingRequest[]> {
+  const db = await requireDb();
+  return db
+    .select()
+    .from(bookingRequests)
+    .where(and(eq(bookingRequests.status, "confirmed"), eq(bookingRequests.checkInDate, parseDateOnly(date))))
+    .orderBy(asc(bookingRequests.villaId));
+}
+
+export async function getConfirmedCheckOutsOn(date: string): Promise<BookingRequest[]> {
+  const db = await requireDb();
+  return db
+    .select()
+    .from(bookingRequests)
+    .where(and(eq(bookingRequests.status, "confirmed"), eq(bookingRequests.checkOutDate, parseDateOnly(date))))
+    .orderBy(asc(bookingRequests.villaId));
+}
+
+export async function getActiveConfirmedInRange(fromDate: string, toDate: string): Promise<BookingRequest[]> {
+  const db = await requireDb();
+  return db
+    .select()
+    .from(bookingRequests)
+    .where(
+      and(
+        eq(bookingRequests.status, "confirmed"),
+        lte(bookingRequests.checkInDate, parseDateOnly(toDate)),
+        gt(bookingRequests.checkOutDate, parseDateOnly(fromDate))
+      )
+    );
+}
+
+// --- Blocked dates ---
+
+export async function listBlockedDates(filters?: {
+  villaId?: string;
+  fromDate?: string;
+  toDate?: string;
+}): Promise<BlockedDate[]> {
+  const db = await requireDb();
+  const conditions = [];
+  if (filters?.villaId) conditions.push(eq(blockedDates.villaId, filters.villaId));
+  if (filters?.fromDate) {
+    conditions.push(gte(blockedDates.endDate, parseDateOnly(filters.fromDate)));
+  }
+  if (filters?.toDate) {
+    conditions.push(lte(blockedDates.startDate, parseDateOnly(filters.toDate)));
+  }
+  const query = db.select().from(blockedDates).orderBy(asc(blockedDates.startDate));
+  if (conditions.length > 0) {
+    return query.where(and(...conditions));
+  }
+  return query;
+}
+
+export async function getBlockedDateById(id: number): Promise<BlockedDate | undefined> {
+  const db = await requireDb();
+  const rows = await db.select().from(blockedDates).where(eq(blockedDates.id, id)).limit(1);
+  return rows[0];
+}
+
+export async function getBlockedDatesForVilla(
+  villaId: string,
+  excludeId?: number
+): Promise<BlockedDate[]> {
+  const db = await requireDb();
+  const conditions = [eq(blockedDates.villaId, villaId)];
+  if (excludeId != null) {
+    conditions.push(ne(blockedDates.id, excludeId));
+  }
+  return db.select().from(blockedDates).where(and(...conditions));
+}
+
+export async function getBlockedDatesInRange(fromDate: string, toDate: string): Promise<BlockedDate[]> {
+  const db = await requireDb();
+  return db
+    .select()
+    .from(blockedDates)
+    .where(
+      and(
+        lte(blockedDates.startDate, parseDateOnly(toDate)),
+        gt(blockedDates.endDate, parseDateOnly(fromDate))
+      )
+    )
+    .orderBy(asc(blockedDates.startDate));
+}
+
+export async function getAllBlockedDates(villaId?: string): Promise<BlockedDate[]> {
+  const db = await requireDb();
+  if (villaId) {
+    return db
+      .select()
+      .from(blockedDates)
+      .where(eq(blockedDates.villaId, villaId))
+      .orderBy(asc(blockedDates.startDate));
+  }
+  return db.select().from(blockedDates).orderBy(asc(blockedDates.startDate));
+}
+
+export async function insertBlockedDate(
+  data: Omit<InsertBlockedDate, "startDate" | "endDate"> & {
+    startDate: string | Date;
+    endDate: string | Date;
+  }
+): Promise<number> {
+  const db = await requireDb();
+  const result = await db.insert(blockedDates).values({
+    ...data,
+    startDate: parseDateOnly(data.startDate),
+    endDate: parseDateOnly(data.endDate),
+  });
+  return Number(result[0].insertId);
+}
+
+export async function deleteBlockedDate(id: number): Promise<boolean> {
+  const db = await requireDb();
+  const result = await db.delete(blockedDates).where(eq(blockedDates.id, id));
+  return Number(result[0].affectedRows ?? 0) > 0;
+}
+
+export async function hasReminderBeenSent(reminderKey: string): Promise<boolean> {
+  const db = await requireDb();
+  const rows = await db
+    .select({ id: adminReminderLog.id })
+    .from(adminReminderLog)
+    .where(eq(adminReminderLog.reminderKey, reminderKey))
+    .limit(1);
+  return rows.length > 0;
+}
+
+export async function markReminderSent(reminderKey: string): Promise<void> {
+  const db = await requireDb();
+  await db.insert(adminReminderLog).values({ reminderKey }).onDuplicateKeyUpdate({
+    set: { sentAt: new Date() },
+  });
 }
 
 // --- Pricing ---
@@ -272,9 +473,10 @@ export async function updateOffer(id: number, data: Partial<InsertOffer>) {
   await db.update(offers).set(data).where(eq(offers.id, id));
 }
 
-export async function deleteOffer(id: number) {
+export async function deleteOffer(id: number): Promise<boolean> {
   const db = await requireDb();
-  await db.delete(offers).where(eq(offers.id, id));
+  const result = await db.delete(offers).where(eq(offers.id, id));
+  return Number(result[0].affectedRows ?? 0) > 0;
 }
 
 export async function countPublishedOffers(): Promise<number> {
@@ -284,6 +486,57 @@ export async function countPublishedOffers(): Promise<number> {
     .from(offers)
     .where(eq(offers.isPublished, true));
   return Number(rows[0]?.count ?? 0);
+}
+
+export class PublishOfferLimitError extends Error {
+  constructor() {
+    super("Максимум 2 публикувани оферти");
+    this.name = "PublishOfferLimitError";
+  }
+}
+
+type OfferTx = {
+  select: Awaited<ReturnType<typeof requireDb>>["select"];
+  insert: Awaited<ReturnType<typeof requireDb>>["insert"];
+  update: Awaited<ReturnType<typeof requireDb>>["update"];
+};
+
+async function countPublishedOffersInTx(tx: OfferTx): Promise<number> {
+  const rows = await tx
+    .select()
+    .from(offers)
+    .where(eq(offers.isPublished, true))
+    .for("update");
+  return rows.length;
+}
+
+export async function insertOfferWithPublishCheck(data: InsertOffer): Promise<number> {
+  const database = await requireDb();
+  return database.transaction(async tx => {
+    const offerTx = tx as unknown as OfferTx;
+    if (data.isPublished) {
+      const count = await countPublishedOffersInTx(offerTx);
+      if (count >= 2) throw new PublishOfferLimitError();
+    }
+    const result = await offerTx.insert(offers).values(data);
+    return Number(result[0].insertId);
+  });
+}
+
+export async function updateOfferWithPublishCheck(
+  id: number,
+  data: Partial<InsertOffer>,
+  wasPublished: boolean
+): Promise<void> {
+  const database = await requireDb();
+  await database.transaction(async tx => {
+    const offerTx = tx as unknown as OfferTx;
+    if (data.isPublished === true && !wasPublished) {
+      const count = await countPublishedOffersInTx(offerTx);
+      if (count >= 2) throw new PublishOfferLimitError();
+    }
+    await offerTx.update(offers).set(data).where(eq(offers.id, id));
+  });
 }
 
 // --- Push subscriptions ---
@@ -309,9 +562,13 @@ export async function upsertPushSubscription(data: {
     });
 }
 
-export async function deletePushSubscription(endpoint: string) {
+export async function deletePushSubscription(endpoint: string, adminUserId?: number) {
   const db = await requireDb();
-  await db.delete(pushSubscriptions).where(eq(pushSubscriptions.endpoint, endpoint));
+  const conditions = [eq(pushSubscriptions.endpoint, endpoint)];
+  if (adminUserId != null) {
+    conditions.push(eq(pushSubscriptions.adminUserId, adminUserId));
+  }
+  await db.delete(pushSubscriptions).where(and(...conditions));
 }
 
 export async function getPushSubscriptions(excludeAdminUserId?: number) {
@@ -325,7 +582,265 @@ export async function getPushSubscriptions(excludeAdminUserId?: number) {
   return db.select().from(pushSubscriptions);
 }
 
-export async function deletePushSubscriptionById(id: number) {
+export async function deletePushSubscriptionsForAdmin(adminUserId: number) {
   const db = await requireDb();
-  await db.delete(pushSubscriptions).where(eq(pushSubscriptions.id, id));
+  await db.delete(pushSubscriptions).where(eq(pushSubscriptions.adminUserId, adminUserId));
+}
+
+// --- Client contacts ---
+
+export type ContactListFilters = {
+  search?: string;
+  offset?: number;
+  limit?: number;
+};
+
+function buildContactSearchCondition(search: string) {
+  const trimmed = search.trim();
+  if (!trimmed) return null;
+
+  const parts = [];
+  const namePattern = `%${escapeLikePattern(trimmed).toLowerCase()}%`;
+  parts.push(sql`LOWER(${clientContacts.fullName}) LIKE ${namePattern}`);
+
+  const digitPatterns = phoneSearchPatterns(trimmed);
+  for (const pattern of digitPatterns) {
+    parts.push(like(clientContacts.phoneNormalized, `%${escapeLikePattern(pattern)}%`));
+  }
+
+  return or(...parts)!;
+}
+
+export async function countContacts(filters: Omit<ContactListFilters, "offset" | "limit"> = {}): Promise<number> {
+  const db = await requireDb();
+  const conditions = [];
+  if (filters.search?.trim()) {
+    const searchCond = buildContactSearchCondition(filters.search);
+    if (searchCond) conditions.push(searchCond);
+  }
+  const query = db.select({ count: sql<number>`count(*)` }).from(clientContacts);
+  const rows = conditions.length > 0 ? await query.where(and(...conditions)) : await query;
+  return Number(rows[0]?.count ?? 0);
+}
+
+export async function listContacts(filters: ContactListFilters = {}): Promise<ClientContact[]> {
+  const db = await requireDb();
+  const conditions = [];
+  if (filters.search?.trim()) {
+    const searchCond = buildContactSearchCondition(filters.search);
+    if (searchCond) conditions.push(searchCond);
+  }
+  const limit = filters.limit ?? 50;
+  const offset = filters.offset ?? 0;
+
+  const query = db
+    .select()
+    .from(clientContacts)
+    .orderBy(desc(clientContacts.updatedAt))
+    .limit(limit)
+    .offset(offset);
+
+  if (conditions.length > 0) return query.where(and(...conditions));
+  return query;
+}
+
+export async function getContactById(id: number): Promise<ClientContact | undefined> {
+  const db = await requireDb();
+  const rows = await db.select().from(clientContacts).where(eq(clientContacts.id, id)).limit(1);
+  return rows[0];
+}
+
+async function findContactByPhoneOrEmail(
+  phoneNormalized: string | null,
+  email: string | null
+): Promise<ClientContact | undefined> {
+  const db = await requireDb();
+  const conditions = [];
+  if (phoneNormalized) conditions.push(eq(clientContacts.phoneNormalized, phoneNormalized));
+  if (email) conditions.push(sql`LOWER(${clientContacts.email}) = ${email}`);
+  if (conditions.length === 0) return undefined;
+
+  const rows = await db
+    .select()
+    .from(clientContacts)
+    .where(or(...conditions)!)
+    .limit(1);
+  return rows[0];
+}
+
+export async function getVipContactLookup() {
+  const db = await requireDb();
+  const rows = await db
+    .select({
+      phoneNormalized: clientContacts.phoneNormalized,
+      email: clientContacts.email,
+    })
+    .from(clientContacts)
+    .where(eq(clientContacts.isVip, true));
+  return buildVipLookup(rows);
+}
+
+export async function insertContact(
+  data: Omit<InsertClientContact, "phoneNormalized" | "isVip"> & {
+    phone?: string | null;
+    email?: string | null;
+    isVip?: boolean;
+  }
+): Promise<number> {
+  const db = await requireDb();
+  const fields = contactFieldsFromGuest({
+    guestName: data.fullName,
+    guestPhone: data.phone,
+    guestEmail: data.email,
+  });
+  const result = await db.insert(clientContacts).values({
+    fullName: fields.fullName,
+    phone: fields.phone,
+    phoneNormalized: fields.phoneNormalized,
+    email: fields.email,
+    notes: data.notes ?? null,
+    isVip: data.isVip ?? false,
+  });
+  return Number(result[0].insertId);
+}
+
+export async function updateContact(
+  id: number,
+  data: Partial<{
+    fullName: string;
+    phone: string | null;
+    email: string | null;
+    notes: string | null;
+    isVip: boolean;
+  }>
+) {
+  const db = await requireDb();
+  const existing = await getContactById(id);
+  if (!existing) return;
+
+  const fullName = data.fullName?.trim() ?? existing.fullName;
+  const phone = data.phone !== undefined ? data.phone?.trim() || null : existing.phone;
+  const email = data.email !== undefined ? data.email : existing.email;
+  const fields = contactFieldsFromGuest({
+    guestName: fullName,
+    guestPhone: phone,
+    guestEmail: email,
+  });
+
+  await db
+    .update(clientContacts)
+    .set({
+      fullName: fields.fullName,
+      phone: fields.phone,
+      phoneNormalized: fields.phoneNormalized,
+      email: fields.email,
+      notes: data.notes !== undefined ? data.notes : existing.notes,
+      isVip: data.isVip !== undefined ? data.isVip : existing.isVip,
+    })
+    .where(eq(clientContacts.id, id));
+}
+
+export async function deleteContact(id: number) {
+  const db = await requireDb();
+  await db.delete(clientContacts).where(eq(clientContacts.id, id));
+}
+
+export async function listBookingsForContact(contact: ClientContact): Promise<BookingRequest[]> {
+  const db = await requireDb();
+  const conditions = [];
+
+  if (contact.phoneNormalized) {
+    conditions.push(eq(bookingRequests.guestPhoneNormalized, contact.phoneNormalized));
+  }
+  const email = normalizeEmail(contact.email);
+  if (email) {
+    conditions.push(sql`LOWER(${bookingRequests.guestEmail}) = ${email}`);
+  }
+
+  if (conditions.length === 0) return [];
+
+  return db
+    .select()
+    .from(bookingRequests)
+    .where(or(...conditions)!)
+    .orderBy(desc(bookingRequests.checkInDate));
+}
+
+export async function upsertContactFromGuest(input: {
+  guestName: string;
+  guestPhone?: string | null;
+  guestEmail?: string | null;
+}): Promise<number | null> {
+  const fields = contactFieldsFromGuest(input);
+  if (!fields.phoneNormalized && !fields.email) return null;
+
+  const existing = await findContactByPhoneOrEmail(fields.phoneNormalized, fields.email);
+  if (existing) {
+    await updateContact(existing.id, {
+      fullName: fields.fullName,
+      phone: fields.phone ?? existing.phone,
+      email: fields.email ?? existing.email ?? null,
+    });
+    return existing.id;
+  }
+
+  return insertContact({
+    fullName: fields.fullName,
+    phone: fields.phone,
+    email: fields.email,
+    notes: null,
+  });
+}
+
+export async function importContactsFromBookings(): Promise<number> {
+  const db = await requireDb();
+  const bookings = await db.select().from(bookingRequests).orderBy(desc(bookingRequests.createdAt));
+  const groups = new Map<string, { guestName: string; guestPhone: string | null; guestEmail: string | null }>();
+
+  for (const booking of bookings) {
+    const phoneNorm = guestPhoneNormalized(booking.guestPhone);
+    const email = normalizeEmail(booking.guestEmail);
+    const key = phoneNorm ? `p:${phoneNorm}` : email ? `e:${email}` : null;
+    if (!key || groups.has(key)) continue;
+    groups.set(key, {
+      guestName: booking.guestName,
+      guestPhone: booking.guestPhone,
+      guestEmail: booking.guestEmail,
+    });
+  }
+
+  let created = 0;
+  for (const guest of Array.from(groups.values())) {
+    const fields = contactFieldsFromGuest(guest);
+    const existing = await findContactByPhoneOrEmail(fields.phoneNormalized, fields.email);
+    if (existing) continue;
+    await insertContact({
+      fullName: fields.fullName,
+      phone: fields.phone,
+      email: fields.email,
+      notes: null,
+    });
+    created++;
+  }
+  return created;
+}
+
+export async function backfillGuestPhoneNormalized(): Promise<number> {
+  const db = await requireDb();
+  const rows = await db
+    .select({ id: bookingRequests.id, guestPhone: bookingRequests.guestPhone })
+    .from(bookingRequests)
+    .where(sql`${bookingRequests.guestPhoneNormalized} IS NULL AND ${bookingRequests.guestPhone} IS NOT NULL`);
+
+  let updated = 0;
+  for (const row of rows) {
+    const normalized = guestPhoneNormalized(row.guestPhone);
+    if (!normalized) continue;
+    await db
+      .update(bookingRequests)
+      .set({ guestPhoneNormalized: normalized })
+      .where(eq(bookingRequests.id, row.id));
+    updated++;
+  }
+  return updated;
 }

@@ -15,8 +15,14 @@ export function SmoothScrollProvider({
   useEffect(() => {
     if (!enabled) return;
 
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+
     const lenis = initLenis();
     if (!lenis) return;
+
+    lenis.scrollTo(0, { immediate: true });
 
     const stopRaf = startLenisRaf(lenis);
 

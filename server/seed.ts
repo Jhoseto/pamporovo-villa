@@ -66,13 +66,21 @@ export async function runSeedIfNeeded() {
   try {
     const adminCount = await db.countAdminUsers();
     if (adminCount === 0) {
-      const passwordHash = await hashPassword(ENV.masterAdminPassword);
-      await db.createAdminUser({
-        username: ENV.masterAdminUsername,
-        passwordHash,
-        isMaster: true,
-      });
-      console.log(`[Seed] Created master admin: ${ENV.masterAdminUsername}`);
+      const seedPassword = ENV.masterAdminPassword || (ENV.isProduction ? "" : "Admin2626");
+      if (!seedPassword) {
+        console.warn("[Seed] No MASTER_ADMIN_PASSWORD — skipping master admin creation");
+      } else {
+        if (!ENV.masterAdminPassword) {
+          console.warn("[Seed] Using dev-only default master password — set MASTER_ADMIN_PASSWORD for production");
+        }
+        const passwordHash = await hashPassword(seedPassword);
+        await db.createAdminUser({
+          username: ENV.masterAdminUsername,
+          passwordHash,
+          isMaster: true,
+        });
+        console.log(`[Seed] Created master admin: ${ENV.masterAdminUsername}`);
+      }
     }
 
     const pricing = await db.getAllVillaPricing();

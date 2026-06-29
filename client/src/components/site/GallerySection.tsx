@@ -10,6 +10,8 @@ export function GallerySection() {
   const [direction, setDirection] = useState<1 | -1>(1);
   const [lightbox, setLightbox] = useState(false);
   const thumbRefs = useRef<(HTMLButtonElement | null)[]>([]);
+  const thumbStripRef = useRef<HTMLDivElement>(null);
+  const skipInitialThumbScroll = useRef(true);
   const touchStartX = useRef<number | null>(null);
 
   const total = GALLERY_IMAGES.length;
@@ -28,11 +30,17 @@ export function GallerySection() {
   );
 
   useEffect(() => {
-    thumbRefs.current[selected]?.scrollIntoView({
-      behavior: "smooth",
-      inline: "center",
-      block: "nearest",
-    });
+    const thumb = thumbRefs.current[selected];
+    const strip = thumbStripRef.current;
+    if (!thumb || !strip) return;
+
+    if (skipInitialThumbScroll.current) {
+      skipInitialThumbScroll.current = false;
+      return;
+    }
+
+    const targetLeft = thumb.offsetLeft - strip.clientWidth / 2 + thumb.offsetWidth / 2;
+    strip.scrollTo({ left: targetLeft, behavior: "smooth" });
   }, [selected]);
 
   useEffect(() => {
@@ -76,8 +84,8 @@ export function GallerySection() {
       <SectionShell
         id="gallery"
         eyebrow="Галерия"
-        title="Надникнете преди да дойдете"
-        subtitle="Интериор, уют и планински гледки — такива, каквито ще ги заварите"
+        title="Нашето предложение в кадри"
+        subtitle="Интериор, уют и планински гледки"
         overlap
       >
         <ScrollReveal>
@@ -159,6 +167,7 @@ export function GallerySection() {
 
             <div className="gallery-thumb-wrap relative mt-5 md:mt-6">
               <div
+                ref={thumbStripRef}
                 className="gallery-thumb-strip flex gap-2.5 overflow-x-auto pb-2 md:gap-3"
                 role="tablist"
                 aria-label="Миниатюри в галерията"

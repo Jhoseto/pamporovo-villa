@@ -14,11 +14,15 @@ export function datesOverlap(
 
 function toDateStr(d: string | Date): string {
   if (typeof d === "string") return d.slice(0, 10);
-  return d.toISOString().slice(0, 10);
+  if (Number.isNaN(d.getTime())) return "";
+  const y = d.getUTCFullYear();
+  const m = String(d.getUTCMonth() + 1).padStart(2, "0");
+  const day = String(d.getUTCDate()).padStart(2, "0");
+  return `${y}-${m}-${day}`;
 }
 
 export function validateStayDates(checkIn: string, checkOut: string): void {
   if (checkOut <= checkIn) {
-    throw new Error("Check-out date must be after check-in date");
+    throw new Error("Датата на напускане трябва да е след настаняване");
   }
 }

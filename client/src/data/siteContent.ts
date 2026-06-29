@@ -24,6 +24,8 @@ export const SITE = {
   tagline: "3 вили под наем",
   location: "к.к. Пампорово · местност Райковски ливади",
   logo: "/logo.png",
+  website: "https://pamporovovilla.com",
+  websiteLabel: "pamporovovilla.com",
   email: "pamporovovilla@gmail.com",
 } as const;
 

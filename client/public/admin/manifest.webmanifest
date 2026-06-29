@@ -1,13 +1,13 @@
 {
-  "name": "Pamporovo Villa Admin",
-  "short_name": "PV Admin",
+  "name": "Pamporovo Villa — Административен панел",
+  "short_name": "PV Админ",
   "description": "Управление на резервации — Pamporovo Villa",
-  "start_url": "/admin",
+  "start_url": "/admin/",
   "scope": "/admin/",
   "display": "standalone",
   "orientation": "portrait-primary",
-  "background_color": "#f8f6f2",
-  "theme_color": "#f8f6f2",
+  "background_color": "#e8ebf0",
+  "theme_color": "#e8ebf0",
   "lang": "bg",
   "icons": [
     {

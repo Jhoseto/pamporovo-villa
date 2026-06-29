@@ -105,6 +105,24 @@ export async function notifyManualBooking(
   );
 }
 
+export async function notifyTomorrowCheckIns(
+  bookings: { id: number; guestName: string; villaLabel: string; checkInDate: string }[],
+  date: string
+) {
+  const preview = bookings
+    .slice(0, 3)
+    .map(b => `${b.guestName} (${b.villaLabel})`)
+    .join(" · ");
+  const suffix = bookings.length > 3 ? ` +${bookings.length - 3}` : "";
+
+  await notifyAdmins({
+    title: `Утре ${bookings.length} настанявания`,
+    body: `${preview}${suffix}`,
+    url: "/admin",
+    tag: `checkin-reminder-${date}`,
+  });
+}
+
 function formatRange(checkIn: string, checkOut: string): string {
   const fmt = (d: string) => {
     const [y, m, day] = d.slice(0, 10).split("-");

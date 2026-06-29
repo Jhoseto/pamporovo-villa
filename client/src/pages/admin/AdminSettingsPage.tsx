@@ -7,30 +7,39 @@ import { toast } from "sonner";
 import { useAdminPush } from "@/hooks/useAdminPush";
 
 export default function AdminSettingsPage() {
-  const { permission, subscribe, isSubscribed, vapidReady } = useAdminPush();
+  const utils = trpc.useUtils();
+  const { permission, subscribe, unsubscribe, isSubscribed, vapidReady, isBusy } = useAdminPush();
   const [currentPassword, setCurrentPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
 
+  const logout = trpc.admin.auth.logout.useMutation({
+    onSuccess: () => {
+      utils.admin.auth.me.setData(undefined, null);
+      window.location.href = "/admin/login";
+    },
+  });
+
   const changePassword = trpc.admin.auth.changePassword.useMutation({
     onSuccess: () => {
-      toast.success("Паролата е сменена");
+      toast.success("Паролата е сменена — моля, влезте отново");
       setCurrentPassword("");
       setNewPassword("");
+      logout.mutate();
     },
     onError: err => toast.error(err.message),
   });
 
   return (
     <div className="mx-auto max-w-2xl space-y-8">
-      <div>
-        <h1 className="font-serif text-3xl font-bold">Настройки</h1>
-        <p className="text-[var(--admin-muted)]">Push нотификации и профил</p>
+      <div className="admin-page-header">
+        <h1>Настройки</h1>
+        <p>Известия и профил</p>
       </div>
 
-      <section className="rounded-2xl border border-[var(--admin-border)] bg-[var(--admin-card)] p-6">
-        <h2 className="font-serif text-xl font-bold">Push нотификации</h2>
+      <section className="admin-glass-card p-6">
+        <h2 className="font-serif text-xl font-semibold">Натисни известия</h2>
         <p className="mt-2 text-sm text-[var(--admin-muted)]">
-          На телефон: Safari → Share → Add to Home Screen, после разрешете нотификации тук.
+          На телефон: Safari → Сподели → Добави на началния екран, след което разрешете известията тук.
         </p>
         <div className="mt-4 space-y-2 text-sm">
           <p>
@@ -39,18 +48,34 @@ export default function AdminSettingsPage() {
               {permission === "granted" && isSubscribed
                 ? "Активни"
                 : permission === "denied"
-                  ? "Блокирани"
+                  ? "Блокирани в браузъра"
                   : "Неактивни"}
             </strong>
           </p>
         </div>
-        <Button className="admin-btn-primary mt-4" onClick={() => subscribe()} disabled={!vapidReady}>
-          {isSubscribed ? "Обнови абонамент" : "Активирай push"}
-        </Button>
+        <div className="mt-4 flex flex-wrap gap-2">
+          <Button
+            className="admin-btn-primary"
+            onClick={() => subscribe()}
+            disabled={!vapidReady || isBusy || permission === "denied"}
+          >
+            {isSubscribed ? "Обнови абонамента" : "Активирай известията"}
+          </Button>
+          {isSubscribed && (
+            <Button variant="outline" className="admin-glass-btn" onClick={() => unsubscribe()} disabled={isBusy}>
+              Деактивирай известията
+            </Button>
+          )}
+        </div>
+        {permission === "denied" && (
+          <p className="mt-3 text-sm text-[var(--admin-muted)]">
+            Разрешете известията от настройките на браузъра за този сайт.
+          </p>
+        )}
       </section>
 
-      <section className="rounded-2xl border border-[var(--admin-border)] bg-[var(--admin-card)] p-6">
-        <h2 className="font-serif text-xl font-bold">Смяна на парола</h2>
+      <section className="admin-glass-card p-6">
+        <h2 className="font-serif text-xl font-semibold">Смяна на парола</h2>
         <div className="mt-4 space-y-4">
           <div className="space-y-2">
             <Label>Текуща парола</Label>
@@ -62,6 +87,7 @@ export default function AdminSettingsPage() {
           </div>
           <Button
             variant="outline"
+            className="admin-glass-btn"
             onClick={() => changePassword.mutate({ currentPassword, newPassword })}
             disabled={changePassword.isPending}
           >
@@ -70,13 +96,13 @@ export default function AdminSettingsPage() {
         </div>
       </section>
 
-      <section className="rounded-2xl border border-dashed border-[var(--admin-border)] p-6 text-sm text-[var(--admin-muted)]">
+      <section className="admin-glass-card admin-glass-card--dashed p-6 text-sm text-[var(--admin-muted)]">
         <h3 className="font-semibold text-[var(--admin-fg)]">Инсталирай на телефона (PWA)</h3>
         <p className="mt-2">
-          <strong>Android:</strong> Chrome menu → Install app / Add to Home screen
+          <strong>Android:</strong> Chrome → Меню → Инсталирай приложението / Добави на началния екран
         </p>
         <p className="mt-1">
-          <strong>iPhone:</strong> Safari → Share → Add to Home Screen → отворете иконата → активирайте push
+          <strong>iPhone:</strong> Safari → Сподели → Добави на началния екран → отворете иконата → активирайте известията
         </p>
       </section>
     </div>

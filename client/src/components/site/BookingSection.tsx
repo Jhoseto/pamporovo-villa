@@ -12,6 +12,7 @@ import { isSameCalendarDay, updateBookingDateRange } from "@/lib/bookingDates";
 import { formatDateForApi } from "@/lib/scroll";
 import { Calendar } from "@/components/ui/calendar";
 import { Input } from "@/components/ui/input";
+import { PhoneInput } from "@/components/ui/phone-input";
 import {
   Select,
   SelectContent,
@@ -315,9 +316,8 @@ export function BookingSection() {
               </div>
 
               <PremiumFormField label="Телефон" htmlFor="phone">
-                <Input
+                <PhoneInput
                   id="phone"
-                  type="tel"
                   className={premiumInputClass}
                   value={formData.guestPhone}
                   onChange={event =>
@@ -328,7 +328,7 @@ export function BookingSection() {
                 />
               </PremiumFormField>
 
-              <PremiumFormField label="Специални пожелания" htmlFor="requests">
+              <PremiumFormField label="Бележка" htmlFor="requests">
                 <Textarea
                   id="requests"
                   className={premiumTextareaClass}
@@ -336,7 +336,7 @@ export function BookingSection() {
                   onChange={event =>
                     setFormData(prev => ({ ...prev, guestNote: event.target.value }))
                   }
-                  placeholder="Напишете всякакви специални пожелания..."
+                  placeholder="Напишете ако имате уточняваща информация към резервацията..."
                 />
               </PremiumFormField>
 

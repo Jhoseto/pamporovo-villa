@@ -1,6 +1,7 @@
 import { Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useAdminThemeContext } from "@/contexts/AdminThemeContext";
+import { cn } from "@/lib/utils";
 
 type Props = {
   className?: string;
@@ -14,7 +15,7 @@ export function AdminThemeToggle({ className }: Props) {
       type="button"
       variant="outline"
       size="icon"
-      className={className}
+      className={cn("admin-glass-btn", className)}
       onClick={toggleTheme}
       aria-label={theme === "light" ? "Тъмен режим" : "Светъл режим"}
       title={theme === "light" ? "Тъмен режим" : "Светъл режим"}
