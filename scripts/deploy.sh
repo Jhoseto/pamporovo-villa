@@ -1,15 +1,23 @@
 #!/usr/bin/env bash
-# Runs ON THE SERVER inside ~/pamporovo-villa
+# Runs ON THE SERVER — dist/ already uploaded by deploy-remote.ps1
+# Only installs production deps, syncs DB, restarts app.
 set -eo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 APP_DIR="$(basename "$ROOT")"
 cd "$ROOT"
 
-echo "==> Pamporovo Villa deploy"
+echo "==> Pamporovo Villa server deploy"
 echo "    Root: $ROOT"
 
-# ── Locate Node.js (cPanel nodevenv — do NOT source activate, just prepend bin) ──
+# ── Require dist/ ─────────────────────────────────────────────────────────────
+if [ ! -f dist/index.js ]; then
+  echo "ERROR: dist/index.js not found."
+  echo "  deploy-remote.ps1 should have uploaded dist/ before calling this script."
+  exit 1
+fi
+
+# ── Locate Node.js (cPanel nodevenv — prepend bin dir, do NOT source activate) ──
 NODE_BIN=""
 for ver in 22 20 18; do
   candidate="$HOME/nodevenv/${APP_DIR}/${ver}/bin"
@@ -21,7 +29,6 @@ for ver in 22 20 18; do
   fi
 done
 
-# CloudLinux fallback
 if [ -z "$NODE_BIN" ]; then
   for ver in 22 20 18; do
     candidate="/opt/alt/alt-nodejs${ver}/root/usr/bin"
@@ -35,25 +42,16 @@ if [ -z "$NODE_BIN" ]; then
 fi
 
 if [ -z "$NODE_BIN" ]; then
-  echo ""
   echo "ERROR: Node.js not found."
   echo "  → cPanel → Software → Setup Node.js App → CREATE APPLICATION"
-  echo "    Node: 22  |  Mode: Production  |  Root: pamporovo-villa  |  Startup: dist/index.js"
+  echo "    Node: 22 | Mode: Production | Root: pamporovo-villa | Startup: dist/index.js"
   exit 1
 fi
 
-# ── Install ALL dependencies (including devDeps needed for build) ─────────────
-# cPanel sets NODE_ENV=production which makes npm skip devDependencies.
-# We must unset it during install so vite/esbuild/tsx are installed too.
-echo "==> Installing dependencies  (npm install --include=dev)"
-NODE_ENV= npm install --include=dev --legacy-peer-deps --no-fund --no-audit 2>&1 | tail -3
-
-# ── Build ─────────────────────────────────────────────────────────────────────
-echo "==> Building  (npm run build)"
+# ── Install production dependencies only (lightweight, no build tools needed) ──
+echo "==> Installing production dependencies  (npm install --omit=dev)"
 export NODE_ENV=production
-./node_modules/.bin/vite build
-./node_modules/.bin/esbuild server/_core/index.ts \
-  --platform=node --packages=external --bundle --format=esm --outdir=dist
+npm install --omit=dev --legacy-peer-deps --no-fund --no-audit 2>&1 | tail -3
 
 # ── Database sync ─────────────────────────────────────────────────────────────
 echo "==> Syncing database schema"
@@ -62,7 +60,7 @@ node scripts/apply-pending-schema.mjs
 # ── Runtime dirs ──────────────────────────────────────────────────────────────
 mkdir -p data/notification-sounds
 
-# ── Restart ───────────────────────────────────────────────────────────────────
+# ── Restart app ───────────────────────────────────────────────────────────────
 if command -v cloudlinux-selector >/dev/null 2>&1; then
   echo "==> Restarting via cloudlinux-selector"
   cloudlinux-selector restart --json --interpreter nodejs \
@@ -72,11 +70,9 @@ fi
 SITE_URL="${SITE_URL:-}"
 echo ""
 echo "====================================="
-echo " Deploy OK!"
+echo " Server deploy OK!"
 echo "====================================="
 [ -n "$SITE_URL" ] && echo "  Site:   ${SITE_URL}/"
 [ -n "$SITE_URL" ] && echo "  Admin:  ${SITE_URL}/admin"
-[ -n "$SITE_URL" ] && echo "  Health: ${SITE_URL}/health"
 echo ""
-echo "  If app shows 503:"
-echo "  cPanel → Setup Node.js App → pamporovo-villa → Restart"
+echo "  If 503: cPanel → Setup Node.js App → pamporovo-villa → Restart"

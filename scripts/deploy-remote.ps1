@@ -1,5 +1,5 @@
 #Requires -Version 5.1
-param([switch]$SkipSecrets)
+param([switch]$SkipBuild, [switch]$SkipSecrets)
 
 $ErrorActionPreference = "Stop"
 $Root = Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Path)
@@ -21,14 +21,13 @@ function Read-EnvFile([string]$Path) {
 # ── Load .deploy.env ──────────────────────────────────────────────────────────
 $deployEnvPath = Join-Path $Root ".deploy.env"
 if (-not (Test-Path $deployEnvPath)) {
-  Copy-Item (Join-Path $Root ".deploy.env.example") $deployEnvPath
-  Write-Host "Created .deploy.env - fill in the required fields and run again." -ForegroundColor Yellow
+  Write-Host "ERROR: .deploy.env not found. Copy .deploy.env.example and fill it in." -ForegroundColor Red
   exit 1
 }
 $cfg = Read-EnvFile $deployEnvPath
 
 $missing = @("JETHOST_SSH_HOST","JETHOST_SSH_USER","DATABASE_URL","SITE_URL") | Where-Object {
-  [string]::IsNullOrWhiteSpace($cfg[$_]) -or $cfg[$_] -match 'YOUR-TEMP|DB_USER|DB_PASSWORD|DB_NAME'
+  [string]::IsNullOrWhiteSpace($cfg[$_]) -or $cfg[$_] -match 'CHANGE_THIS|YOUR-TEMP|DB_USER|DB_PASSWORD'
 }
 if ($missing.Count -gt 0) {
   Write-Host "Fill these in .deploy.env first:" -ForegroundColor Yellow
@@ -36,18 +35,7 @@ if ($missing.Count -gt 0) {
   exit 1
 }
 
-# ── Generate production secrets ───────────────────────────────────────────────
-if (-not $SkipSecrets) {
-  Write-Host "==> Generating production secrets"
-  node (Join-Path $Root "scripts/generate-production-secrets.mjs")
-}
-
-$prodEnv = Join-Path $Root ".env.production.local"
-if (-not (Test-Path $prodEnv)) {
-  throw 'Run first: node scripts/generate-production-secrets.mjs'
-}
-
-# ── SSH config ────────────────────────────────────────────────────────────────
+# ── SSH params ────────────────────────────────────────────────────────────────
 $sshHost = $cfg["JETHOST_SSH_HOST"]
 $sshUser = $cfg["JETHOST_SSH_USER"]
 $sshPort = if ($cfg["JETHOST_SSH_PORT"]) { $cfg["JETHOST_SSH_PORT"] } else { "1022" }
@@ -57,27 +45,45 @@ $repo    = if ($cfg["GITHUB_REPO"]) { $cfg["GITHUB_REPO"] } else { "https://gith
 $token   = $cfg["GITHUB_TOKEN"]
 if ($token) { $repo = $repo -replace "https://", "https://${token}@" }
 
-$remote = "${sshUser}@${sshHost}"
-$sshBase = @("-p", $sshPort, "-o", "StrictHostKeyChecking=accept-new", "-o", "ConnectTimeout=15")
+$remote  = "${sshUser}@${sshHost}"
+$sshBase = @("-p", $sshPort, "-o", "StrictHostKeyChecking=accept-new", "-o", "ConnectTimeout=20", "-o", "ServerAliveInterval=30")
 if ($sshKey -and (Test-Path $sshKey)) {
   $sshBase = @("-i", $sshKey) + $sshBase
 }
 
-function Invoke-SSH([string]$Cmd) {
+function Invoke-SSH([string]$Cmd, [string]$Desc = "") {
+  if ($Desc) { Write-Host "==> $Desc" }
   & ssh @sshBase $remote $Cmd
-  if ($LASTEXITCODE -ne 0) { throw "SSH command failed: $Cmd" }
+  if ($LASTEXITCODE -ne 0) { throw "SSH failed${if($Desc){`: $Desc`}}" }
 }
 
-# ── Test connection ───────────────────────────────────────────────────────────
-Write-Host "==> Testing SSH → $remote (port $sshPort)"
+# ── Generate production secrets ───────────────────────────────────────────────
+if (-not $SkipSecrets) {
+  Write-Host "==> Generating production secrets"
+  node (Join-Path $Root "scripts/generate-production-secrets.mjs")
+}
+$prodEnv = Join-Path $Root ".env.production.local"
+if (-not (Test-Path $prodEnv)) { throw "Missing .env.production.local — run: node scripts/generate-production-secrets.mjs" }
+
+# ── Build locally (avoids OOM on shared hosting server) ──────────────────────
+if (-not $SkipBuild) {
+  Write-Host "==> Building locally (vite + esbuild)"
+  $env:NODE_ENV = "production"
+  & pnpm build
+  if ($LASTEXITCODE -ne 0) { throw "Local build failed" }
+  $env:NODE_ENV = ""
+  Write-Host "    Build OK"
+}
+
+# ── Test SSH ──────────────────────────────────────────────────────────────────
+Write-Host "==> Testing SSH to $remote (port $sshPort)"
 & ssh @sshBase $remote "echo OK"
 if ($LASTEXITCODE -ne 0) { throw "SSH connection failed" }
 
-# ── Resolve home directory (avoids ~ literal bug) ────────────────────────────
 $homeDir = (& ssh @sshBase $remote 'echo $HOME').Trim()
 if (-not $homeDir) { $homeDir = "/home/${sshUser}" }
 $remotePath = "${homeDir}/${appDir}"
-Write-Host "    Remote path: $remotePath"
+Write-Host "    Remote: $remotePath"
 
 # ── Clone or update repo ──────────────────────────────────────────────────────
 Write-Host "==> Syncing repo on server"
@@ -86,20 +92,39 @@ Invoke-SSH $cloneCmd
 
 # ── Upload .env ───────────────────────────────────────────────────────────────
 Write-Host "==> Uploading .env"
-$envContent = Get-Content $prodEnv -Raw -Encoding UTF8
-$envContent | & ssh @sshBase $remote "cat > `"$remotePath/.env`""
+Get-Content $prodEnv -Raw -Encoding UTF8 | & ssh @sshBase $remote "cat > `"$remotePath/.env`""
 if ($LASTEXITCODE -ne 0) { throw "Upload .env failed" }
 
-# ── Run deploy on server ──────────────────────────────────────────────────────
-Write-Host "==> Running deploy on server (install → build → db:sync)"
-Invoke-SSH "cd `"$remotePath`" && chmod +x scripts/*.sh && bash scripts/jethost-first-install.sh"
+# ── Upload dist/ (built locally — avoids memory issues on server) ─────────────
+Write-Host "==> Uploading dist/ (tar over SSH)"
+$distPath = Join-Path $Root "dist"
+if (-not (Test-Path $distPath)) { throw "dist/ not found — build must have failed" }
+
+# tar the dist folder and pipe it directly to the server
+$tarCmd = "cd `"$Root`" && tar -czf - dist"
+$extractCmd = "cd `"$remotePath`" && rm -rf dist && tar -xzf -"
+& bash -c $tarCmd | & ssh @sshBase $remote $extractCmd
+if ($LASTEXITCODE -ne 0) {
+  # Fallback: use PowerShell + OpenSSH without bash
+  Write-Host "    (retrying with PowerShell tar)"
+  $tmpTar = [System.IO.Path]::GetTempFileName() + ".tar.gz"
+  & tar -czf $tmpTar -C $Root dist
+  if ($LASTEXITCODE -ne 0) { throw "tar failed" }
+  Get-Content $tmpTar -Raw -AsByteStream | & ssh @sshBase $remote "cd `"$remotePath`" && rm -rf dist && tar -xzf - "
+  Remove-Item $tmpTar -Force
+}
+Write-Host "    dist/ uploaded"
+
+# ── Run server-side deploy (prod deps only + db sync + restart) ───────────────
+Write-Host "==> Running server-side deploy"
+Invoke-SSH "cd `"$remotePath`" && chmod +x scripts/*.sh && bash scripts/deploy.sh"
 
 # ── Done ──────────────────────────────────────────────────────────────────────
 $siteUrl = $cfg["SITE_URL"]
 Write-Host ""
 Write-Host "Deploy finished!" -ForegroundColor Green
-Write-Host "  Site:   $siteUrl" -ForegroundColor Cyan
+Write-Host "  Site:   $siteUrl/" -ForegroundColor Cyan
 Write-Host "  Admin:  ${siteUrl}/admin" -ForegroundColor Cyan
 Write-Host "  Health: ${siteUrl}/health" -ForegroundColor Cyan
 Write-Host ""
-Write-Host "If site shows 503: cPanel → Setup Node.js App → pamporovo-villa → Restart" -ForegroundColor Yellow
+Write-Host "If site shows 503: cPanel > Setup Node.js App > pamporovo-villa > Restart" -ForegroundColor Yellow
