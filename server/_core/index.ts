@@ -1,7 +1,6 @@
 import express from "express";
 import fs from "fs";
 import { createServer } from "http";
-import net from "net";
 import path from "path";
 import { createExpressMiddleware } from "@trpc/server/adapters/express";
 import { appRouter } from "../routers";
@@ -10,26 +9,7 @@ import { createContext } from "./context";
 import { distPublicPath } from "./paths";
 import { runSeedIfNeeded } from "../seed";
 import { validateEnv } from "./env";
-import { serveStatic, setupVite } from "./vite";
-
-function isPortAvailable(port: number): Promise<boolean> {
-  return new Promise(resolve => {
-    const server = net.createServer();
-    server.listen(port, () => {
-      server.close(() => resolve(true));
-    });
-    server.on("error", () => resolve(false));
-  });
-}
-
-async function findAvailablePort(startPort: number = 3000): Promise<number> {
-  for (let port = startPort; port < startPort + 20; port++) {
-    if (await isPortAvailable(port)) {
-      return port;
-    }
-  }
-  throw new Error(`No available port found starting from ${startPort}`);
-}
+import { serveStatic } from "./static";
 
 async function startServer() {
   validateEnv();
@@ -75,6 +55,8 @@ async function startServer() {
   const useVite = process.env.NODE_ENV !== "production" || !hasProductionBuild;
 
   if (useVite) {
+    // Lazy-load vite dev server — keeps vite out of production startup
+    const { setupVite } = await import("./vite");
     await setupVite(app, server);
   } else {
     serveStatic(app);
