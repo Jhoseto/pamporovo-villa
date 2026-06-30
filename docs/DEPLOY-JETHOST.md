@@ -1,92 +1,111 @@
-# Деплой на JetHost — автоматизиран
+# Deploy to JetHost Maverick
 
-> **JetHost cPanel навигация:** [`docs/JETHOST-CPANEL-NAV.md`](JETHOST-CPANEL-NAV.md)
+## Архитектура
 
-## Бърз старт (от Windows)
-
-### Еднократно — 3 неща в cPanel (не може автоматично)
-
-1. **MySQL** → създай база + user → копирай `DATABASE_URL`
-2. **SSH Access** → активирай SSH, запиши host + username (+ ключ)
-3. **Setup Node.js App** → Create:
-   - Node **22**, Production
-   - Root: `pamporovo-villa`
-   - Startup: `dist/index.js`
-   - URL: временният ти URL
-
-### Автоматично — от твоя PC
-
-```powershell
-pnpm deploy:setup          # създава .deploy.env
-# редактирай .deploy.env (SSH + DATABASE_URL + SITE_URL)
-pnpm deploy:remote         # качва всичко и build-ва на сървъра
 ```
-
-След първи deploy — auto-update при push:
-
-```powershell
-pnpm deploy:github-secrets   # след gh auth login
-git push origin main         # GitHub Actions deploy-ва сам
+Local (Windows)          GitHub Actions           JetHost Server
+───────────────          ──────────────           ──────────────
+pnpm build          OR   pnpm build (runner)  →   dist/ + node_modules
+dist/ + .env             tar upload via scp        apply-pending-schema
+   ↓ scp                                           cloudlinux restart
+deploy.sh                                          
 ```
 
 ---
 
-## Какво прави `pnpm deploy:remote`
+## Еднократна настройка (само веднъж)
 
-1. Генерира JWT + VAPID + admin парола → `.env.production.local`
-2. SSH → clone/pull `github.com/Jhoseto/pamporovo-villa`
-3. Качва `.env` на сървъра
-4. Пуска `scripts/jethost-first-install.sh` (install, build, db:sync)
+### 1. cPanel — MySQL база данни
+1. Влез в **https://eu1001.jethosting.com:2083/**
+2. **Databases → MySQL Database Wizard**
+3. Създай: база `vjlxjaxe_pamporovo-villa`, user `vjlxjaxe_PamporovoVilla`, запомни паролата
+4. Запиши `DATABASE_URL` в `.deploy.env`
 
----
+### 2. cPanel — Node.js App
+1. **Software → Setup Node.js App → Create Application**
+   - Node.js version: **22**
+   - Application mode: **Production**
+   - Application root: `pamporovo-villa`
+   - Application URL: избери временния subdomain (напр. `gregarious-green-pelican.51-77-93-92.cpanel.site`)
+   - Startup file: `dist/index.js`
+2. Натисни **Create**
 
-## Файлове
+### 3. Конфигурирай `.deploy.env`
+```bash
+cp .deploy.env.example .deploy.env
+# Попълни: JETHOST_SSH_HOST, JETHOST_SSH_USER, DATABASE_URL, SITE_URL
+```
 
-| Файл | Роля |
-|------|------|
-| `.deploy.env` | SSH + DB + URL (локално, gitignored) |
-| `.deploy.env.example` | Шаблон |
-| `.env.production.local` | Production secrets (gitignored) |
-| `scripts/deploy-remote.ps1` | Главен deploy от Windows |
-| `scripts/jethost-first-install.sh` | Install на сървъра |
-| `scripts/generate-production-secrets.mjs` | JWT, VAPID, admin password |
-| `scripts/setup-github-secrets.ps1` | GitHub Actions secrets |
-| `.github/workflows/deploy-jethost.yml` | Auto-deploy on push |
-
----
-
-## Проверка
-
-- `https://TEMP-URL/` — сайт
-- `https://TEMP-URL/admin` — админ
-- `https://TEMP-URL/health` — `{"ok":true}`
-
-Admin: `Rado` + паролата от output на `secrets:prod` или `.env.production.local`
+### 4. SSH ключ (за deploy без парола)
+```bash
+pnpm ssh:setup
+```
 
 ---
 
-## pamporovovilla.com (по-късно)
-
-1. DNS → JetHost
-2. cPanel SSL
-3. Node.js App URL → `pamporovovilla.com`
-4. Обнови `SITE_URL` в `.deploy.env` → `pnpm deploy:remote`
-
----
-
-## Ръчен deploy на сървъра
+## Ръчен deploy от Windows
 
 ```bash
-cd ~/pamporovo-villa && git pull && bash scripts/deploy.sh
+pnpm deploy:remote
 ```
+
+Прави:
+1. Генерира production secrets → `.env.production.local`
+2. Билдва локално (`pnpm build`) — `dist/`
+3. SSH: `git pull` на сървъра
+4. Качва `.env` и `dist/` via scp
+5. Сървър: `deploy.sh` (db sync + restart)
+
+> **Бележка:** Не се изпълнява `npm install` на сървъра — deps се качват от GitHub Actions или чрез бутона "Run NPM Install" в cPanel.
+
+---
+
+## Автоматичен deploy (GitHub Actions)
+
+При всеки `git push main` → `.github/workflows/deploy.yml` автоматично:
+- Инсталира всички deps на runner-а
+- Билдва frontend + server
+- Качва `dist/` + production `node_modules` + `.env` на сървъра
+- Рестартира app-а
+
+### Настройка на secrets (веднъж):
+```bash
+pnpm secrets:prod          # генерира JWT, VAPID, admin password
+pnpm deploy:github-secrets # качва всичко в GitHub Secrets
+```
+
+Или ги добави ръчно в **GitHub → Settings → Secrets → Actions**:
+
+| Secret | Откъде |
+|--------|--------|
+| `JETHOST_SSH_HOST` | `eu1001.jethosting.com` |
+| `JETHOST_SSH_USER` | `vjlxjaxe` |
+| `JETHOST_SSH_PORT` | `1022` |
+| `JETHOST_APP_DIR` | `pamporovo-villa` |
+| `JETHOST_SSH_KEY` | съдържанието на `~/.ssh/id_ed25519_jethost` |
+| `DATABASE_URL` | от `.deploy.env` |
+| `SITE_URL` | от `.deploy.env` |
+| `JWT_SECRET` | от `.env.production.local` |
+| `MASTER_ADMIN_PASSWORD` | от `.env.production.local` |
+| `VAPID_PUBLIC_KEY` | от `.env.production.local` |
+| `VAPID_PRIVATE_KEY` | от `.env.production.local` |
+
+---
+
+## Смяна на домейна
+
+Когато искаш да активираш `pamporovovilla.com`:
+1. В cPanel → Setup Node.js App → смени Application URL на `pamporovovilla.com`
+2. При домейн регистратора: A record → IP на сървъра (вижда се в cPanel горе вдясно)
+3. Смени `SITE_URL` в `.deploy.env` и в GitHub Secrets
 
 ---
 
 ## Проблеми
 
-| Симптом | Решение |
-|---------|---------|
-| 503 / бяла страница | cPanel → Node.js App → **Restart** |
-| DB error | Провери `DATABASE_URL`, пусни `pnpm db:sync` по SSH |
-| SSH failed | cPanel → SSH Access, ключ в `.deploy.env` |
-| Admin не влиза | парола в `.env.production.local` на сървъра |
+| Грешка | Причина | Решение |
+|--------|---------|---------|
+| `503 Service Unavailable` | App не е стартиран | cPanel → Setup Node.js App → Restart |
+| `fork: Resource temporarily unavailable` | npm install изяжда nproc | Не пускай `npm install` по SSH; използвай GitHub Actions |
+| `exec request failed` | Сървърът е без свободни процеси | Изчакай 10 мин или се обади на JetHost support |
+| `Connection closed port 1022` | fail2ban след много неуспешни опита | Изчакай 10 мин |
