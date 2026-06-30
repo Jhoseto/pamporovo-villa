@@ -1,9 +1,7 @@
 import dotenv from "dotenv";
-import path from "path";
-import { fileURLToPath } from "url";
+import { envFilePath } from "./paths";
 
-const envPath = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../../.env");
-dotenv.config({ path: envPath, quiet: true });
+dotenv.config({ path: envFilePath(), quiet: true });
 
 export const ENV = {
   databaseUrl: process.env.DATABASE_URL ?? "",

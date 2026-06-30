@@ -1,4 +1,3 @@
-import dotenv from "dotenv";
 import express from "express";
 import fs from "fs";
 import { createServer } from "http";
@@ -6,12 +5,12 @@ import net from "net";
 import path from "path";
 import { createExpressMiddleware } from "@trpc/server/adapters/express";
 import { appRouter } from "../routers";
+import { notificationSoundsDir } from "../notificationSoundStorage";
 import { createContext } from "./context";
+import { distPublicPath } from "./paths";
 import { runSeedIfNeeded } from "../seed";
 import { validateEnv } from "./env";
 import { serveStatic, setupVite } from "./vite";
-
-dotenv.config({ path: path.resolve(import.meta.dirname, "../../.env"), quiet: true });
 
 function isPortAvailable(port: number): Promise<boolean> {
   return new Promise(resolve => {
@@ -43,6 +42,11 @@ async function startServer() {
   }
   app.use(express.json({ limit: "50mb" }));
   app.use(express.urlencoded({ limit: "50mb", extended: true }));
+
+  app.get("/health", (_req, res) => {
+    res.json({ ok: true, service: "pamporovo-villa" });
+  });
+
   app.use(
     "/api/trpc",
     createExpressMiddleware({
@@ -51,8 +55,23 @@ async function startServer() {
     })
   );
 
-  const distPublicPath = path.resolve(import.meta.dirname, "../..", "dist", "public");
-  const hasProductionBuild = fs.existsSync(path.join(distPublicPath, "index.html"));
+  app.get("/admin/notification-sound/:filename", async (req, res) => {
+    const filename = req.params.filename ?? "";
+    if (!/^[\w-]+\.(wav|mp3|ogg|webm|m4a)$/i.test(filename)) {
+      res.status(400).end();
+      return;
+    }
+    const filePath = path.join(notificationSoundsDir(), filename);
+    try {
+      await fs.promises.access(filePath);
+      res.sendFile(filePath);
+    } catch {
+      res.status(404).end();
+    }
+  });
+
+  const publicPath = distPublicPath();
+  const hasProductionBuild = fs.existsSync(path.join(publicPath, "index.html"));
   const useVite = process.env.NODE_ENV !== "production" || !hasProductionBuild;
 
   if (useVite) {

@@ -21,6 +21,7 @@ import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTr
 import { adminRoleLabel } from "@/lib/adminLabels";
 import { trpc } from "@/lib/trpc";
 import { cn } from "@/lib/utils";
+import { useNotificationSoundListener } from "@/hooks/useNotificationSound";
 
 const navItems = [
   { href: "/admin", label: "Календар", icon: LayoutDashboard, exact: true },
@@ -46,6 +47,7 @@ function isNavActive(location: string, href: string, exact?: boolean) {
 }
 
 export function AdminLayout({ children }: { children: React.ReactNode }) {
+  useNotificationSoundListener();
   const [location] = useLocation();
   const [open, setOpen] = useState(false);
   const [moreOpen, setMoreOpen] = useState(false);

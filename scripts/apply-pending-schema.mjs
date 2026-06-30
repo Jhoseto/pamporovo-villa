@@ -188,6 +188,20 @@ try {
     steps.push("client_contacts.is_vip");
   }
 
+  if (!(await columnExists(conn, "admin_users", "notification_sound_token"))) {
+    await conn.query(
+      "ALTER TABLE `admin_users` ADD COLUMN `notification_sound_token` varchar(64) DEFAULT NULL AFTER `token_version`"
+    );
+    steps.push("admin_users.notification_sound_token");
+  }
+
+  if (!(await columnExists(conn, "admin_users", "notification_sound_ext"))) {
+    await conn.query(
+      "ALTER TABLE `admin_users` ADD COLUMN `notification_sound_ext` varchar(8) DEFAULT NULL AFTER `notification_sound_token`"
+    );
+    steps.push("admin_users.notification_sound_ext");
+  }
+
   for (const [table, index, cols] of [
     ["booking_requests", "booking_villa_status_idx", "(villa_id, status)"],
     ["booking_requests", "booking_dates_idx", "(check_in_date, check_out_date)"],

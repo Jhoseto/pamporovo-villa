@@ -107,6 +107,20 @@ export async function updateAdminPassword(id: number, passwordHash: string) {
     .where(eq(adminUsers.id, id));
 }
 
+export async function updateAdminNotificationSound(
+  id: number,
+  data: { notificationSoundToken: string | null; notificationSoundExt: string | null }
+) {
+  const db = await requireDb();
+  await db
+    .update(adminUsers)
+    .set({
+      notificationSoundToken: data.notificationSoundToken,
+      notificationSoundExt: data.notificationSoundExt,
+    })
+    .where(eq(adminUsers.id, id));
+}
+
 // --- Bookings ---
 
 export type BookingListFilters = {

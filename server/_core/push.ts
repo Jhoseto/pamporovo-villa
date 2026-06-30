@@ -1,3 +1,4 @@
+import { DEFAULT_NOTIFICATION_SOUND_URL, resolveNotificationSoundUrl } from "@shared/notificationSound";
 import webpush from "web-push";
 import { ENV } from "./env";
 import * as db from "../db";
@@ -7,6 +8,7 @@ export type PushPayload = {
   body: string;
   url: string;
   tag: string;
+  soundUrl?: string;
 };
 
 let configured = false;
@@ -32,21 +34,29 @@ export async function notifyAdmins(payload: PushPayload, excludeAdminUserId?: nu
   const subscriptions = await db.getPushSubscriptions(excludeAdminUserId);
   if (subscriptions.length === 0) return;
 
-  const message = JSON.stringify({
-    title: payload.title,
-    body: payload.body,
-    icon: "/admin/icons/icon-192.svg",
-    badge: "/admin/icons/badge-72.svg",
-    tag: payload.tag,
-    renotify: true,
-    requireInteraction: true,
-    vibrate: [200, 100, 200, 100, 200],
-    silent: false,
-    data: { url: payload.url },
-  });
-
   await Promise.allSettled(
     subscriptions.map(async sub => {
+      const adminUser = await db.getAdminUserById(sub.adminUserId);
+      const soundUrl =
+        payload.soundUrl ??
+        (adminUser
+          ? resolveNotificationSoundUrl(adminUser)
+          : DEFAULT_NOTIFICATION_SOUND_URL);
+
+      const message = JSON.stringify({
+        title: payload.title,
+        body: payload.body,
+        icon: "/admin/icons/icon-192.svg",
+        badge: "/admin/icons/badge-72.svg",
+        tag: payload.tag,
+        renotify: true,
+        requireInteraction: true,
+        vibrate: [200, 100, 200, 100, 200],
+        silent: false,
+        soundUrl,
+        data: { url: payload.url, soundUrl },
+      });
+
       try {
         await webpush.sendNotification(
           {

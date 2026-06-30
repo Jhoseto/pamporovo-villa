@@ -6,12 +6,21 @@ self.addEventListener("activate", event => {
   event.waitUntil(self.clients.claim());
 });
 
+function notifyClientsToPlaySound(soundUrl) {
+  return self.clients.matchAll({ type: "window", includeUncontrolled: true }).then(clients => {
+    clients.forEach(client => {
+      client.postMessage({ type: "PLAY_NOTIFICATION_SOUND", url: soundUrl });
+    });
+  });
+}
+
 self.addEventListener("push", event => {
   let payload = {
     title: "Pamporovo Villa",
     body: "Нова резервация",
     url: "/admin/bookings",
     tag: "booking",
+    soundUrl: "/admin/sounds/notification-default.wav",
   };
 
   try {
@@ -22,18 +31,23 @@ self.addEventListener("push", event => {
     /* ignore malformed payload */
   }
 
+  const soundUrl = payload.soundUrl || payload.data?.soundUrl || "/admin/sounds/notification-default.wav";
+
   event.waitUntil(
-    self.registration.showNotification(payload.title, {
-      body: payload.body,
-      icon: payload.icon || "/admin/icons/icon-192.svg",
-      badge: payload.badge || "/admin/icons/badge-72.svg",
-      tag: payload.tag,
-      renotify: payload.renotify ?? true,
-      requireInteraction: payload.requireInteraction ?? true,
-      vibrate: payload.vibrate || [200, 100, 200, 100, 200],
-      silent: false,
-      data: { url: payload.data?.url || payload.url || "/admin/bookings" },
-    })
+    (async () => {
+      await self.registration.showNotification(payload.title, {
+        body: payload.body,
+        icon: payload.icon || "/admin/icons/icon-192.svg",
+        badge: payload.badge || "/admin/icons/badge-72.svg",
+        tag: payload.tag,
+        renotify: payload.renotify ?? true,
+        requireInteraction: payload.requireInteraction ?? true,
+        vibrate: payload.vibrate || [200, 100, 200, 100, 200],
+        silent: false,
+        data: { url: payload.data?.url || payload.url || "/admin/bookings", soundUrl },
+      });
+      await notifyClientsToPlaySound(soundUrl);
+    })()
   );
 });
 

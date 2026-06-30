@@ -15,6 +15,17 @@ import {
 import { getSessionCookieOptions } from "../_core/cookies";
 import { sendBookingConfirmationById, sendBookingConfirmationCardEmail } from "../_core/email";
 import { getVapidPublicKey, notifyManualBooking, notifyNewWebsiteBooking } from "../_core/push";
+import {
+  createNotificationSoundToken,
+  deleteCustomNotificationSound,
+  parseUploadInput,
+  saveCustomNotificationSound,
+} from "../notificationSoundStorage";
+import type { NotificationSoundExtension } from "@shared/notificationSound";
+import {
+  DEFAULT_NOTIFICATION_SOUND_URL,
+  resolveNotificationSoundUrl,
+} from "@shared/notificationSound";
 import { getClientIp, checkRateLimit } from "../_core/rateLimit";
 import { adminProcedure, masterProcedure, publicProcedure, router } from "../_core/trpc";
 import {
@@ -825,6 +836,77 @@ export const adminRouter = router({
         await db.deletePushSubscription(input.endpoint, ctx.user.id);
         return { success: true as const };
       }),
+
+    getNotificationSound: adminProcedure.query(async ({ ctx }) => {
+      const user = await db.getAdminUserById(ctx.user.id);
+      if (!user) throw new TRPCError({ code: "NOT_FOUND" });
+      const soundUrl = resolveNotificationSoundUrl(user);
+      const hasCustom = Boolean(user.notificationSoundToken && user.notificationSoundExt);
+      return {
+        defaultUrl: DEFAULT_NOTIFICATION_SOUND_URL,
+        soundUrl,
+        hasCustom,
+      };
+    }),
+
+    uploadNotificationSound: adminProcedure
+      .input(
+        z.object({
+          fileName: z.string().min(1).max(255),
+          mimeType: z.string().min(1).max(128),
+          dataBase64: z.string().min(1).max(700_000),
+        })
+      )
+      .mutation(async ({ input, ctx }) => {
+        const user = await db.getAdminUserById(ctx.user.id);
+        if (!user) throw new TRPCError({ code: "NOT_FOUND" });
+
+        let buffer: Buffer;
+        let ext: NotificationSoundExtension;
+        try {
+          ({ buffer, ext } = parseUploadInput(input));
+        } catch (error) {
+          throw new TRPCError({
+            code: "BAD_REQUEST",
+            message: error instanceof Error ? error.message : "Невалиден файл",
+          });
+        }
+
+        const token = user.notificationSoundToken ?? createNotificationSoundToken();
+        if (user.notificationSoundToken && user.notificationSoundExt) {
+          await deleteCustomNotificationSound(user.notificationSoundToken, user.notificationSoundExt);
+        }
+
+        await saveCustomNotificationSound(token, ext, buffer);
+        await db.updateAdminNotificationSound(ctx.user.id, {
+          notificationSoundToken: token,
+          notificationSoundExt: ext,
+        });
+
+        const soundUrl = resolveNotificationSoundUrl({
+          notificationSoundToken: token,
+          notificationSoundExt: ext,
+        });
+
+        return { success: true as const, soundUrl, hasCustom: true };
+      }),
+
+    resetNotificationSound: adminProcedure.mutation(async ({ ctx }) => {
+      const user = await db.getAdminUserById(ctx.user.id);
+      if (!user) throw new TRPCError({ code: "NOT_FOUND" });
+
+      await deleteCustomNotificationSound(user.notificationSoundToken, user.notificationSoundExt);
+      await db.updateAdminNotificationSound(ctx.user.id, {
+        notificationSoundToken: null,
+        notificationSoundExt: null,
+      });
+
+      return {
+        success: true as const,
+        soundUrl: DEFAULT_NOTIFICATION_SOUND_URL,
+        hasCustom: false,
+      };
+    }),
   }),
 });
 

@@ -17,6 +17,8 @@ export const adminUsers = mysqlTable("admin_users", {
   passwordHash: varchar("password_hash", { length: 255 }).notNull(),
   isMaster: boolean("is_master").default(false).notNull(),
   tokenVersion: int("token_version").default(0).notNull(),
+  notificationSoundToken: varchar("notification_sound_token", { length: 64 }),
+  notificationSoundExt: varchar("notification_sound_ext", { length: 8 }),
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
 

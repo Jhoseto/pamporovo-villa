@@ -1,0 +1,25 @@
+name: Deploy to JetHost
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy over SSH
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.JETHOST_SSH_HOST }}
+          username: ${{ secrets.JETHOST_SSH_USER }}
+          key: ${{ secrets.JETHOST_SSH_KEY }}
+          port: ${{ secrets.JETHOST_SSH_PORT || 22 }}
+          script_stop: true
+          script: |
+            cd ~/pamporovo-villa
+            git fetch origin main
+            git reset --hard origin/main
+            bash scripts/deploy.sh
