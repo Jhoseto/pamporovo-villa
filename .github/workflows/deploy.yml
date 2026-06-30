@@ -14,7 +14,6 @@ jobs:
       - uses: actions/checkout@v4
 
       - uses: pnpm/action-setup@v4
-        # version auto-detected from packageManager in package.json
 
       - uses: actions/setup-node@v4
         with:
@@ -29,7 +28,13 @@ jobs:
         env:
           NODE_ENV: production
 
-      # Write .env from GitHub secrets
+      # Production-only deps (built on CI — never npm install on JetHost server)
+      - name: Install production node_modules
+        run: |
+          rm -rf node_modules
+          pnpm install --prod --frozen-lockfile --ignore-scripts
+          echo "node_modules size: $(du -sh node_modules | cut -f1)"
+
       - name: Write .env
         run: |
           {
@@ -43,19 +48,19 @@ jobs:
             echo "VAPID_PRIVATE_KEY=${{ secrets.VAPID_PRIVATE_KEY }}"
           } > .env.production
 
-      # Pack only dist/ + scripts/ + package.json + .env (~18MB total, no node_modules)
-      - name: Create deployment archive
+      # Two archives — smaller uploads, no server-side npm install
+      - name: Create deployment archives
         run: |
-          tar -czf /tmp/deploy.tar.gz \
+          tar -czf /tmp/app.tar.gz \
             --exclude='*.map' \
             dist/ \
-            scripts/ \
+            scripts/apply-pending-schema.mjs \
             package.json \
-            pnpm-lock.yaml \
             .env.production
-          echo "Archive size: $(du -sh /tmp/deploy.tar.gz | cut -f1)"
+          tar -czf /tmp/deps.tar.gz node_modules/
+          echo "app.tar.gz: $(du -sh /tmp/app.tar.gz | cut -f1)"
+          echo "deps.tar.gz: $(du -sh /tmp/deps.tar.gz | cut -f1)"
 
-      # Setup SSH key
       - name: Setup SSH
         run: |
           mkdir -p ~/.ssh
@@ -64,54 +69,57 @@ jobs:
           ssh-keyscan -p "${{ secrets.JETHOST_SSH_PORT }}" \
             "${{ secrets.JETHOST_SSH_HOST }}" >> ~/.ssh/known_hosts 2>/dev/null || true
 
-      # Upload archive (~18MB, no node_modules)
-      - name: Upload archive via scp
+      - name: Upload app archive
         run: |
           scp -i ~/.ssh/jethost \
             -P "${{ secrets.JETHOST_SSH_PORT }}" \
             -o StrictHostKeyChecking=no \
-            -o ConnectTimeout=30 \
+            -o ConnectTimeout=60 \
             -o ServerAliveInterval=15 \
-            /tmp/deploy.tar.gz \
-            "${{ secrets.JETHOST_SSH_USER }}@${{ secrets.JETHOST_SSH_HOST }}:~/deploy.tar.gz"
+            /tmp/app.tar.gz \
+            "${{ secrets.JETHOST_SSH_USER }}@${{ secrets.JETHOST_SSH_HOST }}:~/app.tar.gz"
 
-      # Extract + install deps via cloudlinux-selector + restart
+      - name: Upload deps archive
+        run: |
+          scp -i ~/.ssh/jethost \
+            -P "${{ secrets.JETHOST_SSH_PORT }}" \
+            -o StrictHostKeyChecking=no \
+            -o ConnectTimeout=120 \
+            -o ServerAliveInterval=15 \
+            /tmp/deps.tar.gz \
+            "${{ secrets.JETHOST_SSH_USER }}@${{ secrets.JETHOST_SSH_HOST }}:~/deps.tar.gz"
+
       - name: Deploy on server
-        env:
-          APP: ${{ secrets.JETHOST_APP_DIR || 'pamporovo-villa' }}
         run: |
           ssh -i ~/.ssh/jethost \
             -p "${{ secrets.JETHOST_SSH_PORT }}" \
             -o StrictHostKeyChecking=no \
             -o ConnectTimeout=30 \
             -o ServerAliveInterval=15 \
-            "${{ secrets.JETHOST_SSH_USER }}@${{ secrets.JETHOST_SSH_HOST }}" << SSHEOF
+            "${{ secrets.JETHOST_SSH_USER }}@${{ secrets.JETHOST_SSH_HOST }}" << 'SSHEOF'
               set -e
               APP="${{ secrets.JETHOST_APP_DIR }}"
-              APP="\${APP:-pamporovo-villa}"
-              REMOTE="\$HOME/\$APP"
+              APP="${APP:-pamporovo-villa}"
+              cd "$HOME/$APP"
 
-              echo "==> Extracting archive"
-              cd "\$REMOTE"
-              tar -xzf ~/deploy.tar.gz
-              rm ~/deploy.tar.gz
-
-              echo "==> Placing .env"
+              echo "==> Extracting app"
+              tar -xzf ~/app.tar.gz
+              rm ~/app.tar.gz
               mv .env.production .env
 
-              echo "==> Creating runtime dirs"
+              echo "==> Extracting node_modules"
+              rm -rf node_modules
+              tar -xzf ~/deps.tar.gz
+              rm ~/deps.tar.gz
+
               mkdir -p data/notification-sounds
 
-              echo "==> Installing production deps (cloudlinux-selector, timeout 180s)"
-              timeout 180 cloudlinux-selector install-modules --json --interpreter nodejs \
-                --app-root "\$APP" 2>&1 | tail -5 || echo "install-modules skipped (timeout or error)"
-
               echo "==> Syncing database schema"
-              "\$HOME/nodevenv/\$APP/22/bin/node" scripts/apply-pending-schema.mjs || true
+              "$HOME/nodevenv/$APP/22/bin/node" scripts/apply-pending-schema.mjs || true
 
               echo "==> Restarting app"
               cloudlinux-selector restart --json --interpreter nodejs \
-                --app-root "\$APP" 2>/dev/null || true
+                --app-root "$APP" 2>/dev/null || true
 
               echo "=== Deploy complete ==="
           SSHEOF
