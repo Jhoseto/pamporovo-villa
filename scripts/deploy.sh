@@ -44,7 +44,7 @@ fi
 
 # ── Install dependencies (using npm — always available, no global install needed) ──
 echo "==> Installing dependencies  (npm install)"
-npm install --no-fund --no-audit 2>&1 | tail -3
+npm install --legacy-peer-deps --no-fund --no-audit 2>&1 | tail -3
 
 # ── Build ─────────────────────────────────────────────────────────────────────
 echo "==> Building  (npm run build)"
