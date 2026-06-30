@@ -1,19 +1,4 @@
 #Requires -Version 5.1
-<#
-.SYNOPSIS
-  One-command deploy to JetHost from Windows.
-
-.DESCRIPTION
-  1. Reads .deploy.env (creates from .deploy.env.example if missing)
-  2. Generates .env.production.local with secrets
-  3. SSH: clone/pull repo on server
-  4. Uploads .env and runs jethost-first-install.sh
-
-  Prerequisites: OpenSSH client, Node.js, pnpm, filled .deploy.env
-
-.EXAMPLE
-  pnpm deploy:remote
-#>
 param(
   [switch]$SkipSecrets,
   [switch]$SetupOnly
@@ -31,9 +16,7 @@ function Read-EnvFile([string]$Path) {
     if (-not $line -or $line.StartsWith("#")) { return }
     $idx = $line.IndexOf("=")
     if ($idx -lt 1) { return }
-    $key = $line.Substring(0, $idx).Trim()
-    $val = $line.Substring($idx + 1).Trim()
-    $map[$key] = $val
+    $map[$line.Substring(0, $idx).Trim()] = $line.Substring($idx + 1).Trim()
   }
   return $map
 }
@@ -82,7 +65,7 @@ if (-not $SkipSecrets) {
 
 $prodEnv = Join-Path $Root ".env.production.local"
 if (-not (Test-Path $prodEnv)) {
-  throw "Missing .env.production.local — run: node scripts/generate-production-secrets.mjs"
+  throw 'Missing .env.production.local - run: node scripts/generate-production-secrets.mjs'
 }
 
 $host_ = Require-Value $cfg "JETHOST_SSH_HOST"
@@ -90,7 +73,9 @@ $user = Require-Value $cfg "JETHOST_SSH_USER"
 $port = if ($cfg["JETHOST_SSH_PORT"]) { $cfg["JETHOST_SSH_PORT"] } else { "22" }
 $key = $cfg["JETHOST_SSH_KEY"]
 $appDir = if ($cfg["JETHOST_APP_DIR"]) { $cfg["JETHOST_APP_DIR"] } else { "pamporovo-villa" }
-$repo = if ($cfg["GITHUB_REPO"]) { $cfg["GITHUB_REPO"] } else { "https://github.com/Jhoseto/pamporovo-villa.git" }
+$repoBase = if ($cfg["GITHUB_REPO"]) { $cfg["GITHUB_REPO"] } else { "https://github.com/Jhoseto/pamporovo-villa.git" }
+$token = $cfg["GITHUB_TOKEN"]
+$repo = if ($token) { $repoBase -replace "https://", "https://${token}@" } else { $repoBase }
 
 $sshArgs = @("-p", $port, "-o", "StrictHostKeyChecking=accept-new")
 $scpArgs = @("-P", $port, "-o", "StrictHostKeyChecking=accept-new")
@@ -100,31 +85,30 @@ if ($key -and (Test-Path $key)) {
 }
 
 $remote = "${user}@${host_}"
-$remotePath = "~/${appDir}"
 
 Write-Host "==> Testing SSH to $remote"
 & ssh @sshArgs $remote "echo OK"
 if ($LASTEXITCODE -ne 0) { throw "SSH failed" }
 
+# Resolve real home path on server (avoids ~ literal in single-quoted bash)
+$homeDir = (& ssh @sshArgs $remote "echo `$HOME").Trim()
+if (-not $homeDir) { $homeDir = "/home/${user}" }
+$remotePath = "${homeDir}/${appDir}"
+Write-Host "    Remote path: $remotePath"
+
 Write-Host "==> Ensuring repo on server"
-$cloneCmd = @"
-if [ -d '$remotePath/.git' ]; then
-  cd '$remotePath' && git fetch origin main && git reset --hard origin/main
-elif [ -d '$remotePath' ]; then
-  echo 'Directory exists but is not a git repo' >&2; exit 1
-else
-  git clone '$repo' '$remotePath'
-fi
-"@ -replace "`r", ""
+$cloneCmd = "if [ -d `"$remotePath/.git`" ]; then cd `"$remotePath`" && git fetch origin main && git reset --hard origin/main; elif [ -d `"$remotePath`" ]; then echo 'not a git repo' 1>&2; exit 1; else git clone `"$repo`" `"$remotePath`"; fi"
 & ssh @sshArgs $remote $cloneCmd
 if ($LASTEXITCODE -ne 0) { throw "Git clone/pull failed" }
 
 Write-Host "==> Uploading .env"
-& scp @scpArgs $prodEnv "${remote}:${remotePath}/.env"
-if ($LASTEXITCODE -ne 0) { throw "SCP .env failed" }
+$envContent = Get-Content $prodEnv -Raw -Encoding UTF8
+$envContent | & ssh @sshArgs $remote "cat > `"$remotePath/.env`""
+if ($LASTEXITCODE -ne 0) { throw "Upload .env failed" }
 
 Write-Host "==> Running first install / deploy on server"
-& ssh @sshArgs $remote "cd '$remotePath' && chmod +x scripts/*.sh && bash scripts/jethost-first-install.sh"
+$installCmd = "cd `"$remotePath`" && chmod +x scripts/*.sh && bash scripts/jethost-first-install.sh"
+& ssh @sshArgs $remote $installCmd
 if ($LASTEXITCODE -ne 0) { throw "Remote install failed" }
 
 $siteUrl = $cfg["SITE_URL"]

@@ -9,9 +9,8 @@ echo "==> Pamporovo Villa deploy"
 echo "    Root: $ROOT"
 
 if ! command -v pnpm >/dev/null 2>&1; then
-  echo "==> Enabling pnpm via corepack"
-  corepack enable
-  corepack prepare pnpm@10.4.1 --activate
+  echo "==> Installing pnpm via npm"
+  npm install -g pnpm@10.4.1 --quiet
 fi
 
 echo "==> Installing dependencies"

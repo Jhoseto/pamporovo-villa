@@ -1,5 +1,7 @@
 # Деплой на JetHost — автоматизиран
 
+> **JetHost cPanel навигация:** [`docs/JETHOST-CPANEL-NAV.md`](JETHOST-CPANEL-NAV.md)
+
 ## Бърз старт (от Windows)
 
 ### Еднократно — 3 неща в cPanel (не може автоматично)
