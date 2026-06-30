@@ -28,12 +28,15 @@ jobs:
         env:
           NODE_ENV: production
 
-      # Production-only deps (built on CI — never npm install on JetHost server)
+      # Flat npm node_modules (no pnpm symlinks — safe to tar/scp to shared hosting)
       - name: Install production node_modules
         run: |
-          rm -rf node_modules
-          pnpm install --prod --frozen-lockfile --ignore-scripts
+          mkdir -p /tmp/prod-out
+          cp package.json /tmp/prod-out/
+          cd /tmp/prod-out
+          npm install --omit=dev --legacy-peer-deps --ignore-scripts --no-package-lock
           echo "node_modules size: $(du -sh node_modules | cut -f1)"
+          echo "symlinks: $(find node_modules -type l | wc -l)"
 
       - name: Write .env
         run: |
@@ -57,7 +60,7 @@ jobs:
             scripts/apply-pending-schema.mjs \
             package.json \
             .env.production
-          tar -czf /tmp/deps.tar.gz node_modules/
+          tar -czf /tmp/deps.tar.gz -C /tmp/prod-out node_modules/
           echo "app.tar.gz: $(du -sh /tmp/app.tar.gz | cut -f1)"
           echo "deps.tar.gz: $(du -sh /tmp/deps.tar.gz | cut -f1)"
 
@@ -109,8 +112,11 @@ jobs:
 
               echo "==> Extracting node_modules"
               rm -rf node_modules
+              # Remove symlink if cPanel created one
+              if [ -L node_modules ]; then rm -f node_modules; fi
               tar -xzf ~/deps.tar.gz
               rm ~/deps.tar.gz
+              echo "node_modules size: $(du -sh node_modules | cut -f1)"
 
               mkdir -p data/notification-sounds
 
