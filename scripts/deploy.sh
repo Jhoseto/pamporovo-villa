@@ -48,8 +48,8 @@ if [ -z "$NODE_BIN" ]; then
   exit 1
 fi
 
-# ── Install production dependencies only ─────────────────────────────────────
-# Skip if node_modules exists and package.json hasn't changed since last install
+# ── Install production dependencies ──────────────────────────────────────────
+# Skip if package.json hasn't changed since last install
 MODULES_OK=0
 if [ -d node_modules ] && [ -f node_modules/.deploy-pkg-hash ]; then
   CURRENT_HASH="$(md5sum package.json | cut -d' ' -f1)"
@@ -61,8 +61,14 @@ if [ "$MODULES_OK" = "1" ]; then
   echo "==> Skipping npm install (package.json unchanged)"
 else
   echo "==> Installing production dependencies"
-  export NODE_ENV=production
-  npm install --omit=dev --legacy-peer-deps --no-fund --no-audit 2>&1 | tail -3
+  # Use cPanel's cloudlinux-selector — avoids process-limit issues on shared hosting
+  if command -v cloudlinux-selector >/dev/null 2>&1; then
+    cloudlinux-selector install-modules --json --interpreter nodejs \
+      --app-root "$APP_DIR" 2>&1 | tail -3 || true
+  else
+    export NODE_ENV=production
+    npm install --omit=dev --legacy-peer-deps --no-fund --no-audit 2>&1 | tail -3
+  fi
   md5sum package.json | cut -d' ' -f1 > node_modules/.deploy-pkg-hash
 fi
 
