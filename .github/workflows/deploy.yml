@@ -8,7 +8,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
 
     steps:
       - uses: actions/checkout@v4
@@ -102,9 +102,9 @@ jobs:
               echo "==> Creating runtime dirs"
               mkdir -p data/notification-sounds
 
-              echo "==> Installing production deps (cloudlinux-selector)"
-              cloudlinux-selector install-modules --json --interpreter nodejs \
-                --app-root "\$APP" 2>&1 | tail -3 || true
+              echo "==> Installing production deps (cloudlinux-selector, timeout 180s)"
+              timeout 180 cloudlinux-selector install-modules --json --interpreter nodejs \
+                --app-root "\$APP" 2>&1 | tail -5 || echo "install-modules skipped (timeout or error)"
 
               echo "==> Syncing database schema"
               "\$HOME/nodevenv/\$APP/22/bin/node" scripts/apply-pending-schema.mjs || true
