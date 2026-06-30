@@ -42,14 +42,18 @@ if [ -z "$NODE_BIN" ]; then
   exit 1
 fi
 
-# ── Install dependencies (using npm — always available, no global install needed) ──
-echo "==> Installing dependencies  (npm install)"
-npm install --legacy-peer-deps --no-fund --no-audit 2>&1 | tail -3
+# ── Install ALL dependencies (including devDeps needed for build) ─────────────
+# cPanel sets NODE_ENV=production which makes npm skip devDependencies.
+# We must unset it during install so vite/esbuild/tsx are installed too.
+echo "==> Installing dependencies  (npm install --include=dev)"
+NODE_ENV= npm install --include=dev --legacy-peer-deps --no-fund --no-audit 2>&1 | tail -3
 
 # ── Build ─────────────────────────────────────────────────────────────────────
 echo "==> Building  (npm run build)"
 export NODE_ENV=production
-npm run build
+./node_modules/.bin/vite build
+./node_modules/.bin/esbuild server/_core/index.ts \
+  --platform=node --packages=external --bundle --format=esm --outdir=dist
 
 # ── Database sync ─────────────────────────────────────────────────────────────
 echo "==> Syncing database schema"
