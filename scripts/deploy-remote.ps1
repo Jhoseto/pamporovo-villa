@@ -1,8 +1,5 @@
 #Requires -Version 5.1
-param(
-  [switch]$SkipSecrets,
-  [switch]$SetupOnly
-)
+param([switch]$SkipSecrets)
 
 $ErrorActionPreference = "Stop"
 $Root = Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Path)
@@ -21,43 +18,25 @@ function Read-EnvFile([string]$Path) {
   return $map
 }
 
-function Require-Value($map, [string]$Key) {
-  $v = $map[$Key]
-  if ([string]::IsNullOrWhiteSpace($v)) {
-    throw "Missing $Key in .deploy.env"
-  }
-  return $v
-}
-
+# ── Load .deploy.env ──────────────────────────────────────────────────────────
 $deployEnvPath = Join-Path $Root ".deploy.env"
-$examplePath = Join-Path $Root ".deploy.env.example"
-
 if (-not (Test-Path $deployEnvPath)) {
-  Copy-Item $examplePath $deployEnvPath
-  Write-Host ""
-  Write-Host "Created .deploy.env - fill in SSH + DATABASE_URL + SITE_URL, then run again:" -ForegroundColor Yellow
-  Write-Host "  pnpm deploy:remote" -ForegroundColor Cyan
-  Write-Host ""
-  if ($SetupOnly) { exit 0 }
+  Copy-Item (Join-Path $Root ".deploy.env.example") $deployEnvPath
+  Write-Host "Created .deploy.env - fill in the required fields and run again." -ForegroundColor Yellow
   exit 1
 }
-
 $cfg = Read-EnvFile $deployEnvPath
 
-if ($SetupOnly) {
-  Write-Host ".deploy.env exists. Edit it and run pnpm deploy:remote"
-  exit 0
-}
-
-$missing = @("JETHOST_SSH_HOST", "JETHOST_SSH_USER", "DATABASE_URL", "SITE_URL") | Where-Object {
+$missing = @("JETHOST_SSH_HOST","JETHOST_SSH_USER","DATABASE_URL","SITE_URL") | Where-Object {
   [string]::IsNullOrWhiteSpace($cfg[$_]) -or $cfg[$_] -match 'YOUR-TEMP|DB_USER|DB_PASSWORD|DB_NAME'
 }
 if ($missing.Count -gt 0) {
-  Write-Host "Fill these in .deploy.env before deploy:" -ForegroundColor Yellow
-  $missing | ForEach-Object { Write-Host "  - $_" }
+  Write-Host "Fill these in .deploy.env first:" -ForegroundColor Yellow
+  $missing | ForEach-Object { Write-Host "  $_" }
   exit 1
 }
 
+# ── Generate production secrets ───────────────────────────────────────────────
 if (-not $SkipSecrets) {
   Write-Host "==> Generating production secrets"
   node (Join-Path $Root "scripts/generate-production-secrets.mjs")
@@ -65,57 +44,62 @@ if (-not $SkipSecrets) {
 
 $prodEnv = Join-Path $Root ".env.production.local"
 if (-not (Test-Path $prodEnv)) {
-  throw 'Missing .env.production.local - run: node scripts/generate-production-secrets.mjs'
+  throw 'Run first: node scripts/generate-production-secrets.mjs'
 }
 
-$host_ = Require-Value $cfg "JETHOST_SSH_HOST"
-$user = Require-Value $cfg "JETHOST_SSH_USER"
-$port = if ($cfg["JETHOST_SSH_PORT"]) { $cfg["JETHOST_SSH_PORT"] } else { "22" }
-$key = $cfg["JETHOST_SSH_KEY"]
-$appDir = if ($cfg["JETHOST_APP_DIR"]) { $cfg["JETHOST_APP_DIR"] } else { "pamporovo-villa" }
-$repoBase = if ($cfg["GITHUB_REPO"]) { $cfg["GITHUB_REPO"] } else { "https://github.com/Jhoseto/pamporovo-villa.git" }
-$token = $cfg["GITHUB_TOKEN"]
-$repo = if ($token) { $repoBase -replace "https://", "https://${token}@" } else { $repoBase }
+# ── SSH config ────────────────────────────────────────────────────────────────
+$sshHost = $cfg["JETHOST_SSH_HOST"]
+$sshUser = $cfg["JETHOST_SSH_USER"]
+$sshPort = if ($cfg["JETHOST_SSH_PORT"]) { $cfg["JETHOST_SSH_PORT"] } else { "1022" }
+$sshKey  = $cfg["JETHOST_SSH_KEY"]
+$appDir  = if ($cfg["JETHOST_APP_DIR"]) { $cfg["JETHOST_APP_DIR"] } else { "pamporovo-villa" }
+$repo    = if ($cfg["GITHUB_REPO"]) { $cfg["GITHUB_REPO"] } else { "https://github.com/Jhoseto/pamporovo-villa.git" }
+$token   = $cfg["GITHUB_TOKEN"]
+if ($token) { $repo = $repo -replace "https://", "https://${token}@" }
 
-$sshArgs = @("-p", $port, "-o", "StrictHostKeyChecking=accept-new")
-$scpArgs = @("-P", $port, "-o", "StrictHostKeyChecking=accept-new")
-if ($key -and (Test-Path $key)) {
-  $sshArgs = @("-i", $key) + $sshArgs
-  $scpArgs = @("-i", $key) + $scpArgs
+$remote = "${sshUser}@${sshHost}"
+$sshBase = @("-p", $sshPort, "-o", "StrictHostKeyChecking=accept-new", "-o", "ConnectTimeout=15")
+if ($sshKey -and (Test-Path $sshKey)) {
+  $sshBase = @("-i", $sshKey) + $sshBase
 }
 
-$remote = "${user}@${host_}"
+function Invoke-SSH([string]$Cmd) {
+  & ssh @sshBase $remote $Cmd
+  if ($LASTEXITCODE -ne 0) { throw "SSH command failed: $Cmd" }
+}
 
-Write-Host "==> Testing SSH to $remote"
-& ssh @sshArgs $remote "echo OK"
-if ($LASTEXITCODE -ne 0) { throw "SSH failed" }
+# ── Test connection ───────────────────────────────────────────────────────────
+Write-Host "==> Testing SSH → $remote (port $sshPort)"
+& ssh @sshBase $remote "echo OK"
+if ($LASTEXITCODE -ne 0) { throw "SSH connection failed" }
 
-# Resolve real home path on server (avoids ~ literal in single-quoted bash)
-$homeDir = (& ssh @sshArgs $remote "echo `$HOME").Trim()
-if (-not $homeDir) { $homeDir = "/home/${user}" }
+# ── Resolve home directory (avoids ~ literal bug) ────────────────────────────
+$homeDir = (& ssh @sshBase $remote 'echo $HOME').Trim()
+if (-not $homeDir) { $homeDir = "/home/${sshUser}" }
 $remotePath = "${homeDir}/${appDir}"
 Write-Host "    Remote path: $remotePath"
 
-Write-Host "==> Ensuring repo on server"
-$cloneCmd = "if [ -d `"$remotePath/.git`" ]; then cd `"$remotePath`" && git fetch origin main && git reset --hard origin/main; elif [ -d `"$remotePath`" ]; then echo 'not a git repo' 1>&2; exit 1; else git clone `"$repo`" `"$remotePath`"; fi"
-& ssh @sshArgs $remote $cloneCmd
-if ($LASTEXITCODE -ne 0) { throw "Git clone/pull failed" }
+# ── Clone or update repo ──────────────────────────────────────────────────────
+Write-Host "==> Syncing repo on server"
+$cloneCmd = "if [ -d \`"$remotePath/.git\`" ]; then cd \`"$remotePath\`" && git fetch origin main && git reset --hard origin/main; else git clone \`"$repo\`" \`"$remotePath\`"; fi"
+Invoke-SSH $cloneCmd
 
+# ── Upload .env ───────────────────────────────────────────────────────────────
 Write-Host "==> Uploading .env"
 $envContent = Get-Content $prodEnv -Raw -Encoding UTF8
-$envContent | & ssh @sshArgs $remote "cat > `"$remotePath/.env`""
+$envContent | & ssh @sshBase $remote "cat > `"$remotePath/.env`""
 if ($LASTEXITCODE -ne 0) { throw "Upload .env failed" }
 
-Write-Host "==> Running first install / deploy on server"
-$installCmd = "cd `"$remotePath`" && chmod +x scripts/*.sh && bash scripts/jethost-first-install.sh"
-& ssh @sshArgs $remote $installCmd
-if ($LASTEXITCODE -ne 0) { throw "Remote install failed" }
+# ── Run deploy on server ──────────────────────────────────────────────────────
+Write-Host "==> Running deploy on server (install → build → db:sync)"
+Invoke-SSH "cd `"$remotePath`" && chmod +x scripts/*.sh && bash scripts/jethost-first-install.sh"
 
+# ── Done ──────────────────────────────────────────────────────────────────────
 $siteUrl = $cfg["SITE_URL"]
 Write-Host ""
-Write-Host "Deploy finished." -ForegroundColor Green
-Write-Host "  Site:  $siteUrl"
-Write-Host "  Admin: ${siteUrl}/admin"
-Write-Host "  Health: ${siteUrl}/health"
+Write-Host "Deploy finished!" -ForegroundColor Green
+Write-Host "  Site:   $siteUrl" -ForegroundColor Cyan
+Write-Host "  Admin:  ${siteUrl}/admin" -ForegroundColor Cyan
+Write-Host "  Health: ${siteUrl}/health" -ForegroundColor Cyan
 Write-Host ""
-Write-Host "If site is not live: cPanel -> Setup Node.js App -> dist/index.js -> Restart" -ForegroundColor Yellow
+Write-Host "If site shows 503: cPanel → Setup Node.js App → pamporovo-villa → Restart" -ForegroundColor Yellow
