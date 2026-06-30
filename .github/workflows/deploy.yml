@@ -1,0 +1,125 @@
+name: Deploy to JetHost
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      # Install all deps (dev included — needed for build)
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      # Build frontend (vite) + server bundle (esbuild)
+      - name: Build
+        run: pnpm build
+        env:
+          NODE_ENV: production
+
+      # Create production-only node_modules (no dev deps)
+      - name: Install production deps
+        run: |
+          cp -r node_modules node_modules_all
+          pnpm install --prod --frozen-lockfile --ignore-scripts 2>/dev/null || \
+            npm install --omit=dev --legacy-peer-deps --no-fund --no-audit
+          mv node_modules node_modules_prod
+          mv node_modules_all node_modules
+
+      # Write .env from GitHub secrets
+      - name: Write .env
+        run: |
+          {
+            echo "NODE_ENV=production"
+            echo "TRUST_PROXY=1"
+            echo "DATABASE_URL=${{ secrets.DATABASE_URL }}"
+            echo "JWT_SECRET=${{ secrets.JWT_SECRET }}"
+            echo "SITE_URL=${{ secrets.SITE_URL }}"
+            echo "MASTER_ADMIN_PASSWORD=${{ secrets.MASTER_ADMIN_PASSWORD }}"
+            echo "VAPID_PUBLIC_KEY=${{ secrets.VAPID_PUBLIC_KEY }}"
+            echo "VAPID_PRIVATE_KEY=${{ secrets.VAPID_PRIVATE_KEY }}"
+          } > .env.production
+
+      # Pack everything into one tar
+      - name: Create deployment archive
+        run: |
+          tar -czf /tmp/deploy.tar.gz \
+            --exclude='*.map' \
+            dist/ \
+            node_modules_prod/ \
+            scripts/ \
+            package.json \
+            .env.production
+
+      # Setup SSH key
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "${{ secrets.JETHOST_SSH_KEY }}" > ~/.ssh/jethost
+          chmod 600 ~/.ssh/jethost
+          ssh-keyscan -p "${{ secrets.JETHOST_SSH_PORT }}" \
+            "${{ secrets.JETHOST_SSH_HOST }}" >> ~/.ssh/known_hosts 2>/dev/null || true
+
+      # Upload archive
+      - name: Upload archive via scp
+        run: |
+          scp -i ~/.ssh/jethost \
+            -P "${{ secrets.JETHOST_SSH_PORT }}" \
+            -o StrictHostKeyChecking=no \
+            /tmp/deploy.tar.gz \
+            "${{ secrets.JETHOST_SSH_USER }}@${{ secrets.JETHOST_SSH_HOST }}:~/deploy.tar.gz"
+
+      # Extract + restart on server
+      - name: Deploy on server
+        run: |
+          APP="${{ secrets.JETHOST_APP_DIR || 'pamporovo-villa' }}"
+          ssh -i ~/.ssh/jethost \
+            -p "${{ secrets.JETHOST_SSH_PORT }}" \
+            -o StrictHostKeyChecking=no \
+            -o ConnectTimeout=30 \
+            "${{ secrets.JETHOST_SSH_USER }}@${{ secrets.JETHOST_SSH_HOST }}" \
+            "
+              set -e
+              cd ~/${APP}
+
+              # Extract archive
+              tar -xzf ~/deploy.tar.gz
+              rm ~/deploy.tar.gz
+
+              # Swap node_modules
+              rm -rf node_modules
+              mv node_modules_prod node_modules
+
+              # Place .env
+              mv .env.production .env
+
+              # Ensure data dirs exist
+              mkdir -p data/notification-sounds
+
+              # Sync DB schema
+              ~/nodevenv/${APP}/22/bin/node scripts/apply-pending-schema.mjs || true
+
+              # Restart app via cPanel
+              cloudlinux-selector restart --json --interpreter nodejs \
+                --app-root '${APP}' 2>/dev/null || true
+
+              echo '=== Deploy complete ==='
+            "
+
+      - name: Summary
+        run: echo "Live at ${{ secrets.SITE_URL }}"
