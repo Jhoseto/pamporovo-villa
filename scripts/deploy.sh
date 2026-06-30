@@ -52,9 +52,17 @@ if [ -z "$NODE_BIN" ]; then
 fi
 
 # ── Install pnpm ──────────────────────────────────────────────────────────────
+# After `npm install -g`, the binary lands in $(npm config get prefix)/bin
+# which may not be in PATH yet — prepend it explicitly.
+NPM_GLOBAL_BIN="$(npm config get prefix)/bin"
+export PATH="${NPM_GLOBAL_BIN}:$PATH"
+
 if ! command -v pnpm >/dev/null 2>&1; then
   echo "==> Installing pnpm"
   npm install -g pnpm@10.4.1 --quiet --no-fund --no-audit
+  # Refresh PATH in case npm wrote to a different prefix
+  NPM_GLOBAL_BIN="$(npm config get prefix)/bin"
+  export PATH="${NPM_GLOBAL_BIN}:$PATH"
 fi
 echo "    pnpm: $(pnpm -v)"
 
