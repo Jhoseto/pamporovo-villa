@@ -52,17 +52,16 @@ if [ -z "$NODE_BIN" ]; then
 fi
 
 # ── Install pnpm ──────────────────────────────────────────────────────────────
-# After `npm install -g`, the binary lands in $(npm config get prefix)/bin
-# which may not be in PATH yet — prepend it explicitly.
-NPM_GLOBAL_BIN="$(npm config get prefix)/bin"
-export PATH="${NPM_GLOBAL_BIN}:$PATH"
+# On cPanel shared hosting npm's default global prefix is the system path
+# (/opt/alt/alt-nodejsXX/...) which is read-only for regular users.
+# Force npm to use a user-writable prefix in $HOME.
+export NPM_CONFIG_PREFIX="$HOME/.npm-global"
+export PATH="$HOME/.npm-global/bin:$PATH"
+mkdir -p "$HOME/.npm-global/bin"
 
 if ! command -v pnpm >/dev/null 2>&1; then
-  echo "==> Installing pnpm"
+  echo "==> Installing pnpm (prefix: ~/.npm-global)"
   npm install -g pnpm@10.4.1 --quiet --no-fund --no-audit
-  # Refresh PATH in case npm wrote to a different prefix
-  NPM_GLOBAL_BIN="$(npm config get prefix)/bin"
-  export PATH="${NPM_GLOBAL_BIN}:$PATH"
 fi
 echo "    pnpm: $(pnpm -v)"
 
