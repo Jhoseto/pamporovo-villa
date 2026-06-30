@@ -105,16 +105,23 @@ $envDest = 'cat > "RP/.env"'.Replace("RP", $remotePath)
 Get-Content $prodEnv -Raw -Encoding UTF8 | & ssh @sshBase $remote $envDest
 if ($LASTEXITCODE -ne 0) { throw "Upload .env failed" }
 
-# ── Upload dist/ via tar pipe ─────────────────────────────────────────────────
-Write-Host "==> Uploading dist/ (tar over SSH)"
+# ── Upload dist/ via scp (binary-safe, no pipe corruption) ───────────────────
+Write-Host "==> Uploading dist/ (tar + scp)"
 $tmpTar = [System.IO.Path]::Combine([System.IO.Path]::GetTempPath(), "pamporovo-dist.tar.gz")
 & tar -czf $tmpTar -C $Root dist
-if ($LASTEXITCODE -ne 0) { throw "tar failed - is tar installed? (Git for Windows includes it)" }
+if ($LASTEXITCODE -ne 0) { throw "tar failed - Git for Windows includes tar; ensure it is in PATH" }
 
-$extractCmd = 'cd "RP" && rm -rf dist && tar -xzf -'.Replace("RP", $remotePath)
-[System.IO.File]::ReadAllBytes($tmpTar) | & ssh @sshBase $remote $extractCmd
-if ($LASTEXITCODE -ne 0) { throw "Upload dist/ failed" }
+# scp uses -P (capital) for port, unlike ssh which uses -p
+$scpBase = @("-P", $sshPort, "-o", "StrictHostKeyChecking=accept-new", "-o", "ConnectTimeout=20")
+if ($sshKey -and (Test-Path $sshKey)) { $scpBase = @("-i", $sshKey) + $scpBase }
+$remoteTar = "~/pamporovo-dist.tar.gz"
+& scp @scpBase $tmpTar "${remote}:${remoteTar}"
+if ($LASTEXITCODE -ne 0) { throw "scp dist.tar.gz failed" }
 Remove-Item $tmpTar -Force -ErrorAction SilentlyContinue
+
+$extractCmd = 'cd "RP" && rm -rf dist && tar -xzf ~/pamporovo-dist.tar.gz && rm ~/pamporovo-dist.tar.gz'
+$extractCmd = $extractCmd.Replace("RP", $remotePath)
+Invoke-SSH $sshBase $remote $extractCmd
 Write-Host "    dist/ uploaded OK"
 
 # ── Server-side deploy (prod deps + db sync + restart) ───────────────────────
