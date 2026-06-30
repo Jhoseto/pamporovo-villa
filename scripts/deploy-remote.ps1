@@ -70,9 +70,13 @@ if (-not (Test-Path $prodEnv)) {
 if (-not $SkipBuild) {
   Write-Host "==> Building locally (vite + esbuild)"
   $env:NODE_ENV = "production"
+  $env:NODE_OPTIONS = "--use-system-ca"
+  $env:PNPM_CONFIG_UPDATE_NOTIFIER = "false"
   & pnpm build
   if ($LASTEXITCODE -ne 0) { throw "Local build failed" }
   $env:NODE_ENV = $null
+  $env:NODE_OPTIONS = $null
+  $env:PNPM_CONFIG_UPDATE_NOTIFIER = $null
   Write-Host "    Build OK"
 }
 $distPath = Join-Path $Root "dist"
