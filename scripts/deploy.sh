@@ -48,10 +48,23 @@ if [ -z "$NODE_BIN" ]; then
   exit 1
 fi
 
-# ── Install production dependencies only (lightweight, no build tools needed) ──
-echo "==> Installing production dependencies  (npm install --omit=dev)"
-export NODE_ENV=production
-npm install --omit=dev --legacy-peer-deps --no-fund --no-audit 2>&1 | tail -3
+# ── Install production dependencies only ─────────────────────────────────────
+# Skip if node_modules exists and package.json hasn't changed since last install
+MODULES_OK=0
+if [ -d node_modules ] && [ -f node_modules/.deploy-pkg-hash ]; then
+  CURRENT_HASH="$(md5sum package.json | cut -d' ' -f1)"
+  SAVED_HASH="$(cat node_modules/.deploy-pkg-hash)"
+  [ "$CURRENT_HASH" = "$SAVED_HASH" ] && MODULES_OK=1
+fi
+
+if [ "$MODULES_OK" = "1" ]; then
+  echo "==> Skipping npm install (package.json unchanged)"
+else
+  echo "==> Installing production dependencies"
+  export NODE_ENV=production
+  npm install --omit=dev --legacy-peer-deps --no-fund --no-audit 2>&1 | tail -3
+  md5sum package.json | cut -d' ' -f1 > node_modules/.deploy-pkg-hash
+fi
 
 # ── Database sync ─────────────────────────────────────────────────────────────
 echo "==> Syncing database schema"
