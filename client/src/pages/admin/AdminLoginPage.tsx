@@ -1,3 +1,4 @@
+import { Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
 import { AdminMenuLogo } from "@/components/admin/AdminMenuLogo";
 import { AdminThemeToggle } from "@/components/admin/AdminThemeToggle";
@@ -11,6 +12,7 @@ export default function AdminLoginPage() {
   const utils = trpc.useUtils();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   const login = trpc.admin.auth.login.useMutation({
     onSuccess: res => {
@@ -34,7 +36,7 @@ export default function AdminLoginPage() {
           className="relative mt-8 space-y-4"
           onSubmit={e => {
             e.preventDefault();
-            login.mutate({ username, password });
+            login.mutate({ username: username.trim(), password });
           }}
         >
           <div className="space-y-2">
@@ -49,14 +51,24 @@ export default function AdminLoginPage() {
           </div>
           <div className="space-y-2">
             <Label htmlFor="password">Парола</Label>
-            <Input
-              id="password"
-              type="password"
-              value={password}
-              onChange={e => setPassword(e.target.value)}
-              autoComplete="current-password"
-              className="admin-input"
-            />
+            <div className="relative">
+              <Input
+                id="password"
+                type={showPassword ? "text" : "password"}
+                value={password}
+                onChange={e => setPassword(e.target.value)}
+                autoComplete="current-password"
+                className="admin-input pr-10"
+              />
+              <button
+                type="button"
+                className="absolute right-2 top-1/2 -translate-y-1/2 rounded-md p-1.5 text-muted-foreground transition-colors hover:text-foreground"
+                onClick={() => setShowPassword(v => !v)}
+                aria-label={showPassword ? "Скрий паролата" : "Покажи паролата"}
+              >
+                {showPassword ? <EyeOff className="size-4" /> : <Eye className="size-4" />}
+              </button>
+            </div>
           </div>
           <Button type="submit" className="admin-btn-primary w-full" disabled={login.isPending}>
             {login.isPending ? "Влизане..." : "Вход"}

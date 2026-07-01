@@ -58,6 +58,7 @@ jobs:
             --exclude='*.map' \
             dist/ \
             scripts/apply-pending-schema.mjs \
+            scripts/reset-master-admin.mjs \
             package.json \
             .env.production
           tar -czf /tmp/deps.tar.gz -C /tmp/prod-out node_modules/
@@ -122,6 +123,9 @@ jobs:
 
               echo "==> Syncing database schema"
               "$HOME/nodevenv/$APP/22/bin/node" scripts/apply-pending-schema.mjs || true
+
+              echo "==> Syncing master admin password"
+              "$HOME/nodevenv/$APP/22/bin/node" scripts/reset-master-admin.mjs || true
 
               echo "==> Restarting app"
               cloudlinux-selector restart --json --interpreter nodejs \

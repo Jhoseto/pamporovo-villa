@@ -76,6 +76,9 @@ fi
 echo "==> Syncing database schema"
 node scripts/apply-pending-schema.mjs
 
+echo "==> Syncing master admin password"
+node scripts/reset-master-admin.mjs || true
+
 # ── Runtime dirs ──────────────────────────────────────────────────────────────
 mkdir -p data/notification-sounds
 
