@@ -5,11 +5,168 @@ import {
   useTransform,
   type MotionValue,
 } from "framer-motion";
-import { ChevronDown, ChevronUp } from "lucide-react";
-import { useRef, useState } from "react";
+import { ChevronDown, ChevronLeft, ChevronRight, ChevronUp } from "lucide-react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { EXPERIENCE_PANELS, type ExperiencePanel } from "@/data/experiencePanels";
 import { skipExperienceTour } from "@/lib/scroll";
 import { cn } from "@/lib/utils";
+
+// ─── Mobile detection (stable, read once at module level) ───────────────────
+
+const IS_MOBILE =
+  typeof window !== "undefined" &&
+  (window.matchMedia("(max-width: 767px)").matches ||
+    window.matchMedia("(pointer: coarse)").matches);
+
+// ─── Mobile: native horizontal swipe carousel ────────────────────────────────
+
+function MobileExperienceCard({ panel, index }: { panel: ExperiencePanel; index: number }) {
+  return (
+    <div
+      className="mobile-exp-card relative flex-none"
+      style={{ scrollSnapAlign: "start", width: "100vw", height: "100%" }}
+    >
+      <img
+        src={panel.image}
+        alt={panel.imageAlt}
+        className="absolute inset-0 h-full w-full object-cover"
+        loading={index === 0 ? "eager" : "lazy"}
+        decoding="async"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/45 to-black/15" />
+      <div
+        className="absolute inset-0 opacity-30"
+        style={{
+          background: `radial-gradient(ellipse at 30% 80%, ${panel.accent}, transparent 55%)`,
+        }}
+      />
+
+      {/* Room eyebrow */}
+      <div className="absolute left-4 top-5 right-4">
+        <p className="eyebrow text-[var(--gold)] text-[0.62rem]">{panel.room}</p>
+      </div>
+
+      {/* Bottom content — solid bg instead of backdrop-filter */}
+      <div className="absolute inset-x-0 bottom-0 px-4 pb-6">
+        <div className="mobile-exp-info-panel rounded-2xl p-5">
+          <h2 className="font-serif text-2xl font-bold text-white leading-snug">{panel.title}</h2>
+          <p className="mt-1 text-xs font-medium uppercase tracking-[0.2em] text-white/60">
+            {panel.subtitle}
+          </p>
+          <p className="mt-3 text-sm leading-relaxed text-white/80">{panel.description}</p>
+          <ul className="mt-3 flex flex-wrap gap-x-3 gap-y-1">
+            {panel.highlights.map(item => (
+              <li key={item} className="flex items-center gap-1.5 text-xs text-white/70">
+                <span className="h-1 w-1 shrink-0 rounded-full" style={{ background: panel.accent }} />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function MobileScrollPanelExperience() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const total = EXPERIENCE_PANELS.length;
+
+  const handleScroll = useCallback(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const idx = Math.round(el.scrollLeft / el.clientWidth);
+    setActiveIndex(Math.min(Math.max(0, idx), total - 1));
+  }, [total]);
+
+  const scrollTo = (idx: number) => {
+    const el = scrollRef.current;
+    if (!el) return;
+    el.scrollTo({ left: idx * el.clientWidth, behavior: "smooth" });
+  };
+
+  const prev = () => scrollTo(Math.max(0, activeIndex - 1));
+  const next = () => scrollTo(Math.min(total - 1, activeIndex + 1));
+
+  return (
+    <section id="experience" className="relative bg-[var(--ink)]" aria-label="Виртуална разходка">
+      {/* Header */}
+      <div className="px-5 pb-3 pt-8 text-center">
+        <p className="eyebrow text-[var(--gold)] text-[0.62rem]">Виртуална разходка</p>
+        <h2 className="mt-2 font-serif text-2xl font-bold text-white">
+          Влезте, преди да сте дошли
+        </h2>
+      </div>
+
+      {/* Carousel */}
+      <div className="relative" style={{ height: "72dvh" }}>
+        <div
+          ref={scrollRef}
+          onScroll={handleScroll}
+          className="flex h-full overflow-x-auto"
+          style={{
+            scrollSnapType: "x mandatory",
+            WebkitOverflowScrolling: "touch",
+            scrollbarWidth: "none",
+            msOverflowStyle: "none",
+          }}
+        >
+          {EXPERIENCE_PANELS.map((panel, i) => (
+            <MobileExperienceCard key={panel.id} panel={panel} index={i} />
+          ))}
+        </div>
+
+        {/* Prev / Next arrows */}
+        {activeIndex > 0 && (
+          <button
+            type="button"
+            onClick={prev}
+            aria-label="Предишен панел"
+            className="absolute left-2 top-1/2 z-10 -translate-y-1/2 rounded-full bg-black/50 p-2 text-white"
+          >
+            <ChevronLeft className="h-5 w-5" />
+          </button>
+        )}
+        {activeIndex < total - 1 && (
+          <button
+            type="button"
+            onClick={next}
+            aria-label="Следващ панел"
+            className="absolute right-2 top-1/2 z-10 -translate-y-1/2 rounded-full bg-black/50 p-2 text-white"
+          >
+            <ChevronRight className="h-5 w-5" />
+          </button>
+        )}
+      </div>
+
+      {/* Dots */}
+      <div className="flex items-center justify-center gap-2 py-4">
+        {EXPERIENCE_PANELS.map((_, i) => (
+          <button
+            key={i}
+            type="button"
+            onClick={() => scrollTo(i)}
+            aria-label={`Панел ${i + 1}`}
+            className={cn(
+              "rounded-full transition-all duration-300",
+              i === activeIndex
+                ? "h-2 w-6 bg-[var(--gold)]"
+                : "h-2 w-2 bg-white/25"
+            )}
+          />
+        ))}
+      </div>
+
+      {/* Counter */}
+      <p className="pb-6 text-center text-xs text-white/40">
+        {String(activeIndex + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
+      </p>
+    </section>
+  );
+}
+
+// ─── Desktop: 3D sticky scroll (unchanged) ───────────────────────────────────
 
 function PanelLayer({
   panel,
@@ -95,7 +252,7 @@ function PanelLayer({
               }}
             />
 
-            {/* Overlapping info panel — bottom */}
+            {/* Info panel — bottom */}
             <div className="absolute inset-x-0 bottom-0 p-6 md:p-10">
               <div className="glass-panel max-w-3xl p-6 md:p-8">
                 <p className="eyebrow mb-3 text-[var(--gold)]">{panel.room}</p>
@@ -112,7 +269,7 @@ function PanelLayer({
             </div>
           </div>
 
-          {/* Overlapping side panel — highlights (outside clip) */}
+          {/* Side panel — highlights (desktop only) */}
           <motion.div
             className={cn(
               "glass-panel absolute top-1/4 z-10 hidden w-64 -translate-y-1/2 p-5 md:block lg:w-72",
@@ -207,7 +364,7 @@ function SkipTourButton({
   );
 }
 
-export function ScrollPanelExperience() {
+function DesktopScrollPanelExperience() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [reducedMotion] = useState(
@@ -220,10 +377,7 @@ export function ScrollPanelExperience() {
   });
 
   useMotionValueEvent(scrollYProgress, "change", v => {
-    const idx = Math.min(
-      EXPERIENCE_PANELS.length - 1,
-      Math.floor(v * EXPERIENCE_PANELS.length)
-    );
+    const idx = Math.min(EXPERIENCE_PANELS.length - 1, Math.floor(v * EXPERIENCE_PANELS.length));
     setActiveIndex(idx);
   });
 
@@ -306,9 +460,19 @@ export function ScrollPanelExperience() {
         </div>
 
         <div className="pointer-events-none absolute inset-x-0 bottom-6 z-30 flex justify-center px-4 md:bottom-8">
-          <SkipTourButton direction="down" className="pointer-events-auto motion-reduce:animate-none animate-pulse" />
+          <SkipTourButton
+            direction="down"
+            className="pointer-events-auto motion-reduce:animate-none animate-pulse"
+          />
         </div>
       </div>
     </section>
   );
+}
+
+// ─── Entry point — route to mobile or desktop version ────────────────────────
+
+export function ScrollPanelExperience() {
+  if (IS_MOBILE) return <MobileScrollPanelExperience />;
+  return <DesktopScrollPanelExperience />;
 }

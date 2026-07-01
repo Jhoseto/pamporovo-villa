@@ -2,13 +2,19 @@ import Lenis from "lenis";
 
 let lenisInstance: Lenis | null = null;
 
+function isTouchOnlyDevice(): boolean {
+  if (typeof window === "undefined") return false;
+  return window.matchMedia("(pointer: coarse)").matches;
+}
+
 export function initLenis(): Lenis | null {
   if (typeof window === "undefined") return null;
 
-  const prefersReducedMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
-  ).matches;
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (prefersReducedMotion) return null;
+
+  // Native scroll is smoother on touch/mobile devices — skip Lenis
+  if (isTouchOnlyDevice()) return null;
 
   if (lenisInstance) return lenisInstance;
 
