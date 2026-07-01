@@ -1,4 +1,4 @@
-import { lazy, Suspense, useCallback, useState } from "react";
+import { lazy, Suspense, useCallback, useEffect, useState } from "react";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
@@ -9,6 +9,7 @@ import { SmoothScrollProvider } from "./components/site/SmoothScrollProvider";
 import { SiteReadyProvider } from "./contexts/SiteReadyContext";
 import { OffersModalProvider } from "./contexts/OffersModalContext";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import { initAdminPwaMeta, registerAdminServiceWorker } from "./lib/adminPwa";
 import Home from "./pages/Home";
 
 const AdminApp = lazy(() => import("./pages/admin/AdminApp"));
@@ -46,6 +47,12 @@ function PublicApp() {
 function AppShell() {
   const [location] = useLocation();
   const isAdmin = location.startsWith("/admin");
+
+  useEffect(() => {
+    if (!isAdmin) return;
+    initAdminPwaMeta();
+    void registerAdminServiceWorker();
+  }, [isAdmin]);
 
   if (isAdmin) {
     return (

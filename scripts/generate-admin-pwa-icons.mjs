@@ -1,5 +1,6 @@
 /**
- * Generate admin PWA icons from the house mark in logo.png.
+ * Generate admin PWA icons + iOS splash screens.
+ * House mark: client/public/admin/icons/pwa-house-source.png
  * Usage: pnpm pwa:icons
  */
 import fs from "node:fs";
@@ -7,18 +8,21 @@ import path from "node:path";
 import sharp from "sharp";
 
 const root = path.resolve(import.meta.dirname, "..");
-const logoPath = path.join(root, "client/public/logo.png");
+const houseIconPath = path.join(root, "client/public/admin/icons/pwa-house-source.png");
+const bannerLogoPath = path.join(root, "client/public/logo.png");
 const iconsDir = path.join(root, "client/public/admin/icons");
+const splashDir = path.join(root, "client/public/admin/splash");
+const SPLASH_BG = "#efeae1";
+
+if (!fs.existsSync(houseIconPath)) {
+  console.error("Missing pwa-house-source.png — add the house icon to client/public/admin/icons/");
+  process.exit(1);
+}
 
 fs.mkdirSync(iconsDir, { recursive: true });
+fs.mkdirSync(splashDir, { recursive: true });
 
-const logoMeta = await sharp(logoPath).metadata();
-const cropSize = Math.min(logoMeta.height ?? 250, logoMeta.width ?? 1024);
-
-const houseSource = await sharp(logoPath)
-  .extract({ left: 0, top: 0, width: cropSize, height: cropSize })
-  .png()
-  .toBuffer();
+const houseSource = await sharp(houseIconPath).trim({ threshold: 15 }).png().toBuffer();
 
 await sharp(houseSource).toFile(path.join(iconsDir, "logo-house-source.png"));
 
@@ -60,18 +64,33 @@ function iconBackgroundSvg(size, variant = "app") {
 async function composeIcon(size, { maskable = false, badge = false } = {}) {
   const variant = badge ? "badge" : "app";
   const bg = await sharp(iconBackgroundSvg(size, variant)).png().toBuffer();
-  const houseScale = badge ? 0.62 : maskable ? 0.64 : 0.72;
-  const houseSize = Math.round(size * houseScale);
-  const house = await sharp(houseSource).resize(houseSize, houseSize, { fit: "contain" }).png().toBuffer();
-  const offset = Math.round((size - houseSize) / 2);
+  const houseMeta = await sharp(houseSource).metadata();
+  const houseAspect = (houseMeta.width ?? 1) / (houseMeta.height ?? 1);
+  const houseScale = badge ? 0.68 : maskable ? 0.66 : 0.76;
+  const maxHouse = Math.round(size * houseScale);
+  const houseWidth = houseAspect >= 1 ? maxHouse : Math.round(maxHouse * houseAspect);
+  const houseHeight = houseAspect >= 1 ? Math.round(maxHouse / houseAspect) : maxHouse;
+
+  const house = await sharp(houseSource)
+    .resize(houseWidth, houseHeight, { fit: "contain", background: SPLASH_BG })
+    .flatten({ background: badge ? "#b8924f" : SPLASH_BG })
+    .png()
+    .toBuffer();
+
+  const offsetX = Math.round((size - houseWidth) / 2);
+  const offsetY = Math.round((size - houseHeight) / 2);
 
   return sharp(bg)
-    .composite([{ input: house, top: offset, left: offset }])
+    .composite([{ input: house, top: offsetY, left: offsetX }])
+    .flatten({ background: badge ? "#b8924f" : SPLASH_BG })
+    .removeAlpha()
     .png({ compressionLevel: 9 })
     .toBuffer();
 }
 
-const outputs = [
+const iconOutputs = [
+  { out: "icon-152.png", size: 152 },
+  { out: "icon-167.png", size: 167 },
   { out: "icon-180.png", size: 180 },
   { out: "icon-192.png", size: 192 },
   { out: "icon-512.png", size: 512 },
@@ -79,29 +98,56 @@ const outputs = [
   { out: "badge-72.png", size: 72, badge: true },
 ];
 
-for (const item of outputs) {
+for (const item of iconOutputs) {
   const buf = await composeIcon(item.size, { maskable: item.maskable, badge: item.badge });
-  const outPath = path.join(iconsDir, item.out);
-  await sharp(buf).toFile(outPath);
-  console.log(`Wrote ${outPath}`);
+  await sharp(buf).toFile(path.join(iconsDir, item.out));
+  console.log(`Wrote ${path.join(iconsDir, item.out)}`);
 }
 
-// Update SVG fallbacks for dev tools
-const houseSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Pamporovo Villa">
-  <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#f7f4ee"/>
-      <stop offset="100%" stop-color="#e4ddd1"/>
-    </linearGradient>
-  </defs>
-  <rect width="512" height="512" rx="96" fill="url(#bg)"/>
-  <image href="/admin/icons/logo-house-source.png" x="72" y="72" width="368" height="368"/>
-</svg>`;
+async function createSplash(width, height) {
+  const iconSize = Math.round(Math.min(width, height) * 0.34);
+  const houseMeta = await sharp(houseSource).metadata();
+  const houseAspect = (houseMeta.width ?? 1) / (houseMeta.height ?? 1);
+  const houseWidth = houseAspect >= 1 ? iconSize : Math.round(iconSize * houseAspect);
+  const houseHeight = houseAspect >= 1 ? Math.round(iconSize / houseAspect) : iconSize;
 
-fs.writeFileSync(path.join(iconsDir, "icon-512.svg"), houseSvg);
-fs.writeFileSync(
-  path.join(iconsDir, "icon-192.svg"),
-  houseSvg.replace('width="512" height="512"', 'width="192" height="192"').replace('rx="96"', 'rx="36"')
-);
+  const house = await sharp(houseSource)
+    .resize(houseWidth, houseHeight, { fit: "contain", background: SPLASH_BG })
+    .flatten({ background: SPLASH_BG })
+    .png()
+    .toBuffer();
 
-console.log("Done — house icon extracted from logo.png");
+  const logoWidth = Math.round(width * 0.62);
+  const logoHeight = Math.max(1, Math.round(logoWidth * (250 / 1024)));
+  const banner = await sharp(bannerLogoPath).resize(logoWidth, logoHeight, { fit: "inside" }).png().toBuffer();
+  const bannerMeta = await sharp(banner).metadata();
+
+  const bannerY = Math.round(height * 0.36);
+  const bannerX = Math.round((width - (bannerMeta.width ?? logoWidth)) / 2);
+  const houseY = bannerY - houseHeight - Math.round(height * 0.04);
+  const houseX = Math.round((width - houseWidth) / 2);
+
+  return sharp({
+    create: { width, height, channels: 3, background: SPLASH_BG },
+  })
+    .composite([
+      { input: house, top: Math.max(0, houseY), left: houseX },
+      { input: banner, top: bannerY, left: bannerX },
+    ])
+    .png({ compressionLevel: 9 })
+    .toBuffer();
+}
+
+const splashOutputs = [
+  { file: "launch-1170x2532.png", width: 1170, height: 2532 },
+  { file: "launch-1284x2778.png", width: 1284, height: 2778 },
+  { file: "launch-750x1334.png", width: 750, height: 1334 },
+];
+
+for (const splash of splashOutputs) {
+  const buf = await createSplash(splash.width, splash.height);
+  await sharp(buf).toFile(path.join(splashDir, splash.file));
+  console.log(`Wrote ${path.join(splashDir, splash.file)}`);
+}
+
+console.log("Done — PWA icons from pwa-house-source.png");

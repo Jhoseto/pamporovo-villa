@@ -6,7 +6,7 @@
   "start_url": "/admin/?source=pwa",
   "scope": "/admin/",
   "display": "standalone",
-  "display_override": ["standalone", "minimal-ui"],
+  "display_override": ["standalone", "fullscreen"],
   "orientation": "portrait-primary",
   "background_color": "#efeae1",
   "theme_color": "#efeae1",
@@ -15,6 +15,12 @@
   "categories": ["business", "productivity"],
   "prefer_related_applications": false,
   "icons": [
+    {
+      "src": "/admin/icons/icon-180.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
     {
       "src": "/admin/icons/icon-192.png",
       "sizes": "192x192",

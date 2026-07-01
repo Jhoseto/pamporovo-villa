@@ -4,7 +4,7 @@ import { AdminLoadingShell } from "@/components/admin/AdminBootScreen";
 import { AdminLayout } from "@/components/admin/AdminLayout";
 import { AdminThemeProvider } from "@/contexts/AdminThemeContext";
 import { initAdminThemeFromStorage } from "@/hooks/useAdminTheme";
-import { applyAdminPwaStandaloneClass, registerAdminServiceWorker, setupAdminPwaMeta } from "@/lib/adminPwa";
+import { applyAdminPwaStandaloneClass, initAdminPwaMeta, registerAdminServiceWorker } from "@/lib/adminPwa";
 import { trpc } from "@/lib/trpc";
 import AdminLoginPage from "./AdminLoginPage";
 import AdminDashboardPage from "./AdminDashboardPage";
@@ -20,6 +20,8 @@ import AdminContactNewPage from "./AdminContactNewPage";
 import AdminContactDetailPage from "./AdminContactDetailPage";
 
 initAdminThemeFromStorage();
+initAdminPwaMeta();
+void registerAdminServiceWorker();
 
 function useAdminSession() {
   return trpc.admin.auth.me.useQuery(undefined, {
@@ -100,7 +102,10 @@ export default function AdminApp() {
     meta.content = "noindex,nofollow";
     document.head.appendChild(meta);
 
-    const cleanupMeta = setupAdminPwaMeta();
+    const cleanupMeta = (() => {
+      initAdminPwaMeta();
+      return () => undefined;
+    })();
     void registerAdminServiceWorker();
     const cleanupStandalone = applyAdminPwaStandaloneClass();
 

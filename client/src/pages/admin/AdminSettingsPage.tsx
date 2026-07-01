@@ -14,7 +14,21 @@ export default function AdminSettingsPage() {
   const utils = trpc.useUtils();
   const fileInputRef = useRef<HTMLInputElement>(null);
   const { permission, subscribe, unsubscribe, isSubscribed, vapidReady, isBusy } = useAdminPush();
-  const { canInstall, isInstalled, isInstalling, install, showIosInstructions } = useAdminPwaInstall();
+  const {
+    canInstall,
+    isInstalled,
+    isInstalling,
+    install,
+    showIosInstructions,
+    iosNonSafari,
+    iosSafari,
+    platform,
+    swReady,
+    showInstallButton,
+    installButtonEnabled,
+    installButtonLabel,
+    installStatusLabel,
+  } = useAdminPwaInstall();
   const { data: soundSettings } = trpc.admin.push.getNotificationSound.useQuery();
   const [currentPassword, setCurrentPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
@@ -209,56 +223,96 @@ export default function AdminSettingsPage() {
 
       <section className="admin-glass-card p-6">
         <div className="flex items-start gap-3">
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[var(--admin-glass-border-subtle)] bg-[var(--admin-glass-bg)]">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[var(--admin-glass-border-subtle)] bg-[var(--admin-panel-solid)]">
             <Smartphone className="h-5 w-5 text-[var(--admin-muted)]" />
           </div>
           <div className="min-w-0 flex-1">
-            <h2 className="font-serif text-xl font-semibold">Приложение на телефона (PWA)</h2>
+            <h2 className="font-serif text-xl font-semibold">Приложение на телефона</h2>
             <p className="mt-1 text-sm text-[var(--admin-muted)]">
-              Инсталирайте админ панела като приложение на началния екран за бърз достъп и известия.
+              Инсталирайте админ панела като самостоятелно приложение — пълен екран, без адресна лента на
+              браузъра.
             </p>
           </div>
         </div>
 
         <div className="mt-4 space-y-2 text-sm">
           <p>
-            Статус:{" "}
-            <strong>{isInstalled ? "Инсталирано" : canInstall ? "Готово за инсталация" : "Не е инсталирано"}</strong>
+            Статус: <strong>{installStatusLabel}</strong>
           </p>
+          {swReady && !isInstalled && platform === "android" && !canInstall && (
+            <p className="text-xs text-[var(--admin-muted)]">
+              Ако бутонът остане неактивен, презаредете страницата и изчакайте 2–3 секунди в Chrome.
+            </p>
+          )}
         </div>
 
         <div className="mt-4 flex flex-wrap gap-2">
-          {canInstall && !isInstalled && (
-            <Button className="admin-btn-primary" onClick={() => install()} disabled={isInstalling}>
+          {showInstallButton && (
+            <Button
+              className="admin-btn-primary"
+              onClick={() => install()}
+              disabled={!installButtonEnabled}
+            >
               <Download className="mr-2 h-4 w-4" />
-              {isInstalling ? "Инсталиране..." : "Инсталирай приложението"}
+              {installButtonLabel}
             </Button>
           )}
           {isInstalled && (
             <p className="text-sm text-[var(--admin-muted)]">
-              Отворете админ панела от иконата на началния екран.
+              Отворете <strong>PV Админ</strong> от иконата на началния екран — не от Chrome/Safari.
             </p>
           )}
         </div>
 
-        {showIosInstructions && (
-          <div className="mt-4 rounded-xl border border-[var(--admin-glass-border-subtle)] bg-[var(--admin-glass-bg)] p-4 text-sm text-[var(--admin-muted)]">
-            <p className="font-medium text-[var(--admin-fg)]">iPhone / iPad (Safari)</p>
-            <ol className="mt-2 list-inside list-decimal space-y-1">
-              <li>Натиснете бутона „Сподели“ (квадрат със стрелка нагоре)</li>
-              <li>Изберете „Добави на началния екран“</li>
-              <li>Отворете иконата и активирайте известията от тази страница</li>
-            </ol>
+        {iosNonSafari && !isInstalled && (
+          <div className="mt-4 rounded-xl border border-amber-500/30 bg-amber-500/10 p-4 text-sm">
+            <p className="font-medium text-[var(--admin-fg)]">Отворете в Safari</p>
+            <p className="mt-1 text-[var(--admin-muted)]">
+              Chrome и други браузъри на iPhone създават само пряк път в браузъра. За истинско приложение на
+              пълен екран копирайте адреса и го отворете в <strong>Safari</strong>.
+            </p>
           </div>
         )}
 
-        {!isInstalled && !canInstall && !showIosInstructions && (
+        {showIosInstructions && !iosNonSafari && (
+          <div className="mt-4 space-y-3 rounded-xl border border-[var(--admin-glass-border-subtle)] bg-[var(--admin-panel-solid)] p-4 text-sm text-[var(--admin-muted)]">
+            <p className="font-medium text-[var(--admin-fg)]">iPhone / iPad — само Safari</p>
+            <ol className="list-inside list-decimal space-y-2">
+              <li>
+                Отворете <strong>/admin</strong> в Safari (не Chrome, не „Използвай приложението“ от друг
+                браузър)
+              </li>
+              <li>Натиснете „Сподели“ (квадрат със стрелка нагоре)</li>
+              <li>Изберете „Добави на началния екран“</li>
+              <li>
+                <strong>Преди „Добави“</strong> проверете preview-то: име <strong>PV Админ</strong> и икона с
+                къщичката (не screenshot на страницата)
+              </li>
+              <li>
+                Отворете иконата <strong>PV Админ</strong> от началния екран — без адресна лента и Safari
+                бутони
+              </li>
+            </ol>
+            <div className="rounded-lg border border-[var(--admin-glass-border-subtle)] bg-[var(--admin-bg)] p-3 text-xs">
+              <p className="font-medium text-[var(--admin-fg)]">Как да знаете, че е истинско приложение:</p>
+              <ul className="mt-2 list-inside list-disc space-y-1">
+                <li>Няма адресна лента и Safari toolbar</li>
+                <li>При превключване между apps се вижда „PV Админ“, не „Safari“</li>
+                {iosSafari === false && platform === "ios" && (
+                  <li className="text-amber-700 dark:text-amber-300">
+                    Ако виждате Safari — вероятно сте в Chrome; отворете адреса в Safari
+                  </li>
+                )}
+              </ul>
+            </div>
+          </div>
+        )}
+
+        {!isInstalled && platform === "desktop" && !canInstall && (
           <div className="mt-4 rounded-xl border border-dashed border-[var(--admin-glass-border-subtle)] p-4 text-sm text-[var(--admin-muted)]">
             <p>
-              <strong>Android:</strong> Chrome → Меню (⋮) → „Инсталирай приложението“ или „Добави на началния екран“
-            </p>
-            <p className="mt-2">
-              <strong>Desktop:</strong> иконата за инсталация в адресната лента на Chrome/Edge
+              <strong>Desktop:</strong> Chrome или Edge → икона за инсталация в адресната лента, или бутона по-горе
+              когато стане активен.
             </p>
           </div>
         )}

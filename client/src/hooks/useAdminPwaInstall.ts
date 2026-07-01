@@ -1,6 +1,14 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
-import { isAdminPwaStandalone } from "@/lib/adminPwa";
+import {
+  getAdminPwaPlatform,
+  isAdminPwaStandalone,
+  isIosNonSafariBrowser,
+  isIosSafariBrowser,
+  registerAdminServiceWorker,
+  waitForAdminServiceWorker,
+  type AdminPwaPlatform,
+} from "@/lib/adminPwa";
 
 type BeforeInstallPromptEvent = Event & {
   prompt: () => Promise<void>;
@@ -8,11 +16,6 @@ type BeforeInstallPromptEvent = Event & {
 };
 
 const DISMISS_KEY = "pamporovo-admin-pwa-banner-dismissed";
-
-function isIosDevice(): boolean {
-  if (typeof navigator === "undefined") return false;
-  return /iphone|ipad|ipod/i.test(navigator.userAgent);
-}
 
 function isMobileDevice(): boolean {
   if (typeof window === "undefined") return false;
@@ -24,10 +27,15 @@ export function useAdminPwaInstall() {
   const [canInstall, setCanInstall] = useState(false);
   const [isInstalled, setIsInstalled] = useState(isAdminPwaStandalone);
   const [isInstalling, setIsInstalling] = useState(false);
+  const [swReady, setSwReady] = useState(false);
   const [showBanner, setShowBanner] = useState(false);
+  const platform = getAdminPwaPlatform();
+  const iosNonSafari = isIosNonSafariBrowser();
 
   useEffect(() => {
     setIsInstalled(isAdminPwaStandalone());
+
+    void waitForAdminServiceWorker().then(ok => setSwReady(ok));
 
     const onBeforeInstall = (event: Event) => {
       event.preventDefault();
@@ -64,9 +72,20 @@ export function useAdminPwaInstall() {
   }, [canInstall, isInstalled]);
 
   const install = useCallback(async () => {
+    if (isInstalled) return true;
+
+    if (platform === "ios") {
+      toast.message("iPhone: Safari → Сподели → Добави на началния екран", { duration: 6000 });
+      return false;
+    }
+
     const prompt = deferredPrompt.current;
     if (!prompt) {
-      toast.error("Инсталацията не е налична в този браузър");
+      if (platform === "android") {
+        toast.error("Изчакайте „Готово за инсталация“ или презаредете страницата в Chrome");
+      } else {
+        toast.error("Инсталацията не е налична — ползвайте Chrome или Edge");
+      }
       return false;
     }
 
@@ -80,7 +99,7 @@ export function useAdminPwaInstall() {
         setIsInstalled(true);
         setShowBanner(false);
         localStorage.setItem(DISMISS_KEY, "1");
-        toast.success("Приложението е инсталирано");
+        toast.success("Приложението е инсталирано — отворете го от иконата на началния екран");
         return true;
       }
       return false;
@@ -90,15 +109,38 @@ export function useAdminPwaInstall() {
     } finally {
       setIsInstalling(false);
     }
-  }, []);
+  }, [isInstalled, platform]);
 
   const dismissBanner = useCallback(() => {
     localStorage.setItem(DISMISS_KEY, "1");
     setShowBanner(false);
   }, []);
 
-  const isIos = isIosDevice();
-  const showIosInstructions = isIos && !isInstalled && !canInstall;
+  const showIosInstructions = platform === "ios" && !isInstalled;
+  const iosSafari = isIosSafariBrowser();
+  const showInstallButton = !isInstalled && platform !== "ios";
+  const installButtonEnabled = canInstall && swReady && !isInstalling;
+  const installButtonLabel = isInstalling
+    ? "Инсталиране..."
+    : canInstall
+      ? "Инсталирай приложението"
+      : swReady
+        ? "Подготовка..."
+        : "Подготовка на приложението...";
+
+  const installStatusLabel = isInstalled
+    ? "Инсталирано — отворете от иконата на началния екран"
+    : canInstall
+      ? "Готово за инсталация"
+      : platform === "ios"
+        ? iosNonSafari
+          ? "Отворете в Safari за истинско приложение"
+          : iosSafari
+            ? "Готово — добавете от Safari (виж инструкциите)"
+            : "Добавете на началния екран от Safari"
+        : swReady
+          ? "Изчаква се потвърждение от Chrome..."
+          : "Подготвя се...";
 
   return {
     canInstall,
@@ -106,8 +148,18 @@ export function useAdminPwaInstall() {
     isInstalling,
     install,
     showIosInstructions,
-    isIos,
+    iosNonSafari,
+    iosSafari,
+    isIos: platform === "ios",
+    platform,
+    swReady,
     showBanner: showBanner && !isInstalled,
     dismissBanner,
+    showInstallButton,
+    installButtonEnabled,
+    installButtonLabel,
+    installStatusLabel,
   };
 }
+
+export type { AdminPwaPlatform };

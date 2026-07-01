@@ -1586,6 +1586,7 @@
     --admin-shadow: 0 8px 32px rgb(15 18 24 / 0.06), inset 0 1px 0 rgb(255 255 255 / 0.75);
     --admin-shadow-lg: 0 28px 72px -16px rgb(15 18 24 / 0.14);
     --admin-blur: blur(22px);
+    --admin-panel-solid: #eceef3;
     --villa-1: #5b8fd4;
     --villa-2: #c9953a;
     --villa-deluxe: #9b7fd4;
@@ -1601,6 +1602,7 @@
     --admin-cal-confirmed-bg: rgb(220 252 231 / 0.9);
     --admin-cal-rejected-bg: rgb(254 226 226 / 0.9);
     --admin-cal-completed-bg: rgb(219 234 254 / 0.92);
+    --admin-panel-solid: #141820;
   }
 
   .admin-mode.admin-dark {
@@ -1641,6 +1643,7 @@
     --admin-cal-confirmed-bg: rgb(20 83 45 / 0.55);
     --admin-cal-rejected-bg: rgb(127 29 29 / 0.5);
     --admin-cal-completed-bg: rgb(30 58 138 / 0.55);
+    --admin-panel-solid: #141820;
   }
 
   .admin-mode body {
@@ -1822,14 +1825,12 @@
 
   .admin-topbar {
     border-bottom: 1px solid var(--admin-glass-border-subtle);
-    background: var(--admin-glass);
-    backdrop-filter: var(--admin-blur);
-    -webkit-backdrop-filter: var(--admin-blur);
-    box-shadow: 0 1px 0 rgb(255 255 255 / 0.4);
+    background: var(--admin-panel-solid);
+    box-shadow: 0 1px 0 rgb(255 255 255 / 0.55);
   }
 
   .admin-mode.admin-dark .admin-topbar {
-    box-shadow: 0 1px 0 rgb(255 255 255 / 0.04);
+    box-shadow: 0 1px 0 rgb(255 255 255 / 0.06);
   }
 
   .admin-nav-link {
@@ -2441,10 +2442,8 @@
   .admin-bottom-nav {
     padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
     border-top: 1px solid var(--admin-glass-border-subtle) !important;
-    background: var(--admin-glass) !important;
-    backdrop-filter: var(--admin-blur);
-    -webkit-backdrop-filter: var(--admin-blur);
-    box-shadow: 0 -8px 32px rgb(15 18 24 / 0.06);
+    background: var(--admin-panel-solid) !important;
+    box-shadow: 0 -1px 0 rgb(255 255 255 / 0.45), 0 -8px 24px rgb(15 18 24 / 0.08);
   }
 
   .admin-pwa-standalone {
@@ -2487,7 +2486,7 @@
   }
 
   .admin-mode.admin-dark .admin-bottom-nav {
-    box-shadow: 0 -8px 32px rgb(0 0 0 / 0.35);
+    box-shadow: 0 -1px 0 rgb(255 255 255 / 0.06), 0 -8px 24px rgb(0 0 0 / 0.35);
   }
 
   .admin-bottom-nav a.admin-bottom-nav-link--active {
@@ -2498,21 +2497,18 @@
   }
 
   .admin-sheet {
-    background: var(--admin-glass-strong) !important;
-    backdrop-filter: var(--admin-blur) !important;
-    -webkit-backdrop-filter: var(--admin-blur) !important;
+    background: var(--admin-panel-solid) !important;
     color: var(--admin-fg);
-    border-color: var(--admin-glass-border) !important;
+    border-color: var(--admin-glass-border-subtle) !important;
     box-shadow: var(--admin-shadow-lg) !important;
   }
 
   .admin-mode.admin-dark .admin-sheet {
-    background:
-      linear-gradient(180deg, rgb(38 42 54 / 0.99) 0%, rgb(20 24 32 / 0.995) 100%) !important;
-    border-color: rgb(255 255 255 / 0.12) !important;
+    background: var(--admin-panel-solid) !important;
+    border-color: rgb(255 255 255 / 0.1) !important;
     color: #f0f2f5;
     box-shadow:
-      0 0 0 1px rgb(255 255 255 / 0.08) inset,
+      0 0 0 1px rgb(255 255 255 / 0.06) inset,
       0 24px 64px rgb(0 0 0 / 0.55) !important;
   }
 

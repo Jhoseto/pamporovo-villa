@@ -6,6 +6,66 @@
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <script>
+      (function () {
+        var path = location.pathname;
+        if (path !== "/admin" && !path.startsWith("/admin/")) return;
+
+        document.documentElement.dataset.adminPwaBootstrap = "1";
+
+        function addLink(rel, href, extra) {
+          var sizePart = extra && extra.sizes ? '[sizes="' + extra.sizes + '"]' : "";
+          var mediaPart = extra && extra.media ? '[media="' + extra.media + '"]' : "";
+          if (document.querySelector('link[rel="' + rel + '"][href="' + href + '"]' + sizePart + mediaPart)) return;
+          var link = document.createElement("link");
+          link.rel = rel;
+          link.href = href;
+          if (extra) {
+            for (var key in extra) link.setAttribute(key, extra[key]);
+          }
+          document.head.appendChild(link);
+        }
+
+        function addMeta(name, content) {
+          if (document.querySelector('meta[name="' + name + '"]')) return;
+          var meta = document.createElement("meta");
+          meta.name = name;
+          meta.content = content;
+          document.head.appendChild(meta);
+        }
+
+        addLink("manifest", "/admin/manifest.webmanifest");
+        addLink("apple-touch-icon", "/admin/icons/icon-180.png", { sizes: "180x180" });
+        addLink("apple-touch-icon", "/admin/icons/icon-167.png", { sizes: "167x167" });
+        addLink("apple-touch-icon", "/admin/icons/icon-152.png", { sizes: "152x152" });
+        addLink("apple-touch-startup-image", "/admin/splash/launch-1170x2532.png", {
+          media:
+            "(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)",
+        });
+        addLink("apple-touch-startup-image", "/admin/splash/launch-1284x2778.png", {
+          media:
+            "(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)",
+        });
+        addLink("apple-touch-startup-image", "/admin/splash/launch-750x1334.png", {
+          media:
+            "(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)",
+        });
+        addLink("icon", "/admin/icons/icon-192.png", { type: "image/png", sizes: "192x192" });
+        addMeta("apple-mobile-web-app-capable", "yes");
+        addMeta("apple-mobile-web-app-title", "PV Админ");
+        addMeta("apple-mobile-web-app-status-bar-style", "black-translucent");
+        addMeta("mobile-web-app-capable", "yes");
+        addMeta("application-name", "PV Админ");
+        addMeta("format-detection", "telephone=no");
+        addMeta("theme-color", "#efeae1");
+
+        if ("serviceWorker" in navigator) {
+          window.addEventListener("load", function () {
+            navigator.serviceWorker.register("/admin/sw.js", { scope: "/admin/" }).catch(function () {});
+          });
+        }
+      })();
+    </script>
     <title>Pamporovo Villa | 3 вили под наем в Пампорово</title>
     <meta
       name="description"
