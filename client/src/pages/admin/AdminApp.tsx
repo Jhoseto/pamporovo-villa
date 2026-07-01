@@ -1,8 +1,10 @@
 import { useEffect } from "react";
 import { Redirect, Route, Switch, useLocation } from "wouter";
 import { AdminLayout } from "@/components/admin/AdminLayout";
+import { AdminPwaInstallBanner } from "@/components/admin/AdminPwaInstallBanner";
 import { AdminThemeProvider } from "@/contexts/AdminThemeContext";
 import { initAdminThemeFromStorage } from "@/hooks/useAdminTheme";
+import { applyAdminPwaStandaloneClass, registerAdminServiceWorker, setupAdminPwaMeta } from "@/lib/adminPwa";
 import { trpc } from "@/lib/trpc";
 import AdminLoginPage from "./AdminLoginPage";
 import AdminDashboardPage from "./AdminDashboardPage";
@@ -96,27 +98,15 @@ export default function AdminApp() {
     meta.content = "noindex,nofollow";
     document.head.appendChild(meta);
 
-    const manifest = document.createElement("link");
-    manifest.rel = "manifest";
-    manifest.href = "/admin/manifest.webmanifest";
-    document.head.appendChild(manifest);
-
-    const apple = document.createElement("meta");
-    apple.name = "apple-mobile-web-app-capable";
-    apple.content = "yes";
-    document.head.appendChild(apple);
-
-    const mobileCapable = document.createElement("meta");
-    mobileCapable.name = "mobile-web-app-capable";
-    mobileCapable.content = "yes";
-    document.head.appendChild(mobileCapable);
+    const cleanupMeta = setupAdminPwaMeta();
+    void registerAdminServiceWorker();
+    const cleanupStandalone = applyAdminPwaStandaloneClass();
 
     return () => {
-      document.documentElement.classList.remove("admin-mode", "admin-dark");
+      document.documentElement.classList.remove("admin-mode", "admin-dark", "admin-pwa-standalone");
       meta.remove();
-      manifest.remove();
-      apple.remove();
-      mobileCapable.remove();
+      cleanupMeta();
+      cleanupStandalone();
     };
   }, []);
 

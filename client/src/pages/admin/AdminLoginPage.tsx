@@ -1,6 +1,7 @@
 import { Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
 import { AdminMenuLogo } from "@/components/admin/AdminMenuLogo";
+import { AdminPwaInstallBanner } from "@/components/admin/AdminPwaInstallBanner";
 import { AdminThemeToggle } from "@/components/admin/AdminThemeToggle";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -74,6 +75,7 @@ export default function AdminLoginPage() {
             {login.isPending ? "Влизане..." : "Вход"}
           </Button>
         </form>
+        <AdminPwaInstallBanner placement="login" />
       </div>
     </div>
   );

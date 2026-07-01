@@ -1,31 +1,33 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
+import { isAdminPwaStandalone } from "@/lib/adminPwa";
 
 type BeforeInstallPromptEvent = Event & {
   prompt: () => Promise<void>;
   userChoice: Promise<{ outcome: "accepted" | "dismissed"; platform: string }>;
 };
 
-function isPwaInstalled(): boolean {
-  if (typeof window === "undefined") return false;
-  if (window.matchMedia("(display-mode: standalone)").matches) return true;
-  if (window.matchMedia("(display-mode: fullscreen)").matches) return true;
-  return Boolean((navigator as Navigator & { standalone?: boolean }).standalone);
-}
+const DISMISS_KEY = "pamporovo-admin-pwa-banner-dismissed";
 
 function isIosDevice(): boolean {
   if (typeof navigator === "undefined") return false;
   return /iphone|ipad|ipod/i.test(navigator.userAgent);
 }
 
+function isMobileDevice(): boolean {
+  if (typeof window === "undefined") return false;
+  return window.matchMedia("(max-width: 1023px)").matches;
+}
+
 export function useAdminPwaInstall() {
   const deferredPrompt = useRef<BeforeInstallPromptEvent | null>(null);
   const [canInstall, setCanInstall] = useState(false);
-  const [isInstalled, setIsInstalled] = useState(isPwaInstalled);
+  const [isInstalled, setIsInstalled] = useState(isAdminPwaStandalone);
   const [isInstalling, setIsInstalling] = useState(false);
+  const [showBanner, setShowBanner] = useState(false);
 
   useEffect(() => {
-    setIsInstalled(isPwaInstalled());
+    setIsInstalled(isAdminPwaStandalone());
 
     const onBeforeInstall = (event: Event) => {
       event.preventDefault();
@@ -37,16 +39,29 @@ export function useAdminPwaInstall() {
       deferredPrompt.current = null;
       setCanInstall(false);
       setIsInstalled(true);
+      setShowBanner(false);
+      localStorage.setItem(DISMISS_KEY, "1");
     };
 
     window.addEventListener("beforeinstallprompt", onBeforeInstall);
     window.addEventListener("appinstalled", onInstalled);
+
+    const dismissed = localStorage.getItem(DISMISS_KEY) === "1";
+    const mobile = isMobileDevice();
+    const standalone = isAdminPwaStandalone();
+    setShowBanner(mobile && !standalone && !dismissed);
 
     return () => {
       window.removeEventListener("beforeinstallprompt", onBeforeInstall);
       window.removeEventListener("appinstalled", onInstalled);
     };
   }, []);
+
+  useEffect(() => {
+    if (canInstall && !isInstalled) {
+      setShowBanner(true);
+    }
+  }, [canInstall, isInstalled]);
 
   const install = useCallback(async () => {
     const prompt = deferredPrompt.current;
@@ -63,6 +78,8 @@ export function useAdminPwaInstall() {
         deferredPrompt.current = null;
         setCanInstall(false);
         setIsInstalled(true);
+        setShowBanner(false);
+        localStorage.setItem(DISMISS_KEY, "1");
         toast.success("Приложението е инсталирано");
         return true;
       }
@@ -75,6 +92,11 @@ export function useAdminPwaInstall() {
     }
   }, []);
 
+  const dismissBanner = useCallback(() => {
+    localStorage.setItem(DISMISS_KEY, "1");
+    setShowBanner(false);
+  }, []);
+
   const isIos = isIosDevice();
   const showIosInstructions = isIos && !isInstalled && !canInstall;
 
@@ -85,5 +107,7 @@ export function useAdminPwaInstall() {
     install,
     showIosInstructions,
     isIos,
+    showBanner: showBanner && !isInstalled,
+    dismissBanner,
   };
 }

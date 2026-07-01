@@ -37,8 +37,8 @@ self.addEventListener("push", event => {
     (async () => {
       await self.registration.showNotification(payload.title, {
         body: payload.body,
-        icon: payload.icon || "/admin/icons/icon-192.svg",
-        badge: payload.badge || "/admin/icons/badge-72.svg",
+        icon: payload.icon || "/admin/icons/icon-192.png",
+        badge: payload.badge || "/admin/icons/badge-72.png",
         tag: payload.tag,
         renotify: payload.renotify ?? true,
         requireInteraction: payload.requireInteraction ?? true,

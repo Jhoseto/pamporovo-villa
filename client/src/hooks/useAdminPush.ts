@@ -1,3 +1,4 @@
+import { registerAdminServiceWorker } from "@/lib/adminPwa";
 import { useCallback, useEffect, useState } from "react";
 import { toast } from "sonner";
 import { trpc } from "@/lib/trpc";
@@ -26,10 +27,7 @@ export function useAdminPush() {
   const subscribeMutation = trpc.admin.push.subscribe.useMutation();
   const unsubscribeMutation = trpc.admin.push.unsubscribe.useMutation();
 
-  const registerSw = useCallback(async () => {
-    if (!("serviceWorker" in navigator)) return null;
-    return navigator.serviceWorker.register("/admin-sw.js", { scope: "/admin/" });
-  }, []);
+  const registerSw = useCallback(async () => registerAdminServiceWorker(), []);
 
   const syncSubscriptionState = useCallback(async () => {
     try {

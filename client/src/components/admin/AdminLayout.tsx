@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { AdminMenuLogo } from "@/components/admin/AdminMenuLogo";
+import { AdminPwaInstallBanner } from "@/components/admin/AdminPwaInstallBanner";
 import { AdminThemeToggle } from "@/components/admin/AdminThemeToggle";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
@@ -221,6 +222,7 @@ export function AdminLayout({ children }: { children: React.ReactNode }) {
             </SheetContent>
           </Sheet>
         </nav>
+        <AdminPwaInstallBanner />
       </div>
     </div>
   );

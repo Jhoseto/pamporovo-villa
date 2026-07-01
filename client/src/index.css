@@ -2329,6 +2329,45 @@
     box-shadow: 0 -8px 32px rgb(15 18 24 / 0.06);
   }
 
+  .admin-pwa-standalone {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .admin-pwa-standalone,
+  .admin-pwa-standalone body {
+    overscroll-behavior-y: none;
+    touch-action: manipulation;
+  }
+
+  .admin-pwa-standalone .admin-shell,
+  .admin-pwa-standalone .admin-login {
+    min-height: 100dvh;
+  }
+
+  .admin-pwa-standalone .admin-topbar {
+    padding-top: max(0.75rem, env(safe-area-inset-top));
+  }
+
+  .admin-pwa-standalone .admin-main > main {
+    padding-bottom: calc(6.5rem + env(safe-area-inset-bottom));
+  }
+
+  .admin-pwa-banner {
+    animation: admin-pwa-banner-in 0.35s ease-out;
+  }
+
+  @keyframes admin-pwa-banner-in {
+    from {
+      opacity: 0;
+      transform: translateY(0.75rem);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   .admin-mode.admin-dark .admin-bottom-nav {
     box-shadow: 0 -8px 32px rgb(0 0 0 / 0.35);
   }
