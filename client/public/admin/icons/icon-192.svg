@@ -1,6 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" role="img" aria-label="Pamporovo Villa Admin">
-  <rect width="192" height="192" rx="36" fill="#f8f6f2"/>
-  <path d="M96 36 L156 88 V156 H36 V88 Z" fill="#9a7342"/>
-  <rect x="78" y="112" width="36" height="44" rx="4" fill="#ffffff"/>
-  <circle cx="96" cy="78" r="10" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Pamporovo Villa">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f7f4ee"/>
+      <stop offset="100%" stop-color="#e4ddd1"/>
+    </linearGradient>
+  </defs>
+  <rect width="192" height="192" rx="36" fill="url(#bg)"/>
+  <image href="/admin/icons/logo-house-source.png" x="72" y="72" width="368" height="368"/>
 </svg>

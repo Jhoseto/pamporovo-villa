@@ -2071,6 +2071,124 @@
     background: transparent;
   }
 
+  .admin-splash {
+    isolation: isolate;
+    overflow: hidden;
+    background: transparent;
+  }
+
+  .admin-splash::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background:
+      var(--admin-silver-shine),
+      radial-gradient(ellipse 72% 58% at 18% 12%, rgb(206 214 226 / 0.62) 0%, transparent 58%),
+      radial-gradient(ellipse 62% 48% at 86% 22%, rgb(188 198 212 / 0.48) 0%, transparent 52%),
+      linear-gradient(162deg, #d4dae4 0%, #eceef3 48%, #dfe5ec 100%);
+    background-blend-mode: soft-light, normal, normal, normal;
+  }
+
+  .admin-mode.admin-dark .admin-splash::before {
+    background:
+      var(--admin-silver-shine),
+      radial-gradient(ellipse 65% 50% at 15% 15%, rgb(100 110 130 / 0.25) 0%, transparent 55%),
+      radial-gradient(ellipse 55% 40% at 88% 25%, rgb(80 90 110 / 0.18) 0%, transparent 50%),
+      linear-gradient(160deg, #080a0e 0%, #12151c 50%, #0c0e14 100%);
+    background-blend-mode: overlay, normal, normal, normal;
+  }
+
+  .admin-splash-glow {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background:
+      radial-gradient(ellipse 55% 42% at 50% 44%, rgb(184 146 79 / 0.16) 0%, transparent 72%),
+      radial-gradient(ellipse 40% 28% at 50% 48%, rgb(255 255 255 / 0.35) 0%, transparent 100%);
+    animation: admin-splash-glow 2.8s ease-in-out infinite;
+  }
+
+  .admin-mode.admin-dark .admin-splash-glow {
+    background:
+      radial-gradient(ellipse 55% 42% at 50% 44%, rgb(184 146 79 / 0.22) 0%, transparent 72%),
+      radial-gradient(ellipse 40% 28% at 50% 48%, rgb(255 255 255 / 0.06) 0%, transparent 100%);
+  }
+
+  @keyframes admin-splash-glow {
+    0%,
+    100% {
+      opacity: 0.75;
+      transform: scale(1);
+    }
+
+    50% {
+      opacity: 1;
+      transform: scale(1.04);
+    }
+  }
+
+  .admin-splash-logo-wrap,
+  .admin-splash-subtitle,
+  .admin-splash-progress {
+    position: relative;
+    z-index: 1;
+  }
+
+  .admin-splash-logo {
+    display: block;
+    width: min(18rem, 88vw);
+    height: auto;
+    aspect-ratio: 1024 / 250;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 28px rgb(15 18 24 / 0.14));
+  }
+
+  .admin-mode.admin-dark .admin-splash-logo {
+    filter: drop-shadow(0 10px 28px rgb(0 0 0 / 0.45));
+  }
+
+  .admin-splash-subtitle {
+    margin: 0;
+    font-family: Inter, system-ui, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgb(120 108 88 / 0.88);
+  }
+
+  .admin-mode.admin-dark .admin-splash-subtitle {
+    color: rgb(196 186 164 / 0.92);
+  }
+
+  .admin-splash-progress {
+    width: min(11rem, 58vw);
+    height: 2px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: rgb(154 115 66 / 0.14);
+  }
+
+  .admin-splash-progress-fill {
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, rgb(154 115 66 / 0.35), rgb(184 146 79), rgb(154 115 66 / 0.35));
+    box-shadow: 0 0 14px rgb(184 146 79 / 0.35);
+    transition: width 120ms linear;
+  }
+
+  .admin-mode.admin-dark .admin-splash-progress {
+    background: rgb(184 146 79 / 0.18);
+  }
+
+  .admin-pwa-standalone .admin-splash {
+    min-height: 100dvh;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
   .admin-login::before {
     content: "";
     position: absolute;

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import { Redirect, Route, Switch, useLocation } from "wouter";
+import { Redirect, Route, Switch } from "wouter";
+import { AdminLoadingShell } from "@/components/admin/AdminBootScreen";
 import { AdminLayout } from "@/components/admin/AdminLayout";
-import { AdminPwaInstallBanner } from "@/components/admin/AdminPwaInstallBanner";
 import { AdminThemeProvider } from "@/contexts/AdminThemeContext";
 import { initAdminThemeFromStorage } from "@/hooks/useAdminTheme";
 import { applyAdminPwaStandaloneClass, registerAdminServiceWorker, setupAdminPwaMeta } from "@/lib/adminPwa";
@@ -28,11 +28,37 @@ function useAdminSession() {
   });
 }
 
-function AdminBootScreen() {
+function AdminGuard({ children }: { children: React.ReactNode }) {
+  const { data: me, isLoading, isError } = useAdminSession();
+
   return (
-    <div className="admin-login flex min-h-screen items-center justify-center">
-      <div className="admin-glass-card admin-skeleton h-14 w-52 rounded-2xl" />
-    </div>
+    <AdminLoadingShell isLoading={isLoading}>
+      {isError ? (
+        <AdminConnectionError />
+      ) : !me ? (
+        <Redirect to="/admin" replace />
+      ) : (
+        <AdminLayout>{children}</AdminLayout>
+      )}
+    </AdminLoadingShell>
+  );
+}
+
+function AdminHome() {
+  const { data: me, isLoading, isError } = useAdminSession();
+
+  return (
+    <AdminLoadingShell isLoading={isLoading}>
+      {isError ? (
+        <AdminConnectionError />
+      ) : !me ? (
+        <AdminLoginPage />
+      ) : (
+        <AdminLayout>
+          <AdminDashboardPage />
+        </AdminLayout>
+      )}
+    </AdminLoadingShell>
   );
 }
 
@@ -48,30 +74,6 @@ function AdminConnectionError() {
         Опитай отново
       </button>
     </div>
-  );
-}
-
-function AdminGuard({ children }: { children: React.ReactNode }) {
-  const { data: me, isLoading, isError } = useAdminSession();
-
-  if (isLoading) return <AdminBootScreen />;
-  if (isError) return <AdminConnectionError />;
-  if (!me) return <Redirect to="/admin" replace />;
-
-  return <AdminLayout>{children}</AdminLayout>;
-}
-
-function AdminHome() {
-  const { data: me, isLoading, isError } = useAdminSession();
-
-  if (isLoading) return <AdminBootScreen />;
-  if (isError) return <AdminConnectionError />;
-  if (!me) return <AdminLoginPage />;
-
-  return (
-    <AdminLayout>
-      <AdminDashboardPage />
-    </AdminLayout>
   );
 }
 
@@ -176,9 +178,15 @@ export default function AdminApp() {
 function AdminLoginRoute() {
   const { data: me, isLoading, isError } = useAdminSession();
 
-  if (isLoading) return <AdminBootScreen />;
-  if (isError) return <AdminConnectionError />;
-  if (me) return <Redirect to="/admin" replace />;
-
-  return <AdminLoginPage />;
+  return (
+    <AdminLoadingShell isLoading={isLoading}>
+      {isError ? (
+        <AdminConnectionError />
+      ) : me ? (
+        <Redirect to="/admin" replace />
+      ) : (
+        <AdminLoginPage />
+      )}
+    </AdminLoadingShell>
+  );
 }

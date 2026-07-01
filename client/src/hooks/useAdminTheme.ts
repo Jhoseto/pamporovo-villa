@@ -15,7 +15,7 @@ function applyAdminTheme(theme: AdminTheme) {
   root.classList.add("admin-mode");
   root.classList.toggle("admin-dark", theme === "dark");
 
-  const themeColor = theme === "dark" ? "#1c1917" : "#f8f6f2";
+  const themeColor = theme === "dark" ? "#1c1917" : "#efeae1";
   let meta = document.querySelector('meta[name="theme-color"]');
   if (!meta) {
     meta = document.createElement("meta");
