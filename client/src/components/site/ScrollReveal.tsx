@@ -24,7 +24,9 @@ export function ScrollReveal({
   direction = "up",
 }: ScrollRevealProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-80px" });
+  // Reduced margin so lazy-loaded content that's already in view on mount
+  // (e.g. BookingSection after scroll) still triggers the entrance animation.
+  const isInView = useInView(ref, { once: true, margin: "-20px" });
   const reducedMotion = useReducedMotion();
   const offset = directionOffset[direction];
 

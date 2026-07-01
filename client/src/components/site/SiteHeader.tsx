@@ -28,7 +28,8 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const { openOffers } = useOffersModal();
   const { scrollYProgress } = useScroll();
-  const progressWidth = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+  // scaleX is compositor-only (no layout reflow on every scroll tick unlike width)
+  const progressScaleX = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   const handleNavClick = (href: string) => {
     scrollToSection(href);
@@ -45,8 +46,8 @@ export function SiteHeader() {
       )}
     >
       <motion.div
-        className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-transparent via-[var(--gold)] to-transparent"
-        style={{ width: progressWidth }}
+        className="absolute bottom-0 left-0 h-[2px] w-full origin-left bg-gradient-to-r from-transparent via-[var(--gold)] to-transparent"
+        style={{ scaleX: progressScaleX }}
       />
 
       <div className="site-header-inner">
@@ -101,7 +102,7 @@ export function SiteHeader() {
 
               <SheetContent
                 side="right"
-                overlayClassName="mobile-nav-overlay bg-black/65 backdrop-blur-md"
+                overlayClassName="mobile-nav-overlay bg-black/70"
                 className="mobile-nav-sheet w-[min(100vw,20rem)] gap-0 border-l border-[var(--gold)]/25 bg-[var(--ink)] p-0 text-white sm:max-w-[20rem]"
               >
                 <SheetTitle className="sr-only">{SITE.name}</SheetTitle>

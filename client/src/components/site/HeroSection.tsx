@@ -6,7 +6,7 @@ import { useSiteReady } from "@/contexts/SiteReadyContext";
 import { scrollToSection } from "@/lib/scroll";
 import { GoldenParticles } from "./GoldenParticles";
 import { HeroContactWidget, HeroGlassPanel, HeroWeatherWidget } from "./HeroGlassWidgets";
-import { MagneticButton } from "./MagneticButton";
+import { Button } from "@/components/ui/button";
 import { SplitText } from "./SplitText";
 
 export function HeroSection() {
@@ -146,21 +146,21 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: siteReady ? 1.05 : 0, ease: [0.22, 1, 0.36, 1] }}
         >
-          <MagneticButton
+          <Button
             size="lg"
             className="premium-btn h-auto min-h-[2.875rem] w-full px-5 py-3.5 text-sm sm:w-auto sm:min-h-0 sm:px-10 sm:py-7 sm:text-lg"
             onClick={() => scrollToSection("experience")}
           >
             Започни разходката
-          </MagneticButton>
-          <MagneticButton
+          </Button>
+          <Button
             size="lg"
             variant="outline"
             className="h-auto min-h-[2.875rem] w-full border-white/30 bg-white/5 px-5 py-3.5 text-sm text-white backdrop-blur-sm hover:bg-white/10 hover:text-white sm:w-auto sm:min-h-0 sm:px-10 sm:py-7 sm:text-lg"
             onClick={() => scrollToSection("booking")}
           >
             Резервирай
-          </MagneticButton>
+          </Button>
         </motion.div>
 
         {siteReady && (

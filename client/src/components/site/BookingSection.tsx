@@ -156,7 +156,7 @@ export function BookingSection() {
       splitTitle
     >
       <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[minmax(280px,360px)_1fr] lg:gap-10">
-        <ScrollReveal direction="left">
+        <ScrollReveal direction="up">
           <PremiumFormCard title="Изберете период">
             <Calendar
               mode="range"
@@ -209,7 +209,7 @@ export function BookingSection() {
           </PremiumFormCard>
         </ScrollReveal>
 
-        <ScrollReveal direction="right" delay={120}>
+        <ScrollReveal direction="up" delay={120}>
           <PremiumFormCard title="Данни за резервация">
             <form onSubmit={handleSubmit} className="space-y-8">
               <input

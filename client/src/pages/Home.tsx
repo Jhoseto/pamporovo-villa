@@ -64,7 +64,7 @@ export default function Home() {
         <Suspense fallback={<SectionFallback />}>
           <VipSection />
         </Suspense>
-        <Suspense fallback={<SectionFallback />}>
+        <Suspense fallback={<div className="min-h-[120dvh] bg-[var(--cream)]" aria-hidden />}>
           <BookingSection />
         </Suspense>
         <Suspense fallback={<SectionFallback />}>
