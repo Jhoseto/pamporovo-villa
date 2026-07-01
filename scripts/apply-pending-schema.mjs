@@ -81,6 +81,131 @@ const conn = await mysql.createConnection(url);
 const steps = [];
 
 try {
+  // Bootstrap fresh database (empty MySQL on JetHost — no drizzle migrations run yet)
+  if (!(await tableExists(conn, "admin_users"))) {
+    await conn.query(`
+      CREATE TABLE admin_users (
+        id int NOT NULL AUTO_INCREMENT,
+        username varchar(64) NOT NULL,
+        password_hash varchar(255) NOT NULL,
+        is_master tinyint(1) NOT NULL DEFAULT 0,
+        token_version int NOT NULL DEFAULT 0,
+        notification_sound_token varchar(64) DEFAULT NULL,
+        notification_sound_ext varchar(8) DEFAULT NULL,
+        created_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        PRIMARY KEY (id),
+        UNIQUE KEY admin_users_username_unique (username)
+      )
+    `);
+    steps.push("admin_users table (bootstrap)");
+  }
+
+  if (!(await tableExists(conn, "booking_requests"))) {
+    await conn.query(`
+      CREATE TABLE booking_requests (
+        id int NOT NULL AUTO_INCREMENT,
+        villa_id varchar(32) NOT NULL,
+        check_in_date date NOT NULL,
+        check_out_date date NOT NULL,
+        number_of_guests int NOT NULL,
+        guest_name varchar(255) NOT NULL,
+        guest_email varchar(320) DEFAULT NULL,
+        guest_phone varchar(32) DEFAULT NULL,
+        guest_phone_normalized varchar(32) DEFAULT NULL,
+        guest_note text,
+        admin_note text,
+        admin_tags_json text NOT NULL DEFAULT ('[]'),
+        total_amount_eur int DEFAULT NULL,
+        deposit_paid_eur int NOT NULL DEFAULT 0,
+        status enum('pending','confirmed','completed','rejected') NOT NULL DEFAULT 'pending',
+        source enum('website','manual') NOT NULL DEFAULT 'website',
+        created_by_admin_id int DEFAULT NULL,
+        processed_at timestamp NULL DEFAULT NULL,
+        processed_by_admin_id int DEFAULT NULL,
+        created_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        updated_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        PRIMARY KEY (id),
+        KEY booking_villa_status_idx (villa_id, status),
+        KEY booking_dates_idx (check_in_date, check_out_date),
+        KEY booking_status_idx (status),
+        KEY booking_guest_phone_norm_idx (guest_phone_normalized)
+      )
+    `);
+    steps.push("booking_requests table (bootstrap)");
+  }
+
+  if (!(await tableExists(conn, "offers"))) {
+    await conn.query(`
+      CREATE TABLE offers (
+        id int NOT NULL AUTO_INCREMENT,
+        slug varchar(64) NOT NULL,
+        title varchar(255) NOT NULL,
+        price_eur int NOT NULL,
+        old_price_eur int NOT NULL,
+        period varchar(255) NOT NULL,
+        description text NOT NULL,
+        includes_json text NOT NULL,
+        is_published tinyint(1) NOT NULL DEFAULT 0,
+        sort_order int NOT NULL DEFAULT 0,
+        created_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        updated_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        PRIMARY KEY (id),
+        UNIQUE KEY offers_slug_unique (slug)
+      )
+    `);
+    steps.push("offers table (bootstrap)");
+  }
+
+  if (!(await tableExists(conn, "villa_pricing"))) {
+    await conn.query(`
+      CREATE TABLE villa_pricing (
+        id int NOT NULL AUTO_INCREMENT,
+        villa_id varchar(32) NOT NULL,
+        tier_key varchar(32) NOT NULL,
+        tier_label varchar(128) NOT NULL,
+        winter_per_night int NOT NULL,
+        summer_per_night int NOT NULL,
+        sort_order int NOT NULL,
+        updated_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        PRIMARY KEY (id),
+        UNIQUE KEY villa_tier_idx (villa_id, tier_key)
+      )
+    `);
+    steps.push("villa_pricing table (bootstrap)");
+  }
+
+  if (!(await tableExists(conn, "pricing_extras"))) {
+    await conn.query(`
+      CREATE TABLE pricing_extras (
+        id int NOT NULL AUTO_INCREMENT,
+        \`key\` varchar(64) NOT NULL,
+        label varchar(128) NOT NULL,
+        amount_eur int NOT NULL,
+        updated_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        PRIMARY KEY (id),
+        UNIQUE KEY pricing_extras_key_unique (\`key\`)
+      )
+    `);
+    steps.push("pricing_extras table (bootstrap)");
+  }
+
+  if (!(await tableExists(conn, "push_subscriptions"))) {
+    await conn.query(`
+      CREATE TABLE push_subscriptions (
+        id int NOT NULL AUTO_INCREMENT,
+        admin_user_id int NOT NULL,
+        endpoint varchar(512) NOT NULL,
+        p256dh varchar(255) NOT NULL,
+        auth varchar(255) NOT NULL,
+        user_agent varchar(512) DEFAULT NULL,
+        created_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        PRIMARY KEY (id),
+        UNIQUE KEY push_subscriptions_endpoint_unique (endpoint)
+      )
+    `);
+    steps.push("push_subscriptions table (bootstrap)");
+  }
+
   if (!(await columnExists(conn, "admin_users", "token_version"))) {
     await conn.query(
       "ALTER TABLE `admin_users` ADD COLUMN `token_version` int NOT NULL DEFAULT 0"
