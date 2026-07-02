@@ -155,7 +155,19 @@ export function BookingSection() {
     return isDateOccupied(date, occupiedDates);
   };
 
+  const currentVillaName =
+    VILLAS.find(v => v.id === formData.villaId)?.name ?? "тази вила";
+
   const handleCalendarSelect = (_range: DateRange | undefined, triggerDate: Date) => {
+    // Occupied days stay clickable so we can explain instead of silently ignoring.
+    if (isDayBlocked(triggerDate)) {
+      toast.message(
+        `Тази дата е заета за ${currentVillaName}. Сменете вилата от формата — възможно е друга да е свободна за същия период.`,
+        { duration: 6000 }
+      );
+      return;
+    }
+
     const nextRange = updateBookingDateRange(dateRange, triggerDate);
 
     if (
@@ -172,7 +184,10 @@ export function BookingSection() {
       nextRange?.to &&
       rangeHasOccupiedNight(nextRange.from, nextRange.to, occupiedDates)
     ) {
-      toast.error("Периодът включва вече заети дати за тази вила. Изберете свободен интервал.");
+      toast.message(
+        `Периодът включва заети дати за ${currentVillaName}. Изберете свободен интервал или проверете друга вила.`,
+        { duration: 6000 }
+      );
       return;
     }
 
@@ -248,14 +263,14 @@ export function BookingSection() {
     >
       <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[minmax(280px,360px)_1fr] lg:gap-10">
         <ScrollReveal direction="up">
-          <PremiumFormCard title="Изберете период">
+          <PremiumFormCard title={`Изберете период за ${currentVillaName}`}>
             <Calendar
               mode="range"
               selected={dateRange}
               onSelect={handleCalendarSelect}
               numberOfMonths={1}
               min={2}
-              disabled={isDayBlocked}
+              disabled={date => date < startOfDay(new Date())}
               modifiers={{ occupied: isDayMarkedOccupied }}
               modifiersClassNames={{ occupied: "booking-calendar-day-occupied" }}
               classNames={{ today: "booking-calendar-day-today" }}
@@ -274,6 +289,10 @@ export function BookingSection() {
             )}
             <p className="mt-6 font-display text-sm leading-relaxed tracking-wide text-muted-foreground">
               Кликнете начална и крайна дата· Минимум една нощувка
+            </p>
+            <p className="mt-2 font-display text-xs leading-relaxed tracking-wide text-muted-foreground">
+              <span className="text-[oklch(0.55_0.09_25)] line-through">Зачертаните</span> дати са заети —
+              проверете дали друга вила е свободна за същия период.
             </p>
 
             <div className="booking-price-quote mt-6">
