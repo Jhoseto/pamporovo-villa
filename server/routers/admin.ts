@@ -1013,6 +1013,19 @@ export const publicBookingRouter = router({
         });
       }
 
+      // Reject periods overlapping confirmed bookings / blocked dates for the villa.
+      try {
+        await assertNoBookingOverlap(input.villaId, input.checkInDate, input.checkOutDate);
+      } catch (error) {
+        if (error instanceof TRPCError && error.code === "CONFLICT") {
+          throw new TRPCError({
+            code: "CONFLICT",
+            message: "Избраните дати вече са заети за тази вила. Моля, изберете друг период.",
+          });
+        }
+        throw error;
+      }
+
       if (!input.guestEmail?.trim()) {
         throw new TRPCError({ code: "BAD_REQUEST", message: "Имейлът е задължителен" });
       }

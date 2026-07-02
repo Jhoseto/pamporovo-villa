@@ -1,4 +1,4 @@
-import { useMemo, useState, type FormEvent } from "react";
+import { useEffect, useMemo, useState, type FormEvent } from "react";
 import type { DateRange } from "react-day-picker";
 import { toast } from "sonner";
 import { formatPriceEur, VILLAS } from "@/data/siteContent";
@@ -47,6 +47,17 @@ function isDateOccupied(
   return ranges.some(r => key >= r.checkInDate && key < r.checkOutDate);
 }
 
+/** True if any night in [from, to) is already occupied — catches ranges that span an occupied block. */
+function rangeHasOccupiedNight(
+  from: Date,
+  to: Date,
+  ranges: { checkInDate: string; checkOutDate: string }[]
+): boolean {
+  const fromKey = formatDateForApi(from);
+  const toKey = formatDateForApi(to);
+  return ranges.some(r => fromKey < r.checkOutDate && r.checkInDate < toKey);
+}
+
 export function BookingSection() {
   const [dateRange, setDateRange] = useState<DateRange | undefined>();
   const [honeypot, setHoneypot] = useState("");
@@ -68,6 +79,19 @@ export function BookingSection() {
 
   const pricingRows = (pricingData?.rows ?? []) as PricingGridRow[];
 
+  // Switching villa loads a different occupancy set — drop a range that is no longer free.
+  useEffect(() => {
+    if (
+      dateRange?.from &&
+      dateRange?.to &&
+      rangeHasOccupiedNight(dateRange.from, dateRange.to, occupiedDates)
+    ) {
+      setDateRange(undefined);
+      toast.message("Избраните дати са заети за тази вила — моля, изберете нов период.");
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [occupiedDates]);
+
   const stayQuote = useMemo(() => {
     if (
       !pricingRows.length ||
@@ -86,6 +110,51 @@ export function BookingSection() {
     );
   }, [dateRange, formData.villaId, pricingRows]);
 
+  /**
+   * Hotel-style day availability [checkIn, checkOut): the checkout day of an
+   * existing booking is free for a new check-in, and while the guest is picking
+   * their end date, the check-in day of the NEXT booking is a valid checkout
+   * (nights are counted from check-in up to the night before checkout).
+   */
+  const isDayBlocked = (date: Date): boolean => {
+    const today = startOfDay(new Date());
+    if (date < today) return true;
+
+    const day = startOfDay(date);
+    const from = dateRange?.from ? startOfDay(dateRange.from) : undefined;
+    const to = dateRange?.to ? startOfDay(dateRange.to) : undefined;
+
+    if (from && !to) {
+      if (day.getTime() === from.getTime()) return false;
+      // Candidate checkout: valid while no night in [from, day) is occupied.
+      if (day > from) return rangeHasOccupiedNight(from, day, occupiedDates);
+      return isDateOccupied(date, occupiedDates);
+    }
+
+    // Completed range: keep the chosen checkout clickable so it can be changed,
+    // even when that day is the check-in of the next booking.
+    if (to && day.getTime() === to.getTime()) return false;
+
+    return isDateOccupied(date, occupiedDates);
+  };
+
+  /** Red strikethrough marking — skip days that are valid in the current selection context. */
+  const isDayMarkedOccupied = (date: Date): boolean => {
+    const today = startOfDay(new Date());
+    if (date < today) return false;
+
+    const day = startOfDay(date);
+    const from = dateRange?.from ? startOfDay(dateRange.from) : undefined;
+    const to = dateRange?.to ? startOfDay(dateRange.to) : undefined;
+
+    if (from && !to && day > from && !rangeHasOccupiedNight(from, day, occupiedDates)) {
+      return false;
+    }
+    if (to && day.getTime() === to.getTime()) return false;
+
+    return isDateOccupied(date, occupiedDates);
+  };
+
   const handleCalendarSelect = (_range: DateRange | undefined, triggerDate: Date) => {
     const nextRange = updateBookingDateRange(dateRange, triggerDate);
 
@@ -95,6 +164,15 @@ export function BookingSection() {
       isSameCalendarDay(nextRange.from, nextRange.to)
     ) {
       toast.error("Минимум една нощувка — настаняване и напускане не могат да са в един ден.");
+      return;
+    }
+
+    if (
+      nextRange?.from &&
+      nextRange?.to &&
+      rangeHasOccupiedNight(nextRange.from, nextRange.to, occupiedDates)
+    ) {
+      toast.error("Периодът включва вече заети дати за тази вила. Изберете свободен интервал.");
       return;
     }
 
@@ -115,6 +193,11 @@ export function BookingSection() {
 
     if (isSameCalendarDay(dateRange.from, dateRange.to)) {
       toast.error("Минимум една нощувка — настаняване и напускане не могат да са в един ден.");
+      return;
+    }
+
+    if (rangeHasOccupiedNight(dateRange.from, dateRange.to, occupiedDates)) {
+      toast.error("Избраният период включва заети дати за тази вила. Моля, изберете друг.");
       return;
     }
 
@@ -141,8 +224,16 @@ export function BookingSection() {
         guestPhone: "",
         guestNote: "",
       });
-    } catch {
-      toast.error("Възникна грешка при изпращане на резервацията.");
+    } catch (error) {
+      const message =
+        error && typeof error === "object" && "message" in error && typeof error.message === "string"
+          ? error.message
+          : "";
+      toast.error(
+        message.includes("заети") || message.includes("припокрива")
+          ? message
+          : "Възникна грешка при изпращане на резервацията."
+      );
     }
   };
 
@@ -164,10 +255,9 @@ export function BookingSection() {
               onSelect={handleCalendarSelect}
               numberOfMonths={1}
               min={2}
-              disabled={date => {
-                if (date < startOfDay(new Date())) return true;
-                return isDateOccupied(date, occupiedDates);
-              }}
+              disabled={isDayBlocked}
+              modifiers={{ occupied: isDayMarkedOccupied }}
+              modifiersClassNames={{ occupied: "booking-calendar-day-occupied" }}
               classNames={{ today: "booking-calendar-day-today" }}
               className="booking-calendar mx-auto rounded-none bg-transparent p-0 [--cell-size:2.5rem]"
             />
