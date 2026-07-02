@@ -108,38 +108,29 @@ function MobilePanelLayer({
           }}
         />
 
-        {/* Glass bar — full width, fixed two-row layout */}
+        {/* Info panel — full text, stacked for mobile readability */}
         <motion.div
           className="absolute inset-x-0 bottom-0"
           style={{ y: panelY }}
         >
           <div
-            className="border-t border-white/10 px-5 pb-[max(4.5rem,env(safe-area-inset-bottom,36px))] pt-3"
+            className="max-h-[52dvh] overflow-y-auto border-t border-white/10 px-4 py-3 pb-[max(1rem,env(safe-area-inset-bottom,16px))] pt-3"
             style={{
-              background: "oklch(0 0 0 / 0.55)",
+              background: "oklch(0 0 0 / 0.62)",
               backdropFilter: "blur(12px)",
               WebkitBackdropFilter: "blur(12px)",
             }}
           >
-            <div className="flex items-start gap-3">
-              {/* Left — room + subtitle */}
-              <div className="min-w-0 flex-1 pt-0.5">
-                <p className="eyebrow text-[0.54rem] text-[var(--gold)]">{panel.room}</p>
-                <p className="mt-1.5 line-clamp-1 text-[0.68rem] leading-none text-white/55">
-                  {panel.subtitle}
-                </p>
-              </div>
-
-              {/* Divider */}
-              <div className="mt-1 h-8 w-px shrink-0 bg-white/15" />
-
-              {/* Right — title, strictly 2 rows */}
-              <div className="w-[50%] shrink-0 overflow-hidden text-right">
-                <h2 className="line-clamp-2 font-serif text-[0.95rem] font-bold leading-snug text-white">
-                  {panel.title}
-                </h2>
-              </div>
-            </div>
+            <p className="eyebrow text-[0.58rem] text-[var(--gold)]">{panel.room}</p>
+            <h2 className="mt-1 font-serif text-base font-bold leading-snug text-white">
+              {panel.title}
+            </h2>
+            <p className="mt-1 text-[0.62rem] font-medium uppercase tracking-[0.18em] text-white/50">
+              {panel.subtitle}
+            </p>
+            <p className="mt-2 text-[0.72rem] leading-relaxed text-white/82">
+              {panel.description}
+            </p>
           </div>
         </motion.div>
       </div>
@@ -203,8 +194,8 @@ function MobileScrollPanelExperience() {
           ))}
         </div>
 
-        {/* Panel counter — bottom right */}
-        <div className="absolute bottom-[max(4rem,env(safe-area-inset-bottom,40px))] right-4 z-20">
+        {/* Panel counter — top right, away from expanding text panel */}
+        <div className="absolute right-4 top-[max(3.5rem,env(safe-area-inset-top,0px))] z-20">
           <span className="eyebrow text-[0.58rem] text-white/45">
             {String(activeIndex + 1).padStart(2, "0")}&thinsp;/&thinsp;{String(total).padStart(2, "0")}
           </span>
