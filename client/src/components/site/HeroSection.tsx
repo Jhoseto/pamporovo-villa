@@ -42,10 +42,13 @@ export function HeroSection() {
         style={parallaxActive ? { y: bgY } : undefined}
       >
         <picture className="block h-full w-full">
+          <source media="(max-width: 767px)" srcSet={HERO_PHOTO.mobileWebpSrc} type="image/webp" />
           <source srcSet={HERO_PHOTO.webpSrc} type="image/webp" />
           <img
-            src={HERO_PHOTO.pngSrc}
+            src={HERO_PHOTO.src}
             alt={HERO_PHOTO.alt}
+            width={1024}
+            height={768}
             className="hero-photo h-full w-full object-cover object-center"
             fetchPriority="high"
             decoding="async"

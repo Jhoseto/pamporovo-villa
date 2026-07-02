@@ -5,7 +5,7 @@ import NotFound from "@/pages/NotFound";
 import { Route, Router, Switch, useLocation } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { Preloader } from "./components/site/Preloader";
-import { SmoothScrollProvider } from "./components/site/SmoothScrollProvider";
+import { PublicScrollShell } from "./components/site/PublicScrollShell";
 import { SiteReadyProvider } from "./contexts/SiteReadyContext";
 import { OffersModalProvider } from "./contexts/OffersModalContext";
 import { ConsentProvider } from "./contexts/ConsentContext";
@@ -56,7 +56,7 @@ function PublicApp() {
   return (
     <>
       {!appReady && !isGuidePage && <Preloader onComplete={handlePreloaderComplete} />}
-      <SmoothScrollProvider enabled={appReady}>
+      <PublicScrollShell enabled={appReady}>
         <SiteReadyProvider ready={appReady}>
           <ConsentProvider>
             <ThemeProvider defaultTheme="light">
@@ -67,7 +67,7 @@ function PublicApp() {
             </ThemeProvider>
           </ConsentProvider>
         </SiteReadyProvider>
-      </SmoothScrollProvider>
+      </PublicScrollShell>
     </>
   );
 }

@@ -46,6 +46,18 @@ export default defineConfig({
   build: {
     outDir: path.resolve(PROJECT_ROOT, "dist/public"),
     emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (!id.includes("node_modules")) return;
+          if (id.includes("framer-motion")) return "vendor-framer";
+          if (id.includes("lenis")) return "vendor-lenis";
+          if (id.includes("@radix-ui")) return "vendor-radix";
+          if (id.includes("recharts")) return "vendor-recharts";
+          if (id.includes("@tanstack") || id.includes("@trpc")) return "vendor-trpc";
+        },
+      },
+    },
   },
   server: {
     host: true,

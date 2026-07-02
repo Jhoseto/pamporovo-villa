@@ -19,16 +19,23 @@ export function SmoothScrollProvider({
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
 
-    const lenis = initLenis();
-    if (!lenis) return;
+    let cancelled = false;
+    let cleanup: (() => void) | undefined;
 
-    lenis.scrollTo(0, { immediate: true });
+    void initLenis().then(lenis => {
+      if (cancelled || !lenis) return;
 
-    const stopRaf = startLenisRaf(lenis);
+      lenis.scrollTo(0, { immediate: true });
+      const stopRaf = startLenisRaf(lenis);
+      cleanup = () => {
+        stopRaf();
+        destroyLenis();
+      };
+    });
 
     return () => {
-      stopRaf();
-      destroyLenis();
+      cancelled = true;
+      cleanup?.();
     };
   }, [enabled]);
 

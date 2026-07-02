@@ -1,6 +1,14 @@
-import Lenis from "lenis";
+type LenisInstance = {
+  scroll: number;
+  velocity: number;
+  raf: (time: number) => void;
+  scrollTo: (target: number | Element, options?: { offset?: number; duration?: number; immediate?: boolean }) => void;
+  on: (event: string, callback: () => void) => () => void;
+  off: (event: string, callback: () => void) => void;
+  destroy: () => void;
+};
 
-let lenisInstance: Lenis | null = null;
+let lenisInstance: LenisInstance | null = null;
 let wakeLenisRaf: (() => void) | null = null;
 
 function isTouchOnlyDevice(): boolean {
@@ -8,7 +16,7 @@ function isTouchOnlyDevice(): boolean {
   return window.matchMedia("(pointer: coarse)").matches;
 }
 
-export function initLenis(): Lenis | null {
+export async function initLenis(): Promise<LenisInstance | null> {
   if (typeof window === "undefined") return null;
 
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -18,17 +26,18 @@ export function initLenis(): Lenis | null {
 
   if (lenisInstance) return lenisInstance;
 
+  const { default: Lenis } = await import("lenis");
   lenisInstance = new Lenis({
     duration: 1.2,
     lerp: 0.1,
     smoothWheel: true,
     touchMultiplier: 1.5,
-  });
+  }) as LenisInstance;
 
   return lenisInstance;
 }
 
-export function getLenis(): Lenis | null {
+export function getLenis(): LenisInstance | null {
   return lenisInstance;
 }
 
@@ -43,7 +52,7 @@ export function destroyLenis() {
 }
 
 /** Runs Lenis rAF only while scroll velocity is active — saves CPU when idle. */
-export function startLenisRaf(lenis: Lenis) {
+export function startLenisRaf(lenis: LenisInstance) {
   let rafId = 0;
   let active = true;
 

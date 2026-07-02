@@ -2,9 +2,10 @@ import { lazy, Suspense, useEffect, type ReactNode } from "react";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { scrollToSection } from "@/lib/scroll";
 import { HeroSection } from "@/components/site/HeroSection";
-import { ScrollPanelExperience } from "@/components/site/ScrollPanelExperience";
-import { PropertyDetailsSection } from "@/components/site/PropertyDetailsSection";
+import { HomeBelowFoldSections } from "@/components/site/HomeBelowFoldSections";
 import { SiteFooter } from "@/components/site/SiteFooter";
+import { useSiteReady } from "@/contexts/SiteReadyContext";
+import { isMobileViewport } from "@/lib/mobilePerf";
 
 // Below-fold sections loaded lazily — reduces initial JS parse time
 // Visible sections (Hero, PropertyDetails, ScrollPanelExperience) remain eager
@@ -66,6 +67,9 @@ function LazySection({
 }
 
 export default function Home() {
+  const siteReady = useSiteReady();
+  const isMobile = isMobileViewport();
+
   useEffect(() => {
     const hash = window.location.hash;
     if (!hash) return;
@@ -79,8 +83,7 @@ export default function Home() {
       <SiteHeader />
       <main>
         <HeroSection />
-        <PropertyDetailsSection />
-        <ScrollPanelExperience />
+        <HomeBelowFoldSections />
         <LazySection id="gallery" fallback={<DarkSectionFallback />}>
           <GallerySection />
         </LazySection>
@@ -112,7 +115,7 @@ export default function Home() {
           <HomeFaqSection className="border-t border-black/8 bg-[var(--cream)] py-16 md:py-20" />
         </LazySection>
       </main>
-      <SiteFooter />
+      {(!isMobile || siteReady) && <SiteFooter />}
     </div>
   );
 }

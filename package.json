@@ -22,6 +22,7 @@
     "seed:reviews": "tsx scripts/seed-reviews.ts",
     "pwa:icons": "node scripts/generate-admin-pwa-icons.mjs",
     "og:image": "tsx scripts/generate-og-image.ts",
+    "photos:mobile-hero": "node scripts/generate-mobile-hero.mjs",
     "indexnow": "tsx scripts/submit-indexnow.ts",
     "db:tunnel": "db-tunnel.bat"
   },

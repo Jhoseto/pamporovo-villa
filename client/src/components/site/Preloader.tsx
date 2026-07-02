@@ -16,6 +16,12 @@ export function Preloader({ onComplete }: PreloaderProps) {
     document.body.scrollTop = 0;
     document.body.style.overflow = "hidden";
 
+    if (window.matchMedia("(max-width: 767px)").matches) {
+      const hero = new Image();
+      hero.src = "/photos/hero-mobile.webp";
+      hero.fetchPriority = "high";
+    }
+
     const prefersReducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
     ).matches;

@@ -96,7 +96,7 @@ function MobilePanelLayer({
           alt={panel.imageAlt}
           className="absolute inset-0 h-full w-full object-cover"
           style={{ scale: imageScale }}
-          loading={index === 0 ? "eager" : "lazy"}
+          loading={index === 0 && !IS_MOBILE ? "eager" : "lazy"}
           decoding="async"
         />
 
