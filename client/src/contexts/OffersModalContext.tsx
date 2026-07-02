@@ -1,5 +1,6 @@
-import { createContext, useCallback, useContext, useMemo, useState, type ReactNode } from "react";
+import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
 import { OffersModal } from "@/components/site/OffersModal";
+import { trackOfferOpen } from "@/lib/analytics/events";
 
 type OffersModalContextValue = {
   openOffers: () => void;
@@ -10,6 +11,10 @@ const OffersModalContext = createContext<OffersModalContextValue | null>(null);
 export function OffersModalProvider({ children }: { children: ReactNode }) {
   const [open, setOpen] = useState(false);
   const openOffers = useCallback(() => setOpen(true), []);
+
+  useEffect(() => {
+    if (open) trackOfferOpen();
+  }, [open]);
 
   const value = useMemo(() => ({ openOffers }), [openOffers]);
 

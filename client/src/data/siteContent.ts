@@ -218,8 +218,8 @@ const DELUXE_WINTER_SURCHARGE = 20;
 const DELUXE_SUMMER_SURCHARGE = 10;
 
 export const EXTRA_FEES = {
-  firewoodPerBag: 8,
-  smokingFine: 26,
+  firewoodPerBag: 10,
+  smokingFine: 50,
 } as const;
 
 export function getDeluxeWinterRate(standardWinterPerNight: number): number {

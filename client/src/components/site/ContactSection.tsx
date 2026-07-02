@@ -1,5 +1,6 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 import { CONTACT } from "@/data/siteContent";
+import { trackContactClick } from "@/lib/analytics/events";
 import { SectionShell } from "./SectionShell";
 import { ScrollReveal } from "./ScrollReveal";
 
@@ -17,6 +18,7 @@ export function ContactSection() {
         <div className="mx-auto grid max-w-4xl grid-cols-1 gap-4 sm:grid-cols-3 md:gap-5">
           <a
             href={`tel:${CONTACT.phone}`}
+            onClick={() => trackContactClick("phone")}
             className="premium-form-card flex flex-col items-center gap-3 p-5 text-center transition hover:shadow-[0_32px_80px_-28px_rgba(0,0,0,0.18)] sm:items-start sm:text-left md:p-6"
           >
             <Phone className="h-5 w-5 shrink-0 text-[var(--gold)]" />
@@ -27,6 +29,7 @@ export function ContactSection() {
           </a>
           <a
             href={`mailto:${CONTACT.email}`}
+            onClick={() => trackContactClick("email")}
             className="premium-form-card flex flex-col items-center gap-3 p-5 text-center transition hover:shadow-[0_32px_80px_-28px_rgba(0,0,0,0.18)] sm:items-start sm:text-left md:p-6"
           >
             <Mail className="h-5 w-5 shrink-0 text-[var(--gold)]" />

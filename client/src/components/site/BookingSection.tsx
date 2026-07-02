@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState, type FormEvent } from "react";
 import { useInView } from "framer-motion";
+import { useLocation } from "wouter";
 import type { DateRange } from "react-day-picker";
 import { toast } from "sonner";
 import { formatPriceEur, VILLAS } from "@/data/siteContent";
@@ -11,6 +12,7 @@ import {
 } from "@/lib/pricing";
 import { isSameCalendarDay, updateBookingDateRange } from "@/lib/bookingDates";
 import { formatDateForApi } from "@/lib/scroll";
+import { trackBookingSubmit } from "@/lib/analytics/events";
 import { Calendar } from "@/components/ui/calendar";
 import { Input } from "@/components/ui/input";
 import { PhoneInput } from "@/components/ui/phone-input";
@@ -60,9 +62,11 @@ function rangeHasOccupiedNight(
 }
 
 export function BookingSection() {
+  const [, setLocation] = useLocation();
   const sectionRef = useRef<HTMLDivElement>(null);
   const calendarReady = useInView(sectionRef, { once: true, margin: "240px 0px" });
   const [dateRange, setDateRange] = useState<DateRange | undefined>();
+  const [agreedToTerms, setAgreedToTerms] = useState(false);
   const [honeypot, setHoneypot] = useState("");
   const [formData, setFormData] = useState({
     villaId: VILLAS[0]?.id ?? "",
@@ -233,6 +237,7 @@ export function BookingSection() {
       });
 
       toast.success("Резервацията е изпратена успешно! Ще ви свържем скоро.");
+      trackBookingSubmit(formData.villaId);
       resetDates();
       setFormData({
         villaId: VILLAS[0]?.id ?? "",
@@ -464,10 +469,53 @@ export function BookingSection() {
                 />
               </PremiumFormField>
 
+              <label className="flex cursor-pointer items-start gap-3">
+                <div className="relative mt-0.5 flex shrink-0">
+                  <input
+                    type="checkbox"
+                    className="peer h-5 w-5 cursor-pointer appearance-none rounded border border-[oklch(0_0_0/0.18)] bg-white transition checked:border-[var(--gold)] checked:bg-[var(--gold)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--gold)]/40"
+                    checked={agreedToTerms}
+                    onChange={e => setAgreedToTerms(e.target.checked)}
+                    required
+                  />
+                  <svg
+                    className="pointer-events-none absolute left-0.5 top-0.5 h-4 w-4 text-white opacity-0 transition peer-checked:opacity-100"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden
+                  >
+                    <polyline points="2.5 8.5 6 12 13.5 4" />
+                  </svg>
+                </div>
+                <span className="text-sm leading-relaxed text-muted-foreground">
+                  Запознах се и приемам{" "}
+                  <button
+                    type="button"
+                    onClick={() => setLocation("/legal?tab=terms")}
+                    className="font-medium text-foreground underline underline-offset-2 hover:text-[var(--gold)]"
+                  >
+                    Общите условия
+                  </button>
+                  ,{" "}
+                  <button
+                    type="button"
+                    onClick={() => setLocation("/legal?tab=privacy")}
+                    className="font-medium text-foreground underline underline-offset-2 hover:text-[var(--gold)]"
+                  >
+                    Политиката за поверителност
+                  </button>{" "}
+                  и правилата за ползване на вилата.
+                </span>
+              </label>
+
               <MagneticButton
                 type="submit"
                 className="premium-btn h-14 w-full text-base"
-                disabled={bookingMutation.isPending || !pricingRows.length}
+                disabled={bookingMutation.isPending || !pricingRows.length || !agreedToTerms}
               >
                 {bookingMutation.isPending ? "Изпращане..." : "Изпрати резервация"}
               </MagneticButton>

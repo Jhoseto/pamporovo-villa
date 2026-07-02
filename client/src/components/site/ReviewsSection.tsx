@@ -4,6 +4,7 @@ import { Star } from "lucide-react";
 import { toast } from "sonner";
 import { VILLAS } from "@/data/siteContent";
 import { trpc } from "@/lib/trpc";
+import { trackReviewSubmit } from "@/lib/analytics/events";
 import { cn } from "@/lib/utils";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -68,6 +69,7 @@ export function ReviewsSection() {
   const submitReview = trpc.content.submitReview.useMutation({
     onSuccess: data => {
       toast.success(data.message);
+      trackReviewSubmit();
       setForm({
         guestName: "",
         guestEmail: "",

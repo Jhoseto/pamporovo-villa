@@ -2,6 +2,8 @@ import { Facebook, Instagram, Mail, Phone, Youtube } from "lucide-react";
 import { useLocation } from "wouter";
 import { CONTACT, NAV_LINKS, SITE, SOCIAL } from "@/data/siteContent";
 import { useOffersModal } from "@/contexts/OffersModalContext";
+import { CookieSettingsTrigger } from "@/components/site/CookieConsent";
+import { trackPhoneClick } from "@/lib/analytics/events";
 import { navigateSiteLink } from "@/lib/siteNav";
 
 const SOCIAL_LINKS = [
@@ -45,6 +47,7 @@ export function SiteFooter() {
               <li>
                 <a
                   href={`tel:${CONTACT.phone}`}
+                  onClick={() => trackPhoneClick("footer")}
                   className="group flex items-start gap-3 text-white/75 transition hover:text-white"
                 >
                   <Phone className="mt-0.5 h-5 w-5 shrink-0 text-[var(--gold)]" />
@@ -119,17 +122,44 @@ export function SiteFooter() {
 
         <div className="premium-form-divider my-10 opacity-40" />
 
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-center text-sm text-white/50 sm:text-left">
+        <div className="grid grid-cols-3 items-center gap-4">
+          <p className="text-sm text-white/45">
             &copy; {new Date().getFullYear()} {SITE.name}. Всички права запазени.
           </p>
-          <p className="text-right text-sm text-white/50">
+          <div className="flex items-center justify-center gap-x-4">
+            <button
+              type="button"
+              onClick={() => setLocation("/legal?tab=privacy")}
+              className="text-xs text-white/35 transition hover:text-[var(--gold)]"
+            >
+              Поверителност
+            </button>
+            <span className="text-white/20 text-xs">·</span>
+            <button
+              type="button"
+              onClick={() => setLocation("/legal?tab=terms")}
+              className="text-xs text-white/35 transition hover:text-[var(--gold)]"
+            >
+              Общи условия
+            </button>
+            <span className="text-white/20 text-xs">·</span>
+            <button
+              type="button"
+              onClick={() => setLocation("/legal?tab=cookies")}
+              className="text-xs text-white/35 transition hover:text-[var(--gold)]"
+            >
+              Бисквитки
+            </button>
+            <span className="text-white/20 text-xs">·</span>
+            <CookieSettingsTrigger />
+          </div>
+          <p className="text-right text-xs text-white/30">
             developed by{" "}
             <a
               href="https://www.facebook.com/kostadin.serezliev/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white/70 transition hover:text-[var(--gold)]"
+              className="text-white/40 transition hover:text-[var(--gold)]"
             >
               Serezliev
             </a>

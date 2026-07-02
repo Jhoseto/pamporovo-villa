@@ -8,12 +8,16 @@ import { Preloader } from "./components/site/Preloader";
 import { SmoothScrollProvider } from "./components/site/SmoothScrollProvider";
 import { SiteReadyProvider } from "./contexts/SiteReadyContext";
 import { OffersModalProvider } from "./contexts/OffersModalContext";
+import { ConsentProvider } from "./contexts/ConsentContext";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import { CookieConsent } from "./components/site/CookieConsent";
+import { trackPageView } from "./lib/analytics/gtag";
 import { initAdminPwaMeta, registerAdminServiceWorker } from "./lib/adminPwa";
 import Home from "./pages/Home";
 
 const AdminApp = lazy(() => import("./pages/admin/AdminApp"));
 const PamporovoPage = lazy(() => import("./pages/PamporovoPage"));
+const LegalPage = lazy(() => import("./pages/LegalPage"));
 
 function SiteRouter() {
   return (
@@ -21,6 +25,7 @@ function SiteRouter() {
       <Switch>
         <Route path={"/"} component={Home} />
         <Route path={"/pamporovo"} component={PamporovoPage} />
+        <Route path={"/legal"} component={LegalPage} />
         <Route path={"/404"} component={NotFound} />
         <Route component={NotFound} />
       </Switch>
@@ -43,11 +48,14 @@ function PublicApp() {
       {!appReady && !isGuidePage && <Preloader onComplete={handlePreloaderComplete} />}
       <SmoothScrollProvider enabled={appReady}>
         <SiteReadyProvider ready={appReady}>
-          <ThemeProvider defaultTheme="light">
-            <OffersModalProvider>
-              <SiteRouter />
-            </OffersModalProvider>
-          </ThemeProvider>
+          <ConsentProvider>
+            <ThemeProvider defaultTheme="light">
+              <OffersModalProvider>
+                <SiteRouter />
+                <CookieConsent />
+              </OffersModalProvider>
+            </ThemeProvider>
+          </ConsentProvider>
         </SiteReadyProvider>
       </SmoothScrollProvider>
     </>
@@ -57,6 +65,11 @@ function PublicApp() {
 function AppShell() {
   const [location] = useLocation();
   const isAdmin = location.startsWith("/admin");
+
+  useEffect(() => {
+    if (isAdmin) return;
+    trackPageView(location + window.location.search);
+  }, [location, isAdmin]);
 
   useEffect(() => {
     if (!isAdmin) return;
