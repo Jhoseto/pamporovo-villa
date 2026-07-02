@@ -27,6 +27,27 @@ const houseSource = await sharp(houseIconPath).trim({ threshold: 15 }).png().toB
 
 await sharp(houseSource).toFile(path.join(iconsDir, "logo-house-source.png"));
 
+/** Dark pixels → transparent (for favicon without square halo). */
+async function houseTransparent(input) {
+  const { data, info } = await sharp(input).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+  const threshold = 40;
+  for (let i = 0; i < data.length; i += 4) {
+    const r = data[i];
+    const g = data[i + 1];
+    const b = data[i + 2];
+    if (r <= threshold && g <= threshold && b <= threshold) {
+      data[i + 3] = 0;
+    }
+  }
+  return sharp(data, {
+    raw: { width: info.width, height: info.height, channels: 4 },
+  })
+    .png()
+    .toBuffer();
+}
+
+const faviconHouseSource = await houseTransparent(houseSource);
+
 function iconBackgroundSvg(size, variant = "app") {
   const radius = variant === "badge" ? 16 : Math.round(size * 0.19);
   const bg =
@@ -151,16 +172,20 @@ for (const splash of splashOutputs) {
   console.log(`Wrote ${path.join(splashDir, splash.file)}`);
 }
 
-// ── Favicon (32×32 and 16×16) from house source ─────────────────────────────
+// ── Favicon (32×32 and 16×16) — house only, transparent background ───────────
 async function composeFavicon(size) {
-  const houseMeta = await sharp(houseSource).metadata();
+  const houseMeta = await sharp(faviconHouseSource).metadata();
   const houseAspect = (houseMeta.width ?? 1) / (houseMeta.height ?? 1);
-  const houseWidth = houseAspect >= 1 ? size : Math.round(size * houseAspect);
-  const houseHeight = houseAspect >= 1 ? Math.round(size / houseAspect) : size;
+  const padding = Math.max(1, Math.round(size * 0.06));
+  const maxDim = size - padding * 2;
+  const houseWidth = houseAspect >= 1 ? maxDim : Math.round(maxDim * houseAspect);
+  const houseHeight = houseAspect >= 1 ? Math.round(maxDim / houseAspect) : maxDim;
 
-  const house = await sharp(houseSource)
-    .resize(houseWidth, houseHeight, { fit: "contain", background: SPLASH_BG })
-    .flatten({ background: SPLASH_BG })
+  const house = await sharp(faviconHouseSource)
+    .resize(houseWidth, houseHeight, {
+      fit: "contain",
+      background: { r: 0, g: 0, b: 0, alpha: 0 },
+    })
     .png()
     .toBuffer();
 
@@ -168,10 +193,14 @@ async function composeFavicon(size) {
   const offsetY = Math.round((size - houseHeight) / 2);
 
   return sharp({
-    create: { width: size, height: size, channels: 3, background: SPLASH_BG },
+    create: {
+      width: size,
+      height: size,
+      channels: 4,
+      background: { r: 0, g: 0, b: 0, alpha: 0 },
+    },
   })
     .composite([{ input: house, top: offsetY, left: offsetX }])
-    .removeAlpha()
     .png({ compressionLevel: 9 })
     .toBuffer();
 }
