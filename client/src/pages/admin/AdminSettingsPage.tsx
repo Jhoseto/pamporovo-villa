@@ -13,7 +13,8 @@ import { DEFAULT_NOTIFICATION_SOUND_URL, NOTIFICATION_SOUND_MAX_BYTES } from "@s
 export default function AdminSettingsPage() {
   const utils = trpc.useUtils();
   const fileInputRef = useRef<HTMLInputElement>(null);
-  const { permission, subscribe, unsubscribe, isSubscribed, vapidReady, isBusy } = useAdminPush();
+  const { permission, subscribe, unsubscribe, isSubscribed, vapidReady, isBusy, pushBlockedReason } =
+    useAdminPush();
   const sendTest = trpc.admin.push.sendTest.useMutation({
     onSuccess: () => toast.success("Тестово известие е изпратено"),
     onError: err => toast.error(err.message),
@@ -151,15 +152,14 @@ export default function AdminSettingsPage() {
             </>
           )}
         </div>
-        {permission === "denied" && (
-          <p className="mt-3 text-sm text-[var(--admin-muted)]">
-            Разрешете известията от настройките на браузъра / телефона за този сайт.
+        {pushBlockedReason && (
+          <p className="mt-3 rounded-xl border border-amber-500/30 bg-amber-500/10 p-3 text-sm text-[var(--admin-fg)]">
+            {pushBlockedReason}
           </p>
         )}
-        {platform === "ios" && !isInstalled && (
-          <p className="mt-3 rounded-xl border border-[var(--admin-glass-border-subtle)] bg-[var(--admin-panel-solid)] p-3 text-sm text-[var(--admin-muted)]">
-            На iPhone първо инсталирайте <strong>PV Админ</strong> от Safari (Добави на началния екран), после
-            отворете приложението от иконата и активирайте известията тук.
+        {permission === "denied" && platform === "ios" && isInstalled && (
+          <p className="mt-2 text-xs text-[var(--admin-muted)]">
+            След като включите известията в Настройки, затворете и отворете отново PV Админ.
           </p>
         )}
 
@@ -266,9 +266,10 @@ export default function AdminSettingsPage() {
           <p>
             Статус: <strong>{installStatusLabel}</strong>
           </p>
-          {swReady && !isInstalled && platform === "android" && !canInstall && (
+          {!isInstalled && platform === "android" && !canInstall && (
             <p className="text-xs text-[var(--admin-muted)]">
-              Ако бутонът остане неактивен, презаредете страницата и изчакайте 2–3 секунди в Chrome.
+              Ако след натискане не се появи прозорец за инсталация: Chrome → меню (⋮) →
+              „Добавяне към началния екран“ или „Инсталиране на приложение“.
             </p>
           )}
         </div>

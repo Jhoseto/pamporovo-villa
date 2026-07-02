@@ -1,4 +1,10 @@
-import { registerAdminServiceWorker } from "@/lib/adminPwa";
+import {
+  getAdminPwaPlatform,
+  isAdminPwaStandalone,
+  isIosNonSafariBrowser,
+  registerAdminServiceWorker,
+  type AdminPwaPlatform,
+} from "@/lib/adminPwa";
 import { useCallback, useEffect, useState } from "react";
 import { toast } from "sonner";
 import { trpc } from "@/lib/trpc";
@@ -14,12 +20,30 @@ function urlBase64ToUint8Array(base64String: string) {
   return outputArray;
 }
 
+export function getPushDeniedInstructions(platform: AdminPwaPlatform, standalone: boolean): string {
+  if (platform === "ios") {
+    if (!standalone) {
+      return "На iPhone първо инсталирайте PV Админ от Safari (Добави на началния екран) и отворете от иконата.";
+    }
+    return "Известията са блокирани. Отворете Настройки → Известия → PV Админ → разрешете известията, после се върнете тук.";
+  }
+  if (platform === "android") {
+    return "Известията са блокирани. Chrome → икона на катинар → Настройки на сайта → Известия → Разрешено.";
+  }
+  return "Известията са блокирани в браузъра. Разрешете ги от настройките на сайта.";
+}
+
+function syncNotificationPermission(): NotificationPermission {
+  if (typeof Notification === "undefined") return "denied";
+  return Notification.permission;
+}
+
 export function useAdminPush() {
-  const [permission, setPermission] = useState<NotificationPermission>(
-    typeof Notification !== "undefined" ? Notification.permission : "default"
-  );
+  const [permission, setPermission] = useState<NotificationPermission>(syncNotificationPermission);
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [currentEndpoint, setCurrentEndpoint] = useState<string | null>(null);
+  const platform = getAdminPwaPlatform();
+  const standalone = isAdminPwaStandalone();
 
   const { data: vapid } = trpc.admin.push.getVapidPublicKey.useQuery(undefined, {
     retry: false,
@@ -52,11 +76,44 @@ export function useAdminPush() {
       toast.error("Push не е конфигуриран на сървъра");
       return;
     }
+
+    if (typeof Notification === "undefined" || !("PushManager" in window)) {
+      toast.error("Този браузър не поддържа push известия");
+      return;
+    }
+
+    if (platform === "ios" && isIosNonSafariBrowser()) {
+      toast.message("На iPhone отворете admin панела в Safari или от иконата PV Админ.", { duration: 7000 });
+      return;
+    }
+
+    if (platform === "ios" && !standalone) {
+      toast.message(
+        "На iPhone push работи само от инсталираното приложение. Safari → Сподели → Добави на началния екран → отворете PV Админ.",
+        { duration: 9000 }
+      );
+      return;
+    }
+
+    const currentPerm = syncNotificationPermission();
+    setPermission(currentPerm);
+
+    if (currentPerm === "denied") {
+      toast.error(getPushDeniedInstructions(platform, standalone), { duration: 10000 });
+      return;
+    }
+
     try {
       const perm = await Notification.requestPermission();
       setPermission(perm);
+
+      if (perm === "denied") {
+        toast.error(getPushDeniedInstructions(platform, standalone), { duration: 10000 });
+        return;
+      }
+
       if (perm !== "granted") {
-        toast.error("Разрешението за известия е отказано");
+        toast.error("Разрешението не е дадено — опитайте отново");
         return;
       }
 
@@ -66,10 +123,13 @@ export function useAdminPush() {
         return;
       }
 
-      const sub = await reg.pushManager.subscribe({
-        userVisibleOnly: true,
-        applicationServerKey: urlBase64ToUint8Array(vapid.publicKey),
-      });
+      let sub = await reg.pushManager.getSubscription();
+      if (!sub) {
+        sub = await reg.pushManager.subscribe({
+          userVisibleOnly: true,
+          applicationServerKey: urlBase64ToUint8Array(vapid.publicKey),
+        });
+      }
 
       const json = sub.toJSON();
       if (!json.endpoint || !json.keys?.p256dh || !json.keys?.auth) {
@@ -86,9 +146,14 @@ export function useAdminPush() {
       setCurrentEndpoint(json.endpoint);
       toast.success("Известията са активирани");
     } catch (error) {
-      toast.error(error instanceof Error ? error.message : "Грешка при абонамент");
+      const message = error instanceof Error ? error.message : "Грешка при абонамент";
+      if (/denied|not allowed|permission/i.test(message)) {
+        toast.error(getPushDeniedInstructions(platform, standalone), { duration: 10000 });
+        return;
+      }
+      toast.error(message);
     }
-  }, [registerSw, subscribeMutation, vapid?.publicKey]);
+  }, [platform, registerSw, standalone, subscribeMutation, vapid?.publicKey]);
 
   const unsubscribe = useCallback(async () => {
     try {
@@ -115,6 +180,16 @@ export function useAdminPush() {
       .catch(() => undefined);
   }, [registerSw, syncSubscriptionState]);
 
+  useEffect(() => {
+    const refreshPermission = () => setPermission(syncNotificationPermission());
+    window.addEventListener("focus", refreshPermission);
+    document.addEventListener("visibilitychange", refreshPermission);
+    return () => {
+      window.removeEventListener("focus", refreshPermission);
+      document.removeEventListener("visibilitychange", refreshPermission);
+    };
+  }, []);
+
   return {
     permission,
     isSubscribed,
@@ -122,5 +197,13 @@ export function useAdminPush() {
     unsubscribe,
     vapidReady: !!vapid?.publicKey,
     isBusy: subscribeMutation.isPending || unsubscribeMutation.isPending,
+    platform,
+    standalone,
+    pushBlockedReason:
+      permission === "denied"
+        ? getPushDeniedInstructions(platform, standalone)
+        : platform === "ios" && !standalone
+          ? getPushDeniedInstructions(platform, standalone)
+          : null,
   };
 }

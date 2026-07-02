@@ -1,11 +1,10 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { toast } from "sonner";
 import {
   getAdminPwaPlatform,
   isAdminPwaStandalone,
   isIosNonSafariBrowser,
   isIosSafariBrowser,
-  registerAdminServiceWorker,
   waitForAdminServiceWorker,
   type AdminPwaPlatform,
 } from "@/lib/adminPwa";
@@ -15,7 +14,57 @@ type BeforeInstallPromptEvent = Event & {
   userChoice: Promise<{ outcome: "accepted" | "dismissed"; platform: string }>;
 };
 
+declare global {
+  interface Window {
+    __pvAdminInstallPrompt?: BeforeInstallPromptEvent | null;
+  }
+}
+
 const DISMISS_KEY = "pamporovo-admin-pwa-banner-dismissed";
+
+/**
+ * beforeinstallprompt fires ONCE, usually before React mounts. The index.html
+ * bootstrap stashes it on window.__pvAdminInstallPrompt. This module keeps a
+ * single shared prompt + installed flag so every hook instance (settings page,
+ * banners, login) sees the same state regardless of when it mounted.
+ */
+let sharedPrompt: BeforeInstallPromptEvent | null = null;
+let sharedInstalled = false;
+const listeners = new Set<() => void>();
+
+function notifyAll() {
+  listeners.forEach(fn => fn());
+}
+
+function initSharedState() {
+  if (typeof window === "undefined") return;
+  if (!sharedPrompt && window.__pvAdminInstallPrompt) {
+    sharedPrompt = window.__pvAdminInstallPrompt;
+  }
+}
+
+if (typeof window !== "undefined") {
+  // Fallback capture in case the index.html bootstrap didn't run (e.g. dev HMR).
+  window.addEventListener("beforeinstallprompt", event => {
+    event.preventDefault();
+    sharedPrompt = event as BeforeInstallPromptEvent;
+    window.__pvAdminInstallPrompt = sharedPrompt;
+    notifyAll();
+  });
+  window.addEventListener("pv-admin-install-prompt", () => {
+    initSharedState();
+    notifyAll();
+  });
+  const markInstalled = () => {
+    sharedPrompt = null;
+    window.__pvAdminInstallPrompt = null;
+    sharedInstalled = true;
+    localStorage.setItem(DISMISS_KEY, "1");
+    notifyAll();
+  };
+  window.addEventListener("appinstalled", markInstalled);
+  window.addEventListener("pv-admin-installed", markInstalled);
+}
 
 function isMobileDevice(): boolean {
   if (typeof window === "undefined") return false;
@@ -23,53 +72,28 @@ function isMobileDevice(): boolean {
 }
 
 export function useAdminPwaInstall() {
-  const deferredPrompt = useRef<BeforeInstallPromptEvent | null>(null);
-  const [canInstall, setCanInstall] = useState(false);
-  const [isInstalled, setIsInstalled] = useState(isAdminPwaStandalone);
+  const [, forceRender] = useState(0);
   const [isInstalling, setIsInstalling] = useState(false);
   const [swReady, setSwReady] = useState(false);
-  const [showBanner, setShowBanner] = useState(false);
+  const [dismissed, setDismissed] = useState(
+    () => typeof localStorage !== "undefined" && localStorage.getItem(DISMISS_KEY) === "1"
+  );
   const platform = getAdminPwaPlatform();
   const iosNonSafari = isIosNonSafariBrowser();
+  const iosSafari = isIosSafariBrowser();
+
+  initSharedState();
+  const canInstall = !!sharedPrompt;
+  const isInstalled = sharedInstalled || isAdminPwaStandalone();
 
   useEffect(() => {
-    setIsInstalled(isAdminPwaStandalone());
-
+    const rerender = () => forceRender(n => n + 1);
+    listeners.add(rerender);
     void waitForAdminServiceWorker().then(ok => setSwReady(ok));
-
-    const onBeforeInstall = (event: Event) => {
-      event.preventDefault();
-      deferredPrompt.current = event as BeforeInstallPromptEvent;
-      setCanInstall(true);
-    };
-
-    const onInstalled = () => {
-      deferredPrompt.current = null;
-      setCanInstall(false);
-      setIsInstalled(true);
-      setShowBanner(false);
-      localStorage.setItem(DISMISS_KEY, "1");
-    };
-
-    window.addEventListener("beforeinstallprompt", onBeforeInstall);
-    window.addEventListener("appinstalled", onInstalled);
-
-    const dismissed = localStorage.getItem(DISMISS_KEY) === "1";
-    const mobile = isMobileDevice();
-    const standalone = isAdminPwaStandalone();
-    setShowBanner(mobile && !standalone && !dismissed);
-
     return () => {
-      window.removeEventListener("beforeinstallprompt", onBeforeInstall);
-      window.removeEventListener("appinstalled", onInstalled);
+      listeners.delete(rerender);
     };
   }, []);
-
-  useEffect(() => {
-    if (canInstall && !isInstalled) {
-      setShowBanner(true);
-    }
-  }, [canInstall, isInstalled]);
 
   const install = useCallback(async () => {
     if (isInstalled) return true;
@@ -79,10 +103,14 @@ export function useAdminPwaInstall() {
       return false;
     }
 
-    const prompt = deferredPrompt.current;
+    initSharedState();
+    const prompt = sharedPrompt;
     if (!prompt) {
       if (platform === "android") {
-        toast.error("Изчакайте „Готово за инсталация“ или презаредете страницата в Chrome");
+        toast.message(
+          "Ако бутонът не отвори прозорец: Chrome → меню (⋮) → „Добавяне към началния екран“ / „Инсталиране на приложение“.",
+          { duration: 9000 }
+        );
       } else {
         toast.error("Инсталацията не е налична — ползвайте Chrome или Edge");
       }
@@ -93,15 +121,17 @@ export function useAdminPwaInstall() {
     try {
       await prompt.prompt();
       const choice = await prompt.userChoice;
+      // The prompt can only be used once — clear it regardless of outcome.
+      sharedPrompt = null;
+      if (typeof window !== "undefined") window.__pvAdminInstallPrompt = null;
       if (choice.outcome === "accepted") {
-        deferredPrompt.current = null;
-        setCanInstall(false);
-        setIsInstalled(true);
-        setShowBanner(false);
+        sharedInstalled = true;
         localStorage.setItem(DISMISS_KEY, "1");
         toast.success("Приложението е инсталирано — отворете го от иконата на началния екран");
+        notifyAll();
         return true;
       }
+      notifyAll();
       return false;
     } catch (error) {
       toast.error(error instanceof Error ? error.message : "Грешка при инсталация");
@@ -113,20 +143,17 @@ export function useAdminPwaInstall() {
 
   const dismissBanner = useCallback(() => {
     localStorage.setItem(DISMISS_KEY, "1");
-    setShowBanner(false);
+    setDismissed(true);
   }, []);
 
   const showIosInstructions = platform === "ios" && !isInstalled;
-  const iosSafari = isIosSafariBrowser();
+  // Android/desktop: always show the button when not installed; if the native
+  // prompt isn't captured yet, clicking it explains the manual Chrome-menu path.
   const showInstallButton = !isInstalled && platform !== "ios";
-  const installButtonEnabled = canInstall && swReady && !isInstalling;
+  const installButtonEnabled = !isInstalling;
   const installButtonLabel = isInstalling
     ? "Инсталиране..."
-    : canInstall
-      ? "Инсталирай приложението"
-      : swReady
-        ? "Подготовка..."
-        : "Подготовка на приложението...";
+    : "Инсталирай приложението";
 
   const installStatusLabel = isInstalled
     ? "Инсталирано — отворете от иконата на началния екран"
@@ -138,9 +165,13 @@ export function useAdminPwaInstall() {
           : iosSafari
             ? "Готово — добавете от Safari (виж инструкциите)"
             : "Добавете на началния екран от Safari"
-        : swReady
-          ? "Изчаква се потвърждение от Chrome..."
-          : "Подготвя се...";
+        : platform === "android"
+          ? "Натиснете бутона за инсталация"
+          : swReady
+            ? "Изчаква се потвърждение от браузъра..."
+            : "Подготвя се...";
+
+  const showBanner = isMobileDevice() && !isInstalled && !dismissed;
 
   return {
     canInstall,
@@ -153,7 +184,7 @@ export function useAdminPwaInstall() {
     isIos: platform === "ios",
     platform,
     swReady,
-    showBanner: showBanner && !isInstalled,
+    showBanner,
     dismissBanner,
     showInstallButton,
     installButtonEnabled,

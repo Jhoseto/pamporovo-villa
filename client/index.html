@@ -70,6 +70,23 @@
         addMeta("format-detection", "telephone=no");
         addMeta("theme-color", "#efeae1");
 
+        // beforeinstallprompt fires once, often before React mounts — stash it
+        // globally so useAdminPwaInstall can pick it up whenever it mounts.
+        window.__pvAdminInstallPrompt = null;
+        window.addEventListener("beforeinstallprompt", function (e) {
+          e.preventDefault();
+          window.__pvAdminInstallPrompt = e;
+          try {
+            window.dispatchEvent(new CustomEvent("pv-admin-install-prompt"));
+          } catch (err) {}
+        });
+        window.addEventListener("appinstalled", function () {
+          window.__pvAdminInstallPrompt = null;
+          try {
+            window.dispatchEvent(new CustomEvent("pv-admin-installed"));
+          } catch (err) {}
+        });
+
         if ("serviceWorker" in navigator) {
           window.addEventListener("load", function () {
             navigator.serviceWorker.register("/admin/sw.js", { scope: "/admin/" }).catch(function () {});
