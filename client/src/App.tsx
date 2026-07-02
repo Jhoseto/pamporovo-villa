@@ -48,19 +48,7 @@ function PublicApp() {
     location === "/rent" ||
     location.startsWith("/pamporovo/") ||
     location.startsWith("/villa/");
-  const [appReady, setAppReady] = useState(() => {
-    const path = typeof window !== "undefined" ? window.location.pathname : "/";
-    const guide =
-      path === "/pamporovo" ||
-      path === "/rent" ||
-      path.startsWith("/pamporovo/") ||
-      path.startsWith("/villa/");
-    if (guide) return true;
-    if (isMobileViewport() && sessionStorage.getItem("pv-mobile-preloaded") === "1") {
-      return true;
-    }
-    return false;
-  });
+  const [appReady, setAppReady] = useState(isGuidePage);
   const handlePreloaderComplete = useCallback(() => setAppReady(true), []);
 
   useEffect(() => {

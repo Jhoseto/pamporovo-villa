@@ -29,6 +29,8 @@ export default function HomeMobile({ onNavigateRequest }: HomeMobileProps) {
       const href = anchor.getAttribute("href");
       if (!href || href === "#" || href.startsWith("#")) return;
       if (href.startsWith("/") && href !== "/") {
+        event.preventDefault();
+        window.history.pushState(null, "", href);
         onNavigateRequest?.();
       }
     };

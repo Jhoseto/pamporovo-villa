@@ -35,11 +35,7 @@ export function mountFullApp() {
   const el = document.getElementById("root");
   if (!el) return;
 
-  sessionStorage.setItem("pv-mobile-preloaded", "1");
-
-  if (!root) {
-    root = createRoot(el);
-  }
+  root ??= createRoot(el);
 
   root.render(
     <trpc.Provider client={trpcClient} queryClient={queryClient}>
