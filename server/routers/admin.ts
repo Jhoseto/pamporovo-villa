@@ -99,8 +99,8 @@ export const adminRouter = router({
       )
       .mutation(async ({ input, ctx }) => {
         const ip = getClientIp(ctx.req);
-        if (!checkRateLimit(`login:${ip}`, 5, 15 * 60 * 1000)) {
-          throw new TRPCError({ code: "TOO_MANY_REQUESTS", message: "Твърде много опити" });
+        if (!checkRateLimit(`login:${ip}`, 5, 5 * 60 * 1000)) {
+          throw new TRPCError({ code: "TOO_MANY_REQUESTS", message: "Твърде много опити — опитайте отново след 5 минути" });
         }
 
         const user = await db.getAdminUserByUsername(input.username);
