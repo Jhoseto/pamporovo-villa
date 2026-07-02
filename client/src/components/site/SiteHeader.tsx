@@ -1,10 +1,11 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ChevronRight, Menu } from "lucide-react";
 import { useState } from "react";
+import { useLocation } from "wouter";
 import { CONTACT, NAV_LINKS, SITE } from "@/data/siteContent";
 import { useOffersModal } from "@/contexts/OffersModalContext";
 import { useHeaderScroll } from "@/hooks/useHeaderScroll";
-import { scrollToSection } from "@/lib/scroll";
+import { navigateSiteLink } from "@/lib/siteNav";
 import { cn } from "@/lib/utils";
 import { MagneticButton } from "./MagneticButton";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
@@ -26,14 +27,20 @@ function SiteLogo({ variant = "header" }: { variant?: "header" | "menu" }) {
 export function SiteHeader() {
   const scrolled = useHeaderScroll(80);
   const [open, setOpen] = useState(false);
+  const [location, setLocation] = useLocation();
   const { openOffers } = useOffersModal();
   const { scrollYProgress } = useScroll();
   // scaleX is compositor-only (no layout reflow on every scroll tick unlike width)
   const progressScaleX = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
-  const handleNavClick = (href: string) => {
-    scrollToSection(href);
+  const handleNavClick = (href: string, page?: boolean) => {
+    navigateSiteLink({ href, label: "", page }, setLocation, location);
     setOpen(false);
+  };
+
+  const isActiveLink = (href: string, page?: boolean) => {
+    if (page || href.startsWith("/")) return location === href;
+    return location === "/" && false;
   };
 
   return (
@@ -53,7 +60,10 @@ export function SiteHeader() {
       <div className="site-header-inner">
         <button
           type="button"
-          onClick={() => scrollToSection("hero")}
+          onClick={() => {
+            setLocation("/");
+            window.scrollTo(0, 0);
+          }}
           className="site-logo-btn site-header-logo min-w-0"
           aria-label={SITE.name}
         >
@@ -68,10 +78,11 @@ export function SiteHeader() {
             <button
               key={link.href}
               type="button"
-              onClick={() => handleNavClick(link.href)}
+              onClick={() => handleNavClick(link.href, link.page)}
               className={cn(
                 "nav-link lg:text-[0.8125rem] xl:text-[0.9375rem] hover:text-[var(--gold)]",
-                scrolled ? "text-white/75" : "text-white/90"
+                scrolled ? "text-white/75" : "text-white/90",
+                isActiveLink(link.href, link.page) && "text-[var(--gold)]"
               )}
             >
               {link.label}
@@ -123,7 +134,7 @@ export function SiteHeader() {
                       <button
                         key={link.href}
                         type="button"
-                        onClick={() => handleNavClick(link.href)}
+                        onClick={() => handleNavClick(link.href, link.page)}
                         className="mobile-nav-link group"
                         style={{ animationDelay: `${index * 45}ms` }}
                       >

@@ -1,7 +1,8 @@
 import { Facebook, Instagram, Mail, Phone, Youtube } from "lucide-react";
+import { useLocation } from "wouter";
 import { CONTACT, NAV_LINKS, SITE, SOCIAL } from "@/data/siteContent";
 import { useOffersModal } from "@/contexts/OffersModalContext";
-import { scrollToSection } from "@/lib/scroll";
+import { navigateSiteLink } from "@/lib/siteNav";
 
 const SOCIAL_LINKS = [
   { href: SOCIAL.facebook, label: "Facebook", icon: Facebook },
@@ -17,9 +18,10 @@ const FOOTER_NAV = [
 
 export function SiteFooter() {
   const { openOffers } = useOffersModal();
+  const [location, setLocation] = useLocation();
 
-  const handleNavClick = (href: string) => {
-    scrollToSection(href.replace(/^#/, ""));
+  const handleNavClick = (href: string, page?: boolean) => {
+    navigateSiteLink({ href, label: "", page }, setLocation, location);
   };
 
   return (
@@ -69,7 +71,7 @@ export function SiteFooter() {
                 <li key={link.href}>
                   <button
                     type="button"
-                    onClick={() => handleNavClick(link.href)}
+                    onClick={() => handleNavClick(link.href, "page" in link ? link.page : undefined)}
                     className="nav-link text-left text-sm text-white/65 transition hover:text-[var(--gold)]"
                   >
                     {link.label}

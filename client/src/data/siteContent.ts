@@ -271,6 +271,7 @@ export const NAV_LINKS = [
   { href: "#location", label: "Локация" },
   { href: "#pricing", label: "Цени" },
   { href: "#contact", label: "Контакт" },
+  { href: "/pamporovo", label: "Пампорово", page: true },
 ];
 
 export const CONTACT = {

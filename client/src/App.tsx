@@ -13,24 +13,34 @@ import { initAdminPwaMeta, registerAdminServiceWorker } from "./lib/adminPwa";
 import Home from "./pages/Home";
 
 const AdminApp = lazy(() => import("./pages/admin/AdminApp"));
+const PamporovoPage = lazy(() => import("./pages/PamporovoPage"));
 
 function SiteRouter() {
   return (
-    <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/404"} component={NotFound} />
-      <Route component={NotFound} />
-    </Switch>
+    <Suspense fallback={<div className="min-h-screen bg-[var(--cream)]" aria-hidden />}>
+      <Switch>
+        <Route path={"/"} component={Home} />
+        <Route path={"/pamporovo"} component={PamporovoPage} />
+        <Route path={"/404"} component={NotFound} />
+        <Route component={NotFound} />
+      </Switch>
+    </Suspense>
   );
 }
 
 function PublicApp() {
-  const [appReady, setAppReady] = useState(false);
+  const [location] = useLocation();
+  const isGuidePage = location === "/pamporovo";
+  const [appReady, setAppReady] = useState(isGuidePage);
   const handlePreloaderComplete = useCallback(() => setAppReady(true), []);
+
+  useEffect(() => {
+    if (isGuidePage) setAppReady(true);
+  }, [isGuidePage]);
 
   return (
     <>
-      {!appReady && <Preloader onComplete={handlePreloaderComplete} />}
+      {!appReady && !isGuidePage && <Preloader onComplete={handlePreloaderComplete} />}
       <SmoothScrollProvider enabled={appReady}>
         <SiteReadyProvider ready={appReady}>
           <ThemeProvider defaultTheme="light">

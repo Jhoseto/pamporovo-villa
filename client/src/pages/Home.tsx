@@ -1,5 +1,6 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import { SiteHeader } from "@/components/site/SiteHeader";
+import { scrollToSection } from "@/lib/scroll";
 import { HeroSection } from "@/components/site/HeroSection";
 import { ScrollPanelExperience } from "@/components/site/ScrollPanelExperience";
 import { PropertyDetailsSection } from "@/components/site/PropertyDetailsSection";
@@ -42,6 +43,14 @@ function DarkSectionFallback() {
 }
 
 export default function Home() {
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (!hash) return;
+
+    const timer = window.setTimeout(() => scrollToSection(hash), 400);
+    return () => window.clearTimeout(timer);
+  }, []);
+
   return (
     <div className="relative min-h-screen bg-[var(--cream)]">
       <SiteHeader />
