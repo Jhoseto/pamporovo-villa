@@ -1,10 +1,10 @@
-import { motion, useScroll, useTransform } from "framer-motion";
 import { ChevronRight, Menu } from "lucide-react";
 import { useState } from "react";
 import { useLocation } from "wouter";
 import { CONTACT, NAV_LINKS, SITE } from "@/data/siteContent";
 import { useOffersModal } from "@/contexts/OffersModalContext";
 import { useHeaderScroll } from "@/hooks/useHeaderScroll";
+import { useScrollProgress } from "@/hooks/useScrollProgress";
 import { navigateSiteLink } from "@/lib/siteNav";
 import { cn } from "@/lib/utils";
 import { MagneticButton } from "./MagneticButton";
@@ -26,12 +26,10 @@ function SiteLogo({ variant = "header" }: { variant?: "header" | "menu" }) {
 
 export function SiteHeader() {
   const scrolled = useHeaderScroll(80);
+  const scrollProgress = useScrollProgress();
   const [open, setOpen] = useState(false);
   const [location, setLocation] = useLocation();
   const { openOffers } = useOffersModal();
-  const { scrollYProgress } = useScroll();
-  // scaleX is compositor-only (no layout reflow on every scroll tick unlike width)
-  const progressScaleX = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   const handleNavClick = (href: string, page?: boolean) => {
     navigateSiteLink({ href, label: "", page }, setLocation, location);
@@ -47,14 +45,16 @@ export function SiteHeader() {
     <header
       className={cn(
         "site-header fixed top-0 z-50 w-full transition-all duration-500",
+        scrolled && "is-scrolled",
         scrolled
           ? "border-b border-white/10 bg-[var(--ink)]/80 shadow-lg shadow-black/20 backdrop-blur-xl"
           : "border-b border-transparent bg-transparent"
       )}
     >
-      <motion.div
-        className="absolute bottom-0 left-0 h-[2px] w-full origin-left bg-gradient-to-r from-transparent via-[var(--gold)] to-transparent"
-        style={{ scaleX: progressScaleX }}
+      <div
+        className="site-header-progress absolute bottom-0 left-0 h-[2px] w-full origin-left bg-gradient-to-r from-transparent via-[var(--gold)] to-transparent"
+        style={{ transform: `scaleX(${scrollProgress})` }}
+        aria-hidden
       />
 
       <div className="site-header-inner">

@@ -85,7 +85,13 @@ export default function AdminBookingDetailPage() {
 
   const confirm = trpc.admin.bookings.confirm.useMutation({
     onSuccess: res => {
-      toast.success(res.emailSent ? "Потвърдена и изпратен имейл" : "Потвърдена");
+            if (res.cardSent) {
+        toast.success("Потвърдена — картата е изпратена по имейл");
+      } else if (res.emailSent) {
+        toast.success("Потвърдена — изпратен имейл за потвърждение");
+      } else {
+        toast.success("Потвърдена — използвайте панела по-долу за изпращане на картата");
+      }
       setConfirmOpen(false);
       utils.admin.bookings.getById.invalidate({ id });
       utils.admin.bookings.calendar.invalidate();

@@ -17,6 +17,8 @@ export function formatPriceEur(amount: number): string {
 
 export type { HeroPhoto, SitePhoto } from "./photos";
 export { GALLERY_IMAGES, HERO_PHOTO, VILLA_PHOTOS } from "./photos";
+export type { VillaGallery } from "./galleryContent";
+export { VILLA_GALLERIES, getVillaGallery } from "./galleryContent";
 
 export const SITE = {
   name: "Pamporovo Villa",
@@ -271,6 +273,7 @@ export const NAV_LINKS = [
   { href: "#location", label: "Локация" },
   { href: "#pricing", label: "Цени" },
   { href: "#contact", label: "Контакт" },
+  { href: "#reviews", label: "Отзиви" },
   { href: "/pamporovo", label: "Пампорово", page: true },
 ];
 

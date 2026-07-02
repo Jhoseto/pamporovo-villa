@@ -6,12 +6,12 @@ import { ScrollReveal } from "./ScrollReveal";
 export function VipSection() {
   return (
     <SectionShell
-      id="vip"
       eyebrow="VIP програма"
       title={VIP_PROGRAM.title}
       subtitle={VIP_PROGRAM.intro}
       overlap
       splitTitle
+      perfDefer
     >
       <ScrollReveal>
         <div className="vip-card relative mx-auto max-w-3xl overflow-hidden rounded-2xl border border-[var(--gold)]/45 p-8 md:p-12">

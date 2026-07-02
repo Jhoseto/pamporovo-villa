@@ -29,6 +29,13 @@
       "when": 1782720444779,
       "tag": "0003_moaning_karma",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1782999265720,
+      "tag": "0004_sudden_oracle",
+      "breakpoints": true
     }
   ]
 }

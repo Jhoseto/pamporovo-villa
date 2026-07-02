@@ -15,6 +15,7 @@ type SendMailOptions = {
   pass: string;
   from: string;
   to: string;
+  replyTo?: string;
   subject: string;
   text: string;
   html?: string;
@@ -33,6 +34,7 @@ function buildMessage(options: SendMailOptions): string {
   const headers = [
     `From: ${options.from}`,
     `To: ${options.to}`,
+    ...(options.replyTo ? [`Reply-To: ${options.replyTo}`] : []),
     `Subject: =?UTF-8?B?${encodeBase64(options.subject)}?=`,
     "MIME-Version: 1.0",
     hasAttachments

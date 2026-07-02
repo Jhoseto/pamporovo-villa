@@ -1,17 +1,22 @@
 import { ExternalLink, MapPin, Navigation } from "lucide-react";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 import { CONTACT, DISTANCES, PAMPOROVO_INFO, PROPERTY_LOCATION } from "@/data/siteContent";
 import { MapView } from "@/components/Map";
 import { SectionShell } from "./SectionShell";
 import { ScrollReveal } from "./ScrollReveal";
 
 export function LocationSection() {
+  const mapRef = useRef<HTMLDivElement>(null);
+  const mapReady = useInView(mapRef, { once: true, margin: "200px 0px" });
+
   return (
     <SectionShell
-      id="location"
       eyebrow="Локация"
       title="На крачка от всичко, далеч от шума"
       subtitle="к.к. Пампорово, местност Райковски ливади — сгушени в боровата гора"
       overlap
+      perfDefer
     >
       <ScrollReveal className="mb-10">
         <p className="mx-auto max-w-3xl text-center text-lg leading-relaxed text-foreground/75">
@@ -20,15 +25,27 @@ export function LocationSection() {
       </ScrollReveal>
 
       <ScrollReveal>
-        <div className="mx-auto max-w-6xl overflow-hidden rounded-3xl border border-border/50 shadow-[0_24px_60px_-24px_rgba(0,0,0,0.15)]">
+        <div
+          ref={mapRef}
+          className="mx-auto max-w-6xl overflow-hidden rounded-3xl border border-border/50 shadow-[0_24px_60px_-24px_rgba(0,0,0,0.15)]"
+        >
           <div className="relative">
-            <MapView
-              variant="premium"
-              className="w-full"
-              initialCenter={{ lat: PROPERTY_LOCATION.lat, lng: PROPERTY_LOCATION.lng }}
-              initialZoom={PROPERTY_LOCATION.zoom}
-              mapTitle={PROPERTY_LOCATION.label}
-            />
+            {mapReady ? (
+              <MapView
+                variant="premium"
+                className="w-full"
+                initialCenter={{ lat: PROPERTY_LOCATION.lat, lng: PROPERTY_LOCATION.lng }}
+                initialZoom={PROPERTY_LOCATION.zoom}
+                mapTitle={PROPERTY_LOCATION.label}
+              />
+            ) : (
+              <div
+                className="location-map-embed location-map-canvas flex h-[420px] w-full items-center justify-center bg-[var(--cream)] md:h-[520px]"
+                aria-hidden
+              >
+                <div className="h-8 w-8 animate-spin rounded-full border-2 border-[var(--gold)]/30 border-t-[var(--gold)]" />
+              </div>
+            )}
 
             <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-black/70 via-black/35 to-transparent p-6 pt-14 md:p-8 md:pt-16">
               <div className="pointer-events-auto flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">

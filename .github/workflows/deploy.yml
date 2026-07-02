@@ -50,6 +50,12 @@ jobs:
             echo "VAPID_PUBLIC_KEY=${{ secrets.VAPID_PUBLIC_KEY }}"
             echo "VAPID_PRIVATE_KEY=${{ secrets.VAPID_PRIVATE_KEY }}"
             echo "VAPID_SUBJECT=mailto:pamporovovilla@gmail.com"
+            echo "MAILJET_API_KEY=${{ secrets.MAILJET_API_KEY }}"
+            echo "MAILJET_API_SECRET=${{ secrets.MAILJET_API_SECRET }}"
+            echo "MAIL_FROM_EMAIL=${{ secrets.MAIL_FROM_EMAIL }}"
+            echo "MAIL_FROM_NAME=${{ secrets.MAIL_FROM_NAME }}"
+            echo "SUPPORT_EMAIL=${{ secrets.SUPPORT_EMAIL }}"
+            echo "SMTP_REPLY_TO=${{ secrets.SMTP_REPLY_TO }}"
           } > .env.production
 
       # Two archives — smaller uploads, no server-side npm install

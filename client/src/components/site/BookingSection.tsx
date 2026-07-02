@@ -1,4 +1,5 @@
-import { useEffect, useMemo, useState, type FormEvent } from "react";
+import { useEffect, useMemo, useRef, useState, type FormEvent } from "react";
+import { useInView } from "framer-motion";
 import type { DateRange } from "react-day-picker";
 import { toast } from "sonner";
 import { formatPriceEur, VILLAS } from "@/data/siteContent";
@@ -59,6 +60,8 @@ function rangeHasOccupiedNight(
 }
 
 export function BookingSection() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const calendarReady = useInView(sectionRef, { once: true, margin: "240px 0px" });
   const [dateRange, setDateRange] = useState<DateRange | undefined>();
   const [honeypot, setHoneypot] = useState("");
   const [formData, setFormData] = useState({
@@ -254,28 +257,40 @@ export function BookingSection() {
 
   return (
     <SectionShell
-      id="booking"
       eyebrow="Резервация"
       title="Запазете своето място в планината"
       subtitle="Изберете вила и дати, оставете данните си — а ние ще се свържем лично за потвърждение"
       overlap
       splitTitle
+      perfDefer
     >
-      <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[minmax(280px,360px)_1fr] lg:gap-10">
+      <div
+        ref={sectionRef}
+        className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[minmax(280px,360px)_1fr] lg:gap-10"
+      >
         <ScrollReveal direction="up">
           <PremiumFormCard title={`Изберете период за ${currentVillaName}`}>
-            <Calendar
-              mode="range"
-              selected={dateRange}
-              onSelect={handleCalendarSelect}
-              numberOfMonths={1}
-              min={2}
-              disabled={date => date < startOfDay(new Date())}
-              modifiers={{ occupied: isDayMarkedOccupied }}
-              modifiersClassNames={{ occupied: "booking-calendar-day-occupied" }}
-              classNames={{ today: "booking-calendar-day-today" }}
-              className="booking-calendar mx-auto rounded-none bg-transparent p-0 [--cell-size:2.5rem]"
-            />
+            {calendarReady ? (
+              <Calendar
+                mode="range"
+                selected={dateRange}
+                onSelect={handleCalendarSelect}
+                numberOfMonths={1}
+                min={2}
+                disabled={date => date < startOfDay(new Date())}
+                modifiers={{ occupied: isDayMarkedOccupied }}
+                modifiersClassNames={{ occupied: "booking-calendar-day-occupied" }}
+                classNames={{ today: "booking-calendar-day-today" }}
+                className="booking-calendar mx-auto rounded-none bg-transparent p-0 [--cell-size:2.5rem]"
+              />
+            ) : (
+              <div
+                className="booking-calendar mx-auto flex min-h-[18rem] items-center justify-center p-0 [--cell-size:2.5rem]"
+                aria-hidden
+              >
+                <div className="h-8 w-8 animate-spin rounded-full border-2 border-[var(--gold)]/30 border-t-[var(--gold)]" />
+              </div>
+            )}
             {dateRange?.from && (
               <div className="mt-4">
                 <button

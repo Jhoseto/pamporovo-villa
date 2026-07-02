@@ -13,6 +13,7 @@ import AdminBookingNewPage from "./AdminBookingNewPage";
 import AdminBookingDetailPage from "./AdminBookingDetailPage";
 import AdminPricingPage from "./AdminPricingPage";
 import AdminOffersPage from "./AdminOffersPage";
+import AdminReviewsPage from "./AdminReviewsPage";
 import AdminUsersPage from "./AdminUsersPage";
 import AdminSettingsPage from "./AdminSettingsPage";
 import AdminContactsPage from "./AdminContactsPage";
@@ -152,6 +153,11 @@ export default function AdminApp() {
         <Route path="/admin/offers">
           <AdminGuard>
             <AdminOffersPage />
+          </AdminGuard>
+        </Route>
+        <Route path="/admin/reviews">
+          <AdminGuard>
+            <AdminReviewsPage />
           </AdminGuard>
         </Route>
         <Route path="/admin/users">

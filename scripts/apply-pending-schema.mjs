@@ -327,6 +327,28 @@ try {
     steps.push("admin_users.notification_sound_ext");
   }
 
+  if (!(await tableExists(conn, "customer_reviews"))) {
+    await conn.query(`
+      CREATE TABLE customer_reviews (
+        id int NOT NULL AUTO_INCREMENT,
+        guest_name varchar(255) NOT NULL,
+        guest_email varchar(320) DEFAULT NULL,
+        rating int NOT NULL,
+        body text NOT NULL,
+        villa_id varchar(32) DEFAULT NULL,
+        stay_period varchar(128) DEFAULT NULL,
+        is_published tinyint(1) NOT NULL DEFAULT 0,
+        source enum('website','admin') NOT NULL DEFAULT 'website',
+        created_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        updated_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        PRIMARY KEY (id),
+        KEY customer_reviews_published_idx (is_published),
+        KEY customer_reviews_created_idx (created_at)
+      )
+    `);
+    steps.push("customer_reviews table");
+  }
+
   for (const [table, index, cols] of [
     ["booking_requests", "booking_villa_status_idx", "(villa_id, status)"],
     ["booking_requests", "booking_dates_idx", "(check_in_date, check_out_date)"],
@@ -338,7 +360,27 @@ try {
     }
   }
 
-  const migrationFile = path.join(root, "drizzle", "0003_moaning_karma.sql");
+  const migrationFile0003 = path.join(root, "drizzle", "0003_moaning_karma.sql");
+  if (fs.existsSync(migrationFile0003)) {
+    const hash = crypto.createHash("sha256").update(fs.readFileSync(migrationFile0003)).digest("hex");
+    const [applied] = await conn.query(
+      "SELECT 1 FROM __drizzle_migrations WHERE hash = ? LIMIT 1",
+      [hash]
+    );
+    if (applied.length === 0) {
+      const journal = JSON.parse(
+        fs.readFileSync(path.join(root, "drizzle/meta/_journal.json"), "utf8")
+      ).entries.find(e => e.tag === "0003_moaning_karma");
+      const createdAt = journal?.when ?? Date.now();
+      await conn.query("INSERT INTO __drizzle_migrations (hash, created_at) VALUES (?, ?)", [
+        hash,
+        createdAt,
+      ]);
+      steps.push("drizzle migration 0003 marked applied");
+    }
+  }
+
+  const migrationFile = path.join(root, "drizzle", "0004_sudden_oracle.sql");
   if (fs.existsSync(migrationFile)) {
     const hash = crypto.createHash("sha256").update(fs.readFileSync(migrationFile)).digest("hex");
     const [applied] = await conn.query(
@@ -346,15 +388,15 @@ try {
       [hash]
     );
     if (applied.length === 0) {
-    const journal = JSON.parse(
-      fs.readFileSync(path.join(root, "drizzle/meta/_journal.json"), "utf8")
-    ).entries.find(e => e.tag === "0003_moaning_karma");
-    const createdAt = journal?.when ?? Date.now();
+      const journal = JSON.parse(
+        fs.readFileSync(path.join(root, "drizzle/meta/_journal.json"), "utf8")
+      ).entries.find(e => e.tag === "0004_sudden_oracle");
+      const createdAt = journal?.when ?? Date.now();
       await conn.query("INSERT INTO __drizzle_migrations (hash, created_at) VALUES (?, ?)", [
         hash,
         createdAt,
       ]);
-      steps.push("drizzle migration 0003 marked applied");
+      steps.push("drizzle migration 0004 marked applied");
     }
   }
 

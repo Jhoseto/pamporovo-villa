@@ -12,6 +12,7 @@ import {
 } from "@/lib/confirmationCardImage";
 import { confirmationCardFilename } from "@shared/confirmationCardFilename";
 import { whatsAppUrl } from "@/lib/adminBooking";
+import { openDeepLink } from "@/lib/openDeepLink";
 import { trpc } from "@/lib/trpc";
 import { toast } from "sonner";
 
@@ -24,6 +25,8 @@ type Props = {
 
 export function BookingConfirmationSendPanel({ bookingId, guestPhone, guestEmail, cardData }: Props) {
   const [busy, setBusy] = useState(false);
+  const { data: emailStatus } = trpc.admin.bookings.emailStatus.useQuery();
+
   const sendEmail = trpc.admin.bookings.sendConfirmationCard.useMutation({
     onSuccess: res => {
       toast.success(res.sent ? "Картата е изпратена по имейл" : "Имейлът не е конфигуриран — изтеглете JPG");
@@ -59,6 +62,10 @@ export function BookingConfirmationSendPanel({ bookingId, guestPhone, guestEmail
   const handleEmail = async () => {
     if (!guestEmail?.trim()) {
       toast.error("Няма имейл на госта");
+      return;
+    }
+    if (!emailStatus?.configured) {
+      toast.error("Имейл не е конфигуриран — добавете Mailjet ключове в .env на сървъра");
       return;
     }
     setBusy(true);
@@ -103,8 +110,24 @@ export function BookingConfirmationSendPanel({ bookingId, guestPhone, guestEmail
     try {
       const blob = await generate();
       downloadBlob(blob, filename);
-      window.location.href = viberChatUrl(guestPhone);
-      toast.info("Картата е изтеглена — прикачете JPG файла във Viber чата");
+      const message = confirmationCardMessage(cardData);
+      const url = viberChatUrl(guestPhone, message);
+      if (!url) {
+        toast.error("Невалиден телефонен номер за Viber");
+        return;
+      }
+
+      try {
+        await navigator.clipboard.writeText(message);
+      } catch {
+        /* clipboard optional */
+      }
+
+      openDeepLink(url);
+      toast.info(
+        "Картата е изтеглена, съобщението е копирано — отворете Viber и прикачете JPG файла",
+        { duration: 6000 }
+      );
     } catch (err) {
       toast.error(err instanceof Error ? err.message : "Грешка");
     } finally {
@@ -121,6 +144,14 @@ export function BookingConfirmationSendPanel({ bookingId, guestPhone, guestEmail
         <p className="text-sm text-[var(--admin-muted)]">
           Изпратете карта с данните от резервацията на клиента — като JPG файл.
         </p>
+        {emailStatus && !emailStatus.configured && (
+          <p className="mt-2 text-xs text-amber-700 dark:text-amber-300">
+            За изпращане по имейл настройте Mailjet (безплатно до 6000/мес.) — вижте .env.example.
+          </p>
+        )}
+        {emailStatus?.configured && emailStatus.provider === "mailjet" && (
+          <p className="mt-2 text-xs text-[var(--admin-muted)]">Имейл доставчик: Mailjet</p>
+        )}
       </div>
 
       <div className="flex flex-wrap items-start gap-6">
@@ -140,6 +171,11 @@ export function BookingConfirmationSendPanel({ bookingId, guestPhone, guestEmail
           </Button>
           {!guestPhone && !guestEmail && (
             <p className="text-xs text-[var(--admin-muted)]">Добавете телефон или имейл за изпращане.</p>
+          )}
+          {guestPhone && (
+            <p className="text-xs text-[var(--admin-muted)]">
+              Viber/WhatsApp не могат да прикачат JPG автоматично — файлът се изтегля, после го добавяте ръчно в чата.
+            </p>
           )}
         </div>
       </div>

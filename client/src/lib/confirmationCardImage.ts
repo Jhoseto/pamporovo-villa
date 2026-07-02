@@ -329,9 +329,4 @@ export function confirmationCardMessage(data: ConfirmationCardData): string {
   ].join("\n");
 }
 
-export function viberChatUrl(phone: string): string {
-  let digits = phone.replace(/\D/g, "");
-  if (digits.startsWith("0")) digits = `359${digits.slice(1)}`;
-  if (!digits.startsWith("359")) digits = `359${digits}`;
-  return `viber://chat?number=%2B${digits}`;
-}
+export { viberChatUrl } from "@shared/messagingLinks";

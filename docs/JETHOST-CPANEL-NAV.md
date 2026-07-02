@@ -70,7 +70,7 @@
 | 3 | Step 3 | **ALL PRIVILEGES** → Next |
 | 4 | Done | Copy credentials |
 
-**Connection string за `.deploy.env`:**
+**Connection string за `.env` (`DATABASE_URL`):**
 ```
 mysql://USERNAME:PASSWORD@localhost:3306/username_pamporovo
 ```

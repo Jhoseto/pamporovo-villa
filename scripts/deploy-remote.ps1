@@ -18,25 +18,97 @@ function Read-EnvFile([string]$Path) {
   return $map
 }
 
+function Convert-ToProductionDatabaseUrl([string]$Url) {
+  if ([string]::IsNullOrWhiteSpace($Url)) { return $Url }
+  return $Url -replace '@127\.0\.0\.1:3307/', '@localhost:3306/'
+}
+
+function Build-ProductionEnvContent([string]$EnvPath, [hashtable]$Overrides) {
+  if (-not (Test-Path $EnvPath)) {
+    throw "Missing .env — copy .env.example to .env and fill in values"
+  }
+  $lines = Get-Content $EnvPath -Encoding UTF8
+  $seen = @{}
+  $out = New-Object System.Collections.Generic.List[string]
+
+  foreach ($line in $lines) {
+    $trimmed = $line.Trim()
+    if (-not $trimmed -or $trimmed.StartsWith("#")) {
+      $out.Add($line)
+      continue
+    }
+    $idx = $trimmed.IndexOf("=")
+    if ($idx -lt 1) {
+      $out.Add($line)
+      continue
+    }
+    $key = $trimmed.Substring(0, $idx).Trim()
+    if ($key -in @("NODE_ENV", "TRUST_PROXY")) { continue }
+    $seen[$key] = $true
+    if ($Overrides.ContainsKey($key) -and -not [string]::IsNullOrWhiteSpace($Overrides[$key])) {
+      $out.Add("${key}=$($Overrides[$key])")
+    } else {
+      $out.Add($line)
+    }
+  }
+
+  foreach ($key in $Overrides.Keys) {
+    if ($key -in @("NODE_ENV", "TRUST_PROXY")) { continue }
+    if (-not $seen[$key] -and -not [string]::IsNullOrWhiteSpace($Overrides[$key])) {
+      $out.Add("${key}=$($Overrides[$key])")
+    }
+  }
+
+  $final = New-Object System.Collections.Generic.List[string]
+  $final.Add("NODE_ENV=production")
+  $final.Add("TRUST_PROXY=1")
+  foreach ($line in $out) { $final.Add($line) }
+  return ($final -join "`n") + "`n"
+}
+
 function Invoke-SSH([string[]]$SshArgs, [string]$Remote, [string]$Cmd) {
   & ssh @SshArgs $Remote $Cmd
   if ($LASTEXITCODE -ne 0) { throw "SSH command failed" }
 }
 
-# ── Load .deploy.env ──────────────────────────────────────────────────────────
+# ── Load .deploy.env (SSH only) ───────────────────────────────────────────────
 $deployEnvPath = Join-Path $Root ".deploy.env"
 if (-not (Test-Path $deployEnvPath)) {
   Write-Host "ERROR: .deploy.env not found." -ForegroundColor Red
+  Write-Host "Copy .deploy.env.example to .deploy.env and fill SSH credentials." -ForegroundColor Yellow
   exit 1
 }
 $cfg = Read-EnvFile $deployEnvPath
 
-$missing = @("JETHOST_SSH_HOST","JETHOST_SSH_USER","DATABASE_URL","SITE_URL") | Where-Object {
-  [string]::IsNullOrWhiteSpace($cfg[$_]) -or $cfg[$_] -match 'CHANGE_THIS|YOUR-TEMP|DB_USER|DB_PASSWORD'
+$missing = @("JETHOST_SSH_HOST", "JETHOST_SSH_USER") | Where-Object {
+  [string]::IsNullOrWhiteSpace($cfg[$_])
 }
 if ($missing.Count -gt 0) {
   Write-Host "Fill these in .deploy.env first:" -ForegroundColor Yellow
   $missing | ForEach-Object { Write-Host "  $_" }
+  exit 1
+}
+
+$appEnvPath = Join-Path $Root ".env"
+$appEnv = Read-EnvFile $appEnvPath
+
+if (-not (Test-Path $appEnvPath)) {
+  Write-Host "ERROR: .env not found. Copy .env.example to .env first." -ForegroundColor Red
+  exit 1
+}
+
+$overrides = @{
+  "DATABASE_URL" = (Convert-ToProductionDatabaseUrl $appEnv["DATABASE_URL"])
+}
+
+$dbUrl = $overrides["DATABASE_URL"]
+$siteUrl = $appEnv["SITE_URL"]
+if ([string]::IsNullOrWhiteSpace($dbUrl) -or $dbUrl -match 'DB_USER|DB_PASSWORD|CHANGE') {
+  Write-Host "Set DATABASE_URL in .env" -ForegroundColor Yellow
+  exit 1
+}
+if ([string]::IsNullOrWhiteSpace($siteUrl) -or $siteUrl -match 'YOUR-TEMP|CHANGE') {
+  Write-Host "Set SITE_URL in .env to production URL (https://...)" -ForegroundColor Yellow
   exit 1
 }
 
@@ -56,15 +128,14 @@ if ($sshKey -and (Test-Path $sshKey)) {
   $sshBase = @("-i", $sshKey) + $sshBase
 }
 
-# ── Generate production secrets ───────────────────────────────────────────────
+# ── Generate missing secrets into .env ────────────────────────────────────────
 if (-not $SkipSecrets) {
-  Write-Host "==> Generating production secrets"
+  Write-Host "==> Filling missing secrets in .env"
   & node (Join-Path $Root "scripts/generate-production-secrets.mjs")
+  $appEnv = Read-EnvFile $appEnvPath
 }
-$prodEnv = Join-Path $Root ".env.production.local"
-if (-not (Test-Path $prodEnv)) {
-  throw "Missing .env.production.local - run: node scripts/generate-production-secrets.mjs"
-}
+
+$prodEnvContent = Build-ProductionEnvContent $appEnvPath $overrides
 
 # ── Build locally (avoids OOM on shared hosting) ─────────────────────────────
 if (-not $SkipBuild) {
@@ -94,15 +165,14 @@ Write-Host "    Remote: $remotePath"
 
 # ── Clone or update repo ──────────────────────────────────────────────────────
 Write-Host "==> Syncing repo on server"
-# Use single-quoted string then substitute - avoids PS parsing && as operator
 $cloneCmd = 'if [ -d "RP/.git" ]; then cd "RP" && git fetch origin main && git reset --hard origin/main; else git clone "REPO" "RP"; fi'
 $cloneCmd = $cloneCmd.Replace("RP", $remotePath).Replace("REPO", $repo)
 Invoke-SSH $sshBase $remote $cloneCmd
 
-# ── Upload .env ───────────────────────────────────────────────────────────────
+# ── Upload .env (production snapshot — local .env stays unchanged) ─────────────
 Write-Host "==> Uploading .env"
 $envDest = 'cat > "RP/.env"'.Replace("RP", $remotePath)
-Get-Content $prodEnv -Raw -Encoding UTF8 | & ssh @sshBase $remote $envDest
+$prodEnvContent | & ssh @sshBase $remote $envDest
 if ($LASTEXITCODE -ne 0) { throw "Upload .env failed" }
 
 # ── Upload dist/ via scp (binary-safe, no pipe corruption) ───────────────────
@@ -111,7 +181,6 @@ $tmpTar = [System.IO.Path]::Combine([System.IO.Path]::GetTempPath(), "pamporovo-
 & tar -czf $tmpTar -C $Root dist
 if ($LASTEXITCODE -ne 0) { throw "tar failed - Git for Windows includes tar; ensure it is in PATH" }
 
-# scp uses -P (capital) for port, unlike ssh which uses -p
 $scpBase = @("-P", $sshPort, "-o", "StrictHostKeyChecking=accept-new", "-o", "ConnectTimeout=20")
 if ($sshKey -and (Test-Path $sshKey)) { $scpBase = @("-i", $sshKey) + $scpBase }
 $remoteTar = "~/pamporovo-dist.tar.gz"
@@ -130,7 +199,6 @@ $deployCmd = 'cd "RP" && chmod +x scripts/*.sh && bash scripts/deploy.sh'.Replac
 Invoke-SSH $sshBase $remote $deployCmd
 
 # ── Done ──────────────────────────────────────────────────────────────────────
-$siteUrl = $cfg["SITE_URL"]
 Write-Host ""
 Write-Host "Deploy finished!" -ForegroundColor Green
 Write-Host "  Site:   ${siteUrl}/" -ForegroundColor Cyan

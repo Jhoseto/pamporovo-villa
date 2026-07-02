@@ -13,7 +13,18 @@ import { Label } from "@/components/ui/label";
 import { formatPriceEur } from "@/data/siteContent";
 import { bookingBalanceDue } from "@shared/bookingPayment";
 import { BookingConfirmationCardPreview } from "@/components/admin/BookingConfirmationCardPreview";
-import type { ConfirmationCardData } from "@/lib/confirmationCardImage";
+import {
+  blobToBase64,
+  generateConfirmationCardJpeg,
+  type ConfirmationCardData,
+} from "@/lib/confirmationCardImage";
+import { toast } from "sonner";
+
+type ConfirmPayment = {
+  totalAmountEur: number;
+  depositPaidEur: number;
+  imageBase64?: string;
+};
 
 type Props = {
   open: boolean;
@@ -27,7 +38,7 @@ type Props = {
   nights: number;
   suggestedTotal: number | null;
   busy?: boolean;
-  onConfirm: (payment: { totalAmountEur: number; depositPaidEur: number }) => void;
+  onConfirm: (payment: ConfirmPayment) => void;
 };
 
 export function BookingConfirmDialog({
@@ -46,6 +57,7 @@ export function BookingConfirmDialog({
 }: Props) {
   const [total, setTotal] = useState("");
   const [deposit, setDeposit] = useState("");
+  const [generating, setGenerating] = useState(false);
 
   useEffect(() => {
     if (!open) return;
@@ -74,13 +86,34 @@ export function BookingConfirmDialog({
         }
       : null;
 
+  const handleConfirm = async () => {
+    if (!preview) return;
+    setGenerating(true);
+    try {
+      const blob = await generateConfirmationCardJpeg(preview);
+      const imageBase64 = await blobToBase64(blob);
+      onConfirm({
+        totalAmountEur: totalNum,
+        depositPaidEur: depositNum,
+        imageBase64,
+      });
+    } catch (err) {
+      toast.error(err instanceof Error ? err.message : "Грешка при генериране на картата");
+    } finally {
+      setGenerating(false);
+    }
+  };
+
+  const submitBusy = busy || generating;
+
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="admin-glass-card max-h-[90vh] overflow-y-auto sm:max-w-2xl">
         <DialogHeader>
           <DialogTitle>Потвърждение на резервация</DialogTitle>
           <DialogDescription>
-            Въведете общата сума и платеното капаро. Клиентът ще получи карта с детайлите.
+            Въведете общата сума и платеното капаро. Клиентът ще получи картата по имейл (ако има адрес и Mailjet е
+            настроен).
           </DialogDescription>
         </DialogHeader>
 
@@ -138,15 +171,15 @@ export function BookingConfirmDialog({
         </div>
 
         <DialogFooter className="gap-2 sm:gap-0">
-          <Button variant="outline" className="admin-glass-btn" onClick={() => onOpenChange(false)} disabled={busy}>
+          <Button variant="outline" className="admin-glass-btn" onClick={() => onOpenChange(false)} disabled={submitBusy}>
             Отказ
           </Button>
           <Button
             className="admin-btn-primary"
-            disabled={busy || !validTotal || !validDeposit || depositNum > totalNum}
-            onClick={() => onConfirm({ totalAmountEur: totalNum, depositPaidEur: depositNum })}
+            disabled={submitBusy || !validTotal || !validDeposit || depositNum > totalNum}
+            onClick={handleConfirm}
           >
-            Потвърди резервацията
+            {generating ? "Подготовка…" : "Потвърди резервацията"}
           </Button>
         </DialogFooter>
       </DialogContent>

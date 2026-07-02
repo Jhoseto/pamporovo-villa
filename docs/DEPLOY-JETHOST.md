@@ -1,5 +1,21 @@
 # Deploy to JetHost Maverick
 
+## Env файлове (само 2)
+
+| Файл | Какво съдържа |
+|------|----------------|
+| **`.env`** | Всичко за app-а: DB, пароли, Mailjet, VAPID, SITE_URL |
+| **`.deploy.env`** | Само SSH: host, user, port, ключ |
+
+Шаблони: `.env.example` и `.deploy.env.example`
+
+```
+copy .env.example .env
+copy .deploy.env.example .deploy.env
+```
+
+---
+
 ## Архитектура
 
 ```
@@ -19,7 +35,7 @@ deploy.sh
 1. Влез в **https://eu1001.jethosting.com:2083/**
 2. **Databases → MySQL Database Wizard**
 3. Създай: база `vjlxjaxe_pamporovo-villa`, user `vjlxjaxe_PamporovoVilla`, запомни паролата
-4. Запиши `DATABASE_URL` в `.deploy.env`
+4. Запиши `DATABASE_URL` в **`.env`**
 
 ### 2. cPanel — Node.js App
 1. **Software → Setup Node.js App → Create Application**
@@ -30,10 +46,12 @@ deploy.sh
    - Startup file: `dist/index.js`
 2. Натисни **Create**
 
-### 3. Конфигурирай `.deploy.env`
+### 3. Конфигурирай `.env` и `.deploy.env`
 ```bash
-cp .deploy.env.example .deploy.env
-# Попълни: JETHOST_SSH_HOST, JETHOST_SSH_USER, DATABASE_URL, SITE_URL
+copy .env.example .env
+copy .deploy.env.example .deploy.env
+# .env → DATABASE_URL, SITE_URL, Mailjet, admin password
+# .deploy.env → JETHOST_SSH_HOST, JETHOST_SSH_USER, JETHOST_SSH_KEY
 ```
 
 ### 4. SSH ключ (за deploy без парола)
@@ -50,10 +68,10 @@ pnpm deploy:remote
 ```
 
 Прави:
-1. Генерира production secrets → `.env.production.local`
+1. Попълва липсващи secrets в `.env` (JWT, VAPID — без да пипа NODE_ENV)
 2. Билдва локално (`pnpm build`) — `dist/`
 3. SSH: `git pull` на сървъра
-4. Качва `.env` и `dist/` via scp
+4. Качва production snapshot на `.env` и `dist/` via scp
 5. Сървър: `deploy.sh` (db sync + restart)
 
 > **Бележка:** Не се изпълнява `npm install` на сървъра — deps се качват от GitHub Actions или чрез бутона "Run NPM Install" в cPanel.
@@ -70,25 +88,32 @@ pnpm deploy:remote
 
 ### Настройка на secrets (веднъж):
 ```bash
-pnpm secrets:prod          # генерира JWT, VAPID, admin password
-pnpm deploy:github-secrets # качва всичко в GitHub Secrets
+pnpm secrets:prod          # попълва липсващи JWT/VAPID в .env
+pnpm deploy:github-secrets       # needs gh CLI
+pnpm deploy:github-secrets:print # без gh — показва какво да paste-неш в GitHub
 ```
 
 Или ги добави ръчно в **GitHub → Settings → Secrets → Actions**:
 
 | Secret | Откъде |
 |--------|--------|
-| `JETHOST_SSH_HOST` | `eu1001.jethosting.com` |
-| `JETHOST_SSH_USER` | `vjlxjaxe` |
-| `JETHOST_SSH_PORT` | `1022` |
-| `JETHOST_APP_DIR` | `pamporovo-villa` |
-| `JETHOST_SSH_KEY` | съдържанието на `~/.ssh/id_ed25519_jethost` |
-| `DATABASE_URL` | от `.deploy.env` |
-| `SITE_URL` | от `.deploy.env` |
-| `JWT_SECRET` | от `.env.production.local` |
-| `MASTER_ADMIN_PASSWORD` | от `.env.production.local` |
-| `VAPID_PUBLIC_KEY` | от `.env.production.local` |
-| `VAPID_PRIVATE_KEY` | от `.env.production.local` |
+| `JETHOST_SSH_*` | `.deploy.env` |
+| `DATABASE_URL` | `.env` |
+| `SITE_URL` | `.env` |
+| `JWT_SECRET` | `.env` |
+| `MASTER_ADMIN_PASSWORD` | `.env` |
+| `VAPID_*` | `.env` |
+| `MAILJET_*`, `MAIL_FROM_*`, `SUPPORT_EMAIL` | `.env` (optional) |
+
+---
+
+## Локално с production DB (tunnel)
+
+```bash
+pnpm db:tunnel    # отваря SSH tunnel → localhost:3307
+# В .env: DATABASE_URL=mysql://user:pass@127.0.0.1:3307/dbname
+./restart.bat
+```
 
 ---
 
@@ -97,7 +122,7 @@ pnpm deploy:github-secrets # качва всичко в GitHub Secrets
 Когато искаш да активираш `pamporovovilla.com`:
 1. В cPanel → Setup Node.js App → смени Application URL на `pamporovovilla.com`
 2. При домейн регистратора: A record → IP на сървъра (вижда се в cPanel горе вдясно)
-3. Смени `SITE_URL` в `.deploy.env` и в GitHub Secrets
+3. Смени `SITE_URL` в `.env` и пусни `pnpm deploy:github-secrets`
 
 ---
 

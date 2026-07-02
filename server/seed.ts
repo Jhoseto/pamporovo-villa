@@ -8,6 +8,7 @@ import {
 import * as db from "./db";
 import { ENV } from "./_core/env";
 import { hashPassword } from "./_core/auth";
+import { seedReviewsIfEmpty } from "./seedReviews";
 
 const SEED_OFFERS = [
   {
@@ -123,6 +124,11 @@ export async function runSeedIfNeeded() {
         });
       }
       console.log("[Seed] Offers seeded");
+    }
+
+    const reviewsSeeded = await seedReviewsIfEmpty(db.insertReview, db.countAllReviews);
+    if (reviewsSeeded) {
+      console.log(`[Seed] ${12} guest reviews seeded`);
     }
   } catch (error) {
     console.warn("[Seed] Skipped (database may be unavailable):", error);

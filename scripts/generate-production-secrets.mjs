@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 /**
- * Generates production secrets and writes .env.production.local (gitignored).
+ * Generates missing production secrets into .env (single app config file).
+ * Preserves existing values (DATABASE_URL, Mailjet keys, etc.).
+ *
  * Usage: node scripts/generate-production-secrets.mjs [--print]
  */
 import crypto from "crypto";
@@ -10,23 +12,31 @@ import { fileURLToPath } from "url";
 import webpush from "web-push";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const examplePath = path.join(root, ".env.production.example");
-const outputPath = path.join(root, ".env.production.local");
-const deployEnvPath = path.join(root, ".deploy.env");
+const examplePath = path.join(root, ".env.example");
+const outputPath = path.join(root, ".env");
 
-function readDeployOverrides() {
-  if (!fs.existsSync(deployEnvPath)) return {};
-  const out = {};
-  for (const line of fs.readFileSync(deployEnvPath, "utf8").split(/\r?\n/)) {
+function parseEnv(content) {
+  const lines = content.split(/\r?\n/);
+  const map = new Map();
+  const order = [];
+  for (const line of lines) {
     const trimmed = line.trim();
     if (!trimmed || trimmed.startsWith("#")) continue;
     const eq = trimmed.indexOf("=");
     if (eq === -1) continue;
     const key = trimmed.slice(0, eq).trim();
     const value = trimmed.slice(eq + 1).trim();
-    out[key] = value;
+    if (!map.has(key)) order.push(key);
+    map.set(key, value);
   }
-  return out;
+  return { lines, map, order };
+}
+
+function isPlaceholder(value) {
+  if (!value?.trim()) return true;
+  return /CHANGE|YOUR-TEMP|local-dev|do-not-use-in-production|DB_USER|DB_PASSWORD|app-password|^$/.test(
+    value,
+  );
 }
 
 function randomPassword(length = 20) {
@@ -39,32 +49,40 @@ function randomPassword(length = 20) {
   return result;
 }
 
-const overrides = readDeployOverrides();
-const jwtSecret = crypto.randomBytes(32).toString("hex");
+function upsertLine(content, key, value) {
+  const lineRe = new RegExp(`^(${key}=).*$`, "m");
+  if (lineRe.test(content)) {
+    return content.replace(lineRe, `$1${value}`);
+  }
+  return `${content.trimEnd()}\n${key}=${value}\n`;
+}
+
+let content = fs.existsSync(outputPath)
+  ? fs.readFileSync(outputPath, "utf8")
+  : fs.readFileSync(examplePath, "utf8");
+
+const parsed = parseEnv(content);
 const vapid = webpush.generateVAPIDKeys();
-const adminPassword = overrides.MASTER_ADMIN_PASSWORD || randomPassword(20);
 
-let template = fs.readFileSync(examplePath, "utf8");
-
-const replacements = {
-  JWT_SECRET: jwtSecret,
+const generated = {
+  JWT_SECRET: crypto.randomBytes(32).toString("hex"),
   VAPID_PUBLIC_KEY: vapid.publicKey,
   VAPID_PRIVATE_KEY: vapid.privateKey,
-  MASTER_ADMIN_PASSWORD: adminPassword,
-  SITE_URL: overrides.SITE_URL || "https://YOUR-TEMP-URL-HERE",
-  DATABASE_URL: overrides.DATABASE_URL || "mysql://DB_USER:DB_PASSWORD@localhost:3306/DB_NAME",
+  MASTER_ADMIN_PASSWORD: isPlaceholder(parsed.map.get("MASTER_ADMIN_PASSWORD"))
+    ? randomPassword(20)
+    : parsed.map.get("MASTER_ADMIN_PASSWORD"),
 };
 
-for (const [key, value] of Object.entries(replacements)) {
-  const lineRe = new RegExp(`^(${key}=).*$`, "m");
-  if (lineRe.test(template)) {
-    template = template.replace(lineRe, `$1${value}`);
+for (const [key, value] of Object.entries(generated)) {
+  const current = parsed.map.get(key);
+  if (isPlaceholder(current)) {
+    content = upsertLine(content, key, value);
   }
 }
 
 const printOnly = process.argv.includes("--print");
 if (printOnly) {
-  console.log(template);
+  console.log(content);
   process.exit(0);
 }
 
@@ -72,16 +90,17 @@ const hadFile = fs.existsSync(outputPath);
 if (hadFile) {
   const backup = `${outputPath}.${Date.now()}.bak`;
   fs.copyFileSync(outputPath, backup);
-  console.log(`Backed up existing file to ${path.basename(backup)}`);
+  console.log(`Backed up existing .env to ${path.basename(backup)}`);
 }
 
-fs.writeFileSync(outputPath, template, "utf8");
+fs.writeFileSync(outputPath, content, "utf8");
 
-console.log("Wrote .env.production.local");
+console.log("Updated .env with generated secrets (empty/placeholder fields only).");
 console.log("");
-console.log("Generated credentials (save these):");
-console.log(`  MASTER_ADMIN_PASSWORD=${adminPassword}`);
-console.log(`  JWT_SECRET=${jwtSecret.slice(0, 8)}...`);
+console.log("Verify these in .env before deploy:");
+console.log(`  DATABASE_URL`);
+console.log(`  SITE_URL`);
+console.log(`  MASTER_ADMIN_PASSWORD=${generated.MASTER_ADMIN_PASSWORD}`);
+console.log(`  MAILJET_API_KEY / MAILJET_API_SECRET (for email)`);
 console.log("");
-console.log("Still required in .deploy.env before remote deploy:");
-console.log("  JETHOST_SSH_HOST, JETHOST_SSH_USER, DATABASE_URL, SITE_URL");
+console.log("SSH deploy: fill .deploy.env (copy from .deploy.env.example)");

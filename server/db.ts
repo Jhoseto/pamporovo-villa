@@ -6,6 +6,7 @@ import {
   blockedDates,
   bookingRequests,
   clientContacts,
+  customerReviews,
   offers,
   pricingExtras,
   pushSubscriptions,
@@ -14,10 +15,12 @@ import {
   type BlockedDate,
   type BookingRequest,
   type ClientContact,
+  type CustomerReview,
   type InsertAdminUser,
   type InsertBlockedDate,
   type InsertBookingRequest,
   type InsertClientContact,
+  type InsertCustomerReview,
   type InsertOffer,
   type InsertVillaPricing,
   type Offer,
@@ -857,4 +860,58 @@ export async function backfillGuestPhoneNormalized(): Promise<number> {
     updated++;
   }
   return updated;
+}
+
+// --- Customer reviews ---
+
+export async function listReviews(): Promise<CustomerReview[]> {
+  const db = await requireDb();
+  return db.select().from(customerReviews).orderBy(desc(customerReviews.createdAt));
+}
+
+export async function getPublishedReviews(): Promise<CustomerReview[]> {
+  const db = await requireDb();
+  return db
+    .select()
+    .from(customerReviews)
+    .where(eq(customerReviews.isPublished, true))
+    .orderBy(desc(customerReviews.createdAt));
+}
+
+export async function getReviewById(id: number): Promise<CustomerReview | undefined> {
+  const db = await requireDb();
+  const rows = await db.select().from(customerReviews).where(eq(customerReviews.id, id)).limit(1);
+  return rows[0];
+}
+
+export async function insertReview(data: InsertCustomerReview): Promise<number> {
+  const db = await requireDb();
+  const result = await db.insert(customerReviews).values(data);
+  return Number(result[0].insertId);
+}
+
+export async function updateReview(id: number, data: Partial<InsertCustomerReview>) {
+  const db = await requireDb();
+  await db.update(customerReviews).set(data).where(eq(customerReviews.id, id));
+}
+
+export async function deleteReview(id: number): Promise<boolean> {
+  const db = await requireDb();
+  const result = await db.delete(customerReviews).where(eq(customerReviews.id, id));
+  return Number(result[0].affectedRows ?? 0) > 0;
+}
+
+export async function countPendingReviews(): Promise<number> {
+  const db = await requireDb();
+  const rows = await db
+    .select({ count: sql<number>`count(*)` })
+    .from(customerReviews)
+    .where(eq(customerReviews.isPublished, false));
+  return Number(rows[0]?.count ?? 0);
+}
+
+export async function countAllReviews(): Promise<number> {
+  const db = await requireDb();
+  const rows = await db.select({ count: sql<number>`count(*)` }).from(customerReviews);
+  return Number(rows[0]?.count ?? 0);
 }

@@ -158,6 +158,30 @@ export const clientContacts = mysqlTable(
 export type ClientContact = typeof clientContacts.$inferSelect;
 export type InsertClientContact = typeof clientContacts.$inferInsert;
 
+export const customerReviews = mysqlTable(
+  "customer_reviews",
+  {
+    id: int("id").autoincrement().primaryKey(),
+    guestName: varchar("guest_name", { length: 255 }).notNull(),
+    guestEmail: varchar("guest_email", { length: 320 }),
+    rating: int("rating").notNull(),
+    body: text("body").notNull(),
+    villaId: varchar("villa_id", { length: 32 }),
+    stayPeriod: varchar("stay_period", { length: 128 }),
+    isPublished: boolean("is_published").default(false).notNull(),
+    source: mysqlEnum("source", ["website", "admin"]).default("website").notNull(),
+    createdAt: timestamp("created_at").defaultNow().notNull(),
+    updatedAt: timestamp("updated_at").defaultNow().onUpdateNow().notNull(),
+  },
+  table => [
+    index("customer_reviews_published_idx").on(table.isPublished),
+    index("customer_reviews_created_idx").on(table.createdAt),
+  ]
+);
+
+export type CustomerReview = typeof customerReviews.$inferSelect;
+export type InsertCustomerReview = typeof customerReviews.$inferInsert;
+
 export const adminReminderLog = mysqlTable("admin_reminder_log", {
   id: int("id").autoincrement().primaryKey(),
   reminderKey: varchar("reminder_key", { length: 64 }).notNull().unique(),

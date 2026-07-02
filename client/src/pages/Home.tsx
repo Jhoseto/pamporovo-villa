@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect } from "react";
+import { lazy, Suspense, useEffect, type ReactNode } from "react";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { scrollToSection } from "@/lib/scroll";
 import { HeroSection } from "@/components/site/HeroSection";
@@ -32,6 +32,9 @@ const ContactSection = lazy(() =>
 const PolicySection = lazy(() =>
   import("@/components/site/PolicySection").then(m => ({ default: m.PolicySection }))
 );
+const ReviewsSection = lazy(() =>
+  import("@/components/site/ReviewsSection").then(m => ({ default: m.ReviewsSection }))
+);
 
 // Minimal fallback — invisible placeholder that holds layout height
 function SectionFallback() {
@@ -40,6 +43,23 @@ function SectionFallback() {
 
 function DarkSectionFallback() {
   return <div className="min-h-[20dvh] bg-[var(--ink)]" aria-hidden />;
+}
+
+/** Always-mounted anchor so navbar scroll works before lazy chunk loads. */
+function LazySection({
+  id,
+  fallback,
+  children,
+}: {
+  id: string;
+  fallback: ReactNode;
+  children: ReactNode;
+}) {
+  return (
+    <div id={id} className="section-scroll-target">
+      <Suspense fallback={fallback}>{children}</Suspense>
+    </div>
+  );
 }
 
 export default function Home() {
@@ -58,30 +78,33 @@ export default function Home() {
         <HeroSection />
         <PropertyDetailsSection />
         <ScrollPanelExperience />
-        <Suspense fallback={<DarkSectionFallback />}>
+        <LazySection id="gallery" fallback={<DarkSectionFallback />}>
           <GallerySection />
-        </Suspense>
-        <Suspense fallback={<SectionFallback />}>
+        </LazySection>
+        <LazySection id="amenities" fallback={<SectionFallback />}>
           <AmenitiesSection />
-        </Suspense>
-        <Suspense fallback={<SectionFallback />}>
+        </LazySection>
+        <LazySection id="location" fallback={<SectionFallback />}>
           <LocationSection />
-        </Suspense>
-        <Suspense fallback={<SectionFallback />}>
+        </LazySection>
+        <LazySection id="pricing" fallback={<SectionFallback />}>
           <PricingSection />
-        </Suspense>
-        <Suspense fallback={<SectionFallback />}>
+        </LazySection>
+        <LazySection id="vip" fallback={<SectionFallback />}>
           <VipSection />
-        </Suspense>
-        <Suspense fallback={<div className="min-h-[120dvh] bg-[var(--cream)]" aria-hidden />}>
+        </LazySection>
+        <LazySection id="booking" fallback={<div className="min-h-[120dvh] bg-[var(--cream)]" aria-hidden />}>
           <BookingSection />
-        </Suspense>
-        <Suspense fallback={<SectionFallback />}>
+        </LazySection>
+        <LazySection id="contact" fallback={<SectionFallback />}>
           <ContactSection />
-        </Suspense>
-        <Suspense fallback={<SectionFallback />}>
+        </LazySection>
+        <LazySection id="policy" fallback={<SectionFallback />}>
           <PolicySection />
-        </Suspense>
+        </LazySection>
+        <LazySection id="reviews" fallback={<SectionFallback />}>
+          <ReviewsSection />
+        </LazySection>
       </main>
       <SiteFooter />
     </div>

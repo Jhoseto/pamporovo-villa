@@ -4,13 +4,16 @@ import { VILLA_LABELS, type VillaId } from "../../shared/villas";
 import { bookingDatesFromRow } from "../bookingHelpers";
 import type { BookingRequest } from "../../drizzle/schema";
 import { ENV } from "./env";
-import { sendSmtpMail } from "./smtpSend";
+import { getEmailProvider, isEmailConfigured, sendMail } from "./mailSend";
 
 const SITE_NAME = "Pamporovo Villa";
 const SITE_LOCATION = "к.к. Пампорово · местност Райковски ливади";
-const SITE_EMAIL = "pamporovovilla@gmail.com";
 const CHECK_IN_RULE = "След 15:00";
 const CHECK_OUT_RULE = "До 11:00";
+
+function supportEmail(): string {
+  return ENV.supportEmail;
+}
 
 function formatBgDate(dateStr: string): string {
   const [y, m, d] = dateStr.slice(0, 10).split("-");
@@ -20,44 +23,44 @@ function formatBgDate(dateStr: string): string {
 function buildConfirmationContent(booking: BookingRequest) {
   const dates = bookingDatesFromRow(booking);
   const villa = VILLA_LABELS[booking.villaId as VillaId] ?? booking.villaId;
-  const subject = `Потвърдена резервация — ${SITE_NAME}`;
+  const subject = `\u041f\u043e\u0442\u0432\u044a\u0440\u0434\u0435\u043d\u0430 \u0440\u0435\u0437\u0435\u0440\u0432\u0430\u0446\u0438\u044f \u2014 ${SITE_NAME}`;
 
   const lines = [
-    `Здравейте, ${booking.guestName}!`,
+    `\u0417\u0434\u0440\u0430\u0432\u0435\u0439\u0442\u0435, ${booking.guestName}!`,
     "",
-    "Резервацията ви е потвърдена. Ето детайлите:",
+    "\u0420\u0435\u0437\u0435\u0440\u0432\u0430\u0446\u0438\u044f\u0442\u0430 \u0432\u0438 \u0435 \u043f\u043e\u0442\u0432\u044a\u0440\u0434\u0435\u043d\u0430. \u0415\u0442\u043e \u0434\u0435\u0442\u0430\u0439\u043b\u0438\u0442\u0435:",
     "",
-    `Вила: ${villa}`,
-    `Настаняване: ${formatBgDate(dates.checkIn)} (${CHECK_IN_RULE})`,
-    `Напускане: ${formatBgDate(dates.checkOut)} (${CHECK_OUT_RULE})`,
-    `Брой гости: ${booking.numberOfGuests}`,
+    `\u0412\u0438\u043b\u0430: ${villa}`,
+    `\u041d\u0430\u0441\u0442\u0430\u043d\u044f\u0432\u0430\u043d\u0435: ${formatBgDate(dates.checkIn)} (${CHECK_IN_RULE})`,
+    `\u041d\u0430\u043f\u0443\u0441\u043a\u0430\u043d\u0435: ${formatBgDate(dates.checkOut)} (${CHECK_OUT_RULE})`,
+    `\u0411\u0440\u043e\u0439 \u0433\u043e\u0441\u0442\u0438: ${booking.numberOfGuests}`,
     "",
-    `Локация: ${SITE_LOCATION}`,
+    `\u041b\u043e\u043a\u0430\u0446\u0438\u044f: ${SITE_LOCATION}`,
     "",
-    "Моля, носете документ за самичност при настаняване.",
-    "Тихи часове: 23:00 – 07:00. Пушенето е разрешено само на терасите.",
+    "\u041c\u043e\u043b\u044f, \u043d\u043e\u0441\u0435\u0442\u0435 \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442 \u0437\u0430 \u0441\u0430\u043c\u043e\u043b\u0438\u0447\u043d\u043e\u0441\u0442 \u043f\u0440\u0438 \u043d\u0430\u0441\u0442\u0430\u043d\u044f\u0432\u0430\u043d\u0435.",
+    "\u0422\u0438\u0445\u0438 \u0447\u0430\u0441\u043e\u0432\u0435: 23:00 \u2013 07:00. \u041f\u0443\u0448\u0435\u043d\u0435\u0442\u043e \u0435 \u0440\u0430\u0437\u0440\u0435\u0448\u0435\u043d\u043e \u0441\u0430\u043c\u043e \u043d\u0430 \u0442\u0435\u0440\u0430\u0441\u0438\u0442\u0435.",
     "",
-    `При въпроси: ${SITE_EMAIL}`,
+    `\u041f\u0440\u0438 \u0432\u044a\u043f\u0440\u043e\u0441\u0438: ${supportEmail()}`,
     "",
-    "До скоро!",
+    "\u0414\u043e \u0441\u043a\u043e\u0440\u043e!",
     SITE_NAME,
   ];
 
   const text = lines.join("\n");
   const html = `
     <div style="font-family:Arial,sans-serif;line-height:1.6;color:#1a1a1a;max-width:560px">
-      <p>Здравейте, <strong>${escapeHtml(booking.guestName)}</strong>!</p>
-      <p>Резервацията ви е <strong>потвърдена</strong>. Ето детайлите:</p>
+      <p>\u0417\u0434\u0440\u0430\u0432\u0435\u0439\u0442\u0435, <strong>${escapeHtml(booking.guestName)}</strong>!</p>
+      <p>\u0420\u0435\u0437\u0435\u0440\u0432\u0430\u0446\u0438\u044f\u0442\u0430 \u0432\u0438 \u0435 <strong>\u043f\u043e\u0442\u0432\u044a\u0440\u0434\u0435\u043d\u0430</strong>. \u0415\u0442\u043e \u0434\u0435\u0442\u0430\u0439\u043b\u0438\u0442\u0435:</p>
       <table style="border-collapse:collapse;width:100%;margin:16px 0">
-        <tr><td style="padding:6px 0;color:#666">Вила</td><td><strong>${escapeHtml(villa)}</strong></td></tr>
-        <tr><td style="padding:6px 0;color:#666">Настаняване</td><td><strong>${formatBgDate(dates.checkIn)}</strong> (${CHECK_IN_RULE})</td></tr>
-        <tr><td style="padding:6px 0;color:#666">Напускане</td><td><strong>${formatBgDate(dates.checkOut)}</strong> (${CHECK_OUT_RULE})</td></tr>
-        <tr><td style="padding:6px 0;color:#666">Гости</td><td><strong>${booking.numberOfGuests}</strong></td></tr>
-        <tr><td style="padding:6px 0;color:#666">Локация</td><td>${escapeHtml(SITE_LOCATION)}</td></tr>
+        <tr><td style="padding:6px 0;color:#666">\u0412\u0438\u043b\u0430</td><td><strong>${escapeHtml(villa)}</strong></td></tr>
+        <tr><td style="padding:6px 0;color:#666">\u041d\u0430\u0441\u0442\u0430\u043d\u044f\u0432\u0430\u043d\u0435</td><td><strong>${formatBgDate(dates.checkIn)}</strong> (${CHECK_IN_RULE})</td></tr>
+        <tr><td style="padding:6px 0;color:#666">\u041d\u0430\u043f\u0443\u0441\u043a\u0430\u043d\u0435</td><td><strong>${formatBgDate(dates.checkOut)}</strong> (${CHECK_OUT_RULE})</td></tr>
+        <tr><td style="padding:6px 0;color:#666">\u0413\u043e\u0441\u0442\u0438</td><td><strong>${booking.numberOfGuests}</strong></td></tr>
+        <tr><td style="padding:6px 0;color:#666">\u041b\u043e\u043a\u0430\u0446\u0438\u044f</td><td>${escapeHtml(SITE_LOCATION)}</td></tr>
       </table>
-      <p style="font-size:14px;color:#444">Моля, носете документ за самоличност при настаняване. Тихи часове: 23:00 – 07:00.</p>
-      <p style="font-size:14px;color:#444">При въпроси: <a href="mailto:${SITE_EMAIL}">${SITE_EMAIL}</a></p>
-      <p>До скоро!<br><strong>${SITE_NAME}</strong></p>
+      <p style="font-size:14px;color:#444">\u041c\u043e\u043b\u044f, \u043d\u043e\u0441\u0435\u0442\u0435 \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442 \u0437\u0430 \u0441\u0430\u043c\u043e\u043b\u0438\u0447\u043d\u043e\u0441\u0442 \u043f\u0440\u0438 \u043d\u0430\u0441\u0442\u0430\u043d\u044f\u0432\u0430\u043d\u0435. \u0422\u0438\u0445\u0438 \u0447\u0430\u0441\u043e\u0432\u0435: 23:00 \u2013 07:00.</p>
+      <p style="font-size:14px;color:#444">\u041f\u0440\u0438 \u0432\u044a\u043f\u0440\u043e\u0441\u0438: <a href="mailto:${supportEmail()}">${supportEmail()}</a></p>
+      <p>\u0414\u043e \u0441\u043a\u043e\u0440\u043e!<br><strong>${SITE_NAME}</strong></p>
     </div>
   `.trim();
 
@@ -72,9 +75,7 @@ function escapeHtml(value: string): string {
     .replace(/"/g, "&quot;");
 }
 
-export function isEmailConfigured(): boolean {
-  return Boolean(ENV.smtpHost && ENV.smtpUser && ENV.smtpPass && ENV.smtpFrom);
-}
+export { getEmailProvider, isEmailConfigured };
 
 export async function sendBookingConfirmationEmail(booking: BookingRequest): Promise<boolean> {
   const to = booking.guestEmail?.trim();
@@ -83,24 +84,18 @@ export async function sendBookingConfirmationEmail(booking: BookingRequest): Pro
   const { subject, text, html } = buildConfirmationContent(booking);
 
   if (!isEmailConfigured()) {
-    console.info("[Email] SMTP not configured — confirmation preview:\n", text);
+    console.info("[Email] Provider not configured — confirmation preview:\n", text);
     return false;
   }
 
-  await sendSmtpMail({
-    host: ENV.smtpHost,
-    port: ENV.smtpPort,
-    secure: ENV.smtpSecure,
-    user: ENV.smtpUser,
-    pass: ENV.smtpPass,
-    from: ENV.smtpFrom,
+  await sendMail({
     to,
     subject,
     text,
     html,
+    replyTo: ENV.smtpReplyTo,
   });
-
-  console.info(`[Email] Confirmation sent to ${to} for booking #${booking.id}`);
+  console.info(`[Email] Confirmation sent to ${to} for booking #${booking.id} via ${getEmailProvider()}`);
   return true;
 }
 
@@ -122,29 +117,32 @@ function buildCardEmailContent(booking: BookingRequest) {
   const total = booking.totalAmountEur ?? 0;
   const deposit = booking.depositPaidEur ?? 0;
   const balance = bookingBalanceDue(total, deposit) ?? 0;
-  const subject = `Потвърдена резервация — ${SITE_NAME}`;
+  const subject = `\u041f\u043e\u0442\u0432\u044a\u0440\u0434\u0435\u043d\u0430 \u0440\u0435\u0437\u0435\u0440\u0432\u0430\u0446\u0438\u044f \u2014 ${SITE_NAME}`;
 
   const text = [
-    `Здравейте, ${booking.guestName}!`,
+    `\u0417\u0434\u0440\u0430\u0432\u0435\u0439\u0442\u0435, ${booking.guestName}!`,
     "",
-    "Резервацията ви е потвърдена. Прикачена е карта с детайлите.",
+    "\u0420\u0435\u0437\u0435\u0440\u0432\u0430\u0446\u0438\u044f\u0442\u0430 \u0432\u0438 \u0435 \u043f\u043e\u0442\u0432\u044a\u0440\u0434\u0435\u043d\u0430. \u041f\u0440\u0438\u043a\u0430\u0447\u0435\u043d\u0430 \u0435 \u043a\u0430\u0440\u0442\u0430 \u0441 \u0434\u0435\u0442\u0430\u0439\u043b\u0438\u0442\u0435.",
     "",
     `${villa}`,
-    `${formatBgDate(dates.checkIn)} → ${formatBgDate(dates.checkOut)}`,
-    `Общо: ${formatAmountEur(total)} · Капаро: ${formatAmountEur(deposit)} · Остава: ${formatAmountEur(balance)}`,
+    `${formatBgDate(dates.checkIn)} \u2192 ${formatBgDate(dates.checkOut)}`,
+    `\u041e\u0431\u0449\u043e: ${formatAmountEur(total)} \u00b7 \u041a\u0430\u043f\u0430\u0440\u043e: ${formatAmountEur(deposit)} \u00b7 \u041e\u0441\u0442\u0430\u0432\u0430: ${formatAmountEur(balance)}`,
+    "",
+    `\u041f\u0440\u0438 \u0432\u044a\u043f\u0440\u043e\u0441\u0438: ${supportEmail()}`,
     "",
     SITE_NAME,
   ].join("\n");
 
   const html = `
     <div style="font-family:Arial,sans-serif;line-height:1.6;color:#1a1a1a;max-width:560px">
-      <p>Здравейте, <strong>${escapeHtml(booking.guestName)}</strong>!</p>
-      <p>Резервацията ви е <strong>потвърдена</strong>. Прикачена е карта с детайлите (JPG).</p>
+      <p>\u0417\u0434\u0440\u0430\u0432\u0435\u0439\u0442\u0435, <strong>${escapeHtml(booking.guestName)}</strong>!</p>
+      <p>\u0420\u0435\u0437\u0435\u0440\u0432\u0430\u0446\u0438\u044f\u0442\u0430 \u0432\u0438 \u0435 <strong>\u043f\u043e\u0442\u0432\u044a\u0440\u0434\u0435\u043d\u0430</strong>. \u041f\u0440\u0438\u043a\u0430\u0447\u0435\u043d\u0430 \u0435 \u043a\u0430\u0440\u0442\u0430 \u0441 \u0434\u0435\u0442\u0430\u0439\u043b\u0438\u0442\u0435 (JPG).</p>
       <p><strong>${escapeHtml(villa)}</strong><br>
-      ${formatBgDate(dates.checkIn)} → ${formatBgDate(dates.checkOut)}</p>
-      <p>Общо: <strong>${formatAmountEur(total)}</strong><br>
-      Капаро: <strong>${formatAmountEur(deposit)}</strong><br>
-      Остава: <strong>${formatAmountEur(balance)}</strong></p>
+      ${formatBgDate(dates.checkIn)} \u2192 ${formatBgDate(dates.checkOut)}</p>
+      <p>\u041e\u0431\u0449\u043e: <strong>${formatAmountEur(total)}</strong><br>
+      \u041a\u0430\u043f\u0430\u0440\u043e: <strong>${formatAmountEur(deposit)}</strong><br>
+      \u041e\u0441\u0442\u0430\u0432\u0430: <strong>${formatAmountEur(balance)}</strong></p>
+      <p style="font-size:14px;color:#444">\u041f\u0440\u0438 \u0432\u044a\u043f\u0440\u043e\u0441\u0438: <a href="mailto:${supportEmail()}">${supportEmail()}</a></p>
       <p>${SITE_NAME}</p>
     </div>
   `.trim();
@@ -163,21 +161,16 @@ export async function sendBookingConfirmationCardEmail(
   const dates = bookingDatesFromRow(booking);
 
   if (!isEmailConfigured()) {
-    console.info("[Email] SMTP not configured — card email preview:\n", text);
+    console.info("[Email] Provider not configured — card email preview:\n", text);
     return false;
   }
 
-  await sendSmtpMail({
-    host: ENV.smtpHost,
-    port: ENV.smtpPort,
-    secure: ENV.smtpSecure,
-    user: ENV.smtpUser,
-    pass: ENV.smtpPass,
-    from: ENV.smtpFrom,
+  await sendMail({
     to,
     subject,
     text,
     html,
+    replyTo: ENV.smtpReplyTo,
     attachments: [
       {
         filename: confirmationCardFilename({
@@ -191,6 +184,6 @@ export async function sendBookingConfirmationCardEmail(
     ],
   });
 
-  console.info(`[Email] Confirmation card sent to ${to} for booking #${booking.id}`);
+  console.info(`[Email] Confirmation card sent to ${to} for booking #${booking.id} via ${getEmailProvider()}`);
   return true;
 }

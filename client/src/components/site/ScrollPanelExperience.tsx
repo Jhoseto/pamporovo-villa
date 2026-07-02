@@ -1,5 +1,6 @@
 import {
   motion,
+  useInView,
   useMotionValueEvent,
   useScroll,
   useTransform,
@@ -152,6 +153,7 @@ function MobileScrollPanelExperience() {
   const [activeIndex, setActiveIndex] = useState(0);
   const prevIndexRef = useRef(0);
   const total = EXPERIENCE_PANELS.length;
+  const isNearViewport = useInView(containerRef, { margin: "120px 0px", amount: 0 });
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -210,17 +212,21 @@ function MobileScrollPanelExperience() {
           </span>
         </div>
 
-        {/* All panels stacked */}
+        {/* All panels stacked — skip heavy transforms when far off-screen */}
         <div className="absolute inset-0">
-          {EXPERIENCE_PANELS.map((panel, index) => (
-            <MobilePanelLayer
-              key={panel.id}
-              panel={panel}
-              index={index}
-              total={total}
-              scrollYProgress={scrollYProgress}
-            />
-          ))}
+          {isNearViewport ? (
+            EXPERIENCE_PANELS.map((panel, index) => (
+              <MobilePanelLayer
+                key={panel.id}
+                panel={panel}
+                index={index}
+                total={total}
+                scrollYProgress={scrollYProgress}
+              />
+            ))
+          ) : (
+            <div className="absolute inset-0 bg-[var(--ink)]" aria-hidden />
+          )}
         </div>
 
         {/* Skip tour — up */}
@@ -418,6 +424,7 @@ function DesktopScrollPanelExperience() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const prevIndexRef = useRef(0);
+  const isNearViewport = useInView(containerRef, { margin: "120px 0px", amount: 0 });
   const [reducedMotion] = useState(
     () =>
       typeof window !== "undefined" &&
@@ -507,15 +514,19 @@ function DesktopScrollPanelExperience() {
         />
 
         <div className="panel-stage absolute inset-0 flex items-center justify-center">
-          {EXPERIENCE_PANELS.map((panel, index) => (
-            <DesktopPanelLayer
-              key={panel.id}
-              panel={panel}
-              index={index}
-              total={EXPERIENCE_PANELS.length}
-              scrollYProgress={scrollYProgress}
-            />
-          ))}
+          {isNearViewport ? (
+            EXPERIENCE_PANELS.map((panel, index) => (
+              <DesktopPanelLayer
+                key={panel.id}
+                panel={panel}
+                index={index}
+                total={EXPERIENCE_PANELS.length}
+                scrollYProgress={scrollYProgress}
+              />
+            ))
+          ) : (
+            <div className="absolute inset-0 bg-[var(--ink)]" aria-hidden />
+          )}
         </div>
 
         <div className="pointer-events-none absolute inset-x-0 top-4 z-30 flex justify-center px-4 md:top-6">

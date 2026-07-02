@@ -6,6 +6,7 @@ import {
   LayoutDashboard,
   LogOut,
   Menu,
+  MessageSquare,
   MoreHorizontal,
   PlusCircle,
   Settings,
@@ -32,6 +33,7 @@ const navItems = [
   { href: "/admin/bookings/new", label: "Нова резервация", icon: PlusCircle },
   { href: "/admin/pricing", label: "Цени", icon: Wallet },
   { href: "/admin/offers", label: "Оферти", icon: Tag },
+  { href: "/admin/reviews", label: "Отзиви", icon: MessageSquare },
   { href: "/admin/users", label: "Администратори", icon: Users, masterOnly: true },
   { href: "/admin/settings", label: "Настройки", icon: Settings },
 ];

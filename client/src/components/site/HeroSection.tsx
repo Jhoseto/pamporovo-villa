@@ -1,4 +1,4 @@
-import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
+import { motion, useInView, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { ChevronDown, Sparkles } from "lucide-react";
 import { useRef } from "react";
 import { HERO_PHOTO, SITE } from "@/data/siteContent";
@@ -17,6 +17,8 @@ export function HeroSection() {
     target: ref,
     offset: ["start start", "end start"],
   });
+  const isInView = useInView(ref, { margin: "0px 0px 0px 0px", amount: 0 });
+  const parallaxActive = isInView && !reducedMotion;
 
   const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
   const contentY = useTransform(scrollYProgress, [0, 1], [0, 120]);
@@ -37,7 +39,7 @@ export function HeroSection() {
     >
       <motion.div
         className="absolute inset-0 will-change-transform"
-        style={reducedMotion ? undefined : { y: bgY }}
+        style={parallaxActive ? { y: bgY } : undefined}
       >
         <picture className="block h-full w-full">
           <source srcSet={HERO_PHOTO.webpSrc} type="image/webp" />
@@ -54,7 +56,7 @@ export function HeroSection() {
 
       <motion.div
         className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/45 to-[var(--ink)]"
-        style={reducedMotion ? undefined : { opacity: overlayOpacity }}
+        style={parallaxActive ? { opacity: overlayOpacity } : undefined}
       />
       <div className="light-leak absolute inset-0" />
       <div className="vignette absolute inset-0" />
@@ -90,7 +92,7 @@ export function HeroSection() {
 
       <motion.div
         className="hero-content relative z-10 mx-auto flex w-full max-w-5xl flex-1 flex-col justify-center px-[max(1rem,env(safe-area-inset-left,0px))] pb-[calc(4.5rem+env(safe-area-inset-bottom,0px))] pt-[calc(5rem+env(safe-area-inset-top,0px))] text-center text-white sm:px-6 sm:pb-20 md:px-6 md:py-24"
-        style={reducedMotion ? undefined : { y: contentY, opacity: contentOpacity }}
+        style={parallaxActive ? { y: contentY, opacity: contentOpacity } : undefined}
       >
         <motion.div
           initial={entrance(0)}

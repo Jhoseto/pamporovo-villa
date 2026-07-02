@@ -118,12 +118,12 @@ export function PricingSection() {
 
   return (
     <SectionShell
-      id="pricing"
       eyebrow="Цени"
       title="Ясни цени, без изненади"
       subtitle="Наем на цяла вила на вечер — за до 6 гости. Колкото по-дълго останете, толкова по-изгодно"
       overlap
       splitTitle
+      perfDefer
     >
       <ScrollReveal>
         {isLoading ? (

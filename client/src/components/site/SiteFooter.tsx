@@ -10,10 +10,14 @@ const SOCIAL_LINKS = [
   { href: SOCIAL.youtube, label: "YouTube", icon: Youtube },
 ] as const;
 
-const FOOTER_NAV = [
-  ...NAV_LINKS.filter(link => link.href !== "#offers-modal"),
+const FOOTER_EXTRA = [
   { href: "#booking", label: "Резервация" },
   { href: "#policy", label: "Политика" },
+] as const;
+
+const FOOTER_NAV = [
+  ...NAV_LINKS.filter(link => link.href !== "#offers-modal"),
+  ...FOOTER_EXTRA.filter(extra => !NAV_LINKS.some(link => link.href === extra.href)),
 ] as const;
 
 export function SiteFooter() {
@@ -25,7 +29,7 @@ export function SiteFooter() {
   };
 
   return (
-    <footer className="relative overflow-hidden bg-[var(--ink)] py-16 text-white md:py-20">
+    <footer className="perf-defer-section relative overflow-hidden bg-[var(--ink)] py-16 text-white md:py-20">
       <div className="ambient-grid absolute inset-0 opacity-20" />
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[var(--gold)]/50 to-transparent" />
 

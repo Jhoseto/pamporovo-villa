@@ -5,16 +5,16 @@ import { ScrollReveal } from "./ScrollReveal";
 export function PolicySection() {
   return (
     <SectionShell
-      id="policy"
       eyebrow="Добре е да знаете"
       title="Няколко думи преди да дойдете"
       subtitle="Кратки и ясни правила, за да е спокойно и приятно за всички"
       dark
       darkOverlap
+      perfDefer
     >
       <div className="grid gap-8 lg:grid-cols-2">
         <ScrollReveal direction="left">
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm">
+          <div className="policy-glass-panel rounded-3xl border border-white/10 p-8">
             <h3 className="mb-4 font-serif text-xl font-bold text-white">Настаняване и престой</h3>
             <p className="mb-4 text-white/65">
               Искаме престоят ви да е лек и безгрижен — затова държим нещата прости и прозрачни.
@@ -35,7 +35,7 @@ export function PolicySection() {
         </ScrollReveal>
 
         <ScrollReveal direction="right" delay={120}>
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm">
+          <div className="policy-glass-panel rounded-3xl border border-white/10 p-8">
             <h3 className="mb-4 font-serif text-xl font-bold text-white">Молим ви да избягвате</h3>
             <ul className="space-y-3 text-white/75">
               {HOUSE_RULES.prohibited.map(rule => (

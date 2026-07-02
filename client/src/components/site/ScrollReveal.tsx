@@ -41,7 +41,7 @@ export function ScrollReveal({
   return (
     <motion.div
       ref={ref}
-      className={cn("will-change-transform", className)}
+      className={cn("scroll-reveal", className)}
       initial={{
         opacity: 0,
         y: offset.y,

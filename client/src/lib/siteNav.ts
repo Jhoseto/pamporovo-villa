@@ -1,4 +1,4 @@
-import { scrollToSection } from "./scroll";
+import { preloadSection, scrollToSection } from "./scroll";
 
 export type SiteNavLink = {
   href: string;
@@ -28,6 +28,7 @@ export function navigateSiteLink(
     return;
   }
 
+  preloadSection(sectionId);
   scrollToSection(`#${sectionId}`);
 }
 

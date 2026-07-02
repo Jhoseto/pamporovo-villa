@@ -4,7 +4,7 @@ import { SplitText } from "./SplitText";
 import { cn } from "@/lib/utils";
 
 type SectionShellProps = {
-  id: string;
+  id?: string;
   eyebrow: string;
   title: string;
   subtitle?: string;
@@ -14,6 +14,8 @@ type SectionShellProps = {
   overlap?: boolean;
   darkOverlap?: boolean;
   splitTitle?: boolean;
+  /** Skip paint/layout for off-screen sections (content-visibility). */
+  perfDefer?: boolean;
   backgroundImage?: string;
 };
 
@@ -28,13 +30,14 @@ export function SectionShell({
   overlap = false,
   darkOverlap = false,
   splitTitle = false,
+  perfDefer = false,
   backgroundImage,
 }: SectionShellProps) {
   const hasBridge = overlap || darkOverlap;
 
   return (
     <section
-      id={id}
+      {...(id ? { id } : {})}
       className={cn(
         "relative py-24 md:py-32",
         dark ? "immersive-section bg-[var(--ink)] text-white" : "bg-[var(--cream)]",
@@ -43,6 +46,7 @@ export function SectionShell({
           "relative z-[1] -mt-6 rounded-t-[1.75rem] shadow-[0_-24px_60px_-20px_rgba(0,0,0,0.12)] sm:-mt-12 sm:rounded-t-[2.25rem] md:-mt-20 md:rounded-t-[2.5rem] md:shadow-[0_-40px_80px_-20px_rgba(0,0,0,0.15)]",
         darkOverlap &&
           "relative z-[1] -mt-6 rounded-t-[1.75rem] shadow-[0_-28px_64px_-20px_rgba(0,0,0,0.45)] sm:-mt-12 sm:rounded-t-[2.25rem] md:-mt-20 md:rounded-t-[2.5rem] md:shadow-[0_-48px_100px_-24px_rgba(0,0,0,0.55)]",
+        perfDefer && "perf-defer-section",
         className
       )}
     >

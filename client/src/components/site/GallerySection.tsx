@@ -1,271 +1,140 @@
-import { ChevronLeft, ChevronRight, Expand, X } from "lucide-react";
-import { useCallback, useEffect, useRef, useState } from "react";
-import { GALLERY_IMAGES } from "@/data/siteContent";
+import { Images } from "lucide-react";
+import { useCallback, useState, type CSSProperties } from "react";
+import { VILLA_GALLERIES } from "@/data/galleryContent";
 import { cn } from "@/lib/utils";
+import { GalleryLightbox } from "./GalleryLightbox";
 import { SectionShell } from "./SectionShell";
 import { ScrollReveal } from "./ScrollReveal";
+import { VillaGalleryCarousel } from "./VillaGalleryCarousel";
 
 export function GallerySection() {
-  const [selected, setSelected] = useState(0);
+  const [activeId, setActiveId] = useState(VILLA_GALLERIES[0]?.id ?? "villa-1");
+  const [lightboxOpen, setLightboxOpen] = useState(false);
   const [direction, setDirection] = useState<1 | -1>(1);
-  const [lightbox, setLightbox] = useState(false);
-  const thumbRefs = useRef<(HTMLButtonElement | null)[]>([]);
-  const thumbStripRef = useRef<HTMLDivElement>(null);
-  const skipInitialThumbScroll = useRef(true);
-  const touchStartX = useRef<number | null>(null);
+  const [slideByVilla, setSlideByVilla] = useState<Record<string, number>>({});
 
-  const total = GALLERY_IMAGES.length;
-  const current = GALLERY_IMAGES[selected];
-  const indexLabel = String(selected + 1).padStart(2, "0");
-  const totalLabel = String(total).padStart(2, "0");
-  const progress = ((selected + 1) / total) * 100;
+  const active = VILLA_GALLERIES.find(g => g.id === activeId) ?? VILLA_GALLERIES[0];
+  const rawSelected = slideByVilla[activeId] ?? 0;
+  const selected = active
+    ? Math.min(rawSelected, Math.max(0, active.images.length - 1))
+    : 0;
 
-  const go = useCallback(
-    (step: number) => {
-      if (step === 0) return;
-      setDirection(step > 0 ? 1 : -1);
-      setSelected(prev => (prev + step + total) % total);
+  const handleSelectedChange = useCallback(
+    (index: number, dir: 1 | -1) => {
+      setDirection(dir);
+      setSlideByVilla(prev => ({ ...prev, [activeId]: index }));
     },
-    [total]
+    [activeId]
   );
 
-  useEffect(() => {
-    const thumb = thumbRefs.current[selected];
-    const strip = thumbStripRef.current;
-    if (!thumb || !strip) return;
-
-    if (skipInitialThumbScroll.current) {
-      skipInitialThumbScroll.current = false;
-      return;
-    }
-
-    const targetLeft = thumb.offsetLeft - strip.clientWidth / 2 + thumb.offsetWidth / 2;
-    strip.scrollTo({ left: targetLeft, behavior: "smooth" });
-  }, [selected]);
-
-  useEffect(() => {
-    const next = GALLERY_IMAGES[(selected + 1) % total];
-    const prev = GALLERY_IMAGES[(selected - 1 + total) % total];
-    for (const image of [next, prev]) {
-      const preload = new Image();
-      preload.src = image.src;
-    }
-  }, [selected, total]);
-
-  useEffect(() => {
-    if (!lightbox) return;
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setLightbox(false);
-      if (e.key === "ArrowLeft") go(-1);
-      if (e.key === "ArrowRight") go(1);
-    };
-    document.body.style.overflow = "hidden";
-    window.addEventListener("keydown", onKey);
-    return () => {
-      document.body.style.overflow = "";
-      window.removeEventListener("keydown", onKey);
-    };
-  }, [lightbox, go]);
-
-  const handleTouchStart = (e: React.TouchEvent) => {
-    touchStartX.current = e.touches[0]?.clientX ?? null;
-  };
-
-  const handleTouchEnd = (e: React.TouchEvent) => {
-    if (touchStartX.current === null) return;
-    const delta = e.changedTouches[0]?.clientX - touchStartX.current;
-    touchStartX.current = null;
-    if (delta === undefined || Math.abs(delta) < 48) return;
-    go(delta < 0 ? 1 : -1);
-  };
+  const handleVillaChange = useCallback((id: string) => {
+    setActiveId(id);
+  }, []);
 
   return (
-    <>
-      <SectionShell
-        id="gallery"
-        eyebrow="Галерия"
-        title="Нашето предложение в кадри"
-        subtitle="Интериор, уют и планински гледки"
-        overlap
-      >
-        <ScrollReveal>
-          <div className="mx-auto max-w-6xl">
-            <div
-              className="gallery-frame relative overflow-hidden rounded-3xl shadow-[0_32px_80px_-28px_rgba(0,0,0,0.22)] ring-1 ring-black/[0.06]"
-              onTouchStart={handleTouchStart}
-              onTouchEnd={handleTouchEnd}
-            >
-              <button
-                type="button"
-                onClick={() => setLightbox(true)}
-                className="group relative block w-full touch-pan-y"
-                aria-label="Отвори галерията на цял екран"
-              >
-                <img
-                  key={selected}
-                  src={current.src}
-                  alt={current.alt}
-                  className={cn(
-                    "gallery-hero-img aspect-[16/10] w-full object-cover md:aspect-[2/1]",
-                    direction > 0 ? "gallery-enter-next" : "gallery-enter-prev"
-                  )}
-                  loading={selected === 0 ? "eager" : "lazy"}
-                  decoding="async"
-                  fetchPriority={selected === 0 ? "high" : "auto"}
-                />
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/15" />
-              </button>
-
-              <div className="gallery-progress-track pointer-events-none" aria-hidden>
-                <div className="gallery-progress-fill" style={{ width: `${progress}%` }} />
-              </div>
-
-              <div className="gallery-carousel-dock pointer-events-none absolute inset-x-3 bottom-3 z-20 md:inset-x-5 md:bottom-5">
-                <div className="gallery-carousel-bar pointer-events-auto">
+    <SectionShell
+      eyebrow="Галерия"
+      title="Трите вили в кадри"
+      subtitle="Разгледайте всяка вила — интериор, уют и планински гледки"
+      overlap
+      perfDefer
+    >
+      <ScrollReveal>
+        <div className="mx-auto max-w-6xl">
+          <div
+            className="gallery-villa-picker mb-8 md:mb-10"
+            role="tablist"
+            aria-label="Избор на вила в галерията"
+          >
+            <div className="grid gap-3 sm:grid-cols-3 sm:gap-4">
+              {VILLA_GALLERIES.map(gallery => {
+                const isActive = gallery.id === activeId;
+                return (
                   <button
-                    type="button"
-                    onClick={() => go(-1)}
-                    className="gallery-carousel-btn"
-                    aria-label="Предишно"
-                  >
-                    <ChevronLeft className="h-4 w-4 md:h-[1.125rem] md:w-[1.125rem]" />
-                  </button>
-
-                  <div className="gallery-carousel-meta min-w-0 flex-1 px-1 md:px-2">
-                    <p className="font-display text-sm tracking-[0.18em] text-white md:text-base">
-                      <span className="text-[var(--gold)]">{indexLabel}</span>
-                      <span className="mx-1.5 text-white/35">/</span>
-                      {totalLabel}
-                    </p>
-                    <p className="truncate font-display text-xs tracking-wide text-white/75 md:text-sm">
-                      {current.alt}
-                    </p>
-                  </div>
-
-                  <button
-                    type="button"
-                    onClick={() => go(1)}
-                    className="gallery-carousel-btn"
-                    aria-label="Следващо"
-                  >
-                    <ChevronRight className="h-4 w-4 md:h-[1.125rem] md:w-[1.125rem]" />
-                  </button>
-
-                  <span className="gallery-carousel-divider" aria-hidden />
-
-                  <button
-                    type="button"
-                    onClick={() => setLightbox(true)}
-                    className="gallery-carousel-btn gallery-carousel-btn--expand"
-                    aria-label="Цял екран"
-                  >
-                    <Expand className="h-3.5 w-3.5 md:h-4 md:w-4" />
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div className="gallery-thumb-wrap relative mt-5 md:mt-6">
-              <div
-                ref={thumbStripRef}
-                className="gallery-thumb-strip flex gap-2.5 overflow-x-auto pb-2 md:gap-3"
-                role="tablist"
-                aria-label="Миниатюри в галерията"
-              >
-                {GALLERY_IMAGES.map((image, idx) => (
-                  <button
-                    key={image.src}
-                    ref={el => {
-                      thumbRefs.current[idx] = el;
-                    }}
+                    key={gallery.id}
                     type="button"
                     role="tab"
-                    onClick={() => {
-                      setDirection(idx > selected ? 1 : -1);
-                      setSelected(idx);
-                    }}
+                    aria-selected={isActive}
+                    onClick={() => handleVillaChange(gallery.id)}
                     className={cn(
-                      "gallery-thumb relative shrink-0 overflow-hidden rounded-lg border border-transparent",
-                      idx === selected ? "is-active" : "opacity-45 hover:opacity-80"
+                      "gallery-villa-card group relative overflow-hidden rounded-2xl text-left transition-[transform,box-shadow,opacity] duration-500 ease-out md:rounded-[1.35rem]",
+                      isActive
+                        ? "gallery-villa-card--active z-[1] scale-[1.02] shadow-[0_28px_60px_-24px_rgba(0,0,0,0.35)]"
+                        : "opacity-[0.72] hover:opacity-100 hover:scale-[1.01]"
                     )}
-                    aria-label={image.alt}
-                    aria-selected={idx === selected}
-                    aria-current={idx === selected ? "true" : undefined}
+                    style={
+                      isActive
+                        ? ({ "--gallery-accent": gallery.accent } as CSSProperties)
+                        : undefined
+                    }
                   >
-                    <img
-                      src={image.src}
-                      alt=""
-                      className="h-16 w-24 object-cover md:h-[4.75rem] md:w-[6.5rem]"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                    {idx === selected && <span className="gallery-thumb-glow" aria-hidden />}
+                    <div className="relative aspect-[5/4] overflow-hidden sm:aspect-[4/3]">
+                      <img
+                        src={gallery.cover.src}
+                        alt={gallery.cover.alt}
+                        className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/78 via-black/28 to-black/10" />
+                      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20" />
+
+                      <div className="absolute inset-x-0 bottom-0 p-4 md:p-5">
+                        <p className="font-display text-[0.62rem] uppercase tracking-[0.26em] text-white/55 md:text-[0.68rem]">
+                          {gallery.tagline}
+                        </p>
+                        <h3 className="mt-1 font-serif text-xl font-bold tracking-tight text-white md:text-2xl">
+                          {gallery.name}
+                        </h3>
+                        <p className="mt-2 inline-flex items-center gap-1.5 text-xs text-white/70 md:text-sm">
+                          <Images className="h-3.5 w-3.5 text-[var(--gold)]" strokeWidth={1.75} />
+                          {gallery.images.length} снимки
+                        </p>
+                      </div>
+
+                      {isActive && (
+                        <span
+                          className="gallery-villa-card__ring pointer-events-none absolute inset-0 rounded-2xl md:rounded-[1.35rem]"
+                          aria-hidden
+                        />
+                      )}
+                    </div>
                   </button>
-                ))}
-              </div>
+                );
+              })}
             </div>
           </div>
-        </ScrollReveal>
-      </SectionShell>
 
-      {lightbox && (
-        <div
-          className="gallery-lightbox fixed inset-0 z-[120] flex items-center justify-center bg-black/92 p-4 backdrop-blur-md"
-          role="dialog"
-          aria-modal="true"
-          aria-label="Галерия на цял екран"
-          onClick={() => setLightbox(false)}
-        >
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,oklch(0.72_0.14_75/0.08),transparent_55%)]" />
-
-          <button
-            type="button"
-            onClick={() => setLightbox(false)}
-            className="gallery-nav-btn absolute right-4 top-4 z-10 h-11 w-11 rounded-full"
-            aria-label="Затвори"
+          <div
+            key={active?.id}
+            className="gallery-villa-view animate-in fade-in slide-in-from-bottom-3 duration-500 fill-mode-both"
           >
-            <X className="h-5 w-5" />
-          </button>
-          <button
-            type="button"
-            onClick={e => {
-              e.stopPropagation();
-              go(-1);
-            }}
-            className="gallery-nav-btn absolute left-4 top-1/2 z-10 h-12 w-12 -translate-y-1/2 rounded-full"
-            aria-label="Предишно"
-          >
-            <ChevronLeft className="h-6 w-6" />
-          </button>
-          <img
-            key={`lb-${selected}`}
-            src={current.src}
-            alt={current.alt}
-            className={cn(
-              "gallery-lightbox-img relative z-[1] max-h-[88vh] max-w-[92vw] object-contain",
-              direction > 0 ? "gallery-enter-next" : "gallery-enter-prev"
+            {active && (
+              <VillaGalleryCarousel
+                images={active.images}
+                villaName={active.name}
+                galleryKey={active.id}
+                selected={selected}
+                direction={direction}
+                onSelectedChange={handleSelectedChange}
+                onOpenLightbox={() => setLightboxOpen(true)}
+              />
             )}
-            onClick={e => e.stopPropagation()}
-          />
-          <button
-            type="button"
-            onClick={e => {
-              e.stopPropagation();
-              go(1);
-            }}
-            className="gallery-nav-btn absolute right-4 top-1/2 z-10 h-12 w-12 -translate-y-1/2 rounded-full"
-            aria-label="Следващо"
-          >
-            <ChevronRight className="h-6 w-6" />
-          </button>
-          <p className="font-display absolute bottom-6 left-1/2 z-[1] max-w-2xl -translate-x-1/2 text-center text-base tracking-wide text-white/90 md:text-lg">
-            {current.alt}
-            <span className="mt-1 block text-sm text-[var(--gold)]">
-              {indexLabel} / {totalLabel}
-            </span>
-          </p>
+          </div>
         </div>
+      </ScrollReveal>
+
+      {lightboxOpen && (
+        <GalleryLightbox
+          galleries={VILLA_GALLERIES}
+          activeId={activeId}
+          onActiveIdChange={handleVillaChange}
+          selected={selected}
+          onSelectedChange={handleSelectedChange}
+          direction={direction}
+          onClose={() => setLightboxOpen(false)}
+        />
       )}
-    </>
+    </SectionShell>
   );
 }

@@ -6,12 +6,12 @@ import { ScrollReveal } from "./ScrollReveal";
 export function ContactSection() {
   return (
     <SectionShell
-      id="contact"
       eyebrow="Контакт"
       title="Да поговорим за вашата почивка"
       subtitle="Имате въпрос или специално желание? Звъннете или ни пишете — отговаряме лично и с удоволствие"
       overlap
       splitTitle
+      perfDefer
     >
       <ScrollReveal>
         <div className="mx-auto grid max-w-4xl grid-cols-1 gap-4 sm:grid-cols-3 md:gap-5">

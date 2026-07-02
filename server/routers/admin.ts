@@ -13,7 +13,12 @@ import {
   verifyPassword,
 } from "../_core/auth";
 import { getSessionCookieOptions } from "../_core/cookies";
-import { sendBookingConfirmationById, sendBookingConfirmationCardEmail } from "../_core/email";
+import {
+  getEmailProvider,
+  isEmailConfigured,
+  sendBookingConfirmationById,
+  sendBookingConfirmationCardEmail,
+} from "../_core/email";
 import { getVapidPublicKey, notifyAdminUser, notifyManualBooking, notifyNewWebsiteBooking } from "../_core/push";
 import {
   createNotificationSoundToken,
@@ -46,6 +51,7 @@ import {
   formatBlockedDates,
 } from "../dashboardHelpers";
 import * as db from "../db";
+import type { CustomerReview } from "../../drizzle/schema";
 import { statsFromBookings } from "../contactHelpers";
 import { runDailyCheckInReminders } from "../reminderHelpers";
 
@@ -73,6 +79,31 @@ const contactInputSchema = z.object({
   notes: z.string().max(5000).optional(),
   isVip: z.boolean().optional(),
 });
+
+const reviewInputSchema = z.object({
+  guestName: z.string().min(2).max(255),
+  guestEmail: z.string().email().optional().or(z.literal("")),
+  rating: z.number().int().min(1).max(5),
+  body: z.string().min(10).max(300),
+  villaId: villaIdSchema.optional(),
+  stayPeriod: z.string().max(128).optional(),
+});
+
+function formatReviewRow(review: CustomerReview) {
+  return {
+    id: review.id,
+    guestName: review.guestName,
+    guestEmail: review.guestEmail,
+    rating: review.rating,
+    body: review.body,
+    villaId: review.villaId,
+    stayPeriod: review.stayPeriod,
+    isPublished: review.isPublished,
+    source: review.source,
+    createdAt: review.createdAt.toISOString(),
+    updatedAt: review.updatedAt.toISOString(),
+  };
+}
 
 const paymentInputSchema = z.object({
   totalAmountEur: z.number().int().min(0),
@@ -237,6 +268,11 @@ export const adminRouter = router({
       pending: await db.countPendingBookings(),
     })),
 
+    emailStatus: adminProcedure.query(() => ({
+      configured: isEmailConfigured(),
+      provider: getEmailProvider(),
+    })),
+
     create: adminProcedure
       .input(
         bookingInputSchema.extend({
@@ -388,6 +424,7 @@ export const adminRouter = router({
           adminNote: z.string().max(2000).optional(),
           totalAmountEur: z.number().int().min(0),
           depositPaidEur: z.number().int().min(0),
+          imageBase64: z.string().min(100).max(6_000_000).optional(),
         })
       )
       .mutation(async ({ input, ctx }) => {
@@ -397,8 +434,17 @@ export const adminRouter = router({
           totalAmountEur: input.totalAmountEur,
           depositPaidEur: input.depositPaidEur,
         });
+
+        if (input.imageBase64) {
+          const booking = await db.getBookingById(input.id);
+          if (!booking) throw new TRPCError({ code: "NOT_FOUND" });
+          const imageJpeg = Buffer.from(input.imageBase64, "base64");
+          const cardSent = await sendBookingConfirmationCardEmail(booking, imageJpeg);
+          return { success: true as const, emailSent: cardSent, cardSent };
+        }
+
         const emailSent = await sendBookingConfirmationById(input.id);
-        return { success: true as const, emailSent };
+        return { success: true as const, emailSent, cardSent: false as const };
       }),
 
     sendConfirmationCard: adminProcedure
@@ -760,6 +806,73 @@ export const adminRouter = router({
       }),
   }),
 
+  reviews: router({
+    list: adminProcedure.query(async () => {
+      const rows = await db.listReviews();
+      return rows.map(formatReviewRow);
+    }),
+
+    pendingCount: adminProcedure.query(async () => db.countPendingReviews()),
+
+    create: adminProcedure
+      .input(
+        reviewInputSchema.extend({
+          isPublished: z.boolean().default(false),
+        })
+      )
+      .mutation(async ({ input }) => {
+        const id = await db.insertReview({
+          guestName: input.guestName,
+          guestEmail: input.guestEmail?.trim() || null,
+          rating: input.rating,
+          body: input.body,
+          villaId: input.villaId ?? null,
+          stayPeriod: input.stayPeriod?.trim() || null,
+          isPublished: input.isPublished,
+          source: "admin",
+        });
+        return { id };
+      }),
+
+    update: adminProcedure
+      .input(
+        z.object({
+          id: z.number().int().positive(),
+          guestName: z.string().min(2).max(255).optional(),
+          guestEmail: z.string().email().optional().or(z.literal("")),
+          rating: z.number().int().min(1).max(5).optional(),
+          body: z.string().min(10).max(300).optional(),
+          villaId: villaIdSchema.optional().nullable(),
+          stayPeriod: z.string().max(128).optional().nullable(),
+          isPublished: z.boolean().optional(),
+        })
+      )
+      .mutation(async ({ input }) => {
+        const existing = await db.getReviewById(input.id);
+        if (!existing) throw new TRPCError({ code: "NOT_FOUND", message: "Отзивът не е намерен" });
+        await db.updateReview(input.id, {
+          guestName: input.guestName,
+          guestEmail:
+            input.guestEmail !== undefined ? input.guestEmail?.trim() || null : undefined,
+          rating: input.rating,
+          body: input.body,
+          villaId: input.villaId === null ? null : input.villaId,
+          stayPeriod:
+            input.stayPeriod === null ? null : input.stayPeriod?.trim() || undefined,
+          isPublished: input.isPublished,
+        });
+        return { success: true as const };
+      }),
+
+    delete: adminProcedure
+      .input(z.object({ id: z.number().int().positive() }))
+      .mutation(async ({ input }) => {
+        const deleted = await db.deleteReview(input.id);
+        if (!deleted) throw new TRPCError({ code: "NOT_FOUND", message: "Отзивът не е намерен" });
+        return { success: true as const };
+      }),
+  }),
+
   users: router({
     list: masterProcedure.query(async () => {
       const users = await db.listAdminUsers();
@@ -960,6 +1073,56 @@ export const publicContentRouter = router({
       includes: parseOfferIncludes(o.includesJson),
     }));
   }),
+
+  getReviews: publicProcedure.query(async () => {
+    const rows = await db.getPublishedReviews();
+    return rows.map(r => ({
+      id: r.id,
+      guestName: r.guestName,
+      rating: r.rating,
+      body: r.body,
+      villaId: r.villaId,
+      stayPeriod: r.stayPeriod,
+      createdAt: r.createdAt.toISOString(),
+    }));
+  }),
+
+  submitReview: publicProcedure
+    .input(
+      reviewInputSchema.extend({
+        websiteHoneypot: z.string().max(0).optional(),
+      })
+    )
+    .mutation(async ({ input, ctx }) => {
+      if (input.websiteHoneypot) {
+        return { success: true as const, message: "OK" };
+      }
+
+      const ip = getClientIp(ctx.req);
+      if (!checkRateLimit(`review:${ip}`, 5, 60 * 60 * 1000)) {
+        throw new TRPCError({
+          code: "TOO_MANY_REQUESTS",
+          message: "Моля, опитайте по-късно",
+        });
+      }
+
+      const id = await db.insertReview({
+        guestName: input.guestName.trim(),
+        guestEmail: input.guestEmail?.trim() || null,
+        rating: input.rating,
+        body: input.body.trim(),
+        villaId: input.villaId ?? null,
+        stayPeriod: input.stayPeriod?.trim() || null,
+        isPublished: false,
+        source: "website",
+      });
+
+      return {
+        success: true as const,
+        id,
+        message: "Благодарим! Отзивът ви ще бъде публикуван след преглед от нашия екип.",
+      };
+    }),
 });
 
 export const publicBookingRouter = router({
