@@ -10,10 +10,15 @@ import { distPublicPath } from "./paths";
 import { runSeedIfNeeded } from "../seed";
 import { validateEnv } from "./env";
 import { serveStatic } from "./static";
+import { registerLegacyRedirects } from "../redirects";
+import { registerFactsRoute } from "../facts";
+import { registerSitemapRoute } from "../sitemap";
+import { initReviewSchemaCache } from "../seoReviewsCache";
 
 async function startServer() {
   validateEnv();
   await runSeedIfNeeded();
+  initReviewSchemaCache();
 
   const app = express();
   const server = createServer(app);
@@ -26,6 +31,10 @@ async function startServer() {
   app.get("/health", (_req, res) => {
     res.json({ ok: true, service: "pamporovo-villa" });
   });
+
+  registerFactsRoute(app);
+  registerSitemapRoute(app);
+  registerLegacyRedirects(app);
 
   app.use(
     "/api/trpc",

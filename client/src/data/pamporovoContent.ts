@@ -327,6 +327,12 @@ export const CAVES: Attraction[] = [
   },
 ];
 
+export const ALL_ATTRACTIONS: Attraction[] = [...ECO_TRAILS, ...LANDMARKS, ...CAVES];
+
+export function getAttractionById(id: string): Attraction | undefined {
+  return ALL_ATTRACTIONS.find((a) => a.id === id);
+}
+
 export interface SeasonActivity {
   title: string;
   description: string;

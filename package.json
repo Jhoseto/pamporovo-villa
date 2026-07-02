@@ -21,7 +21,8 @@
     "db:sync": "node scripts/apply-pending-schema.mjs",
     "seed:reviews": "tsx scripts/seed-reviews.ts",
     "pwa:icons": "node scripts/generate-admin-pwa-icons.mjs",
-    "og:image": "node scripts/generate-og-image.mjs",
+    "og:image": "tsx scripts/generate-og-image.ts",
+    "indexnow": "tsx scripts/submit-indexnow.ts",
     "db:tunnel": "db-tunnel.bat"
   },
   "dependencies": {

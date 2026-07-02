@@ -11,19 +11,25 @@ import { OffersModalProvider } from "./contexts/OffersModalContext";
 import { ConsentProvider } from "./contexts/ConsentContext";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { CookieConsent } from "./components/site/CookieConsent";
-import { trackPageView } from "./lib/analytics/gtag";
+import { trackAiReferralOnce, trackPublicPageView } from "./lib/analytics/events";
 import { initAdminPwaMeta, registerAdminServiceWorker } from "./lib/adminPwa";
 import Home from "./pages/Home";
 
 const AdminApp = lazy(() => import("./pages/admin/AdminApp"));
 const PamporovoPage = lazy(() => import("./pages/PamporovoPage"));
 const LegalPage = lazy(() => import("./pages/LegalPage"));
+const RentPage = lazy(() => import("./pages/RentPage"));
+const PamporovoSpokePage = lazy(() => import("./pages/PamporovoSpokePage"));
+const VillaPage = lazy(() => import("./pages/VillaPage"));
 
 function SiteRouter() {
   return (
     <Suspense fallback={<div className="min-h-screen bg-[var(--cream)]" aria-hidden />}>
       <Switch>
         <Route path={"/"} component={Home} />
+        <Route path={"/rent"} component={RentPage} />
+        <Route path={"/villa/:id"} component={VillaPage} />
+        <Route path={"/pamporovo/:slug"} component={PamporovoSpokePage} />
         <Route path={"/pamporovo"} component={PamporovoPage} />
         <Route path={"/legal"} component={LegalPage} />
         <Route path={"/404"} component={NotFound} />
@@ -35,7 +41,11 @@ function SiteRouter() {
 
 function PublicApp() {
   const [location] = useLocation();
-  const isGuidePage = location === "/pamporovo";
+  const isGuidePage =
+    location === "/pamporovo" ||
+    location === "/rent" ||
+    location.startsWith("/pamporovo/") ||
+    location.startsWith("/villa/");
   const [appReady, setAppReady] = useState(isGuidePage);
   const handlePreloaderComplete = useCallback(() => setAppReady(true), []);
 
@@ -68,7 +78,8 @@ function AppShell() {
 
   useEffect(() => {
     if (isAdmin) return;
-    trackPageView(location + window.location.search);
+    trackAiReferralOnce();
+    trackPublicPageView(location, window.location.search);
   }, [location, isAdmin]);
 
   useEffect(() => {

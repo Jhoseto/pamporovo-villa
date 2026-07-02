@@ -1,5 +1,5 @@
 /**
- * Generate Open Graph share image (1200×630) with full logo + premium branding.
+ * Generate Open Graph share images (1200×630).
  * Usage: pnpm og:image
  */
 import fs from "node:fs";
@@ -8,29 +8,41 @@ import sharp from "sharp";
 
 const root = path.resolve(import.meta.dirname, "..");
 const publicDir = path.join(root, "client/public");
+const ogDir = path.join(publicDir, "og");
 const logoPath = path.join(publicDir, "logo.png");
-const outJpg = path.join(publicDir, "og-image.jpg");
-const outWebp = path.join(publicDir, "og-image.webp");
 
 const WIDTH = 1200;
 const HEIGHT = 630;
 
-const backgroundCandidates = [
-  path.join(publicDir, "photos/hero.webp"),
-  path.join(publicDir, "photos/hero.jpg"),
-  path.join(publicDir, "photos/pamporovo/hero-winter.webp"),
-  path.join(publicDir, "photos/pamporovo/rhodope-panorama.webp"),
-  path.join(publicDir, "photos/pamporovo/pamporovo-ski.webp"),
-];
+const backgrounds = {
+  home: [
+    path.join(publicDir, "photos/hero.webp"),
+    path.join(publicDir, "photos/hero.jpg"),
+  ],
+  pamporovo: [
+    path.join(publicDir, "photos/pamporovo/hero-winter.webp"),
+    path.join(publicDir, "photos/pamporovo/pamporovo-ski.webp"),
+    path.join(publicDir, "photos/pamporovo/rhodope-panorama.webp"),
+  ],
+  rent: [
+    path.join(publicDir, "photos/hero.webp"),
+    path.join(publicDir, "photos/hero.jpg"),
+  ],
+};
 
-const backgroundPath = backgroundCandidates.find((candidate) => fs.existsSync(candidate));
-
-if (!fs.existsSync(logoPath)) {
-  console.error("Missing logo.png at client/public/logo.png");
-  process.exit(1);
+function pickBackground(keys) {
+  for (const key of keys) {
+    const found = backgrounds[key]?.find((candidate) => fs.existsSync(candidate));
+    if (found) return found;
+  }
+  return null;
 }
 
-function overlaySvg() {
+function overlaySvg(subtitle, tagline = "pamporovovilla.com", withLogo = true) {
+  const logoBlock = withLogo
+    ? ""
+    : `<text x="600" y="300" text-anchor="middle" fill="#f5efe4" font-family="Georgia, serif" font-size="52" font-weight="bold">PAMPOROVO VILLA</text>`;
+
   return Buffer.from(
     `<svg width="${WIDTH}" height="${HEIGHT}" xmlns="http://www.w3.org/2000/svg">
       <defs>
@@ -46,24 +58,18 @@ function overlaySvg() {
           <stop offset="82%" stop-color="#c9a962"/>
           <stop offset="100%" stop-color="#8f6a32" stop-opacity="0"/>
         </linearGradient>
-        <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
-          <feGaussianBlur stdDeviation="18" result="blur"/>
-          <feMerge>
-            <feMergeNode in="blur"/>
-            <feMergeNode in="SourceGraphic"/>
-          </feMerge>
-        </filter>
       </defs>
       <rect width="${WIDTH}" height="${HEIGHT}" fill="url(#vignette)"/>
       <rect x="72" y="72" width="${WIDTH - 144}" height="${HEIGHT - 144}" rx="28" fill="#0a0907" fill-opacity="0.28" stroke="#c9a962" stroke-opacity="0.35" stroke-width="1.5"/>
+      ${logoBlock}
       <rect x="120" y="518" width="960" height="2" fill="url(#goldLine)" opacity="0.95"/>
-      <text x="600" y="552" text-anchor="middle" fill="#f5efe4" font-family="Georgia, 'Times New Roman', serif" font-size="28" letter-spacing="4">3 ВИЛИ ПОД НАЕМ · ПАМПОРОВО</text>
-      <text x="600" y="586" text-anchor="middle" fill="#c9a962" font-family="Georgia, 'Times New Roman', serif" font-size="22" letter-spacing="6">pamporovovilla.com</text>
+      <text x="600" y="552" text-anchor="middle" fill="#f5efe4" font-family="Georgia, 'Times New Roman', serif" font-size="26" letter-spacing="3">${subtitle}</text>
+      <text x="600" y="586" text-anchor="middle" fill="#c9a962" font-family="Georgia, 'Times New Roman', serif" font-size="22" letter-spacing="6">${tagline}</text>
     </svg>`,
   );
 }
 
-async function buildBackground() {
+async function buildBackground(backgroundPath) {
   if (backgroundPath) {
     return sharp(backgroundPath)
       .resize(WIDTH, HEIGHT, { fit: "cover", position: "centre" })
@@ -84,38 +90,86 @@ async function buildBackground() {
     .toBuffer();
 }
 
-const logoMeta = await sharp(logoPath).metadata();
-const logoTargetWidth = Math.min(WIDTH - 160, Math.round(WIDTH * 0.78));
-const logoTargetHeight = Math.round((logoMeta.height / logoMeta.width) * logoTargetWidth);
-const logoTop = Math.round((HEIGHT - logoTargetHeight) / 2 - 36);
+async function composeVariant({ name, backgroundKey, subtitle, outPath, withLogo = true }) {
+  const backgroundPath = pickBackground([backgroundKey]);
+  const background = await buildBackground(backgroundPath);
 
-const logoBuffer = await sharp(logoPath)
-  .resize(logoTargetWidth, logoTargetHeight, { fit: "inside" })
-  .png()
-  .toBuffer();
+  const composites = [{ input: overlaySvg(subtitle, "pamporovovilla.com", withLogo), top: 0, left: 0 }];
 
-const background = await buildBackground();
-
-const composed = await sharp(background)
-  .composite([
-    { input: overlaySvg(), top: 0, left: 0 },
-    {
+  if (withLogo && fs.existsSync(logoPath)) {
+    const logoMeta = await sharp(logoPath).metadata();
+    const logoTargetWidth = Math.min(WIDTH - 160, Math.round(WIDTH * 0.72));
+    const logoTargetHeight = Math.round((logoMeta.height / logoMeta.width) * logoTargetWidth);
+    const logoTop = Math.round((HEIGHT - logoTargetHeight) / 2 - 48);
+    const logoBuffer = await sharp(logoPath)
+      .resize(logoTargetWidth, logoTargetHeight, { fit: "inside" })
+      .png()
+      .toBuffer();
+    composites.push({
       input: logoBuffer,
       top: logoTop,
       left: Math.round((WIDTH - logoTargetWidth) / 2),
-    },
-  ])
-  .jpeg({ quality: 90, mozjpeg: true })
-  .toBuffer();
+    });
+  }
 
-await sharp(composed).toFile(outJpg);
-await sharp(composed).webp({ quality: 88 }).toFile(outWebp);
+  const composed = await sharp(background)
+    .composite(composites)
+    .jpeg({ quality: 90, mozjpeg: true })
+    .toBuffer();
 
-const stats = fs.statSync(outJpg);
-console.log(`OG image: ${outJpg} (${Math.round(stats.size / 1024)} KB)`);
-console.log(`OG image: ${outWebp}`);
-if (backgroundPath) {
-  console.log(`Background: ${path.relative(root, backgroundPath)}`);
-} else {
-  console.log("Background: solid fallback (no hero photo found)");
+  await fs.promises.mkdir(path.dirname(outPath), { recursive: true });
+  await sharp(composed).toFile(outPath);
+  const stats = fs.statSync(outPath);
+  console.log(`OG ${name}: ${outPath} (${Math.round(stats.size / 1024)} KB)`);
 }
+
+if (!fs.existsSync(logoPath)) {
+  console.error("Missing logo.png at client/public/logo.png");
+  process.exit(1);
+}
+
+await composeVariant({
+  name: "home",
+  backgroundKey: "home",
+  subtitle: "3 ВИЛИ ПОД НАЕМ · ПАМПОРОВО",
+  outPath: path.join(publicDir, "og-image.jpg"),
+});
+
+await composeVariant({
+  name: "pamporovo",
+  backgroundKey: "pamporovo",
+  subtitle: "ПЪЛЕН ГИД ЗА ПАМПОРОВО · 2026",
+  outPath: path.join(ogDir, "pamporovo.jpg"),
+  withLogo: false,
+});
+
+await composeVariant({
+  name: "rent",
+  backgroundKey: "rent",
+  subtitle: "НАЕМ НА ВИЛА · ОТ 110 €/НОЩ",
+  outPath: path.join(ogDir, "rent.jpg"),
+});
+
+await composeVariant({
+  name: "pisti",
+  backgroundKey: "pamporovo",
+  subtitle: "ПИСТИ ПАМПОРОВО · 37+ KM",
+  outPath: path.join(ogDir, "pisti.jpg"),
+  withLogo: false,
+});
+
+await composeVariant({
+  name: "kude-da-spim",
+  backgroundKey: "home",
+  subtitle: "КЪДЕ ДА СПЯ В ПАМПОРОВО",
+  outPath: path.join(ogDir, "kude-da-spim.jpg"),
+  withLogo: false,
+});
+
+await composeVariant({
+  name: "villa-1",
+  backgroundKey: "home",
+  subtitle: "VILLA 1 · RENT IN PAMPOROVO",
+  outPath: path.join(ogDir, "villa-1.jpg"),
+  withLogo: false,
+});

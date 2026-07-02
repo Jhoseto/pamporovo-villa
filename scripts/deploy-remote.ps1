@@ -25,7 +25,7 @@ function Convert-ToProductionDatabaseUrl([string]$Url) {
 
 function Build-ProductionEnvContent([string]$EnvPath, [hashtable]$Overrides) {
   if (-not (Test-Path $EnvPath)) {
-    throw "Missing .env — copy .env.example to .env and fill in values"
+    throw "Missing .env - copy .env.example to .env and fill in values"
   }
   $lines = Get-Content $EnvPath -Encoding UTF8
   $seen = @{}
@@ -197,6 +197,14 @@ Write-Host "    dist/ uploaded OK"
 Write-Host "==> Running server-side deploy"
 $deployCmd = 'cd "RP" && chmod +x scripts/*.sh && bash scripts/deploy.sh'.Replace("RP", $remotePath)
 Invoke-SSH $sshBase $remote $deployCmd
+
+Write-Host ""
+Write-Host "==> IndexNow (optional — notifies Bing/Copilot)"
+try {
+  pnpm indexnow
+} catch {
+  Write-Host "    IndexNow skipped or failed (site must be live with key file)" -ForegroundColor Yellow
+}
 
 # ── Done ──────────────────────────────────────────────────────────────────────
 Write-Host ""

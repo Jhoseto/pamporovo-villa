@@ -7,11 +7,16 @@ import { SplitText } from "@/components/site/SplitText";
 import { Button } from "@/components/ui/button";
 import { navigateToHomeSection } from "@/lib/siteNav";
 import { useLocation } from "wouter";
+import { usePageLang } from "@/hooks/usePageLang";
+import { EN_SEO } from "@shared/seoEnMeta";
+import { PAMPOROVO_HUB_EN } from "@shared/en/pamporovoHubEn";
 
 export function PamporovoHero() {
   const ref = useRef<HTMLElement>(null);
   const reducedMotion = useReducedMotion();
   const [location, setLocation] = useLocation();
+  const lang = usePageLang();
+  const en = lang === "en";
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
@@ -23,26 +28,30 @@ export function PamporovoHero() {
 
   useEffect(() => {
     const defaultTitle = document.title;
-    const meta = document.querySelector('meta[name="description"]');
-    const prevDescription = meta?.getAttribute("content") ?? "";
+    const descEl = document.querySelector('meta[name="description"]');
+    const prevDescription = descEl?.getAttribute("content") ?? "";
+    const pageTitle = en ? (EN_SEO["/pamporovo"]?.title ?? PAMPOROVO_HUB_EN.title) : PAMPOROVO_PAGE_META.title;
+    const pageDescription = en
+      ? (EN_SEO["/pamporovo"]?.description ?? PAMPOROVO_HUB_EN.description)
+      : PAMPOROVO_PAGE_META.description;
 
-    document.title = PAMPOROVO_PAGE_META.title;
-    if (meta) meta.setAttribute("content", PAMPOROVO_PAGE_META.description);
+    document.title = pageTitle;
+    if (descEl) descEl.setAttribute("content", pageDescription);
 
     const ogTitle = document.querySelector('meta[property="og:title"]');
     const ogDesc = document.querySelector('meta[property="og:description"]');
     const prevOgTitle = ogTitle?.getAttribute("content") ?? "";
     const prevOgDesc = ogDesc?.getAttribute("content") ?? "";
-    ogTitle?.setAttribute("content", PAMPOROVO_PAGE_META.title);
-    ogDesc?.setAttribute("content", PAMPOROVO_PAGE_META.description);
+    ogTitle?.setAttribute("content", pageTitle);
+    ogDesc?.setAttribute("content", pageDescription);
 
     return () => {
       document.title = defaultTitle;
-      if (meta && prevDescription) meta.setAttribute("content", prevDescription);
+      if (descEl && prevDescription) descEl.setAttribute("content", prevDescription);
       if (prevOgTitle) ogTitle?.setAttribute("content", prevOgTitle);
       if (prevOgDesc) ogDesc?.setAttribute("content", prevOgDesc);
     };
-  }, []);
+  }, [en]);
 
   return (
     <section
@@ -56,7 +65,7 @@ export function PamporovoHero() {
       >
         <img
           src={HERO_IMAGES.winter}
-          alt="Писта Стената и кулата Снежанка — Пампорово"
+          alt={en ? "Stenata ski run and Snezhanka peak — Pamporovo" : "Писта Стената и кулата Снежанка — Пампорово"}
           className="h-full w-full object-cover object-center"
           fetchPriority="high"
           decoding="async"
@@ -71,13 +80,14 @@ export function PamporovoHero() {
         className="container relative z-[1] mx-auto px-4"
         style={reducedMotion ? undefined : { y: contentY, opacity: contentOpacity }}
       >
-        <p className="eyebrow mb-4 text-[var(--gold)]">Родопите · к.к. Пампорово</p>
+        <p className="eyebrow mb-4 text-[var(--gold)]">
+          {en ? PAMPOROVO_HUB_EN.eyebrow : "Родопите · к.к. Пампорово"}
+        </p>
         <h1 className="max-w-4xl font-serif text-4xl font-bold leading-[1.08] tracking-tight text-white md:text-6xl lg:text-7xl">
-          <SplitText as="span" mode="word" text="Пампорово и околностите" delay={0.08} />
+          <SplitText as="span" mode="word" text={en ? PAMPOROVO_HUB_EN.h1 : "Пампорово и околностите"} delay={0.08} />
         </h1>
         <p className="mt-6 max-w-2xl font-display text-lg leading-relaxed tracking-wide text-white/75 md:text-xl">
-          Пълен гид за курорта и региона — 37+ км писти, лифтове, еко пътеки, пещери и
-          автентични села на един планински ден пътуване от вилите.
+          {en ? PAMPOROVO_HUB_EN.subtitle : "Пълен гид за курорта и региона — 37+ км писти, лифтове, еко пътеки, пещери и автентични села на един планински ден пътуване от вилите."}
         </p>
         <div className="mt-10 flex flex-wrap gap-4">
           <MagneticButton
@@ -87,7 +97,7 @@ export function PamporovoHero() {
             }}
           >
             <Mountain className="mr-2 h-4 w-4" />
-            Зима — писти и лифтове
+            {en ? "Winter — pistes & lifts" : "Зима — писти и лифтове"}
           </MagneticButton>
           <Button
             variant="outline"
@@ -96,14 +106,14 @@ export function PamporovoHero() {
               document.getElementById("pamporovo-summer")?.scrollIntoView({ behavior: "smooth" });
             }}
           >
-            Лято — еко маршрути
+            {en ? "Summer — eco trails" : "Лято — еко маршрути"}
           </Button>
           <Button
             variant="ghost"
             className="h-12 text-white/70 hover:bg-white/10 hover:text-white"
             onClick={() => navigateToHomeSection("booking", setLocation, location)}
           >
-            Резервирай вила
+            {en ? PAMPOROVO_HUB_EN.bookCta : "Резервирай вила"}
           </Button>
         </div>
       </motion.div>

@@ -1,4 +1,5 @@
 import { preloadSection, scrollToSection } from "./scroll";
+import { trackBookStart } from "./analytics/events";
 
 export type SiteNavLink = {
   href: string;
@@ -22,6 +23,10 @@ export function navigateSiteLink(
   }
 
   const sectionId = link.href.replace(/^\/?#/, "");
+
+  if (sectionId === "booking") {
+    trackBookStart(currentPath === "/" ? "home" : currentPath);
+  }
 
   if (currentPath !== "/") {
     window.location.href = `/#${sectionId}`;

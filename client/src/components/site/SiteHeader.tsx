@@ -7,6 +7,7 @@ import { useHeaderScroll } from "@/hooks/useHeaderScroll";
 import { useScrollProgress } from "@/hooks/useScrollProgress";
 import { navigateSiteLink } from "@/lib/siteNav";
 import { cn } from "@/lib/utils";
+import { LangSwitcher } from "./LangSwitcher";
 import { MagneticButton } from "./MagneticButton";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 
@@ -91,6 +92,7 @@ export function SiteHeader() {
         </nav>
 
         <div className="site-header-end">
+          <LangSwitcher variant="header" className="hidden lg:flex" />
           <MagneticButton
             size="sm"
             className="premium-btn nav-cta hidden px-5 lg:inline-flex"
@@ -145,6 +147,7 @@ export function SiteHeader() {
                   </nav>
 
                   <div className="mobile-nav-footer mt-6 space-y-3 border-t border-white/10 pt-6">
+                    <LangSwitcher variant="header" className="mx-auto w-fit" />
                     <MagneticButton
                       className="premium-btn nav-cta h-12 w-full"
                       onClick={() => {

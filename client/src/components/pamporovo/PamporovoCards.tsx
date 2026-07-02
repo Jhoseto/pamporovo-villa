@@ -116,6 +116,43 @@ export function PisteTable({ pistes, dark = false }: { pistes: Piste[]; dark?: b
   );
 }
 
+import type { LiftFact } from "@shared/pamporovoSkiData";
+
+export function LiftTable({ lifts, dark = false }: { lifts: LiftFact[]; dark?: boolean }) {
+  return (
+    <div
+      className={cn(
+        "overflow-x-auto rounded-2xl border",
+        dark ? "border-white/10 bg-white/[0.03]" : "border-black/8 bg-white"
+      )}
+    >
+      <table className="w-full min-w-[640px] text-left text-sm">
+        <thead>
+          <tr className={cn("border-b", dark ? "border-white/10 text-white/60" : "border-black/8 text-muted-foreground")}>
+            <th className="px-4 py-3 font-medium">Маршрут</th>
+            <th className="px-4 py-3 font-medium">Тип</th>
+            <th className="px-4 py-3 font-medium">Дължина</th>
+            <th className="px-4 py-3 font-medium">Капацитет/час</th>
+          </tr>
+        </thead>
+        <tbody>
+          {lifts.map((lift) => (
+            <tr
+              key={lift.route}
+              className={cn("border-b last:border-0", dark ? "border-white/5 text-white/85" : "border-black/5")}
+            >
+              <td className="px-4 py-3 font-medium">{lift.route}</td>
+              <td className="px-4 py-3">{lift.type}</td>
+              <td className="px-4 py-3 whitespace-nowrap">{lift.lengthM} м</td>
+              <td className="px-4 py-3">{lift.capacity.toLocaleString("bg-BG")}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
 export function StatGrid({
   stats,
   dark = false,

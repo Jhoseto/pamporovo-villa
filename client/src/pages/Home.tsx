@@ -35,6 +35,9 @@ const PolicySection = lazy(() =>
 const ReviewsSection = lazy(() =>
   import("@/components/site/ReviewsSection").then(m => ({ default: m.ReviewsSection }))
 );
+const HomeFaqSection = lazy(() =>
+  import("@/components/site/HomeFaqSection").then(m => ({ default: m.HomeFaqSection }))
+);
 
 // Minimal fallback — invisible placeholder that holds layout height
 function SectionFallback() {
@@ -104,6 +107,9 @@ export default function Home() {
         </LazySection>
         <LazySection id="reviews" fallback={<SectionFallback />}>
           <ReviewsSection />
+        </LazySection>
+        <LazySection id="faq" fallback={<SectionFallback />}>
+          <HomeFaqSection className="border-t border-black/8 bg-[var(--cream)] py-16 md:py-20" />
         </LazySection>
       </main>
       <SiteFooter />
