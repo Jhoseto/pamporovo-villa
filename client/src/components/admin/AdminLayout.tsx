@@ -16,6 +16,7 @@ import {
 import { useState } from "react";
 import { AdminMenuLogo } from "@/components/admin/AdminMenuLogo";
 import { AdminPwaInstallBanner } from "@/components/admin/AdminPwaInstallBanner";
+import { AdminPushEnableBanner } from "@/components/admin/AdminPushEnableBanner";
 import { AdminThemeToggle } from "@/components/admin/AdminThemeToggle";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
@@ -172,11 +173,11 @@ export function AdminLayout({ children }: { children: React.ReactNode }) {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "flex flex-col items-center gap-1 rounded-xl px-2 py-2 text-[10px] font-medium text-[var(--admin-muted)]",
+                  "flex flex-col items-center gap-1.5 rounded-xl px-2 py-2.5 text-xs font-medium text-[var(--admin-muted)] transition-colors",
                   active && "admin-bottom-nav-link--active"
                 )}
               >
-                <Icon className="h-4 w-4" />
+                <Icon className="h-5 w-5 shrink-0" />
                 {item.label.split(" ")[0]}
               </Link>
             );
@@ -186,11 +187,11 @@ export function AdminLayout({ children }: { children: React.ReactNode }) {
               <button
                 type="button"
                 className={cn(
-                  "flex flex-col items-center gap-1 rounded-xl px-2 py-2 text-[10px] font-medium text-[var(--admin-muted)]",
+                  "flex flex-col items-center gap-1.5 rounded-xl px-2 py-2.5 text-xs font-medium text-[var(--admin-muted)] transition-colors",
                   moreNavActive && "admin-bottom-nav-link--active"
                 )}
               >
-                <MoreHorizontal className="h-4 w-4" />
+                <MoreHorizontal className="h-5 w-5 shrink-0" />
                 Още
               </button>
             </SheetTrigger>
@@ -223,6 +224,7 @@ export function AdminLayout({ children }: { children: React.ReactNode }) {
           </Sheet>
         </nav>
         <AdminPwaInstallBanner />
+        <AdminPushEnableBanner />
       </div>
     </div>
   );

@@ -53,7 +53,7 @@ export function BookingForm({
           <SelectTrigger className="admin-input">
             <SelectValue />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent className="admin-select-content">
             {VILLAS.map(v => (
               <SelectItem key={v.id} value={v.id}>
                 {v.name}
@@ -101,7 +101,7 @@ export function BookingForm({
             <SelectTrigger className="admin-input">
               <SelectValue />
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent className="admin-select-content">
               <SelectItem value="confirmed">Потвърдена</SelectItem>
               {showCompletedStatus && <SelectItem value="completed">Гостували</SelectItem>}
               <SelectItem value="pending">Непотвърдена</SelectItem>

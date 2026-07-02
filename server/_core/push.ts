@@ -32,6 +32,23 @@ export async function notifyAdmins(payload: PushPayload, excludeAdminUserId?: nu
   if (!configured) return;
 
   const subscriptions = await db.getPushSubscriptions(excludeAdminUserId);
+  await sendToSubscriptions(subscriptions, payload);
+}
+
+/** Send push only to a specific admin (e.g. test notification). */
+export async function notifyAdminUser(adminUserId: number, payload: PushPayload) {
+  ensureConfigured();
+  if (!configured) return;
+
+  const all = await db.getPushSubscriptions();
+  const subscriptions = all.filter(s => s.adminUserId === adminUserId);
+  await sendToSubscriptions(subscriptions, payload);
+}
+
+async function sendToSubscriptions(
+  subscriptions: Awaited<ReturnType<typeof db.getPushSubscriptions>>,
+  payload: PushPayload
+) {
   if (subscriptions.length === 0) return;
 
   await Promise.allSettled(
@@ -46,8 +63,8 @@ export async function notifyAdmins(payload: PushPayload, excludeAdminUserId?: nu
       const message = JSON.stringify({
         title: payload.title,
         body: payload.body,
-        icon: "/admin/icons/icon-192.svg",
-        badge: "/admin/icons/badge-72.svg",
+        icon: "/admin/icons/icon-192.png",
+        badge: "/admin/icons/badge-72.png",
         tag: payload.tag,
         renotify: true,
         requireInteraction: true,

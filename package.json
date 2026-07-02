@@ -18,7 +18,8 @@
     "test": "vitest run",
     "db:push": "drizzle-kit generate && drizzle-kit migrate",
     "db:sync": "node scripts/apply-pending-schema.mjs",
-    "pwa:icons": "node scripts/generate-admin-pwa-icons.mjs"
+    "pwa:icons": "node scripts/generate-admin-pwa-icons.mjs",
+    "db:tunnel": "db-tunnel.bat"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.693.0",

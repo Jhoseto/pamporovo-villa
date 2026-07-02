@@ -9,7 +9,18 @@
     <script>
       (function () {
         var path = location.pathname;
-        if (path !== "/admin" && !path.startsWith("/admin/")) return;
+        var isAdmin = path === "/admin" || path.startsWith("/admin/");
+
+        if (!isAdmin) {
+          var preload = document.createElement("link");
+          preload.rel = "preload";
+          preload.as = "image";
+          preload.href = "/photos/hero.webp";
+          preload.type = "image/webp";
+          preload.setAttribute("fetchpriority", "high");
+          document.head.appendChild(preload);
+          return;
+        }
 
         document.documentElement.dataset.adminPwaBootstrap = "1";
 
@@ -66,6 +77,10 @@
         }
       })();
     </script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <title>Pamporovo Villa | 3 вили под наем в Пампорово</title>
     <meta
       name="description"
@@ -80,8 +95,6 @@
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="bg_BG" />
     <meta name="twitter:card" content="summary_large_image" />
-    <!-- Preload LCP hero image for fastest First Contentful Paint -->
-    <link rel="preload" as="image" href="/photos/hero.webp" type="image/webp" fetchpriority="high" />
     <!-- DNS prefetch for external resources -->
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
     <link rel="dns-prefetch" href="https://maps.googleapis.com" />

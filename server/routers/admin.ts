@@ -14,7 +14,7 @@ import {
 } from "../_core/auth";
 import { getSessionCookieOptions } from "../_core/cookies";
 import { sendBookingConfirmationById, sendBookingConfirmationCardEmail } from "../_core/email";
-import { getVapidPublicKey, notifyManualBooking, notifyNewWebsiteBooking } from "../_core/push";
+import { getVapidPublicKey, notifyAdminUser, notifyManualBooking, notifyNewWebsiteBooking } from "../_core/push";
 import {
   createNotificationSoundToken,
   deleteCustomNotificationSound,
@@ -836,6 +836,27 @@ export const adminRouter = router({
         await db.deletePushSubscription(input.endpoint, ctx.user.id);
         return { success: true as const };
       }),
+
+    sendTest: adminProcedure.mutation(async ({ ctx }) => {
+      if (!getVapidPublicKey()) {
+        throw new TRPCError({ code: "PRECONDITION_FAILED", message: "Push не е конфигуриран на сървъра" });
+      }
+      const subs = await db.getPushSubscriptions();
+      const mine = subs.filter(s => s.adminUserId === ctx.user.id);
+      if (mine.length === 0) {
+        throw new TRPCError({
+          code: "PRECONDITION_FAILED",
+          message: "Няма активен абонамент — първо натиснете „Активирай известията“",
+        });
+      }
+      await notifyAdminUser(ctx.user.id, {
+        title: "Тестово известие",
+        body: "Push известията работят — ще получавате сигнал при нова резервация.",
+        url: "/admin/bookings",
+        tag: "test-push",
+      });
+      return { success: true as const };
+    }),
 
     getNotificationSound: adminProcedure.query(async ({ ctx }) => {
       const user = await db.getAdminUserById(ctx.user.id);

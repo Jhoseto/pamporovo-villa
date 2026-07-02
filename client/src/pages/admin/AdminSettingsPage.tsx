@@ -14,6 +14,10 @@ export default function AdminSettingsPage() {
   const utils = trpc.useUtils();
   const fileInputRef = useRef<HTMLInputElement>(null);
   const { permission, subscribe, unsubscribe, isSubscribed, vapidReady, isBusy } = useAdminPush();
+  const sendTest = trpc.admin.push.sendTest.useMutation({
+    onSuccess: () => toast.success("Тестово известие е изпратено"),
+    onError: err => toast.error(err.message),
+  });
   const {
     canInstall,
     isInstalled,
@@ -100,19 +104,26 @@ export default function AdminSettingsPage() {
       </div>
 
       <section className="admin-glass-card p-6">
-        <h2 className="font-serif text-xl font-semibold">Натисни известия</h2>
+        <h2 className="font-serif text-xl font-semibold">Push известия</h2>
         <p className="mt-2 text-sm text-[var(--admin-muted)]">
-          На телефон: Safari → Сподели → Добави на началния екран, след което разрешете известията тук.
+          Задължително за управление от телефона — получавате сигнал веднага при нова резервация от сайта.
         </p>
+        {!vapidReady && (
+          <p className="mt-3 rounded-xl border border-amber-500/30 bg-amber-500/10 p-3 text-sm text-amber-800 dark:text-amber-200">
+            Push не е конфигуриран на сървъра (липсват VAPID ключове).
+          </p>
+        )}
         <div className="mt-4 space-y-2 text-sm">
           <p>
             Статус:{" "}
             <strong>
-              {permission === "granted" && isSubscribed
-                ? "Активни"
-                : permission === "denied"
-                  ? "Блокирани в браузъра"
-                  : "Неактивни"}
+              {!vapidReady
+                ? "Недостъпно"
+                : permission === "granted" && isSubscribed
+                  ? "Активни"
+                  : permission === "denied"
+                    ? "Блокирани в браузъра"
+                    : "Неактивни"}
             </strong>
           </p>
         </div>
@@ -125,14 +136,30 @@ export default function AdminSettingsPage() {
             {isSubscribed ? "Обнови абонамента" : "Активирай известията"}
           </Button>
           {isSubscribed && (
-            <Button variant="outline" className="admin-glass-btn" onClick={() => unsubscribe()} disabled={isBusy}>
-              Деактивирай известията
-            </Button>
+            <>
+              <Button variant="outline" className="admin-glass-btn" onClick={() => unsubscribe()} disabled={isBusy}>
+                Деактивирай известията
+              </Button>
+              <Button
+                variant="outline"
+                className="admin-glass-btn"
+                onClick={() => sendTest.mutate()}
+                disabled={sendTest.isPending}
+              >
+                {sendTest.isPending ? "Изпращане..." : "Изпрати тест"}
+              </Button>
+            </>
           )}
         </div>
         {permission === "denied" && (
           <p className="mt-3 text-sm text-[var(--admin-muted)]">
-            Разрешете известията от настройките на браузъра за този сайт.
+            Разрешете известията от настройките на браузъра / телефона за този сайт.
+          </p>
+        )}
+        {platform === "ios" && !isInstalled && (
+          <p className="mt-3 rounded-xl border border-[var(--admin-glass-border-subtle)] bg-[var(--admin-panel-solid)] p-3 text-sm text-[var(--admin-muted)]">
+            На iPhone първо инсталирайте <strong>PV Админ</strong> от Safari (Добави на началния екран), после
+            отворете приложението от иконата и активирайте известията тук.
           </p>
         )}
 

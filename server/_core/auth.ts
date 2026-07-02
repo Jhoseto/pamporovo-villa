@@ -71,9 +71,14 @@ export async function getAdminFromRequest(req: {
   if (!token) return null;
   const session = await verifyAdminSessionToken(token);
   if (!session) return null;
-  const user = await db.getAdminUserById(session.userId);
-  if (!user || (user.tokenVersion ?? 0) !== session.tokenVersion) return null;
-  return user;
+  try {
+    const user = await db.getAdminUserById(session.userId);
+    if (!user || (user.tokenVersion ?? 0) !== session.tokenVersion) return null;
+    return user;
+  } catch {
+    // DB unavailable — treat as unauthenticated instead of throwing 500
+    return null;
+  }
 }
 
 export type SafeAdminUser = Pick<AdminUser, "id" | "username" | "isMaster" | "createdAt">;

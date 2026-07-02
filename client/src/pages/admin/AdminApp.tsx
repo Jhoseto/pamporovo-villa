@@ -38,7 +38,7 @@ function AdminGuard({ children }: { children: React.ReactNode }) {
       {isError ? (
         <AdminConnectionError />
       ) : !me ? (
-        <Redirect to="/admin" replace />
+        <Redirect to="/admin/login" replace />
       ) : (
         <AdminLayout>{children}</AdminLayout>
       )}
@@ -47,19 +47,27 @@ function AdminGuard({ children }: { children: React.ReactNode }) {
 }
 
 function AdminHome() {
-  const { data: me, isLoading, isError } = useAdminSession();
+  const { data: me, isLoading } = useAdminSession();
 
   return (
     <AdminLoadingShell isLoading={isLoading}>
-      {isError ? (
-        <AdminConnectionError />
-      ) : !me ? (
+      {!me ? (
         <AdminLoginPage />
       ) : (
         <AdminLayout>
           <AdminDashboardPage />
         </AdminLayout>
       )}
+    </AdminLoadingShell>
+  );
+}
+
+function AdminLoginRoute() {
+  const { data: me, isLoading } = useAdminSession();
+
+  return (
+    <AdminLoadingShell isLoading={isLoading}>
+      {me ? <Redirect to="/admin" replace /> : <AdminLoginPage />}
     </AdminLoadingShell>
   );
 }
@@ -180,18 +188,3 @@ export default function AdminApp() {
   );
 }
 
-function AdminLoginRoute() {
-  const { data: me, isLoading, isError } = useAdminSession();
-
-  return (
-    <AdminLoadingShell isLoading={isLoading}>
-      {isError ? (
-        <AdminConnectionError />
-      ) : me ? (
-        <Redirect to="/admin" replace />
-      ) : (
-        <AdminLoginPage />
-      )}
-    </AdminLoadingShell>
-  );
-}

@@ -1616,35 +1616,39 @@
     }
   }
 
-  /* ─── Admin panel — premium glass & silver ─── */
+  /* ─── Admin panel — warm gold & cream ─── */
   .admin-mode {
-    --admin-bg-base: #dfe3ea;
-    --admin-bg: #e8ebf0;
+    --admin-bg-base: #ddd8cf;
+    --admin-bg: #e8e4db;
     --admin-glass: rgb(255 255 255 / 0.48);
     --admin-glass-strong: rgb(255 255 255 / 0.68);
     --admin-glass-border: rgb(255 255 255 / 0.82);
-    --admin-glass-border-subtle: rgb(28 32 40 / 0.07);
+    --admin-glass-border-subtle: rgb(28 20 8 / 0.07);
     --admin-card: var(--admin-glass-strong);
-    --admin-fg: #1a1e26;
-    --admin-muted: #5c6472;
-    --admin-border: rgb(28 32 40 / 0.08);
+    --admin-fg: #1a1710;
+    --admin-muted: #6b6458;
+    --admin-border: rgb(28 20 8 / 0.08);
     --admin-hover: rgb(255 255 255 / 0.38);
-    --admin-accent: #7d8694;
-    --admin-accent-hover: #636b78;
+    --admin-accent: #8f7a5a;
+    --admin-accent-hover: #6e5c40;
     --admin-accent-fg: #ffffff;
+    --admin-gold: #b8924f;
+    --admin-gold-deep: #7a6235;
+    --admin-gold-light: rgb(184 146 79 / 0.13);
+    --admin-gold-border: rgb(184 146 79 / 0.28);
     --admin-silver-shine: linear-gradient(
       135deg,
-      #f4f6f8 0%,
-      #c5ccd6 28%,
-      #eef0f3 52%,
-      #9aa3b0 78%,
-      #d8dde4 100%
+      #f7f4ee 0%,
+      #d4c9b5 28%,
+      #f0ebe0 52%,
+      #c4b8a2 78%,
+      #e8e2d8 100%
     );
-    --admin-silver-muted: linear-gradient(135deg, #8e97a4 0%, #b8bec8 50%, #6b7380 100%);
-    --admin-shadow: 0 8px 32px rgb(15 18 24 / 0.06), inset 0 1px 0 rgb(255 255 255 / 0.75);
-    --admin-shadow-lg: 0 28px 72px -16px rgb(15 18 24 / 0.14);
+    --admin-silver-muted: linear-gradient(135deg, #a09070 0%, #c4b090 50%, #7a6848 100%);
+    --admin-shadow: 0 8px 32px rgb(30 20 8 / 0.07), inset 0 1px 0 rgb(255 255 255 / 0.75);
+    --admin-shadow-lg: 0 28px 72px -16px rgb(30 20 8 / 0.16);
     --admin-blur: blur(22px);
-    --admin-panel-solid: #eceef3;
+    --admin-panel-solid: #f0ede8;
     --villa-1: #5b8fd4;
     --villa-2: #c9953a;
     --villa-deluxe: #9b7fd4;
@@ -1660,33 +1664,36 @@
     --admin-cal-confirmed-bg: rgb(220 252 231 / 0.9);
     --admin-cal-rejected-bg: rgb(254 226 226 / 0.9);
     --admin-cal-completed-bg: rgb(219 234 254 / 0.92);
-    --admin-panel-solid: #141820;
   }
 
   .admin-mode.admin-dark {
-    --admin-bg-base: #0a0c10;
-    --admin-bg: #0f1218;
-    --admin-glass: rgb(22 26 34 / 0.58);
-    --admin-glass-strong: rgb(32 36 46 / 0.72);
+    --admin-bg-base: #0e0b08;
+    --admin-bg: #13100d;
+    --admin-glass: rgb(28 22 12 / 0.58);
+    --admin-glass-strong: rgb(40 32 18 / 0.72);
     --admin-glass-border: rgb(255 255 255 / 0.1);
     --admin-glass-border-subtle: rgb(255 255 255 / 0.05);
     --admin-card: var(--admin-glass-strong);
-    --admin-fg: #f0f2f5;
-    --admin-muted: #9aa3b0;
+    --admin-fg: #f0ece4;
+    --admin-muted: #a09280;
     --admin-border: rgb(255 255 255 / 0.08);
     --admin-hover: rgb(255 255 255 / 0.06);
-    --admin-accent: #b4bcc8;
-    --admin-accent-hover: #d0d6de;
-    --admin-accent-fg: #12151c;
+    --admin-accent: #c4b090;
+    --admin-accent-hover: #d8c8a8;
+    --admin-accent-fg: #1a1209;
+    --admin-gold: #d4a96a;
+    --admin-gold-deep: #b8924f;
+    --admin-gold-light: rgb(212 169 106 / 0.2);
+    --admin-gold-border: rgb(212 169 106 / 0.32);
     --admin-silver-shine: linear-gradient(
       135deg,
-      #4a5160 0%,
-      #8e97a4 35%,
-      #c8ced6 55%,
-      #6b7380 80%,
-      #a8b0bc 100%
+      #3a3020 0%,
+      #6a5840 35%,
+      #9a8868 55%,
+      #4a3c28 80%,
+      #7a6848 100%
     );
-    --admin-silver-muted: linear-gradient(135deg, #c8ced6 0%, #8e97a4 50%, #e8eaee 100%);
+    --admin-silver-muted: linear-gradient(135deg, #a89070 0%, #7a6848 50%, #c4a880 100%);
     --admin-shadow: 0 8px 32px rgb(0 0 0 / 0.35), inset 0 1px 0 rgb(255 255 255 / 0.06);
     --admin-shadow-lg: 0 28px 72px -16px rgb(0 0 0 / 0.55);
     --admin-status-pending-bg: rgb(120 53 15 / 0.45);
@@ -1701,7 +1708,7 @@
     --admin-cal-confirmed-bg: rgb(20 83 45 / 0.55);
     --admin-cal-rejected-bg: rgb(127 29 29 / 0.5);
     --admin-cal-completed-bg: rgb(30 58 138 / 0.55);
-    --admin-panel-solid: #141820;
+    --admin-panel-solid: #1a1612;
   }
 
   .admin-mode body {
@@ -1726,10 +1733,10 @@
     pointer-events: none;
     background:
       var(--admin-silver-shine),
-      radial-gradient(ellipse 85% 55% at 8% -8%, rgb(210 218 228 / 0.65) 0%, transparent 58%),
-      radial-gradient(ellipse 70% 45% at 96% 4%, rgb(196 204 216 / 0.5) 0%, transparent 52%),
-      radial-gradient(ellipse 75% 60% at 48% 108%, rgb(176 186 200 / 0.38) 0%, transparent 58%),
-      linear-gradient(168deg, var(--admin-bg-base) 0%, var(--admin-bg) 38%, #eef1f6 72%, #e4e8ef 100%);
+      radial-gradient(ellipse 85% 55% at 8% -8%, rgb(220 208 188 / 0.65) 0%, transparent 58%),
+      radial-gradient(ellipse 70% 45% at 96% 4%, rgb(210 195 170 / 0.5) 0%, transparent 52%),
+      radial-gradient(ellipse 75% 60% at 48% 108%, rgb(195 180 158 / 0.38) 0%, transparent 58%),
+      linear-gradient(168deg, var(--admin-bg-base) 0%, var(--admin-bg) 38%, #f4efe6 72%, #ebe6dc 100%);
     background-blend-mode: soft-light, normal, normal, normal, normal;
   }
 
@@ -1749,10 +1756,10 @@
   .admin-mode.admin-dark .admin-shell::before {
     background:
       var(--admin-silver-shine),
-      radial-gradient(ellipse 72% 48% at 6% -4%, rgb(110 120 140 / 0.28) 0%, transparent 58%),
-      radial-gradient(ellipse 58% 38% at 94% 6%, rgb(90 100 120 / 0.2) 0%, transparent 52%),
-      radial-gradient(ellipse 68% 52% at 50% 106%, rgb(70 80 100 / 0.22) 0%, transparent 58%),
-      linear-gradient(168deg, #06080c 0%, var(--admin-bg) 42%, #121620 100%);
+      radial-gradient(ellipse 72% 48% at 6% -4%, rgb(80 55 20 / 0.28) 0%, transparent 58%),
+      radial-gradient(ellipse 58% 38% at 94% 6%, rgb(65 42 14 / 0.2) 0%, transparent 52%),
+      radial-gradient(ellipse 68% 52% at 50% 106%, rgb(55 36 12 / 0.22) 0%, transparent 58%),
+      linear-gradient(168deg, #0a0700 0%, var(--admin-bg) 42%, #1a1209 100%);
     background-blend-mode: overlay, normal, normal, normal, normal;
   }
 
@@ -1785,10 +1792,10 @@
 
   .admin-mode.admin-dark .admin-sidebar {
     background:
-      linear-gradient(180deg, rgb(38 42 54 / 0.98) 0%, rgb(22 26 34 / 0.97) 100%);
-    border-right-color: rgb(255 255 255 / 0.1);
+      linear-gradient(180deg, rgb(40 30 14 / 0.98) 0%, rgb(22 16 6 / 0.97) 100%);
+    border-right-color: rgb(184 146 79 / 0.12);
     box-shadow:
-      0 0 0 1px rgb(255 255 255 / 0.06) inset,
+      0 0 0 1px rgb(184 146 79 / 0.07) inset,
       12px 0 40px -12px rgb(0 0 0 / 0.45),
       0 24px 48px -24px rgb(0 0 0 / 0.35);
   }
@@ -1908,43 +1915,49 @@
   }
 
   .admin-nav-link--active {
-    background:
-      linear-gradient(145deg, rgb(255 255 255 / 0.72) 0%, rgb(255 255 255 / 0.42) 100%),
-      var(--admin-glass-strong);
-    color: var(--admin-fg);
+    background: var(--admin-gold-light);
+    color: var(--admin-gold);
     font-weight: 600;
-    border-color: var(--admin-glass-border);
+    border-color: var(--admin-gold-border);
     box-shadow:
-      0 1px 0 rgb(255 255 255 / 0.85) inset,
-      0 6px 18px rgb(15 18 24 / 0.08),
-      0 2px 4px rgb(15 18 24 / 0.04);
+      0 1px 0 rgb(255 255 255 / 0.6) inset,
+      0 2px 10px rgb(184 146 79 / 0.14);
     transform: translateX(2px);
   }
 
+  .admin-nav-link--active svg {
+    opacity: 1;
+    color: var(--admin-gold);
+  }
+
   .admin-mode.admin-dark .admin-nav-link {
-    color: rgb(220 226 234 / 0.94);
+    color: rgb(240 236 226 / 0.88);
   }
 
   .admin-mode.admin-dark .admin-nav-link svg {
     opacity: 1;
-    color: rgb(232 236 242 / 0.92);
+    color: rgb(240 220 190 / 0.8);
   }
 
   .admin-mode.admin-dark .admin-nav-link:hover {
-    background: rgb(255 255 255 / 0.1);
-    color: #ffffff;
-    border-color: rgb(255 255 255 / 0.12);
+    background: rgb(255 255 255 / 0.08);
+    color: #f0ece4;
+    border-color: rgb(255 255 255 / 0.1);
   }
 
   .admin-mode.admin-dark .admin-nav-link--active {
-    background:
-      linear-gradient(145deg, rgb(255 255 255 / 0.16) 0%, rgb(255 255 255 / 0.08) 100%);
-    color: #ffffff;
-    border-color: rgb(255 255 255 / 0.16);
+    background: var(--admin-gold-light);
+    color: var(--admin-gold);
+    border-color: var(--admin-gold-border);
     box-shadow:
-      0 1px 0 rgb(255 255 255 / 0.12) inset,
-      0 8px 20px rgb(0 0 0 / 0.28);
+      0 1px 0 rgb(255 255 255 / 0.08) inset,
+      0 4px 18px rgb(212 169 106 / 0.2);
     transform: translateX(2px);
+  }
+
+  .admin-mode.admin-dark .admin-nav-link--active svg {
+    color: var(--admin-gold);
+    opacity: 1;
   }
 
   .admin-glass-card {
@@ -2332,19 +2345,19 @@
     align-items: center;
     justify-content: center;
     border-radius: 999px;
-    background: var(--admin-accent);
-    color: var(--admin-accent-fg);
+    background: var(--admin-gold);
+    color: #fff;
     font-size: 0.65rem;
     font-weight: 700;
     padding: 0.1rem 0.4rem;
     box-shadow:
-      0 2px 8px rgb(74 81 96 / 0.25),
-      inset 0 1px 0 rgb(255 255 255 / 0.25);
+      0 2px 8px rgb(184 146 79 / 0.35),
+      inset 0 1px 0 rgb(255 255 255 / 0.3);
   }
 
   .admin-mode.admin-dark .admin-badge {
-    background: #b8bec8;
-    color: #12151c;
+    background: var(--admin-gold);
+    color: #1a1209;
   }
 
   .admin-user-pill {
@@ -2367,19 +2380,19 @@
     align-items: center;
     justify-content: center;
     border-radius: 999px;
-    background: var(--admin-accent);
-    color: var(--admin-accent-fg);
+    background: linear-gradient(135deg, var(--admin-gold) 0%, var(--admin-gold-deep) 100%);
+    color: #ffffff;
     font-size: 0.7rem;
     font-weight: 700;
     text-transform: uppercase;
     box-shadow:
-      0 3px 10px rgb(74 81 96 / 0.22),
-      inset 0 1px 0 rgb(255 255 255 / 0.22);
+      0 3px 10px rgb(184 146 79 / 0.3),
+      inset 0 1px 0 rgb(255 255 255 / 0.25);
   }
 
   .admin-mode.admin-dark .admin-user-avatar {
-    background: #b8bec8;
-    color: #12151c;
+    background: linear-gradient(135deg, var(--admin-gold) 0%, var(--admin-gold-deep) 100%);
+    color: #1a1209;
   }
 
   .admin-status {
@@ -2426,16 +2439,16 @@
   }
 
   .admin-cal-today {
-    background: var(--admin-accent);
-    color: var(--admin-accent-fg);
+    background: linear-gradient(135deg, var(--admin-gold) 0%, var(--admin-gold-deep) 100%);
+    color: #ffffff;
     box-shadow:
-      0 4px 12px rgb(74 81 96 / 0.25),
-      inset 0 1px 0 rgb(255 255 255 / 0.25);
+      0 4px 12px rgb(184 146 79 / 0.3),
+      inset 0 1px 0 rgb(255 255 255 / 0.3);
   }
 
   .admin-mode.admin-dark .admin-cal-today {
-    background: #b8bec8;
-    color: #12151c;
+    background: linear-gradient(135deg, var(--admin-gold) 0%, var(--admin-gold-deep) 100%);
+    color: #1a1209;
   }
 
   .admin-mode.admin-dark .admin-cal-day:hover {
@@ -2547,11 +2560,26 @@
     box-shadow: 0 -1px 0 rgb(255 255 255 / 0.06), 0 -8px 24px rgb(0 0 0 / 0.35);
   }
 
-  .admin-bottom-nav a.admin-bottom-nav-link--active {
-    color: var(--admin-fg);
-    background: var(--admin-glass-strong);
-    border: 1px solid var(--admin-glass-border-subtle);
-    box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.35);
+  .admin-bottom-nav .admin-bottom-nav-link--active {
+    color: var(--admin-gold);
+    background: var(--admin-gold-light);
+    border: 1px solid var(--admin-gold-border);
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.45);
+  }
+
+  .admin-bottom-nav .admin-bottom-nav-link--active svg {
+    color: var(--admin-gold);
+  }
+
+  .admin-mode.admin-dark .admin-bottom-nav .admin-bottom-nav-link--active {
+    color: var(--admin-gold);
+    background: var(--admin-gold-light);
+    border-color: var(--admin-gold-border);
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.06);
+  }
+
+  .admin-mode.admin-dark .admin-bottom-nav .admin-bottom-nav-link--active svg {
+    color: var(--admin-gold);
   }
 
   .admin-sheet {
@@ -2576,6 +2604,25 @@
 
   .admin-mode.admin-dark .admin-sheet-divider {
     border-color: rgb(255 255 255 / 0.12);
+  }
+
+  /* Radix Select / dropdown popovers inside admin */
+  .admin-mode [data-slot="select-content"] {
+    background: var(--admin-panel-solid) !important;
+    color: var(--admin-fg) !important;
+    border-color: var(--admin-glass-border-subtle) !important;
+  }
+
+  .admin-mode [data-slot="select-item"]:focus,
+  .admin-mode [data-slot="select-item"][data-highlighted] {
+    background: var(--admin-gold-light) !important;
+    color: var(--admin-gold) !important;
+  }
+
+  .admin-mode.admin-dark [data-slot="select-content"] {
+    background: var(--admin-panel-solid) !important;
+    color: var(--admin-fg) !important;
+    border-color: rgb(255 255 255 / 0.1) !important;
   }
 
   .admin-calendar-card {

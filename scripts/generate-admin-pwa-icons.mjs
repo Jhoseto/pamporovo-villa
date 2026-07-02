@@ -12,6 +12,7 @@ const houseIconPath = path.join(root, "client/public/admin/icons/pwa-house-sourc
 const bannerLogoPath = path.join(root, "client/public/logo.png");
 const iconsDir = path.join(root, "client/public/admin/icons");
 const splashDir = path.join(root, "client/public/admin/splash");
+const publicDir = path.join(root, "client/public");
 const SPLASH_BG = "#efeae1";
 
 if (!fs.existsSync(houseIconPath)) {
@@ -150,4 +151,41 @@ for (const splash of splashOutputs) {
   console.log(`Wrote ${path.join(splashDir, splash.file)}`);
 }
 
-console.log("Done — PWA icons from pwa-house-source.png");
+// ── Favicon (32×32 and 16×16) from house source ─────────────────────────────
+async function composeFavicon(size) {
+  const houseMeta = await sharp(houseSource).metadata();
+  const houseAspect = (houseMeta.width ?? 1) / (houseMeta.height ?? 1);
+  const houseWidth = houseAspect >= 1 ? size : Math.round(size * houseAspect);
+  const houseHeight = houseAspect >= 1 ? Math.round(size / houseAspect) : size;
+
+  const house = await sharp(houseSource)
+    .resize(houseWidth, houseHeight, { fit: "contain", background: SPLASH_BG })
+    .flatten({ background: SPLASH_BG })
+    .png()
+    .toBuffer();
+
+  const offsetX = Math.round((size - houseWidth) / 2);
+  const offsetY = Math.round((size - houseHeight) / 2);
+
+  return sharp({
+    create: { width: size, height: size, channels: 3, background: SPLASH_BG },
+  })
+    .composite([{ input: house, top: offsetY, left: offsetX }])
+    .removeAlpha()
+    .png({ compressionLevel: 9 })
+    .toBuffer();
+}
+
+const favicon32 = await composeFavicon(32);
+await sharp(favicon32).toFile(path.join(publicDir, "favicon-32x32.png"));
+console.log(`Wrote ${path.join(publicDir, "favicon-32x32.png")}`);
+
+const favicon16 = await composeFavicon(16);
+await sharp(favicon16).toFile(path.join(publicDir, "favicon-16x16.png"));
+console.log(`Wrote ${path.join(publicDir, "favicon-16x16.png")}`);
+
+// 180×180 Apple Touch Icon for the main site (same as admin)
+await sharp(await composeIcon(180)).toFile(path.join(publicDir, "apple-touch-icon.png"));
+console.log(`Wrote ${path.join(publicDir, "apple-touch-icon.png")}`);
+
+console.log("Done — PWA icons + favicons from pwa-house-source.png");
