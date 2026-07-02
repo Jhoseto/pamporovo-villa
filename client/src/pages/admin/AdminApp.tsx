@@ -67,7 +67,7 @@ function AdminLoginRoute() {
 
   return (
     <AdminLoadingShell isLoading={isLoading}>
-      {me ? <Redirect to="/admin" replace /> : <AdminLoginPage />}
+      {me ? <Redirect to="/admin/" replace /> : <AdminLoginPage />}
     </AdminLoadingShell>
   );
 }

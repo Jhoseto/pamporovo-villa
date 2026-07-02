@@ -26,7 +26,7 @@ import { cn } from "@/lib/utils";
 import { useNotificationSoundListener } from "@/hooks/useNotificationSound";
 
 const navItems = [
-  { href: "/admin", label: "Календар", icon: LayoutDashboard, exact: true },
+  { href: "/admin/", label: "Календар", icon: LayoutDashboard, exact: true },
   { href: "/admin/bookings", label: "Резервации", icon: ClipboardList },
   { href: "/admin/contacts", label: "Контакти", icon: ContactRound },
   { href: "/admin/bookings/new", label: "Нова резервация", icon: PlusCircle },
@@ -42,9 +42,10 @@ function userInitials(username?: string) {
 }
 
 function isNavActive(location: string, href: string, exact?: boolean) {
-  if (href === "/admin/bookings") return location === "/admin/bookings";
-  if (href === "/admin/contacts") return location === "/admin/contacts";
-  if (exact) return location === href;
+  const norm = (p: string) => (p.length > 1 ? p.replace(/\/+$/, "") : p);
+  if (href === "/admin/bookings") return norm(location) === "/admin/bookings";
+  if (href === "/admin/contacts") return norm(location) === "/admin/contacts";
+  if (exact) return norm(location) === norm(href);
   return location.startsWith(href);
 }
 

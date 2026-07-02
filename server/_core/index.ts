@@ -35,6 +35,17 @@ async function startServer() {
     })
   );
 
+  // PWA: manifest + service worker scope is "/admin/" (with trailing slash).
+  // A document loaded at "/admin" is OUTSIDE that scope, so Chrome refuses to
+  // install it as an app ("Add to home screen" creates a plain shortcut).
+  // Canonicalize before the SPA catch-all serves index.html.
+  app.get("/admin", (req, res, next) => {
+    // Non-strict routing also matches "/admin/" — only redirect the bare path.
+    if (req.path !== "/admin") return next();
+    const query = req.originalUrl.slice(req.path.length);
+    res.redirect(301, `/admin/${query}`);
+  });
+
   app.get("/admin/notification-sound/:filename", async (req, res) => {
     const filename = req.params.filename ?? "";
     if (!/^[\w-]+\.(wav|mp3|ogg|webm|m4a)$/i.test(filename)) {

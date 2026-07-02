@@ -22,6 +22,14 @@
           return;
         }
 
+        // The PWA manifest + service worker scope is "/admin/". A page loaded
+        // at bare "/admin" is outside that scope and Chrome will NOT offer a
+        // real install (only a browser shortcut). Canonicalize immediately.
+        if (path === "/admin") {
+          location.replace("/admin/" + location.search + location.hash);
+          return;
+        }
+
         document.documentElement.dataset.adminPwaBootstrap = "1";
 
         function addLink(rel, href, extra) {

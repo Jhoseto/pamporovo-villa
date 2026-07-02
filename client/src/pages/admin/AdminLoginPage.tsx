@@ -19,7 +19,7 @@ export default function AdminLoginPage() {
     onSuccess: res => {
       utils.admin.auth.me.setData(undefined, res.user);
       toast.success("Добре дошли!");
-      window.location.href = "/admin";
+      window.location.href = "/admin/";
     },
     onError: err => toast.error(err.message),
   });
