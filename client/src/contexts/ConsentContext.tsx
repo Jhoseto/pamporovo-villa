@@ -1,4 +1,5 @@
-import { applyConsent, trackPageView } from "@/lib/analytics/gtag";
+import { applyConsent } from "@/lib/analytics/gtag";
+import { trackPublicPageView } from "@/lib/analytics/events";
 import { readConsent, writeConsent } from "@/lib/consent/storage";
 import {
   CONSENT_ALL,
@@ -40,7 +41,7 @@ export function ConsentProvider({ children }: { children: ReactNode }) {
     if (!consent) return;
     void applyConsent(consent.analytics, consent.functional).then(() => {
       if (consent.analytics) {
-        trackPageView(window.location.pathname + window.location.search);
+        trackPublicPageView(window.location.pathname, window.location.search);
       }
     });
   }, [consent]);
@@ -49,11 +50,6 @@ export function ConsentProvider({ children }: { children: ReactNode }) {
     writeConsent(next);
     setConsent(next);
     setShowBanner(false);
-    void applyConsent(next.analytics, next.functional).then(() => {
-      if (next.analytics) {
-        trackPageView(window.location.pathname + window.location.search);
-      }
-    });
   }, []);
 
   const acceptAll = useCallback(() => {

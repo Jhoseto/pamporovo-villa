@@ -62,6 +62,7 @@ export async function applyConsent(analytics: boolean, functional: boolean) {
     window.gtag("config", GA_MEASUREMENT_ID, {
       send_page_view: false,
       anonymize_ip: true,
+      cookie_flags: "SameSite=None;Secure",
     });
     gaConfigured = true;
   }
@@ -73,7 +74,11 @@ export function isAnalyticsActive() {
 
 export function trackPageView(pagePath: string) {
   if (!gaConfigured) return;
-  window.gtag("event", "page_view", { page_path: pagePath });
+  window.gtag("event", "page_view", {
+    page_path: pagePath,
+    page_location: window.location.href,
+    page_title: document.title,
+  });
 }
 
 export function trackEvent(eventName: string, params?: Record<string, string | number | boolean>) {
