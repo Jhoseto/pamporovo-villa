@@ -5,6 +5,11 @@ on:
     branches: [main]
   workflow_dispatch:
 
+# Prevent parallel deploys racing on the same server (tar/extract collisions).
+concurrency:
+  group: deploy-jethost-production
+  cancel-in-progress: true
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -17,7 +22,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 24
           cache: pnpm
 
       - name: Install dependencies
@@ -66,6 +71,7 @@ jobs:
             dist/ \
             scripts/apply-pending-schema.mjs \
             scripts/reset-master-admin.mjs \
+            scripts/deploy-github-remote.sh \
             package.json \
             .env.production
           tar -czf /tmp/deps.tar.gz -C /tmp/prod-out node_modules/
@@ -102,44 +108,15 @@ jobs:
 
       - name: Deploy on server
         run: |
+          APP_DIR="${{ secrets.JETHOST_APP_DIR }}"
+          if [ -z "$APP_DIR" ]; then APP_DIR="pamporovo-villa"; fi
           ssh -i ~/.ssh/jethost \
             -p "${{ secrets.JETHOST_SSH_PORT }}" \
             -o StrictHostKeyChecking=no \
             -o ConnectTimeout=30 \
             -o ServerAliveInterval=15 \
-            "${{ secrets.JETHOST_SSH_USER }}@${{ secrets.JETHOST_SSH_HOST }}" << 'SSHEOF'
-              set -e
-              APP="${{ secrets.JETHOST_APP_DIR }}"
-              APP="${APP:-pamporovo-villa}"
-              cd "$HOME/$APP"
-
-              echo "==> Extracting app"
-              tar -xzf ~/app.tar.gz
-              rm ~/app.tar.gz
-              mv .env.production .env
-
-              echo "==> Extracting node_modules"
-              rm -rf node_modules
-              # Remove symlink if cPanel created one
-              if [ -L node_modules ]; then rm -f node_modules; fi
-              tar -xzf ~/deps.tar.gz
-              rm ~/deps.tar.gz
-              echo "node_modules size: $(du -sh node_modules | cut -f1)"
-
-              mkdir -p data/notification-sounds
-
-              echo "==> Syncing database schema"
-              "$HOME/nodevenv/$APP/22/bin/node" scripts/apply-pending-schema.mjs || true
-
-              echo "==> Syncing master admin password"
-              "$HOME/nodevenv/$APP/22/bin/node" scripts/reset-master-admin.mjs || true
-
-              echo "==> Restarting app"
-              cloudlinux-selector restart --json --interpreter nodejs \
-                --app-root "$APP" 2>/dev/null || true
-
-              echo "=== Deploy complete ==="
-          SSHEOF
+            "${{ secrets.JETHOST_SSH_USER }}@${{ secrets.JETHOST_SSH_HOST }}" \
+            "bash -s" "$APP_DIR" < scripts/deploy-github-remote.sh
 
       - name: Summary
         run: echo "Deployed to ${{ secrets.SITE_URL }}"

@@ -19,7 +19,7 @@ fi
 
 # ── Locate Node.js (cPanel nodevenv — prepend bin dir, do NOT source activate) ──
 NODE_BIN=""
-for ver in 22 20 18; do
+for ver in 24 22 20 18; do
   candidate="$HOME/nodevenv/${APP_DIR}/${ver}/bin"
   if [ -x "${candidate}/node" ]; then
     export PATH="${candidate}:$PATH"
@@ -30,7 +30,7 @@ for ver in 22 20 18; do
 done
 
 if [ -z "$NODE_BIN" ]; then
-  for ver in 22 20 18; do
+  for ver in 24 22 20 18; do
     candidate="/opt/alt/alt-nodejs${ver}/root/usr/bin"
     if [ -x "${candidate}/node" ]; then
       export PATH="${candidate}:$PATH"
