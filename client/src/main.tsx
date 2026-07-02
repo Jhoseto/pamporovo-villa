@@ -1,44 +1,22 @@
-import { trpc } from "@/lib/trpc";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { httpBatchLink } from "@trpc/client";
-import { createRoot } from "react-dom/client";
-import superjson from "superjson";
-import App from "./App";
 import "./index.css";
+
+declare global {
+  interface Window {
+    __pvHideLcpShell?: () => void;
+  }
+}
 
 if (typeof window !== "undefined") {
   history.scrollRestoration = "manual";
   window.scrollTo(0, 0);
+
+  const isMobileHome =
+    window.matchMedia("(max-width: 767px)").matches &&
+    (window.location.pathname === "/" || window.location.pathname === "");
+
+  if (isMobileHome) {
+    void import("./bootstrap/mobileHome").then(m => m.mountMobileHome());
+  } else {
+    void import("./bootstrap/fullApp").then(m => m.mountFullApp());
+  }
 }
-
-const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      retry: false,
-      refetchOnWindowFocus: false,
-    },
-  },
-});
-
-const trpcClient = trpc.createClient({
-  links: [
-    httpBatchLink({
-      url: "/api/trpc",
-      transformer: superjson,
-      fetch(input, init) {
-        return globalThis.fetch(input, {
-          ...(init ?? {}),
-          credentials: "include",
-        });
-      },
-    }),
-  ],
-});
-
-createRoot(document.getElementById("root")!).render(
-  <trpc.Provider client={trpcClient} queryClient={queryClient}>
-    <QueryClientProvider client={queryClient}>
-      <App />
-    </QueryClientProvider>
-  </trpc.Provider>
-);

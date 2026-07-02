@@ -5,7 +5,9 @@ import NotFound from "@/pages/NotFound";
 import { Route, Router, Switch, useLocation } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { Preloader } from "./components/site/Preloader";
+import { PreloaderMobile } from "./components/site/PreloaderMobile";
 import { PublicScrollShell } from "./components/site/PublicScrollShell";
+import { isMobileViewport } from "./lib/mobilePerf";
 import { SiteReadyProvider } from "./contexts/SiteReadyContext";
 import { OffersModalProvider } from "./contexts/OffersModalContext";
 import { ConsentProvider } from "./contexts/ConsentContext";
@@ -46,7 +48,19 @@ function PublicApp() {
     location === "/rent" ||
     location.startsWith("/pamporovo/") ||
     location.startsWith("/villa/");
-  const [appReady, setAppReady] = useState(isGuidePage);
+  const [appReady, setAppReady] = useState(() => {
+    const path = typeof window !== "undefined" ? window.location.pathname : "/";
+    const guide =
+      path === "/pamporovo" ||
+      path === "/rent" ||
+      path.startsWith("/pamporovo/") ||
+      path.startsWith("/villa/");
+    if (guide) return true;
+    if (isMobileViewport() && sessionStorage.getItem("pv-mobile-preloaded") === "1") {
+      return true;
+    }
+    return false;
+  });
   const handlePreloaderComplete = useCallback(() => setAppReady(true), []);
 
   useEffect(() => {
@@ -55,7 +69,13 @@ function PublicApp() {
 
   return (
     <>
-      {!appReady && !isGuidePage && <Preloader onComplete={handlePreloaderComplete} />}
+      {!appReady && !isGuidePage && (
+        isMobileViewport() ? (
+          <PreloaderMobile onComplete={handlePreloaderComplete} />
+        ) : (
+          <Preloader onComplete={handlePreloaderComplete} />
+        )
+      )}
       <PublicScrollShell enabled={appReady}>
         <SiteReadyProvider ready={appReady}>
           <ConsentProvider>

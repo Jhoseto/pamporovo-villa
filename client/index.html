@@ -136,6 +136,13 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link
+      rel="preload"
+      as="image"
+      href="/photos/hero-mobile.webp"
+      type="image/webp"
+      fetchpriority="high"
+      media="(max-width: 767px)" />
     <!-- seo:server-inject -->
     <!-- DNS prefetch for external resources -->
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
@@ -150,6 +157,33 @@
   </head>
 
   <body>
+    <!-- Mobile LCP shell — hero paints before JS; removed after React hero loads -->
+    <div id="pv-mobile-lcp" hidden>
+      <img
+        src="/photos/hero-mobile.webp"
+        alt=""
+        width="828"
+        height="621"
+        fetchpriority="high"
+        decoding="async" />
+    </div>
+    <script>
+      (function () {
+        var path = location.pathname;
+        var isAdmin = path === "/admin" || path.startsWith("/admin/");
+        var shell = document.getElementById("pv-mobile-lcp");
+        if (!shell || isAdmin || !window.matchMedia("(max-width: 767px)").matches) {
+          shell && shell.remove();
+          return;
+        }
+        shell.hidden = false;
+        window.__pvHideLcpShell = function () {
+          var el = document.getElementById("pv-mobile-lcp");
+          if (el) el.remove();
+          window.__pvHideLcpShell = undefined;
+        };
+      })();
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
