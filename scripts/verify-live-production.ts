@@ -58,7 +58,14 @@ async function main() {
       check("sitemap image namespace", text.includes("xmlns:image"));
     }
     if (path === "/llms-en.txt") check("llms-en rent EN URL", text.includes("/rent?lang=en"));
-    if (path === "/llms.txt") check("llms.txt links llms-en", text.includes("llms-en.txt"));
+    if (path === "/llms.txt") {
+      check("llms.txt links llms-en", text.includes("llms-en"));
+      check("llms.txt H1", /^# /m.test(text));
+      check("llms.txt markdown links", /\[[^\]]+\]\(https:\/\//.test(text));
+    }
+    if (path === "/llms-en.txt") {
+      check("llms-en markdown links", /\[[^\]]+\]\(https:\/\//.test(text));
+    }
     if (path === "/ai.txt") check("ai.txt rent_url_en", text.includes("rent_url_en="));
   }
 

@@ -8,7 +8,7 @@ import {
 } from "@/lib/pricing";
 import { trpc } from "@/lib/trpc";
 import { scrollToSection } from "@/lib/scroll";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { MagneticButton } from "./MagneticButton";
 import { SectionShell } from "./SectionShell";
 import { ScrollReveal } from "./ScrollReveal";
@@ -151,10 +151,12 @@ export function PricingSection() {
               ))}
             </TabsList>
 
-            <div key={selectedVillaId}>
-              <PricingMobileCards villaId={selectedVillaId} rows={rows} />
-              <PricingDesktopTable villaId={selectedVillaId} rows={rows} />
-            </div>
+            {VILLAS.map(villa => (
+              <TabsContent key={villa.id} value={villa.id} className="mt-0 outline-none">
+                <PricingMobileCards villaId={villa.id} rows={rows} />
+                <PricingDesktopTable villaId={villa.id} rows={rows} />
+              </TabsContent>
+            ))}
           </Tabs>
         )}
       </ScrollReveal>

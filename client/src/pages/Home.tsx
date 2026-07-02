@@ -81,7 +81,7 @@ export default function Home() {
   return (
     <div className="relative min-h-screen bg-[var(--cream)]">
       <SiteHeader />
-      <main>
+      <main id="main-content">
         <HeroSection />
         <HomeBelowFoldSections />
         <LazySection id="gallery" fallback={<DarkSectionFallback />}>

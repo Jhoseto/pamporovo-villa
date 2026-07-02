@@ -43,7 +43,7 @@ export default function PamporovoPage() {
   return (
     <div className="relative min-h-screen bg-[var(--cream)]">
       <SiteHeader />
-      <main>
+      <main id="main-content">
         <PamporovoHero />
         <PamporovoSectionNav />
         <Suspense fallback={<GuideFallback />}>

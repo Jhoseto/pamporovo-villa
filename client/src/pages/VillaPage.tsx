@@ -92,7 +92,7 @@ export default function VillaPage() {
   return (
     <div className="min-h-screen bg-[var(--cream)]">
       <SiteHeader />
-      <main className="container mx-auto max-w-3xl px-4 pb-20 pt-28 md:pt-32">
+      <main id="main-content" className="container mx-auto max-w-3xl px-4 pb-20 pt-28 md:pt-32">
         <LangSwitcher className="mb-4" />
 
         <nav className="mb-6 text-sm text-muted-foreground">

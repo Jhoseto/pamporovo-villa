@@ -52,7 +52,7 @@ export default function RentPage() {
   return (
     <div className="min-h-screen bg-[var(--cream)]">
       <SiteHeader />
-      <main className="container mx-auto max-w-3xl px-4 pb-20 pt-28 md:pt-32">
+      <main id="main-content" className="container mx-auto max-w-3xl px-4 pb-20 pt-28 md:pt-32">
         <LangSwitcher className="mb-4" />
 
         <p className="eyebrow mb-3 text-[var(--gold)]">

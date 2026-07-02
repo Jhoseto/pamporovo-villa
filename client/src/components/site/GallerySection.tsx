@@ -42,11 +42,44 @@ export function GallerySection() {
       <ScrollReveal>
         <div className="mx-auto max-w-6xl">
           <div
-            className="gallery-villa-picker mb-8 md:mb-10"
+            className="gallery-villa-picker mb-5 md:mb-10"
             role="tablist"
             aria-label="Избор на вила в галерията"
           >
-            <div className="grid gap-3 sm:grid-cols-3 sm:gap-4">
+            {/* Mobile — compact pills so it's clear they filter the gallery below */}
+            <div className="flex flex-col items-center gap-2 md:hidden">
+              <p className="font-display text-[0.65rem] uppercase tracking-[0.22em] text-muted-foreground">
+                Изберете вила
+              </p>
+              <div className="flex flex-wrap justify-center gap-2">
+                {VILLA_GALLERIES.map(gallery => {
+                  const isActive = gallery.id === activeId;
+                  return (
+                    <button
+                      key={gallery.id}
+                      type="button"
+                      role="tab"
+                      id={`gallery-tab-${gallery.id}`}
+                      aria-selected={isActive}
+                      aria-controls={`gallery-panel-${gallery.id}`}
+                      tabIndex={isActive ? 0 : -1}
+                      onClick={() => handleVillaChange(gallery.id)}
+                      className={cn(
+                        "gallery-villa-pill shrink-0 rounded-full border px-3.5 py-1.5 font-display text-xs tracking-wide transition-all duration-300",
+                        isActive
+                          ? "gallery-villa-pill--active"
+                          : "border-black/10 bg-white/80 text-foreground/75 hover:border-[var(--gold)]/35 hover:text-foreground"
+                      )}
+                    >
+                      {gallery.name}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Desktop — image cards (unchanged) */}
+            <div className="hidden gap-4 sm:grid-cols-3 md:grid">
               {VILLA_GALLERIES.map(gallery => {
                 const isActive = gallery.id === activeId;
                 return (
@@ -54,10 +87,13 @@ export function GallerySection() {
                     key={gallery.id}
                     type="button"
                     role="tab"
+                    id={`gallery-tab-${gallery.id}-desktop`}
                     aria-selected={isActive}
+                    aria-controls={`gallery-panel-${gallery.id}`}
+                    tabIndex={isActive ? 0 : -1}
                     onClick={() => handleVillaChange(gallery.id)}
                     className={cn(
-                      "gallery-villa-card group relative overflow-hidden rounded-2xl text-left transition-[transform,box-shadow,opacity] duration-500 ease-out md:rounded-[1.35rem]",
+                      "gallery-villa-card group relative overflow-hidden rounded-[1.35rem] text-left transition-[transform,box-shadow,opacity] duration-500 ease-out",
                       isActive
                         ? "gallery-villa-card--active z-[1] scale-[1.02] shadow-[0_28px_60px_-24px_rgba(0,0,0,0.35)]"
                         : "opacity-[0.72] hover:opacity-100 hover:scale-[1.01]"
@@ -68,7 +104,7 @@ export function GallerySection() {
                         : undefined
                     }
                   >
-                    <div className="relative aspect-[5/4] overflow-hidden sm:aspect-[4/3]">
+                    <div className="relative aspect-[4/3] overflow-hidden">
                       <img
                         src={gallery.cover.src}
                         alt={gallery.cover.alt}
@@ -79,14 +115,14 @@ export function GallerySection() {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/78 via-black/28 to-black/10" />
                       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20" />
 
-                      <div className="absolute inset-x-0 bottom-0 p-4 md:p-5">
-                        <p className="font-display text-[0.62rem] uppercase tracking-[0.26em] text-white/55 md:text-[0.68rem]">
+                      <div className="absolute inset-x-0 bottom-0 p-5">
+                        <p className="font-display text-[0.68rem] uppercase tracking-[0.26em] text-white/55">
                           {gallery.tagline}
                         </p>
-                        <h3 className="mt-1 font-serif text-xl font-bold tracking-tight text-white md:text-2xl">
+                        <h3 className="mt-1 font-serif text-2xl font-bold tracking-tight text-white">
                           {gallery.name}
                         </h3>
-                        <p className="mt-2 inline-flex items-center gap-1.5 text-xs text-white/70 md:text-sm">
+                        <p className="mt-2 inline-flex items-center gap-1.5 text-sm text-white/70">
                           <Images className="h-3.5 w-3.5 text-[var(--gold)]" strokeWidth={1.75} />
                           {gallery.images.length} снимки
                         </p>
@@ -94,7 +130,7 @@ export function GallerySection() {
 
                       {isActive && (
                         <span
-                          className="gallery-villa-card__ring pointer-events-none absolute inset-0 rounded-2xl md:rounded-[1.35rem]"
+                          className="gallery-villa-card__ring pointer-events-none absolute inset-0 rounded-[1.35rem]"
                           aria-hidden
                         />
                       )}
@@ -107,6 +143,9 @@ export function GallerySection() {
 
           <div
             key={active?.id}
+            id={active ? `gallery-panel-${active.id}` : undefined}
+            role="tabpanel"
+            aria-labelledby={active ? `gallery-tab-${active.id}` : undefined}
             className="gallery-villa-view animate-in fade-in slide-in-from-bottom-3 duration-500 fill-mode-both"
           >
             {active && (

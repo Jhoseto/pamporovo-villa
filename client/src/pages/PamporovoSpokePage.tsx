@@ -108,7 +108,7 @@ export default function PamporovoSpokePage() {
   return (
     <div className="min-h-screen bg-[var(--cream)] pb-24 md:pb-20">
       <SiteHeader />
-      <main className="container mx-auto max-w-3xl px-4 pb-12 pt-28 md:pt-32">
+      <main id="main-content" className="container mx-auto max-w-3xl px-4 pb-12 pt-28 md:pt-32">
         <LangSwitcher className="mb-4" />
 
         <nav className="mb-6 text-sm text-muted-foreground">

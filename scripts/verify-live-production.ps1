@@ -60,11 +60,14 @@ foreach ($path in @("/robots.txt", "/llms.txt", "/llms-en.txt", "/ai.txt", "/fac
         Test-Check "sitemap lang=en" ($r.Body -match "lang=en")
         Test-Check "sitemap image ns" ($r.Body -match "xmlns:image")
     }
-    if ($path -eq "/llms-en.txt" -and $r.Status -eq 200) {
-        Test-Check "llms-en rent EN" ($r.Body -match "/rent\?lang=en")
-    }
     if ($path -eq "/llms.txt" -and $r.Status -eq 200) {
         Test-Check "llms.txt -> llms-en" ($r.Body -match "llms-en")
+        Test-Check "llms.txt H1" ($r.Body -match "(?m)^# ")
+        Test-Check "llms.txt markdown links" ($r.Body -match '\[[^\]]+\]\(https://')
+    }
+    if ($path -eq "/llms-en.txt" -and $r.Status -eq 200) {
+        Test-Check "llms-en rent EN" ($r.Body -match "/rent\?lang=en")
+        Test-Check "llms-en markdown links" ($r.Body -match '\[[^\]]+\]\(https://')
     }
     if ($path -eq "/ai.txt" -and $r.Status -eq 200) {
         Test-Check "ai.txt rent_url_en" ($r.Body -match "rent_url_en=")

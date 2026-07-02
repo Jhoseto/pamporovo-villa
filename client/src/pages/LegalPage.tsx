@@ -737,7 +737,7 @@ export default function LegalPage() {
       </div>
 
       {/* Content */}
-      <main className="container mx-auto px-4 py-12 md:py-16">
+      <main id="main-content" className="container mx-auto px-4 py-12 md:py-16">
         <div className="mx-auto max-w-3xl">
           {active === "privacy" && <PrivacyPolicy />}
           {active === "terms" && <TermsAndConditions />}
