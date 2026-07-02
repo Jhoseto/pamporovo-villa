@@ -53,7 +53,9 @@
           document.head.appendChild(meta);
         }
 
-        addLink("manifest", "/admin/manifest.webmanifest");
+        // use-credentials: hosting bot-protection (Imunify360) returns 428 for
+        // cookie-less requests; manifest fetches omit cookies by default.
+        addLink("manifest", "/admin/manifest.webmanifest", { crossorigin: "use-credentials" });
         addLink("apple-touch-icon", "/admin/icons/icon-180.png", { sizes: "180x180" });
         addLink("apple-touch-icon", "/admin/icons/icon-167.png", { sizes: "167x167" });
         addLink("apple-touch-icon", "/admin/icons/icon-152.png", { sizes: "152x152" });

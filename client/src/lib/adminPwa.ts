@@ -107,7 +107,9 @@ export function initAdminPwaMeta(): void {
 
   document.documentElement.dataset.adminPwaBootstrap = "1";
 
-  ensureLink("manifest", "/admin/manifest.webmanifest");
+  // use-credentials: hosting bot-protection (Imunify360) returns 428 for
+  // cookie-less requests; manifest fetches omit cookies by default.
+  ensureLink("manifest", "/admin/manifest.webmanifest", { crossorigin: "use-credentials" });
 
   for (const icon of ADMIN_APPLE_TOUCH_ICONS) {
     ensureLink("apple-touch-icon", icon.href, { sizes: icon.sizes });
