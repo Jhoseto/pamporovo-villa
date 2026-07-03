@@ -143,6 +143,10 @@ const imageSitemap =
 console.log(`IMAGE SITEMAP: ${imageSitemap ? "PASS" : "FAIL"}`);
 if (!imageSitemap) ok = false;
 
+const imageTagCount = (sitemapBody.match(/<image:loc>/g) ?? []).length;
+console.log(`IMAGE SITEMAP entries: ${imageTagCount >= 55 ? "PASS" : "FAIL"} (${imageTagCount} images)`);
+if (imageTagCount < 55) ok = false;
+
 console.log(`LEGACY_REDIRECTS: ${LEGACY_REDIRECTS.length} entries mapped`);
 
 if (!ok) process.exit(1);

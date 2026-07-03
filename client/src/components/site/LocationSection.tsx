@@ -1,14 +1,20 @@
-import { ExternalLink, MapPin, Navigation } from "lucide-react";
+import { ExternalLink, MapPin, Navigation, Star } from "lucide-react";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import { GBP } from "@shared/gbpLinks";
+import { gbpUi } from "@shared/gbpUi";
 import { CONTACT, DISTANCES, PAMPOROVO_INFO, PROPERTY_LOCATION } from "@/data/siteContent";
 import { MapView } from "@/components/Map";
+import { usePageLang } from "@/hooks/usePageLang";
+import { trackGoogleReviewClick } from "@/lib/analytics/events";
 import { SectionShell } from "./SectionShell";
 import { ScrollReveal } from "./ScrollReveal";
 
 export function LocationSection() {
   const mapRef = useRef<HTMLDivElement>(null);
   const mapReady = useInView(mapRef, { once: true, margin: "200px 0px" });
+  const lang = usePageLang();
+  const gbp = gbpUi(lang);
 
   return (
     <SectionShell
@@ -58,16 +64,28 @@ export function LocationSection() {
                     {CONTACT.address}
                   </p>
                 </div>
-                <a
-                  href={PROPERTY_LOCATION.directionsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="premium-btn inline-flex shrink-0 items-center justify-center gap-2 self-start px-6 py-3.5 text-sm sm:self-auto"
-                >
-                  <Navigation className="h-4 w-4" />
-                  Навигирай до нас
-                  <ExternalLink className="h-3.5 w-3.5 opacity-70" />
-                </a>
+                <div className="flex flex-col gap-2 self-start sm:flex-row sm:self-auto">
+                  <a
+                    href={PROPERTY_LOCATION.directionsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="premium-btn inline-flex shrink-0 items-center justify-center gap-2 px-6 py-3.5 text-sm"
+                  >
+                    <Navigation className="h-4 w-4" />
+                    {gbp.directions}
+                    <ExternalLink className="h-3.5 w-3.5 opacity-70" />
+                  </a>
+                  <a
+                    href={GBP.reviewUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => trackGoogleReviewClick("location_map")}
+                    className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full border border-white/25 bg-white/10 px-5 py-3.5 text-sm text-white backdrop-blur-sm transition hover:border-[var(--gold)]/50 hover:bg-white/15"
+                  >
+                    <Star className="h-4 w-4 fill-[var(--gold)] text-[var(--gold)]" />
+                    {gbp.reviewShort}
+                  </a>
+                </div>
               </div>
             </div>
           </div>

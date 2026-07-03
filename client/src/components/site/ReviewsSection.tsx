@@ -1,10 +1,13 @@
 import { useState, type FormEvent } from "react";
 import { REVIEW_BODY_MAX } from "@shared/reviewLimits";
+import { GBP } from "@shared/gbpLinks";
+import { gbpUi } from "@shared/gbpUi";
 import { Star } from "lucide-react";
 import { toast } from "sonner";
 import { VILLAS } from "@/data/siteContent";
 import { trpc } from "@/lib/trpc";
-import { trackReviewSubmit } from "@/lib/analytics/events";
+import { trackGoogleReviewClick, trackReviewSubmit } from "@/lib/analytics/events";
+import { usePageLang } from "@/hooks/usePageLang";
 import { cn } from "@/lib/utils";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -16,6 +19,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { MagneticButton } from "./MagneticButton";
+import { GoogleReviewCta } from "./GoogleReviewCta";
 import { ReviewsCarousel } from "./ReviewsCarousel";
 import { ScrollReveal } from "./ScrollReveal";
 import { SectionShell } from "./SectionShell";
@@ -55,6 +59,8 @@ function StarRatingInput({
 }
 
 export function ReviewsSection() {
+  const lang = usePageLang();
+  const gbp = gbpUi(lang);
   const { data: reviews = [], isLoading } = trpc.content.getReviews.useQuery();
   const [honeypot, setHoneypot] = useState("");
   const [form, setForm] = useState({
@@ -68,7 +74,17 @@ export function ReviewsSection() {
 
   const submitReview = trpc.content.submitReview.useMutation({
     onSuccess: data => {
-      toast.success(data.message);
+      toast.success(data.message, {
+        description: gbp.reviewToast,
+        duration: 8000,
+        action: {
+          label: gbp.reviewToastAction,
+          onClick: () => {
+            trackGoogleReviewClick("review_submit_toast");
+            window.open(GBP.reviewUrl, "_blank", "noopener,noreferrer");
+          },
+        },
+      });
       trackReviewSubmit();
       setForm({
         guestName: "",
@@ -109,6 +125,10 @@ export function ReviewsSection() {
       <div className="reviews-section-inner w-full space-y-10 md:space-y-12">
         <ScrollReveal direction="up">
           <ReviewsCarousel reviews={reviews} isLoading={isLoading} />
+        </ScrollReveal>
+
+        <ScrollReveal direction="up" delay={60}>
+          <GoogleReviewCta source="reviews_section" className="mx-auto max-w-3xl" />
         </ScrollReveal>
 
         <ScrollReveal direction="up" delay={100}>

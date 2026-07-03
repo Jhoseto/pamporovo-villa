@@ -39,4 +39,8 @@ export const EN_UI = {
   summerFrom: "Summer from",
   winterFrom: "Winter from",
   wholeVillaNote: "Whole villa · up to 6 guests",
+  googleReview: "Leave a Google review",
+  googleReviewShort: "Google review",
+  googleMaps: "Google Maps",
+  directions: "Get directions",
 } as const;

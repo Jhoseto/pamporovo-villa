@@ -24,6 +24,9 @@
     "og:image": "tsx scripts/generate-og-image.ts",
     "photos:mobile-hero": "node scripts/generate-mobile-hero.mjs",
     "indexnow": "tsx scripts/submit-indexnow.ts",
+    "seo:verify": "tsx scripts/verify-seo-sprint1.ts",
+    "seo:alt-audit": "tsx scripts/audit-image-alt.ts",
+    "seo:alt-check": "tsx scripts/audit-image-alt.ts --check",
     "db:tunnel": "db-tunnel.bat"
   },
   "dependencies": {

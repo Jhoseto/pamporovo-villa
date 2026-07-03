@@ -8,6 +8,7 @@ import {
   SEO_SOCIAL,
 } from "../shared/seoConstants";
 import { parseSeoLang } from "../shared/seoEnMeta";
+import { GBP } from "../shared/gbpLinks";
 
 export function handleFactsJson(req: Request, res: Response): void {
   const rawUrl = req.url ?? "";
@@ -70,6 +71,8 @@ export function handleFactsJson(req: Request, res: Response): void {
       SEO_SOCIAL.instagram,
       SEO_SOCIAL.youtube,
     ],
+    googleReviewUrl: GBP.reviewUrl,
+    googleMapsUrl: GBP.mapsUrl,
     languages: ["bg", "en"],
     lang,
     updatedAt: new Date().toISOString(),

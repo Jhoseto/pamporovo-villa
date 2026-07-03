@@ -16,8 +16,12 @@ export function trackOfferOpen() {
   trackEvent("offer_open");
 }
 
-export function trackContactClick(type: "phone" | "email") {
+export function trackContactClick(type: "phone" | "email" | "google_maps" | "google_review") {
   trackEvent("contact_click", { contact_type: type });
+}
+
+export function trackGoogleReviewClick(source: string) {
+  trackEvent("google_review_click", { source });
 }
 
 const AI_REFERRER_HOSTS = [

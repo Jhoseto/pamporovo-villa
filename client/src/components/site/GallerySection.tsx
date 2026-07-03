@@ -1,6 +1,7 @@
 import { Images } from "lucide-react";
-import { useCallback, useState, type CSSProperties } from "react";
+import { useCallback, useEffect, useState, type CSSProperties } from "react";
 import { VILLA_GALLERIES } from "@/data/galleryContent";
+import { isMobileViewport } from "@/lib/mobilePerf";
 import { cn } from "@/lib/utils";
 import { GalleryLightbox } from "./GalleryLightbox";
 import { SectionShell } from "./SectionShell";
@@ -12,8 +13,22 @@ export function GallerySection() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [direction, setDirection] = useState<1 | -1>(1);
   const [slideByVilla, setSlideByVilla] = useState<Record<string, number>>({});
+  const [isMobile, setIsMobile] = useState(isMobileViewport);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 767px)");
+    const sync = () => setIsMobile(mq.matches);
+    sync();
+    mq.addEventListener("change", sync);
+    return () => mq.removeEventListener("change", sync);
+  }, []);
 
   const active = VILLA_GALLERIES.find(g => g.id === activeId) ?? VILLA_GALLERIES[0];
+  const activeTabId = active
+    ? isMobile
+      ? `gallery-tab-${active.id}`
+      : `gallery-tab-${active.id}-desktop`
+    : undefined;
   const rawSelected = slideByVilla[activeId] ?? 0;
   const selected = active
     ? Math.min(rawSelected, Math.max(0, active.images.length - 1))
@@ -41,13 +56,13 @@ export function GallerySection() {
     >
       <ScrollReveal>
         <div className="mx-auto max-w-6xl">
-          <div
-            className="gallery-villa-picker mb-5 md:mb-10"
-            role="tablist"
-            aria-label="Избор на вила в галерията"
-          >
+          <div className="gallery-villa-picker mb-5 md:mb-10">
             {/* Mobile — compact pills so it's clear they filter the gallery below */}
-            <div className="flex flex-col items-center gap-2 md:hidden">
+            <div
+              className="flex flex-col items-center gap-2 md:hidden"
+              role="tablist"
+              aria-label="Избор на вила в галерията"
+            >
               <p className="font-display text-[0.65rem] uppercase tracking-[0.22em] text-muted-foreground">
                 Изберете вила
               </p>
@@ -79,7 +94,11 @@ export function GallerySection() {
             </div>
 
             {/* Desktop — image cards (unchanged) */}
-            <div className="hidden gap-4 sm:grid-cols-3 md:grid">
+            <div
+              className="hidden gap-4 sm:grid-cols-3 md:grid"
+              role="tablist"
+              aria-label="Избор на вила в галерията"
+            >
               {VILLA_GALLERIES.map(gallery => {
                 const isActive = gallery.id === activeId;
                 return (
@@ -145,7 +164,7 @@ export function GallerySection() {
             key={active?.id}
             id={active ? `gallery-panel-${active.id}` : undefined}
             role="tabpanel"
-            aria-labelledby={active ? `gallery-tab-${active.id}` : undefined}
+            aria-labelledby={activeTabId}
             className="gallery-villa-view animate-in fade-in slide-in-from-bottom-3 duration-500 fill-mode-both"
           >
             {active && (

@@ -1,9 +1,12 @@
-import { Facebook, Instagram, Mail, Phone, Youtube } from "lucide-react";
+import { Facebook, Instagram, Mail, MapPin, Phone, Star, Youtube } from "lucide-react";
 import { useLocation } from "wouter";
+import { GBP } from "@shared/gbpLinks";
+import { gbpUi } from "@shared/gbpUi";
 import { CONTACT, NAV_LINKS, SITE, SOCIAL } from "@/data/siteContent";
 import { useOffersModal } from "@/contexts/OffersModalContext";
 import { CookieSettingsTrigger } from "@/components/site/CookieConsent";
-import { trackPhoneClick } from "@/lib/analytics/events";
+import { usePageLang } from "@/hooks/usePageLang";
+import { trackGoogleReviewClick, trackPhoneClick } from "@/lib/analytics/events";
 import { navigateSiteLink } from "@/lib/siteNav";
 
 const SOCIAL_LINKS = [
@@ -25,6 +28,8 @@ const FOOTER_NAV = [
 export function SiteFooter() {
   const { openOffers } = useOffersModal();
   const [location, setLocation] = useLocation();
+  const lang = usePageLang();
+  const gbp = gbpUi(lang);
 
   const handleNavClick = (href: string, page?: boolean) => {
     navigateSiteLink({ href, label: "", page }, setLocation, location);
@@ -64,9 +69,27 @@ export function SiteFooter() {
                 </a>
               </li>
               <li className="flex items-start gap-3 text-white/70">
-                <span className="font-display text-base leading-relaxed tracking-wide">
+                <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-[var(--gold)]" />
+                <a
+                  href={GBP.mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-display text-base leading-relaxed tracking-wide transition hover:text-white"
+                >
                   {CONTACT.address}
-                </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href={GBP.reviewUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => trackGoogleReviewClick("footer")}
+                  className="group flex items-start gap-3 text-white/75 transition hover:text-white"
+                >
+                  <Star className="mt-0.5 h-5 w-5 shrink-0 fill-[var(--gold)] text-[var(--gold)]" />
+                  <span className="font-display text-base tracking-wide">{gbp.reviewLink}</span>
+                </a>
               </li>
             </ul>
           </div>

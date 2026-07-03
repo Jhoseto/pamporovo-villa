@@ -10,6 +10,7 @@ import {
   UtensilsCrossed,
   Wifi,
 } from "lucide-react";
+import { GBP } from "@shared/gbpLinks";
 
 export function formatPriceEur(amount: number): string {
   return `${amount.toLocaleString("bg-BG")} €`;
@@ -289,8 +290,7 @@ export const PROPERTY_LOCATION = {
   lng: 24.7136265,
   zoom: 14,
   label: "Pamporovo Villa — Райковски ливади",
-  googleMapsUrl:
-    "https://www.google.com/maps/place/Pamporovo+Villa/@41.6217217,24.7138638,19z/data=!4m15!1m5!3m4!2zNDHCsDM4JzMzLjAiTiAyNMKwNDEnMzMuMCJF!8m2!3d41.6425!4d24.6925!3m8!1s0x14ac59a187021781:0x12efd0d28f70a9bc!5m2!4m1!1i2!8m2!3d41.6218681!4d24.7136265!16s%2Fg%2F11hz6s597c?hl=bg&entry=ttu",
+  googleMapsUrl: GBP.mapsUrl,
   directionsUrl:
     "https://www.google.com/maps/dir/?api=1&destination=41.6218681,24.7136265&travelmode=driving",
 } as const;

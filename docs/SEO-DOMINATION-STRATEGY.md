@@ -413,9 +413,14 @@ sameAs entity link → Knowledge Graph merge
 
 ## 15. Следваща стъпка
 
-**Започни Sprint 1 веднага** — Phase 0 (301 redirects) + sitemap + seoMeta injection.
+**Sprint 4 (off-site + polish)** — виж [`docs/SPRINT4-OFFSITE.md`](./SPRINT4-OFFSITE.md):
 
-Без това Google продължава да вижда duplicate SPA homepage на всички стари ranking URL-и и **губите** equity от стария сайт, вместо да го прехвърлите към новия.
+1. GBP weekly sync + review follow-up SMS/email  
+2. GSC sitemap submit + URL inspection  
+3. Directory backlinks (NAP citations)  
+4. Deploy + `pnpm seo:verify` + `verify-live-production.ts`
+
+Sprint 1–3 (301, sitemap, JSON-LD, spokes, hreflang) са имплементирани в кода.
 
 ---
 

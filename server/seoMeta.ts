@@ -25,7 +25,7 @@ import type { PamporovoSpokeSlug } from "../shared/pamporovoSpokeTypes";
 import { localizeSpoke } from "../shared/en/localizeSpoke";
 import { getVillaPageEn } from "../shared/en/villaPagesEn";
 import { LIFT_FACTS, PISTE_FACTS } from "../shared/pamporovoSkiData";
-import { galleryImagesForSitemap } from "../shared/seoGalleryImages";
+import { galleryImagesForSitemap, homepageGalleryImagesForSitemap, villaGalleryImagesForSitemap } from "../shared/seoGalleryImages";
 import { getCachedReviewSchema } from "./seoReviewsCache";
 
 export type RouteSeoBundle = {
@@ -754,7 +754,10 @@ export function getSitemapEntries(): Array<{
     loc: absoluteUrl(villaPath(v.id)),
     changefreq: "weekly",
     priority: "0.9",
-    images: [{ loc: ogImageUrl(villaOgPath(v.id)), title: v.h1 }],
+    images: [
+      { loc: ogImageUrl(villaOgPath(v.id)), title: v.h1 },
+      ...villaGalleryImagesForSitemap(v.id).slice(0, 12),
+    ],
   }));
 
   const enEntries = Array.from(HREFLANG_PATHS).map((p) => ({
@@ -768,7 +771,10 @@ export function getSitemapEntries(): Array<{
       loc: absoluteUrl("/"),
       changefreq: "weekly",
       priority: "1.0",
-      images: [{ loc: ogImageUrl(SEO_OG.default), title: SEO_SITE.name }],
+      images: [
+        { loc: ogImageUrl(SEO_OG.default), title: SEO_SITE.name },
+        ...homepageGalleryImagesForSitemap(20),
+      ],
     },
     {
       loc: absoluteUrl(SEO_PATHS.rent),

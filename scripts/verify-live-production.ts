@@ -47,9 +47,17 @@ async function main() {
     check(`GET ${path}`, res.status === 200, `status=${res.status}`);
 
     if (path === "/facts.json") {
-      const j = JSON.parse(text) as { villas?: unknown[]; units?: number; languages?: string[] };
+      const j = JSON.parse(text) as {
+        villas?: unknown[];
+        units?: number;
+        languages?: string[];
+        googleReviewUrl?: string;
+        googleMapsUrl?: string;
+      };
       check("facts.json villas=3", j.villas?.length === 3, `units=${j.units}`);
       check("facts.json languages bg+en", Boolean(j.languages?.includes("bg") && j.languages?.includes("en")));
+      check("facts.json googleReviewUrl", Boolean(j.googleReviewUrl?.includes("google.com/maps")));
+      check("facts.json googleMapsUrl", Boolean(j.googleMapsUrl?.includes("google.com/maps")));
     }
     if (path === "/sitemap.xml") {
       const urlCount = (text.match(/<loc>/g) ?? []).length;

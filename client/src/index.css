@@ -1678,6 +1678,18 @@
     box-shadow: 0 12px 36px -20px rgba(0, 0, 0, 0.18);
   }
 
+  .gallery-villa-pill {
+    min-height: 2rem;
+    line-height: 1.2;
+  }
+
+  .gallery-villa-pill--active {
+    border-color: oklch(0.72 0.12 75 / 0.55);
+    background: oklch(0.72 0.12 75 / 0.12);
+    color: var(--foreground);
+    box-shadow: 0 8px 24px -16px oklch(0.55 0.12 75 / 0.45);
+  }
+
   .gallery-villa-card--active {
     border-color: oklch(0.72 0.12 75 / 0.45);
   }
