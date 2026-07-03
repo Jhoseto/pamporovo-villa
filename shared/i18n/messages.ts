@@ -37,11 +37,52 @@ function flattenObject(obj: NestedMessages, prefix = ""): FlatMessages {
   const out: FlatMessages = {};
   for (const [key, value] of Object.entries(obj)) {
     const fullKey = prefix ? `${prefix}.${key}` : key;
-    if (value !== null && typeof value === "object" && !Array.isArray(value)) {
+    if (Array.isArray(value)) {
+      for (let i = 0; i < value.length; i++) {
+        const item = value[i];
+        const itemKey = `${fullKey}.${i}`;
+        if (typeof item === "string") {
+          out[itemKey] = item;
+        } else if (Array.isArray(item)) {
+          for (let j = 0; j < item.length; j++) {
+            const cell = item[j];
+            if (typeof cell === "string") {
+              out[`${itemKey}.${j}`] = cell;
+            }
+          }
+        } else if (item !== null && typeof item === "object") {
+          Object.assign(out, flattenObject(item as NestedMessages, itemKey));
+        }
+      }
+    } else if (value !== null && typeof value === "object") {
       Object.assign(out, flattenObject(value as NestedMessages, fullKey));
     } else if (typeof value === "string") {
       out[fullKey] = value;
     }
+  }
+  return out;
+}
+
+function isNumericKeyObject(obj: NestedMessages): boolean {
+  const keys = Object.keys(obj);
+  if (keys.length === 0) return false;
+  return keys.every((k, i) => k === String(i));
+}
+
+function arraysFromNumericObjects(node: unknown): unknown {
+  if (Array.isArray(node)) {
+    return node.map(arraysFromNumericObjects);
+  }
+  if (node === null || typeof node !== "object") return node;
+  const obj = node as NestedMessages;
+  if (isNumericKeyObject(obj)) {
+    return Object.keys(obj)
+      .sort((a, b) => Number(a) - Number(b))
+      .map((k) => arraysFromNumericObjects(obj[k]));
+  }
+  const out: NestedMessages = {};
+  for (const [k, v] of Object.entries(obj)) {
+    out[k] = arraysFromNumericObjects(v);
   }
   return out;
 }
@@ -143,7 +184,7 @@ export function writeGeneratedNamespace(
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(
     path.join(dir, `${ns}.json`),
-    `${JSON.stringify(unflattenObject(nsFlat), null, 2)}\n`,
+    `${JSON.stringify(arraysFromNumericObjects(unflattenObject(nsFlat)), null, 2)}\n`,
     "utf8"
   );
 }

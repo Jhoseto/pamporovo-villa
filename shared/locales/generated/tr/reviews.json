@@ -9,5 +9,49 @@
   "placeholderEmail": "isteğe bağlı",
   "placeholderPeriod": "örn. Mart 2025",
   "placeholderBody": "Bizimle geçirdiğiniz zamandan ne hatırlıyorsunuz...",
-  "villaUnknown": "Emin değilim"
+  "villaUnknown": "Emin değilim",
+  "form": {
+    "name": "Ad",
+    "email": "E-posta",
+    "rating": "Değerlendirme",
+    "title": "Başlık",
+    "body": "Görüşünüz",
+    "bodyPlaceholder": "Neleri beğendiğinizi ve neleri iyileştirebileceğimizi bizimle paylaşın...",
+    "submit": "Geri bildirim gönder",
+    "submitting": "Gönderiliyor...",
+    "namePlaceholder": "Adınız",
+    "emailPlaceholder": "isteğe bağlı",
+    "ratingAria": "{star} yıldız",
+    "villa": "Vila",
+    "villaPlaceholder": "Seçin",
+    "villaUnknown": "Emin değilim",
+    "period": "Dönem",
+    "periodPlaceholder": "örn. Mart 2025"
+  },
+  "toast": {
+    "success": "Geri bildiriminiz için teşekkür ederiz! İnceledikten sonra yayınlayacağız.",
+    "error": "Yorum gönderilirken bir hata oluştu."
+  },
+  "carousel": {
+    "readMore": "Daha fazlasını oku",
+    "close": "Kapat",
+    "googleSource": "Google",
+    "siteSource": "Web sitesi",
+    "readFull": "Yorumun tamamı",
+    "open": "Aç",
+    "readFullAria": "Yorumun tamamını oku",
+    "openAria": "Yorumu aç",
+    "emptyTitle": "Henüz yayınlanmış bir yorum yok",
+    "emptyBody": "İlk yorum yapan siz olun — aşağıda izlenimlerinizi paylaşın.",
+    "pause": "Otomatik kaydırma duraklatma",
+    "resume": "Otomatik kaydırma devam et",
+    "prev": "Önceki yorum",
+    "next": "Sonraki yorum",
+    "navLabel": "Yorumlar",
+    "reviewN": "Yorum {n}",
+    "photoCount": "{count} fotoğraf"
+  },
+  "modal": {
+    "close": "Kapat"
+  }
 }

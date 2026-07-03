@@ -1,0 +1,479 @@
+{
+  "nav": {
+    "ariaLabel": "Rubriques de la page",
+    "intro": "La station balnéaire",
+    "winter": "Hiver",
+    "summer": "L'été",
+    "landmarks": "Les environs",
+    "caves": "Grottes"
+  },
+  "sticky": {
+    "book": "Réserver",
+    "rent": "Location · tarifs"
+  },
+  "ui": {
+    "pisteNumber": "N°",
+    "pisteName": "Piste",
+    "difficulty": "Difficulté",
+    "length": "Longueur",
+    "note": "Remarque",
+    "dash": "—",
+    "meters": "m",
+    "route": "Itinéraire",
+    "liftType": "Type",
+    "capacity": "Capacité/h",
+    "capacityPerHour": "Capacité/heure"
+  },
+  "difficulty": {
+    "green": "Vert · débutants",
+    "blue": "Bleu · niveau intermédiaire",
+    "red": "Rouge · avancés",
+    "black": "Cherna · experts"
+  },
+  "sections": {
+    "intro": {
+      "eyebrow": "La station balnéaire",
+      "title": "Le cœur des Rhodopes",
+      "subtitle": "À 1 650 mètres d'altitude, au pied du mont Snezhanka — la plus ancienne station de ski bulgare, fondée en 1933.",
+      "panoramaAlt": "Station de ski de Pamporovo — hôtels et pistes dans les Rhodopes",
+      "towerAlt": "La tour Snezhanka — symbole de Pamporovo",
+      "p1": "Deux stations de ski principales — Studenets et Malina — reliées au sommet de Snezhanka (1 926 m). Les pistes se situent entre 1 400 et 1 926 m d'altitude, et sont équipées de remontées mécaniques modernes et de plus de 80 canons à neige.",
+      "p2": "En été, la station devient un haut lieu de l'écotourisme : sentiers balisés, vélo, équitation et d'innombrables sites touristiques situés à 15 à 60 minutes en voiture de Smolyan, Shiroka Luka, les Ponts merveilleux et les palais souterrains des Rhodopes occidentaux.",
+      "cta": "Réservez une villa à Pamporovo"
+    },
+    "winter": {
+      "eyebrow": "Hiver",
+      "title": "Domaine skiable — pistes et remontées mécaniques",
+      "subtitle": "Plus de 37 km de pistes balisées pour le ski et le snowboard, ski nocturne sur « La Muraille » et parcours de ski de fond",
+      "skiAlt": "Télésiège menant au sommet de Snezhanka — la tour au-dessus de Pamporovo",
+      "pistesHeading": "Pistes classées par niveau de difficulté",
+      "liftsHeading": "Ascenseurs et équipements",
+      "activitiesHeading": "Activités d'hiver"
+    },
+    "summer": {
+      "eyebrow": "L'été",
+      "title": "Sentiers écologiques et nature",
+      "subtitle": "Le canyon des cascades, les lacs de Smolyan, les rochers d'Orphée — à quelques minutes de la station",
+      "summerAlt": "Un lac de montagne dans les Rhodopes — un sentier écologique estival près de Pamporovo",
+      "activitiesHeading": "Activités estivales"
+    },
+    "landmarks": {
+      "eyebrow": "Les environs",
+      "title": "Sites touristiques et villages",
+      "subtitle": "Réserves architecturales, observatoire, planétarium et folklore authentique des Rhodopes"
+    },
+    "caves": {
+      "eyebrow": "Le monde souterrain",
+      "title": "Grottes et gorges",
+      "subtitle": "La grotte de Yagodina, la Gorge du Diable, la gorge de Trigrad et Uhlovitsa : les trésors des Rhodopes occidentaux",
+      "footer": "Les villas Pamporovo Villa se trouvent à Raykovski Livadi — un point de départ idéal pour des aventures hivernales et estivales dans toute la région.",
+      "cta": "Consultez les dates disponibles et réservez"
+    }
+  },
+  "attractions": {
+    "canyon-waterfalls": {
+      "title": "Le canyon des cascades",
+      "distance": "15 km · près de Smolyan",
+      "duration": "~4 heures · circuit de 6 km",
+      "description": "Le sentier écologique le plus impressionnant des Rhodopes : vous traversez les forêts séculaires de la réserve de « Soskovcheto », le long de la rivière Gerzovska. Tout au long du parcours, vous pourrez admirer 46 cascades, dont la magnifique « Orphée », haute de 68 mètres, l’une des plus hautes de Bulgarie. Le point d'orgue est un belvédère situé à 1 800 m d'altitude, offrant une vue sur Smolyan et les crêtes des Rhodopes.",
+      "highlights": [
+        "46 cascades",
+        "La cascade « Orphée » — 68 m",
+        "Forêts de sapins séculaires",
+        "Panorama à 1 800 m"
+      ]
+    },
+    "smolyan-lakes": {
+      "title": "Les lacs de Smolyan",
+      "distance": "10 km · au pied du sommet de Snezhanka",
+      "duration": "~1 heure · parcours facile",
+      "description": "Surnommés « les yeux d'émeraude des Rhodopes », ces lacs naturels sont disposés en terrasses au pied du mont Snezhanka. Un sentier facile relie les lacs Bistro, Matno et Trevisto, où l'on trouve des aires de pique-nique et de pêche. Une promenade idéale pour les familles avec enfants, qui se combine à merveille avec l'ascension du sommet.",
+      "highlights": [
+        "Lacs de montagne naturels",
+        "Itinéraire familial facile",
+        "Lieux de pique-nique",
+        "À combiner avec le sommet de Snezhanka"
+      ]
+    },
+    "nevyastata": {
+      "title": "Sentier écologique « La Mariée »",
+      "distance": "12 km · au-dessus de Smolyan",
+      "duration": "~40 min · 900 m de sentier",
+      "description": "Un sentier court et accessible à travers une forêt de pins parfumée, menant à la falaise abrupte « Nevyastata », qui surplombe Smolyan. Des belvédères et des kiosques sont disséminés tout au long du parcours, et pour les amateurs de sensations fortes, une tyrolienne au-dessus du précipice. La légende raconte l'histoire d'une jeune fille qui se serait jetée du rocher pour préserver sa foi.",
+      "highlights": [
+        "Points de vue panoramiques",
+        "Tramway alpin",
+        "La légende de la mariée",
+        "Accessible à tous les âges"
+      ]
+    },
+    "orpheus-rocks": {
+      "title": "Les rochers d'Orphée et les Aiguilles",
+      "distance": "6 km · depuis le sommet de Snezhanka",
+      "duration": "~4 heures · effort modéré",
+      "description": "Depuis le sommet de Snezhanka, un sentier balisé mène vers le sud-est jusqu’aux rochers d’Orphée — des formations riolitiques aux formes fantaisistes offrant une vue emblématique sur les lacs de Smolyan. Dans l'autre direction se trouve le sommet des Igli, qui offre lui aussi un panorama à couper le souffle. L'itinéraire traverse des pâturages et des forêts, parsemées de myrtilles au mois d'août.",
+      "highlights": [
+        "Phénomènes rocheux rhyolitiques",
+        "Vue sur les lacs",
+        "Le sommet des Aiguilles",
+        "Myrtilles sauvages en août"
+      ]
+    },
+    "shiroka-laka": {
+      "title": "Le grand arc",
+      "distance": "16 km · 20 min en voiture",
+      "duration": "",
+      "description": "Réserve architecturale et folklorique — le village aux maisons de la Renaissance bulgare dotées de baies vitrées, aux petits ponts en pierre et à la célèbre École nationale des arts folkloriques. La cornemuse des Rhodopes est l'âme de Shiroka Laka : c'est ici que se tient la fête « Pesponedelnik », avec ses jeux de kukeri et son folklore authentique. Une étape incontournable pour tout visiteur de Pamporovo.",
+      "highlights": [
+        "Architecture de la Renaissance",
+        "École de cornemuse",
+        "Musée ethnographique",
+        "Fête des Kukeri"
+      ]
+    },
+    "rozhen-observatory": {
+      "title": "NAO « Rozen »",
+      "distance": "18 km · 25 min en voiture",
+      "duration": "",
+      "description": "Le plus grand observatoire astronomique de la péninsule balkanique, situé à 1 750 m d'altitude au-dessus des prairies de Rozen. Il dispose d'un télescope de 2 mètres, l'un des plus grands d'Europe du Sud-Est. Des visites guidées sont organisées en journée, et les observations nocturnes (sur réservation) sont inoubliables. À proximité se trouvent les prairies de Rozen, qui accueillent le légendaire festival national.",
+      "highlights": [
+        "télescope de 2 mètres",
+        "Visites accompagnées d'une présentation",
+        "Observations nocturnes",
+        "La fête de Rozen se tient tout près"
+      ]
+    },
+    "wonderful-bridges": {
+      "title": "Les ponts merveilleux",
+      "distance": "42 km · 1 heure en voiture",
+      "duration": "",
+      "description": "Des arches rocheuses géantes en marbre, creusées par la rivière Erküpriya au fil des millénaires. Le grand pont mesure 96 m de long et 45 m de haut — un sentier passe en dessous et l’acoustique y est incroyable. Le petit pont mesure 60 m de long. Ce site figure parmi les 100 sites touristiques nationaux et se prête parfaitement à un déjeuner dans le village de Zabardo.",
+      "highlights": [
+        "Une arche de 45 m de haut",
+        "100 sites nationaux",
+        "Le sentier sous les ponts",
+        "Refuge et abri à proximité"
+      ]
+    },
+    "smolyan-town": {
+      "title": "Smolyan — planétarium et musées",
+      "distance": "15 km · 20 min en voiture",
+      "duration": "",
+      "description": "La ville régionale située au pied du mont Snezhanka préserve l'esprit des Rhodopes : le planétarium, le plus grand de Bulgarie, propose des spectacles astronomiques grandioses, tandis que le musée historique régional « Stoyu Shishkov » retrace la vie quotidienne, les costumes et la musique de la montagne. Les quartiers anciens de Raïkovo et d’Ustovo séduisent par leurs maisons de l’époque du Renouveau national et leurs auberges chaleureuses.",
+      "highlights": [
+        "Le plus grand planétarium de Bulgarie",
+        "Lycée « Stoyu Shishkov »",
+        "Galerie d'art",
+        "Les quartiers de Raikovo et d'Ustovo"
+      ]
+    },
+    "momchilovtsi": {
+      "title": "Momchilovtsi",
+      "distance": "25 km · 30 min en voiture",
+      "duration": "",
+      "description": "Un charmant village des Rhodopes situé à 1 200 m d'altitude, célèbre pour la longévité de ses habitants et son yaourt maison, devenu une véritable légende jusqu'en Chine. Des sentiers panoramiques, des chapelles sur chaque colline et des auberges authentiques et accueillantes. En août, le village accueille la fête du yaourt.",
+      "highlights": [
+        "Le village de la longévité",
+        "Fête du yaourt",
+        "Chapelles panoramiques",
+        "Mécaniques authentiques"
+      ]
+    },
+    "gela-village": {
+      "title": "Gela — le village d'Orphée",
+      "distance": "22 km · 30 min en voiture",
+      "duration": "",
+      "description": "L'un des plus anciens villages des Rhodopes, considéré comme le lieu de naissance du mythique Orphée. Situé à 1 500 m d'altitude au milieu de prairies à perte de vue, Gela accueille le Festival international de la cornemuse chaque premier dimanche d'août : des centaines de cornemuseurs font résonner la montagne. C’est de là que partent les sentiers menant aux sommets de Turlata et de Gela.",
+      "highlights": [
+        "La patrie d'Orphée",
+        "Festival de cornemuse en août",
+        "Sanctuaires thraces",
+        "Départ des itinéraires de montagne"
+      ]
+    },
+    "yagodina-cave": {
+      "title": "La grotte de Yagodina",
+      "distance": "50 km · 1 h 15 min en voiture",
+      "duration": "Circuit de 45 min · Parcours de 1 100 m",
+      "description": "La troisième plus longue grotte de Bulgarie : 10,5 km de galeries réparties sur trois niveaux dans la gorge de Buynovo. Le parcours touristique passe devant la « peau de léopard », des perles de grotte, des stalactites et la célèbre « salle du Nouvel An », où l'on célèbre le Nouvel An sous terre. La température y est constante à 6 °C — pensez à emporter une veste, même en août.",
+      "highlights": [
+        "10,5 km de galeries",
+        "Perles des grottes",
+        "Salle du Nouvel An",
+        "La gorge de Buynovsko sur la route"
+      ]
+    },
+    "devils-throat": {
+      "title": "La Gorge du Diable",
+      "distance": "55 km · 1 h 20 min en voiture",
+      "duration": "Circuit de 30 minutes",
+      "description": "Une grotte abyssale abritant la plus haute cascade souterraine des Balkans — 42 m —, dans la « salle rugissante » de laquelle la rivière Trigradska se jette dans les profondeurs avec fracas. Selon la légende, c'est de là qu'Orphée serait descendu dans le royaume des morts pour retrouver Eurydice. Tout ce qui tombe dans l'eau ne remonte jamais à la surface — un mystère que les scientifiques continuent d'étudier.",
+      "highlights": [
+        "Une cascade souterraine de 42 m",
+        "La salle en effervescence",
+        "La légende d'Orphée",
+        "301 marches le long de la cascade"
+      ]
+    },
+    "trigrad-gorge": {
+      "title": "La gorge de Trigrad",
+      "distance": "53 km · 1 h 15 min en voiture",
+      "duration": "",
+      "description": "Un canyon aux parois de marbre à pic, s'élevant jusqu'à 250 m au-dessus de la rivière Trigradska — la route se faufile littéralement entre les rochers. Refuge d'oiseaux rares tels que la grimpereau des rochers, et porte d'entrée vers la Gorge du Diable et le village de Trigrad. L'une des routes les plus spectaculaires de Bulgarie — chaque embranchement offre un panorama digne d'une photo.",
+      "highlights": [
+        "Murs jusqu'à 250 m",
+        "Une route de montagne spectaculaire",
+        "Oiseaux rares",
+        "À associer avec le « Gorge du Diable »"
+      ]
+    },
+    "uhlovitsa-cave": {
+      "title": "Grotte d'Uhlovitsa",
+      "distance": "32 km · 45 min en voiture",
+      "duration": "Circuit de 30 minutes",
+      "description": "L'une des plus belles grottes de Bulgarie, située près du village de Mogilitsa. Elle est célèbre pour ses « cascades » de pierre — des cascades de formations calcaires ressemblant à de l'eau gelée — et pour les corallites qui ornent ses voûtes. Un sentier pittoresque à travers la forêt mène à l'entrée (environ 30 minutes à pied depuis le parking).",
+      "highlights": [
+        "Cascades de pierre",
+        "Formations coralliennes",
+        "4 lacs souterrains",
+        "Près des konats des Agushev"
+      ]
+    }
+  },
+  "stats": [
+    {
+      "value": "1 650 m",
+      "label": "altitude de la station"
+    },
+    {
+      "value": "1 926 m",
+      "label": "le sommet de Snezhanka — le point culminant du domaine skiable"
+    },
+    {
+      "value": "37+ km",
+      "label": "pistes de ski de tous niveaux de difficulté"
+    },
+    {
+      "value": "1933",
+      "label": "fondée — la plus ancienne station de ski de Bulgarie"
+    },
+    {
+      "value": "~120",
+      "label": "jours ensoleillés pendant la saison hivernale"
+    },
+    {
+      "value": "90 %",
+      "label": "des pistes équipées d'un système d'enneigement artificiel"
+    }
+  ],
+  "pistes": [
+    {
+      "name": "Le barrage (la Petite Muraille)",
+      "note": ""
+    },
+    {
+      "name": "Contournement — Le petit mur",
+      "note": ""
+    },
+    {
+      "name": "Le mur",
+      "note": "L'emblème de Pamporovo, qui accueille des épreuves de la Coupe d'Europe. Ski nocturne de 17 h 30 à 22 h."
+    },
+    {
+      "name": "Arch. Petar Petrov (L'Européenne)",
+      "note": ""
+    },
+    {
+      "name": "Blanche-Neige",
+      "note": ""
+    },
+    {
+      "name": "Blanche-Neige",
+      "note": ""
+    },
+    {
+      "name": "Framboise",
+      "note": "La plus longue piste rouge — du sommet jusqu'à la station de ski de Malina."
+    },
+    {
+      "name": "Contournement de Malina",
+      "note": ""
+    },
+    {
+      "name": "Pamporovo (Tourisme)",
+      "note": "Longue et en pente douce — idéale pour les premières descentes et le ski en famille."
+    },
+    {
+      "name": "Orlovets",
+      "note": ""
+    },
+    {
+      "name": "Perelik (le Sud)",
+      "note": ""
+    },
+    {
+      "name": "Les lacs de Smolyan",
+      "note": ""
+    },
+    {
+      "name": "Delovo Dere (Damsk)",
+      "note": ""
+    },
+    {
+      "name": "Cartola",
+      "note": ""
+    },
+    {
+      "name": "Les supports 1",
+      "note": ""
+    },
+    {
+      "name": "Les supports 2",
+      "note": ""
+    },
+    {
+      "name": "Piste de fun / Border cross",
+      "note": "Piste avec des bosses, des virages relevés et des figures de freestyle."
+    }
+  ],
+  "skiLifts": [
+    {
+      "route": "Les pylônes — le sommet de Snezhanka",
+      "type": "Télésiège",
+      "note": "La plus longue installation — elle franchit un dénivelé de 453 m."
+    },
+    {
+      "route": "Station de ski n° 1 (gare routière) — Studenets",
+      "type": "Télésiège à 4 places",
+      "note": ""
+    },
+    {
+      "route": "Studenets — le sommet de Snezhanka",
+      "type": "Télésiège à 4 places",
+      "note": "La liaison principale vers le sommet et les pistes noires."
+    },
+    {
+      "route": "Malina — le sommet de Snezhanka",
+      "type": "Télésiège",
+      "note": ""
+    },
+    {
+      "route": "Les lacs de Smolyan — le sommet de Snezhanka",
+      "type": "Télésiège",
+      "note": ""
+    },
+    {
+      "route": "Malina — Studenets",
+      "type": "Télésiège",
+      "note": ""
+    }
+  ],
+  "liftFacts": [
+    {
+      "route": "Les pylônes — le sommet de Snezhanka",
+      "type": "Télésiège"
+    },
+    {
+      "route": "Station de ski n° 1 — Studenets",
+      "type": "Télésiège à 4 places"
+    },
+    {
+      "route": "Studenets — le sommet de Snezhanka",
+      "type": "Télésiège à 4 places"
+    },
+    {
+      "route": "Malina — le sommet de Snezhanka",
+      "type": "Télésiège"
+    },
+    {
+      "route": "Les lacs de Smolyan — le sommet de Snezhanka",
+      "type": "Télésiège"
+    },
+    {
+      "route": "Malina — Studenets",
+      "type": "Télésiège"
+    }
+  ],
+  "skiExtras": [
+    "Capacité totale des installations : plus de 13 000 skieurs par heure",
+    "Écoles de ski et de snowboard avec des moniteurs diplômés et des parcs pour enfants",
+    "Conduite nocturne sur le circuit « La Muraille-2 » (17 h 30 – 22 h)",
+    "2 pistes de ski de fond : Snezhanka n° 14 (25 km, jusqu'au village de Mugla) et n° 15 « Ardashl » (7 km, jusqu'au village de Stoykite)",
+    "Parc de loisirs proposant du snow tubing, du boardercross et des figures de freestyle",
+    "Vestiaires, services et dépôts de skis à Studenets et Malina"
+  ],
+  "winterActivities": [
+    {
+      "title": "Ski et snowboard",
+      "description": "Plus de 37 km de pistes pour tous les niveaux, des remontées mécaniques modernes et un enneigement garanti de décembre à avril."
+    },
+    {
+      "title": "Conduite de nuit",
+      "description": "Le Mur-2 illuminé reste ouvert jusqu'à 22 h — une expérience inoubliable."
+    },
+    {
+      "title": "Ski de fond",
+      "description": "25 km de sentiers balisés à travers les forêts enneigées en direction de Mugla et de Stoykite."
+    },
+    {
+      "title": "Randonnées en raquettes et promenades",
+      "description": "Visites guidées en raquettes aux rochers d'Orphée et aux lacs de Smolyan."
+    },
+    {
+      "title": "Écoles de ski pour enfants",
+      "description": "Des moniteurs diplômés, des parcs pour enfants équipés de remonte-pentes et une bonne dose de patience."
+    },
+    {
+      "title": "Après-ski",
+      "description": "Des auberges proposant des spécialités des Rhodopes, de la musique live et du vin chaud, à quelques mètres des pistes."
+    }
+  ],
+  "summerActivities": [
+    {
+      "title": "VTT",
+      "description": "Pistes de VTT balisées au départ du sommet de Snezhanka — allant de sentiers forestiers faciles à des descentes pour les cyclistes confirmés."
+    },
+    {
+      "title": "Sentiers écologiques",
+      "description": "Le canyon des cascades, la « Mariée », les lacs de Smolyan : des dizaines d'itinéraires à moins d'une heure de route."
+    },
+    {
+      "title": "Parc d'accrobranche et attractions",
+      "description": "Parc d'aventure avec des parcours d'accrobranche, un mur d'escalade et un téléphérique pour petits et grands."
+    },
+    {
+      "title": "Équitation",
+      "description": "Les centres équestres de la région proposent des randonnées à travers les prairies de Rozen et de Stoykite."
+    },
+    {
+      "title": "Cueillette de champignons et d'herbes aromatiques",
+      "description": "Des chanterelles, des myrtilles et plus de 300 espèces de plantes médicinales : les Rhodopes sont une véritable pharmacie naturelle."
+    },
+    {
+      "title": "Photographie et stars",
+      "description": "Des levers de soleil sur la mer brumeuse, un ciel sombre propice à l'astrophotographie et l'observatoire de Rozen à proximité."
+    }
+  ],
+  "lists": {
+    "eco": [
+      "canyon-cascades",
+      "les lacs de Smolyan",
+      "nevyastata",
+      "orpheus-rocks"
+    ],
+    "landmarks": [
+      "shiroka-laka",
+      "observatoire de Rozhen",
+      "wonderful-bridges",
+      "smolyan-ville",
+      "Momchilovtsi",
+      "gela-village"
+    ],
+    "caves": [
+      "grotte-de-Yagodina",
+      "la gorge du diable",
+      "gorge de Trigrad",
+      "grotte d'Uhlevitsa"
+    ]
+  }
+}

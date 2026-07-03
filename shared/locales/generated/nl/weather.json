@@ -1,0 +1,126 @@
+{
+  "resortName": "Pamporovo",
+  "elevation": "1 650 m",
+  "variable": "Variabel",
+  "wind": {
+    "calm": "stil",
+    "light": "een zacht briesje",
+    "gentle": "mager",
+    "moderate": "gematigd",
+    "strong": "sterk"
+  },
+  "codes": {
+    "0": {
+      "label": "Duidelijk",
+      "short": "Duidelijk"
+    },
+    "1": {
+      "label": "Overwegend helder",
+      "short": "Duidelijk"
+    },
+    "2": {
+      "label": "Gedeeltelijk bewolkt",
+      "short": "Bewolkt"
+    },
+    "3": {
+      "label": "Bewolkt",
+      "short": "Bewolkt"
+    },
+    "45": {
+      "label": "Mist",
+      "short": "Mist"
+    },
+    "48": {
+      "label": "Dichte mist",
+      "short": "Mist"
+    },
+    "51": {
+      "label": "Een lichte rimpeling",
+      "short": "Rumezh"
+    },
+    "53": {
+      "label": "Rumezh",
+      "short": "Rumezh"
+    },
+    "55": {
+      "label": "Een krachtige roep",
+      "short": "Rumezh"
+    },
+    "56": {
+      "label": "Een lichte ijzige rilling",
+      "short": "Rumezh"
+    },
+    "57": {
+      "label": "IJzige ruis",
+      "short": "Rumezh"
+    },
+    "61": {
+      "label": "Lichte regen",
+      "short": "Regen"
+    },
+    "63": {
+      "label": "Regen",
+      "short": "Regen"
+    },
+    "65": {
+      "label": "Hevige regen",
+      "short": "Regen"
+    },
+    "66": {
+      "label": "Lichte ijzel",
+      "short": "Regen"
+    },
+    "67": {
+      "label": "IJzel",
+      "short": "Regen"
+    },
+    "71": {
+      "label": "Lichte sneeuw",
+      "short": "Sneeuw"
+    },
+    "73": {
+      "label": "Sneeuw",
+      "short": "Sneeuw"
+    },
+    "75": {
+      "label": "Hevige sneeuwval",
+      "short": "Sneeuw"
+    },
+    "77": {
+      "label": "Sneeuwkorrels",
+      "short": "Sneeuw"
+    },
+    "80": {
+      "label": "Een korte regenbui",
+      "short": "Neerslag"
+    },
+    "81": {
+      "label": "Neerslag",
+      "short": "Neerslag"
+    },
+    "82": {
+      "label": "Hevige regenval",
+      "short": "Neerslag"
+    },
+    "85": {
+      "label": "Lichte sneeuw",
+      "short": "Sneeuw"
+    },
+    "86": {
+      "label": "Hevige sneeuwval",
+      "short": "Sneeuw"
+    },
+    "95": {
+      "label": "Onweersbuien",
+      "short": "Storm"
+    },
+    "96": {
+      "label": "Hagel",
+      "short": "Storm"
+    },
+    "99": {
+      "label": "Zware hagel",
+      "short": "Storm"
+    }
+  }
+}

@@ -1,13 +1,18 @@
 import { useEffect, useMemo, useRef, useState, type FormEvent } from "react";
 import { useInView } from "framer-motion";
-import { useLocation } from "wouter";
+import { useLocalizedNav } from "@/hooks/useLocalizedNav";
 import type { DateRange } from "react-day-picker";
 import { toast } from "sonner";
-import { formatPriceEur, VILLAS } from "@/data/siteContent";
+import { formatPriceEur } from "@/data/siteContent";
+import { useTranslation } from "@/contexts/LocaleContext";
+import {
+  interpolate,
+  useFormatStayBreakdown,
+  useVillasLocalized,
+} from "@/i18n/contentHooks";
 import { trpc } from "@/lib/trpc";
 import {
   calculateStayPriceFromGrid,
-  formatStayPriceBreakdown,
   type PricingGridRow,
 } from "@/lib/pricing";
 import { isSameCalendarDay, updateBookingDateRange } from "@/lib/bookingDates";
@@ -62,14 +67,17 @@ function rangeHasOccupiedNight(
 }
 
 export function BookingSection() {
-  const [, setLocation] = useLocation();
+  const { t } = useTranslation();
+  const villas = useVillasLocalized();
+  const formatBreakdown = useFormatStayBreakdown();
+  const { navigate } = useLocalizedNav();
   const sectionRef = useRef<HTMLDivElement>(null);
   const calendarReady = useInView(sectionRef, { once: true, margin: "240px 0px" });
   const [dateRange, setDateRange] = useState<DateRange | undefined>();
   const [agreedToTerms, setAgreedToTerms] = useState(false);
   const [honeypot, setHoneypot] = useState("");
   const [formData, setFormData] = useState({
-    villaId: VILLAS[0]?.id ?? "",
+    villaId: villas[0]?.id ?? "",
     numberOfGuests: 2,
     guestName: "",
     guestEmail: "",
@@ -94,7 +102,7 @@ export function BookingSection() {
       rangeHasOccupiedNight(dateRange.from, dateRange.to, occupiedDates)
     ) {
       setDateRange(undefined);
-      toast.message("Избраните дати са заети за тази вила — моля, изберете нов период.");
+      toast.message(t("booking.toast.datesOccupiedVilla", "Избраните дати са заети за тази вила — моля, изберете нов период."));
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [occupiedDates]);
@@ -162,14 +170,20 @@ export function BookingSection() {
     return isDateOccupied(date, occupiedDates);
   };
 
-  const currentVillaName =
-    VILLAS.find(v => v.id === formData.villaId)?.name ?? "тази вила";
+  const currentVilla = villas.find(v => v.id === formData.villaId);
+  const currentVillaName = currentVilla?.name ?? t("booking.thisVilla", "тази вила");
 
   const handleCalendarSelect = (_range: DateRange | undefined, triggerDate: Date) => {
     // Occupied days stay clickable so we can explain instead of silently ignoring.
     if (isDayBlocked(triggerDate)) {
       toast.message(
-        `Тази дата е заета за ${currentVillaName}. Сменете вилата от формата — възможно е друга да е свободна за същия период.`,
+        interpolate(
+          t(
+            "booking.toast.dateOccupied",
+            "Тази дата е заета за {villa}. Сменете вилата от формата — възможно е друга да е свободна за същия период."
+          ),
+          { villa: currentVillaName }
+        ),
         { duration: 6000 }
       );
       return;
@@ -182,7 +196,7 @@ export function BookingSection() {
       nextRange?.to &&
       isSameCalendarDay(nextRange.from, nextRange.to)
     ) {
-      toast.error("Минимум една нощувка — настаняване и напускане не могат да са в един ден.");
+      toast.error(t("booking.toast.minOneNight", "Минимум една нощувка — настаняване и напускане не могат да са в един ден."));
       return;
     }
 
@@ -192,7 +206,13 @@ export function BookingSection() {
       rangeHasOccupiedNight(nextRange.from, nextRange.to, occupiedDates)
     ) {
       toast.message(
-        `Периодът включва заети дати за ${currentVillaName}. Изберете свободен интервал или проверете друга вила.`,
+        interpolate(
+          t(
+            "booking.toast.rangeOccupied",
+            "Периодът включва заети дати за {villa}. Изберете свободен интервал или проверете друга вила."
+          ),
+          { villa: currentVillaName }
+        ),
         { duration: 6000 }
       );
       return;
@@ -209,17 +229,17 @@ export function BookingSection() {
     event.preventDefault();
 
     if (!dateRange?.from || !dateRange?.to) {
-      toast.error("Моля, изберете дати за настаняване и напускане.");
+      toast.error(t("booking.toast.pickDates", "Моля, изберете дати за настаняване и напускане."));
       return;
     }
 
     if (isSameCalendarDay(dateRange.from, dateRange.to)) {
-      toast.error("Минимум една нощувка — настаняване и напускане не могат да са в един ден.");
+      toast.error(t("booking.toast.minOneNight", "Минимум една нощувка — настаняване и напускане не могат да са в един ден."));
       return;
     }
 
     if (rangeHasOccupiedNight(dateRange.from, dateRange.to, occupiedDates)) {
-      toast.error("Избраният период включва заети дати за тази вила. Моля, изберете друг.");
+      toast.error(t("booking.toast.rangeHasOccupied", "Избраният период включва заети дати за тази вила. Моля, изберете друг."));
       return;
     }
 
@@ -236,11 +256,11 @@ export function BookingSection() {
         websiteHoneypot: honeypot,
       });
 
-      toast.success("Резервацията е изпратена успешно! Ще ви свържем скоро.");
+      toast.success(t("booking.toast.success", "Резервацията е изпратена успешно! Ще ви свържем скоро."));
       trackBookingSubmit(formData.villaId);
       resetDates();
       setFormData({
-        villaId: VILLAS[0]?.id ?? "",
+        villaId: villas[0]?.id ?? "",
         numberOfGuests: 2,
         guestName: "",
         guestEmail: "",
@@ -255,16 +275,16 @@ export function BookingSection() {
       toast.error(
         message.includes("заети") || message.includes("припокрива")
           ? message
-          : "Възникна грешка при изпращане на резервацията."
+          : t("booking.toast.error", "Възникна грешка при изпращане на резервацията.")
       );
     }
   };
 
   return (
     <SectionShell
-      eyebrow="Резервация"
-      title="Запазете своето място в планината"
-      subtitle="Изберете вила и дати, оставете данните си — а ние ще се свържем лично за потвърждение"
+      eyebrow={t("home.booking.eyebrow", "Резервация")}
+      title={t("home.booking.title", "Запазете своето място в планината")}
+      subtitle={t("home.booking.subtitle", "Изберете вила и дати, оставете данните си — а ние ще се свържем лично за потвърждение")}
       overlap
       splitTitle
       perfDefer
@@ -274,7 +294,12 @@ export function BookingSection() {
         className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[minmax(280px,360px)_1fr] lg:gap-10"
       >
         <ScrollReveal direction="up">
-          <PremiumFormCard title={`Изберете период за ${currentVillaName}`}>
+          <PremiumFormCard
+            title={interpolate(
+              t("booking.calendarTitle", "Изберете период за {villa}"),
+              { villa: currentVillaName }
+            )}
+          >
             {calendarReady ? (
               <Calendar
                 mode="range"
@@ -303,35 +328,44 @@ export function BookingSection() {
                   onClick={resetDates}
                   className="font-display text-xs uppercase tracking-[0.14em] text-muted-foreground underline-offset-4 hover:text-primary hover:underline"
                 >
-                  Изчисти датите
+                  {t("booking.clearDates", "Изчисти датите")}
                 </button>
               </div>
             )}
             <p className="mt-6 font-display text-sm leading-relaxed tracking-wide text-muted-foreground">
-              Кликнете начална и крайна дата· Минимум една нощувка
+              {t("booking.calendarHint", "Кликнете начална и крайна дата· Минимум една нощувка")}
             </p>
             <p className="mt-2 font-display text-xs leading-relaxed tracking-wide text-muted-foreground">
-              <span className="text-[oklch(0.55_0.09_25)] line-through">Зачертаните</span> дати са заети —
-              проверете дали друга вила е свободна за същия период.
+              <span className="text-[oklch(0.55_0.09_25)] line-through">
+                {t("booking.occupiedHintStrikethrough", "Зачертаните")}
+              </span>{" "}
+              {t(
+                "booking.occupiedHint",
+                "дати са заети — проверете дали друга вила е свободна за същия период."
+              )}
             </p>
 
             <div className="booking-price-quote mt-6">
-              <p className="booking-price-quote-label">Цена</p>
+              <p className="booking-price-quote-label">{t("booking.priceLabel", "Цена")}</p>
               {stayQuote ? (
                 <>
                   <p className="booking-price-quote-total">{formatPriceEur(stayQuote.total)}</p>
-                  <p className="booking-price-quote-breakdown">
-                    {formatStayPriceBreakdown(stayQuote)}
-                  </p>
+                  <p className="booking-price-quote-breakdown">{formatBreakdown(stayQuote)}</p>
                   <p className="booking-price-quote-note">
-                    Цяла вила · до 6 гости · без изхранване · тарифа „{stayQuote.tier.label.toLowerCase()}“
+                    {interpolate(
+                      t(
+                        "booking.priceNote",
+                        "Цяла вила · до 6 гости · без изхранване · тарифа „{tier}“"
+                      ),
+                      { tier: stayQuote.tier.label.toLowerCase() }
+                    )}
                   </p>
                 </>
               ) : (
                 <p className="booking-price-quote-empty">
                   {pricingRows.length
-                    ? "Изберете дати за пристигане и напускане, за да видите цената."
-                    : "Цените се зареждат..."}
+                    ? t("booking.priceEmpty", "Изберете дати за пристигане и напускане, за да видите цената.")
+                    : t("booking.priceLoading", "Цените се зареждат...")}
                 </p>
               )}
             </div>
@@ -339,7 +373,7 @@ export function BookingSection() {
         </ScrollReveal>
 
         <ScrollReveal direction="up" delay={120}>
-          <PremiumFormCard title="Данни за резервация">
+          <PremiumFormCard title={t("booking.formTitle", "Данни за резервация")}>
             <form onSubmit={handleSubmit} className="space-y-8">
               <input
                 type="text"
@@ -353,7 +387,7 @@ export function BookingSection() {
               />
 
               <div className="grid gap-8 sm:grid-cols-2">
-                <PremiumFormField label="Дата на пристигане" htmlFor="checkIn">
+                <PremiumFormField label={t("booking.checkIn", "Дата на пристигане")} htmlFor="checkIn">
                   <Input
                     id="checkIn"
                     type="date"
@@ -363,7 +397,7 @@ export function BookingSection() {
                     required
                   />
                 </PremiumFormField>
-                <PremiumFormField label="Дата на заминаване" htmlFor="checkOut">
+                <PremiumFormField label={t("booking.checkOut", "Дата на заминаване")} htmlFor="checkOut">
                   <Input
                     id="checkOut"
                     type="date"
@@ -378,16 +412,16 @@ export function BookingSection() {
               <div className="premium-form-divider" />
 
               <div className="grid gap-8 sm:grid-cols-2">
-                <PremiumFormField label="Вила" htmlFor="villa">
+                <PremiumFormField label={t("booking.villa", "Вила")} htmlFor="villa">
                   <Select
                     value={formData.villaId}
                     onValueChange={value => setFormData(prev => ({ ...prev, villaId: value }))}
                   >
                     <SelectTrigger id="villa" className={premiumSelectClass}>
-                      <SelectValue placeholder="Изберете вила" />
+                      <SelectValue placeholder={t("booking.villaPlaceholder", "Изберете вила")} />
                     </SelectTrigger>
                     <SelectContent>
-                      {VILLAS.map(villa => (
+                      {villas.map(villa => (
                         <SelectItem key={villa.id} value={villa.id}>
                           {villa.name}
                         </SelectItem>
@@ -396,7 +430,7 @@ export function BookingSection() {
                   </Select>
                 </PremiumFormField>
 
-                <PremiumFormField label="Брой гости" htmlFor="guests">
+                <PremiumFormField label={t("booking.guests", "Брой гости")} htmlFor="guests">
                   <Input
                     id="guests"
                     type="number"
@@ -418,7 +452,7 @@ export function BookingSection() {
               <div className="premium-form-divider" />
 
               <div className="grid gap-8 sm:grid-cols-2">
-                <PremiumFormField label="Име" htmlFor="name">
+                <PremiumFormField label={t("booking.name", "Име")} htmlFor="name">
                   <Input
                     id="name"
                     className={premiumInputClass}
@@ -430,7 +464,7 @@ export function BookingSection() {
                     minLength={2}
                   />
                 </PremiumFormField>
-                <PremiumFormField label="Имейл" htmlFor="email">
+                <PremiumFormField label={t("booking.email", "Имейл")} htmlFor="email">
                   <Input
                     id="email"
                     type="email"
@@ -444,7 +478,7 @@ export function BookingSection() {
                 </PremiumFormField>
               </div>
 
-              <PremiumFormField label="Телефон" htmlFor="phone">
+              <PremiumFormField label={t("booking.phone", "Телефон")} htmlFor="phone">
                 <PhoneInput
                   id="phone"
                   className={premiumInputClass}
@@ -457,7 +491,7 @@ export function BookingSection() {
                 />
               </PremiumFormField>
 
-              <PremiumFormField label="Бележка" htmlFor="requests">
+              <PremiumFormField label={t("booking.note", "Бележка")} htmlFor="requests">
                 <Textarea
                   id="requests"
                   className={premiumTextareaClass}
@@ -465,7 +499,10 @@ export function BookingSection() {
                   onChange={event =>
                     setFormData(prev => ({ ...prev, guestNote: event.target.value }))
                   }
-                  placeholder="Напишете ако имате уточняваща информация към резервацията..."
+                  placeholder={t(
+                    "booking.notePlaceholder",
+                    "Напишете ако имате уточняваща информация към резервацията..."
+                  )}
                 />
               </PremiumFormField>
 
@@ -492,23 +529,23 @@ export function BookingSection() {
                   </svg>
                 </div>
                 <span className="text-sm leading-relaxed text-muted-foreground">
-                  Запознах се и приемам{" "}
+                  {t("booking.termsPrefix", "Запознах се и приемам")}{" "}
                   <button
                     type="button"
-                    onClick={() => setLocation("/legal?tab=terms")}
+                    onClick={() => navigate("/legal?tab=terms")}
                     className="font-medium text-foreground underline underline-offset-2 hover:text-[var(--gold)]"
                   >
-                    Общите условия
+                    {t("booking.termsLink", "Общите условия")}
                   </button>
                   ,{" "}
                   <button
                     type="button"
-                    onClick={() => setLocation("/legal?tab=privacy")}
+                    onClick={() => navigate("/legal?tab=privacy")}
                     className="font-medium text-foreground underline underline-offset-2 hover:text-[var(--gold)]"
                   >
-                    Политиката за поверителност
+                    {t("booking.privacyLink", "Политиката за поверителност")}
                   </button>{" "}
-                  и правилата за ползване на вилата.
+                  {t("booking.termsSuffix", "и правилата за ползване на вилата.")}
                 </span>
               </label>
 
@@ -517,7 +554,9 @@ export function BookingSection() {
                 className="premium-btn h-14 w-full text-base"
                 disabled={bookingMutation.isPending || !pricingRows.length || !agreedToTerms}
               >
-                {bookingMutation.isPending ? "Изпращане..." : "Изпрати резервация"}
+                {bookingMutation.isPending
+                  ? t("booking.submitting", "Изпращане...")
+                  : t("booking.submit", "Изпрати резервация")}
               </MagneticButton>
             </form>
           </PremiumFormCard>

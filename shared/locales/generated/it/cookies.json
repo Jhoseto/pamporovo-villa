@@ -1,0 +1,19 @@
+{
+  "bannerTitle": "Cookie e privacy",
+  "bannerBody": "Utilizziamo i cookie necessari al funzionamento del sito. Con il vostro consenso, attiviamo Google Analytics e Google Maps.",
+  "policyLink": "Informativa sui cookie",
+  "settings": "Impostazioni",
+  "accept": "Accetto",
+  "manage": "Gestione dei cookie",
+  "modalTitle": "Impostazioni dei cookie",
+  "modalBody": "Scegli quali categorie autorizzare. I cookie necessari sono sempre attivi.",
+  "necessary": "Necessari",
+  "necessaryDesc": "Memorizzano le tue preferenze relative ai cookie e garantiscono il funzionamento di base del sito.",
+  "analytics": "Analitici",
+  "analyticsDesc": "Google Analytics 4 — statistiche anonime sulle visite e sul comportamento degli utenti sul sito.",
+  "functional": "Funzionali / terze parti",
+  "functionalDesc": "Google Maps — mappa interattiva con l'ubicazione delle ville.",
+  "reject": "Solo quelli necessari",
+  "save": "Salva la selezione",
+  "acceptAll": "Accetto tutti"
+}

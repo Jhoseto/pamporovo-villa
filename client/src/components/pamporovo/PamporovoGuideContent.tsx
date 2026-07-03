@@ -1,15 +1,4 @@
-import {
-  CAVES,
-  ECO_TRAILS,
-  HERO_IMAGES,
-  LANDMARKS,
-  PISTES,
-  RESORT_STATS,
-  SKI_EXTRAS,
-  SKI_LIFTS,
-  SUMMER_ACTIVITIES,
-  WINTER_ACTIVITIES,
-} from "@/data/pamporovoContent";
+import { HERO_IMAGES } from "@/data/pamporovoContent";
 import { SectionShell } from "@/components/site/SectionShell";
 import { ScrollReveal } from "@/components/site/ScrollReveal";
 import { MagneticButton } from "@/components/site/MagneticButton";
@@ -20,26 +9,56 @@ import {
   PisteTable,
   StatGrid,
 } from "@/components/pamporovo/PamporovoCards";
+import { useLocalizedNav } from "@/hooks/useLocalizedNav";
 import { navigateToHomeSection } from "@/lib/siteNav";
+import {
+  useGuideCaves,
+  useGuideEcoTrails,
+  useGuideLandmarks,
+  useGuidePistes,
+  useGuideSection,
+  useGuideSkiExtras,
+  useGuideSkiLifts,
+  useGuideStats,
+  useGuideSummerActivities,
+  useGuideUi,
+  useGuideWinterActivities,
+} from "@/i18n/guideHooks";
 import { useLocation } from "wouter";
 
 export function PamporovoGuideContent() {
   const [location, setLocation] = useLocation();
+  const { search } = useLocalizedNav();
+  const intro = useGuideSection("intro");
+  const winter = useGuideSection("winter");
+  const summer = useGuideSection("summer");
+  const landmarks = useGuideSection("landmarks");
+  const caves = useGuideSection("caves");
+  const ui = useGuideUi();
+  const stats = useGuideStats();
+  const pistes = useGuidePistes();
+  const skiLifts = useGuideSkiLifts();
+  const skiExtras = useGuideSkiExtras();
+  const winterActivities = useGuideWinterActivities();
+  const summerActivities = useGuideSummerActivities();
+  const ecoTrails = useGuideEcoTrails();
+  const landmarkItems = useGuideLandmarks();
+  const caveItems = useGuideCaves();
 
   return (
     <>
       <SectionShell
         id="pamporovo-intro"
-        eyebrow="Курортът"
-        title="Сърцето на Родопите"
-        subtitle="На 1650 м надморска височина, в подножието на връх Снежанка — най-старият български ски курорт, основан през 1933 г."
+        eyebrow={intro.eyebrow}
+        title={intro.title}
+        subtitle={intro.subtitle}
         overlap
       >
-        <StatGrid stats={RESORT_STATS} />
+        <StatGrid stats={stats} />
         <ScrollReveal className="mt-10" delay={80}>
           <TiltImage
             src={HERO_IMAGES.panorama}
-            alt="Зимен курорт Пампорово — хотели и писти в Родопите"
+            alt={intro.panoramaAlt ?? ""}
             className="aspect-[21/9] rounded-2xl"
             maxTilt={4}
           />
@@ -48,26 +67,18 @@ export function PamporovoGuideContent() {
           <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
             <TiltImage
               src={HERO_IMAGES.tower}
-              alt="Кулата Снежанка — символ на Пампорово"
+              alt={intro.towerAlt ?? ""}
               className="aspect-[4/3] rounded-2xl"
               maxTilt={8}
             />
             <div className="space-y-4 font-display text-base leading-relaxed tracking-wide text-muted-foreground">
-              <p>
-                Два основни ски центъра — <strong className="text-foreground">Студенец</strong> и{" "}
-                <strong className="text-foreground">Малина</strong> — свързани с връх Снежанка (1926 м).
-                Пистите са между 1400 и 1926 м, с модерни лифтове и над 80 снежни оръдия.
-              </p>
-              <p>
-                Лятото курортът се превръща в база за еко туризъм — маркирани пътеки, колоездене,
-                конна езда и безброй забележителности на 15–60 минути с кола до Смолян, Широка лъка,
-                Чудните мостове и подземните дворци на Западните Родопи.
-              </p>
+              <p>{intro.p1}</p>
+              <p>{intro.p2}</p>
               <MagneticButton
                 className="premium-btn mt-4"
-                onClick={() => navigateToHomeSection("booking", setLocation, location)}
+                onClick={() => navigateToHomeSection("booking", setLocation, location, search)}
               >
-                Резервирай вила в Пампорово
+                {intro.cta}
               </MagneticButton>
             </div>
           </div>
@@ -76,44 +87,46 @@ export function PamporovoGuideContent() {
 
       <SectionShell
         id="pamporovo-winter"
-        eyebrow="Зима"
-        title="Ски зона — писти и лифтове"
-        subtitle="37+ км маркирани писти за ски и сноуборд, нощно каране на Стената и маршрути за ски бягане"
+        eyebrow={winter.eyebrow}
+        title={winter.title}
+        subtitle={winter.subtitle}
         dark
         darkOverlap
       >
         <ScrollReveal>
           <TiltImage
             src={HERO_IMAGES.ski}
-            alt="Седалков лифт към връх Снежанка — кулата над Пампорово"
+            alt={winter.skiAlt ?? ""}
             className="mb-12 aspect-[21/9] rounded-2xl"
             maxTilt={4}
           />
         </ScrollReveal>
 
         <ScrollReveal delay={80}>
-          <h3 className="mb-4 font-serif text-2xl font-semibold text-white">Писти по трудност</h3>
-          <PisteTable pistes={PISTES} dark />
+          <h3 className="mb-4 font-serif text-2xl font-semibold text-white">{winter.pistesHeading}</h3>
+          <PisteTable pistes={pistes} dark />
         </ScrollReveal>
 
         <ScrollReveal className="mt-12" delay={100}>
-          <h3 className="mb-4 font-serif text-2xl font-semibold text-white">Лифтове и съоръжения</h3>
+          <h3 className="mb-4 font-serif text-2xl font-semibold text-white">{winter.liftsHeading}</h3>
           <div className="overflow-x-auto rounded-2xl border border-white/10 bg-white/[0.03]">
             <table className="w-full min-w-[560px] text-left text-sm text-white/85">
               <thead>
                 <tr className="border-b border-white/10 text-white/55">
-                  <th className="px-4 py-3">Маршрут</th>
-                  <th className="px-4 py-3">Тип</th>
-                  <th className="px-4 py-3">Дължина</th>
-                  <th className="px-4 py-3">Капацитет/ч</th>
+                  <th className="px-4 py-3">{ui.route}</th>
+                  <th className="px-4 py-3">{ui.liftType}</th>
+                  <th className="px-4 py-3">{ui.length}</th>
+                  <th className="px-4 py-3">{ui.capacity}</th>
                 </tr>
               </thead>
               <tbody>
-                {SKI_LIFTS.map(l => (
+                {skiLifts.map(l => (
                   <tr key={l.route} className="border-b border-white/5 last:border-0">
                     <td className="px-4 py-3 font-medium">{l.route}</td>
                     <td className="px-4 py-3">{l.type}</td>
-                    <td className="px-4 py-3">{l.lengthM} м</td>
+                    <td className="px-4 py-3">
+                      {l.lengthM} {ui.meters}
+                    </td>
                     <td className="px-4 py-3">{l.capacity}</td>
                   </tr>
                 ))}
@@ -124,7 +137,7 @@ export function PamporovoGuideContent() {
 
         <ScrollReveal className="mt-10" delay={120}>
           <ul className="grid gap-3 sm:grid-cols-2">
-            {SKI_EXTRAS.map(extra => (
+            {skiExtras.map(extra => (
               <li
                 key={extra}
                 className="rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-white/75"
@@ -136,49 +149,49 @@ export function PamporovoGuideContent() {
         </ScrollReveal>
 
         <ScrollReveal className="mt-12" delay={140}>
-          <h3 className="mb-6 font-serif text-2xl font-semibold text-white">Зимни активности</h3>
-          <ActivityGrid items={WINTER_ACTIVITIES} dark />
+          <h3 className="mb-6 font-serif text-2xl font-semibold text-white">{winter.activitiesHeading}</h3>
+          <ActivityGrid items={winterActivities} dark />
         </ScrollReveal>
       </SectionShell>
 
       <SectionShell
         id="pamporovo-summer"
-        eyebrow="Лято"
-        title="Еко пътеки и природа"
-        subtitle="Каньонът на водопадите, Смолянските езера, Орфеевите скали — на минути от курорта"
+        eyebrow={summer.eyebrow}
+        title={summer.title}
+        subtitle={summer.subtitle}
         overlap
       >
         <ScrollReveal>
           <TiltImage
             src={HERO_IMAGES.summer}
-            alt="Планинско езеро в Родопите — лятна еко пътека край Пампорово"
+            alt={summer.summerAlt ?? ""}
             className="mb-12 aspect-[21/9] rounded-2xl"
             maxTilt={4}
           />
         </ScrollReveal>
 
         <div className="grid gap-8 lg:grid-cols-2">
-          {ECO_TRAILS.map(item => (
+          {ecoTrails.map(item => (
             <AttractionCard key={item.id} item={item} />
           ))}
         </div>
 
         <ScrollReveal className="mt-12" delay={100}>
-          <h3 className="mb-6 font-serif text-2xl font-semibold">Летни активности</h3>
-          <ActivityGrid items={SUMMER_ACTIVITIES} />
+          <h3 className="mb-6 font-serif text-2xl font-semibold">{summer.activitiesHeading}</h3>
+          <ActivityGrid items={summerActivities} />
         </ScrollReveal>
       </SectionShell>
 
       <SectionShell
         id="pamporovo-landmarks"
-        eyebrow="Околността"
-        title="Забележителности и села"
-        subtitle="Архитектурни резервати, обсерватория, планетариум и автентичен родопски фолклор"
+        eyebrow={landmarks.eyebrow}
+        title={landmarks.title}
+        subtitle={landmarks.subtitle}
         dark
         darkOverlap
       >
         <div className="grid gap-8 md:grid-cols-2">
-          {LANDMARKS.map(item => (
+          {landmarkItems.map(item => (
             <AttractionCard key={item.id} item={item} dark />
           ))}
         </div>
@@ -186,27 +199,26 @@ export function PamporovoGuideContent() {
 
       <SectionShell
         id="pamporovo-caves"
-        eyebrow="Подземен свят"
-        title="Пещери и ждрела"
-        subtitle="Ягодинска пещера, Дяволското гърло, Триградско ждрело и Ухловица — съкровища на Западните Родопи"
+        eyebrow={caves.eyebrow}
+        title={caves.title}
+        subtitle={caves.subtitle}
         overlap
       >
         <div className="grid gap-8 lg:grid-cols-2">
-          {CAVES.map(item => (
+          {caveItems.map(item => (
             <AttractionCard key={item.id} item={item} large={item.id === "devils-throat"} />
           ))}
         </div>
 
         <ScrollReveal className="mt-16 text-center" delay={120}>
           <p className="mx-auto max-w-xl font-display text-lg tracking-wide text-muted-foreground">
-            Вилите Pamporovo Villa са на Райковски ливади — идеална база за зимни и летни приключения в
-            целия регион.
+            {caves.footer}
           </p>
           <MagneticButton
             className="premium-btn mt-8"
-            onClick={() => navigateToHomeSection("booking", setLocation, location)}
+            onClick={() => navigateToHomeSection("booking", setLocation, location, search)}
           >
-            Виж свободни дати и резервирай
+            {caves.cta}
           </MagneticButton>
         </ScrollReveal>
       </SectionShell>

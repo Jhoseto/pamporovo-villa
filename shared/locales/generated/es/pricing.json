@@ -1,0 +1,30 @@
+{
+  "tableNights": "Número de pernoctaciones",
+  "winterSeason": "Temporada de invierno",
+  "winterRange": "septiembre – marzo",
+  "summerSeason": "Temporada de verano",
+  "summerRange": "abril – agosto",
+  "winterShort": "Invierno",
+  "summerShort": "Verano",
+  "winterLegend": "Invierno · septiembre – marzo",
+  "summerLegend": "Verano · abril – agosto",
+  "bestValue": "La opción más económica para estancias más largas",
+  "loading": "Los precios se publicarán próximamente.",
+  "cta": "Consulta las fechas disponibles",
+  "tiers": {
+    "up-to-3": "Hasta 3 noches",
+    "4-nights": "4 noches",
+    "5-nights": "5 noches",
+    "over-5": "Más de 5 noches"
+  },
+  "breakdown": {
+    "night": "pernoctación",
+    "nights": "pernoctaciones",
+    "perNightWinter": "/noche (invierno)",
+    "perNightSummer": "/noche (verano)"
+  },
+  "notes": [
+    "Los precios son por noche, para toda la casa rural (hasta 6 huéspedes).",
+    "Los precios son los habituales y no se aplican a los días festivos ni a los fines de semana. Para esos periodos, ponte en contacto con nosotros: te ofreceremos la mejor opción."
+  ]
+}

@@ -2,7 +2,7 @@
   "routes": {
     "/": {
       "title": "Pamporovo Villa | 3 villas à louer à Pamporovo, en Bulgarie",
-      "description": "Pamporovo Villa — trois villas indépendantes à louer dans la station de Pamporovo, localité Райковски ливади. 2 chambres, cheminée, barbecue, jusqu'à 6 personnes. Réservez directement.",
+      "description": "Pamporovo Villa — trois villas indépendantes à louer dans la station de Pamporovo, localité Raykovski Livadi. 2 chambres, cheminée, barbecue, jusqu'à 6 personnes. Réservez directement.",
       "keywords": "villa à louer à Pamporovo, Pamporovo Villa, location de villa à Pamporovo"
     },
     "/rent": {
@@ -12,7 +12,7 @@
     },
     "/pamporovo": {
       "title": "Pamporovo — guide complet de la station et de la région | Pamporovo Villa",
-      "description": "Plus de 37 km de pistes de ski, 6 remontées mécaniques, des sentiers écologiques, des grottes et des sites touristiques. Où dormir ? 3 villas à partir de 110 € par nuit sur Райковски ливади.",
+      "description": "Plus de 37 km de pistes de ski, 6 remontées mécaniques, des sentiers écologiques, des grottes et des sites touristiques. Où dormir ? 3 villas à partir de 110 € par nuit sur Raykovski Livadi.",
       "keywords": "Guide de Pamporovo, ski en Bulgarie, voyage dans les Rhodopes"
     }
   }

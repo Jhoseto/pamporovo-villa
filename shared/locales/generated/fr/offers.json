@@ -1,0 +1,36 @@
+{
+  "eyebrow": "Offres exclusives",
+  "title": "Meilleures offres",
+  "subtitle": "Une sélection de forfaits pour le ski et les vacances d'été à un prix spécial. Les périodes sont limitées — et les meilleures dates partent en premier.",
+  "loading": "Chargement...",
+  "empty": "Il n'y a actuellement aucune offre en cours.",
+  "oldPrice": "ancien prix",
+  "includes": "Comprend",
+  "bookOffer": "Réservez cette offre",
+  "badge": "Offre",
+  "claimCta": "Profitez-en",
+  "footer": "Les offres sont valables pour les périodes indiquées · pour réserver, rendez-vous dans la rubrique « Réserver »",
+  "items": {
+    "ski-family": {
+      "title": "Vacances au ski en famille",
+      "period": "1er mars 2026 – 31 mars 2026",
+      "description": "Offrez à vos enfants un souvenir qu'ils garderont toute leur vie. Une villa entière rien que pour votre famille, à quelques minutes des pistes — et le soir, la cheminée et un dîner chaleureux vous attendent à la maison.",
+      "includes": [
+        "Location de la villa entière pour une nuit (jusqu'à 6 personnes)",
+        "Parking gratuit juste devant la porte",
+        "Wi-Fi gratuit",
+        "Taxe de séjour comprise"
+      ]
+    },
+    "pay-9-stay-10": {
+      "title": "Payez 9 nuits, profitez-en de 10",
+      "period": "1er juin 2026 – 10 juillet 2026",
+      "description": "L'été à la montagne est différent : des matins frais, de longues journées en pleine nature et des soirées sur la terrasse autour d'un barbecue. Prolongez votre séjour chez nous et offrez-vous une nuit gratuite.",
+      "includes": [
+        "La 10e nuit est entièrement gratuite (pour 9 nuits payantes)",
+        "Villa entière : 2 chambres, 2 salles de bains, une cuisine et un salon",
+        "Véranda avec barbecue et cheminée à bois"
+      ]
+    }
+  }
+}

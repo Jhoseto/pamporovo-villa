@@ -1,0 +1,36 @@
+{
+  "eyebrow": "Paquetes exclusivos",
+  "title": "Las mejores ofertas",
+  "subtitle": "Paquetes seleccionados para vacaciones de esquí y de verano a un precio especial. Las fechas disponibles son limitadas, y las mejores se agotan primero.",
+  "loading": "Cargando...",
+  "empty": "De momento no hay ofertas activas.",
+  "oldPrice": "precio anterior",
+  "includes": "Incluye",
+  "bookOffer": "Reserva la oferta",
+  "badge": "Oferta",
+  "claimCta": "Aprovecha la oportunidad",
+  "footer": "Las ofertas son válidas para los periodos indicados · Para reservar, consulta la sección «Reservar»",
+  "items": {
+    "ski-family": {
+      "title": "Vacaciones de esquí en familia",
+      "period": "1 de marzo de 2026 – 31 de marzo de 2026",
+      "description": "Regala a los niños un recuerdo que conservarán toda la vida. Una villa entera solo para tu familia, a pocos minutos de las pistas, y por la noche, la chimenea y una cena calentita os esperan en casa.",
+      "includes": [
+        "Alquiler de la villa completa por noche (hasta 6 personas)",
+        "Aparcamiento gratuito justo al lado de la puerta",
+        "Wi-Fi gratuito",
+        "Tasa turística incluida"
+      ]
+    },
+    "pay-9-stay-10": {
+      "title": "Paga 9 y quédate 10 noches",
+      "period": "1 de junio de 2026 – 10 de julio de 2026",
+      "description": "El verano en la montaña es diferente: mañanas frescas, largos días en plena naturaleza y tardes en la terraza con barbacoa. Quédate más tiempo con nosotros y regálate una noche de nuestra parte.",
+      "includes": [
+        "La décima noche es totalmente gratuita (si se pagan 9)",
+        "Villa completa: 2 dormitorios, 2 baños, cocina y salón",
+        "Porche con barbacoa y chimenea de leña"
+      ]
+    }
+  }
+}

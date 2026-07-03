@@ -1,13 +1,12 @@
 import { useState, type FormEvent } from "react";
 import { REVIEW_BODY_MAX } from "@shared/reviewLimits";
 import { GBP } from "@shared/gbpLinks";
-import { gbpUi } from "@shared/gbpUi";
 import { Star } from "lucide-react";
 import { toast } from "sonner";
-import { VILLAS } from "@/data/siteContent";
 import { trpc } from "@/lib/trpc";
 import { trackGoogleReviewClick, trackReviewSubmit } from "@/lib/analytics/events";
-import { usePageLang } from "@/hooks/usePageLang";
+import { useTranslation } from "@/contexts/LocaleContext";
+import { interpolate, useVillasLocalized } from "@/i18n/contentHooks";
 import { cn } from "@/lib/utils";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -32,9 +31,11 @@ const textareaClass =
 function StarRatingInput({
   value,
   onChange,
+  starLabel,
 }: {
   value: number;
   onChange: (rating: number) => void;
+  starLabel: (star: number) => string;
 }) {
   return (
     <div className="flex h-10 items-center gap-0.5">
@@ -42,7 +43,7 @@ function StarRatingInput({
         <button
           key={star}
           type="button"
-          aria-label={`${star} звезди`}
+          aria-label={starLabel(star)}
           className="rounded p-0.5 transition hover:scale-110"
           onClick={() => onChange(star)}
         >
@@ -59,8 +60,8 @@ function StarRatingInput({
 }
 
 export function ReviewsSection() {
-  const lang = usePageLang();
-  const gbp = gbpUi(lang);
+  const { t } = useTranslation();
+  const villas = useVillasLocalized();
   const { data: reviews = [], isLoading } = trpc.content.getReviews.useQuery();
   const [honeypot, setHoneypot] = useState("");
   const [form, setForm] = useState({
@@ -75,10 +76,10 @@ export function ReviewsSection() {
   const submitReview = trpc.content.submitReview.useMutation({
     onSuccess: data => {
       toast.success(data.message, {
-        description: gbp.reviewToast,
+        description: t("gbp.reviewToast", "Споделете и в Google — помага на други гости да ни открият."),
         duration: 8000,
         action: {
-          label: gbp.reviewToastAction,
+          label: t("gbp.reviewToastAction", "Google отзив"),
           onClick: () => {
             trackGoogleReviewClick("review_submit_toast");
             window.open(GBP.reviewUrl, "_blank", "noopener,noreferrer");
@@ -115,9 +116,9 @@ export function ReviewsSection() {
 
   return (
     <SectionShell
-      eyebrow="Отзиви"
-      title="Какво казват нашите гости"
-      subtitle="Истински впечатления от хора, които вече са спали край боровете ни"
+      eyebrow={t("home.reviews.eyebrow", "Отзиви")}
+      title={t("home.reviews.title", "Какво казват нашите гости")}
+      subtitle={t("home.reviews.subtitle", "Истински впечатления от хора, които вече са спали край боровете ни")}
       overlap
       splitTitle
       perfDefer
@@ -134,7 +135,7 @@ export function ReviewsSection() {
         <ScrollReveal direction="up" delay={100}>
           <div className="review-form-panel">
             <div className="review-form-panel-head">
-              <h3 className="review-form-panel-title">Споделете вашия опит</h3>
+              <h3 className="review-form-panel-title">{t("home.reviews.formTitle", "Споделете вашия опит")}</h3>
               
             </div>
 
@@ -151,7 +152,7 @@ export function ReviewsSection() {
               />
 
               <label className="review-form-label">
-                <span>Име</span>
+                <span>{t("reviews.form.name", "Име")}</span>
                 <Input
                   id="review-name"
                   className={fieldClass}
@@ -160,42 +161,47 @@ export function ReviewsSection() {
                   required
                   minLength={2}
                   maxLength={255}
-                  placeholder="Вашето име"
+                  placeholder={t("reviews.form.namePlaceholder", "Вашето име")}
                 />
               </label>
 
               <label className="review-form-label">
-                <span>Имейл</span>
+                <span>{t("reviews.form.email", "Имейл")}</span>
                 <Input
                   id="review-email"
                   type="email"
                   className={fieldClass}
                   value={form.guestEmail}
                   onChange={e => setForm(f => ({ ...f, guestEmail: e.target.value }))}
-                  placeholder="по избор"
+                  placeholder={t("reviews.form.emailPlaceholder", "по избор")}
                 />
               </label>
 
               <label className="review-form-label">
-                <span>Оценка</span>
+                <span>{t("reviews.form.rating", "Оценка")}</span>
                 <StarRatingInput
                   value={form.rating}
                   onChange={rating => setForm(f => ({ ...f, rating }))}
+                  starLabel={star =>
+                    interpolate(t("reviews.form.ratingAria", "{star} звезди"), {
+                      star: String(star),
+                    })
+                  }
                 />
               </label>
 
               <label className="review-form-label">
-                <span>Вила</span>
+                <span>{t("reviews.form.villa", "Вила")}</span>
                 <Select
                   value={form.villaId || "none"}
                   onValueChange={v => setForm(f => ({ ...f, villaId: v === "none" ? "" : v }))}
                 >
                   <SelectTrigger id="review-villa" className={cn(fieldClass, "w-full")}>
-                    <SelectValue placeholder="Изберете" />
+                    <SelectValue placeholder={t("reviews.form.villaPlaceholder", "Изберете")} />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="none">Не съм сигурен/а</SelectItem>
-                    {VILLAS.map(villa => (
+                    <SelectItem value="none">{t("reviews.form.villaUnknown", "Не съм сигурен/а")}</SelectItem>
+                    {villas.map(villa => (
                       <SelectItem key={villa.id} value={villa.id}>
                         {villa.name}
                       </SelectItem>
@@ -205,11 +211,11 @@ export function ReviewsSection() {
               </label>
 
               <label className="review-form-label">
-                <span>Период</span>
+                <span>{t("reviews.form.period", "Период")}</span>
                 <Input
                   id="review-period"
                   className={fieldClass}
-                  placeholder="напр. Март 2025"
+                  placeholder={t("reviews.form.periodPlaceholder", "напр. Март 2025")}
                   value={form.stayPeriod}
                   onChange={e => setForm(f => ({ ...f, stayPeriod: e.target.value }))}
                   maxLength={128}
@@ -217,7 +223,7 @@ export function ReviewsSection() {
               </label>
 
               <label className="review-form-label review-form-label--wide">
-                <span>Вашият отзив</span>
+                <span>{t("reviews.form.body", "Вашият отзив")}</span>
                 <Textarea
                   id="review-body"
                   className={textareaClass}
@@ -232,7 +238,7 @@ export function ReviewsSection() {
                   minLength={10}
                   maxLength={REVIEW_BODY_MAX}
                   rows={3}
-                  placeholder="Какво запомнихте от престоя си при нас..."
+                  placeholder={t("reviews.form.bodyPlaceholder", "Какво запомнихте от престоя си при нас...")}
                 />
                 <p className="mt-1.5 text-right text-[0.6875rem] tabular-nums text-muted-foreground">
                   {form.body.length}/{REVIEW_BODY_MAX}
@@ -245,7 +251,9 @@ export function ReviewsSection() {
                   className="premium-btn review-form-submit"
                   disabled={submitReview.isPending}
                 >
-                  {submitReview.isPending ? "Изпращане..." : "Изпрати отзив"}
+                  {submitReview.isPending
+                    ? t("reviews.form.submitting", "Изпращане...")
+                    : t("reviews.form.submit", "Изпрати отзив")}
                 </MagneticButton>
               </div>
             </form>

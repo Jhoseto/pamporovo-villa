@@ -1,0 +1,90 @@
+{
+  "backToRent": "← Villa Rental",
+  "featuresHeading": "Amenities and Features",
+  "pricingHeading": "Prices",
+  "pricingHeadingFor": "Rates for {villa}",
+  "pricingFrom": "from",
+  "pricingPerNight": "/ night",
+  "summerFrom": "Summer from",
+  "winterFrom": "Winter from",
+  "wholeVillaNote": "Entire villa · up to 6 guests",
+  "bookCta": "Book",
+  "bookVilla": "Book {villa}",
+  "guideLink": "Pamporovo Tour Guide",
+  "amenitiesHeading": "Amenities",
+  "otherVillas": "Our Other Villas",
+  "contactHeading": "Contact and Reservations",
+  "pages": {
+    "villa-1": {
+      "name": "Villa 1",
+      "tagline": "Cosy for the whole family",
+      "description": "Warm and welcoming — two bedrooms, two bathrooms, and a large living room where the fireplace crackles and BBQ awaits on the veranda. A favourite for families with children.",
+      "seoTitle": "Villa 1 for Rent in Pamporovo | 2 Bedrooms, Fireplace — Pamporovo Villa",
+      "seoDescription": "Rent Villa 1 in Pamporovo — cosy family chalet, 2 bedrooms, 2 bathrooms, fireplace, BBQ, up to 6 guests. Raykovski Livadi, 2 km from pistes. Book online.",
+      "seoKeywords": "Villa 1 Pamporovo, family chalet Bulgaria, Pamporovo Villa rental",
+      "h1": "Villa 1 — rent in Pamporovo"
+    },
+    "villa-2": {
+      "name": "Villa 2",
+      "tagline": "Sun from dawn to dusk",
+      "description": "Bright and spacious with two bedrooms, two bathrooms, and a living room open to the mountains. The BBQ veranda is made for long evenings with friends.",
+      "seoTitle": "Villa 2 for Rent in Pamporovo | 2 Bedrooms, BBQ Terrace",
+      "seoDescription": "Rent Villa 2 in Pamporovo — bright villa with panorama, 2 bedrooms, fireplace, BBQ, up to 6 guests. Official rental — Pamporovo Villa.",
+      "seoKeywords": "Villa 2 Pamporovo, chalet rental, BBQ terrace Pamporovo",
+      "h1": "Villa 2 — rent in Pamporovo"
+    },
+    "villa-deluxe": {
+      "name": "Villa Deluxe",
+      "tagline": "A little more luxury",
+      "description": "The most refined of the three — same comfort with two bedrooms, two bathrooms, and a large living room, but with extra attention to detail and atmosphere. For those who want something special.",
+      "seoTitle": "Villa Deluxe Pamporovo | Premium Chalet Rental",
+      "seoDescription": "Villa Deluxe in Pamporovo — our finest chalet, 2 bedrooms, fireplace, BBQ, up to 6 guests. Book online at Pamporovo Villa.",
+      "seoKeywords": "Villa Deluxe Pamporovo, luxury chalet Bulgaria, premium rental",
+      "h1": "Villa Deluxe — rent in Pamporovo"
+    }
+  },
+  "about": {
+    "intro": "We’re glad you’ve found us. We offer three detached villas nestled in the pine forest of Raykovski Livadi—where the noise of the city remains far away, and the day begins with birdsong and the scent of pine resin.",
+    "details": "Villa 1, Villa 2 and Villa Deluxe are furnished just as we would like our own mountain home to look—with real wood, soft textiles, and those little details that make a place feel warm. Here, you’re not just guests; make yourself at home.",
+    "layout": "Each villa is on two levels and features two bedrooms, two bathrooms, a fully equipped kitchen with a dining area, and a large living room with a wood-burning fireplace. Outside, you’ll find a terrace with panoramic views of the Rhodope Mountains and a veranda with a barbecue—the perfect spot for the best evenings.",
+    "hosts": "As your hosts, we’re just a stone’s throw away. We’ll help you plan surprises and celebrations, point you toward the best slopes and trails, and recommend great places to eat—and if you need anything, just give us a call. We have one goal: for you to leave wanting to come back."
+  },
+  "contact": {
+    "phone": "+359 879 501 660",
+    "email": "pamporovovilla@gmail.com",
+    "address": "Pamporovo Resort, Raykovski Livadi area"
+  },
+  "firewoodNote": "Firewood — 10 € per bag, available upon request or at check-in.",
+  "features": [
+    "2 bedrooms for a restful night's sleep",
+    "2 bathrooms with hot water",
+    "Large living room with a fireplace",
+    "Fully equipped kitchen",
+    "Veranda with a barbecue",
+    "Up to 6 guests per villa"
+  ],
+  "pricingNotes": [
+    "Prices are per night, for the entire villa (up to 6 guests).",
+    "Resort fee included.",
+    "Firewood — 10 € per bag, available upon request.",
+    "Ski passes are not included."
+  ],
+  "distances": [
+    {
+      "value": "2 km",
+      "label": "To the center of Pamporovo"
+    },
+    {
+      "value": "10 km",
+      "label": "From Smolyan"
+    },
+    {
+      "value": "85 km",
+      "label": "From Plovdiv"
+    },
+    {
+      "value": "220 km",
+      "label": "From Sofia"
+    }
+  ]
+}

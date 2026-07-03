@@ -1,14 +1,15 @@
 import { Facebook, Instagram, Mail, MapPin, Phone, Star, Youtube } from "lucide-react";
 import { useLocation } from "wouter";
 import { GBP } from "@shared/gbpLinks";
-import { gbpUi } from "@shared/gbpUi";
 import { CONTACT, NAV_LINKS, SITE, SOCIAL } from "@/data/siteContent";
 import { useOffersModal } from "@/contexts/OffersModalContext";
 import { CookieSettingsTrigger } from "@/components/site/CookieConsent";
-import { usePageLang, usePageSearch } from "@/hooks/usePageLang";
+import { usePageSearch } from "@/hooks/usePageLang";
 import { useTranslation } from "@/contexts/LocaleContext";
+import { useContactAddress } from "@/i18n/contentHooks";
 import { trackGoogleReviewClick, trackPhoneClick } from "@/lib/analytics/events";
 import { navigateSiteLink } from "@/lib/siteNav";
+import { preserveLangOnPath } from "@/lib/localizedNav";
 
 const SOCIAL_LINKS = [
   { href: SOCIAL.facebook, label: "Facebook", icon: Facebook },
@@ -30,9 +31,8 @@ export function SiteFooter() {
   const { openOffers } = useOffersModal();
   const [location, setLocation] = useLocation();
   const search = usePageSearch();
-  const lang = usePageLang();
   const { t } = useTranslation();
-  const gbp = gbpUi(lang);
+  const address = useContactAddress();
 
   const footerNavLabel = (href: string, fallback: string) => {
     const keyMap: Record<string, string> = {
@@ -97,7 +97,7 @@ export function SiteFooter() {
                   rel="noopener noreferrer"
                   className="font-display text-base leading-relaxed tracking-wide transition hover:text-white"
                 >
-                  {CONTACT.address}
+                  {address}
                 </a>
               </li>
               <li>
@@ -109,7 +109,7 @@ export function SiteFooter() {
                   className="group flex items-start gap-3 text-white/75 transition hover:text-white"
                 >
                   <Star className="mt-0.5 h-5 w-5 shrink-0 fill-[var(--gold)] text-[var(--gold)]" />
-                  <span className="font-display text-base tracking-wide">{gbp.reviewLink}</span>
+                  <span className="font-display text-base tracking-wide">{t("gbp.reviewLink", "Оставете отзив в Google")}</span>
                 </a>
               </li>
             </ul>
@@ -173,7 +173,9 @@ export function SiteFooter() {
           <div className="flex items-center justify-center gap-x-4">
             <button
               type="button"
-              onClick={() => setLocation("/legal?tab=privacy")}
+              onClick={() =>
+                window.location.assign(preserveLangOnPath("/legal?tab=privacy", search))
+              }
               className="text-xs text-white/35 transition hover:text-[var(--gold)]"
             >
               {t("nav.privacy", "Поверителност")}
@@ -181,7 +183,9 @@ export function SiteFooter() {
             <span className="text-white/20 text-xs">·</span>
             <button
               type="button"
-              onClick={() => setLocation("/legal?tab=terms")}
+              onClick={() =>
+                window.location.assign(preserveLangOnPath("/legal?tab=terms", search))
+              }
               className="text-xs text-white/35 transition hover:text-[var(--gold)]"
             >
               {t("nav.terms", "Общи условия")}
@@ -189,7 +193,9 @@ export function SiteFooter() {
             <span className="text-white/20 text-xs">·</span>
             <button
               type="button"
-              onClick={() => setLocation("/legal?tab=cookies")}
+              onClick={() =>
+                window.location.assign(preserveLangOnPath("/legal?tab=cookies", search))
+              }
               className="text-xs text-white/35 transition hover:text-[var(--gold)]"
             >
               {t("nav.cookies", "Бисквитки")}

@@ -1,7 +1,8 @@
 import { preloadSection, scrollToSection } from "./scroll";
 import { trackBookStart } from "./analytics/events";
 import { parseSiteLocale } from "@shared/i18n/parseLocale";
-import { withLang } from "./localizedNav";
+import { SOURCE_LOCALE } from "@shared/i18n/locales";
+import { toBrowserPath, withLang } from "./localizedNav";
 
 export type SiteNavLink = {
   href: string;
@@ -9,6 +10,10 @@ export type SiteNavLink = {
   /** Route navigation (e.g. /pamporovo) instead of in-page scroll */
   page?: boolean;
 };
+
+function needsFullNavigation(target: string, lang: ReturnType<typeof parseSiteLocale>): boolean {
+  return lang !== SOURCE_LOCALE || target.includes("?");
+}
 
 export function navigateSiteLink(
   link: SiteNavLink,
@@ -18,11 +23,17 @@ export function navigateSiteLink(
 ) {
   const search = currentSearch ?? (typeof window !== "undefined" ? window.location.search : "");
   const lang = parseSiteLocale(search);
+  const pathOnly = currentPath.split("?")[0] ?? currentPath;
   const isRoutePage =
     link.page || (link.href.startsWith("/") && !link.href.startsWith("/#"));
 
   if (isRoutePage) {
-    setLocation(withLang(link.href, lang));
+    const target = withLang(link.href, lang);
+    if (needsFullNavigation(target, lang)) {
+      window.location.assign(toBrowserPath(target));
+      return;
+    }
+    setLocation(target);
     window.scrollTo(0, 0);
     return;
   }
@@ -30,11 +41,11 @@ export function navigateSiteLink(
   const sectionId = link.href.replace(/^\/?#/, "");
 
   if (sectionId === "booking") {
-    trackBookStart(currentPath === "/" ? "home" : currentPath);
+    trackBookStart(pathOnly === "/" ? "home" : pathOnly);
   }
 
-  if (currentPath !== "/") {
-    window.location.href = withLang(`/#${sectionId}`, lang);
+  if (pathOnly !== "/") {
+    window.location.assign(toBrowserPath(withLang(`/#${sectionId}`, lang)));
     return;
   }
 
@@ -45,7 +56,13 @@ export function navigateSiteLink(
 export function navigateToHomeSection(
   sectionId: string,
   setLocation: (path: string) => void,
-  currentPath: string
+  currentPath: string,
+  currentSearch?: string
 ) {
-  navigateSiteLink({ href: `#${sectionId.replace(/^#/, "")}`, label: "" }, setLocation, currentPath);
+  navigateSiteLink(
+    { href: `#${sectionId.replace(/^#/, "")}`, label: "" },
+    setLocation,
+    currentPath,
+    currentSearch
+  );
 }

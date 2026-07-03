@@ -1,0 +1,23 @@
+{
+  "checkInLabel": "Szállás",
+  "checkOutLabel": "Kilépés",
+  "checkIn": "15:00 után",
+  "checkOut": "11:00-ig",
+  "stayHeading": "Szállás és tartózkodás",
+  "stayIntro": "Szeretnénk, ha tartózkodásuk kellemes és gondtalan lenne — ezért igyekszünk, hogy minden egyszerű és átlátható legyen.",
+  "avoidHeading": "Kérjük, kerüljék el",
+  "footer": "Köszönjük, hogy a Pamporovo Villa-t választották. Az otthon gondozása kölcsönös dolog — ha vigyázunk rá, minden következő vendég számára szép állapotban tartjuk. Kérdése van? Mindig rendelkezésére állunk.",
+  "highlights": [
+    "Egész évben, a nap 24 órájában, a hét minden napján fogadjuk vendégeinket. Bejelentkezéskor kérjük, hozza magával személyazonosító okmányát.",
+    "Sietnek az utolsó napon? A 11:00 után történő késői kijelentkezés ingyenes, amennyiben lehetséges.",
+    "Kandallófa — 10 € egy zsákért, előzetes kérésre vagy a bejelentkezéskor.",
+    "Csendes órák: 23:00 – 07:00, mindenki nyugalmának biztosítása érdekében. A dohányzás kizárólag a két teraszon engedélyezett (a beltéri dohányzásért 50 € bírság jár).",
+    "Háziállatok nem engedélyezettek. Az Önök biztonsága érdekében a területen videomegfigyelés működik."
+  ],
+  "prohibited": [
+    "Személyes elektromos és gázkészülékek behozatala",
+    "Nem regisztrált vendégek elszállásolása",
+    "Bútorok áthelyezése a szobák között",
+    "Olyan magatartás, amely megzavarja a szomszédos nyaralók nyugalmát"
+  ]
+}

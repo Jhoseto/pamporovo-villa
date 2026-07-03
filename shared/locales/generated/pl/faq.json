@@ -1,1 +1,178 @@
-{}
+{
+  "home": {
+    "book-online": {
+      "question": "Jak zarezerwować willę przez Internet?",
+      "answer": "W pamporovovilla.com wybierz sekcję „Rezerwacja”, zaznacz willę (Villa 1, Villa 2 lub Villa Deluxe), daty i wypełnij formularz. Potwierdzenie otrzymają Państwo pocztą elektroniczną. W razie pytań: +359 879 501 660."
+    },
+    "price-per-villa": {
+      "question": "Ile kosztuje wynajem willi?",
+      "answer": "Ceny dotyczą całego domku (do 6 osób), a nie jednej osoby. W sezonie letnim ceny zaczynają się od 110 € za noc przy pobycie powyżej 5 nocy. W sezonie zimowym ceny wynoszą od 120 do 160 € za noc, w zależności od liczby noclegów. Villa Deluxe podlega niewielkiej dopłacie. Aktualne ceny: sekcja „Ceny” na stronie internetowej."
+    },
+    "price-includes": {
+      "question": "Co obejmuje cena?",
+      "answer": "Wynajem całej willi, Wi-Fi, parking, opłata klimatyczna. Drewno do kominka — 10 € za worek na życzenie. Karnety na wyciągi i wyżywienie nie są wliczone w cenę."
+    },
+    "check-in-out": {
+      "question": "Kiedy odbywa się zameldowanie i wymeldowanie?",
+      "answer": "Zameldowanie po godz. 15:00, wymeldowanie do godz. 11:00. Późniejsze wymeldowanie jest bezpłatne, o ile mamy taką możliwość — prosimy zapytać o to podczas rezerwacji."
+    },
+    "holiday-pricing": {
+      "question": "Czy w dni świąteczne obowiązują inne ceny?",
+      "answer": "Tak — w okresie Bożego Narodzenia, Nowego Roku, Wielkanocy oraz ferii lutowych obowiązują specjalne warunki, a czasami wymagany jest minimalny okres pobytu. Prosimy o kontakt z nami lub sprawdzenie kalendarza podczas rezerwacji."
+    },
+    "min-nights": {
+      "question": "Czy obowiązuje minimalna liczba noclegów?",
+      "answer": "W sezonie niskim często nie ma wymogu minimalnej długości pobytu. W okresach szczytu (grudzień–styczeń, ferie lutowe) może być wymagany pobyt na 3–5 nocy. Dokładne zasady można sprawdzić w kalendarzu."
+    },
+    "deluxe-difference": {
+      "question": "Czym wyróżnia się Villa Deluxe?",
+      "answer": "Ten sam układ — 2 sypialnie, 2 łazienki, kominek, grill — ale z większą dbałością o szczegóły i atmosferę. Cena jest o +10 € za noc w sezonie letnim i +20 € za noc w sezonie zimowym wyższa od cen standardowych willi."
+    },
+    "max-guests": {
+      "question": "Ile osób może nocować w jednym domku letniskowym?",
+      "answer": "W willi może przebywać maksymalnie 6 osób. W przypadku większych grup można zarezerwować dwie wille — prosimy o kontakt w sprawie takiej kombinacji."
+    },
+    "payment": {
+      "question": "Jak należy opłacić rezerwację?",
+      "answer": "Warunki dotyczące wpłaty zaliczki i dopłaty otrzymają Państwo wraz z potwierdzeniem. Akceptujemy przelewy bankowe; szczegóły prześlą Państwu e-mailem po złożeniu wniosku."
+    },
+    "cancel-policy": {
+      "question": "Jakie są zasady w przypadku odmowy?",
+      "answer": "Warunki anulowania rezerwacji zostały opisane w sekcji „Zasady” oraz w umowie przy potwierdzeniu rezerwacji. W przypadku rezerwacji zimowych zalecamy wykupienie ubezpieczenia podróżnego."
+    },
+    "firewood": {
+      "question": "Czy jest drewno do kominka?",
+      "answer": "Tak — 10 € za torbę, na życzenie przed przyjazdem lub w momencie zameldowania. Każda willa posiada kominek opalany drewnem w salonie."
+    },
+    "pets-home": {
+      "question": "Czy akceptujecie zwierzęta domowe?",
+      "answer": "Zasady dotyczące zwierząt domowych zależą od pory roku — prosimy o kontakt przed dokonaniem rezerwacji. Na teren obiektu nie mają wstępu niezarejestrowani goście."
+    },
+    "distance-home": {
+      "question": "Jak daleko znajdują się domki letniskowe od Pamporowa?",
+      "answer": "2 km do centrum kurortu i wyciągów — około 5–7 minut jazdy samochodem. Adres: Raykovski Livadi, kurort Pamporowo."
+    },
+    "three-villas": {
+      "question": "Czy muszę wynająć wszystkie trzy wille?",
+      "answer": "Nie — wynajmujecie tylko jedną willę dla swojej grupy. Wszystkie trzy znajdują się pod tym samym adresem, ale są to całkowicie oddzielne domy z własnym wejściem."
+    },
+    "vip-program": {
+      "question": "Czy dla stałych gości przewidziano zniżkę?",
+      "answer": "Tak — program VIP zapewnia 10% zniżki po trzech pobytach w ciągu jednego roku, a także możliwość wcześniejszego zameldowania lub późniejszego wymeldowania, o ile to możliwe."
+    },
+    "offers": {
+      "question": "Czy są jakieś promocje i oferty?",
+      "answer": "Publikujemy oferty sezonowe (np. rodzinne wakacje na nartach, „zapłać za 9, zatrzymaj się na 10 nocy”). Zapraszamy do sekcji „Oferty” na stronie głównej lub do zapisania się na newsletter w zakładce „Kontakt”."
+    }
+  },
+  "pamporovo": {
+    "where-is-pamporovo": {
+      "question": "Gdzie leży Pamporowo?",
+      "answer": "Pamporowo to kurort w Rodopach, w obwodzie Smolian, położony na wysokości około 1650 m n.p.m. Najbliższym większym miastem jest Smolyan (około 15 km). Odległość od Sofii wynosi około 240 km (3–3,5 godz. jazdy samochodem)."
+    },
+    "pistes-length": {
+      "question": "Ile kilometrów tras narciarskich jest w Pamporowie?",
+      "answer": "Ośrodek narciarski w Pamporowie oferuje ponad 37 km oznakowanych tras o wszystkich poziomach trudności — od zielonych dla początkujących po czarne dla zaawansowanych. Trasa „Ściana” jest wizytówką ośrodka i umożliwia jazdę nocną."
+    },
+    "night-skiing": {
+      "question": "Czy w Pamporowie można jeździć nocą?",
+      "answer": "Tak. Trasa „Ściana” (nr 2) jest oświetlona, co pozwala na jazdę nocą — zazwyczaj od godz. 17:30 do 22:00 w sezonie. Przed wizytą sprawdź aktualny harmonogram na stronie pamporovo.me."
+    },
+    "best-beginner-pistes": {
+      "question": "Które trasy są odpowiednie dla początkujących narciarzy?",
+      "answer": "Trasa nr 6 „Pamporowo (turystyczna)” jest najdłuższą i najłagodniejszą (3,3 km) — idealną do pierwszych zjazdów. Zielone trasy objazdowe (nr 1A) oraz niebieskie trasy nr 7, nr 8 i nr 10 również stanowią dobry wybór dla rodzin."
+    },
+    "lift-tickets": {
+      "question": "Ile kosztują karnety narciarskie w Pamporowie?",
+      "answer": "Ceny karnetów narciarskich są aktualizowane co sezon. Aktualne ceny karnetów dziennych, półdniowych i tygodniowych publikują oficjalni operatorzy na stronie pamporovo.me. Rezerwację zakwaterowania należy dokonać osobno — karnety narciarskie nie są wliczone w cenę wynajmu domku."
+    },
+    "when-ski-season": {
+      "question": "Kiedy trwa sezon narciarski w Pamporowie?",
+      "answer": "Zazwyczaj od grudnia do marca–kwietnia, w zależności od warunków śniegowych. Około 90% tras jest wyposażonych w system sztucznego naśnieżania, co wydłuża sezon. Największym zainteresowaniem wynajem domków letniskowych na zimę cieszy się w styczniu i lutym."
+    },
+    "summer-activities": {
+      "question": "Co można robić w Pamporowie latem?",
+      "answer": "Ekologiczne szlaki, kolarstwo górskie, jazda konna, parki linowe, zbieranie grzybów i ziół, zwiedzanie jaskiń i autentycznych wsi (Shiroka Laka, Gela). Region ten jest idealnym miejscem na rodzinne wakacje poza sezonem narciarskim."
+    },
+    "caves-nearby": {
+      "question": "Jakie jaskinie znajdują się w pobliżu Pamporowa?",
+      "answer": "Jaskinia Jagodinska (ok. 30 km), Diabelskie Gardło (w pobliżu Tesnite Skali), Uhlovitsa i inne. Większość z nich wymaga wycieczki wodnej — należy zabrać ze sobą ciepłą odzież i zarezerwować termin w sezonie."
+    },
+    "shiroka-luka": {
+      "question": "Jak daleko znajduje się Szeroka Łuka od Pamporowa?",
+      "answer": "Rezerwat architektoniczny Shiroka Luka znajduje się około 20 km od Pamporowa — około 30 minut jazdy samochodem. Warto połączyć tę wycieczkę z wizytą w klasztorze Rożen i podziwianiem widoków z Rożenu."
+    },
+    "where-to-sleep": {
+      "question": "Gdzie się zatrzymać w Pamporowie?",
+      "answer": "Do wyboru są hotele w centrum kurortu oraz wolnostojące wille z dala od zgiełku. Pamporovo Villa oferuje 3 prywatne wille w Raykovski Livadi — 2 km od centrum, z kominkiem, grillem i miejscem dla maksymalnie 6 osób w każdej willi, od 110 € za noc."
+    },
+    "hotel-vs-villa": {
+      "question": "Hotel czy willa w Pamporowie — co jest lepsze?",
+      "answer": "Hotel ten jest idealny na krótki pobyt bez konieczności gotowania. Willa jest atrakcyjna dla rodzin i grup: cały dom tylko dla was, kominek, grill, parking oraz niższa cena za osobę przy 4–6 gościach. Pamporovo Villa znajduje się 2 km od stoków."
+    },
+    "villa-price": {
+      "question": "Ile wynosi czynsz za wynajem willi w Pamporowie?",
+      "answer": "W przypadku Pamporovo Villa ceny zaczynają się od 110 € za noc za całą willę (do 6 osób) — w sezonie letnim. Ceny za noclegi w sezonie zimowym są wyższe w zależności od okresu. Aktualne ceny można sprawdzić na stronie pamporovovilla.com/#pricing lub /rent."
+    },
+    "villa-amenities": {
+      "question": "Co obejmuje wynajem willi w Pamporovo Villa?",
+      "answer": "Każda z trzech willi posiada 2 sypialnie, 2 łazienki, w pełni wyposażoną kuchnię, kominek opalany drewnem, grill na werandzie, Wi-Fi oraz bezpłatny parking. Wynajmujecie całą willę — bez konieczności dzielenia jej z innymi gośćmi."
+    },
+    "fireplace-villa": {
+      "question": "Czy w Pamporowie jest domek letniskowy z kominkiem?",
+      "answer": "Tak — wszystkie trzy domki w Pamporovo Villa (Villa 1, Villa 2, Villa Deluxe) mają kominek opalany drewnem w salonie. Idealne na zimowe wieczory po nartach lub jesienne weekendy w górach."
+    },
+    "group-villa": {
+      "question": "Czy można wynająć domek letniskowy dla 6 osób w Pamporowie?",
+      "answer": "Tak. Każda willa w Pamporovo Villa może pomieścić do 6 gości. Zarezerwujcie jedną willę dla swojej grupy lub połączcie dwie wille dla większych grup — skontaktujcie się z nami pod numerem telefonu +359 879 501 660."
+    },
+    "couple-villa": {
+      "question": "Czy ten domek letniskowy nadaje się dla dwojga?",
+      "answer": "Tak — pary często wynajmują cały domek, aby cieszyć się większą prywatnością i kominkiem. Płacicie za cały domek, a nie za osobę; w przypadku dwóch osób cena na osobę jest wyższa, ale w zamian otrzymujecie prywatny dom."
+    },
+    "distance-to-slopes": {
+      "question": "Jak daleko znajdują się domki letniskowe od stoków?",
+      "answer": "Pamporovo Villa znajduje się na Raykovski Livadi — około 2 km od centrum kurortu i wyciągów. Samochodem do parkingu przy stokach dojedziecie w 5–7 minut. W sezonie kursuje również bezpłatny autobus (sprawdź rozkład jazdy)."
+    },
+    "parking": {
+      "question": "Czy przy willach jest parking?",
+      "answer": "Tak — bezpłatny prywatny parking przy każdej willi w Pamporovo Villa. Wygodne rozwiązanie podczas zimowych wyjazdów z wyposażeniem narciarskim oraz dla rodzin z dziećmi."
+    },
+    "how-to-book": {
+      "question": "Jak zarezerwować willę w Pamporowie?",
+      "answer": "Online na pamporovovilla.com/#booking — wybierzcie willę, daty i wypełnijcie formularz. Możecie też zadzwonić pod numer +359 879 501 660 lub napisać na adres pamporovovilla@gmail.com."
+    },
+    "minimum-stay": {
+      "question": "Czy obowiązuje minimalny okres wynajmu?",
+      "answer": "W sezonie (Boże Narodzenie, Nowy Rok, ferie lutowe) może być wymagana rezerwacja na co najmniej 3–5 noclegów. Aby zapoznać się ze szczegółowymi warunkami, sprawdź kalendarz podczas rezerwacji lub skontaktuj się z nami."
+    },
+    "pets": {
+      "question": "Czy zwierzęta domowe są dozwolone?",
+      "answer": "Skontaktuj się przed dokonaniem rezerwacji — zasady dotyczące zwierząt domowych mogą się różnić w zależności od sezonu i konkretnego domku letniskowego. Nie zakładaj, że zezwolenie jest automatyczne."
+    },
+    "wifi": {
+      "question": "Czy w willach jest Wi-Fi?",
+      "answer": "Tak — we wszystkich trzech willach Pamporovo Villa dostępny jest bezprzewodowy internet."
+    },
+    "winter-rental": {
+      "question": "Czy mogę wynająć domek letniskowy na zimowy urlop narciarski?",
+      "answer": "Tak — domki letniskowe są dostępne przez cały rok. Zima to najpopularniejszy sezon: kominek, bliskość stoków oraz możliwość wynajęcia całego domu dla rodziny lub przyjaciół. Zarezerwujcie z wyprzedzeniem na styczeń i luty."
+    },
+    "summer-rental": {
+      "question": "Czy warto wynająć domek letniskowy w Pamporowie?",
+      "answer": "Tak — ceny w sezonie letnim są niższe (od 110 € za noc), a region oferuje trasy ekologiczne, chłód i jaskinie. Weranda z grillem oraz górskie powietrze sprawiają, że willa jest idealnym miejscem na rodzinny wypoczynek."
+    },
+    "drive-from-sofia": {
+      "question": "Jak dostać się z Sofii do Pamporowa?",
+      "answer": "Autostradą do Płowdiwa, a następnie przez Asenowgrad i Smolian — około 240 km, 3–3,5 godziny. Zimą należy zabrać łańcuchy na koła lub sprawdzić warunki drogowe w Rodopach."
+    },
+    "snow-guarantee": {
+      "question": "Czy w Pamporowie co sezon leży śnieg?",
+      "answer": "Ośrodek dysponuje wydajnym systemem sztucznego naśnieżania — obejmuje on około 90% tras. Naturalny śnieg często pojawia się już w grudniu, ale dla pewności operatorzy utrzymują go przez cały sezon."
+    },
+    "restaurants": {
+      "question": "Czy w pobliżu Raykovski Livadi są jakieś restauracje?",
+      "answer": "W centrum Pamporowa (2 km) znajdują się restauracje, pizzerie i supermarket. W willi znajduje się w pełni wyposażona kuchnia — wielu gości gotuje samodzielnie lub łączy to z kolacjami w ośrodku."
+    }
+  }
+}

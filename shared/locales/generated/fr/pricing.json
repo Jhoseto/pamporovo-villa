@@ -1,0 +1,30 @@
+{
+  "tableNights": "Nombre de nuitées",
+  "winterSeason": "Saison d'hiver",
+  "winterRange": "septembre – mars",
+  "summerSeason": "Saison estivale",
+  "summerRange": "avril – août",
+  "winterShort": "Hiver",
+  "summerShort": "L'été",
+  "winterLegend": "Hiver · septembre – mars",
+  "summerLegend": "Été · avril – août",
+  "bestValue": "Le plus avantageux pour un séjour prolongé",
+  "loading": "Les prix seront bientôt publiés.",
+  "cta": "Vérifiez les dates disponibles",
+  "tiers": {
+    "up-to-3": "Jusqu'à 3 nuitées",
+    "4-nights": "4 nuitées",
+    "5-nights": "5 nuitées",
+    "over-5": "Plus de 5 nuitées"
+  },
+  "breakdown": {
+    "night": "nuitée",
+    "nights": "nuitées",
+    "perNightWinter": "/nuit (hiver)",
+    "perNightSummer": "/nuit (été)"
+  },
+  "notes": [
+    "Les prix s'entendent par nuit, pour l'ensemble du gîte (jusqu'à 6 personnes).",
+    "Les tarifs sont standard et ne s'appliquent pas aux jours fériés et aux week-ends. Pour ces périodes, n'hésitez pas à nous contacter : nous vous proposerons la meilleure offre."
+  ]
+}

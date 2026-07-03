@@ -168,6 +168,18 @@ export const LOCALE_NAMESPACES = [
   "reviews",
   "faq",
   "spokes",
+  "experience",
+  "amenities",
+  "policy",
+  "vip",
+  "offers",
+  "pricing",
+  "cookies",
+  "hub",
+  "villa",
+  "guide",
+  "weather",
+  "legal",
 ] as const;
 
 export type LocaleNamespace = (typeof LOCALE_NAMESPACES)[number];

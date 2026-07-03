@@ -1,6 +1,8 @@
 import { Images } from "lucide-react";
 import { useCallback, useEffect, useState, type CSSProperties } from "react";
 import { VILLA_GALLERIES } from "@/data/galleryContent";
+import { useTranslation } from "@/contexts/LocaleContext";
+import { interpolate } from "@/i18n/contentHooks";
 import { isMobileViewport } from "@/lib/mobilePerf";
 import { cn } from "@/lib/utils";
 import { GalleryLightbox } from "./GalleryLightbox";
@@ -9,6 +11,9 @@ import { ScrollReveal } from "./ScrollReveal";
 import { VillaGalleryCarousel } from "./VillaGalleryCarousel";
 
 export function GallerySection() {
+  const { t } = useTranslation();
+  const villaLabel = (id: string, fallback: string) => t(`villa.pages.${id}.name`, fallback);
+  const villaTagline = (id: string, fallback: string) => t(`villa.pages.${id}.tagline`, fallback);
   const [activeId, setActiveId] = useState(VILLA_GALLERIES[0]?.id ?? "villa-1");
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [direction, setDirection] = useState<1 | -1>(1);
@@ -48,9 +53,9 @@ export function GallerySection() {
 
   return (
     <SectionShell
-      eyebrow="Галерия"
-      title="Трите вили в кадри"
-      subtitle="Разгледайте всяка вила — интериор, уют и планински гледки"
+      eyebrow={t("home.gallery.eyebrow", "Галерия")}
+      title={t("home.gallery.title", "Трите вили в кадри")}
+      subtitle={t("home.gallery.subtitle", "Разгледайте всяка вила — интериор, уют и планински гледки")}
       overlap
       perfDefer
     >
@@ -61,10 +66,10 @@ export function GallerySection() {
             <div
               className="flex flex-col items-center gap-2 md:hidden"
               role="tablist"
-              aria-label="Избор на вила в галерията"
+              aria-label={t("home.widgets.galleryVillaTabs", "Избор на вила в галерията")}
             >
               <p className="font-display text-[0.65rem] uppercase tracking-[0.22em] text-muted-foreground">
-                Изберете вила
+                {t("home.gallery.pickVilla", "Изберете вила")}
               </p>
               <div className="flex flex-wrap justify-center gap-2">
                 {VILLA_GALLERIES.map(gallery => {
@@ -86,7 +91,7 @@ export function GallerySection() {
                           : "border-black/10 bg-white/80 text-foreground/75 hover:border-[var(--gold)]/35 hover:text-foreground"
                       )}
                     >
-                      {gallery.name}
+                      {villaLabel(gallery.id, gallery.name)}
                     </button>
                   );
                 })}
@@ -97,7 +102,7 @@ export function GallerySection() {
             <div
               className="hidden gap-4 sm:grid-cols-3 md:grid"
               role="tablist"
-              aria-label="Избор на вила в галерията"
+              aria-label={t("home.widgets.galleryVillaTabs", "Избор на вила в галерията")}
             >
               {VILLA_GALLERIES.map(gallery => {
                 const isActive = gallery.id === activeId;
@@ -136,14 +141,16 @@ export function GallerySection() {
 
                       <div className="absolute inset-x-0 bottom-0 p-5">
                         <p className="font-display text-[0.68rem] uppercase tracking-[0.26em] text-white/55">
-                          {gallery.tagline}
+                          {villaTagline(gallery.id, gallery.tagline)}
                         </p>
                         <h3 className="mt-1 font-serif text-2xl font-bold tracking-tight text-white">
-                          {gallery.name}
+                          {villaLabel(gallery.id, gallery.name)}
                         </h3>
                         <p className="mt-2 inline-flex items-center gap-1.5 text-sm text-white/70">
                           <Images className="h-3.5 w-3.5 text-[var(--gold)]" strokeWidth={1.75} />
-                          {gallery.images.length} снимки
+                          {interpolate(t("home.gallery.photoCount", "{count} снимки"), {
+                            count: String(gallery.images.length),
+                          })}
                         </p>
                       </div>
 

@@ -1,0 +1,36 @@
+{
+  "eyebrow": "Ekskluzywne pakiety",
+  "title": "Najlepsze oferty",
+  "subtitle": "Wybrane pakiety na urlop narciarski i letni w specjalnej cenie. Okresy są ograniczone — a najlepsze terminy znikają jako pierwsze.",
+  "loading": "Ładowanie...",
+  "empty": "W tej chwili nie ma żadnych aktywnych ofert.",
+  "oldPrice": "poprzednia cena",
+  "includes": "Obejmuje",
+  "bookOffer": "Zarezerwuj ofertę",
+  "badge": "Oferta",
+  "claimCta": "Skorzystaj z okazji",
+  "footer": "Oferty obowiązują w podanych terminach · aby dokonać rezerwacji — sekcja „Zarezerwuj”",
+  "items": {
+    "ski-family": {
+      "title": "Rodzinne wakacje na nartach",
+      "period": "01.03.2026 – 31.03.2026",
+      "description": "Podarujcie dzieciom wspomnienie, które zachowają na całe życie. Cały domek tylko dla waszej rodziny, zaledwie kilka minut od stoków — a wieczorem w domu czeka na was kominek i ciepła kolacja.",
+      "includes": [
+        "Wynajem całej willi na nocleg (do 6 osób)",
+        "Bezpłatny parking tuż przy wejściu",
+        "Bezpłatne Wi-Fi",
+        "Opłata klimatyczna wliczona w cenę"
+      ]
+    },
+    "pay-9-stay-10": {
+      "title": "Zapłać za 9 noclegów, a skorzystaj z 10",
+      "period": "01.06.2026 – 10.07.2026",
+      "description": "Lato w górach jest inne — chłodne poranki, długie dni spędzone na łonie natury i wieczory na werandzie przy grillu. Zostańcie u nas dłużej i podarujcie sobie od nas jeden nocleg.",
+      "includes": [
+        "Dziesiąta nocleg jest całkowicie bezpłatna (przy 9 opłaconych)",
+        "Cały domek: 2 sypialnie, 2 łazienki, kuchnia i salon",
+        "Weranda z grillem i kominkiem opalanym drewnem"
+      ]
+    }
+  }
+}

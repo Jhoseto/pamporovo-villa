@@ -1,18 +1,21 @@
 {
   "hero": {
-    "eyebrow": "Smolyan · Pamporovo · 3 vily k pronájmu",
+    "eyebrow": "Bulharsko · Smolyan · Pamporovo · 3 vily k pronájmu",
     "titleLine1": "Pamporovo",
     "titleLine2": "Vila",
     "subtitle": "Nabízíme vám tři samostatné vily uprostřed kouzelných lesů v Pamporovu. Domácí pohodlí v horách po celý rok.",
     "ctaExperience": "Začni procházku",
-    "ctaBook": "Rezervovat",
-    "scrollHint": "Prohlédněte si"
+    "ctaBook": "Rezervace",
+    "scrollHint": "Prohlédněte si",
+    "scrollDown": "Dolů",
+    "scrollToExperience": "Pokračovat v procházce"
   },
   "gallery": {
     "eyebrow": "Galerie",
     "title": "Tři vily na fotografiích",
     "subtitle": "Prohlédněte si každou vilu – interiér, útulnost a výhledy na hory",
-    "pickVilla": "Vyberte si vilu"
+    "pickVilla": "Vyberte si vilu",
+    "photoCount": "{count} fotografií"
   },
   "contact": {
     "eyebrow": "Kontakt",
@@ -22,7 +25,7 @@
   "reviews": {
     "eyebrow": "Recenze",
     "title": "Co říkají naši hosté",
-    "subtitle": "Skutečné zážitky lidí, kteří už u našich borovic přespali",
+    "subtitle": "Skutečné zážitky lidí, kteří už u našich borovic přenocovali",
     "formTitle": "Podělte se o své zkušenosti",
     "submit": "Odeslat recenzi",
     "submitting": "Odesílání..."
@@ -30,8 +33,77 @@
   "location": {
     "eyebrow": "Umístění",
     "title": "Všechno na dosah, daleko od hluku",
-    "subtitle": "rekreační středisko Pamporovo, lokalita Райковски ливади — ukryté v borovém lese",
+    "subtitle": "rekreační středisko Pamporovo, lokalita Raykovski Livadi — ukryté v borovém lese",
     "directions": "Jak se k nám dostat",
     "info": "Pamporovo je nejslunečnější horské letovisko v Bulharsku – leží v nadmořské výšce 1 650 m v srdci Rodop. V zimě zde najdete 37 km perfektně upravených sjezdovek a noční lyžování, v létě pak ekologické stezky, vodopády a vzduch, který léčí. A naše vily jsou vaší klidnou základnou uprostřed toho všeho."
-  }
+  },
+  "widgets": {
+    "weatherLoading": "Nabíjení času",
+    "weatherUnavailable": "Služba je dočasně nedostupná",
+    "feelsLike": "Působí to jako",
+    "today": "Dnes",
+    "humidity": "Vlhkost",
+    "wind": "Vítr",
+    "callUs": "Zavolejte",
+    "galleryVillaTabs": "Výběr vily v galerii"
+  },
+  "about": {
+    "eyebrow": "O nás",
+    "title": "Váš domov vysoko v Rodopách",
+    "subtitle": "Tři vily, jedna péče – abyste se cítili jako doma",
+    "blockPlace": "Místo",
+    "blockHome": "Doma",
+    "blockHosts": "Domácí",
+    "intro": "Jsme rádi, že jste nás objevili. Nabízíme vám tři samostatné vily, zasazené v borovém lese v Raykovski Livadi — tam, kde je hluk města daleko a den začíná ptačím zpěvem a vůní pryskyřice.",
+    "details": "Villa 1, Villa 2 a Villa Deluxe jsou zařízeny tak, jak bychom si představovali svůj vlastní dům v horách – s pravým dřevem, měkkými textiliemi a těmi drobnými detaily, díky nimž místo působí útulně. Tady nejste jen hosté; cítíte se tu jako doma.",
+    "hosts": "Jako vaši hostitelé jsme vám vždy nablízku. Pomůžeme vám s přípravou překvapení a oslav, nasměrujeme vás na ty nejkrásnější sjezdovky a stezky, poradíme, kde se dá dobře najíst – a pokud budete něco potřebovat, stačí zavolat. Máme jediný cíl: abyste odjeli s touhou se vrátit.",
+    "layout": "Každá vila je dvoupodlažní a disponuje dvěma ložnicemi, dvěma koupelnami, plně vybavenou kuchyní s jídelnou a velkým obývacím pokojem s krbem na dřevo. Venku na vás čeká terasa s panoramatickým výhledem na Rodopy a veranda s grilem – místo, kde vznikají ty nejkrásnější večery.",
+    "imageForestAlt": "Vila v borovém lese v Raykovski Livadi",
+    "imageInteriorAlt": "Interiér s kamennou stěnou a dřevem",
+    "badgeLocation": "Raykovski Livadi",
+    "badgeResort": "Pamporovo"
+  },
+  "amenities": {
+    "eyebrow": "Vybavení",
+    "title": "Vše, co potřebujete pro pohodlný pobyt",
+    "subtitle": "Postarali jsme se o všechny drobnosti, abyste se mohli soustředit výhradně na odpočinek"
+  },
+  "pricing": {
+    "eyebrow": "Ceny",
+    "title": "Jasné ceny, bez překvapení",
+    "subtitle": "Pronájem celé vily na noc – až pro 6 hostů. Čím déle zůstanete, tím výhodnější to je"
+  },
+  "booking": {
+    "eyebrow": "Rezervace",
+    "title": "Zarezervujte si místo v horách",
+    "subtitle": "Vyberte si vilu a termín, zadejte své údaje – a my se s vámi osobně spojíme kvůli potvrzení"
+  },
+  "policy": {
+    "eyebrow": "Je dobré vědět",
+    "title": "Pár slov, než přijedete",
+    "subtitle": "Stručná a jasná pravidla, aby to bylo pro všechny klidné a příjemné"
+  },
+  "faq": {
+    "eyebrow": "Rezervace · ceny",
+    "title": "Často kladené otázky",
+    "subtitle": "Odpovědi na dotazy týkající se pronájmu, cen, ubytování a rezervace – než vyplníte formulář."
+  },
+  "distances": [
+    {
+      "value": "2 km",
+      "label": "Do centra Pamporova"
+    },
+    {
+      "value": "10 km",
+      "label": "Ze Smolyanu"
+    },
+    {
+      "value": "85 km",
+      "label": "Z Plovdivu"
+    },
+    {
+      "value": "220 km",
+      "label": "Ze Sofie"
+    }
+  ]
 }

@@ -1,0 +1,479 @@
+{
+  "nav": {
+    "ariaLabel": "Secties op de pagina",
+    "intro": "Het kuuroord",
+    "winter": "Winter",
+    "summer": "Zomer",
+    "landmarks": "De omgeving",
+    "caves": "Grotten"
+  },
+  "sticky": {
+    "book": "Reserveer",
+    "rent": "Verhuur · prijzen"
+  },
+  "ui": {
+    "pisteNumber": "Nr.",
+    "pisteName": "Racebaan",
+    "difficulty": "Moeilijkheidsgraad",
+    "length": "Lengte",
+    "note": "Opmerking",
+    "dash": "—",
+    "meters": "m",
+    "route": "Route",
+    "liftType": "Type",
+    "capacity": "Capaciteit/uur",
+    "capacityPerHour": "Capaciteit/uur"
+  },
+  "difficulty": {
+    "green": "Groen · beginners",
+    "blue": "Blauw · gemiddeld niveau",
+    "red": "Rood · gevorderden",
+    "black": "Zwart · deskundigen"
+  },
+  "sections": {
+    "intro": {
+      "eyebrow": "Het kuuroord",
+      "title": "Het hart van de Rodopi",
+      "subtitle": "Op 1650 m boven zeeniveau, aan de voet van de berg Snezhanka — het oudste Bulgaarse skioord, opgericht in 1933.",
+      "panoramaAlt": "Het wintersportoord Pamporovo — hotels en skipistes in de Rodopi",
+      "towerAlt": "De Snezhanka-toren — het symbool van Pamporovo",
+      "p1": "Twee belangrijke skicentra — Studenets en Malina — die verbonden zijn met de berg Snezhanka (1926 m). De pistes liggen tussen 1400 en 1926 m, zijn voorzien van moderne liften en beschikken over meer dan 80 sneeuwkanonnen.",
+      "p2": "In de zomer verandert het resort in een centrum voor ecotoerisme — gemarkeerde wandelpaden, fietsen, paardrijden en talloze bezienswaardigheden op 15–60 minuten rijden van Smolyan, Shiroka Luka, de Wonderbaarlijke Bruggen en de ondergrondse paleizen van de Westelijke Rhodopen.",
+      "cta": "Boek een villa in Pamporovo"
+    },
+    "winter": {
+      "eyebrow": "Winter",
+      "title": "Skigebied — pistes en skiliften",
+      "subtitle": "Meer dan 37 km gemarkeerde ski- en snowboardpistes, nachtskiën op de „Stena“ en langlaufroutes",
+      "skiAlt": "Stoeltjeslift naar de top van Snezhanka — de toren boven Pamporovo",
+      "pistesHeading": "Pistes naar moeilijkheidsgraad",
+      "liftsHeading": "Liften en voorzieningen",
+      "activitiesHeading": "Winteractiviteiten"
+    },
+    "summer": {
+      "eyebrow": "Zomer",
+      "title": "Natuurpaden en natuur",
+      "subtitle": "De watervalcanyon, de meren van Smolyan, de rotsen van Orpheus — op slechts enkele minuten van het resort",
+      "summerAlt": "Een bergmeer in de Rodopi — een zomerse ecowandeling bij Pamporovo",
+      "activitiesHeading": "Zomeractiviteiten"
+    },
+    "landmarks": {
+      "eyebrow": "De omgeving",
+      "title": "Bezienswaardigheden en dorpen",
+      "subtitle": "Architectonische reservaten, een sterrenwacht, een planetarium en authentieke Rodopische folklore"
+    },
+    "caves": {
+      "eyebrow": "De onderwereld",
+      "title": "Grotten en kloven",
+      "subtitle": "De grot van Yagodina, de Duivelskeel, de kloof van Trigrad en Uhlovitsa — schatten van de Westelijke Rhodopen",
+      "footer": "De villa's Pamporovo Villa liggen op Raykovski Livadi — een ideale uitvalsbasis voor winter- en zomeravonturen in de hele regio.",
+      "cta": "Bekijk beschikbare data en reserveer"
+    }
+  },
+  "attractions": {
+    "canyon-waterfalls": {
+      "title": "De watervalcanyon",
+      "distance": "15 km · bij Smolyan",
+      "duration": "~4 uur · 6 km rondwandeling",
+      "description": "Het meest indrukwekkende natuurpad in de Rodopi — je wandelt door de eeuwenoude bossen van het natuurreservaat „Soskovcheto“ langs de rivier Gerzovska. Onderweg kom je 46 watervallen tegen, waaronder de prachtige, 68 meter hoge „Orpheus“ — een van de hoogste in Bulgarije. Het hoogtepunt is een uitkijkpunt op 1800 m hoogte met uitzicht op Smolyan en de bergkammen van de Rodopi.",
+      "highlights": [
+        "46 watervallen",
+        "De „Orpheus“-waterval — 68 m",
+        "Eeuwenoude sparrenbossen",
+        "Panorama op 1800 m"
+      ]
+    },
+    "smolyan-lakes": {
+      "title": "De meren van Smolyan",
+      "distance": "10 km · onder de top van Snezhanka",
+      "duration": "~1 uur · gemakkelijke route",
+      "description": "Ook wel de „Smaragdgroene ogen van de Rodopi“ genoemd — natuurlijke meren die trapsgewijs onder de Snezhanka liggen. Een gemakkelijk begaanbaar pad verbindt het Bistroto-, het Mutno- en het Trevisto-meer, met plekken om te picknicken en te vissen. Een ideale wandeling voor gezinnen met kinderen, die uitstekend te combineren is met een beklimming van de top.",
+      "highlights": [
+        "Natuurlijke bergmeren",
+        "Een lichte route voor het hele gezin",
+        "Picknickplaatsen",
+        "Te combineren met de Snezhanka-berg"
+      ]
+    },
+    "nevyastata": {
+      "title": "Het ecologische wandelpad „Nevyasta“",
+      "distance": "12 km · boven Smolyan",
+      "duration": "~40 min · 900 m wandelpad",
+      "description": "Een kort en toegankelijk wandelpad door een geurig dennenbos naar de steile rots „Nevyastata“, die boven Smolyan uittorent. Panoramaplekken en prieeltjes langs de hele route, en voor de adrenalinezoekers: een alpine kabelbaan boven de afgrond. De legende vertelt over een meisje dat zich van de rots heeft gestort om haar geloof te behouden.",
+      "highlights": [
+        "Uitzichtpunten",
+        "Alpine-trolley",
+        "De legende van de bruid",
+        "Geschikt voor alle leeftijden"
+      ]
+    },
+    "orpheus-rocks": {
+      "title": "De rotsen van Orpheus en de Naalden",
+      "distance": "6 km · vanaf de top van Snezhanka",
+      "duration": "~4 uur · lichte belasting",
+      "description": "Vanaf de top van Snezhanka leidt een gemarkeerd pad in zuidoostelijke richting naar de Orfeus-rotsen — grillige riolietformaties met een karakteristiek uitzicht op de Smolyan-meren. In de andere richting ligt de top Iglite, met nog een adembenemend panorama. De route loopt door weiden en bossen, die in augustus bezaaid zijn met bosbessen.",
+      "highlights": [
+        "Rhyolietformaties",
+        "Uitzicht op de meren",
+        "De top van Iglite",
+        "Wilde bosbessen in augustus"
+      ]
+    },
+    "shiroka-laka": {
+      "title": "Brede boog",
+      "distance": "16 km · 20 min. met de auto",
+      "duration": "",
+      "description": "Architecturaal en folkloristisch reservaat — het dorp met zijn huizen uit de Nationale Wedergeboorteperiode met erkerramen, de stenen bruggetjes en de beroemde Nationale School voor Folkloristische Kunsten. De Rodopische doedelzak is de ziel van Shiroka Luka: hier vindt het „Pesponedelnik“-festival plaats met kuker-spelen en authentieke folklore. Een onmisbare tussenstop voor elke bezoeker van Pamporovo.",
+      "highlights": [
+        "Architectuur uit de Nationale Wedergeboorte",
+        "School voor doedelzakspelers",
+        "Etnografisch museum",
+        "Kuker-festival"
+      ]
+    },
+    "rozhen-observatory": {
+      "title": "NAO „Rozhen“",
+      "distance": "18 km · 25 min. met de auto",
+      "duration": "",
+      "description": "De grootste astronomische sterrenwacht op het Balkanschiereiland, gelegen op 1750 m boven de Rozen-weiden. De sterrenwacht beschikt over een 2-meter-telescoop — een van de grootste in Zuidoost-Europa. Er worden dagbezoeken met een lezing georganiseerd, en de nachtelijke waarnemingen (op reservering) zijn onvergetelijk. Vlakbij liggen de Rozen-weiden — de locatie van het legendarische nationale volksfeest.",
+      "highlights": [
+        "Een telescoop van 2 meter",
+        "Bezoeken met een gesprek",
+        "Nachtelijke waarnemingen",
+        "Het Rozhen-festival is in aantocht"
+      ]
+    },
+    "wonderful-bridges": {
+      "title": "De prachtige bruggen",
+      "distance": "42 km · 1 uur met de auto",
+      "duration": "",
+      "description": "Reusachtige marmeren rotsbogen, die door de rivier Erküpriya in de loop van duizenden jaren zijn uitgeslepen. De grote brug is 96 m lang en 45 m hoog — er loopt een pad onderdoor en de akoestiek is ongelooflijk. De kleine brug is 60 m lang. Deze bezienswaardigheid behoort tot de 100 nationale toeristische trekpleisters en leent zich uitstekend voor een lunch in het dorp Zabardo.",
+      "highlights": [
+        "Een boog van 45 m hoog",
+        "100 nationale bezienswaardigheden",
+        "Het pad onder de bruggen",
+        "Berghut en schuilplaats in de buurt"
+      ]
+    },
+    "smolyan-town": {
+      "title": "Smolyan — planetarium en musea",
+      "distance": "15 km · 20 min. met de auto",
+      "duration": "",
+      "description": "De regionale hoofdstad aan de voet van de Snezhanka-berg bewaart de geest van de Rodopi: Het planetarium is het grootste van Bulgarije en biedt spectaculaire sterrenshows, terwijl het Regionaal Historisch Museum „Stoyu Shishkov“ een beeld schetst van het dagelijks leven, de klederdracht en de muziek van de bergen. De oude wijken Raikovo en Ustovo betoveren met hun huizen uit de Nationale Wedergeboorte-periode en gezellige tavernes.",
+      "highlights": [
+        "Het grootste planetarium in Bulgarije",
+        "RIM „Stoyu Shishkov“",
+        "Kunstgalerie",
+        "De wijken Raikovo en Ustovo"
+      ]
+    },
+    "momchilovtsi": {
+      "title": "Momchilovtsi",
+      "distance": "25 km · 30 min. met de auto",
+      "duration": "",
+      "description": "Een schilderachtig dorpje in de Rodopi op 1200 m hoogte, bekend om de hoge levensverwachting van zijn inwoners en de zelfgemaakte yoghurt, die zelfs in China legendarisch is geworden. Panoramische wandelpaden, kapelletjes op elke heuveltop en authentieke, gastvrije herbergen. In augustus organiseert het dorp het yoghurtfeest.",
+      "highlights": [
+        "Het dorp van de langlevenden",
+        "Yoghurtfeest",
+        "Panoramische kapelletjes",
+        "Authentieke mechanismen"
+      ]
+    },
+    "gela-village": {
+      "title": "Gela — het dorp van Orpheus",
+      "distance": "22 km · 30 min. met de auto",
+      "duration": "",
+      "description": "Een van de oudste dorpen in de Rodopi, dat wordt beschouwd als de geboorteplaats van de mythische Orpheus. Gela ligt op 1500 m hoogte te midden van eindeloze weiden en organiseert elke eerste zondag van augustus het Internationale Doedelzakfestival — honderden doedelzakspelers laten de bergen weerklinken. Vanaf hier lopen wandelpaden naar de toppen Turlata en Gela.",
+      "highlights": [
+        "De geboorteplaats van Orpheus",
+        "Gaidar-festival in augustus",
+        "Thracische heiligdommen",
+        "Start van bergwandelroutes"
+      ]
+    },
+    "yagodina-cave": {
+      "title": "De grot van Yagodina",
+      "distance": "50 km · 1 uur en 15 minuten met de auto",
+      "duration": "45 min. rondwandeling · 1100 m route",
+      "description": "De op twee na langste grot van Bulgarije — 10,5 km aan galerijen verdeeld over drie verdiepingen in de Buinovsko-kloof. De toeristische route voert langs een 'luipaardhuid', grotparels, stalactieten en de beroemde 'Nieuwjaarszaal', waar het nieuwe jaar onder de grond wordt ingeluid. De temperatuur is constant 6 °C — neem zelfs in augustus een jas mee.",
+      "highlights": [
+        "10,5 km aan galerijen",
+        "Grotparels",
+        "Nieuwjaarszaal",
+        "De Buinovsko-kloof langs de weg"
+      ]
+    },
+    "devils-throat": {
+      "title": "De Duivelskeel",
+      "distance": "55 km · 1 uur en 20 minuten met de auto",
+      "duration": "Rondleiding van 30 minuten",
+      "description": "Een diepe grot met de hoogste ondergrondse waterval van de Balkan — 42 m, waarin de rivier Trigradska in de „Ruisende Zaal“ met een donderend geraas onder de grond stort. Volgens de legende daalde Orpheus vanaf hier af naar het ondergrondse rijk om Eurydice te redden. Niets wat in het water terechtkomt, komt weer aan de oppervlakte — een mysterie dat wetenschappers nog steeds onderzoeken.",
+      "highlights": [
+        "Een ondergrondse waterval van 42 m",
+        "De rumoerige zaal",
+        "De legende van Orpheus",
+        "301 treden langs de waterval"
+      ]
+    },
+    "trigrad-gorge": {
+      "title": "De kloof van Trigrad",
+      "distance": "53 km · 1 uur en 15 minuten met de auto",
+      "duration": "",
+      "description": "Een canyon met steile marmeren wanden die tot 250 m boven de rivier de Trigradska uittorenen — de weg slingert zich letterlijk tussen de rotsen door. Het is de thuisbasis van zeldzame vogels zoals de rotsklimmer, en vormt de toegangspoort tot de Duivelskeel en het dorp Trigrad. Een van de meest spectaculaire wegen in Bulgarije — elke afslag is een fotomoment.",
+      "highlights": [
+        "Muren tot 250 m",
+        "Een spectaculaire bergweg",
+        "Zeldzame vogels",
+        "Te combineren met de Duivelskeel"
+      ]
+    },
+    "uhlovitsa-cave": {
+      "title": "De grot van Uhlovitsa",
+      "distance": "32 km · 45 min. met de auto",
+      "duration": "Rondleiding van 30 minuten",
+      "description": "Een van de mooiste grotten van Bulgarije, vlakbij het dorp Mogilitsa. De grot staat bekend om zijn stenen „watervallen“ — cascades van calcietformaties die op bevroren water lijken, en de koraalachtige formaties op de gewelven. Een schilderachtig pad door het bos leidt naar de ingang (ongeveer 30 minuten lopen vanaf de parkeerplaats).",
+      "highlights": [
+        "Stenen watervallen",
+        "Koraalformaties",
+        "4 ondergrondse meren",
+        "Vlakbij de konats van Agushe"
+      ]
+    }
+  },
+  "stats": [
+    {
+      "value": "1650 m",
+      "label": "hoogte boven zeeniveau van het vakantieoord"
+    },
+    {
+      "value": "1926 m",
+      "label": "de Snezhanka-top — de hoogste top van het skigebied"
+    },
+    {
+      "value": "37+ km",
+      "label": "skipistes in alle moeilijkheidsgraden"
+    },
+    {
+      "value": "1933",
+      "label": "opgericht — het oudste skioord van Bulgarije"
+    },
+    {
+      "value": "~120",
+      "label": "zonnige dagen tijdens het winterseizoen"
+    },
+    {
+      "value": "90%",
+      "label": "van de pistes met kunstmatige besneeuwing"
+    }
+  ],
+  "pistes": [
+    {
+      "name": "Het stuwmeer (De Kleine Muur)",
+      "note": ""
+    },
+    {
+      "name": "Bypass — Het kleine muurtje",
+      "note": ""
+    },
+    {
+      "name": "De muur",
+      "note": "Het embleem van Pamporovo — gastheer van wedstrijden uit de Europese Beker. Nacht skiën van 17.30 tot 22.00 uur."
+    },
+    {
+      "name": "Arch. Petar Petrov (de Europese)",
+      "note": ""
+    },
+    {
+      "name": "Sneewitje",
+      "note": ""
+    },
+    {
+      "name": "Sneewitje",
+      "note": ""
+    },
+    {
+      "name": "Framboos",
+      "note": "De langste rode piste — van de top tot het skicentrum Malina."
+    },
+    {
+      "name": "Bypass Malina",
+      "note": ""
+    },
+    {
+      "name": "Pamporovo (Toeristisch)",
+      "note": "Lang en glooiend — ideaal voor eerste afdalingen en om met het hele gezin te skiën."
+    },
+    {
+      "name": "Orlovets",
+      "note": ""
+    },
+    {
+      "name": "Perelik (de Zuidelijke)",
+      "note": ""
+    },
+    {
+      "name": "De meren van Smolyan",
+      "note": ""
+    },
+    {
+      "name": "Delovo Dere (Damsk)",
+      "note": ""
+    },
+    {
+      "name": "Cartola",
+      "note": ""
+    },
+    {
+      "name": "De standaards 1",
+      "note": ""
+    },
+    {
+      "name": "De standaards 2",
+      "note": ""
+    },
+    {
+      "name": "Fun Slope / Border Cross",
+      "note": "Een parcours met golven, banden en freestyle-figuren."
+    }
+  ],
+  "skiLifts": [
+    {
+      "route": "De berghutten — de top van Snezhanka",
+      "type": "Stoellift",
+      "note": "De langste route — met een hoogteverschil van 453 m."
+    },
+    {
+      "route": "Skicentrum 1 (het busstation) — Studenets",
+      "type": "4-persoonslift",
+      "note": ""
+    },
+    {
+      "route": "Studenets — de Snezhanka-berg",
+      "type": "4-persoonslift",
+      "note": "De belangrijkste verbinding naar de top en de zwarte pistes."
+    },
+    {
+      "route": "Malina — de berg Snezhanka",
+      "type": "Stoellift",
+      "note": ""
+    },
+    {
+      "route": "De meren van Smolyan — de berg Snezhanka",
+      "type": "Stoellift",
+      "note": ""
+    },
+    {
+      "route": "Malina — Studenets",
+      "type": "Stoellift",
+      "note": ""
+    }
+  ],
+  "liftFacts": [
+    {
+      "route": "De berghutten — de top van Snezhanka",
+      "type": "Stoellift"
+    },
+    {
+      "route": "Skicentrum 1 — Studenets",
+      "type": "4-persoonslift"
+    },
+    {
+      "route": "Studenets — de Snezhanka-berg",
+      "type": "4-persoonslift"
+    },
+    {
+      "route": "Malina — de berg Snezhanka",
+      "type": "Stoellift"
+    },
+    {
+      "route": "De meren van Smolyan — de berg Snezhanka",
+      "type": "Stoellift"
+    },
+    {
+      "route": "Malina — Studenets",
+      "type": "Stoellift"
+    }
+  ],
+  "skiExtras": [
+    "Totale capaciteit van de faciliteiten — meer dan 13 000 skiërs per uur",
+    "Ski- en snowboardscholen met gediplomeerde instructeurs en kinderparken",
+    "Nachtelijk rijden op het circuit „Stenata-2“ (17.30 – 22.00 uur)",
+    "2 langlaufroutes: Snezhanka nr. 14 (25 km, tot aan het dorp Mugla) en nr. 15 „Ardashl“ (7 km, tot aan het dorp Stoykite)",
+    "Funpark met snowtubing, boardercross en freestyle-elementen",
+    "Garderobes, servies en skidepots in Studenets en Malina"
+  ],
+  "winterActivities": [
+    {
+      "title": "Skiën en snowboarden",
+      "description": "Meer dan 37 km pistes voor alle niveaus, moderne skiliften en gegarandeerde sneeuw van december tot april."
+    },
+    {
+      "title": "Rijden in het donker",
+      "description": "De verlichte Muur-2 is tot 22.00 uur te bezichtigen — een onvergetelijke ervaring."
+    },
+    {
+      "title": "Langlaufen",
+      "description": "25 km gemarkeerde routes door de besneeuwde bossen naar Mugla en Stoykite."
+    },
+    {
+      "title": "Sneeuwschoenwandelen en wandelen",
+      "description": "Begeleide tochten op sneeuwschoenen naar de Rotsen van Orpheus en de meren van Smolyan."
+    },
+    {
+      "title": "Skischolen voor kinderen",
+      "description": "Gecertificeerde instructeurs, kinderparken met sleepliften en een heleboel geduld."
+    },
+    {
+      "title": "Après-ski",
+      "description": "Cafés met specialiteiten uit de Rhodopen, livemuziek en glühwein op slechts enkele meters van de skipistes."
+    }
+  ],
+  "summerActivities": [
+    {
+      "title": "Mountainbiken",
+      "description": "Gemarkeerde MTB-routes vanaf de top van Snezhanka — van gemakkelijke bospaden tot afdalingen voor gevorderden."
+    },
+    {
+      "title": "Eco-wandelpaden",
+      "description": "De watervalcanyon, Nevyasta, de meren van Smolyan — tientallen routes op een uur rijden."
+    },
+    {
+      "title": "Klimpark en attracties",
+      "description": "Een avonturenpark met touwparcoursen, een klimwand en een kabelbaan voor jong en oud."
+    },
+    {
+      "title": "Paardrijden",
+      "description": "Paardrijcentra in de omgeving bieden tochten aan door de weiden van Rozen en Stoykite."
+    },
+    {
+      "title": "Paddenstoelen en kruiden plukken",
+      "description": "Manatarki, bosbessen en meer dan 300 soorten kruiden — de Rodopi zijn een levende apotheek."
+    },
+    {
+      "title": "Fotografie en sterren",
+      "description": "Zonsopkomsten boven de zee vanuit de mist, een donkere hemel voor astrofotografie en het NAO „Rozhen“ in de buurt."
+    }
+  ],
+  "lists": {
+    "eco": [
+      "kloof-watervallen",
+      "smolyan-meren",
+      "nevyastata",
+      "orpheus-rocks"
+    ],
+    "landmarks": [
+      "shiroka-laka",
+      "rozhen-observatorium",
+      "prachtige-bruggen",
+      "smolyan-stad",
+      "Momchilovtsi",
+      "gela-village"
+    ],
+    "caves": [
+      "yagodina-grot",
+      "duivelskeel",
+      "Trigrad-kloof",
+      "uhlovitsa-grot"
+    ]
+  }
+}

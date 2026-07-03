@@ -1,0 +1,126 @@
+{
+  "resortName": "Pamporovo",
+  "elevation": "1 650 m",
+  "variable": "Variabile",
+  "wind": {
+    "calm": "silenzioso",
+    "light": "una leggera brezza",
+    "gentle": "magro",
+    "moderate": "moderato",
+    "strong": "forte"
+  },
+  "codes": {
+    "0": {
+      "label": "Chiaro",
+      "short": "Chiaro"
+    },
+    "1": {
+      "label": "Prevalentemente sereno",
+      "short": "Chiaro"
+    },
+    "2": {
+      "label": "Parzialmente nuvoloso",
+      "short": "Nuvoloso"
+    },
+    "3": {
+      "label": "Nuvoloso",
+      "short": "Nuvoloso"
+    },
+    "45": {
+      "label": "Nebbia",
+      "short": "Nebbia"
+    },
+    "48": {
+      "label": "Foschia fitta",
+      "short": "Nebbia"
+    },
+    "51": {
+      "label": "Un leggero fremito",
+      "short": "Rumore"
+    },
+    "53": {
+      "label": "Rumore",
+      "short": "Rumore"
+    },
+    "55": {
+      "label": "Un forte rombo",
+      "short": "Rumore"
+    },
+    "56": {
+      "label": "Un leggero brivido gelido",
+      "short": "Rumore"
+    },
+    "57": {
+      "label": "Un brivido gelido",
+      "short": "Rumore"
+    },
+    "61": {
+      "label": "Pioggia leggera",
+      "short": "Pioggia"
+    },
+    "63": {
+      "label": "Pioggia",
+      "short": "Pioggia"
+    },
+    "65": {
+      "label": "Pioggia intensa",
+      "short": "Pioggia"
+    },
+    "66": {
+      "label": "Una leggera grandinata",
+      "short": "Pioggia"
+    },
+    "67": {
+      "label": "Pioggia gelata",
+      "short": "Pioggia"
+    },
+    "71": {
+      "label": "Neve leggera",
+      "short": "Neve"
+    },
+    "73": {
+      "label": "Neve",
+      "short": "Neve"
+    },
+    "75": {
+      "label": "Forti nevicate",
+      "short": "Neve"
+    },
+    "77": {
+      "label": "Fiocchi di neve",
+      "short": "Neve"
+    },
+    "80": {
+      "label": "Una breve pioggia",
+      "short": "Precipitazioni"
+    },
+    "81": {
+      "label": "Precipitazioni",
+      "short": "Precipitazioni"
+    },
+    "82": {
+      "label": "Forti piogge",
+      "short": "Precipitazioni"
+    },
+    "85": {
+      "label": "Neve leggera",
+      "short": "Neve"
+    },
+    "86": {
+      "label": "Forti nevicate",
+      "short": "Neve"
+    },
+    "95": {
+      "label": "Temporali",
+      "short": "Tempesta"
+    },
+    "96": {
+      "label": "Grandine",
+      "short": "Tempesta"
+    },
+    "99": {
+      "label": "Forte grandinata",
+      "short": "Tempesta"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "backToRent": "← Villa huren",
+  "featuresHeading": "Voorzieningen en mogelijkheden",
+  "pricingHeading": "Prijzen",
+  "pricingHeadingFor": "Prijzen voor {villa}",
+  "pricingFrom": "van",
+  "pricingPerNight": "/ per nacht",
+  "summerFrom": "Zomer van",
+  "winterFrom": "Winter van",
+  "wholeVillaNote": "Hele villa · tot 6 gasten",
+  "bookCta": "Reserveer",
+  "bookVilla": "Reserveer {villa}",
+  "guideLink": "Gids Pamporovo",
+  "amenitiesHeading": "Voorzieningen",
+  "otherVillas": "Onze andere vakantiehuizen",
+  "contactHeading": "Contact en reservering",
+  "pages": {
+    "villa-1": {
+      "name": "Villa 1",
+      "tagline": "Gezelligheid voor het hele gezin",
+      "description": "Gezellig en uitnodigend — met twee slaapkamers, twee badkamers en een ruime woonkamer met een knapperend haardvuur, terwijl er op de veranda een barbecue op u wacht. Een favoriet bij gezinnen met kinderen.",
+      "seoTitle": "Villa 1 Pamporovo te huur | 2 slaapkamers, open haard — Pamporovo Villa",
+      "seoDescription": "Huur Villa 1 in Pamporovo — gezellig voor gezinnen, 2 slaapkamers, 2 badkamers, open haard, barbecue, maximaal 6 gasten. Raykovski Livadi, op 2 km van de skipistes. Online reserveren.",
+      "seoKeywords": "Villa 1 Pamporovo, villa te huur in Pamporovo, gezinsvilla, Pamporovo Villa",
+      "h1": "Villa 1 — verhuur in Pamporovo"
+    },
+    "villa-2": {
+      "name": "Villa 2",
+      "tagline": "De zon van zonsopgang tot zonsondergang",
+      "description": "Licht en ruim, met twee slaapkamers, twee badkamers en een woonkamer die uitkijkt op de bergen. De veranda met barbecue is ideaal voor lange avonden met vrienden.",
+      "seoTitle": "Villa 2 Pamporovo te huur | 2 slaapkamers, veranda met barbecue",
+      "seoDescription": "Huur Villa 2 in Pamporovo — een lichte villa met panoramisch uitzicht, 2 slaapkamers, open haard, barbecue, geschikt voor maximaal 6 gasten. Officiële huurnummer — Pamporovo Villa.",
+      "seoKeywords": "Villa 2 Pamporovo, villa te huur, villa met barbecue in Pamporovo",
+      "h1": "Villa 2 — verhuur in Pamporovo"
+    },
+    "villa-deluxe": {
+      "name": "Villa Deluxe",
+      "tagline": "Een beetje meer luxe",
+      "description": "De meest representatieve van de drie — met hetzelfde comfort van twee slaapkamers, twee badkamers en een ruime woonkamer, maar met extra aandacht voor detail en sfeer. Voor wie op zoek is naar iets bijzonders.",
+      "seoTitle": "Villa Deluxe Pamporovo | Luxe vakantiehuis, open haard, 6 gasten",
+      "seoDescription": "Villa Deluxe in Pamporovo — de meest representatieve van de drie villa’s, 2 slaapkamers, open haard, barbecue, geschikt voor maximaal 6 gasten. Reserveer online.",
+      "seoKeywords": "Villa Deluxe Pamporovo, luxe villa in Pamporovo, deluxe verhuur",
+      "h1": "Villa Deluxe — accommodatie in Pamporovo"
+    }
+  },
+  "about": {
+    "intro": "We zijn blij dat u ons hebt gevonden. Wij bieden u drie vrijstaande villa’s, genesteld in het dennenbos van Raykovski Livadi — daar waar het stadslawaai ver weg blijft en de dag begint met vogelgezang en de geur van hars.",
+    "details": "Villa 1, Villa 2 en Villa Deluxe zijn ingericht zoals we ons eigen huis in de bergen zouden willen hebben — met echt hout, zachte stoffen en die kleine details die een plek een warm gevoel geven. Hier bent u niet zomaar een gast; voel u thuis.",
+    "layout": "Elke villa bestaat uit twee verdiepingen en beschikt over twee slaapkamers, twee badkamers, een volledig uitgeruste keuken met eethoek en een ruime woonkamer met een houtkachel. Buiten wachten een terras met panoramisch uitzicht op de Rodopi en een veranda met barbecue op u – de plek waar de mooiste avonden ontstaan.",
+    "hosts": "Als gastheren staan we altijd voor u klaar. We helpen u graag met verrassingen en feestjes, wijzen u de weg naar de mooiste pistes en wandelpaden, geven u tips over waar u lekker kunt eten — en als u iets nodig heeft, hoeft u alleen maar te bellen. Ons doel is één: dat u vertrekt met het verlangen om terug te komen."
+  },
+  "contact": {
+    "phone": "+359 879 501 660",
+    "email": "pamporovovilla@gmail.com",
+    "address": "toeristencentrum Pamporovo, gebied Raykovski Livadi"
+  },
+  "firewoodNote": "Hout voor de open haard — 10 € per zak, op aanvraag of bij aankomst.",
+  "features": [
+    "2 slaapkamers voor een rustige nachtrust",
+    "2 badkamers met warm water",
+    "Grote woonkamer met open haard",
+    "Volledig uitgeruste keuken",
+    "Veranda met barbecue",
+    "Maximaal 6 gasten in de villa"
+  ],
+  "pricingNotes": [
+    "De prijzen gelden per nacht, voor de hele villa (maximaal 6 gasten).",
+    "Toeristenbelasting inbegrepen.",
+    "Hout voor de open haard — 10 € per zak, op aanvraag.",
+    "Skipassen zijn niet inbegrepen."
+  ],
+  "distances": [
+    {
+      "value": "2 km",
+      "label": "Naar het centrum van Pamporovo"
+    },
+    {
+      "value": "10 km",
+      "label": "Vanuit Smolyan"
+    },
+    {
+      "value": "85 km",
+      "label": "Vanuit Plovdiv"
+    },
+    {
+      "value": "220 km",
+      "label": "Vanuit Sofia"
+    }
+  ]
+}

@@ -1,18 +1,21 @@
 {
   "hero": {
-    "eyebrow": "Smolyan · Pamporovo · 3 chalés en alquiler",
+    "eyebrow": "Bulgaria · Smolyan · Pamporovo · 3 chalés en alquiler",
     "titleLine1": "Pamporovo",
     "titleLine2": "Villa",
     "subtitle": "Te ofrecemos tres villas independientes en medio de los mágicos bosques de Pamporovo. La calidez de un hogar en la montaña, durante todo el año.",
     "ctaExperience": "Empieza el paseo",
-    "ctaBook": "Reservar",
-    "scrollHint": "Echa un vistazo a"
+    "ctaBook": "Reserva",
+    "scrollHint": "Echa un vistazo a",
+    "scrollDown": "Abajo",
+    "scrollToExperience": "Sigue con el paseo"
   },
   "gallery": {
     "eyebrow": "Galería",
     "title": "Las tres villas en imágenes",
     "subtitle": "Descubre cada villa: su interior, su ambiente acogedor y sus vistas a la montaña",
-    "pickVilla": "Elige una villa"
+    "pickVilla": "Elige una villa",
+    "photoCount": "{count} fotos"
   },
   "contact": {
     "eyebrow": "Contacto",
@@ -24,14 +27,83 @@
     "title": "¿Qué opinan nuestros huéspedes?",
     "subtitle": "Impresiones reales de personas que ya han dormido junto a nuestros pinos",
     "formTitle": "Comparte tu experiencia",
-    "submit": "Enviar comentario",
+    "submit": "Enviar un comentario",
     "submitting": "Enviando..."
   },
   "location": {
     "eyebrow": "Ubicación",
     "title": "A un paso de todo, lejos del bullicio",
-    "subtitle": "Complejo turístico de Pamporovo, zona Райковски ливади — enclavados en el bosque de pinos",
+    "subtitle": "Complejo turístico de Pamporovo, zona Raykovski Livadi — enclavados en el bosque de pinos",
     "directions": "Cómo llegar hasta nosotros",
-    "info": "Pamporovo es la estación de montaña más soleada de Bulgaria, situada a 1 650 m en el corazón de los Ródopes. En invierno ofrece 37 km de pistas perfectamente cuidadas y esquí nocturno, y en verano, senderos ecológicos, cascadas y un aire que te revitaliza. Y nuestras villas son tu refugio tranquilo en medio de todo esto."
-  }
+    "info": "Pamporovo es la estación de montaña más soleada de Bulgaria, situada a 1 650 m en el corazón de los Ródopes. En invierno ofrece 37 km de pistas perfectamente cuidadas y esquí nocturno, y en verano, senderos ecológicos, cascadas y un aire que te hace bien. Y nuestras villas son tu refugio tranquilo en medio de todo esto."
+  },
+  "widgets": {
+    "weatherLoading": "Carga del tiempo",
+    "weatherUnavailable": "El servicio no está disponible temporalmente",
+    "feelsLike": "Da la sensación de que",
+    "today": "Hoy",
+    "humidity": "Humedad",
+    "wind": "Viento",
+    "callUs": "Llámanos",
+    "galleryVillaTabs": "Selección de una villa en la galería"
+  },
+  "about": {
+    "eyebrow": "Quiénes somos",
+    "title": "Tu hogar en lo alto de los Ródopes",
+    "subtitle": "Tres villas, un mismo objetivo: que te sientas como en casa",
+    "blockPlace": "El lugar",
+    "blockHome": "En casa",
+    "blockHosts": "Los anfitriones",
+    "intro": "Nos alegra que nos hayáis encontrado. Os ofrecemos tres villas independientes, enclavadas en el bosque de pinos de Raykovski Livadi, donde el ruido de la ciudad queda lejos y el día comienza con el canto de los pájaros y el aroma a resina.",
+    "details": "Villa 1, Villa 2 y Villa Deluxe están decoradas tal y como nos gustaría que fuera nuestra propia casa en la montaña: con madera auténtica, tejidos suaves y esos pequeños detalles que hacen que un lugar resulte acogedor. Aquí no sois simples huéspedes; sentíos como en casa.",
+    "hosts": "Como anfitriones, estamos a un paso de vosotros. Os ayudamos a organizar sorpresas y celebraciones, os indicamos las mejores pistas y senderos, os aconsejamos dónde comer bien… y si necesitáis algo, solo tenéis que llamarnos. Nuestro objetivo es uno solo: que os marchéis con ganas de volver.",
+    "layout": "Cada villa tiene dos plantas y cuenta con dos dormitorios, dos baños, una cocina totalmente equipada con comedor y un amplio salón con chimenea de leña. En el exterior te esperan una terraza con vistas panorámicas a los montes Ródopi y un porche con barbacoa: el lugar donde se viven las mejores veladas.",
+    "imageForestAlt": "Una villa en el bosque de pinos de Raykovski Livadi",
+    "imageInteriorAlt": "Interior con pared de piedra y madera",
+    "badgeLocation": "Raykovski Livadi",
+    "badgeResort": "Pamporovo"
+  },
+  "amenities": {
+    "eyebrow": "Servicios",
+    "title": "Todo lo necesario para una estancia tranquila",
+    "subtitle": "Hemos pensado en los pequeños detalles para que vosotros podáis dedicaros por completo a disfrutar de vuestras vacaciones"
+  },
+  "pricing": {
+    "eyebrow": "Precios",
+    "title": "Precios claros, sin sorpresas",
+    "subtitle": "Alquiler de una villa completa por noche — para hasta 6 huéspedes. Cuanto más tiempo te quedes, más económico te sale."
+  },
+  "booking": {
+    "eyebrow": "Reserva",
+    "title": "Reserva tu plaza en la montaña",
+    "subtitle": "Elige una villa y las fechas, facilítanos tus datos, y nos pondremos en contacto contigo personalmente para confirmarlo"
+  },
+  "policy": {
+    "eyebrow": "Es bueno que lo sepas",
+    "title": "Unas palabras antes de que vengáis",
+    "subtitle": "Normas breves y claras para que la estancia sea tranquila y agradable para todos"
+  },
+  "faq": {
+    "eyebrow": "Reservas · Precios",
+    "title": "Preguntas frecuentes",
+    "subtitle": "Información sobre alquiler, precios, alojamiento y reservas: antes de rellenar el formulario."
+  },
+  "distances": [
+    {
+      "value": "2 km",
+      "label": "Hasta el centro de Pamporovo"
+    },
+    {
+      "value": "10 km",
+      "label": "Desde Smolyan"
+    },
+    {
+      "value": "85 km",
+      "label": "Desde Plovdiv"
+    },
+    {
+      "value": "220 km",
+      "label": "Desde Sofía"
+    }
+  ]
 }

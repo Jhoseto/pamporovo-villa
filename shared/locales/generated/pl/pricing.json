@@ -1,0 +1,30 @@
+{
+  "tableNights": "Liczba noclegów",
+  "winterSeason": "Sezon zimowy",
+  "winterRange": "wrzesień – marzec",
+  "summerSeason": "Sezon letni",
+  "summerRange": "kwiecień – sierpień",
+  "winterShort": "Zima",
+  "summerShort": "Lato",
+  "winterLegend": "Zima · wrzesień – marzec",
+  "summerLegend": "Lato · kwi. – sier.",
+  "bestValue": "Najkorzystniejsze przy dłuższym pobycie",
+  "loading": "Ceny zostaną wkrótce opublikowane.",
+  "cta": "Sprawdź dostępne terminy",
+  "tiers": {
+    "up-to-3": "Do 3 noclegów",
+    "4-nights": "4 noclegi",
+    "5-nights": "5 noclegów",
+    "over-5": "Ponad 5 noclegów"
+  },
+  "breakdown": {
+    "night": "nocleg",
+    "nights": "noclegi",
+    "perNightWinter": "/noc (zima)",
+    "perNightSummer": "/noc (lato)"
+  },
+  "notes": [
+    "Ceny podane są za noc, za cały domek (do 6 osób).",
+    "Ceny są standardowe i nie obowiązują w dni świąteczne i weekendy. W tych okresach prosimy o kontakt — zaproponujemy Państwu najlepszą ofertę."
+  ]
+}

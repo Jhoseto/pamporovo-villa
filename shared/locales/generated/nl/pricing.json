@@ -1,0 +1,30 @@
+{
+  "tableNights": "Aantal overnachtingen",
+  "winterSeason": "Winterseizoen",
+  "winterRange": "september – maart",
+  "summerSeason": "Zomerseizoen",
+  "summerRange": "april – augustus",
+  "winterShort": "Winter",
+  "summerShort": "Zomer",
+  "winterLegend": "Winter · sept. – maart",
+  "summerLegend": "Zomer · april – augustus",
+  "bestValue": "Het voordeligst bij een langer verblijf",
+  "loading": "De prijzen worden binnenkort bekendgemaakt.",
+  "cta": "Bekijk de beschikbare data",
+  "tiers": {
+    "up-to-3": "Maximaal 3 overnachtingen",
+    "4-nights": "4 overnachtingen",
+    "5-nights": "5 overnachtingen",
+    "over-5": "Meer dan 5 overnachtingen"
+  },
+  "breakdown": {
+    "night": "overnachting",
+    "nights": "overnachtingen",
+    "perNightWinter": "/nacht (winter)",
+    "perNightSummer": "/nacht (zomer)"
+  },
+  "notes": [
+    "De prijzen gelden per nacht, voor de gehele villa (maximaal 6 gasten).",
+    "De prijzen zijn standaard en gelden niet voor feestdagen en vrije dagen. Neem voor deze periodes contact met ons op — wij zullen u het beste aanbod doen."
+  ]
+}

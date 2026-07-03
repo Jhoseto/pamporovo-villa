@@ -4,9 +4,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { usePageLang } from "@/hooks/usePageLang";
-import { getLocalizedPamporovoFaq } from "@shared/en/faqEn";
-import { EN_UI } from "@shared/en/commonUi";
+import { useTranslation } from "@/contexts/LocaleContext";
+import { usePamporovoFaqItems } from "@/i18n/contentHooks";
 import type { PamporovoFaqTag } from "@shared/pamporovoFaq";
 
 type PamporovoFaqSectionProps = {
@@ -22,11 +21,10 @@ export function PamporovoFaqSection({
   limit,
   className,
 }: PamporovoFaqSectionProps) {
-  const lang = usePageLang();
-  const en = lang === "en";
-  const items = getLocalizedPamporovoFaq(lang, tags);
+  const { t } = useTranslation();
+  const items = usePamporovoFaqItems(tags);
   const visible = limit ? items.slice(0, limit) : items;
-  const heading = title ?? (en ? EN_UI.faqDefault : "Често задавани въпроси");
+  const heading = title ?? t("hub.faqDefault", "Често задавани въпроси");
 
   if (visible.length === 0) return null;
 
@@ -36,7 +34,10 @@ export function PamporovoFaqSection({
         {heading}
       </h2>
       <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground md:text-base">
-        {en ? EN_UI.faqSubtitle : "Кратки отговори за настаняване, писти и практични детайли — полезни и за търсене, и за планиране на почивката."}
+        {t(
+          "hub.faqSubtitle",
+          "Бързи отговори за настаняване, писти и практични детайли — полезни за търсене и планиране на почивка."
+        )}
       </p>
       <Accordion type="single" collapsible className="mt-6 w-full divide-y rounded-2xl border border-black/8 bg-white px-2">
         {visible.map((item) => (

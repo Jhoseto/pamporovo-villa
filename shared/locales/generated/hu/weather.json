@@ -1,0 +1,126 @@
+{
+  "resortName": "Pamporovo",
+  "elevation": "1 650 m",
+  "variable": "Változó",
+  "wind": {
+    "calm": "csendes",
+    "light": "enyhe szellő",
+    "gentle": "gyenge",
+    "moderate": "mérsékelt",
+    "strong": "erős"
+  },
+  "codes": {
+    "0": {
+      "label": "Világos",
+      "short": "Világos"
+    },
+    "1": {
+      "label": "Többnyire derült",
+      "short": "Világos"
+    },
+    "2": {
+      "label": "Részleges felhőzet",
+      "short": "Felhős"
+    },
+    "3": {
+      "label": "Felhős",
+      "short": "Felhős"
+    },
+    "45": {
+      "label": "Köd",
+      "short": "Köd"
+    },
+    "48": {
+      "label": "Sűrű köd",
+      "short": "Köd"
+    },
+    "51": {
+      "label": "Enyhe remegés",
+      "short": "Rumezh"
+    },
+    "53": {
+      "label": "Rumezh",
+      "short": "Rumezh"
+    },
+    "55": {
+      "label": "Erős zúgás",
+      "short": "Rumezh"
+    },
+    "56": {
+      "label": "Enyhe jégszitálás",
+      "short": "Rumezh"
+    },
+    "57": {
+      "label": "Jéghideg szél",
+      "short": "Rumezh"
+    },
+    "61": {
+      "label": "Enyhe eső",
+      "short": "Eső"
+    },
+    "63": {
+      "label": "Eső",
+      "short": "Eső"
+    },
+    "65": {
+      "label": "Erős eső",
+      "short": "Eső"
+    },
+    "66": {
+      "label": "Enyhe jégeső",
+      "short": "Eső"
+    },
+    "67": {
+      "label": "Jéges eső",
+      "short": "Eső"
+    },
+    "71": {
+      "label": "Gyenge havazás",
+      "short": "Hó"
+    },
+    "73": {
+      "label": "Hó",
+      "short": "Hó"
+    },
+    "75": {
+      "label": "Erős havazás",
+      "short": "Hó"
+    },
+    "77": {
+      "label": "Hószemcsék",
+      "short": "Hó"
+    },
+    "80": {
+      "label": "Rövid eső",
+      "short": "Csapadék"
+    },
+    "81": {
+      "label": "Csapadék",
+      "short": "Csapadék"
+    },
+    "82": {
+      "label": "Erős esőzések",
+      "short": "Csapadék"
+    },
+    "85": {
+      "label": "Gyenge havazás",
+      "short": "Hó"
+    },
+    "86": {
+      "label": "Erős havazás",
+      "short": "Hó"
+    },
+    "95": {
+      "label": "Zivatarok",
+      "short": "Vihar"
+    },
+    "96": {
+      "label": "Jégeső",
+      "short": "Vihar"
+    },
+    "99": {
+      "label": "Erős jégeső",
+      "short": "Vihar"
+    }
+  }
+}

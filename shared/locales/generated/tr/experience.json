@@ -1,0 +1,83 @@
+{
+  "sectionEyebrow": "Sanal gezi",
+  "sectionTitle": "Gelmeden önce içeri girin",
+  "sectionSubtitle": "Sayfayı kaydırın ve villaları oda oda gezin",
+  "ariaLabel": "Sanal gezi",
+  "ariaLabel3d": "Sanal 3D tur",
+  "skipUp": "Yukarıya devam edin",
+  "skipDown": "Aşağıya devam edin",
+  "skipUpAria": "Yukarıya doğru yürüyüşü atla",
+  "skipDownAria": "Aşağıya doğru yürüyüşü atla",
+  "panels": {
+    "exterior-summer": {
+      "room": "01 · Kompleks",
+      "title": "İşte hikayeniz burada başlıyor",
+      "subtitle": "Villa 1 · Villa 2 · Villa Deluxe",
+      "description": "Raykovski Livadi’nin çam ağaçlarının arasında gizlenmiş üç müstakil villa. Villanın tamamını sadece kendiniz için kiralayabilirsiniz — duvarın arkasında komşu yok, konfordan ödün vermek yok. İstediğinizi seçin, gerisini bize bırakın.",
+      "imageAlt": "Yaz aylarında villanın dış cephesi"
+    },
+    "exterior-winter": {
+      "room": "02 · Kış",
+      "title": "Kar yağdığında",
+      "subtitle": "Sabahları kayak, akşamları şömine",
+      "description": "Sabahları birkaç dakika içinde kayak pistindesiniz, akşamları ise şöminenin sıcaklığı ve barbekü kokusu sizi bekliyor. Kar kapının eşiğine kadar uzanıyor — ve size bir kadeh sıcak şarap ve iyi bir arkadaş grubundan başka hiçbir şeye ihtiyacınız yok.",
+      "imageAlt": "Pamporovo’da karla kaplı bir villa"
+    },
+    "living-fireplace": {
+      "room": "03 · Oturma odası",
+      "title": "Ailenin bir araya geldiği yer",
+      "subtitle": "Şömineli geniş bir oturma odası",
+      "description": "Gerçek bir odun şöminesi bulunan geniş bir oturma odası; burada ahşap ve taş, sıcak ve ev gibi bir atmosfer yaratıyor. Burada masa oyunları oynanıyor, hikâyeler anlatılıyor ve ateş yakılıyor — her akşamın kalbi.",
+      "imageAlt": "Şömineli oturma odası ve yemek odası"
+    },
+    "open-plan": {
+      "room": "04 · Mekân",
+      "title": "Aydınlık ve ferah",
+      "subtitle": "Mutfak · yemek odası · oturma odası",
+      "description": "Mutfak, yemek odası ve oturma odası tek bir açık alanda yer alıyor — böylece biri yemek pişirirken diğerleri dinleniyor olsa bile hep birlikte olabilirsiniz. Büyük pencereler, dağların ışığını içeriye alıyor.",
+      "imageAlt": "Açık plan — merdivenlerden görünen manzara"
+    },
+    "dining": {
+      "room": "05 · Yemek odası",
+      "title": "Her şeyin etrafında gerçekleştiği masa",
+      "subtitle": "Sabah kahvesinden geç saatlerdeki akşam yemeğine kadar",
+      "description": "Tüm grubun sığabileceği geniş bir ahşap masa ve çam ağaçlarına doğrudan bakan bir manzara. Burada gün, loş ışıkta bir kahveyle başlar ve akşam yemeği, kahkahalar ve yarın için yapılan planlarla sona erer.",
+      "imageAlt": "Çam ormanına bakan yemek odası"
+    },
+    "kitchen": {
+      "room": "06 · Mutfak",
+      "title": "Evdeymiş gibi yemek pişirin",
+      "subtitle": "Tam donanımlı mutfak",
+      "description": "Ocak, fırın, buzdolabı, mikrodalga, kahve makinesi ve eksiksiz bir mutfak takımı — ev yapımı bir kahvaltı ya da şenlikli bir akşam yemeği için gereken her şey. Çünkü bazen en lezzetli yemek, dağda kendi ellerinizle pişirdiğiniz yemektir.",
+      "imageAlt": "Tam donanımlı mutfak"
+    },
+    "bedrooms": {
+      "room": "07 · Yatak odaları",
+      "title": "Uzun zamandır yaşamadığınız türden bir uyku",
+      "subtitle": "İki rahat yatak odası",
+      "description": "Rahat yataklar ve kaliteli nevresim takımlarıyla donatılmış iki ayrı yatak odası — en fazla 6 konuk için uygun. 1 650 m rakımdaki ormanın sessizliği ve temiz havası harikalar yaratıyor; dinlenmiş bir şekilde uyanacaksınız, söz veriyoruz.",
+      "imageAlt": "İki yatak odasına açılan koridor"
+    },
+    "bathroom": {
+      "room": "08 · Banyo",
+      "title": "Dağ havası hissi veren banyo",
+      "subtitle": "Tüm grup için konfor",
+      "description": "Her zaman sıcak su bulunan, tam donanımlı bir banyo — tüm grup için ferah ve konforlu. Doğal malzemeler ve sıcak bir atmosfer.",
+      "imageAlt": "Ahşap ve fayanslı banyo"
+    },
+    "terrace": {
+      "room": "09 · Teras",
+      "title": "Geri dönmenizin sebebi olan manzara",
+      "subtitle": "Rodop Dağları avucun içinde",
+      "description": "Rodop Dağları ve çam ormanlarının panoramik manzarasına sahip bir teras. Burada, güneş zirvelerin üzerinde doğarken ilk kahvenizi yudumlar ve gün batımının altın ışıkları eşliğinde günü uğurlarsınız. Tatil bittikten sonra da uzun süre hafızanızda kalacak anlar.",
+      "imageAlt": "Rhodope Dağları üzerinde altın rengi gün batımı"
+    },
+    "bbq-veranda": {
+      "room": "10 · Veranda",
+      "title": "Bitmesini hiç istemediğimiz akşamlar",
+      "subtitle": "Barbekü bulunan kapalı veranda",
+      "description": "Barbekü bulunan kapalı veranda, güneş battığında en sevilen mekandır. Açık havada yemek pişirir, sohbet eder ve güleriz — yağmur yağarsa ya da hava soğursa da, dağ manzarasının tadını kaybetmeden kuru ve sıcak bir ortamda kalırsınız.",
+      "imageAlt": "Barbekü ve kış manzaralı veranda"
+    }
+  }
+}

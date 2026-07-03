@@ -1,1 +1,178 @@
-{}
+{
+  "home": {
+    "book-online": {
+      "question": "Jak si mohu rezervovat vilu online?",
+      "answer": "Na pamporovovilla.com vyberte sekci „Rezervace“, označte vilu (Villa 1, Villa 2 nebo Villa Deluxe), zadejte termín a vyplňte formulář. Potvrzení obdržíte e-mailem. V případě dotazů: +359 879 501 660."
+    },
+    "price-per-villa": {
+      "question": "Kolik stojí pronájem vily?",
+      "answer": "Ceny se vztahují na celou vilu (až pro 6 hostů), nikoli na osobu. Letní sezóna začíná od 110 € za noc při pobytu delším než 5 nocí. V zimě se ceny pohybují od 120 do 160 € za noc v závislosti na počtu nocí. Villa Deluxe má malý příplatek. Aktuální ceny: sekce „Ceny“ na webových stránkách."
+    },
+    "price-includes": {
+      "question": "Co je zahrnuto v ceně?",
+      "answer": "Pronájem celé vily, Wi-Fi, parkoviště, rekreační poplatek. Dříví do krbu – 10 € za pytel na vyžádání. Skilety a strava nejsou zahrnuty v ceně."
+    },
+    "check-in-out": {
+      "question": "Kdy je příjezd a odjezd?",
+      "answer": "Příjezd po 15:00, odjezd do 11:00. Pozdní odjezd je zdarma, pokud to naše možnosti dovolí – zeptejte se při rezervaci."
+    },
+    "holiday-pricing": {
+      "question": "Platí o svátcích jiné ceny?",
+      "answer": "Ano – na Vánoce, Nový rok, Velikonoce a únorové prázdniny platí zvláštní podmínky a někdy i minimální délka pobytu. Kontaktujte nás nebo si při rezervaci zkontrolujte kalendář."
+    },
+    "min-nights": {
+      "question": "Je stanoven minimální počet nocí?",
+      "answer": "V mimosezóně často neplatí minimální délka pobytu. V období špičky (prosinec–leden, únorové prázdniny) může být požadována délka pobytu 3–5 nocí. Přesná pravidla najdete v kalendáři."
+    },
+    "deluxe-difference": {
+      "question": "V čem se liší model Villa Deluxe?",
+      "answer": "Stejné uspořádání – 2 ložnice, 2 koupelny, krb, gril – ale s větším důrazem na detaily a atmosféru. Cena je o +10 € za noc v létě a o +20 € za noc v zimě vyšší než u standardních vil."
+    },
+    "max-guests": {
+      "question": "Kolik lidí se vejde na jednu vilu?",
+      "answer": "Až 6 hostů ve vile. Pro větší skupiny si můžete rezervovat dvě vily – ohledně kombinace nás prosím kontaktujte."
+    },
+    "payment": {
+      "question": "Jak se rezervace platí?",
+      "answer": "Podmínky týkající se zálohy a doplatku obdržíte při potvrzení rezervace. Přijímáme bankovní převod; podrobnosti vám zašleme e-mailem po podání žádosti."
+    },
+    "cancel-policy": {
+      "question": "Jaké jsou podmínky v případě odmítnutí?",
+      "answer": "Podmínky zrušení rezervace jsou uvedeny v sekci „Podmínky“ a ve smlouvě při potvrzení rezervace. U zimních rezervací doporučujeme sjednat cestovní pojištění."
+    },
+    "firewood": {
+      "question": "Je tam dřevo do krbu?",
+      "answer": "Ano — 10 € za tašku, na vyžádání před příjezdem nebo při ubytování. Každá vila má v obývacím pokoji krb na dřevo."
+    },
+    "pets-home": {
+      "question": "Povolujete domácí mazlíčky?",
+      "answer": "Pravidla týkající se domácích mazlíčků se liší podle sezóny – před provedením rezervace se prosím informujte. Na pozemek nemají přístup neregistrovaní hosté."
+    },
+    "distance-home": {
+      "question": "Jak daleko jsou chaty od Pamporova?",
+      "answer": "2 km do centra letoviska a k lanovkám — asi 5–7 minut autem. Adresa: Raykovski Livadi, letovisko Pamporovo."
+    },
+    "three-villas": {
+      "question": "Musím si pronajmout všechny tři vily?",
+      "answer": "Ne — pronajímáte si pouze jednu vilu pro vaši skupinu. Všechny tři se nacházejí na jedné adrese, ale jedná se o zcela samostatné domy s vlastním vchodem."
+    },
+    "vip-program": {
+      "question": "Nabízíte slevu pro stálé hosty?",
+      "answer": "Ano — v rámci VIP programu získáte 10% slevu po třech pobytech v průběhu jednoho roku, a navíc možnost dřívějšího příjezdu a pozdějšího odjezdu, pokud to bude možné."
+    },
+    "offers": {
+      "question": "Jsou k dispozici nějaké slevy a akce?",
+      "answer": "Zveřejňujeme sezónní nabídky (např. rodinná lyžařská dovolená, „zaplaťte 9, zůstaňte 10 nocí“). Podívejte se do sekce „Nabídky“ na úvodní stránce nebo se přihlaste k odběru novinek v sekci „Kontakt“."
+    }
+  },
+  "pamporovo": {
+    "where-is-pamporovo": {
+      "question": "Kde se nachází Pamporovo?",
+      "answer": "Pamporovo je horské středisko v pohoří Rodopy, v okrese Smolyan, v nadmořské výšce přibližně 1650 m. Nejbližším větším městem je Smolyan (asi 15 km). Ze Sofie je to asi 240 km (3–3,5 hodiny jízdy autem)."
+    },
+    "pistes-length": {
+      "question": "Kolik kilometrů sjezdovek je v Pamporově?",
+      "answer": "Lyžařský areál Pamporovo nabízí více než 37 km značených sjezdovek všech úrovní obtížnosti – od zelených pro začátečníky až po černé pro pokročilé. Sjezdovka „Stenata“ je symbolem tohoto střediska a nabízí noční lyžování."
+    },
+    "night-skiing": {
+      "question": "Je v Pamporově možné jezdit v noci?",
+      "answer": "Ano. Sjezdovka „Stěna“ (č. 2) je osvětlena pro noční lyžování – v sezóně obvykle od 17:30 do 22:00. Před návštěvou si zkontrolujte aktuální rozvrh na stránkách pamporovo.me."
+    },
+    "best-beginner-pistes": {
+      "question": "Které sjezdovky jsou vhodné pro začínající lyžaře?",
+      "answer": "Sjezdovka č. 6 „Pamporovo (turistická)“ je nejdelší a nejmírnější (3,3 km) – ideální pro první sjezdy. Zelené obchvaty (č. 1A) a modré sjezdovky č. 7, č. 8 a č. 10 jsou rovněž dobrou volbou pro rodiny."
+    },
+    "lift-tickets": {
+      "question": "Kolik stojí skipasy v Pamporově?",
+      "answer": "Ceny skipasů se každou sezónu aktualizují. Aktuální ceny denních, půldenních a týdenních skipasů zveřejňují oficiální provozovatelé na stránkách pamporovo.me. Ubytování si rezervujte samostatně – skipasy nejsou zahrnuty v ceně pronájmu vily."
+    },
+    "when-ski-season": {
+      "question": "Kdy je lyžařská sezóna v Pamporově?",
+      "answer": "Obvykle od prosince do března–dubna, v závislosti na sněhových podmínkách. Přibližně 90 % sjezdovek je vybaveno umělým zasněžováním, což prodlužuje sezónu. Zimní pronájem chaty je nejžádanější v lednu a únoru."
+    },
+    "summer-activities": {
+      "question": "Co se dá v Pamporově dělat v létě?",
+      "answer": "Ekologické stezky, horská cyklistika, jízda na koni, lanové parky, sběr hub a bylin, prohlídky jeskyní a autentických vesnic (Široka Luka, Gela). Tento region je ideální pro rodinnou dovolenou mimo lyžařskou sezónu."
+    },
+    "caves-nearby": {
+      "question": "Které jeskyně se nacházejí v blízkosti Pamporova?",
+      "answer": "Jagodinská jeskyně (cca 30 km), Ďáblovo hrdlo (u Tesných skal), Uhlovitsa a další. Většina z nich vyžaduje vodní výlet – vezměte si teplé oblečení a v hlavní sezóně si rezervujte termín."
+    },
+    "shiroka-luka": {
+      "question": "Jak daleko je Široka Luka od Pamporova?",
+      "answer": "Architektonická památková zóna Široka Luka se nachází asi 20 km od Pamporova – asi 30 minut jízdy autem. Spojte si to s návštěvou kláštera Rožen a výhledy z Roženu."
+    },
+    "where-to-sleep": {
+      "question": "Kde se v Pamporově ubytovat?",
+      "answer": "Máte na výběr mezi hotely v centru letoviska a samostatnými vilami mimo ruch. Pamporovo Villa nabízí 3 soukromé vily na Raykovski Livadi — 2 km od centra, s krbem, grilem a kapacitou až 6 hostů na vilu, od 110 € za noc."
+    },
+    "hotel-vs-villa": {
+      "question": "Hotel nebo vila v Pamporovu – co je lepší?",
+      "answer": "Hotel je vhodný pro krátkodobý pobyt bez vaření. Vila je ideální pro rodiny a skupiny: celý dům jen pro vás, krb, gril, parkoviště a nižší cena na osobu při 4–6 hostech. Pamporovo Villa se nachází 2 km od sjezdovek."
+    },
+    "villa-price": {
+      "question": "Kolik stojí pronájem vily v Pamporově?",
+      "answer": "U Pamporovo Villa se ceny pohybují od 110 € za noc za celou vilu (až pro 6 hostů) – letní sezóna. Ceny za zimní ubytování jsou vyšší v závislosti na období. Aktuální ceny najdete na pamporovovilla.com/#pricing nebo /rent."
+    },
+    "villa-amenities": {
+      "question": "Co zahrnuje pronájem vily u Pamporovo Villa?",
+      "answer": "Každá ze tří vil má 2 ložnice, 2 koupelny, plně vybavenou kuchyň, krb na dřevo, gril na verandě, Wi-Fi a bezplatné parkoviště. Pronajímáte si celou vilu – bez sdílení s ostatními hosty."
+    },
+    "fireplace-villa": {
+      "question": "Je v Pamporově k dispozici chata s krbem?",
+      "answer": "Ano — všechny tři chaty v Pamporovo Villa (Villa 1, Villa 2, Villa Deluxe) mají v obývacím pokoji krb na dřevo. Ideální pro zimní večery po lyžování nebo podzimní víkendy v horách."
+    },
+    "group-villa": {
+      "question": "Je možné si v Pamporově pronajmout vilu pro 6 osob?",
+      "answer": "Ano. Každá vila u Pamporovo Villa pojme až 6 hostů. Rezervujte si jednu vilu pro svou skupinu nebo zkombinujte dvě vily pro větší skupiny – kontaktujte nás telefonicky na čísle +359 879 501 660."
+    },
+    "couple-villa": {
+      "question": "Je ta chata vhodná pro dva?",
+      "answer": "Ano – páry si často pronajímají celou vilu, aby měly více soukromí a krb. Platíte cenu za vilu, nikoli za osobu; při dvou lidech je cena na osobu vyšší, ale získáte soukromý dům."
+    },
+    "distance-to-slopes": {
+      "question": "Jak daleko jsou chaty od sjezdovek?",
+      "answer": "Pamporovo Villa se nachází na Raykovski Livadi — asi 2 km od centra střediska a lanovek. Autem se na parkoviště u sjezdovek dostanete za 5–7 minut. V sezóně jezdí také bezplatný kyvadlový autobus (podívejte se na jízdní řád)."
+    },
+    "parking": {
+      "question": "Je u vil k dispozici parkoviště?",
+      "answer": "Ano — bezplatné soukromé parkoviště u každé vily v Pamporovo Villa. Vhodné pro zimní výlety s lyžařským vybavením i pro rodiny s dětmi."
+    },
+    "how-to-book": {
+      "question": "Jak si rezervovat vilu v Pamporově?",
+      "answer": "Online na pamporovovilla.com/#booking — vyberte si vilu, termín a vyplňte formulář. Nebo zavolejte na +359 879 501 660 / napište na pamporovovilla@gmail.com."
+    },
+    "minimum-stay": {
+      "question": "Je při pronájmu stanovena minimální doba pobytu?",
+      "answer": "V hlavní sezóně (Vánoce, Nový rok, únorové prázdniny) může být vyžadován minimální počet 3–5 nocí. Přesné podmínky si ověřte v kalendáři při rezervaci nebo nás kontaktujte."
+    },
+    "pets": {
+      "question": "Jsou zde povolena domácí zvířata?",
+      "answer": "Před rezervací se prosím informujte – pravidla týkající se domácích mazlíčků se mohou lišit v závislosti na sezóně a konkrétní vile. Nepředpokládejte, že je to automaticky povoleno."
+    },
+    "wifi": {
+      "question": "Je ve vilách k dispozici Wi-Fi?",
+      "answer": "Ano — bezdrátové připojení k internetu je k dispozici ve všech třech vilách Pamporovo Villa."
+    },
+    "winter-rental": {
+      "question": "Mohu si v zimě pronajmout vilu na lyžařskou dovolenou?",
+      "answer": "Ano — chaty jsou v provozu po celý rok. Zima je nejoblíbenější období: krb, blízkost sjezdovek a možnost pronájmu celého domu pro vaši rodinu nebo přátele. Na leden a únor si rezervujte včas."
+    },
+    "summer-rental": {
+      "question": "Vyplatí se v létě pronajmout si vilu v Pamporově?",
+      "answer": "Ano – letní ceny jsou nižší (od 110 € za noc) a tento region nabízí ekologické trasy, příjemný chládek a jeskyně. Veranda s grilem a horský vzduch dělají z této vily ideální místo pro rodinnou dovolenou."
+    },
+    "drive-from-sofia": {
+      "question": "Jak se dostanu ze Sofie do Pamporova?",
+      "answer": "Po dálnici do Plovdivu, poté přes Asenovgrad a Smolyan – asi 240 km, 3–3,5 hodiny. V zimě si vezměte sněhové řetězy nebo si ověřte dopravní situaci v Rodopách."
+    },
+    "snow-guarantee": {
+      "question": "Je v Pamporově každou sezónu sníh?",
+      "answer": "Středisko disponuje výkonným systémem umělého zasněžování — pokrývá přibližně 90 % sjezdovek. Přirozený sníh je často k dispozici již od prosince, ale pro jistotu provozovatelé udržují zasněžovací systém v provozu po celou sezónu."
+    },
+    "restaurants": {
+      "question": "Jsou v okolí Raykovski Livadi nějaké restaurace?",
+      "answer": "V centru Pamporova (2 km) se nacházejí restaurace, pizzerie a supermarket. Ve vile je plně vybavená kuchyň – mnoho hostů si vaří sami nebo to kombinují s večeřemi v letovisku."
+    }
+  }
+}

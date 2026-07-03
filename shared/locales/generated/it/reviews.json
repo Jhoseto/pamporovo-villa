@@ -9,5 +9,49 @@
   "placeholderEmail": "a scelta",
   "placeholderPeriod": "ad es. marzo 2025",
   "placeholderBody": "Cosa vi è rimasto impresso del vostro soggiorno da noi...",
-  "villaUnknown": "Non ne sono sicuro/a"
+  "villaUnknown": "Non ne sono sicuro/a",
+  "form": {
+    "name": "Nome",
+    "email": "E-mail",
+    "rating": "Valutazione",
+    "title": "Titolo",
+    "body": "La tua recensione",
+    "bodyPlaceholder": "Fateci sapere cosa vi è piaciuto e cosa potremmo migliorare...",
+    "submit": "Invia un commento",
+    "submitting": "Invio...",
+    "namePlaceholder": "Il tuo nome",
+    "emailPlaceholder": "a scelta",
+    "ratingAria": "{star} stelle",
+    "villa": "Villa",
+    "villaPlaceholder": "Seleziona",
+    "villaUnknown": "Non ne sono sicuro/a",
+    "period": "Periodo",
+    "periodPlaceholder": "ad es. marzo 2025"
+  },
+  "toast": {
+    "success": "Grazie per la recensione! La pubblicheremo dopo averla esaminata.",
+    "error": "Si è verificato un errore durante l'invio della recensione."
+  },
+  "carousel": {
+    "readMore": "Per saperne di più",
+    "close": "Chiudi",
+    "googleSource": "Google",
+    "siteSource": "Sito web",
+    "readFull": "La recensione completa",
+    "open": "Apri",
+    "readFullAria": "Leggi la recensione completa",
+    "openAria": "Apri la recensione",
+    "emptyTitle": "Non ci sono ancora recensioni pubblicate",
+    "emptyBody": "Siate i primi a condividere le vostre impressioni qui sotto.",
+    "pause": "Pausa dello scorrimento automatico",
+    "resume": "Continua lo scorrimento automatico",
+    "prev": "Recensione precedente",
+    "next": "Recensione successiva",
+    "navLabel": "Recensioni",
+    "reviewN": "Recensione {n}",
+    "photoCount": "{count} foto"
+  },
+  "modal": {
+    "close": "Chiudi"
+  }
 }

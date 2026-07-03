@@ -1,0 +1,36 @@
+{
+  "items": [
+    {
+      "title": "Tři samostatné vily",
+      "description": "Villa 1, Villa 2 a Villa Deluxe — pronajímáte si celou vilu jen pro sebe, každá má 2 ložnice a pojme až 6 hostů."
+    },
+    {
+      "title": "Krb na dřevo",
+      "description": "Skutečný krb v srdci obývacího pokoje – pro večery, kdy venku sněží."
+    },
+    {
+      "title": "Kuchyně jako doma",
+      "description": "Plně vybavená kuchyň s jídelním koutem – sporák, trouba, lednička, kávovar a vše potřebné pro domácí večeři."
+    },
+    {
+      "title": "Veranda s grilem",
+      "description": "Krytá veranda s grilem – pro dlouhé večery pod širým nebem, bez ohledu na počasí venku."
+    },
+    {
+      "title": "Výhled na Rodopy",
+      "description": "Terasa s panoramatickým výhledem na hory — ranní káva na slunci a dechberoucí západy slunce."
+    },
+    {
+      "title": "Více než 260 slunečných dnů",
+      "description": "Pamporovo je nejslunečnější horské letovisko v Bulharsku – leží v nadmořské výšce 1 650 m, má mírné podnebí a čistý vzduch."
+    },
+    {
+      "title": "Ticho mezi borovicemi",
+      "description": "Raykovski Livadi — klidný borový les daleko od davů, ale jen pár minut od sjezdovek a centra."
+    },
+    {
+      "title": "Wi-Fi a parkoviště",
+      "description": "Bezplatné bezdrátové připojení k internetu a parkoviště přímo u vchodu – přijedete autem a zůstanete online."
+    }
+  ]
+}

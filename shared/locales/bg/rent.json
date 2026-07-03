@@ -14,5 +14,6 @@
   "bookOnline": "Резервирайте онлайн",
   "guideLink": "Пълен гид за Пампорово",
   "footerNote": "Официален сайт за наем на вила в Пампорово, България",
-  "villaPageLinkSuffix": "страница →"
+  "villaPageLinkSuffix": "страница →",
+  "villaPageLink": "{villa} страница →"
 }

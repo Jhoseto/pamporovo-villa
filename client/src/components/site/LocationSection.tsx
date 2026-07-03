@@ -2,31 +2,32 @@ import { ExternalLink, MapPin, Navigation, Star } from "lucide-react";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { GBP } from "@shared/gbpLinks";
-import { gbpUi } from "@shared/gbpUi";
-import { CONTACT, DISTANCES, PAMPOROVO_INFO, PROPERTY_LOCATION } from "@/data/siteContent";
+import { CONTACT, DISTANCES, PROPERTY_LOCATION } from "@/data/siteContent";
+import { useTranslation } from "@/contexts/LocaleContext";
+import { useContactAddress, useHomeDistances } from "@/i18n/contentHooks";
 import { MapView } from "@/components/Map";
-import { usePageLang } from "@/hooks/usePageLang";
 import { trackGoogleReviewClick } from "@/lib/analytics/events";
 import { SectionShell } from "./SectionShell";
 import { ScrollReveal } from "./ScrollReveal";
 
 export function LocationSection() {
+  const { t } = useTranslation();
+  const address = useContactAddress();
+  const distances = useHomeDistances();
   const mapRef = useRef<HTMLDivElement>(null);
   const mapReady = useInView(mapRef, { once: true, margin: "200px 0px" });
-  const lang = usePageLang();
-  const gbp = gbpUi(lang);
 
   return (
     <SectionShell
-      eyebrow="Локация"
-      title="На крачка от всичко, далеч от шума"
-      subtitle="к.к. Пампорово, местност Райковски ливади — сгушени в боровата гора"
+      eyebrow={t("home.location.eyebrow", "Локация")}
+      title={t("home.location.title", "На крачка от всичко, далеч от шума")}
+      subtitle={t("home.location.subtitle", "к.к. Пампорово, местност Райковски ливади — сгушени в боровата гора")}
       overlap
       perfDefer
     >
       <ScrollReveal className="mb-10">
         <p className="mx-auto max-w-3xl text-center text-lg leading-relaxed text-foreground/75">
-          {PAMPOROVO_INFO}
+          {t("home.location.info", "Пампорово е най-слънчевият планински курорт в България — на 1 650 м в сърцето на Родопите. Зимата носи 37 км перфектно поддържани писти и нощно каране, а лятото — еко пътеки, водопади и въздух, който лекува. А нашите вили са вашата тиха база сред всичко това.")}
         </p>
       </ScrollReveal>
 
@@ -61,7 +62,7 @@ export function LocationSection() {
                     {PROPERTY_LOCATION.label}
                   </p>
                   <p className="mt-2 font-display text-sm leading-relaxed tracking-wide text-white/80 md:text-base">
-                    {CONTACT.address}
+                    {address}
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 self-start sm:flex-row sm:self-auto">
@@ -72,7 +73,7 @@ export function LocationSection() {
                     className="premium-btn inline-flex shrink-0 items-center justify-center gap-2 px-6 py-3.5 text-sm"
                   >
                     <Navigation className="h-4 w-4" />
-                    {gbp.directions}
+                    {t("home.location.directions", "Навигирай до нас")}
                     <ExternalLink className="h-3.5 w-3.5 opacity-70" />
                   </a>
                   <a
@@ -83,7 +84,7 @@ export function LocationSection() {
                     className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full border border-white/25 bg-white/10 px-5 py-3.5 text-sm text-white backdrop-blur-sm transition hover:border-[var(--gold)]/50 hover:bg-white/15"
                   >
                     <Star className="h-4 w-4 fill-[var(--gold)] text-[var(--gold)]" />
-                    {gbp.reviewShort}
+                    {t("gbp.reviewShort", "Google отзив")}
                   </a>
                 </div>
               </div>
@@ -94,7 +95,7 @@ export function LocationSection() {
 
       <ScrollReveal delay={120} className="mt-8 md:mt-10">
         <div className="mx-auto grid max-w-6xl grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
-          {DISTANCES.map(item => (
+          {distances.map(item => (
             <div
               key={item.label}
               className="floating-card flex flex-col items-center p-5 text-center md:p-6"

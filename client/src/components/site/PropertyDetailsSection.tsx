@@ -1,33 +1,35 @@
 import { HeartHandshake, Home, Trees } from "lucide-react";
-import { VILLA_ABOUT } from "@/data/siteContent";
+import { useTranslation } from "@/contexts/LocaleContext";
 import { SectionShell } from "./SectionShell";
 import { ScrollReveal } from "./ScrollReveal";
 
-const STORY_BLOCKS = [
-  {
-    label: "Мястото",
-    text: VILLA_ABOUT.intro,
-    icon: Trees,
-  },
-  {
-    label: "У дома",
-    text: VILLA_ABOUT.details,
-    icon: Home,
-  },
-  {
-    label: "Домакините",
-    text: VILLA_ABOUT.hosts,
-    icon: HeartHandshake,
-  },
-] as const;
-
 export function PropertyDetailsSection() {
+  const { t } = useTranslation();
+
+  const storyBlocks = [
+    {
+      label: t("home.about.blockPlace", "Мястото"),
+      text: t("home.about.intro", "Радваме се, че ни откривате. Предлагаме ви три самостоятелни вили, сгушени в боровата гора на Райковски ливади — там, където градският шум остава далеч, а денят започва с песен на птици и аромат на смола."),
+      icon: Trees,
+    },
+    {
+      label: t("home.about.blockHome", "У дома"),
+      text: t("home.about.details", "Вила 1, Вила 2 и Вила Deluxe са обзаведени така, както бихме искали да изглежда собственият ни дом в планината — с истинско дърво, мек текстил и онези малки детайли, които карат едно място да се усеща топло. Тук не сте просто гости; чувствайте се у дома."),
+      icon: Home,
+    },
+    {
+      label: t("home.about.blockHosts", "Домакините"),
+      text: t("home.about.hosts", "Като домакини сме на една ръка разстояние. Помагаме за изненади и тържества, насочваме ви към най-хубавите писти и пътеки, подсказваме къде се яде вкусно — а ако нещо ви трябва, просто звъннете. Нашата цел е една: да си тръгнете с желание да се върнете."),
+      icon: HeartHandshake,
+    },
+  ] as const;
+
   return (
     <SectionShell
       id="about"
-      eyebrow="За нас"
-      title="Вашият дом високо в Родопите"
-      subtitle="Три вили, една грижа — да се чувствате като у дома"
+      eyebrow={t("home.about.eyebrow", "За нас")}
+      title={t("home.about.title", "Вашият дом високо в Родопите")}
+      subtitle={t("home.about.subtitle", "Три вили, една грижа — да се чувствате като у дома")}
       overlap
       splitTitle
     >
@@ -39,7 +41,7 @@ export function PropertyDetailsSection() {
               <div className="about-premium-gallery__main overflow-hidden rounded-[1.25rem] shadow-[0_28px_70px_-28px_rgba(0,0,0,0.35)]">
                 <img
                   src="/photos/11.jpg"
-                  alt="Вила в боровата гора на Райковски ливади"
+                  alt={t("home.about.imageForestAlt", "Вила в боровата гора на Райковски ливади")}
                   className="aspect-[4/5] h-full w-full object-cover object-center transition duration-700 hover:scale-[1.03]"
                   loading="lazy"
                   decoding="async"
@@ -48,16 +50,16 @@ export function PropertyDetailsSection() {
               <div className="about-premium-gallery__accent overflow-hidden rounded-xl border border-[var(--gold)]/35 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.4)]">
                 <img
                   src="/photos/01.jpg"
-                  alt="Интериор с каменна стена и дърво"
+                  alt={t("home.about.imageInteriorAlt", "Интериор с каменна стена и дърво")}
                   className="aspect-[4/3] h-full w-full object-cover object-center"
                   loading="lazy"
                   decoding="async"
                 />
               </div>
               <div className="about-premium-gallery__badge">
-                <span className="eyebrow text-[var(--gold)]">Райковски ливади</span>
+                <span className="eyebrow text-[var(--gold)]">{t("home.about.badgeLocation", "Райковски ливади")}</span>
                 <span className="mt-1 block font-serif text-lg font-semibold text-foreground">
-                  Пампорово
+                  {t("home.about.badgeResort", "Пампорово")}
                 </span>
               </div>
             </div>
@@ -65,7 +67,7 @@ export function PropertyDetailsSection() {
 
           <div className="lg:col-span-7">
             <div className="about-premium-stories">
-              {STORY_BLOCKS.map((block, index) => {
+              {storyBlocks.map((block, index) => {
                 const Icon = block.icon;
                 return (
                   <ScrollReveal key={block.label} delay={index * 90}>

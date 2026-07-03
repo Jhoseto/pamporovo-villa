@@ -1,0 +1,144 @@
+{
+  "sectionEyebrow": "Virtual Tour",
+  "sectionTitle": "Log in before you arrive",
+  "sectionSubtitle": "Scroll through and take a tour of the villas, room by room",
+  "ariaLabel": "Virtual Tour",
+  "ariaLabel3d": "Virtual 3D Tour",
+  "skipUp": "Continue to the top",
+  "skipDown": "Continue down",
+  "skipUpAria": "Skip the walk uphill",
+  "skipDownAria": "Skip the walk downhill",
+  "panels": {
+    "exterior-summer": {
+      "room": "01 · The Complex",
+      "title": "This is where your story begins",
+      "subtitle": "Villa 1 · Villa 2 · Villa Deluxe",
+      "description": "Three private villas, nestled among the pine trees of Raykovski Livadi. You’ll have the entire villa all to yourself—no neighbors right next door, and no compromises on comfort. Choose the one you like, and leave the rest to us.",
+      "imageAlt": "Exterior of the villa in the summer",
+      "highlights": [
+        "3 detached villas",
+        "A quiet pine forest",
+        "Parking and Wi-Fi",
+        "Year-round rental"
+      ]
+    },
+    "exterior-winter": {
+      "room": "02 · Winter",
+      "title": "When the snow falls",
+      "subtitle": "Skiing in the morning, a fire in the fireplace in the evening",
+      "description": "In the morning, you’re on the slopes in minutes, and in the evening, the warmth of the fireplace and the aroma of a barbecue await you. The snow reaches right up to your doorstep—and all you need is a glass of mulled wine and good company.",
+      "imageAlt": "A Villa Under the Snow in Pamporovo",
+      "highlights": [
+        "Just minutes from the slopes",
+        "Wood-burning fireplace",
+        "Snow up to the doorstep",
+        "Warm and Cozy"
+      ]
+    },
+    "living-fireplace": {
+      "room": "03 · Living Room",
+      "title": "Where the family gathers",
+      "subtitle": "Large living room with a fireplace",
+      "description": "A spacious living room with a real wood-burning fireplace, where wood and stone create a warm, homey atmosphere. This is where people play board games, tell stories, and tend the fire—the heart of every evening.",
+      "imageAlt": "Living room with a fireplace and a dining area",
+      "highlights": [
+        "Wood-burning fireplace",
+        "Smart TV",
+        "Wood and Stone",
+        "A Place for Everyone"
+      ]
+    },
+    "open-plan": {
+      "room": "04 · Space",
+      "title": "Bright and spacious",
+      "subtitle": "Kitchen · Dining Room · Living Room",
+      "description": "The kitchen, dining room, and living room are all part of one open space—so you can be together even when one person is cooking and the others are relaxing. The large windows let the mountain light stream in.",
+      "imageAlt": "Open-concept layout — view from the staircase",
+      "highlights": [
+        "Open-concept",
+        "Large windows",
+        "Natural light",
+        "Up to 6 guests"
+      ]
+    },
+    "dining": {
+      "room": "05 · Dining Room",
+      "title": "A table around which everything happens",
+      "subtitle": "From morning coffee to a late dinner",
+      "description": "A large wooden table with room for the whole group and a view straight out at the pine trees. Here, the day begins with coffee in the soft light and ends with dinner, laughter, and plans for tomorrow.",
+      "imageAlt": "Dining room with a view of the pine forest",
+      "highlights": [
+        "Table for 6 people",
+        "View of the forest",
+        "Access to the terrace",
+        "Natural light"
+      ]
+    },
+    "kitchen": {
+      "room": "06 · Kitchen",
+      "title": "Cook just like at home",
+      "subtitle": "Fully equipped kitchen",
+      "description": "A stovetop, oven, refrigerator, microwave, coffee maker, and a full set of dishes—everything you need for a home-cooked breakfast or a festive dinner. Because sometimes the most delicious meal is the one you cook yourself, up in the mountains.",
+      "imageAlt": "Fully equipped kitchen",
+      "highlights": [
+        "Oven and Stove",
+        "Refrigerator",
+        "Coffee Machine",
+        "Complete set of dishes"
+      ]
+    },
+    "bedrooms": {
+      "room": "07 · Bedrooms",
+      "title": "A sleep like you haven't had in a long time",
+      "subtitle": "Two cozy bedrooms",
+      "description": "Two separate bedrooms with comfortable beds and high-quality bedding—accommodating up to 6 guests. The tranquility of the forest and the fresh air at 1,650 m work wonders; you’ll wake up feeling refreshed, we promise.",
+      "imageAlt": "Hallway leading to the two bedrooms",
+      "highlights": [
+        "2 bedrooms",
+        "Up to 6 guests",
+        "High-Quality Underwear",
+        "Deep Silence"
+      ]
+    },
+    "bathroom": {
+      "room": "08 · Bathroom",
+      "title": "A bathroom with a mountain feel",
+      "subtitle": "Comfort for the whole group",
+      "description": "A fully equipped bathroom with hot water at all times—spacious and cozy for the whole group. Natural materials and a warm atmosphere.",
+      "imageAlt": "A bathroom with wood and tiles",
+      "highlights": [
+        "1 bathroom",
+        "Hot Water 24/7",
+        "High-quality materials",
+        "Spa atmosphere"
+      ]
+    },
+    "terrace": {
+      "room": "09 · Terrace",
+      "title": "The view that keeps you coming back",
+      "subtitle": "The Rhodopes at a Glance",
+      "description": "A terrace with a panoramic view of the Rhodope Mountains and the pine forests. Here, you can enjoy your first cup of coffee as the sun rises over the peaks and bid farewell to the day as the sun sets in a golden glow. Moments that linger long after your vacation is over.",
+      "imageAlt": "A golden sunset over the Rhodopes",
+      "highlights": [
+        "Panoramic view",
+        "Sunrises and Sunsets",
+        "Fresh mountain air",
+        "Large terrace"
+      ]
+    },
+    "bbq-veranda": {
+      "room": "10 · Veranda",
+      "title": "Evenings that seem to go on forever",
+      "subtitle": "Covered porch with a barbecue",
+      "description": "The covered patio with a barbecue is the perfect spot when the sun goes down. Grill, chat, and laugh outdoors—and if it starts to rain or gets chilly, you’ll stay dry and warm without losing that mountain vibe.",
+      "imageAlt": "Veranda with a barbecue and a winter view",
+      "highlights": [
+        "Barbecue",
+        "Covered porch",
+        "For long evenings",
+        "Outdoors"
+      ]
+    }
+  },
+  "highlightsLabel": "Highlights"
+}

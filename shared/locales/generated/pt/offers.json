@@ -1,0 +1,25 @@
+{
+  "eyebrow": "Pacotes exclusivos",
+  "title": "Melhores ofertas",
+  "subtitle": "Pacotes selecionados para férias de esqui e de verão a um preço especial. Os períodos são limitados — e as melhores datas esgotam-se primeiro.",
+  "loading": "A carregar...",
+  "empty": "De momento, não há ofertas ativas.",
+  "oldPrice": "preço antigo",
+  "includes": "Inclui",
+  "bookOffer": "Reserve esta oferta",
+  "badge": "Oferta",
+  "claimCta": "Aproveita",
+  "footer": "As ofertas são válidas para os períodos indicados · para efetuar uma reserva — secção «Reservar»",
+  "items": {
+    "ski-family": {
+      "title": "Férias de esqui em família",
+      "period": "01.03.2026 – 31.03.2026",
+      "description": "Ofereça às crianças uma memória que guardarão para toda a vida. Uma villa inteira só para a sua família, a poucos minutos das pistas — e, à noite, a lareira e um jantar quentinho esperam por vocês em casa."
+    },
+    "pay-9-stay-10": {
+      "title": "Pague 9, fique 10 noites",
+      "period": "01.06.2026 – 10.07.2026",
+      "description": "O verão na montanha é diferente — manhãs frescas, dias longos na natureza e noites na varanda com churrasco. Fique mais tempo connosco e ofereça a si próprio uma noite de alojamento por nossa conta."
+    }
+  }
+}

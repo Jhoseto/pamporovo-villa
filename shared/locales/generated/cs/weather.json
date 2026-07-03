@@ -1,0 +1,126 @@
+{
+  "resortName": "Pamporovo",
+  "elevation": "1 650 m",
+  "variable": "Proměnná",
+  "wind": {
+    "calm": "tichý",
+    "light": "lehký vánek",
+    "gentle": "hubený",
+    "moderate": "mírný",
+    "strong": "silný"
+  },
+  "codes": {
+    "0": {
+      "label": "Jasně",
+      "short": "Jasně"
+    },
+    "1": {
+      "label": "Převážně jasno",
+      "short": "Jasně"
+    },
+    "2": {
+      "label": "Částečná oblačnost",
+      "short": "Zataženo"
+    },
+    "3": {
+      "label": "Zataženo",
+      "short": "Zataženo"
+    },
+    "45": {
+      "label": "Mlha",
+      "short": "Mlha"
+    },
+    "48": {
+      "label": "Hustá mlha",
+      "short": "Mlha"
+    },
+    "51": {
+      "label": "Lehký šelest",
+      "short": "Rumež"
+    },
+    "53": {
+      "label": "Rumež",
+      "short": "Rumež"
+    },
+    "55": {
+      "label": "Silný šum",
+      "short": "Rumež"
+    },
+    "56": {
+      "label": "Lehký ledový šum",
+      "short": "Rumež"
+    },
+    "57": {
+      "label": "Ledový šum",
+      "short": "Rumež"
+    },
+    "61": {
+      "label": "Mírný déšť",
+      "short": "Déšť"
+    },
+    "63": {
+      "label": "Déšť",
+      "short": "Déšť"
+    },
+    "65": {
+      "label": "Silný déšť",
+      "short": "Déšť"
+    },
+    "66": {
+      "label": "Lehký ledový déšť",
+      "short": "Déšť"
+    },
+    "67": {
+      "label": "Ledový déšť",
+      "short": "Déšť"
+    },
+    "71": {
+      "label": "Slabý sníh",
+      "short": "Sníh"
+    },
+    "73": {
+      "label": "Sníh",
+      "short": "Sníh"
+    },
+    "75": {
+      "label": "Silné sněžení",
+      "short": "Sníh"
+    },
+    "77": {
+      "label": "Sněhové vločky",
+      "short": "Sníh"
+    },
+    "80": {
+      "label": "Krátký déšť",
+      "short": "Srážky"
+    },
+    "81": {
+      "label": "Srážky",
+      "short": "Srážky"
+    },
+    "82": {
+      "label": "Silné srážky",
+      "short": "Srážky"
+    },
+    "85": {
+      "label": "Slabý sníh",
+      "short": "Sníh"
+    },
+    "86": {
+      "label": "Silné sněžení",
+      "short": "Sníh"
+    },
+    "95": {
+      "label": "Bouřky",
+      "short": "Bouře"
+    },
+    "96": {
+      "label": "Kroupy",
+      "short": "Bouře"
+    },
+    "99": {
+      "label": "Silná krupobití",
+      "short": "Bouře"
+    }
+  }
+}

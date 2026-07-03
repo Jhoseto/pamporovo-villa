@@ -1,0 +1,144 @@
+{
+  "sectionEyebrow": "Recorrido virtual",
+  "sectionTitle": "Entra antes de llegar",
+  "sectionSubtitle": "Recorre y visita las villas, habitación por habitación",
+  "ariaLabel": "Recorrido virtual",
+  "ariaLabel3d": "Recorrido virtual en 3D",
+  "skipUp": "Sigue hacia arriba",
+  "skipDown": "Sigue leyendo",
+  "skipUpAria": "Sáltate el paseo hacia arriba",
+  "skipDownAria": "Sáltate el paseo hacia abajo",
+  "panels": {
+    "exterior-summer": {
+      "room": "01 · El complejo",
+      "title": "Aquí empieza tu historia",
+      "subtitle": "Villa 1 · Villa 2 · Villa Deluxe",
+      "description": "Tres villas independientes, escondidas entre los pinos de Raykovski Livadi. Alquilarás la villa completa solo para ti: sin vecinos al otro lado de la pared, sin renunciar a la comodidad. Elige la tuya y déjanos el resto a nosotros.",
+      "imageAlt": "Exterior de la villa en verano",
+      "highlights": [
+        "3 villas independientes",
+        "Un tranquilo bosque de pinos",
+        "Aparcamiento y Wi-Fi",
+        "Alquiler durante todo el año"
+      ]
+    },
+    "exterior-winter": {
+      "room": "02 · Invierno",
+      "title": "Cuando caiga la nieve",
+      "subtitle": "Esquí por la mañana, chimenea por la noche",
+      "description": "Por la mañana estás en la pista en cuestión de minutos, y por la noche te espera el calor de la chimenea y el aroma de la barbacoa. La nieve llega hasta el umbral de la puerta, y no necesitas nada más que una copa de vino caliente y buena compañía.",
+      "imageAlt": "Una villa bajo la nieve en Pamporovo",
+      "highlights": [
+        "A pocos minutos de las pistas",
+        "Chimenea de leña",
+        "Nieve hasta el umbral",
+        "Cálida comodidad"
+      ]
+    },
+    "living-fireplace": {
+      "room": "03 · Salón",
+      "title": "Donde se reúne la familia",
+      "subtitle": "Amplio salón con chimenea",
+      "description": "Un amplio salón con una auténtica chimenea de leña, en el que la madera y la piedra crean un ambiente cálido y acogedor. Aquí se juegan juegos de mesa, se cuentan historias y se aviva el fuego, el corazón de cada velada.",
+      "imageAlt": "Salón con chimenea y comedor",
+      "highlights": [
+        "Chimenea de leña",
+        "Televisor inteligente",
+        "Madera y piedra",
+        "Un lugar para todos"
+      ]
+    },
+    "open-plan": {
+      "room": "04 · Espacio",
+      "title": "Luminoso y espacioso",
+      "subtitle": "Cocina · comedor · salón",
+      "description": "La cocina, el comedor y el salón forman un único espacio diáfano, para que podáis estar juntos incluso cuando uno cocina y los demás se relajan. Las grandes ventanas dejan que la luz de la montaña entre en el interior.",
+      "imageAlt": "Espacio diáfano: vista desde la escalera",
+      "highlights": [
+        "Plano abierto",
+        "Ventanas grandes",
+        "Luz natural",
+        "Hasta 6 huéspedes"
+      ]
+    },
+    "dining": {
+      "room": "05 · Comedor",
+      "title": "Una mesa en torno a la cual ocurre todo",
+      "subtitle": "Desde el café de la mañana hasta la cena tardía",
+      "description": "Una amplia mesa de madera con sitio para todo el grupo y vistas directas a los pinos. Aquí empieza el día con un café a la luz tenue y termina con la cena, risas y planes para mañana.",
+      "imageAlt": "Comedor con vistas al bosque de pinos",
+      "highlights": [
+        "Mesa para 6 personas",
+        "Vista al bosque",
+        "Acceso a la terraza",
+        "Luz natural"
+      ]
+    },
+    "kitchen": {
+      "room": "06 · Cocina",
+      "title": "Cocinas como en casa",
+      "subtitle": "Cocina totalmente equipada",
+      "description": "Cocina, horno, nevera, microondas, cafetera y un juego completo de vajilla: todo lo necesario para un desayuno casero o una cena de fiesta. Porque, a veces, el plato más sabroso es el que uno mismo prepara en la montaña.",
+      "imageAlt": "Cocina equipada",
+      "highlights": [
+        "Horno y cocina",
+        "Frigorífico",
+        "Cafetera",
+        "Juego completo de vajilla"
+      ]
+    },
+    "bedrooms": {
+      "room": "07 · Dormitorios",
+      "title": "Un sueño como no has tenido desde hace mucho tiempo",
+      "subtitle": "Dos acogedores dormitorios",
+      "description": "Dos dormitorios independientes con camas cómodas y ropa de cama de calidad: capacidad para hasta 6 huéspedes. La tranquilidad del bosque y el aire puro a 1 650 m hacen maravillas; te despertarás descansado, te lo prometemos.",
+      "imageAlt": "Pasillo que conduce a los dos dormitorios",
+      "highlights": [
+        "2 dormitorios",
+        "Hasta 6 huéspedes",
+        "Ropa interior de calidad",
+        "Un silencio profundo"
+      ]
+    },
+    "bathroom": {
+      "room": "08 · Baño",
+      "title": "Un cuarto de baño con un toque de montaña",
+      "subtitle": "Comodidad para todo el grupo",
+      "description": "Un cuarto de baño totalmente equipado con agua caliente en todo momento: espacioso y acogedor para todo el grupo. Materiales naturales y un ambiente cálido.",
+      "imageAlt": "Cuarto de baño con madera y azulejos",
+      "highlights": [
+        "1 cuarto de baño",
+        "Agua caliente las 24 horas del día, los 7 días de la semana",
+        "Materiales de calidad",
+        "Ambiente de spa"
+      ]
+    },
+    "terrace": {
+      "room": "09 · Terraza",
+      "title": "Las vistas por las que siempre volvéis",
+      "subtitle": "Los Ródopes en la palma de la mano",
+      "description": "Terraza con vistas panorámicas a los montes Ródopi y a los pinos. Aquí te tomas el primer café mientras el sol sale por encima de las cimas y despides el día con una puesta de sol dorada. Momentos que perduran mucho tiempo después de las vacaciones.",
+      "imageAlt": "Una puesta de sol dorada sobre los Ródopes",
+      "highlights": [
+        "Vista panorámica",
+        "Amaneceres y atardeceres",
+        "Aire puro de montaña",
+        "Gran terraza"
+      ]
+    },
+    "bbq-veranda": {
+      "room": "10 · Porche",
+      "title": "Noches que no se apresuran a terminar",
+      "subtitle": "Porche cubierto con barbacoa",
+      "description": "La terraza cubierta con barbacoa es el lugar favorito cuando se pone el sol. Asáis, charláis y os reís al aire libre; y si llueve o refresca, os quedáis a resguardo y calentitos, sin perder la sensación de estar en la montaña.",
+      "imageAlt": "Terraza con barbacoa y vistas invernales",
+      "highlights": [
+        "Barbacoa",
+        "Porche cubierto",
+        "Para las noches largas",
+        "Al aire libre"
+      ]
+    }
+  },
+  "highlightsLabel": "Puntos destacados"
+}

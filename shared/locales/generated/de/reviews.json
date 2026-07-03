@@ -9,5 +9,49 @@
   "placeholderEmail": "nach Wahl",
   "placeholderPeriod": "z. B. März 2025",
   "placeholderBody": "Was ist Ihnen von Ihrem Aufenthalt bei uns in Erinnerung geblieben...",
-  "villaUnknown": "Ich bin mir nicht sicher"
+  "villaUnknown": "Ich bin mir nicht sicher",
+  "form": {
+    "name": "Name",
+    "email": "E-Mail",
+    "rating": "Bewertung",
+    "title": "Titel",
+    "body": "Ihre Bewertung",
+    "bodyPlaceholder": "Teilen Sie uns mit, was Ihnen gefallen hat und was wir verbessern könnten...",
+    "submit": "Bewertung absenden",
+    "submitting": "Senden...",
+    "namePlaceholder": "Ihr Name",
+    "emailPlaceholder": "nach Wahl",
+    "ratingAria": "{star} Sterne",
+    "villa": "Villa",
+    "villaPlaceholder": "Wählen Sie",
+    "villaUnknown": "Ich bin mir nicht sicher",
+    "period": "Zeitraum",
+    "periodPlaceholder": "z. B. März 2025"
+  },
+  "toast": {
+    "success": "Vielen Dank für Ihre Bewertung! Wir werden sie nach einer Überprüfung veröffentlichen.",
+    "error": "Beim Absenden der Bewertung ist ein Fehler aufgetreten."
+  },
+  "carousel": {
+    "readMore": "Weiterlesen",
+    "close": "Schließen",
+    "googleSource": "Google",
+    "siteSource": "Website",
+    "readFull": "Die gesamte Rezension",
+    "open": "Öffnen",
+    "readFullAria": "Lies die gesamte Rezension",
+    "openAria": "Bewertung öffnen",
+    "emptyTitle": "Es wurden noch keine Bewertungen veröffentlicht.",
+    "emptyBody": "Seien Sie der Erste – teilen Sie Ihre Eindrücke unten mit.",
+    "pause": "Pause beim automatischen Scrollen",
+    "resume": "Automatisches Scrollen fortsetzen",
+    "prev": "Vorherige Bewertung",
+    "next": "Nächste Bewertung",
+    "navLabel": "Bewertungen",
+    "reviewN": "Bewertung {n}",
+    "photoCount": "{count} Fotos"
+  },
+  "modal": {
+    "close": "Schließen"
+  }
 }

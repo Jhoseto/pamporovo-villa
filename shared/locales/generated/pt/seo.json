@@ -2,7 +2,7 @@
   "routes": {
     "/": {
       "title": "Pamporovo Villa | 3 casas de férias para alugar em Pamporovo, Bulgária",
-      "description": "Pamporovo Villa — três moradias independentes para alugar no complexo turístico de Pamporovo, na zona de Райковски ливади. 2 quartos, lareira, churrasqueira, até 6 hóspedes. Reserve diretamente.",
+      "description": "Pamporovo Villa — três moradias independentes para alugar no complexo turístico de Pamporovo, na zona de Raykovski Livadi. 2 quartos, lareira, churrasqueira, até 6 hóspedes. Reserve diretamente.",
       "keywords": "villa para alugar em Pamporovo, Pamporovo Villa, aluguer de villa em Pamporovo"
     },
     "/rent": {
@@ -12,7 +12,7 @@
     },
     "/pamporovo": {
       "title": "Pamporovo — guia completo sobre a estância e a região | Pamporovo Villa",
-      "description": "Mais de 37 km de pistas de esqui, 6 teleféricos, trilhos ecológicos, grutas e pontos turísticos. Onde ficar — 3 villas a partir de 110 €/noite no Райковски ливади.",
+      "description": "Mais de 37 km de pistas de esqui, 6 teleféricos, trilhos ecológicos, grutas e pontos turísticos. Onde ficar — 3 vilas a partir de 110 €/noite no Raykovski Livadi.",
       "keywords": "Guia de Pamporovo, esqui na Bulgária, viagem aos Ródopes"
     }
   }

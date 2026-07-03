@@ -1,0 +1,30 @@
+{
+  "tableNights": "Numero di pernottamenti",
+  "winterSeason": "Stagione invernale",
+  "winterRange": "settembre – marzo",
+  "summerSeason": "Stagione estiva",
+  "summerRange": "aprile – agosto",
+  "winterShort": "Inverno",
+  "summerShort": "Estate",
+  "winterLegend": "Inverno · settembre – marzo",
+  "summerLegend": "Estate · aprile – agosto",
+  "bestValue": "La soluzione più conveniente per soggiorni più lunghi",
+  "loading": "I prezzi saranno pubblicati a breve.",
+  "cta": "Verifica le date disponibili",
+  "tiers": {
+    "up-to-3": "Fino a 3 pernottamenti",
+    "4-nights": "4 pernottamenti",
+    "5-nights": "5 pernottamenti",
+    "over-5": "Più di 5 pernottamenti"
+  },
+  "breakdown": {
+    "night": "pernottamento",
+    "nights": "pernottamenti",
+    "perNightWinter": "/notte (inverno)",
+    "perNightSummer": "/notte (estate)"
+  },
+  "notes": [
+    "I prezzi si intendono a notte, per l'intera villa (fino a 6 ospiti).",
+    "I prezzi sono standard e non sono validi nei giorni festivi e nei giorni di riposo. Per questi periodi, contattateci: vi proporremo la soluzione migliore."
+  ]
+}

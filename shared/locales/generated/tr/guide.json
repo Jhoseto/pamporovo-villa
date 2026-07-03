@@ -1,0 +1,159 @@
+{
+  "nav": {
+    "ariaLabel": "Sayfanın bölümleri",
+    "intro": "Tatil beldesi",
+    "winter": "Kış",
+    "summer": "Yaz",
+    "landmarks": "Çevre",
+    "caves": "Mağaralar"
+  },
+  "sticky": {
+    "book": "Rezervasyon yap",
+    "rent": "Kiralama · fiyatlar"
+  },
+  "ui": {
+    "pisteNumber": "No.",
+    "pisteName": "Pist",
+    "difficulty": "Zorluk",
+    "length": "Uzunluk",
+    "note": "Not",
+    "dash": "—",
+    "meters": "m",
+    "route": "Güzergâh",
+    "liftType": "Tür",
+    "capacity": "Kapasite/saat",
+    "capacityPerHour": "Saatlik kapasite"
+  },
+  "difficulty": {
+    "green": "Yeşil · yeni başlayanlar",
+    "blue": "Mavi · orta seviye",
+    "red": "Kırmızı · ileri düzey",
+    "black": "Siyah · uzmanlar"
+  },
+  "sections": {
+    "intro": {
+      "eyebrow": "Tatil beldesi",
+      "title": "Rodos Dağları’nın Kalbi",
+      "subtitle": "Deniz seviyesinden 1650 m yükseklikte, Snezhanka Dağı’nın eteklerinde — 1933 yılında kurulan Bulgaristan’ın en eski kayak merkezi.",
+      "panoramaAlt": "Pamporovo Kış Tatil Merkezi — Rodop Dağları’ndaki oteller ve kayak pistleri",
+      "towerAlt": "Snezhanka Kulesi — Pamporovo’nun simgesi",
+      "p1": "Snezhanka Dağı (1926 m) ile bağlantılı iki ana kayak merkezi: Studenets ve Malina. Pistler 1400 ile 1926 m arasında yer almakta olup, modern teleferiklere ve 80'den fazla kar makinesine sahiptir.",
+      "p2": "Yaz aylarında tatil beldesi, ekoturizm merkezi haline gelir — işaretli yürüyüş parkurları, bisiklet sürme, binicilik ve Smolyan’a arabayla 15–60 dakika uzaklıkta bulunan sayısız turistik yer, Şiroka Luka, Harika Köprüler ve Batı Rodoplar’daki yeraltı sarayları.",
+      "cta": "Pamporovo'da bir villa rezervasyonu yapın"
+    },
+    "winter": {
+      "eyebrow": "Kış",
+      "title": "Kayak merkezi — pistler ve teleferikler",
+      "subtitle": "37+ km işaretli kayak ve snowboard pistleri, \"Duvar\"da gece kayağı ve kayak koşusu parkurları",
+      "skiAlt": "Snezhanka Zirvesi’ne giden telesiyej — Pamporovo’nun üzerindeki kule",
+      "pistesHeading": "Zorluk derecesine göre pistler",
+      "liftsHeading": "Asansörler ve tesisatlar",
+      "activitiesHeading": "Kış etkinlikleri"
+    },
+    "summer": {
+      "eyebrow": "Yaz",
+      "title": "Ekolojik yürüyüş yolları ve doğa",
+      "subtitle": "Şelaleler Kanyonu, Smolyan Gölleri, Orpheus Kayalıkları — tatil beldesinden sadece birkaç dakika uzaklıkta",
+      "summerAlt": "Rhodope Dağları’nda bir dağ gölü — Pamporovo yakınlarındaki yazlık doğa yürüyüş yolu",
+      "activitiesHeading": "Yaz etkinlikleri"
+    },
+    "landmarks": {
+      "eyebrow": "Çevre",
+      "title": "Görülecek yerler ve köyler",
+      "subtitle": "Mimari koruma alanları, gözlemevi, planetaryum ve otantik Rodop folkloru"
+    },
+    "caves": {
+      "eyebrow": "Yeraltı dünyası",
+      "title": "Mağaralar ve kanyonlar",
+      "subtitle": "Yagodinska Mağarası, Şeytan Boğazı, Trigrad Boğazı ve Uhlovitsa — Batı Rodoplar’ın hazineleri",
+      "footer": "Pamporovo Villa villaları, Raykovski Livadi'te yer almaktadır — tüm bölgede kış ve yaz maceraları için ideal bir başlangıç noktasıdır.",
+      "cta": "Müsait tarihleri inceleyin ve rezervasyon yapın"
+    }
+  },
+  "attractions": {
+    "canyon-waterfalls": {
+      "title": "Şelaleler Kanyonu",
+      "distance": "15 km · Smolyan yakınlarında",
+      "duration": "~4 saat · 6 km'lik bir döngü rotası",
+      "description": "Rhodope Dağları’ndaki en etkileyici doğa yürüyüş yolu — „Soskovcheto“ Doğa Koruma Alanı’nın asırlık ormanlarından geçerek Gerzovska Nehri’nin kıyısında ilerliyorsunuz. Güzergâh boyunca 46 şelale göreceksiniz; bunların arasında 68 metrelik muhteşem “Orfey” şelalesi de bulunuyor — Bulgaristan’ın en yüksek şelalelerinden biri. Yolculuğun doruk noktası, Smolyan ve Rodop Dağları’nın zirvelerine bakan 1800 m yükseklikteki panoramik seyir terasıdır."
+    },
+    "smolyan-lakes": {
+      "title": "Smolyan Gölleri",
+      "distance": "10 km · Snezhanka Zirvesi'nin altında",
+      "duration": "~1 saat · kolay rota",
+      "description": "“Rhodope Dağları’nın Zümrüt Gözleri” olarak anılan, Snezhanka’nın eteklerinde basamaklı bir şekilde yer alan doğal göller. Bistro, Muto ve Trevisto göllerini birbirine bağlayan hafif bir patika, piknik ve balık tutma alanları da sunmaktadır. Çocuklu aileler için ideal bir yürüyüş rotasıdır ve zirveye tırmanışla harika bir şekilde birleştirilebilir."
+    },
+    "nevyastata": {
+      "title": "“Nevyasta” Ekolojik Yürüyüş Yolu",
+      "distance": "12 km · Smolyan'ın yukarısında",
+      "duration": "~40 dakika · 900 m'lik patika",
+      "description": "Smolyan’ın üzerinde yükselen “Nevyastata” adlı sarp kayalığa uzanan, kokulu bir çam ormanının içinden geçen kısa ve kolay bir patika. Güzergâh boyunca panoramik seyir noktaları ve dinlenme çardakları bulunurken, adrenalin arayanlar için uçurumun üzerinde bir dağ teleferiği de mevcuttur. Efsaneye göre, bir genç kız inancını korumak için bu kayalıktan kendini atmıştır."
+    },
+    "orpheus-rocks": {
+      "title": "Orpheus Kayalıkları ve İğneler",
+      "distance": "6 km · Snezhanka Zirvesi'nden",
+      "duration": "~4 saat · hafif yük",
+      "description": "Snezhanka Zirvesi’nden, işaretli bir patika güneydoğuya, Orpheus Kayalıkları’na doğru uzanır — Smolyan Gölleri’ne simgesel bir manzara sunan, tuhaf riyolit oluşumları. Diğer yönde ise yine nefes kesici bir manzaraya sahip İglite zirvesi yer alır. Rota, Ağustos ayında yaban mersini ile bezeli otlaklar ve ormanlardan geçer."
+    },
+    "shiroka-laka": {
+      "title": "Geniş Yay",
+      "distance": "16 km · arabayla 20 dakika",
+      "duration": "",
+      "description": "Mimari ve Folklor Koruma Alanı — çıkıntılı pencereli Rönesans döneminden kalma evleri, taş köprüleri ve ünlü Ulusal Halk Sanatları Okulu ile tanınan köy. Rodos gaydası, Şiroka Laka’nın ruhudur: burada kuker oyunları ve otantik folklor gösterileriyle “Pesponedelnik” festivali düzenlenir. Pamporovo’ya gelen her ziyaretçinin mutlaka uğraması gereken bir yer."
+    },
+    "rozhen-observatory": {
+      "title": "NAO „Rozhen“",
+      "distance": "18 km · arabayla 25 dakika",
+      "duration": "",
+      "description": "Balkan Yarımadası’nın en büyük astronomi gözlemevi, Rozen Çayırları’nın 1750 m yukarısında yer almaktadır. Güneydoğu Avrupa’nın en büyük teleskoplarından biri olan 2 metrelik bir teleskopa sahiptir. Gündüzleri rehberli geziler düzenleniyor; gece gözlemleri ise (rezervasyonla) unutulmaz bir deneyim sunuyor. Yakınlarda, efsanevi ulusal festivalin düzenlendiği Rozen çayırları bulunuyor."
+    },
+    "wonderful-bridges": {
+      "title": "Harika Köprüler",
+      "distance": "42 km · arabayla 1 saat",
+      "duration": "",
+      "description": "Erküpriya Nehri’nin binlerce yıl boyunca oyduğu devasa mermer kaya kemerleri. Büyük köprü 96 m uzunluğunda ve 45 m yüksekliğindedir — altından bir patika geçmektedir ve akustiği inanılmazdır. Küçük köprü ise 60 m uzunluğundadır. Bu yer, 100 ulusal turistik yerden biridir ve Zabardo köyünde bir öğle yemeği ile mükemmel bir şekilde birleşir."
+    },
+    "smolyan-town": {
+      "title": "Smolyan — planetaryum ve müzeler",
+      "distance": "15 km · arabayla 20 dakika",
+      "duration": "",
+      "description": "Snezhanka Dağı’nın eteklerindeki bu il merkezi, Rodop Dağları’nın ruhunu koruyor: Planetaryum, muhteşem yıldız gösterileriyle Bulgaristan’ın en büyüğüdür; “Stoyu Şişkov” Bölgesel Tarih Müzesi ise dağın yaşam tarzını, kostümlerini ve müziğini anlatır. Raykovo ve Ustovo gibi tarihi mahalleler, Rönesans döneminden kalma evleri ve sıcak atmosferli lokalleriyle ziyaretçileri büyülüyor."
+    },
+    "momchilovtsi": {
+      "title": "Momchilovtsi",
+      "distance": "25 km · arabayla 30 dakika",
+      "duration": "",
+      "description": "1200 m rakımda yer alan, sakinlerinin uzun ömürlülüğü ve Çin’e kadar efsane haline gelmiş ev yapımı yoğurduyla ünlü, şirin bir Rodop köyü. Panoramik yürüyüş yolları, her tepenin üzerinde birer şapel ve otantik, misafirperver lokantalar. Ağustos ayında köy, yoğurt festivaline ev sahipliği yapar."
+    },
+    "gela-village": {
+      "title": "Gela — Orpheus’un köyü",
+      "distance": "22 km · arabayla 30 dakika",
+      "duration": "",
+      "description": "Rhodope Dağları’nın en eski köylerinden biri olan Gela, efsanevi Orpheus’un doğum yeri olarak kabul edilir. 1500 m rakımda, uçsuz bucaksız çayırların ortasında yer alan Gela, her yıl Ağustos ayının ilk Pazar günü Uluslararası Gayda Festivali'ne ev sahipliği yapar — yüzlerce gayda çalgıcısı dağın her köşesini müziğiyle doldurur. Buradan Turlata ve Gela zirvelerine giden patikalar başlar."
+    },
+    "yagodina-cave": {
+      "title": "Yagodina Mağarası",
+      "distance": "50 km · arabayla 1 saat 15 dakika",
+      "duration": "45 dakikalık tur · 1100 m'lik rota",
+      "description": "Bulgaristan’ın uzunluk bakımından üçüncü büyük mağarası — Buynovsko Boğazı’nda üç katlı, toplam 10,5 km uzunluğunda galeriler. Turistik rota, leopar derisi, mağara incileri, sarkıtlar ve yeraltında Yeni Yıl'ın kutlandığı ünlü “Yılbaşı Salonu”nun yanından geçiyor. Sıcaklık sürekli 6 °C’dir — Ağustos ayında bile yanınıza bir ceket alın."
+    },
+    "devils-throat": {
+      "title": "Şeytanın Boğazı",
+      "distance": "55 km · arabayla 1 saat 20 dakika",
+      "duration": "30 dakikalık tur",
+      "description": "Balkanlar’ın en yüksek yeraltı şelalesine (42 m) sahip bir uçurum mağarası; mağaranın “Gürültülü Salonu”nda Trigradska Nehri, gürültüyle yeraltına dökülür. Efsaneye göre, Orpheus buradan Eurydice’yi aramak için yeraltı krallığına inmiştir. Suya düşen hiçbir şey yüzeye çıkmaz — bu, bilim insanlarının hâlâ araştırmakta olduğu bir gizemdir."
+    },
+    "trigrad-gorge": {
+      "title": "Trigrad Boğazı",
+      "distance": "53 km · arabayla 1 saat 15 dakika",
+      "duration": "",
+      "description": "Trigradska Nehri’nin üzerinde 250 m yüksekliğe kadar yükselen dik mermer duvarları olan bir kanyon — yol, kelimenin tam anlamıyla kayaların arasından geçiyor. Kaya tırmanıcı kuşu gibi nadir kuş türlerine ev sahipliği yapan bu yol, aynı zamanda Şeytan Boğazı ve Trigrad köyüne açılan bir geçit niteliğindedir. Bulgaristan’ın en etkileyici karayollarından biri olan bu yolun her bir virajı, fotoğraf çekmeye değer bir manzara sunuyor."
+    },
+    "uhlovitsa-cave": {
+      "title": "Uhlovitsa Mağarası",
+      "distance": "32 km · arabayla 45 dakika",
+      "duration": "30 dakikalık tur",
+      "description": "Bulgaristan’ın en güzel mağaralarından biri, Mogilitsa köyü yakınlarında yer almaktadır. Donmuş suya benzeyen kalsit oluşumlarından oluşan kademeli “şelaleler” ve tonozlardaki mercan benzeri oluşumlarla ünlüdür. Girişe, orman içinden geçen pitoresk bir patika uzanır (otoparktan yürüyerek yaklaşık 30 dakika)."
+    }
+  }
+}

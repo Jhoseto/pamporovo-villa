@@ -14,8 +14,11 @@ import {
   Wind,
 } from "lucide-react";
 import { CONTACT, PROPERTY_LOCATION } from "@/data/siteContent";
+import { useTranslation } from "@/contexts/LocaleContext";
+import { useContactAddress } from "@/i18n/contentHooks";
 import { usePamporovoWeather } from "@/hooks/usePamporovoWeather";
-import { formatWindSpeed, type WeatherIconKind } from "@/lib/weather";
+import { useLocalizedWeatherCondition, useLocalizedWindSpeed } from "@/i18n/guideHooks";
+import type { WeatherIconKind } from "@/lib/weather";
 import { cn } from "@/lib/utils";
 
 const WEATHER_ICONS: Record<WeatherIconKind, typeof Sun> = {
@@ -40,11 +43,14 @@ export function HeroGlassPanel({ className, children }: HeroGlassPanelProps) {
 }
 
 export function HeroWeatherWidget() {
+  const { t } = useTranslation();
   const weather = usePamporovoWeather();
+  const localizeCondition = useLocalizedWeatherCondition();
+  const formatWind = useLocalizedWindSpeed();
 
   if (weather.status === "loading") {
     return (
-      <div className="hero-glass-widget hero-weather-widget p-4" aria-busy="true" aria-label="Зареждане на времето">
+      <div className="hero-glass-widget hero-weather-widget p-4" aria-busy="true" aria-label={t("home.widgets.weatherLoading", "Зареждане на времето")}>
         <div className="hero-weather-skeleton mb-3 h-3 w-16 rounded-full" />
         <div className="hero-weather-skeleton mb-2 h-10 w-20 rounded-lg" />
         <div className="hero-weather-skeleton mb-4 h-3 w-28 rounded-full" />
@@ -59,26 +65,27 @@ export function HeroWeatherWidget() {
   if (weather.status === "error") {
     return (
       <div className="hero-glass-widget hero-weather-widget p-4 text-center">
-        <p className="eyebrow text-[0.58rem] text-[var(--gold)]/85">Пампорово</p>
-        <p className="mt-3 text-sm text-white/55">Времето временно недостъпно</p>
+        <p className="eyebrow text-[0.58rem] text-[var(--gold)]/85">{t("weather.resortName", "Пампорово")}</p>
+        <p className="mt-3 text-sm text-white/55">{t("home.widgets.weatherUnavailable", "Времето временно недостъпно")}</p>
       </div>
     );
   }
 
   const { data } = weather;
   const Icon = WEATHER_ICONS[data.icon];
+  const condition = localizeCondition(data.weatherCode);
 
   return (
     <div className="hero-glass-widget hero-weather-widget p-4">
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
-          <p className="eyebrow text-[0.58rem] text-[var(--gold)]/85">Пампорово</p>
+          <p className="eyebrow text-[0.58rem] text-[var(--gold)]/85">{t("weather.resortName", "Пампорово")}</p>
           <p className="mt-2 font-serif text-4xl leading-none text-white">
             {data.temperature}
             <span className="ml-0.5 text-2xl text-[var(--gold)]">°</span>
           </p>
           <p className="mt-1.5 text-[0.6875rem] text-white/50">
-            Усеща се като {data.feelsLike}°
+            {t("home.widgets.feelsLike", "Усеща се като")} {data.feelsLike}°
           </p>
         </div>
         <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/[0.05]">
@@ -86,29 +93,29 @@ export function HeroWeatherWidget() {
         </span>
       </div>
 
-      <p className="mt-3 text-sm font-medium text-white/85">{data.condition}</p>
+      <p className="mt-3 text-sm font-medium text-white/85">{condition.label}</p>
       <p className="mt-1 text-[0.625rem] tracking-wide text-white/40">
-        Днес {data.dailyMin}° – {data.dailyMax}° · 1 650 m
+        {t("home.widgets.today", "Днес")} {data.dailyMin}° – {data.dailyMax}° · {t("weather.elevation", "1 650 m")}
       </p>
 
       <div className="mt-3 grid grid-cols-2 gap-2">
         <div className="rounded-xl border border-white/8 bg-white/[0.04] px-2.5 py-2">
           <div className="flex items-center gap-1.5 text-white/45">
             <Droplets className="h-3 w-3 text-[var(--gold)]/80" strokeWidth={1.75} />
-            <span className="text-[0.5625rem] uppercase tracking-[0.12em]">Влажност</span>
+            <span className="text-[0.5625rem] uppercase tracking-[0.12em]">{t("home.widgets.humidity", "Влажност")}</span>
           </div>
           <p className="mt-1 font-serif text-base leading-none text-white">{data.humidity}%</p>
         </div>
         <div className="rounded-xl border border-white/8 bg-white/[0.04] px-2.5 py-2">
           <div className="flex items-center gap-1.5 text-white/45">
             <Wind className="h-3 w-3 text-[var(--gold)]/80" strokeWidth={1.75} />
-            <span className="text-[0.5625rem] uppercase tracking-[0.12em]">Вятър</span>
+            <span className="text-[0.5625rem] uppercase tracking-[0.12em]">{t("home.widgets.wind", "Вятър")}</span>
           </div>
           <p className="mt-1 font-serif text-base leading-none text-white">
             {data.windSpeed}{" "}
             <span className="font-sans text-[0.625rem] font-normal text-white/50">km/h</span>
           </p>
-          <p className="mt-0.5 text-[0.5625rem] text-white/40">{formatWindSpeed(data.windSpeed)}</p>
+          <p className="mt-0.5 text-[0.5625rem] text-white/40">{formatWind(data.windSpeed)}</p>
         </div>
       </div>
     </div>
@@ -116,6 +123,9 @@ export function HeroWeatherWidget() {
 }
 
 export function HeroContactWidget({ className }: { className?: string }) {
+  const { t } = useTranslation();
+  const address = useContactAddress();
+
   return (
     <div className={cn("hero-glass-widget hero-contact-widget p-4", className)}>
       <div className="flex items-start gap-3">
@@ -123,8 +133,8 @@ export function HeroContactWidget({ className }: { className?: string }) {
           <MapPin className="h-4 w-4 text-[var(--gold)]" strokeWidth={1.75} />
         </span>
         <div className="min-w-0 text-left">
-          <p className="eyebrow text-[0.58rem] text-[var(--gold)]/85">Локация</p>
-          <p className="mt-1 text-sm leading-snug text-white/85">{CONTACT.address}</p>
+          <p className="eyebrow text-[0.58rem] text-[var(--gold)]/85">{t("home.location.eyebrow", "Локация")}</p>
+          <p className="mt-1 text-sm leading-snug text-white/85">{address}</p>
         </div>
       </div>
 
@@ -137,7 +147,7 @@ export function HeroContactWidget({ className }: { className?: string }) {
         </span>
         <span className="min-w-0 text-left">
           <span className="block text-[0.5625rem] uppercase tracking-[0.14em] text-white/45">
-            Обадете се
+            {t("home.widgets.callUs", "Обадете се")}
           </span>
           <span className="mt-0.5 block font-serif text-lg leading-none text-white">
             {CONTACT.phoneDisplay}
@@ -152,7 +162,7 @@ export function HeroContactWidget({ className }: { className?: string }) {
         className="hero-contact-nav premium-btn mt-3 flex w-full items-center justify-center gap-2 rounded-xl px-4 py-3 text-[0.8125rem] font-medium tracking-wide"
       >
         <Navigation className="h-4 w-4" strokeWidth={1.75} />
-        Навигирай до нас
+        {t("home.location.directions", "Навигирай до нас")}
       </a>
     </div>
   );

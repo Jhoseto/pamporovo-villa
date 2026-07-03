@@ -1,0 +1,479 @@
+{
+  "nav": {
+    "ariaLabel": "Sekce na stránce",
+    "intro": "Letovisko",
+    "winter": "Zima",
+    "summer": "Léto",
+    "landmarks": "Okolí",
+    "caves": "Jeskyně"
+  },
+  "sticky": {
+    "book": "Rezervovat",
+    "rent": "Pronájem · ceny"
+  },
+  "ui": {
+    "pisteNumber": "č.",
+    "pisteName": "Dráha",
+    "difficulty": "Obtížnost",
+    "length": "Délka",
+    "note": "Poznámka",
+    "dash": "—",
+    "meters": "m",
+    "route": "Trasa",
+    "liftType": "Typ",
+    "capacity": "Kapacita/hod.",
+    "capacityPerHour": "Kapacita za hodinu"
+  },
+  "difficulty": {
+    "green": "Zelená · začátečníci",
+    "blue": "Modrá · střední úroveň",
+    "red": "Červená · pokročilí",
+    "black": "Černá · odborníci"
+  },
+  "sections": {
+    "intro": {
+      "eyebrow": "Letovisko",
+      "title": "Srdce Rodop",
+      "subtitle": "V nadmořské výšce 1650 m, na úpatí hory Sněžanka – nejstarší bulharské lyžařské středisko, založené v roce 1933.",
+      "panoramaAlt": "Zimní středisko Pamporovo – hotely a sjezdovky v Rodopách",
+      "towerAlt": "Věž Sněhurka – symbol Pamporova",
+      "p1": "Dvě hlavní lyžařská střediska – Studenec a Malina – spojená s vrcholem Sněžanka (1926 m). Sjezdovky se nacházejí v nadmořské výšce mezi 1400 a 1926 m, jsou vybaveny moderními vleky a více než 80 sněhovými děly.",
+      "p2": "V létě se letovisko stává centrem ekoturistiky — značené turistické stezky, cyklistika, jízda na koni a nespočet zajímavostí vzdálených 15–60 minut jízdy autem od Smolyanu, Široká Luka, Zázračné mosty a podzemní paláce v Západních Rodopech.",
+      "cta": "Rezervujte si vilu v Pamporově"
+    },
+    "winter": {
+      "eyebrow": "Zima",
+      "title": "Lyžařský areál – sjezdovky a vleky",
+      "subtitle": "37+ km značených sjezdovek pro lyžování a snowboarding, noční lyžování na „Stěně“ a trasy pro běžecké lyžování",
+      "skiAlt": "Sedačková lanovka na vrchol Sněžanka – věž nad Pamporovem",
+      "pistesHeading": "Sjezdovky podle obtížnosti",
+      "liftsHeading": "Výtahy a zařízení",
+      "activitiesHeading": "Zimní aktivity"
+    },
+    "summer": {
+      "eyebrow": "Léto",
+      "title": "Ekologické stezky a příroda",
+      "subtitle": "Kaňon vodopádů, Smolianská jezera, Orfeovy skály – jen pár minut od letoviska",
+      "summerAlt": "Horské jezero v Rodopách – letní ekologická stezka u Pamporova",
+      "activitiesHeading": "Letní aktivity"
+    },
+    "landmarks": {
+      "eyebrow": "Okolí",
+      "title": "Zajímavosti a vesnice",
+      "subtitle": "Architektonické památkové rezervace, observatoř, planetárium a autentický rodopský folklór"
+    },
+    "caves": {
+      "eyebrow": "Podzemní svět",
+      "title": "Jeskyně a soutěsky",
+      "subtitle": "Jagodinská jeskyně, Ďáblovo hrdlo, Trigradské soutěsky a Uhlovica – poklady Západních Rodop",
+      "footer": "Vily Pamporovo Villa se nacházejí v Raykovski Livadi — ideální výchozí bod pro zimní i letní dobrodružství v celém regionu.",
+      "cta": "Zobrazit volné termíny a rezervovat"
+    }
+  },
+  "attractions": {
+    "canyon-waterfalls": {
+      "title": "Kaňon vodopádů",
+      "distance": "15 km · u Smolyanu",
+      "duration": "~4 hodiny · 6 km okružní trasa",
+      "description": "Nejpůsobivější ekologická stezka v Rodopách – procházíte se staletými lesy přírodní rezervace „Soskovče“ podél řeky Gerzovska. Na trase napočítáte 46 vodopádů, mezi nimiž je i 68 metrů vysoký krasavec „Orfej“ — jeden z nejvyšších v Bulharsku. Vrcholem trasy je vyhlídková plošina ve výšce 1 800 m s výhledem na Smolyan a hřebeny Rodop.",
+      "highlights": [
+        "46 vodopádů",
+        "Vodopád „Orfeus“ — 68 m",
+        "Staleté smrkové lesy",
+        "Panorama ve výšce 1800 m"
+      ]
+    },
+    "smolyan-lakes": {
+      "title": "Smolianská jezera",
+      "distance": "10 km · pod vrcholem Sněžanka",
+      "duration": "~1 hodina · nenáročná trasa",
+      "description": "Známá jako „Smaragdové oči Rodopů“ — přírodní jezera, která se stupovitě rozkládají pod horou Sněžanka. Lehká stezka spojuje jezera Bistro, Mтно a Trevisto, kde se nacházejí místa vhodná pro piknik a rybaření. Ideální výlet pro rodiny s dětmi, který se skvěle kombinuje s výstupem na vrchol.",
+      "highlights": [
+        "Přírodní horská jezera",
+        "Lehká rodinná trasa",
+        "Místa na piknik",
+        "Lze kombinovat s vrcholem Sněžanka"
+      ]
+    },
+    "nevyastata": {
+      "title": "Ekologická stezka „Nevyasta“",
+      "distance": "12 km · nad Smolyanem",
+      "duration": "~40 min · 900 m stezka",
+      "description": "Krátká a snadno schůdná stezka vedoucí voňavým borovým lesem k strmé skále „Nevyasta“, tyčící se nad Smolyanem. Po celé trase se nacházejí vyhlídková místa a altánky, a pro milovníky adrenalinu je zde připraven alpský lanový most nad propastí. Legenda vypráví o dívce, která se vrhla ze skály, aby si zachovala svou víru.",
+      "highlights": [
+        "Vyhlídková místa",
+        "Alpský trolej",
+        "Legenda o Nevěstě",
+        "Vhodné pro všechny věkové skupiny"
+      ]
+    },
+    "orpheus-rocks": {
+      "title": "Orfeovy skály a Jehlice",
+      "distance": "6 km · od vrcholu Sněžanka",
+      "duration": "~4 hodiny · nízká náročnost",
+      "description": "Z vrcholu Sněženky vede značená stezka jihovýchodním směrem k Orfeovým skalám – bizarním ryolitovým útvarům s charakteristickým výhledem na Smolianská jezera. V opačném směru se nachází vrchol Iglite s dalším úchvatným panoramatem. Trasa vede přes pastviny a lesy, které jsou v srpnu poseté borůvkami.",
+      "highlights": [
+        "Rhyolitové skalní úkazy",
+        "Výhled na jezera",
+        "Vrchol Iglite",
+        "Divoké borůvky v srpnu"
+      ]
+    },
+    "shiroka-laka": {
+      "title": "Široká luk",
+      "distance": "16 km · 20 minut autem",
+      "duration": "",
+      "description": "Architektonická a folklórní rezervace – vesnice s domy z období národního obrození s arkýři, kamennými mosty a proslulou Národní školou folklórních umění. Rodopská dudy jsou duší Široké lúky: zde se koná festival „Pesponedelnik“ s kukerskými hrami a autentickým folklórem. Nezbytná zastávka pro každého návštěvníka Pamporova.",
+      "highlights": [
+        "Architektura období národního obrození",
+        "Škola pro hráče na dudy",
+        "Etnografické muzeum",
+        "Kukerský festival"
+      ]
+    },
+    "rozhen-observatory": {
+      "title": "Národní astronomická observatoř „Rožen“",
+      "distance": "18 km · 25 minut autem",
+      "duration": "",
+      "description": "Největší astronomická observatoř na Balkánském poloostrově, ležící v nadmořské výšce 1750 m nad Roženskými loukami. Disponuje 2metrovým dalekohledem – jedním z největších v jihovýchodní Evropě. Pořádají se zde denní prohlídky s výkladem a noční pozorování (po předchozí rezervaci) jsou nezapomenutelná. Nedaleko se nacházejí Roženské louky – dějiště legendárního národního shromáždění.",
+      "highlights": [
+        "2metrový dalekohled",
+        "Návštěvy spojené s rozhovorem",
+        "Noční pozorování",
+        "Slavnost v Roženu se blíží"
+      ]
+    },
+    "wonderful-bridges": {
+      "title": "Úžasné mosty",
+      "distance": "42 km · 1 hodina autem",
+      "duration": "",
+      "description": "Obrovské mramorové skalní oblouky, které po tisíciletí vyhloubila řeka Erküpriya. Velký most je dlouhý 96 m a vysoký 45 m – pod ním vede stezka a akustika je zde neuvěřitelná. Malý most je dlouhý 60 m. Tato památka patří mezi 100 nejvýznamnějších národních turistických atrakcí a skvěle se hodí k obědu ve vesnici Zabardo.",
+      "highlights": [
+        "Oblouk vysoký 45 m",
+        "100 národních památek",
+        "Cesta pod mosty",
+        "Chata a přístřešek v okolí"
+      ]
+    },
+    "smolyan-town": {
+      "title": "Smolyan — planetárium a muzea",
+      "distance": "15 km · 20 minut autem",
+      "duration": "",
+      "description": "Krajské město na úpatí hory Sněžanka uchovává ducha Rodop: Planetárium je největší v Bulharsku a nabízí velkolepé hvězdné představení, zatímco Regionální historické muzeum „Stoyu Šiškov“ přibližuje život, kroje a hudbu této horské oblasti. Starobylé čtvrti Rajkovo a Ustovo okouzlují domy z období národního obrození a útulnými hospůdkami.",
+      "highlights": [
+        "Největší planetárium v Bulharsku",
+        "RIM „Stoyu Šiškov“",
+        "Umělecká galerie",
+        "Čtvrti Rajkovo a Ustovo"
+      ]
+    },
+    "momchilovtsi": {
+      "title": "Momčilovci",
+      "distance": "25 km · 30 minut autem",
+      "duration": "",
+      "description": "Malebná rodopská vesnice v nadmořské výšce 1200 m, proslulá dlouhověkostí svých obyvatel a domácím jogurtem, který se stal legendou až v Číně. Panoramatické stezky, kapličky na každém kopci a autentické, pohostinné hospůdky. V srpnu se ve vesnici koná svátek jogurtu.",
+      "highlights": [
+        "Vesnice dlouhověkosti",
+        "Svátek jogurtu",
+        "Panoramatické kaple",
+        "Autentické mechanismy"
+      ]
+    },
+    "gela-village": {
+      "title": "Gela – vesnice Orfea",
+      "distance": "22 km · 30 minut autem",
+      "duration": "",
+      "description": "Jedna z nejstarších vesnic v Rodopách, považovaná za rodiště mýtického Orfea. Gela leží v nadmořské výšce 1500 m uprostřed nekonečných luk a každou první neděli v srpnu se zde koná Mezinárodní festival dudáků – stovky dudáků rozeznívají hory. Odtud vedou stezky k vrcholům Turlata a Gela.",
+      "highlights": [
+        "Orfeova vlast",
+        "Gajdarský festival v srpnu",
+        "Trácká svatyně",
+        "Začátek horských tras"
+      ]
+    },
+    "yagodina-cave": {
+      "title": "Jagodinská jeskyně",
+      "distance": "50 km · 1 hod. 15 min. autem",
+      "duration": "45minutová okružní trasa · 1100 m trasa",
+      "description": "Třetí nejdelší jeskyně v Bulharsku – 10,5 km chodeb ve třech podlažích v Boujnovském průsmyku. Turistická trasa vede kolem leopardí kůže, jeskynních perel, stalaktitů a proslulého „Novoročního sálu“, kde se pod zemí slaví Nový rok. Stálá teplota 6 °C – vezměte si bundu i v srpnu.",
+      "highlights": [
+        "10,5 km chodeb",
+        "Jeskynní perly",
+        "Novoroční sál",
+        "Úžina u Buynova podél silnice"
+      ]
+    },
+    "devils-throat": {
+      "title": "Ďáblovo hrdlo",
+      "distance": "55 km · 1 hod. 20 min. autem",
+      "duration": "30minutová prohlídka",
+      "description": "Propastná jeskyně s nejvyšším podzemním vodopádem na Balkáně – 42 m, v jejímž „Hřmícím sále“ se řeka Trigradska s hlukem vrhá pod zem. Podle legendy odtud sestoupil Orfeus do podzemního království za Eurydikou. Nic, co spadne do vody, se nedostane na povrch — záhada, kterou vědci dosud zkoumají.",
+      "highlights": [
+        "42 m podzemní vodopád",
+        "Hlučný sál",
+        "Legenda o Orfeovi",
+        "301 schodů podél vodopádu"
+      ]
+    },
+    "trigrad-gorge": {
+      "title": "Trigradská soutěska",
+      "distance": "53 km · 1 hod. 15 min. autem",
+      "duration": "",
+      "description": "Kaňon se strmými mramorovými stěnami, tyčícími se až 250 m nad řekou Trigradskou – silnice se doslova proplétá mezi skalami. Útočiště vzácných ptáků, jako je skalní lezec, a brána k Ďáblově hrdlu a vesnici Trigrad. Jedna z nejdramatičtějších silnic v Bulharsku — každá odbočka nabízí výhled hodný vyfocení.",
+      "highlights": [
+        "Stěny do 250 m",
+        "Dramatická horská cesta",
+        "Vzácní ptáci",
+        "Lze kombinovat s Ďáblovým hrdlem"
+      ]
+    },
+    "uhlovitsa-cave": {
+      "title": "Jeskyně Uhlovica",
+      "distance": "32 km · 45 minut autem",
+      "duration": "30minutová prohlídka",
+      "description": "Jedna z nejkrásnějších jeskyní v Bulharsku, nedaleko vesnice Mogilica. Je proslulá svými kamennými „vodopády“ – kaskádami kalcitových útvarů připomínajících zamrzlou vodu – a korálovými útvary na klenbách. K vchodu vede malebná stezka lesem (asi 30 minut chůze od parkoviště).",
+      "highlights": [
+        "Kamenné vodopády",
+        "Korálové útvary",
+        "4 podzemní jezera",
+        "V blízkosti Agushevových konaků"
+      ]
+    }
+  },
+  "stats": [
+    {
+      "value": "1650 m",
+      "label": "nadmořská výška letoviska"
+    },
+    {
+      "value": "1926 m",
+      "label": "vrchol Sněžanka — nejvyšší bod lyžařského areálu"
+    },
+    {
+      "value": "37+ km",
+      "label": "lyžařské sjezdovky všech úrovní obtížnosti"
+    },
+    {
+      "value": "1933",
+      "label": "založeno — nejstarší lyžařské středisko v Bulharsku"
+    },
+    {
+      "value": "~120",
+      "label": "slunečné dny v zimním období"
+    },
+    {
+      "value": "90 %",
+      "label": "na sjezdovkách s umělým zasněžováním"
+    }
+  ],
+  "pistes": [
+    {
+      "name": "Přehrada (Malá zeď)",
+      "note": ""
+    },
+    {
+      "name": "Bypass — Malá zeď",
+      "note": ""
+    },
+    {
+      "name": "Zeď",
+      "note": "Logo Pamporova – místa konání závodů Evropského poháru. Noční lyžování od 17:30 do 22:00."
+    },
+    {
+      "name": "Arch. Petr Petrov (Evropská)",
+      "note": ""
+    },
+    {
+      "name": "Sněhurka",
+      "note": ""
+    },
+    {
+      "name": "Sněhurka",
+      "note": ""
+    },
+    {
+      "name": "Malina",
+      "note": "Nejdelší červená sjezdovka – od vrcholu až po lyžařské středisko Malina."
+    },
+    {
+      "name": "Obchvat Maliny",
+      "note": ""
+    },
+    {
+      "name": "Pamporovo (turistická)",
+      "note": "Dlouhá a mírně svažitá – ideální pro první sjezdy a rodinnou jízdu."
+    },
+    {
+      "name": "Orlovec",
+      "note": ""
+    },
+    {
+      "name": "Perelik (jižní)",
+      "note": ""
+    },
+    {
+      "name": "Smolianská jezera",
+      "note": ""
+    },
+    {
+      "name": "Delyovo dere (Damsko)",
+      "note": ""
+    },
+    {
+      "name": "Kartola",
+      "note": ""
+    },
+    {
+      "name": "Stojany 1",
+      "note": ""
+    },
+    {
+      "name": "Stojany 2",
+      "note": ""
+    },
+    {
+      "name": "Fun Slope / Border Cross",
+      "note": "Trať s vlnami, nájezdy a figurami pro freestyle."
+    }
+  ],
+  "skiLifts": [
+    {
+      "route": "Stojky – vrchol Sněžanka",
+      "type": "Sedačková lanovka",
+      "note": "Nejdelší trať – překonává převýšení 453 m."
+    },
+    {
+      "route": "Lyžařské středisko 1 (autobusové nádraží) — Studenec",
+      "type": "4-sedačková lanovka",
+      "note": ""
+    },
+    {
+      "route": "Studenec — vrchol Sněžanka",
+      "type": "4-sedačková lanovka",
+      "note": "Hlavní spojení k vrcholu a černým sjezdovkám."
+    },
+    {
+      "route": "Malina – vrchol Sněžanka",
+      "type": "Sedačková lanovka",
+      "note": ""
+    },
+    {
+      "route": "Smolianská jezera — vrchol Sněžanka",
+      "type": "Sedačková lanovka",
+      "note": ""
+    },
+    {
+      "route": "Malina – Studenec",
+      "type": "Sedačková lanovka",
+      "note": ""
+    }
+  ],
+  "liftFacts": [
+    {
+      "route": "Stojky – vrchol Sněžanka",
+      "type": "Sedačková lanovka"
+    },
+    {
+      "route": "Lyžařské středisko 1 – Studenec",
+      "type": "4-sedačková lanovka"
+    },
+    {
+      "route": "Studenec — vrchol Sněžanka",
+      "type": "4-sedačková lanovka"
+    },
+    {
+      "route": "Malina – vrchol Sněžanka",
+      "type": "Sedačková lanovka"
+    },
+    {
+      "route": "Smolianská jezera — vrchol Sněžanka",
+      "type": "Sedačková lanovka"
+    },
+    {
+      "route": "Malina – Studenec",
+      "type": "Sedačková lanovka"
+    }
+  ],
+  "skiExtras": [
+    "Celková kapacita zařízení — více než 13 000 lyžařů za hodinu",
+    "Lyžařské a snowboardové školy s certifikovanými instruktory a dětskými areály",
+    "Noční jízda na okruhu Stenata-2 (17:30 – 22:00)",
+    "2 trasy pro běžecké lyžování: Sněhurka č. 14 (25 km, do vesnice Mugla) a č. 15 „Ardašl“ (7 km, do vesnice Stoykite)",
+    "Fun park se snowtubingem, boardercrossem a překážkami pro freestyle",
+    "Šatny, půjčovny a úschovny lyží ve Studenci a Malině"
+  ],
+  "winterActivities": [
+    {
+      "title": "Lyže a snowboard",
+      "description": "37+ km sjezdovek pro všechny úrovně, moderní vleky a zaručený sníh od prosince do dubna."
+    },
+    {
+      "title": "Noční jízda",
+      "description": "Osvětlená Zeď-2 je v provozu do 22:00 — zážitek, na který se nezapomíná."
+    },
+    {
+      "title": "Běžecké lyžování",
+      "description": "25 km značených tras zasněženými lesy směrem k Mugle a Stoykite."
+    },
+    {
+      "title": "Sněžnice a procházky",
+      "description": "Organizované výlety na sněžnicích k Orfeovým skalám a Smolenským jezerům."
+    },
+    {
+      "title": "Lyžařské školy pro děti",
+      "description": "Certifikovaní instruktoři, dětská sjezdovka s vleky a spousta trpělivosti."
+    },
+    {
+      "title": "Après-ski",
+      "description": "Hospody s rodopskými specialitami, živou hudbou a svařeným vínem jen pár metrů od sjezdovek."
+    }
+  ],
+  "summerActivities": [
+    {
+      "title": "Horská cyklistika",
+      "description": "Značené trasy pro horská kola z vrcholu Sněžanka – od nenáročných lesních stezek až po sjezdy pro pokročilé."
+    },
+    {
+      "title": "Ekologické stezky",
+      "description": "Kaňon vodopádů, Nevyasta, Smolianská jezera — desítky tras v dosahu jedné hodiny cesty."
+    },
+    {
+      "title": "Lanový park a atrakce",
+      "description": "Adventure park s lanovými dráhami, lezeckou stěnou a lanovkou pro malé i velké."
+    },
+    {
+      "title": "Jízda na koni",
+      "description": "Jezdecká střediska v této oblasti nabízejí vyjížďky po loukách v Roženu a Stojkitách."
+    },
+    {
+      "title": "Sběr hub a bylin",
+      "description": "Lanýže, borůvky a přes 300 druhů bylin – Rodopy jsou živá lékárna."
+    },
+    {
+      "title": "Fotografie a hvězdy",
+      "description": "Východy slunce nad mořem zahaleným mlhou, temná obloha vhodná pro astrofotografii a nedaleká observatoř „Rožen“."
+    }
+  ],
+  "lists": {
+    "eco": [
+      "kaňony a vodopády",
+      "smolyan-jezera",
+      "nevyastata",
+      "orpheus-rocks"
+    ],
+    "landmarks": [
+      "shiroka-laka",
+      "rozhen-observatoř",
+      "nádherné mosty",
+      "smolyan-město",
+      "Momchilovci",
+      "gela-village"
+    ],
+    "caves": [
+      "jagodinská jeskyně",
+      "ďáblovo hrdlo",
+      "Trigradská soutěska",
+      "uhlovitsa-jeskyně"
+    ]
+  }
+}

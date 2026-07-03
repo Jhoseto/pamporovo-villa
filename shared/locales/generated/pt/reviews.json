@@ -8,6 +8,50 @@
   "placeholderName": "O seu nome",
   "placeholderEmail": "à escolha",
   "placeholderPeriod": "por exemplo, março de 2025",
-  "placeholderBody": "O que é que ficou na vossa memória da vossa estadia connosco...",
-  "villaUnknown": "Não tenho a certeza"
+  "placeholderBody": "O que é que guardou na memória da sua estadia connosco...",
+  "villaUnknown": "Não tenho a certeza",
+  "form": {
+    "name": "Nome",
+    "email": "E-mail",
+    "rating": "Avaliação",
+    "title": "Título",
+    "body": "A sua opinião",
+    "bodyPlaceholder": "Partilhem o que gostaram e o que poderíamos melhorar...",
+    "submit": "Enviar comentário",
+    "submitting": "A enviar...",
+    "namePlaceholder": "O seu nome",
+    "emailPlaceholder": "à escolha",
+    "ratingAria": "{star} estrelas",
+    "villa": "Villa",
+    "villaPlaceholder": "Selecione",
+    "villaUnknown": "Não tenho a certeza",
+    "period": "Período",
+    "periodPlaceholder": "por exemplo, março de 2025"
+  },
+  "toast": {
+    "success": "Agradecemos o seu comentário! Iremos publicá-lo após revisão.",
+    "error": "Ocorreu um erro ao enviar o comentário."
+  },
+  "carousel": {
+    "readMore": "Ler mais",
+    "close": "Fechar",
+    "googleSource": "Google",
+    "siteSource": "Site",
+    "readFull": "A crítica completa",
+    "open": "Abrir",
+    "readFullAria": "Ler a crítica completa",
+    "openAria": "Abrir a avaliação",
+    "emptyTitle": "Ainda não há comentários publicados",
+    "emptyBody": "Seja o primeiro — partilhe as suas impressões abaixo.",
+    "pause": "Pausa na rolagem automática",
+    "resume": "Continuar a rolagem automática",
+    "prev": "Comentário anterior",
+    "next": "Próximo comentário",
+    "navLabel": "Comentários",
+    "reviewN": "Comentário {n}",
+    "photoCount": "{count} fotografias"
+  },
+  "modal": {
+    "close": "Fechar"
+  }
 }

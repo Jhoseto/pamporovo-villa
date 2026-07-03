@@ -1,0 +1,479 @@
+{
+  "nav": {
+    "ariaLabel": "Sezioni della pagina",
+    "intro": "Il resort",
+    "winter": "Inverno",
+    "summer": "Estate",
+    "landmarks": "I dintorni",
+    "caves": "Grotte"
+  },
+  "sticky": {
+    "book": "Prenota",
+    "rent": "Affitto · prezzi"
+  },
+  "ui": {
+    "pisteNumber": "N.",
+    "pisteName": "Pista",
+    "difficulty": "Difficoltà",
+    "length": "Lunghezza",
+    "note": "Nota",
+    "dash": "—",
+    "meters": "m",
+    "route": "Itinerario",
+    "liftType": "Tipo",
+    "capacity": "Capacità/ora",
+    "capacityPerHour": "Capacità/ora"
+  },
+  "difficulty": {
+    "green": "Verde · principianti",
+    "blue": "Blu · livello intermedio",
+    "red": "Rosso · avanzato",
+    "black": "Cherna · esperti"
+  },
+  "sections": {
+    "intro": {
+      "eyebrow": "Il resort",
+      "title": "Il cuore dei Rodopi",
+      "subtitle": "A 1650 m s.l.m., ai piedi del monte Snezhanka — la più antica località sciistica bulgara, fondata nel 1933.",
+      "panoramaAlt": "Stazione sciistica di Pamporovo — hotel e piste nei Monti Rodopi",
+      "towerAlt": "La Torre di Snezhanka — simbolo di Pamporovo",
+      "p1": "Due principali centri sciistici — Studenets e Malina — collegati alla vetta dello Snezhanka (1926 m). Le piste si trovano tra i 1400 e i 1926 m, sono dotate di impianti di risalita moderni e di oltre 80 cannoni da neve.",
+      "p2": "In estate, la località turistica si trasforma in un centro di ecoturismo: sentieri segnalati, ciclismo, equitazione e innumerevoli attrazioni a 15–60 minuti di auto da Smolyan, Shiroka Luka, i Ponti Meravigliosi e i palazzi sotterranei dei Rodopi occidentali.",
+      "cta": "Prenota una villa a Pamporovo"
+    },
+    "winter": {
+      "eyebrow": "Inverno",
+      "title": "Area sciistica — piste e impianti di risalita",
+      "subtitle": "Oltre 37 km di piste segnalate per sci e snowboard, sci notturno sulla “Parete” e percorsi per lo sci di fondo",
+      "skiAlt": "Seggiovia per la vetta dello Snezhanka — la torre sopra Pamporovo",
+      "pistesHeading": "Piste per livello di difficoltà",
+      "liftsHeading": "Ascensori e impianti",
+      "activitiesHeading": "Attività invernali"
+    },
+    "summer": {
+      "eyebrow": "Estate",
+      "title": "Sentieri ecologici e natura",
+      "subtitle": "Il canyon delle cascate, i laghi di Smolyan, le rocce di Orfeo — a pochi minuti dalla località turistica",
+      "summerAlt": "Lago di montagna nei Rodopi — sentiero ecologico estivo nei pressi di Pamporovo",
+      "activitiesHeading": "Attività estive"
+    },
+    "landmarks": {
+      "eyebrow": "I dintorni",
+      "title": "Luoghi di interesse e villaggi",
+      "subtitle": "Siti di interesse architettonico, osservatorio, planetario e autentico folklore dei Rodopi"
+    },
+    "caves": {
+      "eyebrow": "Il mondo sotterraneo",
+      "title": "Grotte e gole",
+      "subtitle": "La grotta di Yagodina, la Gola del Diavolo, la gola di Trigrad e Uhlovitsa: i tesori dei Rodopi occidentali",
+      "footer": "Le ville Pamporovo Villa si trovano a Raykovski Livadi: una base ideale per avventure invernali ed estive in tutta la regione.",
+      "cta": "Visualizza le date disponibili e prenota"
+    }
+  },
+  "attractions": {
+    "canyon-waterfalls": {
+      "title": "Il canyon delle cascate",
+      "distance": "15 km · nei pressi di Smolyan",
+      "duration": "~4 ore · percorso ad anello di 6 km",
+      "description": "Il sentiero ecologico più suggestivo dei Rodopi: si attraversano le foreste secolari della riserva naturale “Soskovcheto” lungo il fiume Gerzovska. Lungo il percorso potrete ammirare 46 cascate, tra cui la splendida «Orfeo», alta 68 metri, una delle più alte della Bulgaria. Il culmine del percorso è una piattaforma panoramica a 1800 m con vista su Smolyan e sulle cime dei Rodopi.",
+      "highlights": [
+        "46 cascate",
+        "Cascata “Orfeo” — 68 m",
+        "Foreste secolari di abeti rossi",
+        "Panorama a 1800 m"
+      ]
+    },
+    "smolyan-lakes": {
+      "title": "I laghi di Smolyan",
+      "distance": "10 km · ai piedi del monte Snezhanka",
+      "duration": "~1 ora · percorso facile",
+      "description": "Chiamati “Gli occhi di smeraldo dei Rodopi” — laghi naturali disposti a gradini ai piedi del monte Snezhanka. Un sentiero agevole collega i laghi Bistro, Mutno e Trevisto, con aree attrezzate per picnic e pesca. Una passeggiata ideale per famiglie con bambini, che si abbina perfettamente alla scalata della vetta.",
+      "highlights": [
+        "Laghi naturali di montagna",
+        "Percorso facile per famiglie",
+        "Luoghi per un picnic",
+        "Si abbina alla vetta Snezhanka"
+      ]
+    },
+    "nevyastata": {
+      "title": "Sentiero ecologico “Nevyasta”",
+      "distance": "12 km · sopra Smolyan",
+      "duration": "~40 min · 900 m di sentiero",
+      "description": "Un sentiero breve e agevole attraverso un profumato bosco di pini fino alla scogliera a strapiombo “Nevyastata”, che sovrasta Smolyan. Punti panoramici e gazebo lungo tutto il percorso e, per gli amanti dell’adrenalina, una teleferica alpina sopra il precipizio. La leggenda narra di una fanciulla che si gettò dalla rupe per preservare la propria fede.",
+      "highlights": [
+        "Piattaforme panoramiche",
+        "Tram alpino",
+        "La leggenda della Sposa",
+        "Adatta a tutte le età"
+      ]
+    },
+    "orpheus-rocks": {
+      "title": "Le Rocce di Orfeo e le Aghi",
+      "distance": "6 km · dal picco Snezhanka",
+      "duration": "~4 ore · intensità leggera",
+      "description": "Dalla cima dello Snezhanka, un sentiero segnalato conduce in direzione sud-est verso le Rocce di Orfeo — bizzarre formazioni riolitiche che offrono una vista emblematica sui Laghi di Smolyan. Nella direzione opposta si trova la vetta di Iglite, che offre un altro panorama mozzafiato. Il percorso attraversa pascoli e boschi, costellati di mirtilli rossi nel mese di agosto.",
+      "highlights": [
+        "Fenomeni rocciosi riolitici",
+        "Vista sui laghi",
+        "Vetta delle Aghe",
+        "Mirtilli selvatici in agosto"
+      ]
+    },
+    "shiroka-laka": {
+      "title": "L'ampia curva",
+      "distance": "16 km · 20 min in auto",
+      "duration": "",
+      "description": "Riserva architettonica e folcloristica — il villaggio delle case del Risorgimento con i balconi a bovindo, i ponticelli in pietra e la famosa Scuola Nazionale di Arti Folcloristiche. La cornamusa dei Rodopi è l’anima di Shiroka Laka: qui si svolge la festa «Pesponedelnik» con i giochi dei kukeri e il folklore autentico. Una tappa imperdibile per ogni visitatore di Pamporovo.",
+      "highlights": [
+        "Architettura del Rinascimento",
+        "Scuola per suonatori di cornamusa",
+        "Museo etnografico",
+        "Festival dei Kukeri"
+      ]
+    },
+    "rozhen-observatory": {
+      "title": "NAO “Rozhen”",
+      "distance": "18 km · 25 min in auto",
+      "duration": "",
+      "description": "Il più grande osservatorio astronomico della penisola balcanica, situato a 1750 m sopra i prati di Rozen. Dispone di un telescopio da 2 metri, uno dei più grandi dell’Europa sud-orientale. Vengono organizzate visite diurne con conferenze, mentre le osservazioni notturne (su prenotazione) sono indimenticabili. Nelle vicinanze si trovano i prati di Rozen, sede del leggendario raduno nazionale.",
+      "highlights": [
+        "Telescopio da 2 metri",
+        "Visite con colloquio",
+        "Osservazioni notturne",
+        "La festa di Rozen si avvicina"
+      ]
+    },
+    "wonderful-bridges": {
+      "title": "I ponti meravigliosi",
+      "distance": "42 km · 1 ora in auto",
+      "duration": "",
+      "description": "Giganteschi archi rocciosi di marmo, scolpiti dal fiume Erküpriya nel corso di millenni. Il ponte maggiore è lungo 96 m e alto 45 m: sotto di esso passa un sentiero e l’acustica è incredibile. Il ponte piccolo è lungo 60 m. Il sito fa parte dei 100 siti turistici nazionali e si abbina perfettamente a un pranzo nel villaggio di Zabardo.",
+      "highlights": [
+        "Arco alto 45 m",
+        "100 siti nazionali",
+        "Sentiero sotto i ponti",
+        "Rifugio e riparo nelle vicinanze"
+      ]
+    },
+    "smolyan-town": {
+      "title": "Smolyan — planetario e musei",
+      "distance": "15 km · 20 min in auto",
+      "duration": "",
+      "description": "La città capoluogo di provincia, situata ai piedi del monte Snezhanka, custodisce lo spirito dei Rodopi: il planetario è il più grande della Bulgaria e offre spettacolari rappresentazioni astronomiche, mentre il Museo storico regionale «Stoyu Shishkov» racconta la vita quotidiana, i costumi e la musica della montagna. Gli antichi quartieri di Raikovo e Ustovo incantano con le loro case in stile Rinascimento e le accoglienti taverne.",
+      "highlights": [
+        "Il planetario più grande della Bulgaria",
+        "LICEO “Stoyu Shishkov”",
+        "Galleria d'arte",
+        "I quartieri di Raikovo e Ustovo"
+      ]
+    },
+    "momchilovtsi": {
+      "title": "Momchilovtsi",
+      "distance": "25 km · 30 min in auto",
+      "duration": "",
+      "description": "Un pittoresco villaggio dei Rodopi a 1200 m di altitudine, famoso per la longevità dei suoi abitanti e per lo yogurt fatto in casa, diventato leggendario persino in Cina. Sentieri panoramici, cappelle su ogni collina e autentiche taverne dall’accoglienza calorosa. Nel mese di agosto il villaggio ospita la festa dello yogurt.",
+      "highlights": [
+        "Il villaggio della longevità",
+        "Festa dello yogurt",
+        "Cappelle panoramiche",
+        "Meccanismi autentici"
+      ]
+    },
+    "gela-village": {
+      "title": "Gela — il villaggio di Orfeo",
+      "distance": "22 km · 30 min in auto",
+      "duration": "",
+      "description": "Uno dei villaggi più antichi dei Rodopi, considerato il luogo di nascita del mitico Orfeo. Situato a 1500 m di altitudine tra prati sconfinati, Gela ospita il Festival internazionale della cornamusa ogni prima domenica di agosto: centinaia di suonatori di cornamusa risuonano tra le montagne. Da qui partono i sentieri che conducono alle cime di Turlata e Gela.",
+      "highlights": [
+        "La patria di Orfeo",
+        "Festival di cornamusa ad agosto",
+        "Santuari traci",
+        "Punto di partenza degli itinerari di montagna"
+      ]
+    },
+    "yagodina-cave": {
+      "title": "La grotta di Yagodina",
+      "distance": "50 km · 1 ora e 15 minuti in auto",
+      "duration": "45 min di percorso · 1100 m di percorso",
+      "description": "La terza grotta più lunga della Bulgaria: 10,5 km di gallerie su tre livelli nella gola di Buynovo. Il percorso turistico passa accanto a formazioni rocciose a forma di pelle di leopardo, perle di grotta, stalattiti e stalagmiti e alla famosa «Sala di Capodanno», dove si festeggia il Capodanno sottoterra. La temperatura è costante a 6 °C: portatevi una giacca anche ad agosto.",
+      "highlights": [
+        "10,5 km di gallerie",
+        "Perle delle caverne",
+        "Sala di Capodanno",
+        "La gola di Buynovsko lungo la strada"
+      ]
+    },
+    "devils-throat": {
+      "title": "La Gola del Diavolo",
+      "distance": "55 km · 1 ora e 20 minuti in auto",
+      "duration": "Giro di 30 minuti",
+      "description": "Una grotta abissale con la cascata sotterranea più alta dei Balcani — 42 m — nella cui “Sala del Frastuono” il fiume Trigradska si getta fragorosamente sottoterra. Secondo la leggenda, fu da qui che Orfeo scese nel regno degli inferi alla ricerca di Euridice. Nulla di ciò che cade nell’acqua riemerge in superficie: un mistero che gli scienziati stanno ancora studiando.",
+      "highlights": [
+        "Cascata sotterranea di 42 m",
+        "La sala in fermento",
+        "La leggenda di Orfeo",
+        "301 gradini lungo la cascata"
+      ]
+    },
+    "trigrad-gorge": {
+      "title": "La gola di Trigrad",
+      "distance": "53 km · 1 ora e 15 minuti in auto",
+      "duration": "",
+      "description": "Un canyon con pareti marmoree a strapiombo che si innalzano fino a 250 m sopra il fiume Trigradska: la strada si insinua letteralmente tra le rocce. Dimora di uccelli rari come la capinera e porta d’accesso alla Gola del Diavolo e al villaggio di Trigrad. Una delle strade più spettacolari della Bulgaria: ogni deviazione offre uno scenario da fotografare.",
+      "highlights": [
+        "Pareti fino a 250 m",
+        "Una strada di montagna mozzafiato",
+        "Uccelli rari",
+        "Si abbina al \"Gola del Diavolo\""
+      ]
+    },
+    "uhlovitsa-cave": {
+      "title": "Grotta di Uhlovitsa",
+      "distance": "32 km · 45 min in auto",
+      "duration": "Giro di 30 minuti",
+      "description": "Una delle grotte più belle della Bulgaria, nei pressi del villaggio di Mogilitsa. È famosa per le sue “cascate” di pietra — cascate di formazioni calcitiche che ricordano l’acqua ghiacciata — e per i coralliti sulle volte. All’ingresso conduce un pittoresco sentiero attraverso il bosco (circa 30 minuti a piedi dal parcheggio).",
+      "highlights": [
+        "Cascate di pietra",
+        "Formazioni coralline",
+        "4 laghi sotterranei",
+        "Vicino alle dimore degli Agushev"
+      ]
+    }
+  },
+  "stats": [
+    {
+      "value": "1650 m",
+      "label": "altitudine della località turistica"
+    },
+    {
+      "value": "1926 m",
+      "label": "Cima Snezhanka — la vetta del comprensorio sciistico"
+    },
+    {
+      "value": "37+ km",
+      "label": "piste da sci di tutti i livelli di difficoltà"
+    },
+    {
+      "value": "1933",
+      "label": "fondata — la più antica località sciistica della Bulgaria"
+    },
+    {
+      "value": "~120",
+      "label": "giorni di sole durante la stagione invernale"
+    },
+    {
+      "value": "90%",
+      "label": "dalle piste con innevamento artificiale"
+    }
+  ],
+  "pistes": [
+    {
+      "name": "Il bacino idrico (La Piccola Muraglia)",
+      "note": ""
+    },
+    {
+      "name": "Bypass — Il muretto",
+      "note": ""
+    },
+    {
+      "name": "Il muro",
+      "note": "Il simbolo di Pamporovo — sede delle gare della Coppa d’Europa. Sci notturno dalle 17:30 alle 22:00."
+    },
+    {
+      "name": "Arch. Petar Petrov (Europea)",
+      "note": ""
+    },
+    {
+      "name": "Biancaneve",
+      "note": ""
+    },
+    {
+      "name": "Biancaneve",
+      "note": ""
+    },
+    {
+      "name": "Lampone",
+      "note": "La pista rossa più lunga — dalla vetta al centro sciistico di Malina."
+    },
+    {
+      "name": "Bypass Malina",
+      "note": ""
+    },
+    {
+      "name": "Pamporovo (Turistica)",
+      "note": "Lunga e in leggera pendenza: ideale per le prime discese e per sciare in famiglia."
+    },
+    {
+      "name": "Orlovets",
+      "note": ""
+    },
+    {
+      "name": "Perelik (del Sud)",
+      "note": ""
+    },
+    {
+      "name": "I laghi di Smolyan",
+      "note": ""
+    },
+    {
+      "name": "Delovo Dere (Damskata)",
+      "note": ""
+    },
+    {
+      "name": "Cartola",
+      "note": ""
+    },
+    {
+      "name": "I supporti 1",
+      "note": ""
+    },
+    {
+      "name": "I supporti 2",
+      "note": ""
+    },
+    {
+      "name": "Fun Slope / Boarder Cross",
+      "note": "Percorso con onde, dossi e figure per il freestyle."
+    }
+  ],
+  "skiLifts": [
+    {
+      "route": "I punti di appoggio — vetta Snezhanka",
+      "type": "Seggiovia",
+      "note": "Il percorso più lungo: supera un dislivello di 453 m."
+    },
+    {
+      "route": "Centro sciistico 1 (Stazione degli autobus) — Studenets",
+      "type": "Seggiovia a 4 posti",
+      "note": ""
+    },
+    {
+      "route": "Studenets — vetta Snezhanka",
+      "type": "Seggiovia a 4 posti",
+      "note": "Il collegamento principale verso la vetta e le piste nere."
+    },
+    {
+      "route": "Malina — vetta Snezhanka",
+      "type": "Seggiovia",
+      "note": ""
+    },
+    {
+      "route": "I laghi di Smolyan — il picco Snezhanka",
+      "type": "Seggiovia",
+      "note": ""
+    },
+    {
+      "route": "Malina — Studenets",
+      "type": "Seggiovia",
+      "note": ""
+    }
+  ],
+  "liftFacts": [
+    {
+      "route": "I punti di appoggio — vetta Snezhanka",
+      "type": "Seggiovia"
+    },
+    {
+      "route": "Centro sciistico 1 — Studenets",
+      "type": "Seggiovia a 4 posti"
+    },
+    {
+      "route": "Studenets — vetta Snezhanka",
+      "type": "Seggiovia a 4 posti"
+    },
+    {
+      "route": "Malina — vetta Snezhanka",
+      "type": "Seggiovia"
+    },
+    {
+      "route": "I laghi di Smolyan — il picco Snezhanka",
+      "type": "Seggiovia"
+    },
+    {
+      "route": "Malina — Studenets",
+      "type": "Seggiovia"
+    }
+  ],
+  "skiExtras": [
+    "Capacità complessiva degli impianti: oltre 13 000 sciatori all’ora",
+    "Scuole di sci e snowboard con istruttori certificati e parchi per bambini",
+    "Guida notturna sul circuito \"Stenata-2\" (dalle 17:30 alle 22:00)",
+    "2 percorsi di sci di fondo: Snezhanka n. 14 (25 km, fino al villaggio di Mugla) e n. 15 “Ardashl” (7 km, fino al villaggio di Stoykite)",
+    "Parco divertimenti con snow tubing, boardercross e strutture per il freestyle",
+    "Guardaroba, servizi e depositi sci a Studenets e Malina"
+  ],
+  "winterActivities": [
+    {
+      "title": "Sci e snowboard",
+      "description": "Oltre 37 km di piste per tutti i livelli, impianti di risalita moderni e neve garantita da dicembre ad aprile."
+    },
+    {
+      "title": "Guida notturna",
+      "description": "Il \"Muro-2\" illuminato rimane aperto fino alle 22:00 — un'esperienza indimenticabile."
+    },
+    {
+      "title": "Sci di fondo",
+      "description": "25 km di sentieri segnalati attraverso i boschi innevati verso Mugla e Stoykite."
+    },
+    {
+      "title": "Escursioni con le racchette da neve e passeggiate",
+      "description": "Escursioni guidate con le racchette da neve alle Rocce di Orfeo e ai Laghi di Smolyan."
+    },
+    {
+      "title": "Scuole di sci per bambini",
+      "description": "Istruttori certificati, parchi per bambini con skilift e una vera e propria riserva di pazienza."
+    },
+    {
+      "title": "Après-ski",
+      "description": "Locali con specialità dei Rodopi, musica dal vivo e vin brulé a pochi metri dalle piste."
+    }
+  ],
+  "summerActivities": [
+    {
+      "title": "Ciclismo di montagna",
+      "description": "Percorsi MTB segnalati dal picco Snezhanka: da facili sentieri nel bosco a discese per esperti."
+    },
+    {
+      "title": "Sentieri ecologici",
+      "description": "Il canyon delle cascate, la Sposa, i laghi di Smolyan: decine di itinerari a un’ora di viaggio."
+    },
+    {
+      "title": "Parco avventura e attrazioni",
+      "description": "Parco avventura con percorsi su fune, parete da arrampicata e teleferica per grandi e piccini."
+    },
+    {
+      "title": "Equitazione",
+      "description": "I centri ippici della zona offrono escursioni attraverso i prati di Rozen e Stoykite."
+    },
+    {
+      "title": "Raccolta di funghi ed erbe aromatiche",
+      "description": "Funghi porcini, mirtilli e oltre 300 specie di erbe: i Rodopi sono una vera e propria farmacia naturale."
+    },
+    {
+      "title": "Fotografia e celebrità",
+      "description": "Albe sul mare avvolto dalla nebbia, cielo buio ideale per l’astrofotografia e l’Osservatorio astronomico nazionale “Rozhen” nelle vicinanze."
+    }
+  ],
+  "lists": {
+    "eco": [
+      "canyon-cascate",
+      "laghi di Smolyan",
+      "nevyastata",
+      "orpheus-rocks"
+    ],
+    "landmarks": [
+      "shiroka-laka",
+      "osservatorio di Rozhen",
+      "wonderful-bridges",
+      "smolyan-città",
+      "Momchilovtsi",
+      "gela-village"
+    ],
+    "caves": [
+      "grotta di Yagodina",
+      "gola del diavolo",
+      "Gola di Trigrad",
+      "uhlovitsa-grotta"
+    ]
+  }
+}

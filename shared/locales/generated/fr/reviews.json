@@ -9,5 +9,49 @@
   "placeholderEmail": "au choix",
   "placeholderPeriod": "par exemple, mars 2025",
   "placeholderBody": "Quels sont vos souvenirs de votre séjour chez nous...",
-  "villaUnknown": "Je ne suis pas sûr(e)"
+  "villaUnknown": "Je ne suis pas sûr(e)",
+  "form": {
+    "name": "Nom",
+    "email": "E-mail",
+    "rating": "Évaluation",
+    "title": "Titre",
+    "body": "Votre avis",
+    "bodyPlaceholder": "Dites-nous ce qui vous a plu et ce que nous pourrions améliorer...",
+    "submit": "Envoyer un avis",
+    "submitting": "Envoi...",
+    "namePlaceholder": "Votre nom",
+    "emailPlaceholder": "au choix",
+    "ratingAria": "{star} étoiles",
+    "villa": "Villa",
+    "villaPlaceholder": "Sélectionnez",
+    "villaUnknown": "Je ne suis pas sûr(e)",
+    "period": "Période",
+    "periodPlaceholder": "par exemple, mars 2025"
+  },
+  "toast": {
+    "success": "Merci pour votre avis ! Nous le publierons après l'avoir examiné.",
+    "error": "Une erreur s'est produite lors de l'envoi de l'avis."
+  },
+  "carousel": {
+    "readMore": "En savoir plus",
+    "close": "Fermer",
+    "googleSource": "Google",
+    "siteSource": "Site web",
+    "readFull": "L'avis complet",
+    "open": "Ouvrir",
+    "readFullAria": "Lire l'avis complet",
+    "openAria": "Ouvrir l'avis",
+    "emptyTitle": "Aucun avis n'a encore été publié",
+    "emptyBody": "Soyez le premier à partager vos impressions ci-dessous.",
+    "pause": "Pause du défilement automatique",
+    "resume": "Poursuivre le défilement automatique",
+    "prev": "Avis précédent",
+    "next": "Avis suivant",
+    "navLabel": "Avis",
+    "reviewN": "Avis {n}",
+    "photoCount": "{count} photos"
+  },
+  "modal": {
+    "close": "Fermer"
+  }
 }

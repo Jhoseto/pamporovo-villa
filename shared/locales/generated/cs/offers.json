@@ -1,0 +1,36 @@
+{
+  "eyebrow": "Exkluzivní balíčky",
+  "title": "Nejlepší nabídky",
+  "subtitle": "Vybrané balíčky pro lyžařskou a letní dovolenou za speciální cenu. Termíny jsou omezené – a ty nejlepší termíny se vyprodávají jako první.",
+  "loading": "Načítání...",
+  "empty": "V současné době nejsou k dispozici žádné aktivní nabídky.",
+  "oldPrice": "původní cena",
+  "includes": "Obsahuje",
+  "bookOffer": "Rezervujte si tuto nabídku",
+  "badge": "Nabídka",
+  "claimCta": "Využijte této příležitosti",
+  "footer": "Nabídky platí pro uvedené termíny · pro rezervaci — sekce „Rezervovat“",
+  "items": {
+    "ski-family": {
+      "title": "Rodinná lyžařská dovolená",
+      "period": "1. března 2026 – 31. března 2026",
+      "description": "Darujte dětem vzpomínku, kterou si budou pamatovat celý život. Celá vila jen pro vaši rodinu, jen pár minut od sjezdovek – a večer na vás doma čeká krb a teplá večeře.",
+      "includes": [
+        "Pronájem celé vily na jednu noc (až pro 6 osob)",
+        "Bezplatné parkoviště přímo u vchodu",
+        "Wi-Fi zdarma",
+        "V ceně je zahrnutý lázeňský poplatek"
+      ]
+    },
+    "pay-9-stay-10": {
+      "title": "Zaplaťte za 9 nocí, zůstaňte 10 nocí",
+      "period": "1. června 2026 – 10. července 2026",
+      "description": "Léto v horách je jiné – chladná rána, dlouhé dny strávené v přírodě a večery na terase s grilováním. Zůstaňte u nás déle a dopřejte si od nás jednu noc zdarma.",
+      "includes": [
+        "10. noc je zcela zdarma (při 9 zaplacených nocích)",
+        "Celá vila: 2 ložnice, 2 koupelny, kuchyň a obývací pokoj",
+        "Veranda s grilem a krbem na dřevo"
+      ]
+    }
+  }
+}

@@ -1,18 +1,21 @@
 {
   "hero": {
-    "eyebrow": "Smolyan · Pamporovo · 3 villas à louer",
+    "eyebrow": "Bulgarie · Smolyan · Pamporovo · 3 villas à louer",
     "titleLine1": "Pamporovo",
     "titleLine2": "Villa",
     "subtitle": "Nous vous proposons trois villas indépendantes au cœur des forêts enchantées de Pamporovo. Une ambiance chaleureuse et conviviale à la montagne, tout au long de l'année.",
     "ctaExperience": "Commence la balade",
-    "ctaBook": "Réserver",
-    "scrollHint": "Découvrez"
+    "ctaBook": "Réservation",
+    "scrollHint": "Découvrez",
+    "scrollDown": "En bas",
+    "scrollToExperience": "Poursuivre la promenade"
   },
   "gallery": {
     "eyebrow": "Galerie",
     "title": "Les trois villas en images",
     "subtitle": "Découvrez chaque villa : son intérieur, son confort et ses vues sur les montagnes",
-    "pickVilla": "Choisissez une villa"
+    "pickVilla": "Choisissez une villa",
+    "photoCount": "{count} photos"
   },
   "contact": {
     "eyebrow": "Contact",
@@ -30,8 +33,77 @@
   "location": {
     "eyebrow": "Lieu",
     "title": "À deux pas de tout, loin du bruit",
-    "subtitle": "station de Pamporovo, site Райковски ливади — nichés dans la forêt de pins",
+    "subtitle": "station de Pamporovo, site Raykovski Livadi — nichés dans la forêt de pins",
     "directions": "Venez nous rendre visite",
     "info": "Pamporovo est la station de montagne la plus ensoleillée de Bulgarie — à 1 650 m d'altitude, au cœur des Rhodopes. L'hiver, elle offre 37 km de pistes parfaitement entretenues et des descentes nocturnes, tandis que l'été, elle propose des sentiers écologiques, des cascades et un air vivifiant. Et nos villas constituent votre havre de paix au cœur de tout cela."
-  }
+  },
+  "widgets": {
+    "weatherLoading": "Chargement de l'heure",
+    "weatherUnavailable": "Service temporairement indisponible",
+    "feelsLike": "On a l'impression que",
+    "today": "Aujourd'hui",
+    "humidity": "Humidité",
+    "wind": "Vent",
+    "callUs": "Appelez-nous",
+    "galleryVillaTabs": "Choix d'une villa dans la galerie"
+  },
+  "about": {
+    "eyebrow": "À propos de nous",
+    "title": "Votre maison, perchée dans les Rhodopes",
+    "subtitle": "Trois villas, un seul souci : que vous vous sentiez comme chez vous",
+    "blockPlace": "Le lieu",
+    "blockHome": "À la maison",
+    "blockHosts": "Les hôtes",
+    "intro": "Nous sommes ravis que vous nous ayez trouvés. Nous vous proposons trois villas indépendantes, nichées dans la pinède de Raykovski Livadi — là où le bruit de la ville reste loin, et où la journée commence au chant des oiseaux et au parfum de la résine.",
+    "details": "Villa 1, Villa 2 et Villa Deluxe sont aménagés exactement comme nous aimerions que soit notre propre maison à la montagne : avec du bois véritable, des tissus doux et ces petits détails qui rendent un lieu chaleureux. Ici, vous n’êtes pas de simples hôtes ; faites comme chez vous.",
+    "hosts": "En tant qu'hôtes, nous sommes à votre disposition. Nous vous aidons à organiser des surprises et des fêtes, nous vous indiquons les plus belles pistes et sentiers, nous vous conseillons les meilleures adresses pour bien manger — et si vous avez besoin de quoi que ce soit, il suffit de nous appeler. Notre objectif est simple : que vous repartiez avec l'envie de revenir.",
+    "layout": "Chaque villa est répartie sur deux niveaux et dispose de deux chambres, de deux salles de bains, d'une cuisine entièrement équipée avec coin repas et d'un grand salon avec cheminée à bois. À l'extérieur, vous trouverez une terrasse offrant une vue panoramique sur les Rhodopes et une véranda avec barbecue — l'endroit idéal pour passer de merveilleuses soirées.",
+    "imageForestAlt": "Une villa dans la forêt de pins de Raykovski Livadi",
+    "imageInteriorAlt": "Intérieur avec un mur en pierre et du bois",
+    "badgeLocation": "Raykovski Livadi",
+    "badgeResort": "Pamporovo"
+  },
+  "amenities": {
+    "eyebrow": "Équipements",
+    "title": "Tout ce qu'il faut pour un séjour paisible",
+    "subtitle": "Nous avons pensé aux petits détails pour que vous n'ayez à vous soucier que de vos vacances"
+  },
+  "pricing": {
+    "eyebrow": "Tarifs",
+    "title": "Des prix clairs, sans surprise",
+    "subtitle": "Location d'une villa entière à la nuit — pour un maximum de 6 personnes. Plus vous restez longtemps, plus c'est avantageux"
+  },
+  "booking": {
+    "eyebrow": "Réservation",
+    "title": "Réservez votre séjour à la montagne",
+    "subtitle": "Choisissez une villa et vos dates, indiquez-nous vos coordonnées — et nous vous contacterons personnellement pour confirmation"
+  },
+  "policy": {
+    "eyebrow": "Bon à savoir",
+    "title": "Quelques mots avant votre arrivée",
+    "subtitle": "Des règles simples et claires pour que tout le monde passe un moment serein et agréable"
+  },
+  "faq": {
+    "eyebrow": "Réservation · tarifs",
+    "title": "Foire aux questions",
+    "subtitle": "Réponses concernant la location, les tarifs, l'hébergement et la réservation — avant de remplir le formulaire."
+  },
+  "distances": [
+    {
+      "value": "2 km",
+      "label": "Jusqu'au centre de Pamporovo"
+    },
+    {
+      "value": "10 km",
+      "label": "Depuis Smolyan"
+    },
+    {
+      "value": "85 km",
+      "label": "Depuis Plovdiv"
+    },
+    {
+      "value": "220 km",
+      "label": "Depuis Sofia"
+    }
+  ]
 }

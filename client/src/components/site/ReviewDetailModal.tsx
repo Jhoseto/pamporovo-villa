@@ -1,15 +1,11 @@
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { X } from "lucide-react";
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import { createPortal } from "react-dom";
 import { VILLAS } from "@/data/siteContent";
+import { useTranslation } from "@/contexts/LocaleContext";
 import { cn } from "@/lib/utils";
 import type { ReviewItem } from "./ReviewsCarousel";
-
-function villaLabel(villaId: string | null | undefined) {
-  if (!villaId) return null;
-  return VILLAS.find(v => v.id === villaId)?.name ?? null;
-}
 
 function StarRow({ rating }: { rating: number }) {
   return (
@@ -35,7 +31,16 @@ type ReviewDetailModalProps = {
 };
 
 export function ReviewDetailModal({ review, onClose }: ReviewDetailModalProps) {
+  const { t } = useTranslation();
   const reducedMotion = useReducedMotion();
+  const villas = useMemo(
+    () =>
+      VILLAS.map(v => ({
+        id: v.id,
+        name: t(`villa.pages.${v.id}.name`, v.name),
+      })),
+    [t]
+  );
 
   useEffect(() => {
     if (!review) return;
@@ -85,7 +90,7 @@ export function ReviewDetailModal({ review, onClose }: ReviewDetailModalProps) {
               type="button"
               className="review-detail-close"
               onClick={onClose}
-              aria-label="Затвори"
+              aria-label={t("reviews.modal.close", "Затвори")}
             >
               <X className="h-4 w-4" />
             </button>
@@ -101,7 +106,9 @@ export function ReviewDetailModal({ review, onClose }: ReviewDetailModalProps) {
             <footer className="review-detail-footer">
               <p className="review-card-name">{review.guestName}</p>
               <p className="review-card-meta">
-                {[villaLabel(review.villaId), review.stayPeriod].filter(Boolean).join(" · ")}
+                {[villas.find(v => v.id === review.villaId)?.name ?? null, review.stayPeriod]
+                  .filter(Boolean)
+                  .join(" · ")}
               </p>
             </footer>
           </motion.article>

@@ -1,0 +1,19 @@
+{
+  "bannerTitle": "Cookie-uri și confidențialitate",
+  "bannerBody": "Folosim cookie-uri necesare pentru funcționarea site-ului. Cu acordul dumneavoastră, activăm Google Analytics și Google Maps.",
+  "policyLink": "Politica privind cookie-urile",
+  "settings": "Setări",
+  "accept": "Sunt de acord",
+  "manage": "Gestionarea cookie-urilor",
+  "modalTitle": "Setări privind cookie-urile",
+  "modalBody": "Alegeți categoriile pe care doriți să le autorizați. Cookie-urile necesare sunt întotdeauna active.",
+  "necessary": "Necesare",
+  "necessaryDesc": "Acestea memorează preferințele dvs. privind cookie-urile și asigură funcționarea de bază a site-ului.",
+  "analytics": "Analitice",
+  "analyticsDesc": "Google Analytics 4 — statistici anonime privind vizitele și comportamentul utilizatorilor pe site.",
+  "functional": "Funcționale / terțe părți",
+  "functionalDesc": "Google Maps — o hartă interactivă cu locația vilelor.",
+  "reject": "Doar cele necesare",
+  "save": "Salvează selecția",
+  "acceptAll": "Îi accept pe toți"
+}

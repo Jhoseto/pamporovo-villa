@@ -1,0 +1,30 @@
+{
+  "tableNights": "Szálláséjszakák száma",
+  "winterSeason": "Téli szezon",
+  "winterRange": "szeptember – március",
+  "summerSeason": "Nyári szezon",
+  "summerRange": "április – augusztus",
+  "winterShort": "Tél",
+  "summerShort": "Nyár",
+  "winterLegend": "Tél · szeptember – március",
+  "summerLegend": "Nyár · április – augusztus",
+  "bestValue": "Hosszabb tartózkodás esetén a legkedvezőbb",
+  "loading": "Az árak hamarosan közzétételre kerülnek.",
+  "cta": "Ellenőrizze a szabad időpontokat",
+  "tiers": {
+    "up-to-3": "Legfeljebb 3 éjszaka",
+    "4-nights": "4 éjszaka",
+    "5-nights": "5 éjszaka",
+    "over-5": "5 éjszaka felett"
+  },
+  "breakdown": {
+    "night": "éjszakai szállás",
+    "nights": "szálláséjszakák",
+    "perNightWinter": "/éjszaka (tél)",
+    "perNightSummer": "/éjszaka (nyáron)"
+  },
+  "notes": [
+    "Az árak éjszakánként értendők, az egész villára vonatkoznak (legfeljebb 6 vendég).",
+    "Az árak általánosak, és nem érvényesek ünnepnapokon és hétvégéken. Ezekre az időszakokra kérjük, vegye fel velünk a kapcsolatot — a legjobb ajánlatot fogjuk Önnek kínálni."
+  ]
+}

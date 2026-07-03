@@ -1,0 +1,83 @@
+{
+  "sectionEyebrow": "Passeio virtual",
+  "sectionTitle": "Entre antes de chegar",
+  "sectionSubtitle": "Percorra e visite as vilas, quarto a quarto",
+  "ariaLabel": "Passeio virtual",
+  "ariaLabel3d": "Passeio virtual em 3D",
+  "skipUp": "Continue a subir",
+  "skipDown": "Continue a ler",
+  "skipUpAria": "Ignora a subida",
+  "skipDownAria": "Não faças o passeio até lá em baixo",
+  "panels": {
+    "exterior-summer": {
+      "room": "01 · O complexo",
+      "title": "É aqui que começa a vossa história",
+      "subtitle": "Villa 1 · Villa 2 · Villa Deluxe",
+      "description": "Três moradias independentes, escondidas entre os pinheiros de Raykovski Livadi. Aluga a moradia inteira só para si — sem vizinhos do outro lado da parede, sem comprometer o conforto. Escolha a sua e deixe o resto connosco.",
+      "imageAlt": "Exterior da villa no verão"
+    },
+    "exterior-winter": {
+      "room": "02 · Inverno",
+      "title": "Quando a neve cair",
+      "subtitle": "Esqui de manhã, lareira à noite",
+      "description": "De manhã, em poucos minutos está na pista, e à noite espera-o o calor da lareira e o aroma do churrasco. A neve chega até à soleira da porta — e não precisa de mais nada além de um copo de vinho quente e boa companhia.",
+      "imageAlt": "Uma villa coberta de neve em Pamporovo"
+    },
+    "living-fireplace": {
+      "room": "03 · Sala de estar",
+      "title": "Onde a família se reúne",
+      "subtitle": "Ampla sala de estar com lareira",
+      "description": "Uma sala de estar espaçosa com uma lareira a lenha a sério, onde a madeira e a pedra criam um ambiente acolhedor e caseiro. É aqui que se jogam jogos de mesa, se contam histórias e se acende a lareira — o coração de todas as noites.",
+      "imageAlt": "Sala de estar com lareira e sala de jantar"
+    },
+    "open-plan": {
+      "room": "04 · Espaço",
+      "title": "Luminoso e espaçoso",
+      "subtitle": "Cozinha · sala de jantar · sala de estar",
+      "description": "A cozinha, a sala de jantar e a sala de estar formam um único espaço aberto — para que possam estar juntos, mesmo quando um está a cozinhar e os outros estão a relaxar. As grandes janelas deixam a luz da montanha entrar no interior.",
+      "imageAlt": "Plano aberto — vista a partir da escadaria"
+    },
+    "dining": {
+      "room": "05 · Sala de jantar",
+      "title": "A mesa em torno da qual tudo acontece",
+      "subtitle": "Desde o café da manhã até ao jantar tardio",
+      "description": "Uma ampla mesa de madeira com espaço para todo o grupo e vista direta para os pinheiros. Aqui, o dia começa com um café à luz suave e termina com um jantar, risos e planos para o dia seguinte.",
+      "imageAlt": "Sala de jantar com vista para o pinhal"
+    },
+    "kitchen": {
+      "room": "06 · Cozinha",
+      "title": "Cozinham como em casa",
+      "subtitle": "Cozinha totalmente equipada",
+      "description": "Fogão, forno, frigorífico, micro-ondas, máquina de café e um conjunto completo de louça — tudo o que é preciso para um pequeno-almoço caseiro ou um jantar festivo. Porque, por vezes, o prato mais saboroso é aquele que se cozinha sozinho, na montanha.",
+      "imageAlt": "Cozinha equipada"
+    },
+    "bedrooms": {
+      "room": "07 · Quartos",
+      "title": "Um sono como já não tinha há muito tempo",
+      "subtitle": "Dois quartos acolhedores",
+      "description": "Dois quartos separados com camas confortáveis e roupa de cama de qualidade — com capacidade para até 6 hóspedes. O silêncio da floresta e o ar puro a 1 650 m fazem maravilhas; acordarão revigorados, prometemos.",
+      "imageAlt": "Corredor que dá acesso aos dois quartos"
+    },
+    "bathroom": {
+      "room": "08 · Casa de banho",
+      "title": "Casa de banho com um ambiente de montanha",
+      "subtitle": "Conforto para todo o grupo",
+      "description": "Uma casa de banho totalmente equipada, com água quente a qualquer hora — espaçosa e acolhedora para todo o grupo. Materiais naturais e um ambiente acolhedor.",
+      "imageAlt": "Casa de banho com madeira e azulejos"
+    },
+    "terrace": {
+      "room": "09 · Terraço",
+      "title": "A vista que vos faz voltar",
+      "subtitle": "Os Ródopes na palma da mão",
+      "description": "Terraço com vista panorâmica para os montes Ródopes e os pinheiros. Aqui, toma-se o primeiro café enquanto o sol nasce sobre os cumes e despede-se o dia com um pôr-do-sol dourado. Momentos que permanecem na memória muito depois das férias.",
+      "imageAlt": "Um pôr-do-sol dourado sobre os Ródopes"
+    },
+    "bbq-veranda": {
+      "room": "10 · Varanda",
+      "title": "Noites que não têm pressa de acabar",
+      "subtitle": "Varanda coberta com churrasqueira",
+      "description": "A varanda coberta com churrasqueira é o local preferido quando o sol se põe. Podem grelhar, conversar e rir ao ar livre — e, se começar a chover ou a arrefecer, ficam ao abrigo e ao quente, sem perder a sensação de estar na montanha.",
+      "imageAlt": "Varanda com churrasqueira e vista para o inverno"
+    }
+  }
+}

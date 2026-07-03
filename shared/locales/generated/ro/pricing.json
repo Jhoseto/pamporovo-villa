@@ -1,0 +1,30 @@
+{
+  "tableNights": "Numărul de nopți de cazare",
+  "winterSeason": "Sezonul de iarnă",
+  "winterRange": "septembrie – martie",
+  "summerSeason": "Sezonul de vară",
+  "summerRange": "aprilie – august",
+  "winterShort": "Iarna",
+  "summerShort": "Vara",
+  "winterLegend": "Iarna · septembrie – martie",
+  "summerLegend": "Vara · aprilie – august",
+  "bestValue": "Cea mai avantajoasă opțiune pentru un sejur mai lung",
+  "loading": "Prețurile vor fi publicate în curând.",
+  "cta": "Verificați datele disponibile",
+  "tiers": {
+    "up-to-3": "Până la 3 nopți de cazare",
+    "4-nights": "4 nopți de cazare",
+    "5-nights": "5 nopți de cazare",
+    "over-5": "Peste 5 nopți de cazare"
+  },
+  "breakdown": {
+    "night": "cazare",
+    "nights": "nopți de cazare",
+    "perNightWinter": "/noapte (iarnă)",
+    "perNightSummer": "/noapte (vară)"
+  },
+  "notes": [
+    "Prețurile sunt pe noapte, pentru întreaga vilă (până la 6 oaspeți).",
+    "Prețurile sunt standard și nu se aplică în zilele de sărbătoare și în zilele libere. Pentru aceste perioade, vă rugăm să ne contactați — vă vom oferi cea mai bună ofertă."
+  ]
+}

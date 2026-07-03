@@ -1,0 +1,144 @@
+{
+  "sectionEyebrow": "Virtueller Rundgang",
+  "sectionTitle": "Melden Sie sich an, bevor Sie hierherkommen",
+  "sectionSubtitle": "Blättern Sie durch die Ferienhäuser und sehen Sie sich Raum für Raum um",
+  "ariaLabel": "Virtueller Rundgang",
+  "ariaLabel3d": "Virtueller 3D-Rundgang",
+  "skipUp": "Weiter nach oben",
+  "skipDown": "Weiter nach unten",
+  "skipUpAria": "Den Aufstieg überspringen",
+  "skipDownAria": "Den Spaziergang bergab überspringen",
+  "panels": {
+    "exterior-summer": {
+      "room": "01 · Der Komplex",
+      "title": "Hier beginnt Ihre Geschichte",
+      "subtitle": "Villa 1 · Villa 2 · Villa Deluxe",
+      "description": "Drei eigenständige Villen, versteckt inmitten der Kiefern von Raykovski Livadi. Sie mieten die gesamte Villa ganz für sich allein – ohne Nachbarn hinter der Wand, ohne Abstriche beim Komfort. Wählen Sie Ihre Villa aus und überlassen Sie den Rest uns.",
+      "imageAlt": "Außenansicht der Villa im Sommer",
+      "highlights": [
+        "3 freistehende Villen",
+        "Ein stiller Kiefernwald",
+        "Parkplätze und WLAN",
+        "Ganzjährige Vermietung"
+      ]
+    },
+    "exterior-winter": {
+      "room": "02 · Winter",
+      "title": "Wenn der Schnee fällt",
+      "subtitle": "Morgens Skifahren, abends am Kamin",
+      "description": "Morgens sind Sie in wenigen Minuten auf der Piste, und abends erwarten Sie die Wärme des Kamins und der Duft von Grillgut. Der Schnee reicht bis vor die Haustür – und Sie brauchen nichts weiter als ein Glas Glühwein und gute Gesellschaft.",
+      "imageAlt": "Eine Villa im Schnee in Pamporovo",
+      "highlights": [
+        "Nur wenige Minuten von den Pisten entfernt",
+        "Holzkamin",
+        "Schnee bis vor die Haustür",
+        "Gemütliche Wärme"
+      ]
+    },
+    "living-fireplace": {
+      "room": "03 · Wohnzimmer",
+      "title": "Wo sich die Familie versammelt",
+      "subtitle": "Großes Wohnzimmer mit Kamin",
+      "description": "Ein geräumiges Wohnzimmer mit einem echten Holzkamin, in dem Holz und Stein eine warme, heimelige Atmosphäre schaffen. Hier werden Brettspiele gespielt, Geschichten erzählt und das Feuer angefacht – das Herzstück jedes Abends.",
+      "imageAlt": "Wohnzimmer mit Kamin und Essbereich",
+      "highlights": [
+        "Holzkamin",
+        "Smart-TV",
+        "Holz und Stein",
+        "Ein Ort für alle"
+      ]
+    },
+    "open-plan": {
+      "room": "04 · Raum",
+      "title": "Hell und geräumig",
+      "subtitle": "Küche · Esszimmer · Wohnzimmer",
+      "description": "Die Küche, das Esszimmer und das Wohnzimmer bilden einen offenen Raum – damit ihr zusammen sein könnt, auch wenn einer kocht und die anderen sich ausruhen. Durch die großen Fenster fällt das Licht der Berge herein.",
+      "imageAlt": "Offener Grundriss – Blick vom Treppenhaus",
+      "highlights": [
+        "Offener Grundriss",
+        "Große Fenster",
+        "Natürliches Licht",
+        "Bis zu 6 Gäste"
+      ]
+    },
+    "dining": {
+      "room": "05 · Speisesaal",
+      "title": "Ein Tisch, um den herum sich alles abspielt",
+      "subtitle": "Vom Morgenkaffee bis zum späten Abendessen",
+      "description": "Ein großer Holztisch, an dem die ganze Gruppe Platz findet, und ein Blick direkt auf die Kiefern. Hier beginnt der Tag mit einem Kaffee bei gedämpftem Licht und endet mit einem Abendessen, Gelächter und Plänen für den nächsten Tag.",
+      "imageAlt": "Speisesaal mit Blick auf den Kiefernwald",
+      "highlights": [
+        "Ein Tisch für 6 Personen",
+        "Blick auf den Wald",
+        "Zugang zur Terrasse",
+        "Natürliches Licht"
+      ]
+    },
+    "kitchen": {
+      "room": "06 · Küche",
+      "title": "Kochen wie zu Hause",
+      "subtitle": "Voll ausgestattete Küche",
+      "description": "Kochfeld, Backofen, Kühlschrank, Mikrowelle, Kaffeemaschine und ein komplettes Geschirrset – alles für ein Frühstück zu Hause oder ein festliches Abendessen. Denn manchmal ist das leckerste Gericht das, das man selbst in den Bergen zubereitet.",
+      "imageAlt": "Ausgestattete Küche",
+      "highlights": [
+        "Backofen und Herd",
+        "Kühlschrank",
+        "Kaffeemaschine",
+        "Komplettes Geschirrset"
+      ]
+    },
+    "bedrooms": {
+      "room": "07 · Schlafzimmer",
+      "title": "Ein Schlaf, wie Sie ihn schon lange nicht mehr hatten",
+      "subtitle": "Zwei gemütliche Schlafzimmer",
+      "description": "Zwei separate Schlafzimmer mit bequemen Betten und hochwertiger Bettwäsche – Platz für bis zu 6 Gäste. Die Stille des Waldes und die frische Luft in 1 650 m Höhe wirken Wunder; Sie werden ausgeruht aufwachen, das versprechen wir Ihnen.",
+      "imageAlt": "Flur zu den beiden Schlafzimmern",
+      "highlights": [
+        "2 Schlafzimmer",
+        "Bis zu 6 Gäste",
+        "Hochwertige Unterwäsche",
+        "Tiefe Stille"
+      ]
+    },
+    "bathroom": {
+      "room": "08 · Badezimmer",
+      "title": "Ein Badezimmer mit Bergflair",
+      "subtitle": "Komfort für die ganze Gruppe",
+      "description": "Ein komplett ausgestattetes Badezimmer mit jederzeit warmem Wasser – geräumig und gemütlich für die ganze Gruppe. Natürliche Materialien und eine warme Atmosphäre.",
+      "imageAlt": "Badezimmer mit Holz und Fliesen",
+      "highlights": [
+        "1 Badezimmer",
+        "Warmwasser rund um die Uhr",
+        "Hochwertige Materialien",
+        "Spa-Atmosphäre"
+      ]
+    },
+    "terrace": {
+      "room": "09 · Terrasse",
+      "title": "Die Aussicht, wegen der man immer wieder zurückkommt",
+      "subtitle": "Die Rhodopen auf einen Blick",
+      "description": "Eine Terrasse mit Panoramablick auf die Rhodopen und die Kiefernwälder. Hier genießen Sie Ihren ersten Kaffee, während die Sonne über den Gipfeln aufgeht, und lassen den Tag bei einem goldenen Sonnenuntergang ausklingen. Momente, die noch lange nach dem Urlaub in Erinnerung bleiben.",
+      "imageAlt": "Goldfarbener Sonnenuntergang über den Rhodopen",
+      "highlights": [
+        "Panoramablick",
+        "Sonnenaufgänge und Sonnenuntergänge",
+        "Frische Bergluft",
+        "Große Terrasse"
+      ]
+    },
+    "bbq-veranda": {
+      "room": "10 · Veranda",
+      "title": "Abende, die einfach nicht enden wollen",
+      "subtitle": "Überdachte Veranda mit Grill",
+      "description": "Die überdachte Veranda mit Grill ist der ideale Ort, wenn die Sonne untergeht. Hier können Sie im Freien grillen, sich unterhalten und lachen – und sollte es anfangen zu regnen oder kühler werden, bleiben Sie trocken und warm, ohne das Gefühl für die Berge zu verlieren.",
+      "imageAlt": "Veranda mit Grill und Winteraussicht",
+      "highlights": [
+        "Grillen",
+        "Überdachte Veranda",
+        "Für lange Abende",
+        "An der frischen Luft"
+      ]
+    }
+  },
+  "highlightsLabel": "Schwerpunkte"
+}

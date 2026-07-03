@@ -5,6 +5,7 @@ export type WeatherSnapshot = {
   feelsLike: number;
   humidity: number;
   windSpeed: number;
+  weatherCode: number;
   condition: string;
   conditionShort: string;
   icon: WeatherIconKind;
@@ -99,6 +100,7 @@ function parseResponse(data: OpenMeteoResponse): WeatherSnapshot {
     feelsLike: Math.round(data.current.apparent_temperature),
     humidity: Math.round(data.current.relative_humidity_2m),
     windSpeed: Math.round(data.current.wind_speed_10m),
+    weatherCode: data.current.weather_code,
     condition: mapped.label,
     conditionShort: mapped.short,
     icon: mapped.icon,

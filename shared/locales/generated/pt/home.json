@@ -1,23 +1,26 @@
 {
   "hero": {
-    "eyebrow": "Smolyan · Pamporovo · 3 moradias para alugar",
+    "eyebrow": "Bulgária · Smolyan · Pamporovo · 3 moradias para alugar",
     "titleLine1": "Pamporovo",
     "titleLine2": "Villa",
     "subtitle": "Apresentamos-lhe três moradias independentes no meio das florestas mágicas de Pamporovo. O conforto de casa na montanha, durante todo o ano.",
     "ctaExperience": "Começa o passeio",
-    "ctaBook": "Reservar",
-    "scrollHint": "Explore"
+    "ctaBook": "Reserva",
+    "scrollHint": "Explore",
+    "scrollDown": "Para baixo",
+    "scrollToExperience": "Continua o passeio"
   },
   "gallery": {
     "eyebrow": "Galeria",
     "title": "As três moradias em imagens",
     "subtitle": "Explore cada villa — o interior, o ambiente acolhedor e as vistas para a montanha",
-    "pickVilla": "Escolha uma moradia"
+    "pickVilla": "Escolha uma moradia",
+    "photoCount": "{count} fotografias"
   },
   "contact": {
     "eyebrow": "Contacto",
     "title": "Vamos falar sobre as suas férias",
-    "subtitle": "Tem alguma dúvida ou algum pedido específico? Ligue-nos ou escreva-nos — respondemos pessoalmente e com todo o gosto"
+    "subtitle": "Tem alguma dúvida ou algum pedido específico? Ligue-nos ou escreva-nos — respondemos pessoalmente e com todo o prazer"
   },
   "reviews": {
     "eyebrow": "Comentários",
@@ -30,8 +33,55 @@
   "location": {
     "eyebrow": "Localização",
     "title": "A um passo de tudo, longe do barulho",
-    "subtitle": "Resort de Pamporovo, zona Райковски ливади — aninhados na floresta de pinheiros",
+    "subtitle": "Resort de Pamporovo, zona Raykovski Livadi — aninhados na floresta de pinheiros",
     "directions": "Encontre-nos",
     "info": "Pamporovo é a estância de montanha mais ensolarada da Bulgária — a 1 650 m, no coração dos Ródopes. O inverno oferece 37 km de pistas perfeitamente mantidas e esqui noturno, enquanto o verão proporciona trilhos ecológicos, cascatas e um ar revigorante. E as nossas vilas são o seu refúgio tranquilo no meio de tudo isto."
+  },
+  "widgets": {
+    "weatherLoading": "Carregamento do tempo",
+    "weatherUnavailable": "O serviço está temporariamente indisponível",
+    "feelsLike": "Dá a sensação de que",
+    "today": "Hoje",
+    "humidity": "Humidade",
+    "wind": "Vento",
+    "callUs": "Ligue-nos",
+    "galleryVillaTabs": "Escolha de uma moradia na galeria"
+  },
+  "about": {
+    "eyebrow": "Sobre nós",
+    "title": "A sua casa no alto dos Ródopes",
+    "subtitle": "Três moradias, um único objetivo: que se sintam em casa",
+    "blockPlace": "O local",
+    "blockHome": "Em casa",
+    "blockHosts": "Os anfitriões",
+    "intro": "Estamos felizes por nos terem descoberto. Oferecemos-vos três moradias independentes, aninhadas na floresta de pinheiros de Raykovski Livadi — onde o barulho da cidade fica para trás e o dia começa com o canto dos pássaros e o aroma da resina.",
+    "details": "Villa 1, Villa 2 e Villa Deluxe estão decorados tal como gostaríamos que fosse a nossa própria casa na montanha — com madeira verdadeira, tecidos suaves e aqueles pequenos detalhes que tornam um lugar acolhedor. Aqui não são apenas hóspedes; sintam-se em casa.",
+    "hosts": "Como anfitriões, estamos sempre à vossa disposição. Ajudamos a organizar surpresas e celebrações, indicamos-vos as melhores pistas e trilhos, sugerimos onde se come bem — e, se precisarem de alguma coisa, basta ligarem-nos. O nosso objetivo é único: que partam com vontade de voltar.",
+    "layout": "Cada villa tem dois andares e dispõe de dois quartos, duas casas de banho, uma cozinha totalmente equipada com sala de jantar e uma ampla sala de estar com lareira a lenha. No exterior, espera-vos um terraço com vista panorâmica para os montes Ródopi e uma varanda com churrasqueira — o local onde se vivem as melhores noites."
+  },
+  "amenities": {
+    "eyebrow": "Comodidades",
+    "title": "Tudo o que é necessário para uma estadia tranquila",
+    "subtitle": "Pensámos nos pequenos detalhes, para que possam dedicar-se exclusivamente às vossas férias"
+  },
+  "pricing": {
+    "eyebrow": "Preços",
+    "title": "Preços claros, sem surpresas",
+    "subtitle": "Aluguer de uma villa inteira por noite — para até 6 hóspedes. Quanto mais tempo ficarem, mais económico fica"
+  },
+  "booking": {
+    "eyebrow": "Reserva",
+    "title": "Reserve o seu lugar na montanha",
+    "subtitle": "Escolha uma villa e as datas, indique os seus dados — e entraremos em contacto consigo pessoalmente para confirmar"
+  },
+  "policy": {
+    "eyebrow": "É bom saber",
+    "title": "Algumas palavras antes de virem",
+    "subtitle": "Regras curtas e claras, para que seja tranquilo e agradável para todos"
+  },
+  "faq": {
+    "eyebrow": "Reservas · preços",
+    "title": "Perguntas frequentes",
+    "subtitle": "Respostas sobre aluguer, preços, alojamento e reservas — antes de preencher o formulário."
   }
 }

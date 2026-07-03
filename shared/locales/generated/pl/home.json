@@ -1,18 +1,21 @@
 {
   "hero": {
-    "eyebrow": "Smolyan · Pamporowo · 3 domki do wynajęcia",
+    "eyebrow": "Bułgaria · Smolyan · Pamporowo · 3 domki letniskowe do wynajęcia",
     "titleLine1": "Pamporovo",
     "titleLine2": "Willa",
     "subtitle": "Oferujemy Państwu trzy niezależne wille położone wśród magicznych lasów Pamporowa. Domowa atmosfera w górach przez cały rok.",
     "ctaExperience": "Rozpocznij spacer",
-    "ctaBook": "Zarezerwuj",
-    "scrollHint": "Zapoznaj się z"
+    "ctaBook": "Rezerwacja",
+    "scrollHint": "Zapoznaj się z",
+    "scrollDown": "W dół",
+    "scrollToExperience": "Kontynuuj spacer"
   },
   "gallery": {
     "eyebrow": "Galeria",
     "title": "Trzy wille na zdjęciach",
     "subtitle": "Zapoznaj się z każdą willą — wnętrzami, atmosferą i widokami na góry",
-    "pickVilla": "Wybierz willę"
+    "pickVilla": "Wybierz willę",
+    "photoCount": "{count} zdjęć"
   },
   "contact": {
     "eyebrow": "Kontakt",
@@ -30,8 +33,77 @@
   "location": {
     "eyebrow": "Lokalizacja",
     "title": "W zasięgu ręki od wszystkiego, z dala od zgiełku",
-    "subtitle": "kurort Pamporowo, obszar Райковски ливади — schowane w sosnowym lesie",
+    "subtitle": "kurort Pamporowo, obszar Raykovski Livadi — schowane w sosnowym lesie",
     "directions": "Jak do nas dojechać",
     "info": "Pamporowo to najbardziej nasłoneczniony górski kurort w Bułgarii — położony na wysokości 1 650 m n.p.m. w samym sercu Rodopów. Zimą oferuje 37 km doskonale utrzymanych tras narciarskich oraz jazdę nocną, a latem — ekologiczne szlaki, wodospady i lecznicze powietrze. A nasze domki letniskowe to Państwa spokojna baza pośród tego wszystkiego."
-  }
+  },
+  "widgets": {
+    "weatherLoading": "Ładowanie czasu",
+    "weatherUnavailable": "Usługa jest chwilowo niedostępna",
+    "feelsLike": "Wydaje się, że",
+    "today": "Dzisiaj",
+    "humidity": "Wilgotność",
+    "wind": "Wiatr",
+    "callUs": "Zadzwoń",
+    "galleryVillaTabs": "Wybór willi z galerii"
+  },
+  "about": {
+    "eyebrow": "O nas",
+    "title": "Twój dom wysoko w Rodopach",
+    "subtitle": "Trzy wille, jedna troska — abyście czuli się jak w domu",
+    "blockPlace": "Miejsce",
+    "blockHome": "W domu",
+    "blockHosts": "Gospodarze",
+    "intro": "Cieszymy się, że nas znaleźliście. Oferujemy wam trzy niezależne wille, położone w sosnowym lesie w Raykovski Livadi — tam, gdzie zgiełk miasta pozostaje daleko, a dzień zaczyna się od śpiewu ptaków i zapachu żywicy.",
+    "details": "Villa 1, Villa 2 oraz Villa Deluxe są urządzone tak, jak chcielibyśmy, aby wyglądał nasz własny dom w górach — z prawdziwego drewna, miękkich tkanin i tych drobnych detali, które sprawiają, że miejsce to wydaje się przytulne. Tutaj nie jesteście tylko gośćmi; czujcie się jak w domu.",
+    "hosts": "Jako gospodarze jesteśmy zawsze pod ręką. Pomagamy w organizacji niespodzianek i uroczystości, wskazujemy najpiękniejsze trasy i szlaki, podpowiadamy, gdzie można zjeść coś pysznego — a jeśli czegoś potrzebujecie, po prostu zadzwońcie. Mamy jeden cel: abyście wyjechali z chęcią powrotu.",
+    "layout": "Każda willa jest dwupoziomowa i dysponuje dwiema sypialniami, dwiema łazienkami, w pełni wyposażoną kuchnią z jadalnią oraz dużym salonem z kominkiem opalanym drewnem. Na zewnątrz czeka na Państwa taras z panoramicznym widokiem na Rodopy oraz weranda z grillem — miejsce, w którym rodzą się najpiękniejsze wieczory.",
+    "imageForestAlt": "Willa w sosnowym lesie w Raykovski Livadi",
+    "imageInteriorAlt": "Wnętrze z kamienną ścianą i drewnem",
+    "badgeLocation": "Raykovski Livadi",
+    "badgeResort": "Pamporowo"
+  },
+  "amenities": {
+    "eyebrow": "Udogodnienia",
+    "title": "Wszystko, co potrzebne do spokojnego pobytu",
+    "subtitle": "Zadbaliśmy o najdrobniejsze szczegóły, abyście mogli skupić się wyłącznie na wypoczynku"
+  },
+  "pricing": {
+    "eyebrow": "Ceny",
+    "title": "Przejrzyste ceny, bez niespodzianek",
+    "subtitle": "Wynajem całej willi na noc — dla maksymalnie 6 osób. Im dłużej zostaniecie, tym bardziej opłacalne"
+  },
+  "booking": {
+    "eyebrow": "Rezerwacja",
+    "title": "Zarezerwuj sobie miejsce w górach",
+    "subtitle": "Wybierz willę i terminy, podaj swoje dane — a my skontaktujemy się z Tobą osobiście w celu potwierdzenia rezerwacji"
+  },
+  "policy": {
+    "eyebrow": "Warto wiedzieć",
+    "title": "Kilka słów przed przyjazdem",
+    "subtitle": "Krótkie i jasne zasady, aby wszystkim zapewnić spokój i przyjemność"
+  },
+  "faq": {
+    "eyebrow": "Rezerwacja · ceny",
+    "title": "Najczęściej zadawane pytania",
+    "subtitle": "Odpowiedzi dotyczące wynajmu, cen, zakwaterowania i rezerwacji — przed wypełnieniem formularza."
+  },
+  "distances": [
+    {
+      "value": "2 km",
+      "label": "Do centrum Pamporowa"
+    },
+    {
+      "value": "10 km",
+      "label": "Ze Smoliana"
+    },
+    {
+      "value": "85 km",
+      "label": "Z Płowdiwu"
+    },
+    {
+      "value": "220 km",
+      "label": "Z Sofii"
+    }
+  ]
 }

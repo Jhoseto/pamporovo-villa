@@ -8,8 +8,10 @@ import {
 } from "framer-motion";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { useRef, useState } from "react";
-import { EXPERIENCE_PANELS, type ExperiencePanel } from "@/data/experiencePanels";
+import type { ExperiencePanel } from "@/data/experiencePanels";
 import { skipExperienceTour } from "@/lib/scroll";
+import { useTranslation } from "@/contexts/LocaleContext";
+import { useExperiencePanels } from "@/i18n/contentHooks";
 import { cn } from "@/lib/utils";
 
 // ─── Device check — width only; tablets/touchscreen laptops get 3D desktop ──
@@ -26,15 +28,22 @@ function SkipTourButton({
   direction: "up" | "down";
   className?: string;
 }) {
+  const { t } = useTranslation();
   const isUp = direction === "up";
   const Icon = isUp ? ChevronUp : ChevronDown;
-  const label = isUp ? "Продължете нагоре" : "Продължете надолу";
+  const label = isUp
+    ? t("experience.skipUp", "Продължете нагоре")
+    : t("experience.skipDown", "Продължете надолу");
 
   return (
     <button
       type="button"
       onClick={() => skipExperienceTour(direction)}
-      aria-label={isUp ? "Пропусни разходката нагоре" : "Пропусни разходката надолу"}
+      aria-label={
+        isUp
+          ? t("experience.skipUpAria", "Пропусни разходката нагоре")
+          : t("experience.skipDownAria", "Пропусни разходката надолу")
+      }
       className={cn(
         "eyebrow z-30 flex items-center gap-2 rounded-full border border-white/20 bg-black/45 px-4 py-2.5 text-[10px] text-white/75 backdrop-blur-md transition",
         "hover:border-[var(--gold)]/50 hover:bg-black/60 hover:text-white",
@@ -149,10 +158,12 @@ function MobilePanelLayer({
 }
 
 function MobileScrollPanelExperience() {
+  const { t } = useTranslation();
+  const panels = useExperiencePanels();
   const containerRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const prevIndexRef = useRef(0);
-  const total = EXPERIENCE_PANELS.length;
+  const total = panels.length;
   const isNearViewport = useInView(containerRef, { margin: "120px 0px", amount: 0 });
 
   const { scrollYProgress } = useScroll({
@@ -178,7 +189,7 @@ function MobileScrollPanelExperience() {
       ref={containerRef}
       className="relative bg-[var(--ink)]"
       style={{ height: `${total * 100}dvh` }}
-      aria-label="Виртуална разходка"
+      aria-label={t("experience.ariaLabel", "Виртуална разходка")}
     >
       <div className="relative sticky top-0 h-[100dvh] min-h-[100dvh] overflow-hidden">
         {/* Fade-out header */}
@@ -186,15 +197,17 @@ function MobileScrollPanelExperience() {
           className="pointer-events-none absolute left-5 right-14 top-[max(3.5rem,env(safe-area-inset-top,0px))] z-20"
           style={{ opacity: headerOpacity, y: headerY }}
         >
-          <p className="eyebrow text-[0.58rem] text-[var(--gold)]">Виртуална разходка</p>
+          <p className="eyebrow text-[0.58rem] text-[var(--gold)]">
+            {t("experience.sectionEyebrow", "Виртуална разходка")}
+          </p>
           <h2 className="mt-1 font-serif text-lg font-bold text-white">
-            Влезте, преди да сте дошли
+            {t("experience.sectionTitle", "Влезте, преди да сте дошли")}
           </h2>
         </motion.div>
 
         {/* Vertical progress pills — right edge */}
         <div className="absolute right-3.5 top-1/2 z-20 flex -translate-y-1/2 flex-col items-center gap-1.5">
-          {EXPERIENCE_PANELS.map((_, i) => (
+          {panels.map((_, i) => (
             <div
               key={i}
               className={cn(
@@ -215,7 +228,7 @@ function MobileScrollPanelExperience() {
         {/* All panels stacked — skip heavy transforms when far off-screen */}
         <div className="absolute inset-0">
           {isNearViewport ? (
-            EXPERIENCE_PANELS.map((panel, index) => (
+            panels.map((panel, index) => (
               <MobilePanelLayer
                 key={panel.id}
                 panel={panel}
@@ -256,6 +269,7 @@ function DesktopPanelLayer({
   total: number;
   scrollYProgress: MotionValue<number>;
 }) {
+  const { t } = useTranslation();
   const segment = 1 / total;
   const start = index * segment;
   const end = (index + 1) * segment;
@@ -363,7 +377,7 @@ function DesktopPanelLayer({
             )}
             style={{ x: sidePanelX, translateZ: 60 }}
           >
-            <p className="eyebrow mb-4 text-[var(--gold)]">Акценти</p>
+            <p className="eyebrow mb-4 text-[var(--gold)]">{t("experience.highlightsLabel", "Акценти")}</p>
             <ul className="space-y-3">
               {panel.highlights.map((item, i) => (
                 <li
@@ -421,6 +435,8 @@ function DesktopScrollProgress({
 }
 
 function DesktopScrollPanelExperience() {
+  const { t } = useTranslation();
+  const panels = useExperiencePanels();
   const containerRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const prevIndexRef = useRef(0);
@@ -437,7 +453,7 @@ function DesktopScrollPanelExperience() {
   });
 
   useMotionValueEvent(scrollYProgress, "change", v => {
-    const idx = Math.min(EXPERIENCE_PANELS.length - 1, Math.floor(v * EXPERIENCE_PANELS.length));
+    const idx = Math.min(panels.length - 1, Math.floor(v * panels.length));
     if (idx !== prevIndexRef.current) {
       prevIndexRef.current = idx;
       setActiveIndex(idx);
@@ -454,12 +470,14 @@ function DesktopScrollPanelExperience() {
         className="scroll-section-fullscreen immersive-section bg-[var(--ink)] py-24"
       >
         <div className="container mx-auto">
-          <p className="eyebrow mb-3 text-center text-[var(--gold)]">Виртуална разходка</p>
+          <p className="eyebrow mb-3 text-center text-[var(--gold)]">
+            {t("experience.sectionEyebrow", "Виртуална разходка")}
+          </p>
           <h2 className="mb-16 text-center font-serif text-4xl font-bold text-white md:text-5xl">
-            Влезте, преди да сте дошли
+            {t("experience.sectionTitle", "Влезте, преди да сте дошли")}
           </h2>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {EXPERIENCE_PANELS.map(panel => (
+            {panels.map(panel => (
               <div key={panel.id} className="overflow-hidden rounded-2xl border border-white/10">
                 <img
                   src={panel.image}
@@ -484,8 +502,8 @@ function DesktopScrollPanelExperience() {
       id="experience"
       ref={containerRef}
       className="scroll-section-fullscreen relative bg-[var(--ink)]"
-      style={{ height: `${EXPERIENCE_PANELS.length * 100}dvh` }}
-      aria-label="Виртуална 3D разходка"
+      style={{ height: `${panels.length * 100}dvh` }}
+      aria-label={t("experience.ariaLabel3d", "Виртуална 3D разходка")}
     >
       <div
         id="experience-viewport"
@@ -498,29 +516,31 @@ function DesktopScrollPanelExperience() {
           className="pointer-events-none absolute left-4 top-20 z-20 md:left-10 md:top-24"
           style={{ opacity: headerOpacity, y: headerY }}
         >
-          <p className="eyebrow text-[var(--gold)]">Виртуална разходка</p>
+          <p className="eyebrow text-[var(--gold)]">
+            {t("experience.sectionEyebrow", "Виртуална разходка")}
+          </p>
           <h2 className="mt-2 font-serif text-2xl font-bold text-white md:text-4xl">
-            Влезте, преди да сте дошли
+            {t("experience.sectionTitle", "Влезте, преди да сте дошли")}
           </h2>
           <p className="mt-2 max-w-xs text-sm text-white/70">
-            Превъртете и обиколете вилите стая по стая
+            {t("experience.sectionSubtitle", "Превъртете и обиколете вилите стая по стая")}
           </p>
         </motion.div>
 
         <DesktopScrollProgress
           scrollYProgress={scrollYProgress}
-          total={EXPERIENCE_PANELS.length}
+          total={panels.length}
           activeIndex={activeIndex}
         />
 
         <div className="panel-stage absolute inset-0 flex items-center justify-center">
           {isNearViewport ? (
-            EXPERIENCE_PANELS.map((panel, index) => (
+            panels.map((panel, index) => (
               <DesktopPanelLayer
                 key={panel.id}
                 panel={panel}
                 index={index}
-                total={EXPERIENCE_PANELS.length}
+                total={panels.length}
                 scrollYProgress={scrollYProgress}
               />
             ))

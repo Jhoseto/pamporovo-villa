@@ -1,0 +1,159 @@
+{
+  "nav": {
+    "ariaLabel": "Secções da página",
+    "intro": "O resort",
+    "winter": "Inverno",
+    "summer": "Verão",
+    "landmarks": "Os arredores",
+    "caves": "Cavernas"
+  },
+  "sticky": {
+    "book": "Reservar",
+    "rent": "Aluguer · preços"
+  },
+  "ui": {
+    "pisteNumber": "N.º",
+    "pisteName": "Pista",
+    "difficulty": "Dificuldade",
+    "length": "Comprimento",
+    "note": "Nota",
+    "dash": "—",
+    "meters": "m",
+    "route": "Percurso",
+    "liftType": "Tipo",
+    "capacity": "Capacidade/h",
+    "capacityPerHour": "Capacidade/hora"
+  },
+  "difficulty": {
+    "green": "Verde · principiantes",
+    "blue": "Azul · nível intermédio",
+    "red": "Vermelha · avançados",
+    "black": "Cherna · especialistas"
+  },
+  "sections": {
+    "intro": {
+      "eyebrow": "O resort",
+      "title": "O coração dos Ródopes",
+      "subtitle": "A 1650 m de altitude, no sopé do pico Snezhanka — a mais antiga estância de esqui da Bulgária, fundada em 1933.",
+      "panoramaAlt": "Estância de inverno de Pamporovo — hotéis e pistas nos Ródopes",
+      "towerAlt": "A Torre Snezhanka — símbolo de Pamporovo",
+      "p1": "Dois principais centros de esqui — Studenets e Malina — ligados ao pico Snezhanka (1926 m). As pistas situam-se entre os 1400 e os 1926 m, com teleféricos modernos e mais de 80 canhões de neve.",
+      "p2": "No verão, o resort transforma-se num centro de ecoturismo — trilhos sinalizados, ciclismo, passeios a cavalo e inúmeros pontos de interesse a 15–60 minutos de carro de Smolyan, Shiroka Luka, as Pontes Maravilhosas e os palácios subterrâneos dos Ródopes Ocidentais.",
+      "cta": "Reserve uma villa em Pamporovo"
+    },
+    "winter": {
+      "eyebrow": "Inverno",
+      "title": "Área de esqui — pistas e teleféricos",
+      "subtitle": "Mais de 37 km de pistas balizadas para esqui e snowboard, esqui noturno na «Parede» e percursos de esqui de fundo",
+      "skiAlt": "Teleférico com assentos para o pico Snezhanka — a torre acima de Pamporovo",
+      "pistesHeading": "Pistas por nível de dificuldade",
+      "liftsHeading": "Elevadores e equipamentos",
+      "activitiesHeading": "Atividades de inverno"
+    },
+    "summer": {
+      "eyebrow": "Verão",
+      "title": "Trilhos ecológicos e natureza",
+      "subtitle": "O desfiladeiro das cascatas, os lagos de Smolyan, as rochas de Orfeu — a poucos minutos do resort",
+      "summerAlt": "Um lago de montanha nos Ródopes — um percurso ecológico de verão perto de Pamporovo",
+      "activitiesHeading": "Atividades de verão"
+    },
+    "landmarks": {
+      "eyebrow": "Os arredores",
+      "title": "Pontos turísticos e aldeias",
+      "subtitle": "Reservas arquitetónicas, observatório, planetário e folclore autêntico dos Ródopes"
+    },
+    "caves": {
+      "eyebrow": "Mundo subterrâneo",
+      "title": "Grutas e desfiladeiros",
+      "subtitle": "A Gruta de Yagodina, a Garganta do Diabo, o Desfiladeiro de Trigrad e Uhlovitsa — tesouros dos Ródopes Ocidentais",
+      "footer": "As vilas Pamporovo Villa situam-se em Raykovski Livadi — um ponto de partida ideal para aventuras de inverno e de verão em toda a região.",
+      "cta": "Ver datas disponíveis e reservar"
+    }
+  },
+  "attractions": {
+    "canyon-waterfalls": {
+      "title": "O desfiladeiro das cascatas",
+      "distance": "15 km · nos arredores de Smolyan",
+      "duration": "~4 horas · percurso circular de 6 km",
+      "description": "O trilho ecológico mais impressionante dos Ródopes — atravessa as florestas centenárias da reserva «Soskovcheto», ao longo do rio Gerzovska. Ao longo do percurso, poderá contar 46 cascatas, entre as quais a belíssima «Orfeu», com 68 metros de altura — uma das mais altas da Bulgária. O ponto alto é um miradouro a 1800 m de altitude, com vista para Smolyan e os cumes dos Ródopes."
+    },
+    "smolyan-lakes": {
+      "title": "Os lagos de Smolyan",
+      "distance": "10 km · abaixo do pico Snezhanka",
+      "duration": "~1 hora · percurso fácil",
+      "description": "Conhecidos como «Os Olhos Esmeralda dos Ródopes» — lagos naturais dispostos em degraus abaixo do Monte Snezhanka. Um trilho fácil liga os lagos Bistro, Muto e Trevisto, com locais para piqueniques e pesca. Um passeio ideal para famílias com crianças, que combina na perfeição com a subida ao cume."
+    },
+    "nevyastata": {
+      "title": "Trilho ecológico «A Noiva»",
+      "distance": "12 km · acima de Smolyan",
+      "duration": "~40 min · 900 m de trilho",
+      "description": "Um trilho curto e acessível através de um perfumado bosque de pinheiros até à falésia íngreme «Nevyastata», que se ergue sobre Smolyan. Pontos panorâmicos e gazebos ao longo de todo o percurso e, para os amantes da adrenalina, um teleférico alpino sobre o abismo. A lenda conta a história de uma jovem que se atirou do penhasco para preservar a sua fé."
+    },
+    "orpheus-rocks": {
+      "title": "As Rochas de Orfeu e as Agulhas",
+      "distance": "6 km · a partir do pico Snezhanka",
+      "duration": "~4 horas · intensidade leve",
+      "description": "A partir do cume da Snezhanka, um trilho sinalizado conduz para sudeste, em direção às Rochas de Orfeu — formações riolíticas caprichosas com uma vista emblemática para os lagos de Smolyan. Na direção oposta encontra-se o cume de Igite, com mais uma vista panorâmica deslumbrante. O percurso atravessa pastagens e florestas, repletas de mirtilos em agosto."
+    },
+    "shiroka-laka": {
+      "title": "Arco Largamente Curvo",
+      "distance": "16 km · 20 min de carro",
+      "duration": "",
+      "description": "Reserva arquitetónica e folclórica — a aldeia das casas do Renascimento com sacadarias, as pontes de pedra e a famosa Escola Nacional de Artes Folclóricas. A gaida dos Ródopes é a alma de Shiroka Laka: é aqui que se realiza o festival «Pesponedelnik», com danças tradicionais dos kukeri e folclore autêntico. Uma paragem obrigatória para todos os visitantes de Pamporovo."
+    },
+    "rozhen-observatory": {
+      "title": "NAO «Rozhen»",
+      "distance": "18 km · 25 min de carro",
+      "duration": "",
+      "description": "O maior observatório astronómico da Península Balcânica, situado a 1750 m acima dos prados de Rozen. Dispõe de um telescópio de 2 metros — um dos maiores do Sudeste da Europa. São organizadas visitas diurnas com palestras, e as observações noturnas (mediante marcação) são inesquecíveis. Nas proximidades encontram-se os prados de Rozen — palco do lendário festival nacional."
+    },
+    "wonderful-bridges": {
+      "title": "As pontes maravilhosas",
+      "distance": "42 km · 1 hora de carro",
+      "duration": "",
+      "description": "Arcos rochosos gigantescos de mármore, esculpidos pelo rio Erküpriya ao longo de milénios. A Grande Ponte tem 96 m de comprimento e 45 m de altura — por baixo dela passa um trilho, e a acústica é incrível. A ponte pequena tem 60 m de comprimento. Este local faz parte dos 100 pontos turísticos nacionais e combina na perfeição com um almoço na aldeia de Zabardo."
+    },
+    "smolyan-town": {
+      "title": "Smolyan — planetário e museus",
+      "distance": "15 km · 20 min de carro",
+      "duration": "",
+      "description": "A cidade regional, situada no sopé da montanha Snezhanka, preserva o espírito dos Ródopes: O planetário é o maior da Bulgária, com espetáculos astronómicos impressionantes, e o Museu Histórico Regional «Stoyu Shishkov» conta a história do modo de vida, dos trajes e da música da montanha. Os bairros antigos de Raikovo e Ustovo encantam com as suas casas do Renascimento e as suas acolhedoras tabernas."
+    },
+    "momchilovtsi": {
+      "title": "Momchilovtsi",
+      "distance": "25 km · 30 min de carro",
+      "duration": "",
+      "description": "Uma pitoresca aldeia dos Ródopes, situada a 1200 m de altitude, famosa pela longevidade dos seus habitantes e pelo iogurte caseiro, que se tornou uma lenda até na China. Trilhos panorâmicos, capelas em cada colina e tabernas autênticas e acolhedoras. Em agosto, a aldeia acolhe a festa do iogurte."
+    },
+    "gela-village": {
+      "title": "Gela — a aldeia de Orfeu",
+      "distance": "22 km · 30 min de carro",
+      "duration": "",
+      "description": "Uma das aldeias mais antigas dos Ródopes, considerada o local de nascimento do mítico Orfeu. Situada a 1500 m de altitude, no meio de prados infinitos, Gela acolhe o Festival Internacional de Gaida todos os primeiros domingos de agosto — centenas de gaidistas enchem a montanha com o som das suas gaitas. Daqui partem trilhos para os picos de Turlata e Gela."
+    },
+    "yagodina-cave": {
+      "title": "A Gruta de Yagodina",
+      "distance": "50 km · 1 h 15 min de carro",
+      "duration": "Percurso de 45 minutos · 1100 m de extensão",
+      "description": "A terceira caverna mais longa da Bulgária — 10,5 km de galerias distribuídas por três níveis na garganta de Buynovo. O percurso turístico passa por formações em forma de pele de leopardo, pérolas de caverna, estalactites e a famosa «Sala de Ano Novo», onde se celebra o Ano Novo no subsolo. A temperatura é constante, de 6 °C — não se esqueça de levar um casaco, mesmo em agosto."
+    },
+    "devils-throat": {
+      "title": "A Garganta do Diabo",
+      "distance": "55 km · 1 h 20 min de carro",
+      "duration": "Percurso de 30 minutos",
+      "description": "Uma caverna abissal com a cascata subterrânea mais alta dos Balcãs — 42 m, na qual, na sua «Sala Ruidosa», o rio Trigradska se precipita com estrondo para o subsolo. Segundo a lenda, foi a partir daqui que Orfeu desceu ao reino subterrâneo em busca de Eurídice. Nada do que cai na água volta à superfície — um mistério que os cientistas ainda estão a investigar."
+    },
+    "trigrad-gorge": {
+      "title": "O desfiladeiro de Trigrad",
+      "distance": "53 km · 1 h 15 min de carro",
+      "duration": "",
+      "description": "Um desfiladeiro com paredes verticais de mármore, que se elevam até 250 m acima do rio Trigradska — a estrada passa literalmente por entre as rochas. Habitat de aves raras, como a trepadeira-das-rochas, e porta de entrada para a Garganta do Diabo e para a aldeia de Trigrad. Uma das estradas mais espetaculares da Bulgária — cada paragem é um cenário digno de ser fotografado."
+    },
+    "uhlovitsa-cave": {
+      "title": "Gruta de Uhlovitsa",
+      "distance": "32 km · 45 min de carro",
+      "duration": "Percurso de 30 minutos",
+      "description": "Uma das cavernas mais bonitas da Bulgária, perto da aldeia de Mogilitsa. É famosa pelas suas «cascatas» de pedra — cascatas de formações calcíticas que se assemelham a água congelada — e pelos corais nas abóbadas. Até à entrada, há um trilho pitoresco que atravessa a floresta (cerca de 30 minutos a pé a partir do parque de estacionamento)."
+    }
+  }
+}

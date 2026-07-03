@@ -9,5 +9,49 @@
   "placeholderEmail": "la alegere",
   "placeholderPeriod": "de exemplu, martie 2025",
   "placeholderBody": "Ce v-a rămas în memorie din șederea dumneavoastră la noi...",
-  "villaUnknown": "Nu sunt sigur/ă"
+  "villaUnknown": "Nu sunt sigur/ă",
+  "form": {
+    "name": "Nume",
+    "email": "E-mail",
+    "rating": "Evaluare",
+    "title": "Titlu",
+    "body": "Părerea dumneavoastră",
+    "bodyPlaceholder": "Spuneți-ne ce v-a plăcut și ce am putea îmbunătăți...",
+    "submit": "Trimite un comentariu",
+    "submitting": "Se trimite...",
+    "namePlaceholder": "Numele dumneavoastră",
+    "emailPlaceholder": "la alegere",
+    "ratingAria": "{star} stele",
+    "villa": "Vilă",
+    "villaPlaceholder": "Alegeți",
+    "villaUnknown": "Nu sunt sigur/ă",
+    "period": "Perioadă",
+    "periodPlaceholder": "de exemplu, martie 2025"
+  },
+  "toast": {
+    "success": "Vă mulțumim pentru recenzie! O vom publica după ce o vom verifica.",
+    "error": "A apărut o eroare la trimiterea recenziei."
+  },
+  "carousel": {
+    "readMore": "Citește mai mult",
+    "close": "Închide",
+    "googleSource": "Google",
+    "siteSource": "Site web",
+    "readFull": "Recenzia completă",
+    "open": "Deschide",
+    "readFullAria": "Citește recenzia completă",
+    "openAria": "Deschide recenzia",
+    "emptyTitle": "Încă nu au fost publicate recenzii",
+    "emptyBody": "Fii primul — împărtășește-ți impresiile mai jos.",
+    "pause": "Pauză la derularea automată",
+    "resume": "Continuă derularea automată",
+    "prev": "Recenzie anterioară",
+    "next": "Următorul comentariu",
+    "navLabel": "Recenzii",
+    "reviewN": "Recenzie {n}",
+    "photoCount": "{count} fotografii"
+  },
+  "modal": {
+    "close": "Închide"
+  }
 }

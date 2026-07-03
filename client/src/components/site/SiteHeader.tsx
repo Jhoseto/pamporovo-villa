@@ -8,6 +8,7 @@ import { useHeaderScroll } from "@/hooks/useHeaderScroll";
 import { useScrollProgress } from "@/hooks/useScrollProgress";
 import { usePageSearch } from "@/hooks/usePageLang";
 import { navigateSiteLink } from "@/lib/siteNav";
+import { preserveLangOnPath } from "@/lib/localizedNav";
 import { cn } from "@/lib/utils";
 import { LangSwitcher } from "./LangSwitcher";
 import { MagneticButton } from "./MagneticButton";
@@ -83,8 +84,7 @@ export function SiteHeader() {
         <button
           type="button"
           onClick={() => {
-            setLocation("/");
-            window.scrollTo(0, 0);
+            window.location.assign(preserveLangOnPath("/", search));
           }}
           className="site-logo-btn site-header-logo min-w-0"
           aria-label={SITE.name}
@@ -122,6 +122,11 @@ export function SiteHeader() {
           </MagneticButton>
 
           <LangSwitcher variant="header" className="site-header-lang hidden lg:flex" />
+
+          <LangSwitcher
+            variant="header"
+            className="site-header-lang-mobile shrink-0 lg:hidden"
+          />
 
           <div className="site-header-menu lg:hidden">
             <Sheet open={open} onOpenChange={setOpen}>
@@ -169,7 +174,6 @@ export function SiteHeader() {
                   </nav>
 
                   <div className="mobile-nav-footer mt-6 space-y-3 border-t border-white/10 pt-6">
-                    <LangSwitcher variant="header" className="mx-auto w-fit" />
                     <MagneticButton
                       className="premium-btn nav-cta h-12 w-full"
                       onClick={() => {

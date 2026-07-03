@@ -2,17 +2,17 @@
   "routes": {
     "/": {
       "title": "Pamporovo Villa | 3 ville in affitto a Pamporovo, Bulgaria",
-      "description": "Pamporovo Villa — tre ville indipendenti in affitto nella località turistica di Pamporovo, zona Райковски ливади. 2 camere da letto, caminetto, barbecue, fino a 6 ospiti. Prenotate direttamente.",
+      "description": "Pamporovo Villa — tre ville indipendenti in affitto nella località turistica di Pamporovo, zona Raykovski Livadi. 2 camere da letto, caminetto, barbecue, fino a 6 ospiti. Prenotate direttamente.",
       "keywords": "villa in affitto a Pamporovo, Pamporovo Villa, affitto villa a Pamporovo"
     },
     "/rent": {
       "title": "Affitto di ville a Pamporovo | 3 ville a partire da 110 € a notte — Pamporovo Villa",
       "description": "Pagina ufficiale per gli affitti: 3 ville indipendenti a Pamporovo. Una villa intera per il vostro gruppo — caminetto, barbecue, a 2 km dal centro. Prenotate online.",
-      "keywords": "affitto villa a Pamporovo, villa a Pamporovo, vacanze nei Rodopi"
+      "keywords": "affitto villa a Pamporovo, villa a Pamporovo, vacanze nei Monti Rodopi"
     },
     "/pamporovo": {
       "title": "Pamporovo — guida completa alla località turistica e alla regione | Pamporovo Villa",
-      "description": "Oltre 37 km di piste da sci, 6 impianti di risalita, sentieri ecologici, grotte e attrazioni turistiche. Dove dormire: 3 ville a partire da 110 € a notte su Райковски ливади.",
+      "description": "Oltre 37 km di piste da sci, 6 impianti di risalita, sentieri ecologici, grotte e attrazioni turistiche. Dove dormire: 3 ville a partire da 110 € a notte su Raykovski Livadi.",
       "keywords": "Guida di Pamporovo, sci in Bulgaria, viaggio nei Rodopi"
     }
   }

@@ -1,0 +1,144 @@
+{
+  "sectionEyebrow": "Passeggiata virtuale",
+  "sectionTitle": "Entrate prima ancora di arrivare",
+  "sectionSubtitle": "Scorri e visita le ville stanza per stanza",
+  "ariaLabel": "Passeggiata virtuale",
+  "ariaLabel3d": "Visita virtuale in 3D",
+  "skipUp": "Continua a scorrere verso l'alto",
+  "skipDown": "Continua a leggere",
+  "skipUpAria": "Salta la salita",
+  "skipDownAria": "Salta la passeggiata verso il basso",
+  "panels": {
+    "exterior-summer": {
+      "room": "01 · Il complesso",
+      "title": "Qui inizia la vostra storia",
+      "subtitle": "Villa 1 · Villa 2 · Villa Deluxe",
+      "description": "Tre ville indipendenti, nascoste tra i pini di Raykovski Livadi. Affittate l'intera villa tutta per voi — senza vicini alle spalle, senza rinunciare al comfort. Scegliete quella che preferite e al resto pensiamo noi.",
+      "imageAlt": "L'esterno della villa in estate",
+      "highlights": [
+        "3 ville indipendenti",
+        "Una tranquilla pineta",
+        "Parcheggio e Wi-Fi",
+        "Affitto per tutto l'anno"
+      ]
+    },
+    "exterior-winter": {
+      "room": "02 · Inverno",
+      "title": "Quando nevica",
+      "subtitle": "Sci al mattino, caminetto la sera",
+      "description": "Al mattino siete sulle piste in pochi minuti, mentre la sera vi aspettano il calore del caminetto e il profumo del barbecue. La neve arriva fino alla soglia di casa — e non vi serve altro che un bicchiere di vin brulé e buona compagnia.",
+      "imageAlt": "Una villa sotto la neve a Pamporovo",
+      "highlights": [
+        "A pochi minuti dalle piste",
+        "Camino a legna",
+        "Neve fino alla soglia",
+        "Calore e intimità"
+      ]
+    },
+    "living-fireplace": {
+      "room": "03 · Soggiorno",
+      "title": "Dove si riunisce la famiglia",
+      "subtitle": "Ampio soggiorno con camino",
+      "description": "Un ampio soggiorno con un vero camino a legna, dove il legno e la pietra creano un’atmosfera calda e accogliente. Qui si giocano giochi da tavolo, si raccontano storie e si alimenta il fuoco: il cuore di ogni serata.",
+      "imageAlt": "Soggiorno con camino e sala da pranzo",
+      "highlights": [
+        "Camino a legna",
+        "Smart TV",
+        "Legno e pietra",
+        "Un posto per tutti"
+      ]
+    },
+    "open-plan": {
+      "room": "04 · Spazio",
+      "title": "Luminoso e spazioso",
+      "subtitle": "Cucina · sala da pranzo · soggiorno",
+      "description": "La cucina, la sala da pranzo e il soggiorno formano un unico spazio aperto, per stare insieme anche quando uno cucina e gli altri si rilassano. Le ampie finestre lasciano entrare la luce delle montagne.",
+      "imageAlt": "Spazio aperto — vista dalla scala",
+      "highlights": [
+        "A pianta aperta",
+        "Ampie finestre",
+        "Luce naturale",
+        "Fino a 6 ospiti"
+      ]
+    },
+    "dining": {
+      "room": "05 · Sala da pranzo",
+      "title": "Il tavolo attorno al quale ruota tutto",
+      "subtitle": "Dal caffè del mattino alla cena tardiva",
+      "description": "Un ampio tavolo di legno con spazio per tutta la compagnia e vista diretta sui pini. Qui la giornata inizia con un caffè alla luce soffusa e si conclude con la cena, le risate e i progetti per il giorno dopo.",
+      "imageAlt": "Sala da pranzo con vista sulla pineta",
+      "highlights": [
+        "Tavolo per 6 persone",
+        "Vista sul bosco",
+        "Accesso alla terrazza",
+        "Luce naturale"
+      ]
+    },
+    "kitchen": {
+      "room": "06 · Cucina",
+      "title": "Cucinate come a casa vostra",
+      "subtitle": "Cucina completamente attrezzata",
+      "description": "Piano cottura, forno, frigorifero, microonde, macchina per il caffè e un set completo di stoviglie: tutto il necessario per una colazione in famiglia o una cena di festa. Perché a volte il piatto più gustoso è quello che si cucina da soli, in montagna.",
+      "imageAlt": "Cucina attrezzata",
+      "highlights": [
+        "Forno e piano cottura",
+        "Frigorifero",
+        "Macchina da caffè",
+        "Set completo di stoviglie"
+      ]
+    },
+    "bedrooms": {
+      "room": "07 · Camere da letto",
+      "title": "Un sonno come non ne avete da tempo",
+      "subtitle": "Due camere da letto accoglienti",
+      "description": "Due camere da letto separate con letti comodi e biancheria da letto di qualità — spazio per un massimo di 6 ospiti. La quiete del bosco e l'aria pura a 1 650 m fanno miracoli; vi sveglierete riposati, ve lo promettiamo.",
+      "imageAlt": "Corridoio che conduce alle due camere da letto",
+      "highlights": [
+        "2 camere da letto",
+        "Fino a 6 ospiti",
+        "Intimo di qualità",
+        "Silenzio profondo"
+      ]
+    },
+    "bathroom": {
+      "room": "08 · Bagno",
+      "title": "Un bagno dall'atmosfera montana",
+      "subtitle": "Comfort per tutta la compagnia",
+      "description": "Un bagno completamente attrezzato con acqua calda in ogni momento — spazioso e accogliente per tutto il gruppo. Materiali naturali e atmosfera calda.",
+      "imageAlt": "Bagno con legno e piastrelle",
+      "highlights": [
+        "1 bagno",
+        "Acqua calda 24 ore su 24, 7 giorni su 7",
+        "Materiali di alta qualità",
+        "Atmosfera termale"
+      ]
+    },
+    "terrace": {
+      "room": "09 · Terrazza",
+      "title": "Il panorama per cui tornate",
+      "subtitle": "I Rodopi a portata di mano",
+      "description": "Una terrazza con vista panoramica sui Monti Rodopi e sulle pinete. Qui si beve il primo caffè mentre il sole sorge sulle cime e si saluta la giornata con un tramonto dorato. Momenti che rimangono impressi a lungo dopo la vacanza.",
+      "imageAlt": "Tramonto dorato sui Monti Rodopi",
+      "highlights": [
+        "Vista panoramica",
+        "Albe e tramonti",
+        "Aria pura di montagna",
+        "Ampia terrazza"
+      ]
+    },
+    "bbq-veranda": {
+      "room": "10 · Veranda",
+      "title": "Serate che non finiscono mai",
+      "subtitle": "Veranda coperta con barbecue",
+      "description": "La veranda coperta con barbecue è il posto preferito quando il sole tramonta. Potete cucinare, chiacchierare e ridere all’aperto — e se dovesse piovere o fare freddo, restate all’asciutto e al caldo, senza perdere la sensazione di essere in montagna.",
+      "imageAlt": "Veranda con barbecue e vista invernale",
+      "highlights": [
+        "Barbecue",
+        "Veranda coperta",
+        "Per le lunghe serate",
+        "All'aria aperta"
+      ]
+    }
+  },
+  "highlightsLabel": "Punti salienti"
+}

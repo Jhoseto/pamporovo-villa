@@ -1,0 +1,90 @@
+{
+  "backToRent": "← Nyaraló bérlése",
+  "featuresHeading": "Kényelmi szolgáltatások és lehetőségek",
+  "pricingHeading": "Árak",
+  "pricingHeadingFor": "Árak a {villa} esetében",
+  "pricingFrom": "tól",
+  "pricingPerNight": "/ éjszaka",
+  "summerFrom": "Nyár a",
+  "winterFrom": "Tél",
+  "wholeVillaNote": "Teljes villa · legfeljebb 6 vendég",
+  "bookCta": "Foglalás",
+  "bookVilla": "Foglalja le a {villa} szállást",
+  "guideLink": "Pamporovo idegenvezető",
+  "amenitiesHeading": "Kényelmi szolgáltatások",
+  "otherVillas": "A többi nyaralónk",
+  "contactHeading": "Kapcsolat és foglalás",
+  "pages": {
+    "villa-1": {
+      "name": "Villa 1",
+      "tagline": "Kényelem az egész család számára",
+      "description": "Meleg és barátságos — két hálószobával, két fürdőszobával és egy nagy nappalival, ahol a kandalló pattog, a teraszon pedig egy grillező várja Önt. A gyermekes családok kedvence.",
+      "seoTitle": "Villa 1 Pamporovo – kiadó | 2 hálószoba, kandalló — Pamporovo Villa",
+      "seoDescription": "Foglalja le a Villa 1-et Pamporovóban — családias hangulat, 2 hálószoba, 2 fürdőszoba, kandalló, grillező, maximum 6 vendég. Raykovski Livadi, 2 km-re a sípályáktól. Online foglalás.",
+      "seoKeywords": "Villa 1 Pamporovo, villa bérlés Pamporovo, családi villa, Pamporovo Villa",
+      "h1": "Villa 1 — szállás Pamporovóban"
+    },
+    "villa-2": {
+      "name": "Villa 2",
+      "tagline": "A nap a keletétől a nyugtaig",
+      "description": "Világos és tágas, két hálószobával, két fürdőszobával és a hegyekre néző nappalival. A grillezővel ellátott terasz a barátaival töltött hosszú estékre teremtődött.",
+      "seoTitle": "Villa 2 Pamporovo – kiadó | 2 hálószoba, grillezővel ellátott terasz",
+      "seoDescription": "Bérelje ki a Villa 2-t Pamporovóban — világos, panorámás villa, 2 hálószobával, kandallóval, grillezővel, maximum 6 vendég számára. Hivatalos bérleti szám: Pamporovo Villa.",
+      "seoKeywords": "Villa 2 Pamporovo, villa bérlés, villa grillezővel Pamporovo",
+      "h1": "Villa 2 — szállás Pamporovóban"
+    },
+    "villa-deluxe": {
+      "name": "Villa Deluxe",
+      "tagline": "Egy kicsit több luxus",
+      "description": "A három közül a legkiválóbb — ugyanolyan kényelmet nyújt két hálószobával, két fürdőszobával és egy tágas nappalival, de különös figyelmet fordítottak a részletekre és a hangulatra. Azok számára, akik valami különlegeset keresnek.",
+      "seoTitle": "Villa Deluxe Pamporovo | Luxus szállás, kandalló, 6 vendég",
+      "seoDescription": "Villa Deluxe Pamporovóban — a három villa közül a legimpozánsabb, 2 hálószobával, kandallóval, grillezővel, maximum 6 vendég számára. Foglaljon online.",
+      "seoKeywords": "Villa Deluxe Pamporovo, luxusvilla Pamporovo, deluxe bérlés",
+      "h1": "Villa Deluxe — szállás Pamporovóban"
+    }
+  },
+  "about": {
+    "intro": "Örülünk, hogy ránk találtak. Három önálló villát kínálunk Önöknek, amelyek a Raykovski Livadi fenyőerdőjében rejtőznek — ott, ahol a városi zaj messze marad, és a nap madárdalokkal és gyantaillattal kezdődik.",
+    "details": "Villa 1, Villa 2 és a Villa Deluxe olyan berendezéssel rendelkeznek, amilyennek mi is szeretnénk, ha a saját hegyi otthonunk kinézne – valódi fával, puha textíliákkal és azokkal a kis részletekkel, amelyek melegséget kölcsönöznek egy helynek. Itt nem csupán vendégek vagytok; érezzétek magatokat otthon.",
+    "layout": "Minden villa kétszintes, és két hálószobával, két fürdőszobával, teljesen felszerelt konyhával és étkezővel, valamint egy nagy nappalival rendelkezik, amelyben fatüzelésű kandalló található. Kívül egy terasz várja Önöket, ahonnan panorámás kilátás nyílik a Rodop-hegységre, valamint egy grillezővel ellátott veranda – ez az a hely, ahol a legszebb esték születnek.",
+    "hosts": "Mint házigazdák, mindig kéznél vagyunk. Segítünk a meglepetések és ünnepségek megszervezésében, elkalauzoljuk Önöket a legszebb sípályákra és túraútvonalakra, tippeket adunk, hol lehet finoman enni — és ha bármire szükségük van, csak csengessenek. Célunk egyetlen: hogy úgy távozzanak, hogy vissza akarnak jönni."
+  },
+  "contact": {
+    "phone": "+359 879 501 660",
+    "email": "pamporovovilla@gmail.com",
+    "address": "Pamporovo üdülőhely, Raykovski Livadi terület"
+  },
+  "firewoodNote": "Kandallófa — 10 € egy zsákért, előzetes kérésre vagy a bejelentkezéskor.",
+  "features": [
+    "2 hálószoba a nyugodt alvásért",
+    "2 fürdőszoba meleg vízzel",
+    "Tágas nappali kandallóval",
+    "Teljesen felszerelt konyha",
+    "Veranda grillezővel",
+    "A villában legfeljebb 6 vendég szállhat meg"
+  ],
+  "pricingNotes": [
+    "Az árak éjszakánként értendők, az egész villára vonatkoznak (legfeljebb 6 vendég).",
+    "A szállásdíj tartalmazza az üdülőhelyi illetéket.",
+    "Kandallófa — 10 € egy zsákért, megrendelésre.",
+    "A síbérletek nem szerepelnek az árban."
+  ],
+  "distances": [
+    {
+      "value": "2 km",
+      "label": "Pamporovo központjáig"
+    },
+    {
+      "value": "10 km",
+      "label": "Smolyanból"
+    },
+    {
+      "value": "85 km",
+      "label": "Plovdivból"
+    },
+    {
+      "value": "220 km",
+      "label": "Szófiából"
+    }
+  ]
+}

@@ -7,6 +7,8 @@ import {
   truncateReviewPreview,
 } from "@shared/reviewLimits";
 import { VILLAS } from "@/data/siteContent";
+import { useTranslation } from "@/contexts/LocaleContext";
+import { interpolate } from "@/i18n/contentHooks";
 import {
   attachContinuousScroll,
   getContinuousScrollSpeed,
@@ -24,11 +26,6 @@ export type ReviewItem = {
   stayPeriod: string | null;
   createdAt: string;
 };
-
-function villaLabel(villaId: string | null | undefined) {
-  if (!villaId) return null;
-  return VILLAS.find(v => v.id === villaId)?.name ?? null;
-}
 
 function StarRow({ rating, size = "sm" }: { rating: number; size?: "sm" | "xs" }) {
   const iconClass = size === "xs" ? "h-3 w-3" : "h-3.5 w-3.5";
@@ -54,7 +51,21 @@ const ReviewCard = memo(function ReviewCard({
   review: ReviewItem;
   onExpand: (review: ReviewItem) => void;
 }) {
-  const meta = [villaLabel(review.villaId), review.stayPeriod].filter(Boolean).join(" · ");
+  const { t } = useTranslation();
+  const villas = useMemo(
+    () =>
+      VILLAS.map(v => ({
+        id: v.id,
+        name: t(`villa.pages.${v.id}.name`, v.name),
+      })),
+    [t]
+  );
+  const meta = [
+    villas.find(v => v.id === review.villaId)?.name ?? null,
+    review.stayPeriod,
+  ]
+    .filter(Boolean)
+    .join(" · ");
   const preview = truncateReviewPreview(review.body, REVIEW_BODY_PREVIEW);
   const showExpand = reviewNeedsExpand(review.body, REVIEW_BODY_PREVIEW);
 
@@ -76,10 +87,18 @@ const ReviewCard = memo(function ReviewCard({
             e.stopPropagation();
             onExpand(review);
           }}
-          aria-label={showExpand ? "Прочети целия отзив" : "Отвори отзива"}
+          aria-label={
+            showExpand
+              ? t("reviews.carousel.readFullAria", "Прочети целия отзив")
+              : t("reviews.carousel.openAria", "Отвори отзива")
+          }
         >
           <Expand className="h-3.5 w-3.5" />
-          <span>{showExpand ? "Целият отзив" : "Отвори"}</span>
+          <span>
+            {showExpand
+              ? t("reviews.carousel.readFull", "Целият отзив")
+              : t("reviews.carousel.open", "Отвори")}
+          </span>
         </button>
       </footer>
     </article>
@@ -92,6 +111,7 @@ type ReviewsCarouselProps = {
 };
 
 export function ReviewsCarousel({ reviews, isLoading }: ReviewsCarouselProps) {
+  const { t } = useTranslation();
   const [paused, setPaused] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
   const [isScrolling, setIsScrolling] = useState(false);
@@ -269,9 +289,11 @@ export function ReviewsCarousel({ reviews, isLoading }: ReviewsCarouselProps) {
     return (
       <div className="reviews-carousel-empty">
         <Star className="mb-3 h-7 w-7 text-[var(--gold)]/45" />
-        <p className="font-serif text-lg text-foreground">Все още няма публикувани отзиви</p>
+        <p className="font-serif text-lg text-foreground">
+          {t("reviews.carousel.emptyTitle", "Все още няма публикувани отзиви")}
+        </p>
         <p className="mt-1 max-w-sm text-sm text-muted-foreground">
-          Бъдете първи — споделете впечатленията си отдолу.
+          {t("reviews.carousel.emptyBody", "Бъдете първи — споделете впечатленията си отдолу.")}
         </p>
       </div>
     );
@@ -310,7 +332,9 @@ export function ReviewsCarousel({ reviews, isLoading }: ReviewsCarouselProps) {
                 className="reviews-carousel-play"
                 onClick={handleTogglePause}
                 aria-label={
-                  paused ? "Продължи автоматичното превъртане" : "Пауза на автоматичното превъртане"
+                  paused
+                    ? t("reviews.carousel.resume", "Продължи автоматичното превъртане")
+                    : t("reviews.carousel.pause", "Пауза на автоматичното превъртане")
                 }
               >
                 {paused ? <Play className="h-3.5 w-3.5" /> : <Pause className="h-3.5 w-3.5" />}
@@ -324,7 +348,7 @@ export function ReviewsCarousel({ reviews, isLoading }: ReviewsCarouselProps) {
                 type="button"
                 className="reviews-carousel-arrow"
                 onClick={scrollPrev}
-                aria-label="Предишен отзив"
+                aria-label={t("reviews.carousel.prev", "Предишен отзив")}
               >
                 <ChevronLeft className="h-4 w-4" />
               </button>
@@ -332,7 +356,7 @@ export function ReviewsCarousel({ reviews, isLoading }: ReviewsCarouselProps) {
                 type="button"
                 className="reviews-carousel-arrow"
                 onClick={scrollNext}
-                aria-label="Следващ отзив"
+                aria-label={t("reviews.carousel.next", "Следващ отзив")}
               >
                 <ChevronRight className="h-4 w-4" />
               </button>
@@ -353,14 +377,16 @@ export function ReviewsCarousel({ reviews, isLoading }: ReviewsCarouselProps) {
         </div>
 
         {reviews.length > 1 && (
-          <div className="reviews-carousel-dots" role="tablist" aria-label="Отзиви">
+          <div className="reviews-carousel-dots" role="tablist" aria-label={t("reviews.carousel.navLabel", "Отзиви")}>
             {reviews.slice(0, dotCount).map((_, i) => (
               <button
                 key={i}
                 type="button"
                 role="tab"
                 aria-selected={i === selectedIndex}
-                aria-label={`Отзив ${i + 1}`}
+                aria-label={interpolate(t("reviews.carousel.reviewN", "Отзив {n}"), {
+                  n: String(i + 1),
+                })}
                 className={cn("reviews-carousel-dot", i === selectedIndex && "is-active")}
                 onClick={() => {
                   scrollCtrlRef.current?.stop();

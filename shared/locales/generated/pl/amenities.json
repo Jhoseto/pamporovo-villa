@@ -1,0 +1,36 @@
+{
+  "items": [
+    {
+      "title": "Trzy wolnostojące wille",
+      "description": "Villa 1, Villa 2 i Villa Deluxe — wynajmujecie cały domek wyłącznie dla siebie, z dwiema sypialniami w każdym i miejscem dla maksymalnie 6 osób."
+    },
+    {
+      "title": "Kominek opalany drewnem",
+      "description": "Prawdziwy kominek w samym sercu salonu — na wieczory, kiedy na dworze pada śnieg."
+    },
+    {
+      "title": "Kuchnia jak w domu",
+      "description": "W pełni wyposażona kuchnia z jadalnią — kuchenka, piekarnik, lodówka, ekspres do kawy i wszystko, co potrzebne do przygotowania domowej kolacji."
+    },
+    {
+      "title": "Weranda z grillem",
+      "description": "Zadaszona weranda z grillem — idealna na długie wieczory na świeżym powietrzu, niezależnie od pogody."
+    },
+    {
+      "title": "Widok na Rodopy",
+      "description": "Taras z panoramicznym widokiem na góry — poranna kawa w promieniach słońca i zapierające dech w piersiach zachody słońca."
+    },
+    {
+      "title": "Ponad 260 dni słonecznych",
+      "description": "Pamporowo to najbardziej nasłoneczniony górski kurort w Bułgarii — położony na wysokości 1 650 m n.p.m., charakteryzujący się łagodnym klimatem i czystym powietrzem."
+    },
+    {
+      "title": "Cisza wśród sosen",
+      "description": "Raykovski Livadi — spokojny las sosnowy z dala od tłumów, ale zaledwie kilka minut od stoków i centrum."
+    },
+    {
+      "title": "Wi-Fi i parking",
+      "description": "Bezpłatny bezprzewodowy dostęp do Internetu i parking tuż przy wejściu — przyjeżdżasz samochodem i pozostajesz w kontakcie."
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "resortName": "Pamporovo",
+  "elevation": "1 650 m",
+  "variable": "Variabel",
+  "wind": {
+    "calm": "leise",
+    "light": "eine leichte Brise",
+    "gentle": "dünn",
+    "moderate": "gemäßigt",
+    "strong": "stark"
+  },
+  "codes": {
+    "0": {
+      "label": "Klar",
+      "short": "Klar"
+    },
+    "1": {
+      "label": "Meistens klar",
+      "short": "Klar"
+    },
+    "2": {
+      "label": "Teilweise bewölkt",
+      "short": "Bewölkt"
+    },
+    "3": {
+      "label": "Bewölkt",
+      "short": "Bewölkt"
+    },
+    "45": {
+      "label": "Nebel",
+      "short": "Nebel"
+    },
+    "48": {
+      "label": "Starker Nebel",
+      "short": "Nebel"
+    },
+    "51": {
+      "label": "Leichtes Rauchen",
+      "short": "Rumezh"
+    },
+    "53": {
+      "label": "Rumezh",
+      "short": "Rumezh"
+    },
+    "55": {
+      "label": "Lautes Gebrüll",
+      "short": "Rumezh"
+    },
+    "56": {
+      "label": "Leichtes Eiskribbeln",
+      "short": "Rumezh"
+    },
+    "57": {
+      "label": "Eisiges Raunen",
+      "short": "Rumezh"
+    },
+    "61": {
+      "label": "Leichter Regen",
+      "short": "Regen"
+    },
+    "63": {
+      "label": "Regen",
+      "short": "Regen"
+    },
+    "65": {
+      "label": "Starker Regen",
+      "short": "Regen"
+    },
+    "66": {
+      "label": "Leichter Eisregen",
+      "short": "Regen"
+    },
+    "67": {
+      "label": "Eisregen",
+      "short": "Regen"
+    },
+    "71": {
+      "label": "Leichter Schneefall",
+      "short": "Schnee"
+    },
+    "73": {
+      "label": "Schnee",
+      "short": "Schnee"
+    },
+    "75": {
+      "label": "Starker Schneefall",
+      "short": "Schnee"
+    },
+    "77": {
+      "label": "Schneekörner",
+      "short": "Schnee"
+    },
+    "80": {
+      "label": "Ein kurzer Regenschauer",
+      "short": "Niederschläge"
+    },
+    "81": {
+      "label": "Niederschläge",
+      "short": "Niederschläge"
+    },
+    "82": {
+      "label": "Starke Regenfälle",
+      "short": "Niederschläge"
+    },
+    "85": {
+      "label": "Leichter Schneefall",
+      "short": "Schnee"
+    },
+    "86": {
+      "label": "Starker Schneefall",
+      "short": "Schnee"
+    },
+    "95": {
+      "label": "Gewitter",
+      "short": "Sturm"
+    },
+    "96": {
+      "label": "Hagel",
+      "short": "Sturm"
+    },
+    "99": {
+      "label": "Starker Hagel",
+      "short": "Sturm"
+    }
+  }
+}

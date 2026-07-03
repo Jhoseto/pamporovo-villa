@@ -1,0 +1,479 @@
+{
+  "nav": {
+    "ariaLabel": "Secțiuni ale paginii",
+    "intro": "Stațiunea",
+    "winter": "Iarna",
+    "summer": "Vara",
+    "landmarks": "Împrejurimile",
+    "caves": "Peșteri"
+  },
+  "sticky": {
+    "book": "Rezervă",
+    "rent": "Închiriere · prețuri"
+  },
+  "ui": {
+    "pisteNumber": "Nr.",
+    "pisteName": "Pistă",
+    "difficulty": "Dificultate",
+    "length": "Lungime",
+    "note": "Notă",
+    "dash": "—",
+    "meters": "m",
+    "route": "Traseu",
+    "liftType": "Tip",
+    "capacity": "Capacitate/oră",
+    "capacityPerHour": "Capacitate/oră"
+  },
+  "difficulty": {
+    "green": "Verde · începători",
+    "blue": "Albastru · nivel mediu",
+    "red": "Roșu · avansați",
+    "black": "Negră · experți"
+  },
+  "sections": {
+    "intro": {
+      "eyebrow": "Stațiunea",
+      "title": "Inima Munților Rodopi",
+      "subtitle": "La 1650 m altitudine, la poalele vârfului Snezhanka — cea mai veche stațiune de schi din Bulgaria, înființată în 1933.",
+      "panoramaAlt": "Stațiunea de iarnă Pamporovo — hoteluri și pârtii în Munții Rodopi",
+      "towerAlt": "Turnul Snezhanka — simbolul stațiunii Pamporovo",
+      "p1": "Două stațiuni de schi principale — Studenec și Malina — legate de vârful Snezhanka (1926 m). Pistele se află la altitudini cuprinse între 1400 și 1926 m, fiind dotate cu teleschiuri moderne și peste 80 de tunuri de zăpadă.",
+      "p2": "Vara, stațiunea se transformă într-un centru de ecoturism — trasee marcate, ciclism, călărie și nenumărate atracții turistice situate la 15–60 de minute cu mașina de Smolyan, Shiroka Luka, Podurile Minunate și palatele subterane din Rodopii de Vest.",
+      "cta": "Rezervă o vilă în Pamporovo"
+    },
+    "winter": {
+      "eyebrow": "Iarna",
+      "title": "Zona de schi — pârtii și teleschiuri",
+      "subtitle": "Peste 37 km de pârtii marcate pentru schi și snowboard, schi nocturn pe „Peretele” și trasee pentru schi fond",
+      "skiAlt": "Telecabina către vârful Snezhanka — turnul de deasupra stațiunii Pamporovo",
+      "pistesHeading": "Piste în funcție de gradul de dificultate",
+      "liftsHeading": "Ascensoare și echipamente",
+      "activitiesHeading": "Activități de iarnă"
+    },
+    "summer": {
+      "eyebrow": "Vara",
+      "title": "Trasee ecologice și natură",
+      "subtitle": "Canionul Cascadelor, Lacurile din Smolyan, Stâncile lui Orfeu — la câteva minute de stațiune",
+      "summerAlt": "Un lac de munte din Munții Rodopi — un traseu ecologic de vară lângă Pamporovo",
+      "activitiesHeading": "Activități de vară"
+    },
+    "landmarks": {
+      "eyebrow": "Împrejurimile",
+      "title": "Atracții turistice și sate",
+      "subtitle": "Rezervații arhitecturale, observator, planetariu și folclor autentic din Rodopi"
+    },
+    "caves": {
+      "eyebrow": "Lumea subterană",
+      "title": "Peșteri și defileuri",
+      "subtitle": "Peștera Yagodinska, Gâtul Diavolului, Defileul Trigrad și Uhlovitsa — comori ale Rodopilor de Vest",
+      "footer": "Vilele Pamporovo Villa se află la Raykovski Livadi — un punct de plecare ideal pentru aventuri de iarnă și de vară în întreaga regiune.",
+      "cta": "Vezi datele disponibile și rezervă"
+    }
+  },
+  "attractions": {
+    "canyon-waterfalls": {
+      "title": "Canionul cascadelor",
+      "distance": "15 km · lângă Smolyan",
+      "duration": "~4 ore · traseu circular de 6 km",
+      "description": "Cea mai impresionantă potecă ecologică din Rodopi — veți traversa pădurile seculare ale rezervației „Soskovcheto”, de-a lungul râului Gerzovska. Pe traseu veți număra 46 de cascade, printre care și frumoasa cascadă „Orfeu”, înaltă de 68 de metri — una dintre cele mai înalte din Bulgaria. Punctul culminant este o platformă panoramică situată la 1800 m altitudine, cu vedere spre Smolyan și crestele Munților Rodopi.",
+      "highlights": [
+        "46 de cascade",
+        "Cascada „Orfeu” — 68 m",
+        "Păduri seculare de molid",
+        "Panoramă la 1800 m"
+      ]
+    },
+    "smolyan-lakes": {
+      "title": "Lacurile din Smolyan",
+      "distance": "10 km · sub vârful Snezhanka",
+      "duration": "~1 oră · traseu ușor",
+      "description": "Cunoscute sub numele de „Ochii de smarald ai Rodopilor” — lacuri naturale, dispuse în trepte la poalele muntelui Snezhanka. O potecă ușoară leagă lacurile Bistro, Mătno și Trevisto, oferind locuri pentru picnic și pescuit. O plimbare ideală pentru familiile cu copii, care se combină minunat cu urcarea pe vârf.",
+      "highlights": [
+        "Lacuri naturale de munte",
+        "Un traseu ușor, potrivit pentru familii",
+        "Locuri de picnic",
+        "Se combină cu vârful Snezhanka"
+      ]
+    },
+    "nevyastata": {
+      "title": "Traseul ecologic „Nevăstața”",
+      "distance": "12 km · deasupra orașului Smolyan",
+      "duration": "~40 min · 900 m potecă",
+      "description": "O potecă scurtă și ușor accesibilă prin pădurea de pini parfumată, până la stânca abruptă „Nevyasta”, care se înalță deasupra orașului Smolyan. Puncte de belvedere și foișoare de-a lungul întregului traseu, iar pentru cei în căutare de adrenalină — o tiroliană alpină deasupra prăpastiei. Legenda povestește despre o fecioară care s-a aruncat de pe stâncă pentru a-și păstra credința.",
+      "highlights": [
+        "Puncte de observație panoramice",
+        "Troleibuzul alpin",
+        "Legenda miresei",
+        "Potrivită pentru toate vârstele"
+      ]
+    },
+    "orpheus-rocks": {
+      "title": "Stâncile lui Orfeu și Acele",
+      "distance": "6 km · de la vârful Snezhanka",
+      "duration": "~4 ore · intensitate ușoară",
+      "description": "De la vârful Snezhanka, un traseu marcat duce spre sud-est către Stâncile lui Orfeu — formațiuni riolitice capricioase, care oferă o priveliște emblematică asupra lacurilor din Smolyan. În cealaltă direcție se află vârful Iglite, care oferă o altă panoramă uluitoare. Traseul traversează pășuni și păduri, presărate cu afine în luna august.",
+      "highlights": [
+        "Fenomene rociose riolitice",
+        "Priveliște spre lacuri",
+        "Vârful Iglite",
+        "Afine sălbatice în luna august"
+      ]
+    },
+    "shiroka-laka": {
+      "title": "Arcul larg",
+      "distance": "16 km · 20 min cu mașina",
+      "duration": "",
+      "description": "Rezervație arhitecturală și folclorică — satul cu case din perioada Renașterii naționale, cu erkeri, poduri de piatră și renumita Școală Națională de Arte Folclorice. Cimpoiul din Rodopi este sufletul localității Șiroka Laka: aici are loc festivalul „Pesponedelnik”, cu jocuri de kukeri și folclor autentic. O oprire obligatorie pentru fiecare vizitator al stațiunii Pamporovo.",
+      "highlights": [
+        "Arhitectura perioadei Renașterii",
+        "Școală pentru cântăreți la cimpoi",
+        "Muzeul Etnografic",
+        "Festivalul Kukeri"
+      ]
+    },
+    "rozhen-observatory": {
+      "title": "NAO „Rozhen”",
+      "distance": "18 km · 25 min cu mașina",
+      "duration": "",
+      "description": "Cel mai mare observator astronomic de pe Peninsula Balcanică, situat la 1750 m deasupra pajiștilor de la Rozen. Dispune de un telescop de 2 metri — unul dintre cele mai mari din Europa de Sud-Est. Se organizează vizite de zi cu prezentări, iar observațiile nocturne (pe bază de rezervare) sunt de neuitat. În apropiere se află pajiștile din Rozen — gazda legendarului festival național.",
+      "highlights": [
+        "Telescop de 2 metri",
+        "Vizite cu discuții",
+        "Observații nocturne",
+        "Festivalul de la Rozen, în apropiere"
+      ]
+    },
+    "wonderful-bridges": {
+      "title": "Podurile minunate",
+      "distance": "42 km · 1 oră cu mașina",
+      "duration": "",
+      "description": "Arce gigantice de piatră de marmură, sculptate de râul Erküpriya de-a lungul mileniilor. Podul mare are o lungime de 96 m și o înălțime de 45 m — sub el trece o potecă, iar acustica este incredibilă. Podul mic are o lungime de 60 m. Obiectivul face parte din cele 100 de obiective turistice naționale și se combină excelent cu un prânz în satul Zabardo.",
+      "highlights": [
+        "Arc cu o înălțime de 45 m",
+        "100 de obiective naționale",
+        "Poteca de sub poduri",
+        "Cabana și adăpost în apropiere"
+      ]
+    },
+    "smolyan-town": {
+      "title": "Smolyan — planetariu și muzee",
+      "distance": "15 km · 20 min cu mașina",
+      "duration": "",
+      "description": "Orașul reședință de județ, situat la poalele muntelui Snezhanka, păstrează spiritul Munților Rodopi: Planetariul este cel mai mare din Bulgaria, oferind spectacole astronomice impresionante, iar Muzeul Istoric Regional „Stoyu Shishkov” prezintă obiceiurile, costumele și muzica din această regiune montană. Cartierele vechi Raikovo și Ustovo încântă cu casele lor din perioada Renașterii și cu hanurile primitoare.",
+      "highlights": [
+        "Cel mai mare planetariu din Bulgaria",
+        "Institutul de Cercetare „Stoyu Shishkov”",
+        "Galerie de artă",
+        "Cartierele Raikovo și Ustovo"
+      ]
+    },
+    "momchilovtsi": {
+      "title": "Locuitorii din Momchilovtsi",
+      "distance": "25 km · 30 min cu mașina",
+      "duration": "",
+      "description": "Un sat pitoresc din Rodopi, situat la 1200 m altitudine, renumit pentru longevitatea locuitorilor săi și pentru iaurtul de casă, care a devenit o legendă chiar și în China. Potecile panoramice, capelele de pe fiecare culme și hanurile autentice și ospitaliere. În luna august, satul găzduiește festivalul iaurtului.",
+      "highlights": [
+        "Satul longevității",
+        "Sărbătoarea iaurtului",
+        "Capele panoramice",
+        "Mecanisme autentice"
+      ]
+    },
+    "gela-village": {
+      "title": "Gela — satul lui Orfeu",
+      "distance": "22 km · 30 min cu mașina",
+      "duration": "",
+      "description": "Unul dintre cele mai vechi sate din Rodopi, considerat locul de naștere al miticului Orfeu. Situat la 1500 m altitudine, în mijlocul unor pajiști nesfârșite, Gela găzduiește Festivalul Internațional al Cântăreților la Gaida în fiecare prima duminică din august — sute de cântăreți la gaida răsună în munți. De aici pornesc poteci către vârfurile Turlata și Gela.",
+      "highlights": [
+        "Patria lui Orfeu",
+        "Festivalul de gaida din august",
+        "Sanctuare tracice",
+        "Punctul de plecare al traseelor montane"
+      ]
+    },
+    "yagodina-cave": {
+      "title": "Peștera de la Yagodina",
+      "distance": "50 km · 1 oră și 15 minute cu mașina",
+      "duration": "Tur de 45 de minute · Traseu de 1100 m",
+      "description": "A treia peșteră ca lungime din Bulgaria — 10,5 km de galerii dispuse pe trei niveluri în defileul Buynovsko. Traseul turistic trece pe lângă „pielea de leopard”, perle de peșteră, stalactite și celebra „Sală de Anul Nou”, unde se sărbătorește Anul Nou sub pământ. Temperatura constantă este de 6 °C — luați-vă o jachetă chiar și în luna august.",
+      "highlights": [
+        "10,5 km de galerii",
+        "Perle din peșteri",
+        "Sala de Anul Nou",
+        "Trecătoarea Buynovsko de-a lungul drumului"
+      ]
+    },
+    "devils-throat": {
+      "title": "Gâtul Diavolului",
+      "distance": "55 km · 1 oră și 20 de minute cu mașina",
+      "duration": "Tur de 30 de minute",
+      "description": "O peșteră abisală cu cea mai înaltă cascadă subterană din Balcani — 42 m, în a cărei „Sală a Zgomotului” râul Trigradska se aruncă cu un zgomot asurzitor sub pământ. Conform legendei, de aici Orfeu a coborât în tărâmul subteran în căutarea Euridicei. Nimic din ceea ce cade în apă nu mai iese la suprafață — un mister pe care oamenii de știință îl studiază încă.",
+      "highlights": [
+        "Cascadă subterană de 42 m",
+        "Sala zgomotoasă",
+        "Legenda lui Orfeu",
+        "301 trepte de-a lungul cascadei"
+      ]
+    },
+    "trigrad-gorge": {
+      "title": "Cheile de la Trigrad",
+      "distance": "53 km · 1 oră și 15 minute cu mașina",
+      "duration": "",
+      "description": "Un canion cu pereți abrupți de marmură, care se înalță până la 250 m deasupra râului Trigradska — drumul se strecoară literalmente printre stânci. Adăpost pentru păsări rare, precum pasărea-alpinistă, și poartă de acces către Gâtul Diavolului și satul Trigrad. Una dintre cele mai spectaculoase șosele din Bulgaria — fiecare cotitură oferă o priveliște demnă de fotografiat.",
+      "highlights": [
+        "Pereți de până la 250 m",
+        "Un drum montan spectaculos",
+        "Păsări rare",
+        "Se combină cu Gâtul Diavolului"
+      ]
+    },
+    "uhlovitsa-cave": {
+      "title": "Peștera Uhlovitsa",
+      "distance": "32 km · 45 min cu mașina",
+      "duration": "Tur de 30 de minute",
+      "description": "Una dintre cele mai frumoase peșteri din Bulgaria, situată lângă satul Mogilitsa. Este renumită pentru „cascadele” sale de piatră — cascade formate din formațiuni calcitice care seamănă cu apa înghețată — și pentru coraliții de pe bolți. La intrare duce o potecă pitorească prin pădure (aproximativ 30 de minute de mers pe jos de la parcare).",
+      "highlights": [
+        "Cascade de piatră",
+        "Formațiuni de corali",
+        "4 lacuri subterane",
+        "În apropierea conacelor familiei Agushe"
+      ]
+    }
+  },
+  "stats": [
+    {
+      "value": "1650 m",
+      "label": "altitudinea stațiunii"
+    },
+    {
+      "value": "1926 m",
+      "label": "Vârful Snezhanka — vârful zonei de schi"
+    },
+    {
+      "value": "37+ km",
+      "label": "piste de schi cu toate nivelurile de dificultate"
+    },
+    {
+      "value": "1933",
+      "label": "înființată — cea mai veche stațiune de schi din Bulgaria"
+    },
+    {
+      "value": "~120",
+      "label": "zile însorite în sezonul de iarnă"
+    },
+    {
+      "value": "90 %",
+      "label": "de pe pârtiile cu zăpadă artificială"
+    }
+  ],
+  "pistes": [
+    {
+      "name": "Barajul (Zidul Mic)",
+      "note": ""
+    },
+    {
+      "name": "Bypass — Zidul Mic",
+      "note": ""
+    },
+    {
+      "name": "Zidul",
+      "note": "Simbolul stațiunii Pamporovo — gazdă a competițiilor din Cupa Europei. Schiat nocturn între orele 17:30 și 22:00."
+    },
+    {
+      "name": "Arh. Petar Petrov (Europeană)",
+      "note": ""
+    },
+    {
+      "name": "Zănața",
+      "note": ""
+    },
+    {
+      "name": "Zănața",
+      "note": ""
+    },
+    {
+      "name": "Zmeură",
+      "note": "Cea mai lungă pârtie roșie — de la vârf până la stațiunea de schi Malina."
+    },
+    {
+      "name": "Bypass Malina",
+      "note": ""
+    },
+    {
+      "name": "Pamporovo (turistică)",
+      "note": "Lungă și ușor înclinată — ideală pentru primele coborâri și pentru plimbări în familie."
+    },
+    {
+      "name": "Orlovets",
+      "note": ""
+    },
+    {
+      "name": "Perelik (Sud)",
+      "note": ""
+    },
+    {
+      "name": "Lacurile din Smolyan",
+      "note": ""
+    },
+    {
+      "name": "Delovo Dere (Damskă)",
+      "note": ""
+    },
+    {
+      "name": "Cartola",
+      "note": ""
+    },
+    {
+      "name": "Suporturile 1",
+      "note": ""
+    },
+    {
+      "name": "Suporturile 2",
+      "note": ""
+    },
+    {
+      "name": "Fun Slope / Border Cross",
+      "note": "Traseu cu valuri, rampe și elemente de freestyle."
+    }
+  ],
+  "skiLifts": [
+    {
+      "route": "Traseele — vârful Snezhanka",
+      "type": "Teleschi",
+      "note": "Cea mai lungă traseu — urcă o diferență de nivel de 453 m."
+    },
+    {
+      "route": "Stațiunea de schi 1 (Autogara) — Studenț",
+      "type": "Teleschi cu 4 locuri",
+      "note": ""
+    },
+    {
+      "route": "Studenets — vârful Snezhanka",
+      "type": "Teleschi cu 4 locuri",
+      "note": "Principala legătură către vârf și pistele negre."
+    },
+    {
+      "route": "Malina — vârful Snezhanka",
+      "type": "Teleschi",
+      "note": ""
+    },
+    {
+      "route": "Lacurile din Smolyan — vârful Snezhanka",
+      "type": "Teleschi",
+      "note": ""
+    },
+    {
+      "route": "Malina — Studenets",
+      "type": "Teleschi",
+      "note": ""
+    }
+  ],
+  "liftFacts": [
+    {
+      "route": "Traseele — vârful Snezhanka",
+      "type": "Teleschi"
+    },
+    {
+      "route": "Stațiunea de schi 1 — Studenets",
+      "type": "Teleschi cu 4 locuri"
+    },
+    {
+      "route": "Studenets — vârful Snezhanka",
+      "type": "Teleschi cu 4 locuri"
+    },
+    {
+      "route": "Malina — vârful Snezhanka",
+      "type": "Teleschi"
+    },
+    {
+      "route": "Lacurile din Smolyan — vârful Snezhanka",
+      "type": "Teleschi"
+    },
+    {
+      "route": "Malina — Studenets",
+      "type": "Teleschi"
+    }
+  ],
+  "skiExtras": [
+    "Capacitatea totală a instalațiilor — peste 13 000 de schiori pe oră",
+    "Școli de schi și snowboard cu instructori autorizați și parcuri pentru copii",
+    "Conducere nocturnă pe circuitul „Steната-2” (17:30 – 22:00)",
+    "2 trasee de schi fond: Snezhanka nr. 14 (25 km, până în satul Mugla) și nr. 15 „Ardashl” (7 km, până în satul Stoykite)",
+    "Parc de distracții cu snow tubing, boardercross și trasee pentru freestyle",
+    "Dulapuri, seturi și depozite de schiuri în Studenets și Malina"
+  ],
+  "winterActivities": [
+    {
+      "title": "Schi și snowboard",
+      "description": "Piste de peste 37 km pentru toate nivelurile, teleschiuri moderne și zăpadă garantată din decembrie până în aprilie."
+    },
+    {
+      "title": "Conducerea pe timp de noapte",
+      "description": "„Zidul-2” iluminat este deschis până la ora 22:00 — o experiență de neuitat."
+    },
+    {
+      "title": "Schi fond",
+      "description": "25 km de trasee marcate prin pădurile acoperite de zăpadă, spre Mugla și Stoykite."
+    },
+    {
+      "title": "Plimbări cu sania trasă de câini și plimbări",
+      "description": "Excursii ghidate cu rachete de zăpadă către Stâncile lui Orfeu și lacurile din Smolyan."
+    },
+    {
+      "title": "Școli de schi pentru copii",
+      "description": "Instructori autorizați, parcuri pentru copii cu teleschiuri și o adevărată armată de răbdare."
+    },
+    {
+      "title": "Après-ski",
+      "description": "Localuri cu specialități din Rodopi, muzică live și vin fiert, la doar câțiva metri de pârtii."
+    }
+  ],
+  "summerActivities": [
+    {
+      "title": "Ciclism montan",
+      "description": "Trasee MTB marcate pornind de la vârful Snezhanka — de la poteci ușoare prin pădure până la coborâri pentru avansați."
+    },
+    {
+      "title": "Trasee ecologice",
+      "description": "Canionul Cascadelor, Neviasta, Lacurile din Smolyan — zeci de trasee la o oră distanță."
+    },
+    {
+      "title": "Parc de aventuri și atracții",
+      "description": "Parc de aventuri cu tiroliene, perete de escaladă și troliu pentru copii și adulți."
+    },
+    {
+      "title": "Echitație",
+      "description": "Centrele ecvestre din zonă oferă drumeții prin pajiștile de la Rozen și Stoykite."
+    },
+    {
+      "title": "Culesul ciupercilor și al plantelor medicinale",
+      "description": "Ciuperci manatarki, afine și peste 300 de specii de plante medicinale — Munții Rodopi sunt o farmacie vie."
+    },
+    {
+      "title": "Fotografie și vedete",
+      "description": "Răsărituri deasupra mării învăluite în ceață, cer întunecat, ideal pentru astrofotografie, și Observatorul Național „Rozen” în apropiere."
+    }
+  ],
+  "lists": {
+    "eco": [
+      "canion-cascade",
+      "lacurile din Smolyan",
+      "nevyastata",
+      "orpheus-rocks"
+    ],
+    "landmarks": [
+      "shiroka-laka",
+      "observatorul Rozhen",
+      "poduri-minunate",
+      "orașul Smolyan",
+      "Momchilovtsi",
+      "satul Gela"
+    ],
+    "caves": [
+      "Peștera Yagodina",
+      "gâtul diavolului",
+      "Cheile Trigrad",
+      "peștera Uhlovitsa"
+    ]
+  }
+}

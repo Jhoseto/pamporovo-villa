@@ -1,0 +1,36 @@
+{
+  "eyebrow": "Pacchetti esclusivi",
+  "title": "Le migliori offerte",
+  "subtitle": "Pacchetti selezionati per vacanze sciistiche ed estive a prezzi speciali. I periodi sono limitati — e le date migliori vanno a ruba.",
+  "loading": "Caricamento in corso...",
+  "empty": "Al momento non ci sono offerte attive.",
+  "oldPrice": "prezzo precedente",
+  "includes": "Comprende",
+  "bookOffer": "Prenota l'offerta",
+  "badge": "Offerta",
+  "claimCta": "Approfitta",
+  "footer": "Le offerte sono valide per i periodi indicati · per prenotare, consulta la sezione “Prenota”",
+  "items": {
+    "ski-family": {
+      "title": "Vacanza sciistica in famiglia",
+      "period": "1 marzo 2026 – 31 marzo 2026",
+      "description": "Regalate ai bambini un ricordo che conserveranno per tutta la vita. Un’intera villa tutta per la vostra famiglia, a pochi minuti dalle piste — e la sera, il caminetto e una cena calda vi aspettano a casa.",
+      "includes": [
+        "Affitto dell'intera villa per un pernottamento (fino a 6 persone)",
+        "Parcheggio gratuito proprio davanti all'ingresso",
+        "Wi-Fi gratuito",
+        "Tassa di soggiorno inclusa"
+      ]
+    },
+    "pay-9-stay-10": {
+      "title": "Pagate 9, soggiornate 10 notti",
+      "period": "1 giugno 2026 – 10 luglio 2026",
+      "description": "L'estate in montagna è tutta un'altra cosa: mattinate fresche, lunghe giornate immersi nella natura e serate in veranda con barbecue. Rimanete più a lungo da noi e regalatevi un pernottamento offerto da noi.",
+      "includes": [
+        "Il decimo pernottamento è completamente gratuito (previa pagamento di 9 pernottamenti)",
+        "Villa intera: 2 camere da letto, 2 bagni, cucina e soggiorno",
+        "Veranda con barbecue e camino a legna"
+      ]
+    }
+  }
+}

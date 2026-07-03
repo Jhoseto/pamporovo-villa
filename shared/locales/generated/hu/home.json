@@ -1,18 +1,21 @@
 {
   "hero": {
-    "eyebrow": "Szmoljan · Pamporovo · 3 kiadó nyaraló",
+    "eyebrow": "Bulgária · Szmoljan · Pamporovo · 3 kiadó nyaraló",
     "titleLine1": "Pamporovo",
     "titleLine2": "Villa",
-    "subtitle": "Három önálló villát kínálunk Önöknek Pamporovo varázslatos erdeinek közepén. Otthoni kényelem a hegyekben, egész évben.",
+    "subtitle": "Három önálló villát kínálunk Önöknek Pamporovo varázslatos erdeiben. Otthoni kényelem a hegyekben, egész évben.",
     "ctaExperience": "Kezdd el a sétát",
     "ctaBook": "Foglalás",
-    "scrollHint": "Tekintse meg"
+    "scrollHint": "Tekintse meg",
+    "scrollDown": "Lefelé",
+    "scrollToExperience": "Folytassa a sétát"
   },
   "gallery": {
     "eyebrow": "Galéria",
     "title": "A három villa képeken",
     "subtitle": "Fedezze fel az egyes villákat — a belső teret, a hangulatos légkört és a hegyi kilátást",
-    "pickVilla": "Válasszon nyaralót"
+    "pickVilla": "Válasszon nyaralót",
+    "photoCount": "{count} fénykép"
   },
   "contact": {
     "eyebrow": "Kapcsolat",
@@ -30,8 +33,77 @@
   "location": {
     "eyebrow": "Helyszín",
     "title": "Mindenhez közel, mégis távol a nyüzsgéstől",
-    "subtitle": "Pamporovo üdülőhely, Райковски ливади nevű terület — a fenyőerdő mélyén megbújva",
+    "subtitle": "Pamporovo üdülőhely, Raykovski Livadi nevű terület — a fenyőerdő mélyén megbújva",
     "directions": "Találj meg minket",
     "info": "Pamporovo Bulgária legnaposabb hegyi üdülőhelye — 1 650 méteres tengerszint feletti magasságban, a Rodop-hegység szívében. Télen 37 km tökéletesen karbantartott sípálya és éjszakai síelés várja az ide látogatókat, nyáron pedig öko-túraútvonalak, vízesések és gyógyító levegő. Villáink pedig mindezek közepette a nyugodt bázisotok lesznek."
-  }
+  },
+  "widgets": {
+    "weatherLoading": "Idő betöltése",
+    "weatherUnavailable": "A szolgáltatás átmenetileg nem elérhető",
+    "feelsLike": "Olyan érzés, mintha",
+    "today": "Ma",
+    "humidity": "Páratartalom",
+    "wind": "Szél",
+    "callUs": "Hívjon fel",
+    "galleryVillaTabs": "Villa kiválasztása a galériából"
+  },
+  "about": {
+    "eyebrow": "Rólunk",
+    "title": "Az Ön otthona a Rodop-hegység magaslataiban",
+    "subtitle": "Három villa, egy cél: hogy otthon érezzék magukat",
+    "blockPlace": "A helyszín",
+    "blockHome": "Otthon",
+    "blockHosts": "A házigazdák",
+    "intro": "Örülünk, hogy ránk találtak. Három önálló villát kínálunk Önöknek, amelyek a Raykovski Livadi fenyőerdőjében rejtőznek — ott, ahol a városi zaj messze marad, és a nap a madárdal és a gyanta illatával kezdődik.",
+    "details": "Villa 1, Villa 2 és a Villa Deluxe olyan berendezéssel rendelkeznek, amilyennek mi is szeretnénk, ha a saját hegyi otthonunk kinézne – valódi fával, puha textíliákkal és azokkal a kis részletekkel, amelyek melegséget kölcsönöznek egy helynek. Itt nem csupán vendégek vagytok; érezzétek magatokat otthon.",
+    "hosts": "Mint házigazdák, mindig kéznél vagyunk. Segítünk a meglepetések és ünnepségek megszervezésében, elkalauzoljuk Önöket a legszebb sípályákra és túraútvonalakra, tippeket adunk, hol lehet finoman enni — és ha bármire szükségük van, csak csengessenek. Célunk egyetlen: hogy úgy távozzanak, hogy vissza akarnak jönni.",
+    "layout": "Minden villa kétszintes, és két hálószobával, két fürdőszobával, teljesen felszerelt konyhával és étkezővel, valamint egy nagy nappalival rendelkezik, amelyben fatüzelésű kandalló található. Kívül egy terasz várja Önöket, ahonnan panorámás kilátás nyílik a Rodop-hegységre, valamint egy grillezővel ellátott veranda – ez az a hely, ahol a legszebb esték születnek.",
+    "imageForestAlt": "Villa a Raykovski Livadi fenyőerdőjében",
+    "imageInteriorAlt": "Belső tér kőfallal és fával",
+    "badgeLocation": "Raykovski Livadi",
+    "badgeResort": "Pamporovo"
+  },
+  "amenities": {
+    "eyebrow": "Kényelmi szolgáltatások",
+    "title": "Minden, ami egy nyugodt tartózkodáshoz szükséges",
+    "subtitle": "A legapróbb részletekre is gondoltunk, hogy Önöknek csak a pihenésre kelljen figyelniük"
+  },
+  "pricing": {
+    "eyebrow": "Árak",
+    "title": "Egyértelmű árak, meglepetések nélkül",
+    "subtitle": "Egy teljes villa bérlése éjszakánként — legfeljebb 6 vendég számára. Minél hosszabb ideig maradnak, annál kedvezőbb az ár"
+  },
+  "booking": {
+    "eyebrow": "Foglalás",
+    "title": "Foglalja le helyét a hegyekben",
+    "subtitle": "Válasszon ki egy villát és az időpontokat, adja meg adatait — mi pedig személyesen felvesszük Önnel a kapcsolatot a visszaigazolás érdekében"
+  },
+  "policy": {
+    "eyebrow": "Jó, ha tudják",
+    "title": "Néhány szó, mielőtt ideérnétek",
+    "subtitle": "Rövid és egyértelmű szabályok, hogy mindenki számára nyugodt és kellemes legyen"
+  },
+  "faq": {
+    "eyebrow": "Foglalás · árak",
+    "title": "Gyakran feltett kérdések",
+    "subtitle": "Kérdések a bérléssel, az árakkal, a szállással és a foglalással kapcsolatban — mielőtt kitöltené az űrlapot."
+  },
+  "distances": [
+    {
+      "value": "2 km",
+      "label": "Pamporovo központjáig"
+    },
+    {
+      "value": "10 km",
+      "label": "Smolyanból"
+    },
+    {
+      "value": "85 km",
+      "label": "Plovdivból"
+    },
+    {
+      "value": "220 km",
+      "label": "Szófiából"
+    }
+  ]
 }

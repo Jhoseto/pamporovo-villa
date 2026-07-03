@@ -2,7 +2,7 @@
   "routes": {
     "/": {
       "title": "Pamporovo Villa | 3 Ferienhäuser zur Miete in Pamporovo, Bulgarien",
-      "description": "Pamporovo Villa – drei separate Ferienhäuser zur Vermietung im Ferienort Pamporovo, Ortsteil Райковски ливади. 2 Schlafzimmer, Kamin, Grill, Platz für bis zu 6 Gäste. Direkt buchen.",
+      "description": "Pamporovo Villa – drei separate Ferienhäuser zur Vermietung im Ferienort Pamporovo, Ortsteil Raykovski Livadi. 2 Schlafzimmer, Kamin, Grill, Platz für bis zu 6 Gäste. Direkt buchen.",
       "keywords": "Villa zu vermieten in Pamporovo, Pamporovo Villa, Villa mieten in Pamporovo"
     },
     "/rent": {
@@ -12,7 +12,7 @@
     },
     "/pamporovo": {
       "title": "Pamporovo – Der umfassende Reiseführer für den Ferienort und die Region | Pamporovo Villa",
-      "description": "Über 37 km Skipisten, 6 Lifte, Naturpfade, Höhlen und Sehenswürdigkeiten. Übernachtungsmöglichkeiten – 3 Ferienhäuser ab 110 € pro Nacht bei Райковски ливади.",
+      "description": "Über 37 km Skipisten, 6 Lifte, Naturpfade, Höhlen und Sehenswürdigkeiten. Übernachtungsmöglichkeiten – 3 Ferienhäuser ab 110 € pro Nacht bei Raykovski Livadi.",
       "keywords": "Reiseführer für Pamporovo, Skifahren in Bulgarien, Reise in die Rhodopen"
     }
   }

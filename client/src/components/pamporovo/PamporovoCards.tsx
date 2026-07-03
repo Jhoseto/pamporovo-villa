@@ -1,7 +1,7 @@
 import type { Attraction, Piste, PisteDifficulty } from "@/data/pamporovoContent";
-import { PISTE_DIFFICULTY_LABELS } from "@/data/pamporovoContent";
 import { TiltImage } from "@/components/site/TiltImage";
 import { ScrollReveal } from "@/components/site/ScrollReveal";
+import { useGuideDifficultyLabels, useGuideUi } from "@/i18n/guideHooks";
 import { cn } from "@/lib/utils";
 
 const DIFFICULTY_CLASS: Record<PisteDifficulty, string> = {
@@ -69,6 +69,9 @@ export function AttractionCard({
 }
 
 export function PisteTable({ pistes, dark = false }: { pistes: Piste[]; dark?: boolean }) {
+  const ui = useGuideUi();
+  const difficultyLabels = useGuideDifficultyLabels();
+
   return (
     <div
       className={cn(
@@ -79,11 +82,11 @@ export function PisteTable({ pistes, dark = false }: { pistes: Piste[]; dark?: b
       <table className="w-full min-w-[640px] text-left text-sm">
         <thead>
           <tr className={cn("border-b", dark ? "border-white/10 text-white/60" : "border-black/8 text-muted-foreground")}>
-            <th className="px-4 py-3 font-medium">№</th>
-            <th className="px-4 py-3 font-medium">Писта</th>
-            <th className="px-4 py-3 font-medium">Трудност</th>
-            <th className="px-4 py-3 font-medium">Дължина</th>
-            <th className="px-4 py-3 font-medium">Бележка</th>
+            <th className="px-4 py-3 font-medium">{ui.pisteNumber}</th>
+            <th className="px-4 py-3 font-medium">{ui.pisteName}</th>
+            <th className="px-4 py-3 font-medium">{ui.difficulty}</th>
+            <th className="px-4 py-3 font-medium">{ui.length}</th>
+            <th className="px-4 py-3 font-medium">{ui.note}</th>
           </tr>
         </thead>
         <tbody>
@@ -101,12 +104,14 @@ export function PisteTable({ pistes, dark = false }: { pistes: Piste[]; dark?: b
                     DIFFICULTY_CLASS[p.difficulty]
                   )}
                 >
-                  {PISTE_DIFFICULTY_LABELS[p.difficulty]}
+                  {difficultyLabels[p.difficulty]}
                 </span>
               </td>
-              <td className="px-4 py-3 whitespace-nowrap">{p.lengthM} м</td>
+              <td className="px-4 py-3 whitespace-nowrap">
+                {p.lengthM} {ui.meters}
+              </td>
               <td className={cn("px-4 py-3 text-xs", dark ? "text-white/55" : "text-muted-foreground")}>
-                {p.note ?? "—"}
+                {p.note ?? ui.dash}
               </td>
             </tr>
           ))}
@@ -119,6 +124,8 @@ export function PisteTable({ pistes, dark = false }: { pistes: Piste[]; dark?: b
 import type { LiftFact } from "@shared/pamporovoSkiData";
 
 export function LiftTable({ lifts, dark = false }: { lifts: LiftFact[]; dark?: boolean }) {
+  const ui = useGuideUi();
+
   return (
     <div
       className={cn(
@@ -129,10 +136,10 @@ export function LiftTable({ lifts, dark = false }: { lifts: LiftFact[]; dark?: b
       <table className="w-full min-w-[640px] text-left text-sm">
         <thead>
           <tr className={cn("border-b", dark ? "border-white/10 text-white/60" : "border-black/8 text-muted-foreground")}>
-            <th className="px-4 py-3 font-medium">Маршрут</th>
-            <th className="px-4 py-3 font-medium">Тип</th>
-            <th className="px-4 py-3 font-medium">Дължина</th>
-            <th className="px-4 py-3 font-medium">Капацитет/час</th>
+            <th className="px-4 py-3 font-medium">{ui.route}</th>
+            <th className="px-4 py-3 font-medium">{ui.liftType}</th>
+            <th className="px-4 py-3 font-medium">{ui.length}</th>
+            <th className="px-4 py-3 font-medium">{ui.capacityPerHour}</th>
           </tr>
         </thead>
         <tbody>
@@ -143,7 +150,9 @@ export function LiftTable({ lifts, dark = false }: { lifts: LiftFact[]; dark?: b
             >
               <td className="px-4 py-3 font-medium">{lift.route}</td>
               <td className="px-4 py-3">{lift.type}</td>
-              <td className="px-4 py-3 whitespace-nowrap">{lift.lengthM} м</td>
+              <td className="px-4 py-3 whitespace-nowrap">
+                {lift.lengthM} {ui.meters}
+              </td>
               <td className="px-4 py-3">{lift.capacity.toLocaleString("bg-BG")}</td>
             </tr>
           ))}

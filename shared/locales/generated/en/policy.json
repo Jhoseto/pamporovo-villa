@@ -1,0 +1,23 @@
+{
+  "checkInLabel": "Accommodations",
+  "checkOutLabel": "Resignation",
+  "checkIn": "After 3:00 p.m.",
+  "checkOut": "By 11:00",
+  "stayHeading": "Accommodations and Stay",
+  "stayIntro": "We want your stay to be relaxing and carefree—that's why we keep things simple and transparent.",
+  "avoidHeading": "Please avoid",
+  "footer": "Thank you for choosing Pamporovo Villa. Taking care of our home is a shared responsibility—by looking after it, we keep it nice for every future guest. Do you have a question? We’re always here to help.",
+  "highlights": [
+    "We welcome guests year-round, 24/7. Please bring a form of identification upon check-in.",
+    "Are you in a hurry on your last day? Late check-out after 11:00 a.m. is free, when possible.",
+    "Firewood — 10 € per bag, available upon request or at check-in.",
+    "Quiet hours: 11:00 p.m. – 7:00 a.m., for everyone’s peace and quiet. Smoking is permitted only on the two terraces (€50 fine for smoking indoors).",
+    "No pets allowed. For your safety, the property is equipped with video surveillance."
+  ],
+  "prohibited": [
+    "Importing Personal Electrical and Gas Appliances",
+    "Accommodation for Unregistered Guests",
+    "Moving furniture between rooms",
+    "Behavior that disturbs the peace and quiet of the neighboring villas"
+  ]
+}

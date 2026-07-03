@@ -1,4 +1,5 @@
 import { createContext, useContext, useMemo, type ReactNode } from "react";
+import { HOME_FAQ } from "@shared/homeFaq";
 import { loadClientMessages, resolveMessage } from "@/i18n/loadMessages";
 import { SOURCE_LOCALE, type SiteLocale } from "@shared/i18n/locales";
 import { usePageLang } from "@/hooks/usePageLang";
@@ -40,4 +41,14 @@ export function useTranslation() {
 export function useNavLabel(key: string, bgFallback: string): string {
   const { t } = useTranslation();
   return t(`nav.${key}`, bgFallback);
+}
+
+/** Homepage FAQ from locale files (faq.home.{id}.*) */
+export function useHomeFaqItems() {
+  const { t } = useTranslation();
+  return HOME_FAQ.map((item) => ({
+    id: item.id,
+    question: t(`faq.home.${item.id}.question`, item.question),
+    answer: t(`faq.home.${item.id}.answer`, item.answer),
+  }));
 }

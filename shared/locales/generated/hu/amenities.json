@@ -1,0 +1,36 @@
+{
+  "items": [
+    {
+      "title": "Három önálló villa",
+      "description": "Villa 1, Villa 2 és Villa Deluxe — a teljes villát kizárólag maguk számára bérelhetik, mindegyikben 2 hálószobával és legfeljebb 6 vendég elszállásolására alkalmas helyiségekkel."
+    },
+    {
+      "title": "Fatüzelésű kandalló",
+      "description": "Egy igazi kandalló a nappali szívében — azokra az estékre, amikor odakint havazik."
+    },
+    {
+      "title": "Olyan konyha, mint otthon",
+      "description": "Teljesen felszerelt konyha étkezővel — főzőlap, sütő, hűtőszekrény, kávéfőző és minden, ami egy házias vacsorához szükséges."
+    },
+    {
+      "title": "Veranda grillezővel",
+      "description": "Fedett terasz grillezővel — hosszú, szabadtéri estékre, függetlenül az időjárástól."
+    },
+    {
+      "title": "Kilátás a Rodopokra",
+      "description": "Terasz, ahonnan panorámás kilátás nyílik a hegyekre — reggeli kávé a napsütésben és lélegzetelállító naplementék."
+    },
+    {
+      "title": "260+ napsütéses nap",
+      "description": "Pamporovo Bulgária legnaposabb hegyvidéki üdülőhelye — 1 650 méteres tengerszint feletti magasságban fekszik, enyhe éghajlattal és tiszta levegővel."
+    },
+    {
+      "title": "Csend a fenyők között",
+      "description": "Raykovski Livadi — nyugodt fenyőerdő, távol a tömegtől, de csupán pár percre a sípályáktól és a központtól."
+    },
+    {
+      "title": "Wi-Fi és parkoló",
+      "description": "Ingyenes vezeték nélküli internet és parkoló közvetlenül az ajtó előtt — autóval érkezik, és folyamatosan kapcsolatban marad."
+    }
+  ]
+}

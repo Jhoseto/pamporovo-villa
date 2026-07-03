@@ -3,246 +3,786 @@
     "h1": "Piste a Pamporovo — oltre 37 km di piste da sci",
     "seoTitle": "Piste di Pamporovo 2026 | 37+ km, sci notturno, mappa — Pamporovo Villa",
     "seoDescription": "Tutte le piste di Pamporovo: lunghezza, difficoltà, sci notturno sulla “Stena”, impianti di risalita fino a Snezhanka. Organizzate la vostra vacanza sulla neve — sistemazione a partire da 110 € a notte.",
-    "seoKeywords": "piste di Pamporovo, sci a Pamporovo, La Parete, sci notturno, Snezhanka, skipass"
+    "seoKeywords": "piste di Pamporovo, sci a Pamporovo, La Parete, sci notturno, Snezhanka, skipass",
+    "eyebrow": "Sci · Pamporovo",
+    "intro": "Panoramica completa del comprensorio sciistico di Pamporovo: oltre 15 piste, dalle verdi per principianti alla nera “Steната”, sci notturno e impianti di risalita fino alla vetta di Snezhanka (1926 m).",
+    "sections": [
+      {
+        "heading": "Il comprensorio sciistico in breve",
+        "paragraphs": [
+          "Pamporovo è la più antica località sciistica della Bulgaria (dal 1933) e una delle più soleggiate: oltre 120 giorni di cielo sereno durante l'inverno. La località si trova a 1650 m, mentre il punto più alto delle piste è il picco Snezhanka a 1926 m.",
+          "La lunghezza complessiva delle piste segnalate supera i 37 km. Circa il 90% di esse è dotato di innevamento artificiale, il che garantisce la continuità della stagione anche in caso di temperature miti."
+        ],
+        "bullets": [
+          "Oltre 15 piste principali + piste alternative e fun park",
+          "6 impianti di risalita e skilift",
+          "Guida notturna sulla pista n. 2 “La Parete”",
+          "Percorsi verdi, blu, rossi e neri"
+        ]
+      },
+      {
+        "heading": "Le piste più famose",
+        "paragraphs": [
+          "La pista n. 2 «La Parete» (1258 m, nera) è il simbolo della località sciistica — sede di gare di Coppa Europa e l’unica ad offrire regolarmente sci notturno. La pista n. 3 «Arch. Petar Petrov» (1766 m) è la pista nera più lunga.",
+          "Per le famiglie e i principianti, la pista n. 6 «Turistica» (3343 m) offre una discesa lunga e poco ripida. La pista n. 5 «Malina» (2799 m) è la pista rossa più lunga: dalla vetta fino al centro sciistico di Malina."
+        ]
+      },
+      {
+        "heading": "Dove dormire dopo una giornata sulle piste",
+        "paragraphs": [
+          "Pamporovo Villa offre 3 ville indipendenti a 2 km dal centro — con caminetto, barbecue e fino a 6 ospiti per villa. L'ideale se cercate la tranquillità lontano dal trambusto degli hotel e una cucina tutta vostra dopo un'intera giornata sulla neve."
+        ]
+      }
+    ]
   },
   "kude-da-spim": {
     "h1": "Dove posso dormire a Pamporovo?",
     "seoTitle": "Dove dormire a Pamporovo | Ville, hotel, consigli 2026",
-    "seoDescription": "Dove alloggiare a Pamporovo: hotel o villa, Райковски ливади, prezzi a partire da 110 € a notte per una villa intera per un massimo di 6 ospiti. Affitto ufficiale — Pamporovo Villa.",
-    "seoKeywords": "dove dormire a Pamporovo, alloggi a Pamporovo, villa a Pamporovo, hotel a Pamporovo"
+    "seoDescription": "Dove alloggiare a Pamporovo: hotel o villa, Raykovski Livadi, prezzi a partire da 110 € a notte per una villa intera per un massimo di 6 ospiti. Affitto ufficiale — Pamporovo Villa.",
+    "seoKeywords": "dove dormire a Pamporovo, alloggi a Pamporovo, villa a Pamporovo, hotel a Pamporovo",
+    "eyebrow": "Alloggio · Pamporovo",
+    "intro": "Confronto tra le opzioni di alloggio nella località turistica: hotel in centro, appartamenti e ville private. Guida pratica per famiglie, gruppi e coppie.",
+    "sections": [
+      {
+        "heading": "Aree di pernottamento nella località turistica",
+        "paragraphs": [
+          "Il centro di Pamporovo è comodo da raggiungere a piedi per raggiungere i ristoranti e gli impianti di risalita, ma durante l'alta stagione può risultare rumoroso. Le zone di Malina, Stoykite e Raykovski Livadi offrono maggiore tranquillità e posti auto.",
+          "Raykovski Livadi si trova a 2 km dal centro: abbastanza vicino alle piste, abbastanza lontano per godersi la tranquillità e le stelle di notte."
+        ]
+      },
+      {
+        "heading": "A chi si addice cosa",
+        "paragraphs": [
+          "Coppia per il fine settimana: hotel o villetta. Famiglia con bambini — una villa con cucina e caminetto spesso risulta più conveniente di due camere d’albergo. Gruppo di 4–6 persone — una villa intera vi offre un salotto comune e un barbecue senza doverli condividere con estranei."
+        ],
+        "bullets": [
+          "Albergo: mezza pensione, senza cucina, posizione centrale",
+          "Villa: casa indipendente, camino, barbecue, parcheggio, maggiore privacy",
+          "Pamporovo Villa: 3 ville, 2 camere da letto, fino a 6 ospiti, a partire da 110 € a notte"
+        ]
+      },
+      {
+        "heading": "Raccomandazione: Pamporovo Villa",
+        "paragraphs": [
+          "Tre ville dallo stile identico (Villa 1, Villa 2, Villa Deluxe) allo stesso indirizzo: potrete prenotare una sola villa per il vostro gruppo. Ciascuna dispone di 2 camere da letto, 2 bagni, camino e veranda con barbecue."
+        ]
+      }
+    ]
   },
   "hotel-vs-vila": {
     "h1": "Un hotel o una villa a Pamporovo: quale scegliere?",
     "seoTitle": "Hotel o villa a Pamporovo | Confronto tra la stagione sciistica e quella estiva 2026",
     "seoDescription": "Hotel vs villa a Pamporovo: prezzi, vantaggi per famiglie e gruppi, caminetto e barbecue. Quando la villa è la scelta migliore — Pamporovo Villa a partire da 110 € a notte.",
-    "seoKeywords": "Hotel o villa a Pamporovo, confronto tra le sistemazioni: villa vs hotel"
+    "seoKeywords": "Hotel o villa a Pamporovo, confronto tra le sistemazioni: villa vs hotel",
+    "eyebrow": "Confronto · sistemazione",
+    "intro": "Una guida comparativa onesta: prezzo a persona, comfort, cucina, caminetto, parcheggio e quali sono le opzioni più adatte a ogni tipo di viaggio.",
+    "sections": [
+      {
+        "heading": "Quando l'hotel è la scelta migliore",
+        "paragraphs": [
+          "Soggiorno breve (1–2 notti), desiderate colazione e cena senza dover cucinare, oppure siete da soli o in coppia e non avete bisogno di molto spazio. Gli hotel in centro si trovano a pochi minuti dagli impianti di risalita."
+        ]
+      },
+      {
+        "heading": "Quando la villa è in attivo",
+        "paragraphs": [
+          "Con 4-6 ospiti, il prezzo a persona in una villa privata spesso risulta inferiore a quello di un hotel a 3 stelle con mezza pensione. Avrete a disposizione un salotto con camino, una cucina, un barbecue e un parcheggio — senza vicini nel corridoio.",
+          "Le famiglie con bambini piccoli apprezzano gli orari fissi: andare a dormire, preparare da mangiare, il pisolino pomeridiano, senza ascensori né reception."
+        ],
+        "bullets": [
+          "L'intera villa = solo per la vostra compagnia",
+          "Camino e barbecue: un’atmosfera che un hotel non può offrire",
+          "Parcheggio davanti alla porta — comodo per i bagagli da sci",
+          "Pamporovo Villa: a partire da 110 € a notte per un massimo di 6 persone"
+        ]
+      },
+      {
+        "heading": "Preventivo indicativo",
+        "paragraphs": [
+          "Villa a 150 € a notte per 5 notti = 750 € in totale. Per 5 persone, il costo è di 150 € a persona per 5 notti (30 € a notte a persona) — spesso meno di un hotel con vitto incluso in località turistica."
+        ]
+      }
+    ]
   },
   "naem-vila": {
     "h1": "Affitto di una villa a Pamporovo",
     "seoTitle": "Affitto di ville a Pamporovo | 3 ville, prezzi, prenotazioni 2026",
     "seoDescription": "Affitta una villa a Pamporovo — 3 ville indipendenti, 2 camere da letto, caminetto, barbecue, fino a 6 ospiti. A partire da 110 € a notte. Sito ufficiale Pamporovo Villa.",
-    "seoKeywords": "affitto villa a Pamporovo, villa in affitto, affitto casa a Pamporovo, Pamporovo Villa"
+    "seoKeywords": "affitto villa a Pamporovo, villa in affitto, affitto casa a Pamporovo, Pamporovo Villa",
+    "eyebrow": "Affitto · Pamporovo Villa",
+    "intro": "Come funziona l'affitto di una villa intera a Pamporovo: cosa comprende, prezzi, prenotazione e le tre ville disponibili su Raykovski Livadi.",
+    "sections": [
+      {
+        "heading": "Cosa significa “affitto di una villa”?",
+        "paragraphs": [
+          "Con Pamporovo Villa affittate un'intera casa — non una stanza in un appartamento condiviso. La villa è riservata esclusivamente al vostro gruppo: le chiavi, il salotto, la cucina, la veranda con barbecue e il parcheggio sono a vostra disposizione."
+        ]
+      },
+      {
+        "heading": "Le tre ville",
+        "paragraphs": [
+          "Villa 1, Villa 2 e Villa Deluxe hanno la stessa capienza e gli stessi servizi: 2 camere da letto, 2 bagni, camino, cucina completamente attrezzata, Wi-Fi. La scelta dipende dalla disponibilità indicata nel calendario."
+        ],
+        "bullets": [
+          "Fino a 6 ospiti in villa",
+          "2 camere da letto + 2 bagni",
+          "Camino a legna + barbecue",
+          "Parcheggio gratuito"
+        ]
+      },
+      {
+        "heading": "Prezzi e prenotazioni",
+        "paragraphs": [
+          "La stagione estiva parte da 110 € a notte per l'intera villa. In inverno i prezzi sono più alti a seconda del periodo. Prenotate online su pamporovovilla.com o alla pagina /rent."
+        ]
+      }
+    ]
   },
   "vila-s-kamina": {
     "h1": "Villa con camino a Pamporovo",
     "seoTitle": "Villa con camino a Pamporovo | Camino + barbecue — Pamporovo Villa",
     "seoDescription": "Affitta una villa con caminetto a Pamporovo: tutte e tre le ville di Pamporovo Villa dispongono di caminetto e barbecue. Fino a 6 ospiti, a partire da 110 € a notte.",
-    "seoKeywords": "villa con camino a Pamporovo, camino in montagna, villa invernale, barbecue a Pamporovo"
+    "seoKeywords": "villa con camino a Pamporovo, camino in montagna, villa invernale, barbecue a Pamporovo",
+    "eyebrow": "Servizi · villa",
+    "intro": "Atmosfera invernale lontano dalle piste: tutte e tre le ville di Pamporovo Villa dispongono di un caminetto a legna nel salotto, oltre a una veranda con barbecue per le giornate di sole.",
+    "sections": [
+      {
+        "heading": "Un caminetto in ogni villa",
+        "paragraphs": [
+          "Il salotto di ogni villa è situato attorno a un caminetto a legna: luci calde, profumo di legna bruciata e un luogo dove chiacchierare dopo un'intera giornata sulle piste o lungo un sentiero naturalistico."
+        ]
+      },
+      {
+        "heading": "Veranda con barbecue",
+        "paragraphs": [
+          "Durante l'estate e nelle miti giornate invernali, l'area barbecue sulla veranda è il luogo ideale per le cene in famiglia. Abbinatela a prodotti locali provenienti da Smolyan o dalla località turistica."
+        ]
+      },
+      {
+        "heading": "Consigli pratici",
+        "paragraphs": [
+          "La legna per il caminetto viene preparata dai padroni di casa. Se desiderate prenotare nei mesi di gennaio e febbraio, vi consigliamo di farlo con largo anticipo: le ville con caminetto sono tra le prime ad esaurire i posti disponibili."
+        ]
+      }
+    ]
   },
   "naem-zima": {
     "h1": "Affitto invernale di una villa a Pamporovo",
     "seoTitle": "Affitto invernale di una villa a Pamporovo | Vacanza sciistica 2026 — Pamporovo Villa",
     "seoDescription": "Villa in affitto per l'inverno a Pamporovo — a 2 km dalle piste, con caminetto, fino a 6 ospiti. Prenota la tua vacanza sulla neve su Pamporovo Villa.",
-    "seoKeywords": "affitto invernale di una villa a Pamporovo, vacanza sciistica in villa, villa invernale nei Rodopi"
+    "seoKeywords": "affitto invernale di una villa a Pamporovo, vacanza sciistica in villa, villa invernale nei Rodopi",
+    "eyebrow": "Inverno · noleggio sci",
+    "intro": "Organizzate una vacanza sulla neve a Pamporovo: affitto di una villa intera vicino alle piste, con caminetto, parcheggio e tariffe per famiglie e gruppi.",
+    "sections": [
+      {
+        "heading": "Perché una villa per la stagione sciistica",
+        "paragraphs": [
+          "Attrezzatura da sci, vestiti bagnati, uscite mattutine: la vostra villa privata vi offre uno spazio dove asciugare i vestiti, cucinare e fare colazione presto senza dover rispettare gli orari del ristorante. Il parcheggio è proprio davanti alla porta."
+        ]
+      },
+      {
+        "heading": "Vicino alle piste",
+        "paragraphs": [
+          "Raykovski Livadi si trova a 2 km dal centro — 5–7 minuti in auto dagli impianti di risalita. Dopo una discesa notturna sulla “Parete”, si arriva rapidamente al caminetto."
+        ]
+      },
+      {
+        "heading": "Quando prenotare",
+        "paragraphs": [
+          "Le vacanze di Natale, Capodanno e febbraio sono le prime a riempirsi. Per un soggiorno minimo di 3-5 notti nei periodi di alta stagione, consultate il calendario online."
+        ],
+        "bullets": [
+          "Prenotazione: pamporovovilla.com/#booking",
+          "Telefono: +359 879 501 660",
+          "Pagina informativa: /rent"
+        ]
+      }
+    ]
   },
   "lato": {
     "h1": "L'estate a Pamporovo: sentieri ecologici e freschezza",
     "seoTitle": "Estate a Pamporovo 2026 | Sentieri ecologici, attività, affitto di ville",
     "seoDescription": "Cosa fare d'estate a Pamporovo: sentieri ecologici, i laghi di Smolyan, grotte, ciclismo. Affitto di una villa a partire da 110 € a notte — Pamporovo Villa.",
-    "seoKeywords": "estate a Pamporovo, ecoturismo, vacanza estiva in montagna, villa estiva"
+    "seoKeywords": "estate a Pamporovo, ecoturismo, vacanza estiva in montagna, villa estiva",
+    "eyebrow": "Estate · Pamporovo",
+    "intro": "Pamporovo non è solo una località sciistica: d’estate qui si possono percorrere itinerari ecologici, ammirare cascate e grotte e trascorrere vacanze in famiglia a 1650 m di altitudine, respirando aria pulita.",
+    "sections": [
+      {
+        "heading": "Perché Pamporovo d'estate",
+        "paragraphs": [
+          "A 1650 m l'aria è fresca e le temperature sono piacevoli anche quando nella valle fa molto caldo. La regione offre decine di sentieri segnalati, grotte e villaggi autentici a un'ora di viaggio.",
+          "Affittare una villa con veranda, barbecue e cucina rende l'estate più conveniente rispetto all'albergo, soprattutto per le famiglie."
+        ],
+        "bullets": [
+          "Sentieri ecologici e cascate",
+          "Ciclismo ed equitazione",
+          "Grotte e villaggi",
+          "Villa a partire da 110 € a notte"
+        ]
+      }
+    ]
   },
   "zima": {
     "h1": "L'inverno a Pamporovo: sci, neve e atmosfera",
     "seoTitle": "Inverno a Pamporovo 2026 | Stagione sciistica, piste, alloggi",
     "seoDescription": "Panoramica completa dell'inverno a Pamporovo: piste, impianti di risalita, sci notturno, affitto di una villa vicino alla località. Pamporovo Villa a partire da 120 € a notte.",
-    "seoKeywords": "Inverno a Pamporovo, stagione sciistica, neve a Pamporovo, vacanza invernale"
+    "seoKeywords": "Inverno a Pamporovo, stagione sciistica, neve a Pamporovo, vacanza invernale",
+    "eyebrow": "Inverno · località turistica",
+    "intro": "Oltre 37 km di piste, sci notturno, innevamento artificiale e più di 120 giorni di sole: l'inverno a Pamporovo è tra i migliori della Bulgaria.",
+    "sections": [
+      {
+        "heading": "Stagione sciistica",
+        "paragraphs": [
+          "La stagione va solitamente da dicembre a marzo/aprile. Il 90% delle piste è dotato di impianti di innevamento artificiale: la neve è praticamente garantita per sciare.",
+          "Abbinate una giornata sulle piste a una serata davanti al caminetto in una villa privata — senza il rumore della hall dell'hotel."
+        ]
+      }
+    ]
   },
   "yagodinska-pechtera": {
     "h1": "La grotta di Yagodina — nei pressi di Pamporovo",
     "seoTitle": "Grotta di Yagodinska a Pamporovo | Distanza, itinerario, consigli",
-    "seoDescription": "Come raggiungere la grotta di Yagodina da Pamporovo — 50 km, 45 min di percorso, cosa vedere. Base: villa Райковски ливади.",
-    "seoKeywords": "Grotta di Yagodina, grotte di Pamporovo, gola di Buynovo"
+    "seoDescription": "Come raggiungere la grotta di Yagodina da Pamporovo — 50 km, 45 min di percorso, cosa vedere. Base: villa Raykovski Livadi.",
+    "seoKeywords": "Grotta di Yagodina, grotte di Pamporovo, gola di Buynovo",
+    "eyebrow": "Grotte · regione",
+    "intro": "La terza grotta più lunga della Bulgaria: 10,5 km di gallerie, perle carsiche e la “Sala di Capodanno”. A circa 50 km da Pamporovo: un’escursione ideale di un giorno.",
+    "sections": [
+      {
+        "heading": "Consigli pratici",
+        "paragraphs": [
+          "La temperatura nella grotta è di circa 6 °C: portatevi una giacca anche d'estate. Prenotate la visita durante l'alta stagione.",
+          "Abbinatelo alla visita alla gola di Buynovo e a un pranzo nella zona: un'intera giornata fuori dal resort."
+        ]
+      }
+    ]
   },
   "shiroka-laka": {
     "h1": "Shiroka Luka — riserva architettonica nei pressi di Pamporovo",
     "seoTitle": "L'ampia curva di Pamporovo | 16 km, cosa vedere",
     "seoDescription": "Shiroka Luka, a 20 minuti da Pamporovo — architettura, folklore, museo. Da abbinare a un pernottamento al Pamporovo Villa.",
-    "seoKeywords": "Shiroka Luka, Pamporovo, Rodopi, folklore"
+    "seoKeywords": "Shiroka Luka, Pamporovo, Rodopi, folklore",
+    "eyebrow": "Luoghi di interesse",
+    "intro": "A 16 km da Pamporovo: case in stile Rinascimento, una scuola per suonatori di gaida e un festival annuale dei kukeri. Una tappa imperdibile nei Monti Rodopi.",
+    "sections": [
+      {
+        "heading": "Come organizzare la giornata",
+        "paragraphs": [
+          "Una passeggiata mattutina per il villaggio, pranzo in una taverna, poi ritorno alla villa per una serata barbecue: una giornata tipica dei Rodopi."
+        ]
+      }
+    ]
   },
   "eco-pateki": {
     "h1": "Sentieri ecologici nei dintorni di Pamporovo",
     "seoTitle": "Sentieri ecologici a Pamporovo | Canyon, laghi, itinerari 2026",
     "seoDescription": "Sentieri ecologici da Pamporovo: cascate, laghi, percorsi per famiglie. Alloggio: villa con cucina e barbecue a partire da 110 € a notte.",
-    "seoKeywords": "sentieri ecologici a Pamporovo, escursioni nei Rodopi, cascate"
+    "seoKeywords": "sentieri ecologici a Pamporovo, escursioni nei Rodopi, cascate",
+    "eyebrow": "Itinerari ecologici",
+    "intro": "Il canyon delle cascate, i laghi di Smolyan, Nevyasta, le rocce di Orfeo: i migliori itinerari ecologici a uno o due giorni di distanza dalla località turistica.",
+    "sections": [
+      {
+        "heading": "Itinerari più popolari",
+        "paragraphs": [
+          "Il canyon delle cascate — 46 cascate, tra cui l’Orfeo, alta 68 metri. I laghi di Smolyan — un percorso facile per famiglie ai piedi del monte Snezhanka."
+        ]
+      }
+    ]
   },
   "kak-da-stignem": {
     "h1": "Come arrivare a Pamporovo",
     "seoTitle": "Come arrivare a Pamporovo | Da Sofia, Plovdiv, mappa",
-    "seoDescription": "Itinerario per Pamporovo in auto: Sofia, Plovdiv, Smolyan. Indirizzo di Pamporovo Villa — Райковски ливади, coordinate GPS.",
-    "seoKeywords": "come arrivare a Pamporovo, strada Sofia-Pamporovo, itinerario"
+    "seoDescription": "Itinerario per Pamporovo in auto: Sofia, Plovdiv, Smolyan. Indirizzo di Pamporovo Villa — Raykovski Livadi, coordinate GPS.",
+    "seoKeywords": "come arrivare a Pamporovo, strada Sofia-Pamporovo, itinerario",
+    "eyebrow": "Viaggio",
+    "intro": "Da Sofia ~240 km (3–3,5 ore), da Plovdiv ~85 km, da Smolyan ~15 km. Itinerari, consigli per l'inverno e indicazioni per raggiungere Raykovski Livadi.",
+    "sections": [
+      {
+        "heading": "In auto",
+        "paragraphs": [
+          "Da Sofia: A1/A3 in direzione Plovdiv, poi Asenovgrad–Smolyan–Pamporovo. In inverno, controllate le condizioni stradali e munitevi di catene da neve.",
+          "Coordinate GPS per raggiungere le ville: Raykovski Livadi, località turistica di Pamporovo — Google Maps „Pamporovo Villa“."
+        ]
+      }
+    ]
   },
   "vila-za-dvoika": {
     "h1": "Villa per due a Pamporovo",
     "seoTitle": "Villa per due a Pamporovo | Soggiorno romantico, caminetto",
     "seoDescription": "Affitta una villa per due a Pamporovo — casa privata, caminetto, barbecue. Pamporovo Villa — a partire da 110 € a notte per l'intera villa.",
-    "seoKeywords": "Villa per due a Pamporovo, vacanza romantica, villa per coppie"
+    "seoKeywords": "Villa per due a Pamporovo, vacanza romantica, villa per coppie",
+    "eyebrow": "Affitto · coppie",
+    "intro": "Una romantica vacanza in montagna: una villa intera solo per due, con caminetto, barbecue e tranquillità al Raykovski Livadi, a 2 km dalla località turistica.",
+    "sections": [
+      {
+        "heading": "Perché una villa e non una stanza?",
+        "paragraphs": [
+          "Intimità, caminetto e veranda tutta per voi — senza vicini. Si paga il prezzo della villa, non a persona; per un’occasione speciale ne vale la pena."
+        ]
+      }
+    ]
   },
   "vila-za-grupa": {
     "h1": "Villa per 6 persone a Pamporovo",
     "seoTitle": "Villa per 6 persone a Pamporovo | Gruppo, casa intera",
     "seoDescription": "Affitto di una villa per 6 persone a Pamporovo — Pamporovo Villa, 2 camere da letto, barbecue, a partire da 110 € a notte. Ideale per un gruppo di amici.",
-    "seoKeywords": "villa per 6 persone a Pamporovo, villa per gruppi, casa per amici"
+    "seoKeywords": "villa per 6 persone a Pamporovo, villa per gruppi, casa per amici",
+    "eyebrow": "Affitto · gruppi",
+    "intro": "Una casa intera per amici o famiglia — fino a 6 ospiti, 2 camere da letto, soggiorno con camino, barbecue e parcheggio. Se necessario, due ville una accanto all’altra.",
+    "sections": [
+      {
+        "heading": "Prezzo a persona",
+        "paragraphs": [
+          "Con 6 ospiti e 120 € a notte, il costo della villa è di 20 € a persona a notte — spesso più conveniente di un hotel con mezza pensione."
+        ]
+      }
+    ]
   },
   "naem-lqto": {
     "h1": "Affitto estivo di una villa a Pamporovo",
     "seoTitle": "Affitto estivo di una villa a Pamporovo | A partire da 110 € a notte",
-    "seoDescription": "Affitta una villa per l'estate a Pamporovo — percorsi ecologici, barbecue, a partire da 110 € a notte. Pamporovo Villa su Райковски ливади.",
-    "seoKeywords": "affitto estivo di una villa, villa estiva a Pamporovo, villa di montagna per l'estate"
+    "seoDescription": "Affitta una villa per l'estate a Pamporovo — percorsi ecologici, barbecue, a partire da 110 € a notte. Pamporovo Villa su Raykovski Livadi.",
+    "seoKeywords": "affitto estivo di una villa, villa estiva a Pamporovo, villa di montagna per l'estate",
+    "eyebrow": "Affitto estivo",
+    "intro": "Prezzi più convenienti, clima fresco e serate barbecue: gli affitti estivi partono da 110 € a notte per una villa intera (per soggiorni superiori a 5 notti).",
+    "sections": [
+      {
+        "heading": "Cosa comprende",
+        "paragraphs": [
+          "2 camere da letto, cucina, caminetto (per le serate fresche), veranda con barbecue, Wi-Fi, parcheggio — l'intera villa tutta per voi."
+        ]
+      }
+    ]
   },
   "rajkovski-livadi": {
-    "h1": "Райковски ливади — affitto di una villa",
-    "seoTitle": "Райковски ливади affitto | Ville a Pamporovo — Pamporovo Villa",
-    "seoDescription": "Affitto di una villa a Райковски ливади, Pamporovo — 3 ville private, a 2 km dalla località turistica, caminetto, barbecue. Prenotazione online.",
-    "seoKeywords": "Райковски ливади, affitto villa, Pamporovo Villa indirizzo"
+    "h1": "Raykovski Livadi — affitto di una villa",
+    "seoTitle": "Raykovski Livadi affitto | Ville a Pamporovo — Pamporovo Villa",
+    "seoDescription": "Affitto di una villa a Raykovski Livadi, Pamporovo — 3 ville private, a 2 km dalla località turistica, caminetto, barbecue. Prenotazione online.",
+    "seoKeywords": "Raykovski Livadi, affitto villa, Pamporovo Villa indirizzo",
+    "eyebrow": "Ubicazione",
+    "intro": "Una tranquilla zona boschiva a 2 km dal centro di Pamporovo: qui si trovano le tre ville di Pamporovo Villa, dotate di parcheggio e situate nelle vicinanze delle piste.",
+    "sections": [
+      {
+        "heading": "Perché Raykovski Livadi",
+        "paragraphs": [
+          "Tranquillità tra i pini, lontano dal trambusto del centro, ma a pochi minuti di auto dagli impianti di risalita e dai ristoranti."
+        ]
+      }
+    ]
   },
   "naem-ot-110-evro": {
     "h1": "Affitto di una villa a partire da 110 € a notte a Pamporovo",
     "seoTitle": "Villa a partire da 110 € a Pamporovo | Prezzi, stagioni, prenotazioni",
     "seoDescription": "Affitto di una villa a Pamporovo a partire da 110 € a notte — villa intera per un massimo di 6 ospiti. Prezzi ufficiali Pamporovo Villa.",
-    "seoKeywords": "villa 110 euro, villa economica a Pamporovo, prezzo dell'affitto"
+    "seoKeywords": "villa 110 euro, villa economica a Pamporovo, prezzo di affitto",
+    "eyebrow": "Prezzi · affitto",
+    "intro": "Le tariffe estive partono da 110 € per l'intera villa (fino a 6 ospiti) in caso di soggiorni più lunghi. Ecco come funziona il sistema di determinazione dei prezzi.",
+    "sections": [
+      {
+        "heading": "Livelli di prezzo",
+        "paragraphs": [
+          "Fino a 3 notti: tariffa notturna più alta. 4–5 notti: tariffa intermedia. Oltre 5 notti in estate: a partire da 110 €. In inverno: a partire da 120 €. Deluxe +10/+20 €."
+        ]
+      }
+    ]
   },
   "semeen-otpusk": {
     "h1": "Vacanza sciistica in famiglia a Pamporovo",
     "seoTitle": "Vacanza sciistica in famiglia a Pamporovo | Villa con bambini",
     "seoDescription": "Vacanza sciistica in famiglia a Pamporovo — villa con 2 camere da letto, cucina, caminetto, fino a 6 ospiti. Offerte e prenotazioni — Pamporovo Villa.",
-    "seoKeywords": "vacanza sciistica in famiglia, villa con bambini a Pamporovo, famiglia a Pamporovo"
+    "seoKeywords": "vacanza sciistica in famiglia, villa con bambini a Pamporovo, famiglia a Pamporovo",
+    "eyebrow": "Famiglie · sci",
+    "intro": "Piste da sci per principianti, parchi per bambini, caminetto dopo una giornata sugli sci: organizzate una vacanza invernale in famiglia con una villa tutta per voi su Raykovski Livadi.",
+    "sections": [
+      {
+        "heading": "Perché una villa per famiglie?",
+        "paragraphs": [
+          "Una cucina per la colazione mattutina, uno spazio per l'attrezzatura da sci, un caminetto la sera: la camera d'albergo è troppo piccola per una famiglia con bambini.",
+          "La pista n. 6 è perfetta per i principianti: si trova a 2 km dalle ville."
+        ]
+      }
+    ]
   },
   "praznici": {
     "h1": "Natale e Capodanno a Pamporovo — villa con caminetto",
     "seoTitle": "Natale e Capodanno a Pamporovo 2026 | Affitto di una villa con camino",
     "seoDescription": "Vacanza festiva a Pamporovo — affitto di una villa intera con camino, barbecue, fino a 6 ospiti. Natale, Capodanno, Pasqua. Pamporovo Villa a partire da 120 € a notte.",
-    "seoKeywords": "Natale a Pamporovo, Capodanno in villa, festività a Pamporovo, villa con caminetto"
+    "seoKeywords": "Natale a Pamporovo, Capodanno in villa, festività a Pamporovo, villa con camino",
+    "eyebrow": "Festività · Pamporovo",
+    "intro": "Le vacanze in montagna sono magiche: neve, caminetto e un intero cottage tutto per voi. Prenotate in anticipo per Natale, Capodanno e Pasqua.",
+    "sections": [
+      {
+        "heading": "Perché una villa e non un hotel per le vacanze?",
+        "paragraphs": [
+          "Durante le festività gli hotel sono affollati e rumorosi. Una villa privata offre un caminetto, una sala da pranzo tutta per sé e spazio per i bambini e gli amici — senza code al buffet.",
+          "Pamporovo Villa offre 3 ville a Raykovski Livadi — a 2 km dalla località turistica, abbastanza vicine alle piste e abbastanza tranquille per la famiglia."
+        ],
+        "bullets": [
+          "Camino e barbecue",
+          "Fino a 6 ospiti in villa",
+          "Prenotazione: pamporovovilla.com/#booking"
+        ]
+      }
+    ]
   },
   "team-building": {
     "h1": "Team building a Pamporovo — ville per gruppi fino a 18 persone",
     "seoTitle": "Team building a Pamporovo | Ville per gruppi fino a 18 persone",
     "seoDescription": "Team building aziendale a Pamporovo — 3 ville, fino a 18 ospiti in totale, barbecue, caminetto, parcheggio. Inverno: sci. Estate: percorsi ecologici. Pamporovo Villa.",
-    "seoKeywords": "team building a Pamporovo, vacanza aziendale, villa per gruppi"
+    "seoKeywords": "team building a Pamporovo, vacanza aziendale, villa per gruppi",
+    "eyebrow": "Aziende · gruppi",
+    "intro": "Tre ville indipendenti allo stesso indirizzo: l’ideale per un ritiro aziendale, un weekend sulla neve o un incontro estivo in montagna. Affittate 1, 2 o 3 ville per l’intero team.",
+    "sections": [
+      {
+        "heading": "Come funziona per i team",
+        "paragraphs": [
+          "Ogni villa è indipendente: 2 camere da letto, 2 bagni, fino a 6 ospiti. È possibile combinare 2-3 ville per un reparto o per l'intero team in un unico indirizzo, con parcheggio comune e aree barbecue.",
+          "In inverno: sci su oltre 37 km di piste. In estate: sentieri naturalistici, grotte e attività di gruppo nella regione."
+        ]
+      }
+    ]
   },
   "dalga-pochivka": {
     "h1": "Affitto a lungo termine a Pamporovo — 7+ notti in una villa privata",
     "seoTitle": "Affitto a lungo termine di una villa a Pamporovo | 7+ notti, villa intera",
-    "seoDescription": "Affitto di una villa a Pamporovo per 7 o più notti — villa intera per un massimo di 6 ospiti, caminetto, barbecue. Contattateci per un’offerta personalizzata — Pamporovo Villa.",
-    "seoKeywords": "Affitto a lungo termine a Pamporovo, villa a settimana, affitto mensile in montagna"
+    "seoDescription": "Affitto di una villa a Pamporovo per 7 o più notti — villa intera per un massimo di 6 ospiti, caminetto, barbecue. Contattateci per un'offerta personalizzata — Pamporovo Villa.",
+    "seoKeywords": "Affitto a lungo termine a Pamporovo, villa a settimana, affitto mensile in montagna",
+    "eyebrow": "Affitto · sconti",
+    "intro": "Una vacanza in montagna di una settimana o più risulta più conveniente se si affitta un'intera villa: cucina, spazio e tranquillità senza le spese d'albergo.",
+    "sections": [
+      {
+        "heading": "A chi è adatto",
+        "paragraphs": [
+          "Famiglie, lavoratori da remoto e gruppi che desiderano un alloggio in montagna per un periodo prolungato. Ogni villa è completamente arredata e dotata di cucina.",
+          "Per soggiorni superiori a 7 notti — contattateci per un'offerta personalizzata: +359 879 501 660 o pamporovovilla@gmail.com."
+        ]
+      }
+    ]
   },
   "oferti": {
     "h1": "Offerte di affitto di ville a Pamporovo",
     "seoTitle": "Offerte villa Pamporovo 2026 | A partire da 110 € a notte — Pamporovo Villa",
     "seoDescription": "Offerte ufficiali per l'affitto di una villa a Pamporovo — tariffe estive e invernali, villa intera, fino a 6 ospiti. Prenotazione online su pamporovovilla.com.",
-    "seoKeywords": "offerte a Pamporovo, offerte speciali per ville, prezzi di affitto delle ville"
+    "seoKeywords": "offerte a Pamporovo, offerte speciali per ville, prezzi di affitto delle ville",
+    "eyebrow": "Offerte · Pamporovo Villa",
+    "intro": "Prezzi aggiornati e condizioni stagionali per le tre ville di Raykovski Livadi. Estate a partire da 110 € a notte, inverno a partire da 120 € a notte — per l'intera villa fino a 6 ospiti.",
+    "sections": [
+      {
+        "heading": "Fascia di prezzo",
+        "paragraphs": [
+          "Stagione estiva: a partire da 110 € a notte per l'intera villa. Stagione invernale: a partire da 120 € a notte. Periodi festivi (Natale, Capodanno) — su richiesta.",
+          "Il prezzo include: l'intera villa, fino a 6 ospiti, caminetto, barbecue, parcheggio, Wi-Fi."
+        ],
+        "bullets": [
+          "Prenotazione: /#booking",
+          "Pagina ufficiale: /rent",
+          "Telefono: +359 879 501 660"
+        ]
+      }
+    ]
   },
   "liftove": {
     "h1": "Impianti di risalita a Pamporovo — 6 impianti fino a Snezhanka",
     "seoTitle": "Impianti di risalita di Pamporovo 2026 | Capacità, percorsi, mappa",
     "seoDescription": "Tutti gli impianti di risalita di Pamporovo: Stoykite, Studenets, Malina, Laghi di Smolyan. Capacità e lunghezza. Alloggio: villa a 2 km dal centro.",
-    "seoKeywords": "impianti di risalita di Pamporovo, skilift Snezhanka, capacità di Pamporovo"
+    "seoKeywords": "impianti di risalita di Pamporovo, skilift Snezhanka, capacità di Pamporovo",
+    "eyebrow": "Sci · infrastrutture",
+    "intro": "Sei impianti di risalita collegano la località alla vetta dello Snezhanka (1926 m). Capacità complessiva di oltre 13 000 sciatori all’ora: organizzate la vostra giornata sulle piste.",
+    "sections": [
+      {
+        "heading": "Consigli sugli ascensori",
+        "paragraphs": [
+          "L'impianto più grande va da Stoykite a Snezhanka — 2992 m, 2400 persone all'ora. Il collegamento principale che passa per Studenets è più affollato al mattino: partite da Malina se alloggiate a sud.",
+          "Dopo una giornata sulle piste: una villa con caminetto a 2 km di distanza, senza code alla reception."
+        ]
+      }
+    ]
   },
   "rozhen": {
     "h1": "NAO “Rozhen” — osservatorio nei pressi di Pamporovo",
     "seoTitle": "Osservatorio di Rozen da Pamporovo | 18 km, visite",
     "seoDescription": "Come raggiungere il NAO Rozen da Pamporovo — 25 min in auto, telescopio da 2 m, Festival di Rozen. Base: Pamporovo Villa.",
-    "seoKeywords": "Osservatorio di Rozen, NAO Rozen, Escursioni a Pamporovo"
+    "seoKeywords": "Osservatorio di Rozen, NAO Rozen, Escursioni a Pamporovo",
+    "eyebrow": "Luoghi di interesse",
+    "intro": "A 18 km da Pamporovo — il più grande osservatorio astronomico dei Balcani, situato a 1750 m. Visite diurne e osservazioni notturne su prenotazione.",
+    "sections": [
+      {
+        "heading": "Pratico",
+        "paragraphs": [
+          "Da abbinare alle praterie di Rozen e a un pranzo nella regione. La sera: caminetto in una villa a Raykovski Livadi."
+        ]
+      }
+    ]
   },
   "chudnite-mostove": {
     "h1": "I ponti meravigliosi — gita di un giorno da Pamporovo",
     "seoTitle": "I meravigliosi ponti di Pamporovo | 42 km, itinerario",
     "seoDescription": "Escursione ai Ponti Meravigliosi da Pamporovo — 1 ora in auto, sentiero sotto le arcate. Affitto di una villa come base — Pamporovo Villa.",
-    "seoKeywords": "I meravigliosi ponti, i Monti Rodopi, gita a Pamporovo"
+    "seoKeywords": "I ponti meravigliosi, i Rodopi, gita a Pamporovo",
+    "eyebrow": "Natura · Rodopi",
+    "intro": "Archi di marmo giganteschi a 42 km di distanza — una delle 100 attrazioni turistiche nazionali. L'abbinamento perfetto per una vacanza estiva o autunnale in montagna.",
+    "sections": [
+      {
+        "heading": "Consiglio",
+        "paragraphs": [
+          "Partite presto: ad agosto il parcheggio si riempie in fretta. Indossate scarpe con una buona aderenza per il sentiero sotto i ponti."
+        ]
+      }
+    ]
   },
   "dyavolskoto-garlo": {
     "h1": "La Gola del Diavolo — una cascata sotterranea alta 42 m",
     "seoTitle": "La Gola del Diavolo a Pamporovo | Distanza, itinerario",
     "seoDescription": "Escursione alla Gola del Diavolo da Pamporovo — 1 h 20 min, 301 gradini, la Sala del Ruggito. Base: villa Pamporovo Villa.",
-    "seoKeywords": "La Gola del Diavolo, Trigrad, grotte dei Rodopi"
+    "seoKeywords": "La Gola del Diavolo, Trigrad, grotte dei Rodopi",
+    "eyebrow": "Grotte · leggende",
+    "intro": "A 55 km da Pamporovo — una grotta con voragini che ospita la cascata sotterranea più alta dei Balcani. La leggenda di Orfeo ed Euridice.",
+    "sections": [
+      {
+        "heading": "Da abbinare a",
+        "paragraphs": [
+          "La gola di Trigrad e il villaggio di Trigrad — un'intera giornata fuori dalla località turistica, la sera davanti al caminetto in una villa."
+        ]
+      }
+    ]
   },
   "trigradsko-zhdrelo": {
     "h1": "La gola di Trigrad — un canyon spettacolare nei Monti Rodopi",
-    "seoTitle": "La gola di Trigrad da Pamporovo | Itinerario, consigli",
+    "seoTitle": "La gola di Trigrad vista da Pamporovo | Itinerario, consigli",
     "seoDescription": "Come raggiungere la gola di Trigrad da Pamporovo — 1 h 15 min, in combinazione con la Gola del Diavolo. Pamporovo Villa.",
-    "seoKeywords": "Gola di Trigrad, Trigrad, canyon dei Rodopi"
+    "seoKeywords": "Gola di Trigrad, Trigrad, canyon dei Rodopi",
+    "eyebrow": "Canyon · Trigrad",
+    "intro": "Una strada che si snoda tra pareti a strapiombo alte fino a 250 m: uno dei percorsi più fotogenici della Bulgaria, a 53 km da Pamporovo.",
+    "sections": [
+      {
+        "heading": "Guida",
+        "paragraphs": [
+          "Strada di montagna: guidate con prudenza e utilizzate le curve a gomito. È preferibile percorrerla al mattino, prima che il traffico diventi intenso."
+        ]
+      }
+    ]
   },
   "uhlovitsa": {
     "h1": "Grotta di Uhlovitsa — cascate di roccia nei pressi di Pamporovo",
     "seoTitle": "Grotta di Uhlovitsa a Pamporovo | 32 km, percorso ad anello",
     "seoDescription": "Escursione a Uhlovitsa da Pamporovo — 45 min in auto, 30 min di percorso. Vicino alle dimore degli Agushev. Pamporovo Villa.",
-    "seoKeywords": "Uhlovitsa, grotta di Mogilitsa, grotte di Pamporovo"
+    "seoKeywords": "Uhlovitsa, grotta di Mogilitsa, grotte di Pamporovo",
+    "eyebrow": "Grotte",
+    "intro": "A 32 km — una delle grotte più belle della Bulgaria, con cascate di calcite e coralliti. 30 min a piedi dal parcheggio.",
+    "sections": [
+      {
+        "heading": "Preparazione",
+        "paragraphs": [
+          "Temperatura ~8 °C — giacca leggera. Scarpe comode per il percorso dal parcheggio."
+        ]
+      }
+    ]
   },
   "kanion-vodopadi": {
     "h1": "Il canyon delle cascate — 46 cascate nei pressi di Pamporovo",
     "seoTitle": "Il canyon delle cascate di Pamporovo | Itinerario ecologico",
     "seoDescription": "Sentiero ecologico del Canyon delle cascate di Pamporovo — percorso di 6 km, 46 cascate. Base estiva: villa Pamporovo Villa.",
-    "seoKeywords": "Canyon delle cascate, sentiero ecologico di Smolyan, Rodopi"
+    "seoKeywords": "Canyon delle cascate, sentiero ecologico di Smolyan, Rodopi",
+    "eyebrow": "Eco · Smolyan",
+    "intro": "A 15 km da Smolyan: il sentiero ecologico più suggestivo dei Rodopi, con la cascata “Orfeo” alta 68 metri e una vista panoramica a 1800 m.",
+    "sections": [
+      {
+        "heading": "Itinerario",
+        "paragraphs": [
+          "Circa 4 ore per un percorso ad anello di 6 km. Portatevi dell'acqua e partite al mattino: nel pomeriggio potrebbe esserci molta gente."
+        ]
+      }
+    ]
   },
   "smolyanski-ezera": {
     "h1": "I laghi di Smolyan — una breve passeggiata da Pamporovo",
     "seoTitle": "I laghi di Smolyan da Pamporovo | Itinerario, consigli",
     "seoDescription": "Escursione ecologica ai laghi di Smolyan da Pamporovo — percorso facile, adatto alle famiglie, pesca. Affitto di una villa — Pamporovo Villa.",
-    "seoKeywords": "I laghi di Smolyan, Eco Pamporovo, i laghi di montagna"
+    "seoKeywords": "I laghi di Smolyan, Eco Pamporovo, i laghi di montagna",
+    "eyebrow": "Eco · laghi",
+    "intro": "«Gli occhi di smeraldo dei Rodopi» — laghi naturali ai piedi dello Snezhanka. Itinerario per famiglie, picnic e possibilità di prendere la funivia fino alla vetta.",
+    "sections": [
+      {
+        "heading": "Per le famiglie",
+        "paragraphs": [
+          "Ideale per i bambini: un percorso breve e aree picnic tra i laghi."
+        ]
+      }
+    ]
   },
   "nevyastata": {
     "h1": "Sentiero ecologico “Nevyasta” — panorama su Smolyan",
     "seoTitle": "Il sentiero ecologico \"Nevyasta\" da Pamporovo | Panorama, tram",
     "seoDescription": "Sentiero ecologico “Nevyastata” da Pamporovo — percorso di 900 m, panorama, funivia. Vacanze estive — Pamporovo Villa.",
-    "seoKeywords": "Nevyasta, sentiero ecologico di Smolyan, Rodopi"
+    "seoKeywords": "Nevyasta, sentiero ecologico di Smolyan, Rodopi",
+    "eyebrow": "Eco · Panorama",
+    "intro": "Breve sentiero che conduce alla roccia “Nevyastata”, con funivia alpina e una leggenda — a 12 km da Smolyan, accessibile a tutte le età.",
+    "sections": [
+      {
+        "heading": "Consiglio",
+        "paragraphs": [
+          "Abbinatelo a un pranzo a Smolyan e a una visita al planetario."
+        ]
+      }
+    ]
   },
   "orpheus-rocks": {
     "h1": "Le Rocce di Orfeo — itinerario dal picco Snezhanka",
     "seoTitle": "Le rocce di Orfeo a Pamporovo | Itinerario da Snezhanka",
     "seoDescription": "Itinerario di montagna: le Rocce di Orfeo dal picco Snezhanka — panorama, le Aghe. Base: Pamporovo Villa.",
-    "seoKeywords": "Le Rocce di Orfeo, Snezhanka, percorso di montagna"
+    "seoKeywords": "Le Rocce di Orfeo, Snezhanka, itinerario di montagna",
+    "eyebrow": "Eco · Biancaneve",
+    "intro": "Formazioni rocciose riolitiche con vista sui laghi di Smolyan — sentiero segnalato dalla vetta, circa 4 ore di cammino di media difficoltà.",
+    "sections": [
+      {
+        "heading": "Quando",
+        "paragraphs": [
+          "Il periodo migliore è luglio-agosto: mirtilli lungo il sentiero e tempo stabile in quota."
+        ]
+      }
+    ]
   },
   "momchilovtsi": {
     "h1": "Momchilovtsi — un villaggio della longevità vicino a Pamporovo",
     "seoTitle": "I ragazzi di Pamporovo | 25 km, villaggio, taverne",
     "seoDescription": "Escursione a Momchilovtsi da Pamporovo — 30 min, longevità, yogurt. Affitto villa — Pamporovo Villa.",
-    "seoKeywords": "Momchilovtsi, villaggi dei Rodopi, yogurt"
+    "seoKeywords": "Momchilovtsi, villaggi dei Rodopi, yogurt",
+    "eyebrow": "Villaggi · Rodopi",
+    "intro": "A 25 km — famosa per lo yogurt, i panorami e le taverne tradizionali. Festa dello yogurt ad agosto.",
+    "sections": [
+      {
+        "heading": "Cosa provare",
+        "paragraphs": [
+          "Yogurt fatto in casa e piatti tipici dei Rodopi in una taverna: il pranzo perfetto dopo una passeggiata."
+        ]
+      }
+    ]
   },
   "gela": {
     "h1": "Gela — il villaggio di Orfeo nei Rodopi",
     "seoTitle": "Gela di Pamporovo | Orfeo, festival di zampone",
     "seoDescription": "Escursione al villaggio di Gela da Pamporovo — 30 min, Orfeo, festival della cornamusa. Affitto villa — Pamporovo Villa.",
-    "seoKeywords": "Gela, Orfeo, folklore dei Rodopi"
+    "seoKeywords": "Gela, Orfeo, folklore dei Rodopi",
+    "eyebrow": "Villaggi · Orfeo",
+    "intro": "A 22 km — uno dei villaggi più antichi, culla della leggenda di Orfeo. Festival internazionale di cornamusa ogni prima domenica di agosto.",
+    "sections": [
+      {
+        "heading": "Evento",
+        "paragraphs": [
+          "Agosto — centinaia di suonatori di cornamusa sul prato. Prenotate la villa con largo anticipo per questo periodo."
+        ]
+      }
+    ]
   },
   "smolyan": {
     "h1": "Smolyan — planetario e musei di Pamporovo",
     "seoTitle": "Smolyan da Pamporovo | Planetario, musei, 20 min",
     "seoDescription": "Escursione a Smolyan da Pamporovo — planetario, musei, Raikovo. Alloggio: Pamporovo Villa a partire da 110 € a notte.",
-    "seoKeywords": "Smolyan, planetario, Museo dei Rodopi"
+    "seoKeywords": "Smolyan, planetario, Museo dei Rodopi",
+    "eyebrow": "Città · Cultura",
+    "intro": "A 15 km si trovano il planetario più grande della Bulgaria, il museo storico e i quartieri storici di Raikovo e Ustovo.",
+    "sections": [
+      {
+        "heading": "Per i bambini",
+        "paragraphs": [
+          "Il planetario è una tappa imperdibile per i gruppi di bambini: prenotate l'orario in anticipo."
+        ]
+      }
+    ]
   },
   "nochno-karane": {
     "h1": "Guida notturna a Pamporovo — pista “Steната”",
     "seoTitle": "Guida notturna a Pamporovo 2026 | La parete, programma",
     "seoDescription": "Sci notturno sulla pista \"Steната\" a Pamporovo — orari, mappa delle piste, alloggi a 2 km — Pamporovo Villa.",
-    "seoKeywords": "sci notturno a Pamporovo, La Parete di notte, sci notturno"
+    "seoKeywords": "sci notturno a Pamporovo, La Parete di notte, sci notturno",
+    "eyebrow": "Sci · notte",
+    "intro": "L'unica pista illuminata per sciare di notte — di solito dalle 17:30 alle 22:00 durante la stagione. Il simbolo della località sotto i riflettori.",
+    "sections": [
+      {
+        "heading": "Dopo le piste",
+        "paragraphs": [
+          "Cena in una villa con caminetto — a 2 km dal resort. Niente rumori da hotel dopo la guida notturna."
+        ]
+      }
+    ]
   },
   "stenata": {
     "h1": "Pista “La Parete” — pista nera e sci notturno",
     "seoTitle": "La parete di Pamporovo | Pista nera, sci notturno",
-    "seoDescription": "Pista \"Steната\" a Pamporovo — 1258 m, nera, sci notturno. Вила 2 km — Pamporovo Villa.",
-    "seoKeywords": "La parete, pista nera di Pamporovo, sci notturno"
+    "seoDescription": "Pista \"Steната\" a Pamporovo — 1258 m, nera, sci notturno. Villa 2 km — Pamporovo Villa.",
+    "seoKeywords": "La parete, pista nera di Pamporovo, sci notturno",
+    "eyebrow": "Sci · nero",
+    "intro": "Pista nera di 1258 m — sede di gare europee. Sci notturno e una delle discese più fotogeniche della Bulgaria.",
+    "sections": [
+      {
+        "heading": "Per chi",
+        "paragraphs": [
+          "Solo per esperti — i principianti scelgano le piste verdi e blu dalla tabella su /pamporovo/pisti."
+        ]
+      }
+    ]
   },
   "vruh-snezhanka": {
     "h1": "Cima Snezhanka — 1926 m, il punto più alto delle piste",
     "seoTitle": "Cima Snezhanka, Pamporovo | 1926 m, funivia, panorama",
     "seoDescription": "Cima Snezhanka a Pamporovo — 1926 m, skilift Stoykite, piste nere. Affitto villa — Pamporovo Villa.",
-    "seoKeywords": "Snezhanka, vetta di Pamporovo, comprensorio sciistico"
+    "seoKeywords": "Snezhanka, vetta di Pamporovo, comprensorio sciistico",
+    "eyebrow": "Sci · vetta",
+    "intro": "Il punto più alto del comprensorio sciistico — 1926 m, vista panoramica sui Monti Rodopi e impianti di risalita in tutte le direzioni.",
+    "sections": [
+      {
+        "heading": "Consiglio",
+        "paragraphs": [
+          "All'alba la giornata è meno impegnativa: un caffè in vetta e poi la discesa lungo il sentiero Malina."
+        ]
+      }
+    ]
   },
   "ski-karti": {
     "h1": "Skipass e impianti di risalita a Pamporovo — guida pratica",
     "seoTitle": "Skipass Pamporovo 2026 | Prezzi, dove acquistarli",
     "seoDescription": "Skipass di Pamporovo — dove acquistarlo, skipass giornalieri e stagionali, impianti di risalita. Base villa — Pamporovo Villa.",
-    "seoKeywords": "Skipass Pamporovo, skipass, prezzi degli impianti di risalita"
+    "seoKeywords": "Skipass Pamporovo, skipass, prezzi degli impianti di risalita",
+    "eyebrow": "Sci · Informazioni pratiche",
+    "intro": "Gli skipass sono in vendita a Studenets e Malina. Visitate il sito pamporovo.me per conoscere i prezzi aggiornati e gli skipass stagionali.",
+    "sections": [
+      {
+        "heading": "Risparmia",
+        "paragraphs": [
+          "Affittare un'intera villa con cucina riduce le spese di alloggio: così avrai più soldi da spendere per lo sci e i ristoranti."
+        ]
+      }
+    ]
   },
   "bunovsko-zhdrelo": {
     "h1": "La gola di Buynovsko — nei pressi della grotta di Yagodina",
     "seoTitle": "Gola di Buynovo da Pamporovo | Grotta di Yagodina",
     "seoDescription": "Gola di Buynovo da Pamporovo — 50 km, Grotta di Yagodina, eco-tour. Affitto villa — Pamporovo Villa.",
-    "seoKeywords": "Gola di Buynovo, Grotta di Yagodina, gole dei Rodopi"
+    "seoKeywords": "Gola di Buynovo, Grotta di Yagodina, gole dei Rodopi",
+    "eyebrow": "Natura · Grotte",
+    "intro": "Una gola spettacolare lungo il percorso verso la Grotta di Yagodina — da abbinare al tour della grotta e a un pranzo nella zona.",
+    "sections": [
+      {
+        "heading": "Itinerario",
+        "paragraphs": [
+          "Programma di un giorno: Grotta di Yagodina + Gola di Buynovo + ritorno in villa per la sera."
+        ]
+      }
+    ]
   },
   "chepelare": {
     "h1": "Chepelare e Pamporovo: due località turistiche, un’unica regione",
     "seoTitle": "Chepelare vs Pamporovo | Sci, distanze, alloggi",
     "seoDescription": "Chepelare e Pamporovo — confronto tra le località turistiche. Affitto di una villa a Pamporovo a partire da 110 € — Pamporovo Villa.",
-    "seoKeywords": "Chepelare, Pamporovo, sci in Bulgaria, confronto"
+    "seoKeywords": "Chepelare, Pamporovo, sci in Bulgaria, confronto",
+    "eyebrow": "Località turistiche · Località limitrofe",
+    "intro": "Chepelare dista 10 km: è una piccola località sciistica, Mechi Chal, e una tranquilla località turistica. Confrontatela con Pamporovo per il vostro soggiorno.",
+    "sections": [
+      {
+        "heading": "Dove dormire",
+        "paragraphs": [
+          "Entrambe le località turistiche dispongono di hotel, ma per un gruppo fino a 6 persone una villa intera a Raykovski Livadi è più comoda e più conveniente."
+        ]
+      }
+    ]
   }
 }

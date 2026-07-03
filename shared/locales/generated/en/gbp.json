@@ -1,13 +1,13 @@
 {
-  "reviewLink": "Оставете отзив в Google",
-  "reviewShort": "Google отзив",
-  "reviewToast": "Споделете и в Google — помага на други гости да ни открият.",
-  "reviewToastAction": "Google отзив",
-  "directions": "Навигирай до нас",
-  "maps": "Вижте в Google Maps",
+  "reviewLink": "Leave a Google review",
+  "reviewShort": "Google review",
+  "reviewToast": "Share on Google too — it helps other guests find us.",
+  "reviewToastAction": "Google review",
+  "directions": "Get directions",
+  "maps": "Google Maps",
   "banner": {
-    "eyebrow": "Google отзиви",
-    "title": "Харесахте престоя? Споделете в Google",
-    "body": "Отзивите в Google Business Profile помагат на други гости да ни открият в Пампорово. Отнема под минута."
+    "eyebrow": "Google reviews",
+    "title": "Enjoyed your stay? Share on Google",
+    "body": "Google Business Profile reviews help other guests find us in Pamporovo. It takes under a minute."
   }
 }

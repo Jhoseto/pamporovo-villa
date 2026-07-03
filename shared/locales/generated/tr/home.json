@@ -1,23 +1,26 @@
 {
   "hero": {
-    "eyebrow": "Smolyan · Pamporovo · Kiralık 3 villa",
+    "eyebrow": "Bulgaristan · Smolyan · Pamporovo · Kiralık 3 villa",
     "titleLine1": "Pamporovo",
     "titleLine2": "Villa",
     "subtitle": "Pamporovo’nun büyülü ormanlarının ortasında yer alan üç müstakil villa sunuyoruz. Dağda, yıl boyunca ev konforu.",
     "ctaExperience": "Yürüyüşe başla",
-    "ctaBook": "Rezervasyon yap",
-    "scrollHint": "Göz atın"
+    "ctaBook": "Rezervasyon",
+    "scrollHint": "Göz atın",
+    "scrollDown": "Aşağı",
+    "scrollToExperience": "Yürüyüşe devam et"
   },
   "gallery": {
     "eyebrow": "Galeri",
     "title": "Fotoğraflardaki üç villa",
     "subtitle": "Her villayı inceleyin — iç mekan, konfor ve dağ manzaraları",
-    "pickVilla": "Bir villa seçin"
+    "pickVilla": "Bir villa seçin",
+    "photoCount": "{count} fotoğraf"
   },
   "contact": {
     "eyebrow": "İletişim",
     "title": "Tatiliniz hakkında konuşalım",
-    "subtitle": "Bir sorunuz mu var ya da özel bir isteğiniz mi var? Bizi arayın ya da mesaj gönderin — size bizzat ve memnuniyetle cevap vereceğiz"
+    "subtitle": "Bir sorunuz mu var ya da özel bir isteğiniz mi var? Bizi arayın ya da mesaj atın — size bizzat ve memnuniyetle cevap vereceğiz"
   },
   "reviews": {
     "eyebrow": "Yorumlar",
@@ -29,9 +32,56 @@
   },
   "location": {
     "eyebrow": "Konum",
-    "title": "Her şeye bir adım uzaklıkta, gürültüden uzakta",
-    "subtitle": "Pamporovo Tatil Köyü, Райковски ливади bölgesi — çam ormanının içinde saklanmış",
+    "title": "Her şeye bir adım uzaklıkta, gürültüden uzak",
+    "subtitle": "Pamporovo Tatil Köyü, Raykovski Livadi bölgesi — çam ormanının içinde saklanmış",
     "directions": "Bize ulaşın",
     "info": "Pamporovo, Bulgaristan’ın en güneşli dağ tatil beldesidir — Rodop Dağları’nın kalbinde, 1 650 m yükseklikte yer alır. Kışın 37 km'lik mükemmel bakımlı kayak pistleri ve gece kayağı, yazın ise doğa yürüyüşü parkurları, şelaleler ve iyileştirici bir hava sizi bekliyor. Ve villalarımız, tüm bunların ortasında sizin sakin sığınağınız olacak."
+  },
+  "widgets": {
+    "weatherLoading": "Zaman yüklemesi",
+    "weatherUnavailable": "Hizmet geçici olarak kullanılamıyor",
+    "feelsLike": "Şöyle hissediliyor:",
+    "today": "Bugün",
+    "humidity": "Nem",
+    "wind": "Rüzgâr",
+    "callUs": "Arayın",
+    "galleryVillaTabs": "Galeri'den villa seçimi"
+  },
+  "about": {
+    "eyebrow": "Hakkımızda",
+    "title": "Rhodope Dağları’nın yükseklerinde yer alan eviniz",
+    "subtitle": "Üç villa, tek bir özen — kendinizi evinizde hissetmeniz için",
+    "blockPlace": "Yer",
+    "blockHome": "Evde",
+    "blockHosts": "Ev sahibi takım",
+    "intro": "Bizi keşfettiğiniz için mutluyuz. Raykovski Livadi’nin çam ormanının içinde yer alan üç müstakil villayı sizlere sunuyoruz — şehir gürültüsünün çok uzaklarda kaldığı, günün kuş cıvıltıları ve reçine kokusuyla başladığı bir yer.",
+    "details": "Villa 1, Villa 2 ve Villa Deluxe, dağda kendi evimizin olmasını istediğimiz gibi döşenmiştir — gerçek ahşap, yumuşak kumaşlar ve bir mekana sıcaklık katan o küçük detaylarla. Burada sadece misafir değilsiniz; kendinizi evinizde hissedin.",
+    "hosts": "Ev sahipleriniz olarak her zaman elinizin altındayız. Sürprizler ve kutlamalar için yardımcı oluyoruz, sizi en güzel kayak pistlerine ve yürüyüş yollarına yönlendiriyoruz, nerede lezzetli yemekler yiyebileceğinizi öneriyoruz — ve bir şeye ihtiyacınız olursa, aramanız yeter. Amacımız tek bir şey: buradan ayrılırken tekrar gelmek isteyeceksiniz.",
+    "layout": "Her villa iki katlıdır ve iki yatak odası, iki banyo, yemek alanı bulunan tam donanımlı bir mutfak ile odun şömineli geniş bir oturma odasına sahiptir. Dışarıda ise Rodop Dağları'nın panoramik manzarasına sahip bir teras ve barbekü bulunan bir veranda sizi bekliyor — en güzel akşamların yaşandığı yer."
+  },
+  "amenities": {
+    "eyebrow": "Olanaklar",
+    "title": "Rahat bir konaklama için gereken her şey",
+    "subtitle": "Küçük ayrıntıları biz hallettik, böylece siz sadece tatilinizi düşünebilirsiniz"
+  },
+  "pricing": {
+    "eyebrow": "Fiyatlar",
+    "title": "Net fiyatlar, sürpriz yok",
+    "subtitle": "Tüm villanın gecelik kiralanması — en fazla 6 konuk için. Ne kadar uzun kalırsanız, o kadar uygun fiyatlı olur"
+  },
+  "booking": {
+    "eyebrow": "Rezervasyon",
+    "title": "Dağda yerinizi ayırtın",
+    "subtitle": "Bir villa ve tarih seçin, bilgilerinizi girin — biz de onay için sizinle şahsen iletişime geçeceğiz"
+  },
+  "policy": {
+    "eyebrow": "Bunu bilmeniz iyi olur",
+    "title": "Gelmeden önce birkaç söz",
+    "subtitle": "Herkes için huzurlu ve keyifli bir ortam sağlamak amacıyla kısa ve net kurallar"
+  },
+  "faq": {
+    "eyebrow": "Rezervasyon · Fiyatlar",
+    "title": "Sıkça sorulan sorular",
+    "subtitle": "Kiralama, fiyatlar, konaklama ve rezervasyonla ilgili sorular — formu doldurmadan önce."
   }
 }

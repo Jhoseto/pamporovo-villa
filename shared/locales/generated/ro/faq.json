@@ -1,1 +1,178 @@
-{}
+{
+  "home": {
+    "book-online": {
+      "question": "Cum pot rezerva o vilă online?",
+      "answer": "La pamporovovilla.com, selectați secțiunea „Rezervare”, alegeți o vilă (Villa 1, Villa 2 sau Villa Deluxe), datele și completați formularul. Veți primi confirmarea prin e-mail. Pentru întrebări: +359 879 501 660."
+    },
+    "price-per-villa": {
+      "question": "Cât costă închirierea unei vile?",
+      "answer": "Prețurile se referă la întreaga vilă (până la 6 oaspeți), nu pe persoană. Sezonul de vară începe de la 110 €/noapte pentru sejururi de peste 5 nopți. În sezonul de iarnă, prețurile variază între 120 și 160 €/noapte, în funcție de numărul de nopți de cazare. Villa Deluxe are un mic supliment. Prețuri actuale: secțiunea „Prețuri” de pe site."
+    },
+    "price-includes": {
+      "question": "Ce este inclus în preț?",
+      "answer": "Închiriere a întregii vile, Wi-Fi, parcare, taxă de stațiune. Lemne pentru șemineu — 10 €/sac, la cerere. Biletele pentru teleschi și masa nu sunt incluse."
+    },
+    "check-in-out": {
+      "question": "Când are loc check-in-ul și check-out-ul?",
+      "answer": "Check-in după ora 15:00, check-out până la ora 11:00. Eliberarea târzie a camerei este gratuită, în măsura în care este posibil — vă rugăm să întrebați la momentul rezervării."
+    },
+    "holiday-pricing": {
+      "question": "Există prețuri diferite în perioada sărbătorilor?",
+      "answer": "Da — pentru Crăciun, Anul Nou, Paște și vacanța din februarie se aplică condiții speciale și, uneori, o durată minimă de ședere. Contactați-ne sau verificați calendarul în momentul rezervării."
+    },
+    "min-nights": {
+      "question": "Există un număr minim de nopți de cazare?",
+      "answer": "În extrasezon, de multe ori nu există o durată minimă de ședere. În perioadele de vârf (decembrie–ianuarie, vacanța de februarie) poate fi necesar un sejur de 3–5 nopți. Puteți consulta regulile exacte în calendar."
+    },
+    "deluxe-difference": {
+      "question": "Ce are Villa Deluxe diferit?",
+      "answer": "Aceeași dispunere — 2 dormitoare, 2 băi, șemineu, grătar — dar cu o atenție sporită la detalii și la atmosferă. Prețul este cu +10 €/noapte vara și +20 €/noapte iarna față de vilele standard."
+    },
+    "max-guests": {
+      "question": "Câte persoane pot dormi într-o vilă?",
+      "answer": "Până la 6 oaspeți pe vilă. Pentru grupuri mai mari, puteți rezerva două vile — contactați-ne pentru o combinație."
+    },
+    "payment": {
+      "question": "Cum se plătește rezervarea?",
+      "answer": "Condițiile privind avansul și plata restului de sumă vi se vor comunica odată cu confirmarea. Acceptăm transfer bancar; detaliile vi se vor trimite prin e-mail după efectuarea cererii."
+    },
+    "cancel-policy": {
+      "question": "Care este politica în caz de refuz?",
+      "answer": "Condițiile de anulare sunt descrise în secțiunea „Politică” și în contractul de confirmare. Vă recomandăm să încheiați o asigurare de călătorie pentru rezervările de iarnă."
+    },
+    "firewood": {
+      "question": "Mai este lemne pentru șemineu?",
+      "answer": "Da — 10 € pe sac, la cerere înainte de sosire sau la cazare. Fiecare vilă are un șemineu cu lemne în sufragerie."
+    },
+    "pets-home": {
+      "question": "Se acceptă animale de companie?",
+      "answer": "Politica privind animalele de companie depinde de sezon — vă rugăm să întrebați înainte de a face rezervarea. Oaspeții neînregistrați nu au acces pe proprietate."
+    },
+    "distance-home": {
+      "question": "La ce distanță se află vilele de Pamporovo?",
+      "answer": "La 2 km de centrul stațiunii și de teleschiuri — aproximativ 5–7 minute cu mașina. Adresă: Raykovski Livadi, stațiunea Pamporovo."
+    },
+    "three-villas": {
+      "question": "Trebuie să închiriez toate cele trei vile?",
+      "answer": "Nu — închiriați doar o singură vilă pentru grupul dumneavoastră. Cele trei se află la aceeași adresă, dar sunt case complet separate, cu intrare proprie."
+    },
+    "vip-program": {
+      "question": "Există vreo reducere pentru oaspeții care revin?",
+      "answer": "Da — programul VIP oferă o reducere de 10 % după trei sejururi în decursul unui an, plus check-in devreme/check-out târziu, în măsura posibilităților."
+    },
+    "offers": {
+      "question": "Există promoții și oferte?",
+      "answer": "Publicăm oferte sezoniere (de exemplu, vacanță de schi în familie, „plătiți 9, stați 10 nopți”). Consultați secțiunea „Oferte” de pe pagina principală sau abonați-vă la noutăți din secțiunea „Contact”."
+    }
+  },
+  "pamporovo": {
+    "where-is-pamporovo": {
+      "question": "Unde se află Pamporovo?",
+      "answer": "Pamporovo este o stațiune din Munții Rodopi, județul Smolyan, situată la o altitudine de aproximativ 1650 m. Cel mai apropiat oraș mare este Smolyan (la aproximativ 15 km). Distanța de la Sofia este de aproximativ 240 km (3–3,5 ore cu mașina)."
+    },
+    "pistes-length": {
+      "question": "Câți kilometri de pârtii sunt în Pamporovo?",
+      "answer": "Zona de schi din Pamporovo oferă peste 37 km de pârtii marcate, cu toate nivelurile de dificultate — de la cele verzi, pentru începători, până la cele negre, pentru experți. Pârtia „Steana” este simbolul stațiunii și oferă posibilitatea de a schia noaptea."
+    },
+    "night-skiing": {
+      "question": "Se poate circula noaptea în Pamporovo?",
+      "answer": "Da. Pista „Steana” (nr. 2) este iluminată pentru schi nocturn — de obicei între orele 17:30 și 22:00 în timpul sezonului. Verificați programul actualizat pe pamporovo.me înainte de vizită."
+    },
+    "best-beginner-pistes": {
+      "question": "Care sunt pârtiile potrivite pentru schiorii începători?",
+      "answer": "Pista nr. 6 „Pamporovo (turistică)” este cea mai lungă și mai ușoară (3,3 km) — ideală pentru primele coborâri. Pistele verzi (nr. 1A) și pistele albastre nr. 7, nr. 8 și nr. 10 sunt, de asemenea, o alegere bună pentru familii."
+    },
+    "lift-tickets": {
+      "question": "Cât costă abonamentele pentru teleschiuri în Pamporovo?",
+      "answer": "Prețurile abonamentelor pentru teleschiuri se actualizează în fiecare sezon. Prețurile actuale pentru abonamentele zilnice, de jumătate de zi și săptămânale sunt publicate de operatorii oficiali pe pamporovo.me. Rezervați-vă cazarea separat — abonamentele pentru teleschi nu sunt incluse în prețul de închiriere al vilei."
+    },
+    "when-ski-season": {
+      "question": "Când este sezonul de schi în Pamporovo?",
+      "answer": "De obicei, din decembrie până în martie–aprilie, în funcție de zăpadă. Aproximativ 90% dintre pârtii dispun de instalații de zăpadă artificială, ceea ce prelungește sezonul. Închirierea unei vile pe timpul iernii este cea mai căutată în lunile ianuarie și februarie."
+    },
+    "summer-activities": {
+      "question": "Ce se poate face în Pamporovo vara?",
+      "answer": "Trasee ecologice, ciclism montan, călărie, parcuri de aventură cu tiroliene, cules de ciuperci și plante medicinale, vizite la peșteri și sate autentice (Shiroka Laka, Gela). Regiunea este ideală pentru vacanțe în familie în afara sezonului de schi."
+    },
+    "caves-nearby": {
+      "question": "Care sunt peșterile din apropierea stațiunii Pamporovo?",
+      "answer": "Peștera Yagodinska (la aproximativ 30 km), Gâtul Diavolului (lângă Stâncile Strâmte), Uhlovitsa și altele. Majoritatea necesită un tur acvatic — luați-vă haine groase și faceți rezervare în avans în sezonul de vârf."
+    },
+    "shiroka-luka": {
+      "question": "Cât de departe se află Șiroka Luka de Pamporovo?",
+      "answer": "Rezervația arhitecturală Șiroka Laka se află la aproximativ 20 km de Pamporovo — la circa 30 de minute cu mașina. Combinați această vizită cu o vizită la Mănăstirea Rožen și cu priveliștile de la Rožen."
+    },
+    "where-to-sleep": {
+      "question": "Unde pot să dorm în Pamporovo?",
+      "answer": "Puteți alege între hoteluri situate în centrul stațiunii și vile independente, departe de agitație. Pamporovo Villa oferă 3 vile private la Raykovski Livadi — la 2 km de centru, cu șemineu, grătar și capacitate de până la 6 oaspeți pe vilă, de la 110 €/noapte."
+    },
+    "hotel-vs-villa": {
+      "question": "Un hotel sau o vilă în Pamporovo — ce este mai bine?",
+      "answer": "Hotelul este potrivit pentru un sejur scurt, fără a fi nevoie să gătiți. Vila este o alegere excelentă pentru familii și grupuri: o casă întreagă doar pentru voi, șemineu, grătar, parcare și un preț mai mic pe persoană pentru 4–6 oaspeți. Pamporovo Villa se află la 2 km de pârtii."
+    },
+    "villa-price": {
+      "question": "Cât costă închirierea unei vile în Pamporovo?",
+      "answer": "Pentru Pamporovo Villa, prețurile încep de la 110 €/noapte pentru o vilă întreagă (până la 6 oaspeți) — sezonul de vară. Tarifele pentru cazare în sezonul de iarnă sunt mai mari, în funcție de perioadă. Consultați prețurile actuale la pamporovovilla.com/#pricing sau /rent."
+    },
+    "villa-amenities": {
+      "question": "Ce include închirierea unei vile la Pamporovo Villa?",
+      "answer": "Fiecare dintre cele trei vile dispune de 2 dormitoare, 2 băi, o bucătărie complet utilată, șemineu cu lemne, grătar pe terasă, Wi-Fi și parcare gratuită. Închiriați întreaga vilă — fără a o împărți cu alți oaspeți."
+    },
+    "fireplace-villa": {
+      "question": "Există vreo vilă cu șemineu în Pamporovo?",
+      "answer": "Da — toate cele trei vile de la Pamporovo Villa (Villa 1, Villa 2, Villa Deluxe) au un șemineu cu lemne în sufragerie. Sunt ideale pentru serile de iarnă după o zi petrecută pe pârtii sau pentru weekendurile de toamnă la munte."
+    },
+    "group-villa": {
+      "question": "Se poate închiria o vilă pentru 6 persoane în Pamporovo?",
+      "answer": "Da. Fiecare vilă de la Pamporovo Villa poate găzdui până la 6 oaspeți. Rezervați o vilă pentru grupul dumneavoastră sau combinați două vile pentru grupuri mai mari — contactați-ne la numărul de telefon +359 879 501 660."
+    },
+    "couple-villa": {
+      "question": "Este vila potrivită pentru două persoane?",
+      "answer": "Da — cuplurile închiriază adesea o vilă întreagă pentru mai multă intimitate și pentru a avea un șemineu. Plătiți prețul vilei, nu pe persoană; în cazul a două persoane, prețul pe persoană este mai mare, dar beneficiați de o casă privată."
+    },
+    "distance-to-slopes": {
+      "question": "La ce distanță se află vilele de pârtiile de schi?",
+      "answer": "Pamporovo Villa se află la Raykovski Livadi — la aproximativ 2 km de centrul stațiunii și de teleschiuri. Cu mașina, ajungeți la parcarea de lângă pârtii în 5–7 minute. În sezon există și un serviciu de transfer gratuit (verificați orarul)."
+    },
+    "parking": {
+      "question": "Există locuri de parcare lângă vile?",
+      "answer": "Da — parcare privată gratuită lângă fiecare vilă din complexul Pamporovo Villa. Convenabil pentru deplasările de iarnă cu echipament de schi și pentru familiile cu copii."
+    },
+    "how-to-book": {
+      "question": "Cum pot rezerva o vilă în Pamporovo?",
+      "answer": "Online pe pamporovovilla.com/#booking — alegeți o vilă, datele și completați formularul. Sau sunați la +359 879 501 660 / scrieți la pamporovovilla@gmail.com."
+    },
+    "minimum-stay": {
+      "question": "Există o durată minimă de ședere în cazul închirierii?",
+      "answer": "În sezonul de vârf (Crăciun, Anul Nou, vacanța din februarie) este posibil să se solicite un sejur minim de 3–5 nopți. Pentru condițiile exacte, verificați calendarul în momentul rezervării sau contactați-ne."
+    },
+    "pets": {
+      "question": "Sunt permise animalele de companie?",
+      "answer": "Contactați-ne înainte de a face rezervarea — politica privind animalele de companie poate varia în funcție de sezon și de vilă. Nu presupuneți că aveți automat permisiunea."
+    },
+    "wifi": {
+      "question": "Există Wi-Fi în vile?",
+      "answer": "Da — internetul wireless este disponibil în toate cele trei vile ale Pamporovo Villa."
+    },
+    "winter-rental": {
+      "question": "Pot închiria o vilă pentru o vacanță la schi în timpul iernii?",
+      "answer": "Da — vilele sunt deschise tot anul. Iarna este sezonul cel mai căutat: șemineu, proximitate față de pârtiile de schi și posibilitatea de a închiria o casă întreagă pentru familie sau prieteni. Rezervați din timp pentru lunile ianuarie și februarie."
+    },
+    "summer-rental": {
+      "question": "Merită să închiriezi o vilă vara în Pamporovo?",
+      "answer": "Da — prețurile de vară sunt mai mici (de la 110 €/noapte), iar regiunea oferă trasee ecologice, răcoare și peșteri. Terasa cu grătar și aerul de munte fac din această vilă locul ideal pentru o vacanță în familie."
+    },
+    "drive-from-sofia": {
+      "question": "Cum pot ajunge de la Sofia la Pamporovo?",
+      "answer": "Pe autostrada spre Plovdiv, apoi prin Asenovgrad și Smolyan — aproximativ 240 km, 3–3,5 ore. Iarna, luați lanțuri de zăpadă sau verificați starea drumurilor în Munții Rodopi."
+    },
+    "snow-guarantee": {
+      "question": "Este zăpadă în Pamporovo în fiecare sezon?",
+      "answer": "Stațiunea dispune de un sistem performant de înzăpezire artificială — acoperă aproximativ 90 % din pârtii. Zăpada naturală este adesea prezentă încă din decembrie, dar, pentru siguranță, operatorii mențin instalațiile în funcțiune pe tot parcursul sezonului."
+    },
+    "restaurants": {
+      "question": "Există restaurante în apropierea Raykovski Livadi?",
+      "answer": "În centrul stațiunii Pamporovo (la 2 km) se găsesc restaurante, pizzerii și un supermarket. Vila dispune de o bucătărie complet utilată — mulți oaspeți își pregătesc singuri masa sau combină acest lucru cu cinele luate în stațiune."
+    }
+  }
+}

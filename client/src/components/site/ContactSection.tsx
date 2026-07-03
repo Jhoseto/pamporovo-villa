@@ -1,23 +1,21 @@
 import { Mail, MapPin, Phone, Star } from "lucide-react";
 import { GBP } from "@shared/gbpLinks";
-import { gbpUi } from "@shared/gbpUi";
-import { EN_UI } from "@shared/en/commonUi";
 import { CONTACT } from "@/data/siteContent";
-import { usePageLang } from "@/hooks/usePageLang";
+import { useTranslation } from "@/contexts/LocaleContext";
+import { useContactAddress } from "@/i18n/contentHooks";
 import { trackContactClick, trackGoogleReviewClick } from "@/lib/analytics/events";
 import { SectionShell } from "./SectionShell";
 import { ScrollReveal } from "./ScrollReveal";
 
 export function ContactSection() {
-  const lang = usePageLang();
-  const gbp = gbpUi(lang);
-  const googleMapsLabel = lang === "en" ? EN_UI.googleMaps : "Google Maps";
+  const { t } = useTranslation();
+  const address = useContactAddress();
 
   return (
     <SectionShell
-      eyebrow="Контакт"
-      title="Да поговорим за вашата почивка"
-      subtitle="Имате въпрос или специално желание? Звъннете или ни пишете — отговаряме лично и с удоволствие"
+      eyebrow={t("home.contact.eyebrow", "Контакт")}
+      title={t("home.contact.title", "Да поговорим за вашата почивка")}
+      subtitle={t("home.contact.subtitle", "Имате въпрос или специално желание? Звъннете или ни пишете — отговаряме лично и с удоволствие")}
       overlap
       splitTitle
       perfDefer
@@ -31,7 +29,7 @@ export function ContactSection() {
           >
             <Phone className="h-5 w-5 shrink-0 text-[var(--gold)]" />
             <div>
-              <p className="premium-label mb-1.5">Телефон</p>
+              <p className="premium-label mb-1.5">{t("common.phone", "Телефон")}</p>
               <p className="font-display text-lg tracking-wide text-foreground">{CONTACT.phoneDisplay}</p>
             </div>
           </a>
@@ -42,7 +40,7 @@ export function ContactSection() {
           >
             <Mail className="h-5 w-5 shrink-0 text-[var(--gold)]" />
             <div>
-              <p className="premium-label mb-1.5">Имейл</p>
+              <p className="premium-label mb-1.5">{t("common.email", "Имейл")}</p>
               <p className="font-display text-lg tracking-wide text-foreground">{CONTACT.email}</p>
             </div>
           </a>
@@ -55,9 +53,9 @@ export function ContactSection() {
           >
             <MapPin className="h-5 w-5 shrink-0 text-[var(--gold)]" />
             <div>
-              <p className="premium-label mb-1.5">{googleMapsLabel}</p>
+              <p className="premium-label mb-1.5">{t("gbp.maps", "Google Maps")}</p>
               <p className="font-display text-lg leading-relaxed tracking-wide text-foreground">
-                {CONTACT.address}
+                {address}
               </p>
             </div>
           </a>
@@ -70,8 +68,8 @@ export function ContactSection() {
           >
             <Star className="h-5 w-5 shrink-0 fill-[var(--gold)] text-[var(--gold)]" />
             <div>
-              <p className="premium-label mb-1.5">{gbp.reviewShort}</p>
-              <p className="font-display text-lg tracking-wide text-foreground">{gbp.reviewLink}</p>
+              <p className="premium-label mb-1.5">{t("gbp.reviewShort", "Google отзив")}</p>
+              <p className="font-display text-lg tracking-wide text-foreground">{t("gbp.reviewLink", "Оставете отзив в Google")}</p>
             </div>
           </a>
         </div>

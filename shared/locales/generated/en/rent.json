@@ -11,8 +11,9 @@
   "guideLink": "Pamporovo guide",
   "footerNote": "Official villa rental website in Pamporovo, Bulgaria",
   "villaPageLinkSuffix": "page →",
-  "pricingNotes": {
-    "0": "Prices are per night for the whole villa (up to 6 guests).",
-    "1": "Holiday periods may differ — contact us for Christmas, New Year, and peak weeks."
-  }
+  "pricingNotes": [
+    "Prices are per night for the whole villa (up to 6 guests).",
+    "Holiday periods may differ — contact us for Christmas, New Year, and peak weeks."
+  ],
+  "villaPageLink": "{villa} page →"
 }

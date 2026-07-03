@@ -2,247 +2,787 @@
   "pisti": {
     "h1": "Trasy narciarskie w Pamporowie — ponad 37 km tras narciarskich",
     "seoTitle": "Trasy narciarskie w Pamporowie 2026 | 37+ km, jazda nocna, mapa — Pamporovo Villa",
-    "seoDescription": "Wszystkie trasy w Pamporowie: długość, stopień trudności, nocna jazda na trasie „Ściana”, wyciągi do Snieżanki. Zaplanuj swój urlop narciarski — zakwaterowanie od 110 € za noc.",
-    "seoKeywords": "trasy narciarskie w Pamporowie, narciarstwo w Pamporowie, Ściana, jazda nocna, Śnieżka, karta narciarska"
+    "seoDescription": "Wszystkie trasy w Pamporowie: długość, stopień trudności, nocna jazda na „Ścianie”, wyciągi do Snieżanki. Zaplanuj swój urlop narciarski — zakwaterowanie od 110 € za noc.",
+    "seoKeywords": "trasy narciarskie w Pamporowie, narciarstwo w Pamporowie, Ściana, jazda nocna, Śnieżanka, karta narciarska",
+    "eyebrow": "Narty · Pamporowo",
+    "intro": "Pełny przegląd ośrodka narciarskiego w Pamporowie: ponad 15 tras, od zielonych dla początkujących po czarną „Ścianę”, jazda nocą oraz wyciągi na szczyt Śnieżanka (1926 m).",
+    "sections": [
+      {
+        "heading": "Krótka charakterystyka ośrodka narciarskiego",
+        "paragraphs": [
+          "Pamporowo to najstarszy ośrodek narciarski w Bułgarii (od 1933 r.) i jeden z najbardziej nasłonecznionych — zimą odnotowuje się tu ponad 120 dni z bezchmurnym niebem. Ośrodek położony jest na wysokości 1650 m n.p.m., a najwyższym punktem tras narciarskich jest szczyt Śnieżanka o wysokości 1926 m n.p.m.",
+          "Łączna długość oznakowanych tras przekracza 37 km. Około 90% z nich jest wyposażonych w system sztucznego naśnieżania, co pozwala na stabilny przebieg sezonu nawet przy wysokich temperaturach."
+        ],
+        "bullets": [
+          "Ponad 15 głównych tras + trasy objazdowe i fun park",
+          "6 wyciągów i taśmowych wyciągów",
+          "Nocna jazda na torze nr 2 „Ściana”",
+          "Zielone, niebieskie, czerwone i czarne trasy"
+        ]
+      },
+      {
+        "heading": "Kultowe trasy",
+        "paragraphs": [
+          "Trasa nr 2 „Ściana” (1258 m, czarna) jest symbolem ośrodka — odbywają się na niej zawody Pucharu Europy i jest to jedyna trasa, na której regularnie organizuje się nocne zjazdy. Trasa nr 3 „Arch. Piotr Petrow” (1766 m) jest najdłuższą trasą czarną.",
+          "Dla rodzin i początkujących trasa nr 6 „Turystyczna” (3343 m) oferuje długi i łagodny zjazd. Trasa nr 5 „Malina” (2799 m) jest najdłuższą czerwoną trasą — prowadzi od szczytu do ośrodka narciarskiego Malina."
+        ]
+      },
+      {
+        "heading": "Gdzie się zatrzymać po spędzeniu dnia na stoku",
+        "paragraphs": [
+          "Pamporovo Villa oferuje 3 niezależne wille położone 2 km od centrum — z kominkiem, grillem i miejscem dla maksymalnie 6 gości w każdej willi. Idealne rozwiązanie, jeśli szukasz ciszy z dala od hotelowego zgiełku i własnej kuchni po całym dniu spędzonym na śniegu."
+        ]
+      }
+    ]
   },
   "kude-da-spim": {
     "h1": "Gdzie się zatrzymać w Pamporowie?",
     "seoTitle": "Gdzie się zatrzymać w Pamporowie | Domki letniskowe, hotele, porady 2026",
-    "seoDescription": "Gdzie się zatrzymać w Pamporowie: hotel czy willa, Райковски ливади, ceny od 110 € za noc za całą willę dla maksymalnie 6 osób. Oficjalny wynajem — Pamporovo Villa.",
-    "seoKeywords": "gdzie się zatrzymać w Pamporowie, noclegi w Pamporowie, willa w Pamporowie, hotel w Pamporowie"
+    "seoDescription": "Gdzie się zatrzymać w Pamporowie: hotel czy willa, Raykovski Livadi, ceny od 110 € za noc za całą willę dla maksymalnie 6 osób. Oficjalny wynajem — Pamporovo Villa.",
+    "seoKeywords": "gdzie się zatrzymać w Pamporowie, noclegi w Pamporowie, willa w Pamporowie, hotel w Pamporowie",
+    "eyebrow": "Zakwaterowanie · Pamporowo",
+    "intro": "Porównanie opcji zakwaterowania w kurorcie — hotele w centrum, apartamenty i prywatne wille. Praktyczny przewodnik dla rodzin, grup i par.",
+    "sections": [
+      {
+        "heading": "Miejsca noclegowe w ośrodku wypoczynkowym",
+        "paragraphs": [
+          "Centrum Pamporowa zapewnia wygodny dostęp pieszy do restauracji i wyciągów, ale w sezonie może być tam głośno. Dzielnice Malina, Stojkite i Raykovski Livadi oferują więcej spokoju i miejsc parkingowych.",
+          "Raykovski Livadi znajduje się 2 km od centrum — wystarczająco blisko stoków, a jednocześnie wystarczająco daleko, by cieszyć się ciszą i gwiazdami w nocy."
+        ]
+      },
+      {
+        "heading": "Komu co pasuje",
+        "paragraphs": [
+          "Para na weekend — hotel czy mała willa. Rodzina z dziećmi — willa z kuchnią i kominkiem często okazuje się tańsza niż dwa pokoje hotelowe. Grupa 4–6 osób — wynajęcie całej willi zapewnia wspólny salon i grill, bez konieczności dzielenia przestrzeni z nieznajomymi."
+        ],
+        "bullets": [
+          "Hotel: wyżywienie częściowe, bez gotowania, centralna lokalizacja",
+          "Willa: cały dom, kominek, grill, parking, większa prywatność",
+          "Pamporovo Villa: 3 domki letniskowe, 2 sypialnie, do 6 osób, od 110 € za noc"
+        ]
+      },
+      {
+        "heading": "Zalecenie: Pamporovo Villa",
+        "paragraphs": [
+          "Trzy identycznie urządzone wille (Villa 1, Villa 2, Villa Deluxe) pod jednym adresem — rezerwujecie tylko jedną willę dla swojej grupy. Każda z nich posiada 2 sypialnie, 2 łazienki, kominek oraz werandę z grillem."
+        ]
+      }
+    ]
   },
   "hotel-vs-vila": {
     "h1": "Hotel czy willa w Pamporowie — co wybrać?",
     "seoTitle": "Hotel lub willa w Pamporowie | Porównanie ofert narciarskich i letnich na rok 2026",
     "seoDescription": "Hotel a willa w Pamporowie: ceny, zalety dla rodzin i grup, kominek i grill. Kiedy willa wygrywa — Pamporovo Villa od 110 € za noc.",
-    "seoKeywords": "hotel lub willa w Pamporowie, porównanie opcji zakwaterowania: willa a hotel"
+    "seoKeywords": "hotel lub willa w Pamporowie, porównanie opcji zakwaterowania: willa kontra hotel",
+    "eyebrow": "Porównanie · zakwaterowanie",
+    "intro": "Rzetelny przewodnik porównawczy: cena za osobę, komfort, gotowanie, kominek, parking oraz to, na jakie wyjazdy warto się zdecydować.",
+    "sections": [
+      {
+        "heading": "Kiedy hotel jest lepszym wyborem",
+        "paragraphs": [
+          "Krótki pobyt (1–2 noce), chcesz zjeść śniadanie i kolację bez konieczności gotowania albo podróżujesz sam/jako para i nie potrzebujesz dużo miejsca. Hotele w centrum znajdują się kilka minut od wyciągów."
+        ]
+      },
+      {
+        "heading": "Kiedy domek letniskowy przynosi zysk",
+        "paragraphs": [
+          "W przypadku 4–6 gości cena za osobę w prywatnej willi często jest niższa niż w hotelu trzygwiazdkowym z wyżywieniem częściowym. Do dyspozycji gości jest salon z kominkiem, kuchnia, grill i parking — bez sąsiadów na korytarzu.",
+          "Rodziny z małymi dziećmi cenią sobie stały harmonogram — sen, gotowanie, popołudniowa drzemka bez wind i recepcji."
+        ],
+        "bullets": [
+          "Cały domek letniskowy = tylko dla waszej grupy",
+          "Kominek i grill — atmosfera, której nie zapewni żaden hotel",
+          "Parking tuż przy wejściu — wygodne rozwiązanie przy przewożeniu sprzętu narciarskiego",
+          "Pamporovo Villa: od 110 € za noc dla maksymalnie 6 osób"
+        ]
+      },
+      {
+        "heading": "Przykładowe rozliczenie",
+        "paragraphs": [
+          "Willa za 150 € za noc przez 5 nocy = łącznie 750 €. Dla 5 osób daje to 150 € na osobę za 5 nocy (30 € za noc na osobę) — często mniej niż hotel + wyżywienie w ośrodku wypoczynkowym."
+        ]
+      }
+    ]
   },
   "naem-vila": {
     "h1": "Wynajem willi w Pamporowie",
     "seoTitle": "Wynajem willi w Pamporowie | 3 wille, ceny, rezerwacja na rok 2026",
     "seoDescription": "Wynajmij willę w Pamporowie — 3 niezależne wille, 2 sypialnie, kominek, grill, do 6 osób. Od 110 € za noc. Oficjalna strona internetowa Pamporovo Villa.",
-    "seoKeywords": "wynajem willi w Pamporowie, willa do wynajęcia, wynajem domu w Pamporowie, Pamporovo Villa"
+    "seoKeywords": "wynajem willi w Pamporowie, willa do wynajęcia, wynajem domu w Pamporowie, Pamporovo Villa",
+    "eyebrow": "Wynajem · Pamporovo Villa",
+    "intro": "Jak wygląda wynajem całej willi w Pamporowie — co obejmuje, ceny, rezerwacja oraz trzy dostępne wille w Raykovski Livadi.",
+    "sections": [
+      {
+        "heading": "Co oznacza „wynajem willi”?",
+        "paragraphs": [
+          "W przypadku Pamporovo Villa wynajmujecie cały dom — a nie pokój w budynku z innymi najemcami. Willa jest przeznaczona wyłącznie dla waszej grupy: klucze, salon, kuchnia, weranda z grillem i parking są do waszej dyspozycji."
+        ]
+      },
+      {
+        "heading": "Trzy wille",
+        "paragraphs": [
+          "Villa 1, Villa 2 i Villa Deluxe mają taką samą pojemność i wyposażenie — 2 sypialnie, 2 łazienki, kominek, w pełni wyposażoną kuchnię, Wi-Fi. Wybór zależy od dostępności w kalendarzu."
+        ],
+        "bullets": [
+          "Do 6 gości w willi",
+          "2 sypialnie + 2 łazienki",
+          "Kominek opalany drewnem + grill",
+          "Bezpłatny parking"
+        ]
+      },
+      {
+        "heading": "Ceny i rezerwacja",
+        "paragraphs": [
+          "Ceny w sezonie letnim zaczynają się od 110 € za noc za całą willę. Zimą ceny są wyższe, w zależności od okresu. Zarezerwuj online na stronie pamporovovilla.com lub na stronie /rent."
+        ]
+      }
+    ]
   },
   "vila-s-kamina": {
     "h1": "Willa z kominkiem w Pamporowie",
     "seoTitle": "Willa z kominkiem w Pamporowie | Kominek + grill — Pamporovo Villa",
     "seoDescription": "Wynajmijcie willę z kominkiem w Pamporowie — wszystkie trzy wille w Pamporovo Villa mają kominek i grill. Do 6 osób, od 110 € za noc.",
-    "seoKeywords": "domek z kominkiem w Pamporowie, kominek w górach, domek zimowy, grill w Pamporowie"
+    "seoKeywords": "domek z kominkiem w Pamporowie, kominek w górach, domek zimowy, grill w Pamporowie",
+    "eyebrow": "Udogodnienia · willa",
+    "intro": "Zimowa atmosfera poza stokami — wszystkie trzy domki w ośrodku Pamporovo Villa mają kominek opalany drewnem w salonie, a także werandę z grillem na słoneczne dni.",
+    "sections": [
+      {
+        "heading": "Kominek w każdej willi",
+        "paragraphs": [
+          "W salonie każdej willi znajduje się kominek opalany drewnem — ciepłe światło, zapach dymu z drewna i miejsce na rozmowy po całym dniu spędzonym na stoku lub na szlaku ekologicznym."
+        ]
+      },
+      {
+        "heading": "Weranda z grillem",
+        "paragraphs": [
+          "Latem oraz w łagodne zimowe dni strefa grillowa na werandzie to prawdziwy hit podczas rodzinnych wieczorów. Połącz to z lokalnymi produktami ze Smolianu lub z kurortu."
+        ]
+      },
+      {
+        "heading": "Praktyczne porady",
+        "paragraphs": [
+          "Drewno do kominka przygotowują gospodarze. Jeśli planują Państwo rezerwację w styczniu–lutym, prosimy o jak najwcześniejsze zgłoszenie — domki z kominkiem są jednymi z pierwszych, które się zapełniają."
+        ]
+      }
+    ]
   },
   "naem-zima": {
     "h1": "Zimowy wynajem domku letniskowego w Pamporowie",
     "seoTitle": "Wynajem domku letniskowego w Pamporowie na zimę | Urlop narciarski 2026 — Pamporovo Villa",
     "seoDescription": "Willa do wynajęcia na zimę w Pamporowie — 2 km od stoków, kominek, do 6 osób. Zarezerwuj urlop narciarski na Pamporovo Villa.",
-    "seoKeywords": "wynajem willi w Pamporowie na zimę, willa na urlop narciarski, willa na zimę w Rodopach"
+    "seoKeywords": "wynajem willi w Pamporowie na zimę, willa na urlop narciarski, willa na zimę w Rodopach",
+    "eyebrow": "Zima · wypożyczalnia nart",
+    "intro": "Zaplanuj wyjazd narciarski do Pamporowa — wynajem całego domku w pobliżu stoków, z kominkiem, parkingiem oraz cenami dostosowanymi do potrzeb rodzin i grup.",
+    "sections": [
+      {
+        "heading": "Dlaczego domek letniskowy na sezon narciarski?",
+        "paragraphs": [
+          "Sprzęt narciarski, mokre ubrania, wczesne wyjścia — prywatna willa zapewnia miejsce do suszenia, gotowania i wczesnego śniadania bez konieczności dostosowywania się do godzin otwarcia restauracji. Parking znajduje się tuż przy drzwiach."
+        ]
+      },
+      {
+        "heading": "Bliskość tras narciarskich",
+        "paragraphs": [
+          "Raykovski Livadi znajduje się 2 km od centrum — 5–7 minut jazdy samochodem do wyciągów. Po nocnej jeździe na „Ścianie” szybko docieracie do kominka."
+        ]
+      },
+      {
+        "heading": "Kiedy należy dokonać rezerwacji",
+        "paragraphs": [
+          "Najpierw zapełniają się terminy na Boże Narodzenie, Nowy Rok i ferie lutowe. W sezonie szczytowym rezerwacje obejmują co najmniej 3–5 nocy — sprawdź kalendarz online."
+        ],
+        "bullets": [
+          "Rezerwacja: pamporovovilla.com/#booking",
+          "Telefon: +359 879 501 660",
+          "Strona z informacjami: /rent"
+        ]
+      }
+    ]
   },
   "lato": {
     "h1": "Lato w Pamporowie — ekologiczne szlaki i chłód",
     "seoTitle": "Lato w Pamporowie 2026 | Ekologiczne szlaki, atrakcje, wynajem domków letniskowych",
-    "seoDescription": "Co robić latem w Pamporowie: szlaki ekologiczne, jeziora w regionie Smolian, jaskinie, jazda na rowerze. Wynajem domku letniskowego od 110 € za noc — Pamporovo Villa.",
-    "seoKeywords": "Lato w Pamporowie, ekoturystyka, letni wypoczynek w górach, letni domek letniskowy"
+    "seoDescription": "Co robić latem w Pamporowie: szlaki ekologiczne, jeziora smoliańskie, jaskinie, jazda na rowerze. Wynajem domku letniskowego od 110 € za noc — Pamporovo Villa.",
+    "seoKeywords": "Lato w Pamporowie, ekoturystyka, letni wypoczynek w górach, letni domek letniskowy",
+    "eyebrow": "Lato · Pamporowo",
+    "intro": "Pamporowo to nie tylko ośrodek narciarski — latem warto tu wybrać się na ekologiczne trasy, podziwiać wodospady i jaskinie oraz spędzić rodzinne wakacje na wysokości 1650 m n.p.m., ciesząc się czystym powietrzem.",
+    "sections": [
+      {
+        "heading": "Dlaczego Pamporowo latem?",
+        "paragraphs": [
+          "Na wysokości 1650 m powietrze jest rześkie, a temperatury są przyjemne nawet podczas upałów panujących w dolinie. Region oferuje dziesiątki oznakowanych szlaków, jaskiń i autentycznych wiosek oddalonych o zaledwie godzinę drogi.",
+          "Wynajem willi z werandą z grillem i kuchnią sprawia, że lato jest tańsze niż pobyt w hotelu — zwłaszcza dla rodzin."
+        ],
+        "bullets": [
+          "Ekologiczne szlaki i wodospady",
+          "Jazda na rowerze i jazda konna",
+          "Jaskinie i wioski",
+          "Willa od 110 € za noc"
+        ]
+      }
+    ]
   },
   "zima": {
     "h1": "Zima w Pamporowie — narty, śnieg i atmosfera",
     "seoTitle": "Zima w Pamporowie 2026 | Sezon narciarski, stoki, zakwaterowanie",
-    "seoDescription": "Kompletny przegląd oferty zimowej w Pamporowie: trasy narciarskie, wyciągi, jazda nocą, wynajem domku w pobliżu ośrodka. Pamporovo Villa od 120 € za noc.",
-    "seoKeywords": "zima w Pamporowie, sezon narciarski, śnieg w Pamporowie, zimowy wypoczynek"
+    "seoDescription": "Kompletny przegląd oferty zimowej w Pamporowie: stoki, wyciągi, jazda nocą, wynajem domku w pobliżu ośrodka. Pamporovo Villa od 120 € za noc.",
+    "seoKeywords": "zima w Pamporowie, sezon narciarski, śnieg w Pamporowie, zimowy wypoczynek",
+    "eyebrow": "Zima · ośrodek wypoczynkowy",
+    "intro": "Ponad 37 km tras, jazda nocą, sztuczne naśnieżanie i ponad 120 słonecznych dni — zima w Pamporowie należy do najlepszych w Bułgarii.",
+    "sections": [
+      {
+        "heading": "Sezon narciarski",
+        "paragraphs": [
+          "Sezon trwa zazwyczaj od grudnia do marca/kwietnia. 90% tras jest wyposażonych w system naśnieżania — śnieg jest więc niemal gwarantowany.",
+          "Połącz dzień spędzony na stokach z wieczorem przy kominku w prywatnej willi — bez zgiełku hotelowego holu."
+        ]
+      }
+    ]
   },
   "yagodinska-pechtera": {
     "h1": "Jaskinia Jagodinska — w pobliżu Pamporowa",
     "seoTitle": "Jaskinia Jagodinska w Pamporowie | Odległość, trasa, porady",
-    "seoDescription": "Jak dotrzeć do jaskini Jagodinskiej z Pamporowa — 50 km, 45 min wycieczka, co warto zobaczyć. Miejsce zakwaterowania: willa Райковски ливади.",
-    "seoKeywords": "Jaskinia Jagodinska, jaskinie w Pamporowie, wąwóz Buinowski"
+    "seoDescription": "Jak dotrzeć do jaskini Jagodinska z Pamporowa — 50 km, 45 min wycieczka, co warto zobaczyć. Miejsce zakwaterowania: willa Raykovski Livadi.",
+    "seoKeywords": "Jaskinia Jagodinska, jaskinie w Pamporowie, wąwóz Buinowski",
+    "eyebrow": "Jaskinie · region",
+    "intro": "Trzecia pod względem długości jaskinia w Bułgarii — 10,5 km korytarzy, jaskiniowe perły i „Sala Noworoczna”. Około 50 km od Pamporowa — idealna wycieczka jednodniowa.",
+    "sections": [
+      {
+        "heading": "Praktyczne porady",
+        "paragraphs": [
+          "Temperatura w jaskini wynosi około 6°C — nawet latem warto zabrać ze sobą kurtkę. W sezonie warto zarezerwować wycieczkę z wyprzedzeniem.",
+          "Warto połączyć to z wycieczką do wąwozu Buinowsko i obiadem w okolicy — cały dzień poza kurortem."
+        ]
+      }
+    ]
   },
   "shiroka-laka": {
     "h1": "Shiroka Łuka — rezerwat architektoniczny w pobliżu Pamporowa",
     "seoTitle": "Szeroka Łuk w Pamporowie | 16 km, co warto zobaczyć",
     "seoDescription": "Shiroka Łuka, 20 minut od Pamporowa — architektura, folklor, muzeum. Warto połączyć to z noclegiem w Pamporovo Villa.",
-    "seoKeywords": "Shiroka Łuka, Pamporowo, Rodopy, folklor"
+    "seoKeywords": "Shiroka Łuka, Pamporowo, Rodopy, folklor",
+    "eyebrow": "Atrakcje turystyczne",
+    "intro": "16 km od Pamporowa — domy z okresu Odrodzenia, szkoła dla grających na gaidzie oraz coroczny festiwal kukerów. Obowiązkowy przystanek w Rodopach.",
+    "sections": [
+      {
+        "heading": "Jak zaplanować dzień",
+        "paragraphs": [
+          "Poranny spacer po wsi, obiad w tawernie, a potem powrót do willi na wieczorne grillowanie — klasyczny dzień w Rodopach."
+        ]
+      }
+    ]
   },
   "eco-pateki": {
     "h1": "Ekologiczne szlaki w okolicy Pamporowa",
     "seoTitle": "Ekologiczne szlaki w Pamporowie | Kanion, jeziora, trasy 2026",
     "seoDescription": "Ekologiczne szlaki z Pamporowa: wodospady, jeziora, trasy rodzinne. Zakwaterowanie — willa z kuchnią i grillem od 110 € za noc.",
-    "seoKeywords": "ekologiczne szlaki w Pamporowie, wędrówki po Rodopach, wodospady"
+    "seoKeywords": "ekologiczne szlaki w Pamporowie, wędrówki po Rodopach, wodospady",
+    "eyebrow": "Trasy ekologiczne",
+    "intro": "Kanion Wodospadów, Jeziora Smoliańskie, Nevyasta, Skały Orfeusza — najlepsze trasy ekologiczne w odległości jednego lub dwóch dni od kurortu.",
+    "sections": [
+      {
+        "heading": "Najpopularniejsze trasy",
+        "paragraphs": [
+          "Kanion wodospadów — 46 wodospadów, w tym 68-metrowy „Orfeusz”. Jeziora Smoliańskie — łatwa trasa rodzinna u podnóża góry Śnieżanka."
+        ]
+      }
+    ]
   },
   "kak-da-stignem": {
     "h1": "Jak dojechać do Pamporowa",
     "seoTitle": "Jak dojechać do Pamporowa | Z Sofii, Płowdiwu, mapa",
-    "seoDescription": "Trasa do Pamporowa samochodem: Sofia, Płowdiw, Smoljan. Adres Pamporovo Villa — Райковски ливади, współrzędne GPS.",
-    "seoKeywords": "jak dojechać do Pamporowa, droga z Sofii do Pamporowa, trasa"
+    "seoDescription": "Trasa do Pamporowa samochodem: Sofia, Płowdiw, Smoljan. Adres Pamporovo Villa — Raykovski Livadi, współrzędne GPS.",
+    "seoKeywords": "jak dojechać do Pamporowa, droga z Sofii do Pamporowa, trasa",
+    "eyebrow": "Podróż",
+    "intro": "Od Sofii ~240 km (3–3,5 godz.), od Płowdiwu ~85 km, od Smoliana ~15 km. Trasy, porady na zimę i wskazówki dojazdu do Raykovski Livadi.",
+    "sections": [
+      {
+        "heading": "Samochodem",
+        "paragraphs": [
+          "Z Sofii: autostradą A1/A3 w kierunku Płowdiwu, następnie przez Asenowgrad–Smolyan–Pamporovo. Zimą należy sprawdzać warunki drogowe i zabrać ze sobą łańcuchy śniegowe.",
+          "Wskazówki dojazdu do domków letniskowych: Raykovski Livadi, ośrodek wypoczynkowy Pamporowo — Google Maps „Pamporovo Villa”."
+        ]
+      }
+    ]
   },
   "vila-za-dvoika": {
     "h1": "Willa dla dwojga w Pamporowie",
     "seoTitle": "Willa dla dwojga w Pamporowie | Romantyczny wypoczynek, kominek",
     "seoDescription": "Wynajmijcie willę dla dwojga w Pamporowie — prywatny dom, kominek, grill. Pamporovo Villa — od 110 € za noc za całą willę.",
-    "seoKeywords": "willa dla dwojga w Pamporowie, romantyczny wypoczynek, willa dla pary"
+    "seoKeywords": "willa dla dwojga w Pamporowie, romantyczny wypoczynek, willa dla pary",
+    "eyebrow": "Wynajem · pary",
+    "intro": "Romantyczny wypoczynek w górach — cały domek tylko dla dwojga, z kominkiem, grillem i ciszą w Raykovski Livadi, 2 km od kurortu.",
+    "sections": [
+      {
+        "heading": "Dlaczego domek letniskowy, a nie pokój?",
+        "paragraphs": [
+          "Intymność, kominek i własna weranda — bez sąsiadów. Płacisz za domek, a nie za osobę; na specjalną okazję warto."
+        ]
+      }
+    ]
   },
   "vila-za-grupa": {
     "h1": "Willa dla 6 osób w Pamporowie",
     "seoTitle": "Willa dla 6 osób w Pamporowie | Grupa, cały dom",
     "seoDescription": "Wynajem willi dla 6 osób w Pamporowie — Pamporovo Villa, 2 sypialnie, grill, od 110 € za noc. Idealna dla grupy przyjaciół.",
-    "seoKeywords": "willa dla 6 osób w Pamporowie, willa dla grupy, dom dla przyjaciół"
+    "seoKeywords": "willa dla 6 osób w Pamporowie, willa dla grupy, dom dla przyjaciół",
+    "eyebrow": "Wynajem · grupy",
+    "intro": "Cały dom dla przyjaciół lub rodziny — do 6 osób, 2 sypialnie, salon z kominkiem, grill i parking. W razie potrzeby — dwie wille obok siebie.",
+    "sections": [
+      {
+        "heading": "Cena za osobę",
+        "paragraphs": [
+          "Przy 6 gościach i cenie 120 € za noc koszt pobytu w willi wynosi 20 € za osobę za noc — często jest to bardziej opłacalne niż hotel z wyżywieniem w formie półpensjonatu."
+        ]
+      }
+    ]
   },
   "naem-lqto": {
     "h1": "Letni wynajem willi w Pamporowie",
     "seoTitle": "Letni wynajem willi w Pamporowie | Od 110 € za noc",
-    "seoDescription": "Wynajmijcie letni domek w Pamporowie — trasy ekologiczne, grill, od 110 € za noc. Pamporovo Villa na Райковски ливади.",
-    "seoKeywords": "wynajem willi na lato, willa na lato w Pamporowie, górska willa na lato"
+    "seoDescription": "Wynajmijcie letnią willę w Pamporowie — trasy ekologiczne, grill, od 110 € za noc. Pamporovo Villa na Raykovski Livadi.",
+    "seoKeywords": "wynajem willi na lato, willa na lato w Pamporowie, górska willa na lato",
+    "eyebrow": "Wynajem letni",
+    "intro": "Niższe ceny, chłód i wieczory przy grillu — letni wynajem już od 110 € za noc za całą willę (powyżej 5 nocy).",
+    "sections": [
+      {
+        "heading": "Co obejmuje",
+        "paragraphs": [
+          "2 sypialnie, kuchnia, kominek (na chłodne wieczory), weranda z grillem, Wi-Fi, parking — cała willa tylko dla Państwa."
+        ]
+      }
+    ]
   },
   "rajkovski-livadi": {
-    "h1": "Райковски ливади — wynajem willi",
-    "seoTitle": "Райковски ливади wynajem | Wille w Pamporowie — Pamporovo Villa",
-    "seoDescription": "Wynajem willi w Райковски ливади, Pamporowo — 3 prywatne wille, 2 km od kurortu, kominek, grill. Rezerwacja online.",
-    "seoKeywords": "Райковски ливади, wynajem willi, Pamporovo Villa adres"
+    "h1": "Raykovski Livadi — wynajem willi",
+    "seoTitle": "Raykovski Livadi wynajem | Wille w Pamporowie — Pamporovo Villa",
+    "seoDescription": "Wynajem willi w Raykovski Livadi, Pamporowo — 3 prywatne wille, 2 km od kurortu, kominek, grill. Rezerwacja online.",
+    "seoKeywords": "Raykovski Livadi, wynajem willi, Pamporovo Villa adres",
+    "eyebrow": "Lokalizacja",
+    "intro": "Cicha, porośnięta sosnami okolica, położona 2 km od centrum Pamporowa — to właśnie tutaj znajdują się trzy wille Pamporovo Villa, z parkingiem i w pobliżu stoków narciarskich.",
+    "sections": [
+      {
+        "heading": "Dlaczego Raykovski Livadi",
+        "paragraphs": [
+          "Spokój wśród sosen, z dala od zgiełku centrum, a jednocześnie zaledwie kilka minut jazdy samochodem od wyciągów i gospód."
+        ]
+      }
+    ]
   },
   "naem-ot-110-evro": {
     "h1": "Wynajem willi od 110 € za noc w Pamporowie",
     "seoTitle": "Willa od 110 € w Pamporowie | Ceny, sezony, rezerwacja",
     "seoDescription": "Wynajem willi w Pamporowie od 110 € za noc — cała willa dla maksymalnie 6 osób. Oficjalne ceny Pamporovo Villa.",
-    "seoKeywords": "willa 110 euro, tania willa w Pamporowie, cena wynajmu"
+    "seoKeywords": "willa 110 euro, tania willa w Pamporowie, cena wynajmu",
+    "eyebrow": "Ceny · wynajem",
+    "intro": "Ceny letnie zaczynają się od 110 € za cały domek (do 6 osób) w przypadku dłuższego pobytu. Oto jak wygląda ustalanie cen.",
+    "sections": [
+      {
+        "heading": "Poziomy cenowe",
+        "paragraphs": [
+          "Do 3 nocy — wyższa stawka za noc. 4–5 nocy — stawka pośrednia. Powyżej 5 nocy latem — od 110 €. Zimą — od 120 €. Deluxe +10/+20 €."
+        ]
+      }
+    ]
   },
   "semeen-otpusk": {
     "h1": "Rodzinny urlop narciarski w Pamporowie",
     "seoTitle": "Rodzinny urlop narciarski w Pamporowie | Willa z dziećmi",
     "seoDescription": "Rodzinny urlop narciarski w Pamporowie — willa z 2 sypialniami, kuchnią i kominkiem, dla maksymalnie 6 osób. Oferty i rezerwacje — Pamporovo Villa.",
-    "seoKeywords": "rodzinny urlop narciarski, domek letniskowy z dziećmi w Pamporowie, rodzina w Pamporowie"
+    "seoKeywords": "rodzinny urlop narciarski, domek letniskowy z dziećmi w Pamporowie, rodzina w Pamporowie",
+    "eyebrow": "Rodziny · narty",
+    "intro": "Zielone stoki, place zabaw dla dzieci, kominek po jeździe — zaplanujcie rodzinną zimę w całym domku letniskowym na Raykovski Livadi.",
+    "sections": [
+      {
+        "heading": "Dlaczego domek letniskowy dla rodzin?",
+        "paragraphs": [
+          "Kuchnia do przygotowywania wczesnych śniadań, miejsce na sprzęt narciarski, kominek wieczorem — pokój hotelowy jest zbyt ciasny dla rodziny z dziećmi.",
+          "Trasa nr 6 jest idealna dla początkujących — znajduje się 2 km od domków letniskowych."
+        ]
+      }
+    ]
   },
   "praznici": {
     "h1": "Boże Narodzenie i Nowy Rok w Pamporowie — domek z kominkiem",
     "seoTitle": "Boże Narodzenie i Nowy Rok w Pamporowie 2026 | Wynajem willi z kominkiem",
     "seoDescription": "Świąteczny wypoczynek w Pamporowie — wynajem całego domku z kominkiem i grillem, do 6 osób. Boże Narodzenie, Nowy Rok, Wielkanoc. Pamporovo Villa od 120 € za noc.",
-    "seoKeywords": "Boże Narodzenie w Pamporowie, Nowy Rok w domku letniskowym, święta w Pamporowie, domek letniskowy z kominkiem"
+    "seoKeywords": "Boże Narodzenie w Pamporowie, Nowy Rok w domku letniskowym, święta w Pamporowie, domek letniskowy z kominkiem",
+    "eyebrow": "Święta · Pamporowo",
+    "intro": "Święta w górach to prawdziwa magia — śnieg, kominek i cały domek tylko dla waszej grupy. Zarezerwujcie z wyprzedzeniem na Boże Narodzenie, Nowy Rok i Wielkanoc.",
+    "sections": [
+      {
+        "heading": "Dlaczego domek letniskowy, a nie hotel, na święta?",
+        "paragraphs": [
+          "W okresie świątecznym hotele są przepełnione i hałaśliwe. Prywatna willa oferuje kominek, własną jadalnię oraz przestrzeń dla dzieci i przyjaciół — bez kolejek do bufetu.",
+          "Pamporovo Villa oferuje 3 domki letniskowe w Raykovski Livadi — 2 km od kurortu, wystarczająco blisko stoków, a jednocześnie wystarczająco spokojnie dla rodziny."
+        ],
+        "bullets": [
+          "Kominek i grill",
+          "Do 6 gości w willi",
+          "Rezerwacja: pamporovovilla.com/#booking"
+        ]
+      }
+    ]
   },
   "team-building": {
     "h1": "Team building w Pamporowie — domki letniskowe dla grup do 18 osób",
     "seoTitle": "Team building w Pamporowie | Domki letniskowe dla grup do 18 osób",
     "seoDescription": "Firmowy wyjazd integracyjny w Pamporowie — 3 domki letniskowe, łącznie do 18 gości, grill, kominek, parking. Zima: narty. Lato: trasy ekologiczne. Pamporovo Villa.",
-    "seoKeywords": "team building w Pamporowie, wyjazd firmowy, willa dla grupy"
+    "seoKeywords": "team building w Pamporowie, wyjazd firmowy, willa dla grupy",
+    "eyebrow": "Korporacyjne · grupy",
+    "intro": "Trzy niezależne wille pod jednym adresem — idealne na firmowy wyjazd integracyjny, weekend narciarski lub letnie spotkanie w górach. Wynajmijcie 1, 2 lub 3 wille dla całego zespołu.",
+    "sections": [
+      {
+        "heading": "Jak to działa w przypadku zespołów",
+        "paragraphs": [
+          "Każda willa jest wolnostojąca — 2 sypialnie, 2 łazienki, do 6 osób. Można połączyć 2–3 wille dla jednego działu lub całego zespołu pod jednym adresem, z wspólnym parkingiem i strefami do grillowania.",
+          "Zima: jazda na nartach na trasach o długości ponad 37 km. Lato: ekologiczne szlaki, jaskinie i zajęcia zespołowe w regionie."
+        ]
+      }
+    ]
   },
   "dalga-pochivka": {
     "h1": "Długoterminowy wynajem w Pamporowie — 7+ nocy w prywatnej willi",
     "seoTitle": "Długoterminowy wynajem willi w Pamporowie | 7+ nocy, cała willa",
     "seoDescription": "Wynajem willi w Pamporowie na 7 lub więcej nocy — cała willa dla maksymalnie 6 osób, kominek, grill. Skontaktuj się z nami, aby otrzymać indywidualną ofertę — Pamporovo Villa.",
-    "seoKeywords": "długoterminowy wynajem w Pamporowie, wynajem willi na tydzień, miesięczny wynajem w górach"
+    "seoKeywords": "długoterminowy wynajem w Pamporowie, wynajem willi na tydzień, miesięczny wynajem w górach",
+    "eyebrow": "Wynajem · zniżki",
+    "intro": "Wypoczynek w górach trwający co najmniej tydzień jest bardziej opłacalny w wynajętej w całości willi — kuchnia, przestrzeń i spokój bez opłat hotelowych.",
+    "sections": [
+      {
+        "heading": "Dla kogo jest to odpowiednie",
+        "paragraphs": [
+          "Rodziny, osoby pracujące zdalnie oraz grupy, które poszukują miejsca na dłuższy pobyt w górach. Każdy domek jest w pełni wyposażony i posiada kuchnię.",
+          "W przypadku pobytu dłuższego niż 7 nocy — prosimy o kontakt w celu uzyskania indywidualnej oferty: +359 879 501 660 lub pamporovovilla@gmail.com."
+        ]
+      }
+    ]
   },
   "oferti": {
     "h1": "Oferty wynajmu willi w Pamporowie",
     "seoTitle": "Oferty willi w Pamporowie 2026 | Od 110 € za noc — Pamporovo Villa",
     "seoDescription": "Oficjalne oferty wynajmu willi w Pamporowie — ceny letnie i zimowe, cała willa, do 6 osób. Rezerwacja online na pamporovovilla.com.",
-    "seoKeywords": "oferty w Pamporowie, promocja na wynajem willi, ceny wynajmu willi"
+    "seoKeywords": "oferty w Pamporowie, promocja na wynajem willi, ceny wynajmu willi",
+    "eyebrow": "Oferty · Pamporovo Villa",
+    "intro": "Aktualne ceny i warunki sezonowe dla trzech willi Raykovski Livadi. Latem od 110 € za noc, zimą od 120 € za noc — za całą willę dla maksymalnie 6 osób.",
+    "sections": [
+      {
+        "heading": "Zakres cenowy",
+        "paragraphs": [
+          "Sezon letni: od 110 € za noc za całą willę. Sezon zimowy: od 120 € za noc. Okresy świąteczne (Boże Narodzenie, Nowy Rok) — na zapytanie.",
+          "W cenie: cały domek, do 6 osób, kominek, grill, parking, Wi-Fi."
+        ],
+        "bullets": [
+          "Rezerwacja: /#booking",
+          "Oficjalna strona: /rent",
+          "Telefon: +359 879 501 660"
+        ]
+      }
+    ]
   },
   "liftove": {
     "h1": "Wyciągi w Pamporowie — 6 obiektów w pobliżu Snieżanki",
     "seoTitle": "Wyciągi w Pamporowie 2026 | Przepustowość, trasy, mapa",
-    "seoDescription": "Wszystkie wyciągi w Pamporowie: Stojki, Studenec, Malina, Jeziora Smoliańskie. Pojemność i długość. Zakwaterowanie: willa 2 km od centrum.",
-    "seoKeywords": "wyciągi w Pamporowie, wyciąg narciarski „Snieżanka”, przepustowość w Pamporowie"
+    "seoDescription": "Wszystkie wyciągi w Pamporowie: Stojki, Studenec, Malina, Smolyańskie Jeziora. Pojemność i długość. Zakwaterowanie: willa 2 km od centrum.",
+    "seoKeywords": "wyciągi w Pamporowie, wyciąg narciarski Snieżanka, przepustowość w Pamporowie",
+    "eyebrow": "Narty · infrastruktura",
+    "intro": "Sześć wyciągów łączy ośrodek z szczytem Śnieżanka (1926 m). Łączna przepustowość wynosi ponad 13 000 narciarzy na godzinę — zaplanujcie swój dzień na stokach.",
+    "sections": [
+      {
+        "heading": "Wskazówki dotyczące wind",
+        "paragraphs": [
+          "Największy wyciąg biegnie od Stojki do Snieżanki — 2992 m, 2400 osób/godz. Główna trasa przez Studenec jest najbardziej zatłoczona rano — jeśli mieszkacie na południu, zacznijcie od Maliny.",
+          "Po całym dniu spędzonym na stokach — domek z kominkiem w odległości 2 km, bez kolejek w recepcji."
+        ]
+      }
+    ]
   },
   "rozhen": {
     "h1": "NAO „Rozhen” — obserwatorium w pobliżu Pamporowa",
     "seoTitle": "Obserwatorium Rożen z Pamporowa | 18 km, liczba odwiedzin",
     "seoDescription": "Jak dojechać do NAO Rożen z Pamporowa — 25 min samochodem, teleskop o średnicy 2 m, festiwal w Rożenie. Baza: Pamporovo Villa.",
-    "seoKeywords": "Obserwatorium Rożen, NAO Rożen, wycieczki do Pamporowa"
+    "seoKeywords": "Obserwatorium Rożen, NAO Rożen, wycieczki do Pamporowa",
+    "eyebrow": "Atrakcje turystyczne",
+    "intro": "18 km od Pamporowa — największa obserwatorium astronomiczne na Bałkanach, położone na wysokości 1750 m. Zwiedzanie w ciągu dnia i obserwacje nocne po wcześniejszej rezerwacji.",
+    "sections": [
+      {
+        "heading": "Praktyczne",
+        "paragraphs": [
+          "Warto połączyć to z wycieczką na łąki w Rożenie i obiadem w okolicy. Wieczorem — kominek w willi Raykovski Livadi."
+        ]
+      }
+    ]
   },
   "chudnite-mostove": {
     "h1": "Cudowne mosty — jednodniowa wycieczka z Pamporowa",
     "seoTitle": "Cudowne mosty w Pamporowie | 42 km, trasa",
     "seoDescription": "Wycieczka do Cudownych Mostów z Pamporowa — 1 godz. jazdy samochodem, ścieżka pod łukami. Wynajem domku letniskowego jako bazy wypadowej — Pamporovo Villa.",
-    "seoKeywords": "Cudowne mosty, Rodopy, wycieczka do Pamporowa"
+    "seoKeywords": "Cudowne mosty, Rodopy, wycieczka do Pamporowa",
+    "eyebrow": "Przyroda · Rodopy",
+    "intro": "Gigantyczne marmurowe łuki w odległości 42 km — jedna ze 100 krajowych atrakcji turystycznych. Idealne połączenie z letnim lub jesiennym wypoczynkiem w górach.",
+    "sections": [
+      {
+        "heading": "Rada",
+        "paragraphs": [
+          "Warto wyruszyć wcześnie — w sierpniu parking szybko się zapełnia. Buty z dobrą przyczepnością na ścieżkę pod mostami."
+        ]
+      }
+    ]
   },
   "dyavolskoto-garlo": {
     "h1": "Diabelskie Gardło — podziemny wodospad o wysokości 42 m",
     "seoTitle": "Diabelskie Gardło w Pamporowie | Odległość, trasa",
     "seoDescription": "Wycieczka do Diabelskiego Gardła z Pamporowa — 1 godz. 20 min., 301 stopni, Sala Szumu. Punkt wyjścia: willa Pamporovo Villa.",
-    "seoKeywords": "Diabelskie Gardło, Trigrad, jaskinie w Rodopach"
+    "seoKeywords": "Diabelskie Gardło, Trigrad, jaskinie w Rodopach",
+    "eyebrow": "Jaskinie · legendy",
+    "intro": "55 km od Pamporowa — jaskinia z przepaścią, w której znajduje się najwyższy podziemny wodospad na Bałkanach. Legenda o Orfeuszu i Eurydyce.",
+    "sections": [
+      {
+        "heading": "Połącz z",
+        "paragraphs": [
+          "Wąwóz Trigrad i wieś Trigrad — cały dzień poza kurortem, a wieczorem przy kominku w willi."
+        ]
+      }
+    ]
   },
   "trigradsko-zhdrelo": {
     "h1": "Wąwóz Trigrad — spektakularny kanion w Rodopach",
     "seoTitle": "Wąwóz Trigradski z Pamporowa | Trasa, porady",
     "seoDescription": "Jak dotrzeć do wąwozu Trigradskiego z Pamporowa — 1 godz. 15 min., w połączeniu z Diabelskim Gardłem. Pamporovo Villa.",
-    "seoKeywords": "Wąwóz Trigradski, Trigrad, kanion w Rodopach"
+    "seoKeywords": "Wąwóz Trigradski, Trigrad, kanion w Rodopach",
+    "eyebrow": "Kanion · Trigrad",
+    "intro": "Droga biegnąca między stromymi ścianami o wysokości do 250 m — jedna z najbardziej fotogenicznych tras w Bułgarii, położona 53 km od Pamporowa.",
+    "sections": [
+      {
+        "heading": "Jazda samochodem",
+        "paragraphs": [
+          "Droga górska — należy jechać ostrożnie i korzystać z zakrętów. Najlepiej rano, przed dużym natężeniem ruchu."
+        ]
+      }
+    ]
   },
   "uhlovitsa": {
     "h1": "Jaskinia Uhlovica — kamienne wodospady w pobliżu Pamporowa",
     "seoTitle": "Jaskinia Uhlovica w Pamporowie | 32 km, trasa okrężna",
     "seoDescription": "Wycieczka do Uhlovicy z Pamporowa — 45 min samochodem, 30 min spacerem. W pobliżu konaków Agushevich. Pamporovo Villa.",
-    "seoKeywords": "Uhłowica, jaskinia Mogilica, jaskinie w Pamporowie"
+    "seoKeywords": "Uhłowica, jaskinia Mogilica, jaskinie w Pamporowie",
+    "eyebrow": "Jaskinie",
+    "intro": "W odległości 32 km — jedna z najpiękniejszych jaskiń w Bułgarii z kaskadami kalcytu i koralitów. 30 minut pieszo od parkingu.",
+    "sections": [
+      {
+        "heading": "Przygotowanie",
+        "paragraphs": [
+          "Temperatura ~8°C — lekka kurtka. Wygodne buty na trasę z parkingu."
+        ]
+      }
+    ]
   },
   "kanion-vodopadi": {
     "h1": "Kanion wodospadów — 46 wodospadów w pobliżu Pamporowa",
     "seoTitle": "Kanion wodospadów w Pamporowie | Szlak ekologiczny",
     "seoDescription": "Ekologiczna ścieżka „Kanion wodospadów” z Pamporowa — trasa o długości 6 km, 46 wodospadów. Baza letnia: domek letniskowy Pamporovo Villa.",
-    "seoKeywords": "Kanion z wodospadami, ścieżka ekologiczna w Smolianie, Rodopy"
+    "seoKeywords": "Kanion z wodospadami, ścieżka ekologiczna w Smolianie, Rodopy",
+    "eyebrow": "Eko · Smolyan",
+    "intro": "15 km od Smoliana — najbardziej imponujący szlak ekologiczny w Rodopach z 68-metrowym wodospadem „Orfeusz” i panoramą z wysokości 1800 m.",
+    "sections": [
+      {
+        "heading": "Trasa",
+        "paragraphs": [
+          "Około 4 godzin na 6-kilometrową trasę okrężną. Weźcie ze sobą wodę i wyruszcie rano — po południu może być tłoczno."
+        ]
+      }
+    ]
   },
   "smolyanski-ezera": {
     "h1": "Jeziora w Smolianie — krótki spacer z Pamporowa",
     "seoTitle": "Jeziora w regionie Smolian z Pamporowa | Trasa, porady",
     "seoDescription": "Ekologiczna wycieczka do jezior smoliańskich z Pamporowa — łatwa trasa, dla rodzin, wędkowanie. Wynajem domku letniskowego — Pamporovo Villa.",
-    "seoKeywords": "Jeziora w Smolianie, ekologiczne Pamporowo, jeziora górskie"
+    "seoKeywords": "Jeziora w Smolianie, ekologiczne Pamporowo, jeziora górskie",
+    "eyebrow": "Eko · jeziora",
+    "intro": "„Szmaragdowe oczy Rodopów” — naturalne jeziora u podnóża Śnieżanki. Trasa dla całej rodziny, piknik i przejazd wyciągiem na szczyt.",
+    "sections": [
+      {
+        "heading": "Dla rodzin",
+        "paragraphs": [
+          "Idealne miejsce dla dzieci — krótka trasa i miejsca na piknik między jeziorami."
+        ]
+      }
+    ]
   },
   "nevyastata": {
-    "h1": "Ścieżka ekologiczna „Nevyastata” — panorama nad Smolianem",
+    "h1": "Ścieżka ekologiczna „Nevyastata” — panorama nad Smolyanem",
     "seoTitle": "Ekologiczny szlak „Nevyasta” z Pamporowa | Panorama, trolejbus",
     "seoDescription": "Ekologiczna ścieżka „Nevyastata” z Pamporowa — trasa o długości 900 m, panorama, kolejka linowa. Letni wypoczynek — Pamporovo Villa.",
-    "seoKeywords": "Nevyasta, ekologiczny szlak w Smolianie, Rodopy"
+    "seoKeywords": "Nevyasta, ekologiczny szlak w Smolianie, Rodopy",
+    "eyebrow": "Eko · panorama",
+    "intro": "Krótka trasa do skały „Nevyastata” z alpejską kolejką linową i legendą — 12 km od Smoliana, dostępna dla osób w każdym wieku.",
+    "sections": [
+      {
+        "heading": "Rada",
+        "paragraphs": [
+          "Warto połączyć to z obiadem w Smolianie i wizytą w planetarium."
+        ]
+      }
+    ]
   },
   "orpheus-rocks": {
     "h1": "Skały Orfeusza — trasa ze szczytu Śnieżanka",
     "seoTitle": "Skały Orfeusza w Pamporowie | Trasa ze Snieżanki",
-    "seoDescription": "Trasa górska „Skały Orfeusza” ze szczytu Śnieżanka — panorama, Igły. Baza: Pamporovo Villa.",
-    "seoKeywords": "Skały Orfeusza, Śnieżka, trasa górska"
+    "seoDescription": "Trasa górska „Skały Orfeusza” ze szczytu Śnieżanka — panorama, Igły. Punkt wyjścia: Pamporovo Villa.",
+    "seoKeywords": "Skały Orfeusza, Śnieżka, trasa górska",
+    "eyebrow": "Eko · Śnieżka",
+    "intro": "Fenomeny skalne z ryolitów z widokiem na jeziora Smoliańskie — oznakowany szlak ze szczytu, około 4 godzin, łatwa trasa.",
+    "sections": [
+      {
+        "heading": "Kiedy",
+        "paragraphs": [
+          "Najlepiej w lipcu i sierpniu — borówki przy drodze i stabilna pogoda na grzbiecie."
+        ]
+      }
+    ]
   },
   "momchilovtsi": {
     "h1": "Momchilovtsi — wieś długowieczności w pobliżu Pamporowa",
     "seoTitle": "Chłopcy z Pamporowa | 25 km, wieś, gospody",
-    "seoDescription": "Wycieczka do Momczilowców z Pamporowa — 30 min, długowieczność, jogurt. Wynajem willi — Pamporovo Villa.",
-    "seoKeywords": "Momchilovtsi, wioski w Rodopach, jogurt"
+    "seoDescription": "Wycieczka do Momczyłowców z Pamporowa — 30 min, długowieczność, jogurt. Wynajem willi — Pamporovo Villa.",
+    "seoKeywords": "Momchilovtsi, wioski w Rodopach, jogurt",
+    "eyebrow": "Wioski · Rodopy",
+    "intro": "25 km — miejsce znane z jogurtu, panoramicznych widoków i autentycznych gospód. W sierpniu odbywa się tu festiwal jogurtu.",
+    "sections": [
+      {
+        "heading": "Co warto spróbować",
+        "paragraphs": [
+          "Domowy jogurt i potrawy z Rodopów w tawernie — idealny obiad po spacerze."
+        ]
+      }
+    ]
   },
   "gela": {
     "h1": "Gela — wioska Orfeusza w Rodopach",
     "seoTitle": "Gela z Pamporowa | Orfeusz, festiwal grających na dudach",
     "seoDescription": "Wycieczka do wsi Gela z Pamporowa — 30 min, Orfeusz, festiwal dudziarzy. Wynajem willi — Pamporovo Villa.",
-    "seoKeywords": "Gela, Orfeusz, folklor Rodopów"
+    "seoKeywords": "Gela, Orfeusz, folklor Rodopów",
+    "eyebrow": "Wioski · Orfeusz",
+    "intro": "W odległości 22 km — jedna z najstarszych wsi, miejsce narodzin legendy o Orfeuszu. Międzynarodowy festiwal grających na dudach odbywa się w każdą pierwszą niedzielę sierpnia.",
+    "sections": [
+      {
+        "heading": "Wydarzenie",
+        "paragraphs": [
+          "Sierpień — setki grających na dudach na łące. Zarezerwujcie domek letniskowy z wyprzedzeniem na ten okres."
+        ]
+      }
+    ]
   },
   "smolyan": {
     "h1": "Smolyan — planetarium i muzea w Pamporowie",
     "seoTitle": "Smolyan z Pamporowa | Planetarium, muzea, 20 min",
     "seoDescription": "Wycieczka do Smolianu z Pamporowa — planetarium, muzea, Rajkowo. Zakwaterowanie: Pamporovo Villa od 110 € za noc.",
-    "seoKeywords": "Smoljan, planetarium, Muzeum Rodopów"
+    "seoKeywords": "Smoljan, planetarium, Muzeum Rodopów",
+    "eyebrow": "Miasto · kultura",
+    "intro": "W odległości 15 km znajduje się największe planetarium w Bułgarii, muzeum historyczne oraz stare dzielnice Rajkowo i Ustowo.",
+    "sections": [
+      {
+        "heading": "Dla dzieci",
+        "paragraphs": [
+          "Planetarium to obowiązkowy punkt programu dla grup dziecięcych — prosimy o rezerwację godziny z wyprzedzeniem."
+        ]
+      }
+    ]
   },
   "nochno-karane": {
     "h1": "Jazda nocą w Pamporowie — trasa „Ściana”",
     "seoTitle": "Jazda nocna w Pamporowie 2026 | Ściana, harmonogram",
     "seoDescription": "Nocna jazda na stoku „Ściana” w Pamporowie — harmonogram, mapa tras narciarskich, zakwaterowanie 2 km — Pamporovo Villa.",
-    "seoKeywords": "jazda nocna w Pamporowie, noc na Ścianie, night skiing"
+    "seoKeywords": "jazda nocna w Pamporowie, noc na Ścianie, night skiing",
+    "eyebrow": "Narty · noc",
+    "intro": "Jedyny oświetlony stok do jazdy nocnej — zazwyczaj w sezonie w godz. 17:30–22:00. Symbol ośrodka w świetle reflektorów.",
+    "sections": [
+      {
+        "heading": "Po zjeździe z tras",
+        "paragraphs": [
+          "Kolacja w willi z kominkiem — 2 km od kurortu. Bez hotelowego zgiełku po nocnej jeździe."
+        ]
+      }
+    ]
   },
   "stenata": {
     "h1": "Trasa „Ściana” — czarna trasa i jazda nocą",
     "seoTitle": "Ściana w Pamporowie | Czarna trasa, jazda nocą",
-    "seoDescription": "Trasa „Ściana” w Pamporowie — 1258 m, czarna, jazda nocna. Вила 2 km — Pamporovo Villa.",
-    "seoKeywords": "Ściana, czarny tor w Pamporowie, jazda nocą"
+    "seoDescription": "Trasa „Ściana” w Pamporowie — 1258 m, czarna, jazda nocna. Villa 2 km — Pamporovo Villa.",
+    "seoKeywords": "Ściana, czarny tor w Pamporowie, jazda nocą",
+    "eyebrow": "Narty · czarny",
+    "intro": "Czarna trasa o długości 1258 m — miejsce rozgrywania zawodów europejskich. Jazda nocą i jeden z najbardziej fotogenicznych zjazdów w Bułgarii.",
+    "sections": [
+      {
+        "heading": "Dla kogo",
+        "paragraphs": [
+          "Tylko dla zaawansowanych — początkujący powinni wybrać zielone i niebieskie trasy z tabeli na stronie /pamporovo/pisti."
+        ]
+      }
+    ]
   },
   "vruh-snezhanka": {
     "h1": "Szczyt Śnieżanka — 1926 m, najwyższy punkt tras narciarskich",
     "seoTitle": "Szczyt Śnieżanka w Pamporowie | 1926 m, wyciąg, panorama",
     "seoDescription": "Szczyt Śnieżanka w Pamporowie — 1926 m, wyciąg Stojki, czarne trasy. Wynajem willi — Pamporovo Villa.",
-    "seoKeywords": "Śnieżka, szczyt Pamporowo, ośrodek narciarski"
+    "seoKeywords": "Śnieżka, szczyt Pamporowo, ośrodek narciarski",
+    "eyebrow": "Narty · szczyt",
+    "intro": "Najwyższy punkt ośrodka narciarskiego — 1926 m, panorama na Rodopy oraz wyciągi we wszystkich kierunkach.",
+    "sections": [
+      {
+        "heading": "Rada",
+        "paragraphs": [
+          "O świcie dzień jest mniej intensywny — kawa na szczycie i zejście trasą Malina."
+        ]
+      }
+    ]
   },
   "ski-karti": {
     "h1": "Karnety narciarskie i wyciągi w Pamporowie — praktyczny przewodnik",
     "seoTitle": "Karty narciarskie Pamporowo 2026 | Ceny, gdzie kupić",
     "seoDescription": "Karta narciarska Pamporowo — gdzie kupić, karnety dzienne i sezonowe, wyciągi. Baza willowa — Pamporovo Villa.",
-    "seoKeywords": "karta narciarska Pamporowo, karnet narciarski, ceny wyciągów"
+    "seoKeywords": "karta narciarska Pamporowo, karnet narciarski, ceny wyciągów",
+    "eyebrow": "Narty · praktyczne informacje",
+    "intro": "Karnety na wyciągi są w sprzedaży w Studenec i Malina. Aktualne ceny i karnety sezonowe można sprawdzić na stronie pamporovo.me.",
+    "sections": [
+      {
+        "heading": "Zaoszczędź",
+        "paragraphs": [
+          "Wynajem całej willi z kuchnią pozwala obniżyć koszty zakwaterowania — dzięki czemu więcej środków pozostaje na narty i restauracje."
+        ]
+      }
+    ]
   },
   "bunovsko-zhdrelo": {
     "h1": "Wąwóz Buinowski — w pobliżu jaskini Jagodinskiej",
     "seoTitle": "Wąwóz Buinowski z Pamporowa | Jaskinia Jagodinska",
     "seoDescription": "Wąwóz Buinowski z Pamporowa — 50 km, jaskinia Jagodinska, wycieczka ekologiczna. Wynajem willi — Pamporovo Villa.",
-    "seoKeywords": "Wąwóz Buinowski, jaskinia Jagodinska, wąwozy w Rodopach"
+    "seoKeywords": "Wąwóz Buinowski, jaskinia Jagodinska, wąwozy w Rodopach",
+    "eyebrow": "Przyroda · jaskinie",
+    "intro": "Spektakularne wąwozy na trasie do jaskini Jagodinskiej — warto połączyć to z wycieczką do jaskini i obiadem w okolicy.",
+    "sections": [
+      {
+        "heading": "Trasa",
+        "paragraphs": [
+          "Plan na jeden dzień: Jaskinia Jagodinska + wąwóz Buinowski + powrót do willi na wieczór."
+        ]
+      }
+    ]
   },
   "chepelare": {
     "h1": "Chepelare i Pamporowo — dwa kurorty, jeden region",
     "seoTitle": "Chepelare vs Pamporowo | Narty, odległość, zakwaterowanie",
     "seoDescription": "Chepelare i Pamporowo — porównanie ośrodków wypoczynkowych. Wynajem willi w Pamporowie od 110 € — Pamporovo Villa.",
-    "seoKeywords": "Chepelare, Pamporowo, narciarstwo w Bułgarii, porównanie"
+    "seoKeywords": "Chepelare, Pamporowo, narciarstwo w Bułgarii, porównanie",
+    "eyebrow": "Ośrodki wypoczynkowe · sąsiedzi",
+    "intro": "W odległości 10 km znajduje się Chepelare — mniejszy ośrodek narciarski, Mechi Chal oraz spokojny kurort. Porównaj tę lokalizację z Pamporowem, wybierając miejsce na pobyt.",
+    "sections": [
+      {
+        "heading": "Gdzie się zatrzymać",
+        "paragraphs": [
+          "W obu kurortach są hotele — jednak dla grupy do 6 osób cała willa za Raykovski Livadi jest wygodniejsza i bardziej opłacalna."
+        ]
+      }
+    ]
   }
 }

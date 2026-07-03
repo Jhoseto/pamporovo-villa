@@ -1,0 +1,479 @@
+{
+  "nav": {
+    "ariaLabel": "Sections of the page",
+    "intro": "The Resort",
+    "winter": "Winter",
+    "summer": "Summer",
+    "landmarks": "The Surrounding Area",
+    "caves": "Caves"
+  },
+  "sticky": {
+    "book": "Book",
+    "rent": "Rent · Prices"
+  },
+  "ui": {
+    "pisteNumber": "No.",
+    "pisteName": "Track",
+    "difficulty": "Difficulty",
+    "length": "Length",
+    "note": "Note",
+    "dash": "—",
+    "meters": "m",
+    "route": "Route",
+    "liftType": "Type",
+    "capacity": "Capacity/hour",
+    "capacityPerHour": "Capacity per hour"
+  },
+  "difficulty": {
+    "green": "Green · Beginners",
+    "blue": "Blue · Intermediate Level",
+    "red": "Red · Advanced",
+    "black": "Black · Experts"
+  },
+  "sections": {
+    "intro": {
+      "eyebrow": "The Resort",
+      "title": "The Heart of the Rhodopes",
+      "subtitle": "At an elevation of 1,650 meters, at the foot of Snezhanka Peak—the oldest Bulgarian ski resort, founded in 1933.",
+      "panoramaAlt": "Pamporovo Winter Resort — Hotels and Ski Slopes in the Rhodopes",
+      "towerAlt": "The Snezhanka Tower — a symbol of Pamporovo",
+      "p1": "Two main ski resorts—Studenets and Malina—are connected to Snezhanka Peak (1,926 m). The slopes range from 1,400 to 1,926 m, with modern lifts and over 80 snow cannons.",
+      "p2": "In the summer, the resort becomes a hub for ecotourism—marked trails, cycling, horseback riding, and countless attractions within a 15–60-minute drive of Smolyan, Shiroka Luka, the Wonderful Bridges, and the underground palaces of the Western Rhodopes.",
+      "cta": "Book a villa in Pamporovo"
+    },
+    "winter": {
+      "eyebrow": "Winter",
+      "title": "Ski Area — Slopes and Lifts",
+      "subtitle": "37+ km of marked ski and snowboard trails, night skiing on the Wall, and cross-country skiing trails",
+      "skiAlt": "Chairlift to Snezhanka Peak — the tower above Pamporovo",
+      "pistesHeading": "Trails by Difficulty",
+      "liftsHeading": "Elevators and Equipment",
+      "activitiesHeading": "Winter Activities"
+    },
+    "summer": {
+      "eyebrow": "Summer",
+      "title": "Eco Trails and Nature",
+      "subtitle": "The Waterfall Canyon, the Smolyan Lakes, Orpheus’s Rocks — just minutes from the resort",
+      "summerAlt": "A Mountain Lake in the Rhodopes — A Summer Nature Trail Near Pamporovo",
+      "activitiesHeading": "Summer Activities"
+    },
+    "landmarks": {
+      "eyebrow": "The Surrounding Area",
+      "title": "Sights and Villages",
+      "subtitle": "Architectural reserves, an observatory, a planetarium, and authentic Rhodope folklore"
+    },
+    "caves": {
+      "eyebrow": "Underworld",
+      "title": "Caves and Gorges",
+      "subtitle": "Yagodinska Cave, Devil’s Throat, Trigrad Gorge, and Uhlovitsa—treasures of the Western Rhodopes",
+      "footer": "The Pamporovo Villa villas are located in Raykovski Livadi—the perfect base for winter and summer adventures throughout the region.",
+      "cta": "Check availability and make a reservation"
+    }
+  },
+  "attractions": {
+    "canyon-waterfalls": {
+      "title": "The Waterfall Canyon",
+      "distance": "15 km · near Smolyan",
+      "duration": "~4 hours · 6 km loop trail",
+      "description": "The most impressive nature trail in the Rhodopes—you’ll walk through the centuries-old forests of the Soskovcheto Nature Reserve along the Gerzovska River. Along the route, you’ll count 46 waterfalls, including the stunning 68-meter-high “Orpheus”—one of the tallest in Bulgaria. The highlight is a panoramic viewpoint at 1,800 meters with a view of Smolyan and the ridges of the Rhodopes.",
+      "highlights": [
+        "46 waterfalls",
+        "\"Orpheus\" Waterfall — 68 m",
+        "Centuries-old spruce forests",
+        "Panorama at 1,800 m"
+      ]
+    },
+    "smolyan-lakes": {
+      "title": "The Smolyan Lakes",
+      "distance": "10 km · below Snezhanka Peak",
+      "duration": "~1 hour · easy route",
+      "description": "Known as the “Emerald Eyes of the Rhodopes”—natural lakes situated in a terraced formation below Snezhanka. An easy trail connects Bistroto, Mutno, and Trevisto Lakes, with spots for picnicking and fishing. It’s an ideal hike for families with children and pairs perfectly with a climb to the summit.",
+      "highlights": [
+        "Natural Mountain Lakes",
+        "An easy family hike",
+        "Picnic Spots",
+        "Can be combined with Snezhanka Peak"
+      ]
+    },
+    "nevyastata": {
+      "title": "\"Nevyastata\" Nature Trail",
+      "distance": "12 km · above Smolyan",
+      "duration": "~40 min · 900 m trail",
+      "description": "A short and easy trail through a fragrant pine forest to the sheer cliff known as “Nevyastata,” which looms over Smolyan. There are panoramic viewing platforms and gazebos along the entire route, and for adrenaline seekers—an alpine zip line over the chasm. Legend has it that a young woman threw herself off the cliff to preserve her faith.",
+      "highlights": [
+        "Viewing platforms",
+        "Alpine trolley",
+        "The Legend of the Bride",
+        "Suitable for all ages"
+      ]
+    },
+    "orpheus-rocks": {
+      "title": "Orpheus's Rocks and the Needles",
+      "distance": "6 km · from Snezhanka Peak",
+      "duration": "~4 hours · light workload",
+      "description": "From the summit of Snezhanka, a marked trail leads southeast toward Orpheus’s Rocks—whimsical rhyolite formations offering an iconic view of the Smolyan Lakes. In the other direction lies Igite Peak, offering yet another breathtaking panorama. The route passes through pastures and forests dotted with blueberries in August.",
+      "highlights": [
+        "Rhyolite Rock Formations",
+        "View of the lakes",
+        "Igite Peak",
+        "Wild blueberries in August"
+      ]
+    },
+    "shiroka-laka": {
+      "title": "Wide Bend",
+      "distance": "16 km · 20 min by car",
+      "duration": "",
+      "description": "Architectural and Folklore Reserve — the village of National Revival-era houses with bay windows, stone bridges, and the famous National School of Folk Arts. The Rhodope bagpipe is the soul of Shiroka Luka: this is where the “Pesponedelnik” festival takes place, featuring kukeri dances and authentic folklore. A must-see for every visitor to Pamporovo.",
+      "highlights": [
+        "Renaissance Architecture",
+        "School for Bagpipe Players",
+        "Ethnographic Museum",
+        "Kukeri Festival"
+      ]
+    },
+    "rozhen-observatory": {
+      "title": "NAO \"Rozhen\"",
+      "distance": "18 km · 25 min by car",
+      "duration": "",
+      "description": "The largest astronomical observatory on the Balkan Peninsula, perched 1,750 meters above the Rozhen Meadows. It features a 2-meter telescope—one of the largest in Southeast Europe. Daytime tours with a guided talk are organized, and nighttime observations (by reservation) are unforgettable. Nearby are the Rozhen Meadows—host to the legendary national festival.",
+      "highlights": [
+        "2-meter telescope",
+        "Visits with a conversation",
+        "Nighttime Observations",
+        "The Rozen Festival is coming up"
+      ]
+    },
+    "wonderful-bridges": {
+      "title": "The Wonderful Bridges",
+      "distance": "42 km · 1 hour by car",
+      "duration": "",
+      "description": "Giant marble rock arches, carved out by the Erküpriya River over the course of millennia. The large bridge is 96 m long and 45 m high—a path runs beneath it, and the acoustics are incredible. The Small Bridge is 60 m long. The site is one of the 100 national tourist attractions and pairs perfectly with lunch in the village of Zabardo.",
+      "highlights": [
+        "A 45-meter-high arch",
+        "100 national sites",
+        "Path Under the Bridges",
+        "Mountain hut and shelter nearby"
+      ]
+    },
+    "smolyan-town": {
+      "title": "Smolyan — Planetarium and Museums",
+      "distance": "15 km · 20 min by car",
+      "duration": "",
+      "description": "The regional capital at the foot of Snezhanka preserves the spirit of the Rhodopes: The planetarium is the largest in Bulgaria, offering spectacular stargazing shows, while the “Stoyu Shishkov” Regional History Museum tells the story of the mountain’s way of life, traditional costumes, and music. The historic neighborhoods of Raikovo and Ustovo charm visitors with their National Revival-era houses and cozy taverns.",
+      "highlights": [
+        "The Largest Planetarium in Bulgaria",
+        "\"Stoyu Shishkov\" Regional Institute of Mathematics",
+        "Art Gallery",
+        "The neighborhoods of Raikovo and Ustovo"
+      ]
+    },
+    "momchilovtsi": {
+      "title": "Momchilovtsi",
+      "distance": "25 km · 30 min by car",
+      "duration": "",
+      "description": "A picturesque Rhodope village at 1,200 meters, famous for the longevity of its residents and its homemade yogurt, which has become legendary even in China. Panoramic trails, chapels on every hilltop, and authentic, hospitable taverns. In August, the village hosts the Yogurt Festival.",
+      "highlights": [
+        "Village of Longevity",
+        "Yogurt Festival",
+        "Panoramic Chapels",
+        "Authentic mechanisms"
+      ]
+    },
+    "gela-village": {
+      "title": "Gela — Orpheus's Village",
+      "distance": "22 km · 30 min by car",
+      "duration": "",
+      "description": "One of the oldest villages in the Rhodopes, considered the birthplace of the mythical Orpheus. Located at an altitude of 1,500 meters amid endless meadows, Gela hosts the International Bagpipe Festival every first Sunday in August—hundreds of bagpipers fill the mountains with their music. Trails leading to the peaks of Turlata and Gela start from here.",
+      "highlights": [
+        "The Birthplace of Orpheus",
+        "Bagpipe Festival in August",
+        "Thracian Sanctuaries",
+        "Starting Points for Hiking Trails"
+      ]
+    },
+    "yagodina-cave": {
+      "title": "Yagodinska Cave",
+      "distance": "50 km · 1 hr 15 min by car",
+      "duration": "45-minute loop · 1,100-meter route",
+      "description": "The third-longest cave in Bulgaria—10.5 km of galleries on three levels in the Buynovo Gorge. The tour route passes by leopard-skin formations, cave pearls, stalactites, and the famous “New Year’s Hall,” where people celebrate New Year’s Eve underground. The temperature is a constant 6°C—be sure to bring a jacket, even in August.",
+      "highlights": [
+        "10.5 km of tunnels",
+        "Cave Pearls",
+        "New Year's Hall",
+        "The Buynovsko Gorge along the road"
+      ]
+    },
+    "devils-throat": {
+      "title": "Devil's Throat",
+      "distance": "55 km · 1 hr 20 min by car",
+      "duration": "30-minute tour",
+      "description": "A chasm cave featuring the highest underground waterfall in the Balkans—42 m—where the Trigradska River plunges with a roar into the “Roaring Hall” beneath the earth. According to legend, it was from here that Orpheus descended into the underworld in search of Eurydice. Nothing that falls into the water ever resurfaces—a mystery that scientists are still investigating.",
+      "highlights": [
+        "42-meter underground waterfall",
+        "The Roaring Hall",
+        "The Legend of Orpheus",
+        "301 steps along the waterfall"
+      ]
+    },
+    "trigrad-gorge": {
+      "title": "The Trigrad Gorge",
+      "distance": "53 km · 1 hr 15 min by car",
+      "duration": "",
+      "description": "A canyon with sheer marble walls rising up to 250 m above the Trigradska River—the road literally winds its way between the cliffs. Home to rare birds such as the rock thrush, and a gateway to the Devil’s Throat and the village of Trigrad. One of the most dramatic roads in Bulgaria—every turn offers a photo opportunity.",
+      "highlights": [
+        "Walls up to 250 m",
+        "A Scenic Mountain Road",
+        "Rare Birds",
+        "It pairs well with Devil's Throat"
+      ]
+    },
+    "uhlovitsa-cave": {
+      "title": "Uhlovitsa Cave",
+      "distance": "32 km · 45 min by car",
+      "duration": "30-minute tour",
+      "description": "One of the most beautiful caves in Bulgaria, near the village of Mogilitsa. It is famous for its stone “waterfalls”—cascades of calcite formations resembling frozen water—and the coral-like formations on the vaulted ceilings. A picturesque trail through the forest leads to the entrance (about a 30-minute walk from the parking lot).",
+      "highlights": [
+        "Stone Waterfalls",
+        "Coral formations",
+        "4 underground lakes",
+        "Near the Agushev Mansions"
+      ]
+    }
+  },
+  "stats": [
+    {
+      "value": "1,650 m",
+      "label": "altitude of the resort"
+    },
+    {
+      "value": "1,926 m",
+      "label": "Snezhanka Peak — the highest point in the ski area"
+    },
+    {
+      "value": "37+ km",
+      "label": "ski slopes of all difficulty levels"
+    },
+    {
+      "value": "1933",
+      "label": "Founded — the oldest ski resort in Bulgaria"
+    },
+    {
+      "value": "~120",
+      "label": "sunny days during the winter season"
+    },
+    {
+      "value": "90%",
+      "label": "on the slopes with artificial snow"
+    }
+  ],
+  "pistes": [
+    {
+      "name": "The Reservoir (The Little Wall)",
+      "note": ""
+    },
+    {
+      "name": "Bypass — The Little Wall",
+      "note": ""
+    },
+    {
+      "name": "The Wall",
+      "note": "The emblem of Pamporovo—host of European Cup races. Night skiing from 5:30 p.m. to 10:00 p.m."
+    },
+    {
+      "name": "Architect Petar Petrov (European)",
+      "note": ""
+    },
+    {
+      "name": "Snow White",
+      "note": ""
+    },
+    {
+      "name": "Snow White",
+      "note": ""
+    },
+    {
+      "name": "Raspberry",
+      "note": "The longest red run—from the summit to the Malina Ski Center."
+    },
+    {
+      "name": "Malina Bypass",
+      "note": ""
+    },
+    {
+      "name": "Pamporovo (Tourist)",
+      "note": "Long and gentle — perfect for first runs and family skiing."
+    },
+    {
+      "name": "Orlovets",
+      "note": ""
+    },
+    {
+      "name": "Perelik (The Southern Ones)",
+      "note": ""
+    },
+    {
+      "name": "Smolyan Lakes",
+      "note": ""
+    },
+    {
+      "name": "Delovo Dere (Damskata)",
+      "note": ""
+    },
+    {
+      "name": "Cartola",
+      "note": ""
+    },
+    {
+      "name": "Stands 1",
+      "note": ""
+    },
+    {
+      "name": "The Stands 2",
+      "note": ""
+    },
+    {
+      "name": "Fun Slope / Boarder Cross",
+      "note": "A course featuring waves, berms, and freestyle features."
+    }
+  ],
+  "skiLifts": [
+    {
+      "route": "The Racks — Snezhanka Peak",
+      "type": "Chairlift",
+      "note": "The longest course—it climbs 453 m in elevation."
+    },
+    {
+      "route": "Ski Center 1 (Bus Station) — Studenets",
+      "type": "4-seat chairlift",
+      "note": ""
+    },
+    {
+      "route": "Studenets — Snezhanka Peak",
+      "type": "4-seat chairlift",
+      "note": "The main trail to the summit and the black runs."
+    },
+    {
+      "route": "Malina — Snezhanka Peak",
+      "type": "Chairlift",
+      "note": ""
+    },
+    {
+      "route": "The Smolyan Lakes — Snezhanka Peak",
+      "type": "Chairlift",
+      "note": ""
+    },
+    {
+      "route": "Malina — Studenets",
+      "type": "Chairlift",
+      "note": ""
+    }
+  ],
+  "liftFacts": [
+    {
+      "route": "The Racks — Snezhanka Peak",
+      "type": "Chairlift"
+    },
+    {
+      "route": "Ski Center 1 — Studenets",
+      "type": "4-seat chairlift"
+    },
+    {
+      "route": "Studenets — Snezhanka Peak",
+      "type": "4-seat chairlift"
+    },
+    {
+      "route": "Malina — Snezhanka Peak",
+      "type": "Chairlift"
+    },
+    {
+      "route": "The Smolyan Lakes — Snezhanka Peak",
+      "type": "Chairlift"
+    },
+    {
+      "route": "Malina — Studenets",
+      "type": "Chairlift"
+    }
+  ],
+  "skiExtras": [
+    "Total capacity of the facilities — over 13,000 skiers per hour",
+    "Ski and snowboard schools with licensed instructors and children's play areas",
+    "Night Driving on the Stenata-2 Track (5:30 p.m. – 10:00 p.m.)",
+    "2 cross-country skiing trails: Snezhanka No. 14 (25 km, to the village of Mugla) and No. 15 “Ardashlu” (7 km, to the village of Stoykite)",
+    "Fun Park with snow tubing, boardercross, and freestyle features",
+    "Cloakrooms, restrooms, and ski storage facilities in Studenets and Malina"
+  ],
+  "winterActivities": [
+    {
+      "title": "Skiing and Snowboarding",
+      "description": "37+ km of slopes for all skill levels, modern lifts, and guaranteed snow from December through April."
+    },
+    {
+      "title": "Night Driving",
+      "description": "The Illuminated Wall-2 is open until 10:00 p.m. — an unforgettable experience."
+    },
+    {
+      "title": "Cross-country skiing",
+      "description": "25 km of marked trails through the snow-covered forests toward Mugla and Stoykite."
+    },
+    {
+      "title": "Snowshoeing and Hiking",
+      "description": "Guided snowshoe tours to Orpheus' Rocks and the Smolyan Lakes."
+    },
+    {
+      "title": "Ski Schools for Children",
+      "description": "Certified instructors, children's ski areas with tow lifts, and an army of patience."
+    },
+    {
+      "title": "Après-ski",
+      "description": "Restaurants serving Rhodope specialties, featuring live music and mulled wine, just a few meters from the slopes."
+    }
+  ],
+  "summerActivities": [
+    {
+      "title": "Mountain Biking",
+      "description": "Marked MTB trails from Snezhanka Peak—ranging from easy forest paths to advanced downhill runs."
+    },
+    {
+      "title": "Eco Trails",
+      "description": "The Waterfall Canyon, Nevyasta, the Smolyan Lakes—dozens of trails within an hour’s drive."
+    },
+    {
+      "title": "Rope Park and Attractions",
+      "description": "An adventure park with zip lines, a climbing wall, and a trolley ride for all ages."
+    },
+    {
+      "title": "Horseback Riding",
+      "description": "Equestrian centers in the area offer rides through the meadows of Rozen and Stoykite."
+    },
+    {
+      "title": "Mushroom and Herb Picking",
+      "description": "Chanterelles, blueberries, and over 300 species of herbs—the Rhodopes are a living pharmacy."
+    },
+    {
+      "title": "Photography and Celebrities",
+      "description": "Sunrises over the sea shrouded in fog, a dark sky perfect for astrophotography, and the Rozhen National Astronomical Observatory nearby."
+    }
+  ],
+  "lists": {
+    "eco": [
+      "canyon-waterfalls",
+      "Smolyan Lakes",
+      "nevyastata",
+      "orpheus-rocks"
+    ],
+    "landmarks": [
+      "shiroka-laka",
+      "rozhen-observatory",
+      "wonderful-bridges",
+      "smolyan-town",
+      "Momchilovtsi",
+      "gela-village"
+    ],
+    "caves": [
+      "yagodina-cave",
+      "devil's throat",
+      "trigrad-gorge",
+      "uhlovitsa-cave"
+    ]
+  }
+}

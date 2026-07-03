@@ -9,5 +9,49 @@
   "placeholderEmail": "a elección",
   "placeholderPeriod": "p. ej., marzo de 2025",
   "placeholderBody": "¿Qué es lo que más recordáis de vuestra estancia con nosotros...?",
-  "villaUnknown": "No estoy seguro/a"
+  "villaUnknown": "No estoy seguro/a",
+  "form": {
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "rating": "Valoración",
+    "title": "Título",
+    "body": "Tu opinión",
+    "bodyPlaceholder": "Contadnos qué os ha gustado y qué podríamos mejorar...",
+    "submit": "Enviar comentario",
+    "submitting": "Enviando...",
+    "namePlaceholder": "Tu nombre",
+    "emailPlaceholder": "a elección",
+    "ratingAria": "{star} estrellas",
+    "villa": "Villa",
+    "villaPlaceholder": "Selecciona",
+    "villaUnknown": "No estoy seguro/a",
+    "period": "Período",
+    "periodPlaceholder": "p. ej., marzo de 2025"
+  },
+  "toast": {
+    "success": "¡Gracias por tu comentario! Lo publicaremos tras revisarlo.",
+    "error": "Se ha producido un error al enviar la opinión."
+  },
+  "carousel": {
+    "readMore": "Más información",
+    "close": "Cerrar",
+    "googleSource": "Google",
+    "siteSource": "Página web",
+    "readFull": "La reseña completa",
+    "open": "Abrir",
+    "readFullAria": "Lee la reseña completa",
+    "openAria": "Abrir la reseña",
+    "emptyTitle": "Aún no hay opiniones publicadas",
+    "emptyBody": "Sé el primero: comparte tus impresiones más abajo.",
+    "pause": "Pausa en el desplazamiento automático",
+    "resume": "Continuar con el desplazamiento automático",
+    "prev": "Comentario anterior",
+    "next": "Siguiente reseña",
+    "navLabel": "Opiniones",
+    "reviewN": "Comentario {n}",
+    "photoCount": "{count} fotos"
+  },
+  "modal": {
+    "close": "Cerrar"
+  }
 }

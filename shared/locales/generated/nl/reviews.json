@@ -9,5 +9,49 @@
   "placeholderEmail": "naar keuze",
   "placeholderPeriod": "bijv. maart 2025",
   "placeholderBody": "Wat is u bijgebleven van uw verblijf bij ons...",
-  "villaUnknown": "Ik weet het niet zeker"
+  "villaUnknown": "Ik weet het niet zeker",
+  "form": {
+    "name": "Naam",
+    "email": "E-mail",
+    "rating": "Beoordeling",
+    "title": "Titel",
+    "body": "Uw beoordeling",
+    "bodyPlaceholder": "Laat ons weten wat jullie leuk vonden en wat we zouden kunnen verbeteren...",
+    "submit": "Beoordeling versturen",
+    "submitting": "Bezig met verzenden...",
+    "namePlaceholder": "Uw naam",
+    "emailPlaceholder": "naar keuze",
+    "ratingAria": "{star} sterren",
+    "villa": "Villa",
+    "villaPlaceholder": "Kies",
+    "villaUnknown": "Ik weet het niet zeker",
+    "period": "Periode",
+    "periodPlaceholder": "bijv. maart 2025"
+  },
+  "toast": {
+    "success": "Bedankt voor je beoordeling! We zullen deze na controle publiceren.",
+    "error": "Er is een fout opgetreden bij het verzenden van de recensie."
+  },
+  "carousel": {
+    "readMore": "Lees meer",
+    "close": "Sluiten",
+    "googleSource": "Google",
+    "siteSource": "Website",
+    "readFull": "De volledige recensie",
+    "open": "Openen",
+    "readFullAria": "Lees de volledige recensie",
+    "openAria": "Open de recensie",
+    "emptyTitle": "Er zijn nog geen beoordelingen geplaatst",
+    "emptyBody": "Wees de eerste — deel hieronder je ervaringen.",
+    "pause": "Het automatisch scrollen pauzeren",
+    "resume": "Automatisch scrollen voortzetten",
+    "prev": "Vorige recensie",
+    "next": "Volgende recensie",
+    "navLabel": "Beoordelingen",
+    "reviewN": "Beoordeling {n}",
+    "photoCount": "{count} foto's"
+  },
+  "modal": {
+    "close": "Sluiten"
+  }
 }

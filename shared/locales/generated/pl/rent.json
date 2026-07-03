@@ -1,7 +1,7 @@
 {
   "eyebrow": "Oficjalny wynajem · Pamporovo Villa",
   "h1": "Wynajem willi w Pamporowie",
-  "intro": "Trzy niezależne wille w Райковски ливади — wynajmujcie całą willę wyłącznie dla swojej grupy. Każda z nich posiada 2 sypialnie, 2 łazienki, kominek, grill i może pomieścić do 6 gości.",
+  "intro": "Trzy niezależne wille w Raykovski Livadi — wynajmujecie całą willę wyłącznie dla swojej grupy. Każda z nich posiada 2 sypialnie, 2 łazienki, kominek, grill i może pomieścić do 6 gości.",
   "villasHeading": "Trzy wille",
   "pricingHeading": "Ceny",
   "pricingFrom": "z",
@@ -10,5 +10,10 @@
   "bookOnline": "Zarezerwuj online",
   "guideLink": "Kompletny przewodnik po Pamporowie",
   "footerNote": "Oficjalna strona internetowa poświęcona wynajmowi willi w Pamporowie, Bułgaria",
-  "villaPageLinkSuffix": "strona →"
+  "villaPageLinkSuffix": "strona →",
+  "villaPageLink": "Strona {villa} →",
+  "pricingNotes": [
+    "Ceny dotyczą noclegu za cały domek (do 6 osób).",
+    "W okresie świątecznym — prosimy o kontakt w celu uzyskania indywidualnej oferty."
+  ]
 }

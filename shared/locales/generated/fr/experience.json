@@ -1,0 +1,144 @@
+{
+  "sectionEyebrow": "Visite virtuelle",
+  "sectionTitle": "Entrez avant d'arriver",
+  "sectionSubtitle": "Faites défiler les images et visitez les villas pièce par pièce",
+  "ariaLabel": "Visite virtuelle",
+  "ariaLabel3d": "Visite virtuelle en 3D",
+  "skipUp": "Continuer vers le haut",
+  "skipDown": "Continuez à lire",
+  "skipUpAria": "Passer la montée",
+  "skipDownAria": "Passez directement à la partie ci-dessous",
+  "panels": {
+    "exterior-summer": {
+      "room": "01 · Le complexe",
+      "title": "C'est ici que commence votre histoire",
+      "subtitle": "Villa 1 · Villa 2 · Villa Deluxe",
+      "description": "Trois villas indépendantes, nichées au cœur des pins de Raykovski Livadi. Vous louez la villa entière rien que pour vous — sans voisins derrière le mur, sans faire de compromis sur le confort. Choisissez celle qui vous plaît et laissez-nous nous occuper du reste.",
+      "imageAlt": "Extérieur de la villa en été",
+      "highlights": [
+        "3 villas indépendantes",
+        "Une forêt de pins paisible",
+        "Parking et Wi-Fi",
+        "Location à l'année"
+      ]
+    },
+    "exterior-winter": {
+      "room": "02 · Hiver",
+      "title": "Quand la neige tombe",
+      "subtitle": "Du ski le matin, un feu de cheminée le soir",
+      "description": "Le matin, vous êtes sur les pistes en quelques minutes, et le soir, vous retrouvez la chaleur de la cheminée et les senteurs du barbecue. La neige arrive jusqu’au seuil de votre porte — et vous n’avez besoin de rien d’autre qu’un verre de vin chaud et de bonne compagnie.",
+      "imageAlt": "Une villa sous la neige à Pamporovo",
+      "highlights": [
+        "À quelques minutes des pistes",
+        "Cheminée à bois",
+        "De la neige jusqu'au seuil",
+        "Une ambiance chaleureuse et douillette"
+      ]
+    },
+    "living-fireplace": {
+      "room": "03 · Salon",
+      "title": "Là où toute la famille se retrouve",
+      "subtitle": "Grand salon avec cheminée",
+      "description": "Un salon spacieux doté d'une véritable cheminée à bois, où le bois et la pierre créent une ambiance chaleureuse et conviviale. C'est là que l'on joue à des jeux de société, que l'on raconte des histoires et que l'on attise le feu — le cœur de chaque soirée.",
+      "imageAlt": "Salon avec cheminée et salle à manger",
+      "highlights": [
+        "Cheminée à bois",
+        "Téléviseur connecté",
+        "Bois et pierre",
+        "Une place pour tous"
+      ]
+    },
+    "open-plan": {
+      "room": "04 · Espace",
+      "title": "Lumineux et spacieux",
+      "subtitle": "Cuisine · salle à manger · salon",
+      "description": "La cuisine, la salle à manger et le salon forment un seul et même espace ouvert — pour que vous puissiez être ensemble, même lorsque l'un cuisine et que les autres se détendent. Les grandes baies vitrées laissent entrer la lumière des montagnes.",
+      "imageAlt": "Espace ouvert — vue depuis l'escalier",
+      "highlights": [
+        "Plan ouvert",
+        "Grandes fenêtres",
+        "Lumière naturelle",
+        "Jusqu'à 6 personnes"
+      ]
+    },
+    "dining": {
+      "room": "05 · Salle à manger",
+      "title": "Une table autour de laquelle tout se passe",
+      "subtitle": "Du café du matin au dîner tardif",
+      "description": "Une grande table en bois pouvant accueillir toute la compagnie, avec vue directe sur les pins. C'est ici que la journée commence par un café à la lumière tamisée et se termine par un dîner, des rires et des projets pour le lendemain.",
+      "imageAlt": "Salle à manger avec vue sur la pinède",
+      "highlights": [
+        "Une table pour 6 personnes",
+        "Vue sur la forêt",
+        "Accès à la terrasse",
+        "Lumière naturelle"
+      ]
+    },
+    "kitchen": {
+      "room": "06 · Cuisine",
+      "title": "Vous cuisinez comme à la maison",
+      "subtitle": "Cuisine entièrement équipée",
+      "description": "Plaque de cuisson, four, réfrigérateur, micro-ondes, machine à café et un service complet de vaisselle : tout ce qu’il faut pour un petit-déjeuner à la maison ou un dîner de fête. Car parfois, le plat le plus savoureux est celui que l’on prépare soi-même, à la montagne.",
+      "imageAlt": "Cuisine équipée",
+      "highlights": [
+        "Four et cuisinière",
+        "Réfrigérateur",
+        "Machine à café",
+        "Ensemble complet de vaisselle"
+      ]
+    },
+    "bedrooms": {
+      "room": "07 · Chambres à coucher",
+      "title": "Un sommeil comme vous n'en avez pas connu depuis longtemps",
+      "subtitle": "Deux chambres confortables",
+      "description": "Deux chambres séparées avec des lits confortables et du linge de lit de qualité — pouvant accueillir jusqu'à 6 personnes. Le calme de la forêt et l'air pur à 1 650 m d'altitude font des merveilles ; vous vous réveillerez en pleine forme, c'est promis.",
+      "imageAlt": "Couloir menant aux deux chambres",
+      "highlights": [
+        "2 chambres",
+        "Jusqu'à 6 personnes",
+        "Lingerie de qualité",
+        "Un silence profond"
+      ]
+    },
+    "bathroom": {
+      "room": "08 · Salle de bains",
+      "title": "Une salle de bains aux allures de montagne",
+      "subtitle": "Le confort pour tout le groupe",
+      "description": "Une salle de bains entièrement équipée avec de l'eau chaude à tout moment — spacieuse et confortable pour tout le groupe. Des matériaux naturels et une ambiance chaleureuse.",
+      "imageAlt": "Salle de bains avec du bois et du carrelage",
+      "highlights": [
+        "1 salle de bains",
+        "Eau chaude 24 h/24, 7 j/7",
+        "Matériaux de qualité",
+        "Ambiance spa"
+      ]
+    },
+    "terrace": {
+      "room": "09 · Terrasse",
+      "title": "La vue qui vous donne envie de revenir",
+      "subtitle": "Les Rhodopes au creux de la main",
+      "description": "Une terrasse offrant une vue panoramique sur les Rhodopes et les pins. C'est ici que vous prenez votre premier café tandis que le soleil se lève sur les sommets, et que vous terminez la journée en admirant un coucher de soleil aux teintes dorées. Des moments qui restent gravés dans votre mémoire bien après votre séjour.",
+      "imageAlt": "Un coucher de soleil doré sur les Rhodopes",
+      "highlights": [
+        "Vue panoramique",
+        "Levers et couchers de soleil",
+        "L'air pur des montagnes",
+        "Grande terrasse"
+      ]
+    },
+    "bbq-veranda": {
+      "room": "10 · Véranda",
+      "title": "Des soirées qui ne semblent pas vouloir s'achever",
+      "subtitle": "Véranda couverte avec barbecue",
+      "description": "La terrasse couverte avec barbecue est l'endroit idéal dès que le soleil se couche. Vous cuisinez, discutez et riez en plein air — et s'il se met à pleuvoir ou s'il fait plus frais, vous restez au sec et au chaud, sans perdre la sensation d'être à la montagne.",
+      "imageAlt": "Véranda avec barbecue et vue sur le paysage hivernal",
+      "highlights": [
+        "Barbecue",
+        "Véranda couverte",
+        "Pour les longues soirées",
+        "Au grand air"
+      ]
+    }
+  },
+  "highlightsLabel": "Points forts"
+}

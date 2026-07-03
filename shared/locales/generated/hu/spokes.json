@@ -2,247 +2,787 @@
   "pisti": {
     "h1": "Sípályák Pamporovóban — több mint 37 km sípálya",
     "seoTitle": "Pamporovo sípályák 2026 | 37+ km, éjszakai síelés, térkép — Pamporovo Villa",
-    "seoDescription": "Pamporovo összes sípályája: hossz, nehézségi fokozat, éjszakai síelés a „Stena” pályán, felvonók a „Snezhanka” felé. Tervezze meg sínyaralását — szállás 110 €/éjszaka-tól.",
-    "seoKeywords": "Pamporovo sípályák, síelés Pamporovóban, A Fal, éjszakai síelés, Hófehérke, síbérlet"
+    "seoDescription": "Pamporovo összes sípályája: hossz, nehézségi fokozat, éjszakai síelés a „Stena” pályán, felvonók a „Snezhanka” felé. Tervezze meg síüdülését — szállás 110 €/éjszaka-tól.",
+    "seoKeywords": "Pamporovo sípályák, síelés Pamporovóban, A Fal, éjszakai síelés, Hófehérke, síbérlet",
+    "eyebrow": "Síelés · Pamporovo",
+    "intro": "A Pamporovo síterep teljes áttekintése: több mint 15 pálya a kezdőknek szóló zöld pályáktól a fekete „Stena” pályáig, éjszakai síelés és felvonók a Snezhanka-csúcsra (1926 m).",
+    "sections": [
+      {
+        "heading": "A síterep rövid bemutatása",
+        "paragraphs": [
+          "Pamporovo Bulgária legrégebbi síközpontja (1933 óta) és az egyik legnaposabb is – télen több mint 120 napon át tiszta az ég. Az üdülőhely 1650 m magasságban fekszik, a sípályák legmagasabb pontja pedig a 1926 m magas Snezhanka-csúcs.",
+          "A kijelölt pályák összhossza meghaladja a 37 km-t. Ezek mintegy 90%-a rendelkezik mesterséges hóágyúzással, ami meleg időben is biztosítja a szezon stabilitását."
+        ],
+        "bullets": [
+          "15+ fő pálya + kerülőutak és fun park",
+          "6 felvonó és sífelvonó",
+          "Éjszakai vezetés a 2. számú „A Fal” pályán",
+          "Zöld, kék, piros és fekete pályák"
+        ]
+      },
+      {
+        "heading": "A legismertebb pályák",
+        "paragraphs": [
+          "A 2. számú „A Fal” pálya (1258 m, fekete) az üdülőhely szimbóluma — itt rendezik az Európa-kupa versenyeit, és ez az egyetlen pálya, ahol rendszeresen éjszakai síelésre is lehetőség van. A 3. számú „Péter Petrov” (1766 m) a leghosszabb fekete pálya.",
+          "Családok és kezdők számára a 6. számú „Turisztika” (3343 m) pálya hosszú és enyhe lejtésű lesiklást kínál. Az 5. számú „Malina” (2799 m) pálya a leghosszabb piros pálya — a csúcstól a Malina síközpontig."
+        ]
+      },
+      {
+        "heading": "Hol szállhat meg a sípályák után?",
+        "paragraphs": [
+          "A Pamporovo Villa 3 önálló villát kínál a központtól 2 km-re — kandallóval, grillezővel, és villánként legfeljebb 6 vendég számára. Ideális választás, ha a szállodai nyüzsgéstől távol csendet keresel, és egy egész napos síelés után saját konyhát szeretnél használni."
+        ]
+      }
+    ]
   },
   "kude-da-spim": {
     "h1": "Hol aludjak Pamporovóban?",
     "seoTitle": "Hol szállhatok meg Pamporovóban | Nyaralók, szállodák, tippek 2026",
-    "seoDescription": "Hol szállhat meg Pamporovóban: szálloda vagy villa, Райковски ливади, árak 110 €/éjszaka-tól egy teljes villa esetén, maximum 6 vendég számára. Hivatalos bérlés — Pamporovo Villa.",
-    "seoKeywords": "Hol szálljak meg Pamporovóban, szállás Pamporovóban, nyaraló Pamporovóban, szálloda Pamporovóban"
+    "seoDescription": "Hol szállhat meg Pamporovóban: szálloda vagy villa, Raykovski Livadi, árak 110 €/éjszaka-tól egy teljes villa esetén, maximum 6 vendég számára. Hivatalos bérlés — Pamporovo Villa.",
+    "seoKeywords": "Hol aludjak Pamporovóban, szállás Pamporovóban, nyaraló Pamporovóban, szálloda Pamporovóban",
+    "eyebrow": "Szállás · Pamporovo",
+    "intro": "A szálláslehetőségek összehasonlítása az üdülőhelyen — belvárosi szállodák, apartmanok és magánvillák. Gyakorlati útmutató családok, csoportok és párok számára.",
+    "sections": [
+      {
+        "heading": "Szálláslehetőségek az üdülőhelyen",
+        "paragraphs": [
+          "Pamporovo központjából kényelmesen el lehet jutni gyalog a vendéglőkhöz és a felvonókhoz, de a főszezonban zajos lehet. A Malina, Stoykite és Raykovski Livadi környékek nyugodtabb környezetet és parkolási lehetőségeket kínálnak.",
+          "Raykovski Livadi 2 km-re fekszik a központtól — elég közel a sípályákhoz, elég messze a csendhez és az éjszakai csillagokhoz."
+        ]
+      },
+      {
+        "heading": "Kinek mi illik",
+        "paragraphs": [
+          "Hétvégi kiruccanás kettesben — szálloda vagy kis villa. Gyerekes család — egy konyhával és kandallóval rendelkező villa gyakran olcsóbb, mint két szállodai szoba. 4–6 fős csoport — egy egész villa közös nappalival és grillezési lehetőséggel jár, anélkül, hogy idegenekkel kellene megosztanotok."
+        ],
+        "bullets": [
+          "Szálloda: félpanzió, főzés nélkül, központi elhelyezkedés",
+          "Villa: teljes ház, kandalló, grillező, parkoló, nagyobb magánszféra",
+          "Pamporovo Villa: 3 villa, 2 hálószoba, maximum 6 vendég, 110 €/éjszaka-tól"
+        ]
+      },
+      {
+        "heading": "Ajánlás: Pamporovo Villa",
+        "paragraphs": [
+          "Három azonos stílusú villa (Villa 1, Villa 2, Villa Deluxe) egy címen — csupán egy villát foglalhat le a társaságának. Mindegyikben 2 hálószoba, 2 fürdőszoba, kandalló és grillterasz található."
+        ]
+      }
+    ]
   },
   "hotel-vs-vila": {
     "h1": "Szálloda vagy villa Pamporovóban – melyiket válasszon?",
     "seoTitle": "Szálloda vagy villa Pamporovóban | Összehasonlítás a 2026-os sí- és nyári szezonra vonatkozóan",
     "seoDescription": "Szálloda vagy nyaraló Pamporovóban: árak, előnyök családok és csoportok számára, kandalló és grillezési lehetőség. Mikor érdemesebb a nyaralót választani — Pamporovo Villa 110 €/éjszaka-tól.",
-    "seoKeywords": "szálloda vagy villa Pamporovóban, szálláshelyek összehasonlítása, villa vs. szálloda"
+    "seoKeywords": "szálloda vagy villa Pamporovóban, szálláshelyek összehasonlítása, villa vs. szálloda",
+    "eyebrow": "Összehasonlítás · elhelyezés",
+    "intro": "Őszinte összehasonlító útmutató: ár fejenként, kényelem, főzés, kandalló, parkolás, valamint hogy mely utazásokhoz érdemes választani.",
+    "sections": [
+      {
+        "heading": "Mikor érdemesebb a szállodát választani?",
+        "paragraphs": [
+          "Rövid tartózkodás (1–2 éjszaka), reggelit és vacsorát szeretne, anélkül, hogy főznie kellene, vagy egyedül utazik/párként érkezik, és nincs szüksége nagy helyre. A belvárosi szállodák pár percre vannak a felvonóktól."
+        ]
+      },
+      {
+        "heading": "Mikor nyer a villa?",
+        "paragraphs": [
+          "4–6 vendég esetén a magánvillában az egy főre eső ár gyakran alacsonyabb, mint egy 3*-os szállodában félpanzióval. Kap egy kandallós nappalit, konyhát, grillezőt és parkolót — anélkül, hogy szomszédok lennének a folyosón.",
+          "A kisgyermekes családok értékelik a rögzített napirendet — alvás, főzés, délutáni szundítás, lift és recepció nélkül."
+        ],
+        "bullets": [
+          "Az egész villa = kizárólag a ti társaságotoké",
+          "Kandalló és grill — olyan hangulat, amit egy szálloda nem tud nyújtani",
+          "Parkoló az ajtó előtt — kényelmes a sífelszerelés szállításához",
+          "Pamporovo Villa: 110 €/éjszaka-tól, maximum 6 főig"
+        ]
+      },
+      {
+        "heading": "Példa a számlára",
+        "paragraphs": [
+          "Villa 150 €/éjszaka áron 5 éjszakára = összesen 750 €. 5 fő esetén ez 150 €/fő 5 éjszakára (30 €/éjszaka/fő) — gyakran kevesebb, mint egy szálloda + étkezés az üdülőhelyen."
+        ]
+      }
+    ]
   },
   "naem-vila": {
     "h1": "Villa bérlés Pamporovóban",
     "seoTitle": "Villa bérlés Pamporovóban | 3 villa, árak, foglalás 2026",
-    "seoDescription": "Béreljen villát Pamporovóban — 3 önálló villa, 2 hálószoba, kandalló, grillező, maximum 6 vendég. 110 €-tól/éjszaka. Hivatalos weboldal Pamporovo Villa.",
-    "seoKeywords": "villa bérlés Pamporovóban, villa bérbeadás, ház bérlés Pamporovóban, Pamporovo Villa"
+    "seoDescription": "Béreljen villát Pamporovóban — 3 önálló villa, 2 hálószoba, kandalló, grillező, maximum 6 vendég. 110 €/éjszaka-tól. Hivatalos weboldal Pamporovo Villa.",
+    "seoKeywords": "villa bérlés Pamporovóban, villa bérbeadás, ház bérlés Pamporovóban, Pamporovo Villa",
+    "eyebrow": "Bérlés · Pamporovo Villa",
+    "intro": "Hogyan működik egy teljes villa bérlése Pamporovóban — mit tartalmaz, árak, foglalás és a Raykovski Livadi három rendelkezésre álló villája.",
+    "sections": [
+      {
+        "heading": "Mit jelent a „nyaraló bérlése”?",
+        "paragraphs": [
+          "A Pamporovo Villa csomag keretében egy egész házat béreltek — nem pedig egy szobát egy közös házban. A villa kizárólag a ti csoportotoké: a kulcsok, a nappali, a konyha, a grillezővel ellátott terasz és a parkoló mind a tiétek."
+        ]
+      },
+      {
+        "heading": "A három villa",
+        "paragraphs": [
+          "A Villa 1, a Villa 2 és a Villa Deluxe azonos befogadóképességgel és felszereltséggel rendelkeznek — 2 hálószoba, 2 fürdőszoba, kandalló, teljesen felszerelt konyha, Wi-Fi. A választás a naptárban szereplő szabad helyek függvénye."
+        ],
+        "bullets": [
+          "A villában legfeljebb 6 vendég szállhat meg",
+          "2 hálószoba + 2 fürdőszoba",
+          "Fatüzelésű kandalló + BBQ",
+          "Ingyenes parkolás"
+        ]
+      },
+      {
+        "heading": "Árak és foglalás",
+        "paragraphs": [
+          "A nyári szezon ára 110 €/éjszaka az egész villa bérlésére. Télen az árak az időszaktól függően magasabbak. Foglaljon online a pamporovovilla.com oldalon vagy a /rent oldalon."
+        ]
+      }
+    ]
   },
   "vila-s-kamina": {
     "h1": "Kandallós villa Pamporovóban",
     "seoTitle": "Kandallós villa Pamporovóban | Kandalló + BBQ — Pamporovo Villa",
     "seoDescription": "Béreljen kandallós nyaralót Pamporovóban — a Pamporovo Villa mindhárom nyaralója kandallóval és grillezővel rendelkezik. Legfeljebb 6 vendég számára, 110 €/éjszaka-tól.",
-    "seoKeywords": "kandallós nyaraló Pamporovóban, hegyi kandalló, téli nyaraló, BBQ Pamporovóban"
+    "seoKeywords": "kandallós nyaraló Pamporovóban, hegyi kandalló, téli nyaraló, BBQ Pamporovóban",
+    "eyebrow": "Kényelmi szolgáltatások · villa",
+    "intro": "Téli hangulat a sípályák mellett — a Pamporovo Villa mindhárom villájában fa kandalló található a nappaliban, valamint egy barbecue-terasz a napsütéses napokra.",
+    "sections": [
+      {
+        "heading": "Kandalló minden villában",
+        "paragraphs": [
+          "Minden villa nappalija egy fatüzelésű kandalló körül helyezkedik el — meleg fény, füst illata és egy kellemes hely a beszélgetésre, miután egész nap a sípályán vagy az ökoösvényen töltötték az időt."
+        ]
+      },
+      {
+        "heading": "BBQ-terasz",
+        "paragraphs": [
+          "Nyáron és az enyhe téli napokon a teraszon kialakított grill-sarok igazi sláger a családi vacsorákhoz. Kóstolják meg a szmolyani vagy az üdülőhelyi helyi termékekkel együtt!"
+        ]
+      },
+      {
+        "heading": "Gyakorlati tanácsok",
+        "paragraphs": [
+          "A kandallóhoz szükséges tűzifát a házigazdák biztosítják. Ha január–februárban szeretne foglalni, akkor érdemes minél hamarabb lefoglalni — a kandallós nyaralók az elsők között telnek be."
+        ]
+      }
+    ]
   },
   "naem-zima": {
     "h1": "Téli nyaraló bérlés Pamporovóban",
     "seoTitle": "Téli villa bérlés Pamporovóban | Síüdülés 2026 — Pamporovo Villa",
     "seoDescription": "Téli nyaraló Pamporovóban — 2 km-re a sípályáktól, kandallóval, maximum 6 vendég számára. Foglaljon síüdülést a Pamporovo Villa-nál.",
-    "seoKeywords": "téli nyaraló bérlés Pamporovóban, sínyaraló, téli nyaraló a Rodopokban"
+    "seoKeywords": "téli nyaraló bérlés Pamporovóban, sínyaraló, téli nyaraló a Rodopokban",
+    "eyebrow": "Tél · sífelszerelés-kölcsönzés",
+    "intro": "Tervezzen síüdülést Pamporovóban — béreljen egy teljes villát a sípályák közelében, kandallóval, parkolóval, családok és csoportok számára kedvező árakkal.",
+    "sections": [
+      {
+        "heading": "Miért érdemes nyaralót bérelni a síidényre?",
+        "paragraphs": [
+          "Sífelszerelés, nedves ruhák, korai kirándulások — a magánvilla lehetőséget biztosít a ruhák szárítására, a főzésre és a korai reggelire, anélkül, hogy az étterem nyitvatartási idejéhez kellene igazodni. A parkoló közvetlenül az ajtó mellett található."
+        ]
+      },
+      {
+        "heading": "Közelség a sípályákhoz",
+        "paragraphs": [
+          "Raykovski Livadi 2 km-re fekszik a központtól — 5–7 perc alatt elérhető autóval a felvonókig. Miután éjszaka lecsúsztatok a „Falon”, gyorsan eljuthattok a kandallóhoz."
+        ]
+      },
+      {
+        "heading": "Mikor érdemes foglalni?",
+        "paragraphs": [
+          "A karácsonyi, újévi és februári szünetekre a helyek elsőként fogynak el. A főszezonban legalább 3–5 éjszakára – ellenőrizze az online naptárat."
+        ],
+        "bullets": [
+          "Foglalás: pamporovovilla.com/#booking",
+          "Telefon: +359 879 501 660",
+          "Tények oldala: /rent"
+        ]
+      }
+    ]
   },
   "lato": {
     "h1": "Nyár Pamporovóban — öko-túraútvonalak és hűs levegő",
     "seoTitle": "Pamporovo nyár 2026 | Öko-túraútvonalak, programok, nyaraló bérlés",
     "seoDescription": "Mit érdemes csinálni nyáron Pamporovóban: öko-túraútvonalak, a szmolyáni tavak, barlangok, kerékpározás. Nyaraló bérlése 110 €/éjszaka — Pamporovo Villa.",
-    "seoKeywords": "nyár Pamporovóban, ökoturizmus, hegyvidéki nyaralás, nyári nyaraló"
+    "seoKeywords": "nyár Pamporovóban, ökoturizmus, hegyvidéki nyaralás, nyári nyaraló",
+    "eyebrow": "Nyár · Pamporovo",
+    "intro": "Pamporovo nem csupán síüdülőhely — nyáron itt öko-túraútvonalak, vízesések, barlangok és családi nyaralások várják a látogatókat 1650 méteres tengerszint feletti magasságban, tiszta levegővel.",
+    "sections": [
+      {
+        "heading": "Miért érdemes nyáron Pamporovóba menni?",
+        "paragraphs": [
+          "1650 méteres magasságban a levegő friss, a hőmérséklet pedig kellemes, még akkor is, ha a völgyben nagy a hőség. A régióban tucatnyi jelzett túraútvonal, barlang és autentikus falu található, mindössze egy órányi utazásra.",
+          "Egy grillezővel ellátott terasszal és konyhával rendelkező nyaraló bérlése olcsóbbá teszi a nyaralást, mint a szállodai szállás — különösen családok számára."
+        ],
+        "bullets": [
+          "Ökológiai ösvények és vízesések",
+          "Kerékpározás és lovaglás",
+          "Barlangok és falvak",
+          "Villa 110 €/éjszaka"
+        ]
+      }
+    ]
   },
   "zima": {
     "h1": "Tél Pamporovóban — síelés, hó és hangulat",
     "seoTitle": "Tél Pamporovo 2026 | Síszezon, sípályák, szállás",
     "seoDescription": "A pamporovói tél teljes áttekintése: sípályák, felvonók, éjszakai síelés, nyaraló bérlése az üdülőhely közelében. Pamporovo Villa 120 €/éjszaka-tól.",
-    "seoKeywords": "tél Pamporovóban, síidény, hó Pamporovóban, téli nyaralás"
+    "seoKeywords": "tél Pamporovo, síidény, hó Pamporovo, téli nyaralás",
+    "eyebrow": "Tél · üdülőhely",
+    "intro": "Több mint 37 km sípálya, éjszakai síelés, mesterséges hóágyúzás és több mint 120 napsütéses nap – a téli szezon Pamporovóban Bulgária legjobbjai közé tartozik.",
+    "sections": [
+      {
+        "heading": "Síidény",
+        "paragraphs": [
+          "A szezon általában decembertől márciusig/áprilisig tart. A pályák 90%-án műhó-rendszer működik — így a síeléshez szinte biztosan lesz hó.",
+          "Kombinálja a sípályákon töltött napot egy magánvillában, a kandalló mellett eltöltött estével — a szálloda előcsarnokának zaja nélkül."
+        ]
+      }
+    ]
   },
   "yagodinska-pechtera": {
     "h1": "A Jagodinszka-barlang — Pamporovo közelében",
     "seoTitle": "A Pamporovo melletti Jagodinska-barlang | Távolság, túra, tippek",
-    "seoDescription": "Hogyan juthat el a Yagodinska-barlanghoz Pamporovóból — 50 km, 45 perces túra, mit érdemes megnézni. Szállás: Райковски ливади villa.",
-    "seoKeywords": "A Jagodinszka-barlang, a Pamporovo-i barlangok, a Buynovsko-szurdok"
+    "seoDescription": "Hogyan juthat el a Yagodinska-barlanghoz Pamporovóból — 50 km, 45 perces túra, mit érdemes megnézni. Szállás: a Raykovski Livadi villája.",
+    "seoKeywords": "A Jagodinszka-barlang, a Pamporovo-i barlangok, a Buynovsko-szurdok",
+    "eyebrow": "Barlangok · régió",
+    "intro": "Bulgária harmadik leghosszabb barlangja — 10,5 km-es járatok, barlangi gyöngyszemek és az „Újévi terem”. Pamporovótól ~50 km-re — ideális egynapos kirándulás.",
+    "sections": [
+      {
+        "heading": "Gyakorlati tanácsok",
+        "paragraphs": [
+          "A barlangban a hőmérséklet körülbelül 6 °C — nyáron is érdemes kabátot vinni. Foglaljon túrát a főszezonban.",
+          "Kombinálja a Buynovsko-szurdokkal és egy ebéddel a környéken — így egész napot a üdülőhelyen kívül tölthet."
+        ]
+      }
+    ]
   },
   "shiroka-laka": {
     "h1": "Shiroka Luka — építészeti rezervátum Pamporovo közelében",
     "seoTitle": "A Pamporovo-i Sziroka-hágó | 16 km, mit érdemes megnézni",
     "seoDescription": "Shiroka Luka, 20 percre Pamporovótól — építészet, néphagyományok, múzeum. Kombinálja egy éjszakai szállással a Pamporovo Villa-ban.",
-    "seoKeywords": "Shiroka Luka, Pamporovo, Rodope-hegység, népkultúra"
+    "seoKeywords": "Shiroka Luka, Pamporovo, Rodope-hegység, népkultúra",
+    "eyebrow": "Látnivalók",
+    "intro": "16 km-re Pamporovótól — a nemzeti újjászületés korszakából származó házak, dudásiskola és az éves kuker-fesztivál. Kihagyhatatlan megálló a Rodopokban.",
+    "sections": [
+      {
+        "heading": "Hogyan tervezzük meg a napot",
+        "paragraphs": [
+          "Reggeli séta a faluban, ebéd a vendéglőben, majd vissza a nyaralóba egy esti barbecue-ra — egy klasszikus rodopi nap."
+        ]
+      }
+    ]
   },
   "eco-pateki": {
     "h1": "Ökológiai túraútvonalak Pamporovo környékén",
     "seoTitle": "Öko-túraútvonalak Pamporovóban | Kanyon, tavak, útvonalak 2026",
-    "seoDescription": "Ökológiai túraútvonalak Pamporovóból: vízesések, tavak, családi útvonalak. Szálláslehetőség — villa konyhával és grillezési lehetőséggel, 110 €/éjszaka áron.",
-    "seoKeywords": "Öko-túraútvonalak Pamporovóban, túrázás a Rodopokban, vízesések"
+    "seoDescription": "Ökológiai túraútvonalak Pamporovóból: vízesések, tavak, családi útvonalak. Szálláslehetőség — villa konyhával és grillezési lehetőséggel, 110 €/éjszaka.",
+    "seoKeywords": "Öko-túraútvonalak Pamporovóban, túrázás a Rodopokban, vízesések",
+    "eyebrow": "Öko · útvonalak",
+    "intro": "A vízesések kanyonja, a szmolyáni tavak, a Nevyasta, az Orpheus-sziklák — a legjobb ökotúra-útvonalak, amelyek egy-két napos kirándulásra alkalmasak az üdülőhelyről.",
+    "sections": [
+      {
+        "heading": "Legnépszerűbb útvonalak",
+        "paragraphs": [
+          "A vízesések kanyonja — 46 vízesés, köztük a 68 méter magas Orpheus. A szmolyáni tavak — könnyű családi túraútvonal a Snezhanka alatt."
+        ]
+      }
+    ]
   },
   "kak-da-stignem": {
     "h1": "Hogyan jutok el Pamporovóba?",
     "seoTitle": "Hogyan jutok el Pamporovóba | Szófiából, Plovdivból, térkép",
-    "seoDescription": "Útvonal Pamporovóba autóval: Szófia, Plovdiv, Szmolyán. A Pamporovo Villa — Райковски ливади címe, GPS-koordináták.",
-    "seoKeywords": "Hogyan jutok el Pamporovóba, útvonal Szófia–Pamporovo, útvonal"
+    "seoDescription": "Útvonal Pamporovóba autóval: Szófia, Plovdiv, Szmolyán. A Pamporovo Villa — Raykovski Livadi címe, GPS-koordináták.",
+    "seoKeywords": "Hogyan jutok el Pamporovóba, útvonal Szófia–Pamporovo, útvonal",
+    "eyebrow": "Utazás",
+    "intro": "Szófiától ~240 km (3–3,5 óra), Plovdivtól ~85 km, Smolyanból ~15 km. Útvonalak, téli tippek és navigációs útmutató a Raykovski Livadi-hoz.",
+    "sections": [
+      {
+        "heading": "Autóval",
+        "paragraphs": [
+          "Szófiából: az A1/A3-as úton Plovdiv felé, majd Asenovgrad–Smolyan–Pamporovo. Télen ellenőrizzék az útviszonyokat, és vigyenek magukkal hóláncot.",
+          "GPS-koordináták a nyaralókhoz: Raykovski Livadi, Pamporovo üdülőhely — Google Maps „Pamporovo Villa“."
+        ]
+      }
+    ]
   },
   "vila-za-dvoika": {
     "h1": "Villa két fő részére Pamporovóban",
     "seoTitle": "Villa két fő részére Pamporovo | Romantikus pihenés, kandalló",
-    "seoDescription": "Béreljen villát két fő részére Pamporovóban — magánház, kandalló, grillező. Pamporovo Villa — 110 €/éjszaka-tól az egész villa bérléséért.",
-    "seoKeywords": "kétágyas villa Pamporovóban, romantikus nyaralás, villa pároknak"
+    "seoDescription": "Béreljen villát két fő részére Pamporovóban — magánház, kandalló, grillező. Pamporovo Villa — 110 €/éjszaka-tól az egész villaért.",
+    "seoKeywords": "kétágyas villa Pamporovóban, romantikus nyaralás, villa pároknak",
+    "eyebrow": "Bérlés · párok",
+    "intro": "Romantikus hegyvidéki nyaralás — egy egész villa csak kettőtöknek, kandallóval, grillezővel és csenddel a Raykovski Livadi-ban, 2 km-re az üdülőhelytől.",
+    "sections": [
+      {
+        "heading": "Miért egy nyaraló, és nem egy szoba?",
+        "paragraphs": [
+          "Meghittség, kandalló és saját veranda – szomszédok nélkül. A villa áráért fizet, nem fejenként; egy különleges alkalomra megéri."
+        ]
+      }
+    ]
   },
   "vila-za-grupa": {
     "h1": "6 fő részére alkalmas villa Pamporovóban",
     "seoTitle": "6 fő részére alkalmas villa Pamporovóban | Csoport, teljes ház",
-    "seoDescription": "6 fő részére bérelhető nyaraló Pamporovóban — Pamporovo Villa, 2 hálószoba, grillezési lehetőség, 110 €/éjszaka-tól. Ideális baráti társaságok számára.",
-    "seoKeywords": "6 fős villa Pamporovóban, csoportos villa, baráti ház"
+    "seoDescription": "6 fő részére bérelhető nyaraló Pamporovóban — Pamporovo Villa, 2 hálószoba, grillezési lehetőség, 110 €-tól/éjszaka. Ideális baráti társaságok számára.",
+    "seoKeywords": "6 fős villa Pamporovóban, csoportos villa, baráti ház",
+    "eyebrow": "Bérlés · csoportok",
+    "intro": "Egy egész ház baráti társaság vagy család számára — legfeljebb 6 vendég, 2 hálószoba, kandallós nappali, grillező és parkoló. Szükség esetén — két egymás mellett álló villa.",
+    "sections": [
+      {
+        "heading": "Ár személyenként",
+        "paragraphs": [
+          "6 vendég esetén és 120 €/éjszaka áron a villa ára 20 €/fő/éjszaka lesz — ami gyakran kedvezőbb, mint egy félpanziós szálloda."
+        ]
+      }
+    ]
   },
   "naem-lqto": {
     "h1": "Nyári nyaraló bérlés Pamporovóban",
     "seoTitle": "Nyári villa bérlés Pamporovóban | 110 €-tól/éjszaka",
-    "seoDescription": "Béreljen nyaralót Pamporovóban — ökotúrák, grillezés, 110 €-tól/éjszaka. Pamporovo Villa a Райковски ливади-ban.",
-    "seoKeywords": "nyári villa bérlés, nyári villa Pamporovóban, hegyi villa nyáron"
+    "seoDescription": "Béreljen nyaralót Pamporovóban — ökotúrák, grillezés, 110 €-tól/éjszaka. Pamporovo Villa a Raykovski Livadi-ban.",
+    "seoKeywords": "nyári nyaraló bérlés, nyári nyaraló Pamporovóban, hegyi nyaraló nyáron",
+    "eyebrow": "Nyári bérlés",
+    "intro": "Alacsonyabb árak, hűvös idő és barbecue-estek — a nyári bérlés ára 110 €/éjszaka-tól kezdődik egy teljes villa esetében (5 éjszaka felett).",
+    "sections": [
+      {
+        "heading": "Mit tartalmaz",
+        "paragraphs": [
+          "2 hálószoba, konyha, kandalló (a hűvösebb estékre), grillezővel ellátott terasz, Wi-Fi, parkoló — az egész villa csak az Önöké."
+        ]
+      }
+    ]
   },
   "rajkovski-livadi": {
-    "h1": "Райковски ливади — nyaraló bérlése",
-    "seoTitle": "Райковски ливади bérlés | Pamporovo-i nyaralók — Pamporovo Villa",
-    "seoDescription": "Villa bérlés a Райковски ливади területén, Pamporovo — 3 magánvilla, 2 km-re az üdülőhelytől, kandalló, grillező. Online foglalás.",
-    "seoKeywords": "Райковски ливади, villa bérlés, Pamporovo Villa cím"
+    "h1": "Raykovski Livadi — nyaraló bérlése",
+    "seoTitle": "Raykovski Livadi bérlés | Pamporovo-i nyaralók — Pamporovo Villa",
+    "seoDescription": "Villa bérlés a Raykovski Livadi területén, Pamporovo — 3 magánvilla, 2 km-re az üdülőhelytől, kandalló, grillező. Online foglalás.",
+    "seoKeywords": "Raykovski Livadi, villa bérlés, Pamporovo Villa cím",
+    "eyebrow": "Helyszín",
+    "intro": "Csendes fenyveses környék, 2 km-re Pamporovo központjától — itt találhatók a Pamporovo Villa három nyaralója, parkolóval és a sípályák közelében.",
+    "sections": [
+      {
+        "heading": "Miért Raykovski Livadi",
+        "paragraphs": [
+          "Nyugalom a fenyvesek között, távol a belvárosi nyüzsgéstől, mégis csak pár perces autóútra a felvonóktól és a vendéglőktől."
+        ]
+      }
+    ]
   },
   "naem-ot-110-evro": {
     "h1": "110 €/éjszaka áron bérelhető nyaraló Pamporovóban",
     "seoTitle": "110 €-tól elérhető villa Pamporovóban | Árak, szezonok, foglalás",
     "seoDescription": "Villa bérlés Pamporovóban 110 €/éjszaka áron — teljes villa, maximum 6 vendég számára. Hivatalos árak Pamporovo Villa.",
-    "seoKeywords": "villa 110 euró, olcsó villa Pamporovóban, bérleti díj"
+    "seoKeywords": "villa 110 euró, olcsó villa Pamporovóban, bérleti díj",
+    "eyebrow": "Árak · bérleti díj",
+    "intro": "A nyári árak hosszabb tartózkodás esetén 110 €-tól kezdődnek az egész villa bérlésére (legfeljebb 6 vendég számára). Az árazás a következőképpen működik.",
+    "sections": [
+      {
+        "heading": "Árszintek",
+        "paragraphs": [
+          "3 éjszakáig — magasabb éjszakai ár. 4–5 éjszaka — közbenső ár. 5 éjszakánál több nyáron — 110 €-tól. Télen — 120 €-tól. Deluxe +10/+20 €."
+        ]
+      }
+    ]
   },
   "semeen-otpusk": {
     "h1": "Családi sínyaralás Pamporovóban",
     "seoTitle": "Családi sínyaralás Pamporovóban | Villa gyerekekkel",
     "seoDescription": "Családi síüdülés Pamporovóban — 2 hálószobás villa, konyhával, kandallóval, maximum 6 vendég számára. Ajánlatok és foglalás — Pamporovo Villa.",
-    "seoKeywords": "családi sínyaralás, nyaraló gyerekekkel Pamporovóban, családi nyaralás Pamporovóban"
+    "seoKeywords": "családi sínyaralás, nyaraló gyerekekkel Pamporovóban, családi nyaralás Pamporovóban",
+    "eyebrow": "Családok · síelés",
+    "intro": "Zöld pályák, gyermekparkok, kandalló a síelés után — tervezzék meg a családi téli nyaralást egy egész villában a Raykovski Livadi-ban.",
+    "sections": [
+      {
+        "heading": "Miért éppen egy családi nyaraló?",
+        "paragraphs": [
+          "Reggelihez alkalmas konyha, sífelszerelés tárolására alkalmas hely, este kandalló — a szállodai szoba szűk egy gyermekes család számára.",
+          "A 6-os pálya ideális a kezdők számára — 2 km-re a nyaralóktól."
+        ]
+      }
+    ]
   },
   "praznici": {
     "h1": "Karácsony és újév Pamporovóban — kandallós nyaraló",
     "seoTitle": "Karácsony és újév Pamporovo 2026 | Kandallós villa bérlése",
     "seoDescription": "Ünnepi pihenés Pamporovóban — teljes villa bérlése kandallóval, grillezővel, maximum 6 vendég számára. Karácsony, újév, húsvét. Pamporovo Villa 120 €/éjszaka-tól.",
-    "seoKeywords": "Karácsony Pamporovóban, újévi nyaraló, ünnepek Pamporovóban, kandallós nyaraló"
+    "seoKeywords": "Karácsony Pamporovóban, újévi nyaraló, ünnepek Pamporovóban, kandallós nyaraló",
+    "eyebrow": "Ünnepek · Pamporovo",
+    "intro": "Az ünnepi napok a hegyekben varázslatosak — hó, kandalló és egy egész nyaraló kizárólag a ti társaságotok számára. Foglaljatok időben karácsonyra, újévre és húsvétra.",
+    "sections": [
+      {
+        "heading": "Miért egy nyaraló, és nem egy szálloda az ünnepekre?",
+        "paragraphs": [
+          "Az ünnepek alatt a szállodák tele vannak és nyüzsgőek. Egy magánvilla kandallóval, saját étkezővel és helyet biztosít a gyerekeknek és a barátoknak — anélkül, hogy a büfénél sorba kellene állni.",
+          "A Pamporovo Villa 3 villát kínál a Raykovski Livadi-ban — 2 km-re az üdülőhelytől, elég közel a sípályákhoz, és elég csendes a család számára."
+        ],
+        "bullets": [
+          "Kandalló és grill",
+          "A villában legfeljebb 6 vendég szállhat meg",
+          "Foglalás: pamporovovilla.com/#booking"
+        ]
+      }
+    ]
   },
   "team-building": {
     "h1": "Csapatépítő program Pamporovóban — nyaralók legfeljebb 18 fős csapatok számára",
-    "seoTitle": "Csapatépítő programok Pamporovóban | Nyaralók 18 főig",
-    "seoDescription": "Vállalati csapatépítő program Pamporovóban — 3 villa, összesen legfeljebb 18 vendég, grill, kandalló, parkoló. Télen: síelés. Nyáron: ökotúrák. Pamporovo Villa.",
-    "seoKeywords": "csapatépítő program Pamporovo, céges kirándulás, csoportos nyaraló"
+    "seoTitle": "Csapatépítő programok Pamporovóban | Nyaralók 18 fős csoportok számára",
+    "seoDescription": "Vállalati csapatépítő program Pamporovóban — 3 villa, összesen legfeljebb 18 vendég, grillezési lehetőség, kandalló, parkoló. Télen: síelés. Nyáron: ökotúrák. Pamporovo Villa.",
+    "seoKeywords": "csapatépítő program Pamporovo, céges kirándulás, csoportos nyaraló",
+    "eyebrow": "Vállalati · csoportok",
+    "intro": "Három különálló villa egy címen — ideális céges csapatépítő programhoz, síhétvégéhez vagy nyári hegyi találkozóhoz. Béreljen 1, 2 vagy 3 villát az egész csapat számára.",
+    "sections": [
+      {
+        "heading": "Hogyan működik csapatok esetében?",
+        "paragraphs": [
+          "Minden villa önálló — 2 hálószoba, 2 fürdőszoba, maximum 6 vendég. Kombináljon 2–3 villát egy részleg vagy az egész csapat számára egy címen, közös parkolóval és grillezőhelyekkel.",
+          "Télen: síelés több mint 37 km-es pályákon. Nyáron: természeti túraútvonalak, barlangok és csapatépítő programok a régióban."
+        ]
+      }
+    ]
   },
   "dalga-pochivka": {
     "h1": "Hosszú távú bérlés Pamporovóban — 7 vagy több éjszaka egy magánvillában",
     "seoTitle": "Hosszú távú villa bérlés Pamporovóban | 7+ éjszaka, teljes villa",
     "seoDescription": "Villa bérlés Pamporovóban 7 vagy több éjszakára — teljes villa maximum 6 vendég számára, kandallóval, grillezővel. Vegye fel velünk a kapcsolatot egyedi ajánlatért — Pamporovo Villa.",
-    "seoKeywords": "hosszú távú bérlés Pamporovóban, nyaraló egy hétre, havi bérlés a hegyekben"
+    "seoKeywords": "hosszú távú bérlés Pamporovóban, nyaraló egy hétre, havi bérlés a hegyekben",
+    "eyebrow": "Bérlés · kedvezmények",
+    "intro": "Egy héttől kezdve a hegyvidéki nyaralás egy egész nyaralóban költséghatékonyabb — konyha, tágas tér és nyugalom, szállodai díjak nélkül.",
+    "sections": [
+      {
+        "heading": "Kinek ajánlott",
+        "paragraphs": [
+          "Családok, távmunkások és csoportok, akik hosszabb időre keresnek szállást a hegyekben. Minden villa teljesen berendezett és konyhával rendelkezik.",
+          "7 éjszakánál hosszabb tartózkodás esetén — vegye fel velünk a kapcsolatot egy személyre szabott ajánlatért: +359 879 501 660 vagy pamporovovilla@gmail.com."
+        ]
+      }
+    ]
   },
   "oferti": {
     "h1": "Villa-bérlési ajánlatok Pamporovóban",
     "seoTitle": "Pamporovo-i villaajánlatok 2026 | 110 €-tól/éjszaka — Pamporovo Villa",
-    "seoDescription": "Hivatalos nyaraló-bérleti ajánlatok Pamporovóban — nyári és téli árak, teljes nyaraló, legfeljebb 6 vendég számára. Online foglalás a pamporovovilla.com oldalon.",
-    "seoKeywords": "ajánlatok Pamporovo, villa-akció, villa-bérleti árak"
+    "seoDescription": "Hivatalos nyaraló-bérleti ajánlatok Pamporovóban — nyári és téli árak, teljes nyaraló, maximum 6 vendég. Online foglalás a pamporovovilla.com oldalon.",
+    "seoKeywords": "ajánlatok Pamporovo, villa-akció, villa-bérleti árak",
+    "eyebrow": "Ajánlatok · Pamporovo Villa",
+    "intro": "A Raykovski Livadi három villájának aktuális árai és szezonális feltételei. Nyáron 110 €/éjszaka, télen 120 €/éjszaka — egy teljes villa 6 vendégig.",
+    "sections": [
+      {
+        "heading": "Árkeret",
+        "paragraphs": [
+          "Nyári szezon: 110 €-tól/éjszaka a teljes villa bérléséért. Téli szezon: 120 €-tól/éjszaka. Ünnepi időszakok (karácsony, újév) — kérésre.",
+          "Az ár tartalmazza: a teljes villát, legfeljebb 6 vendég számára, kandallót, grillezőt, parkolót, Wi‑Fi-t."
+        ],
+        "bullets": [
+          "Foglalás: /#booking",
+          "Hivatalos oldal: /rent",
+          "Telefon: +359 879 501 660"
+        ]
+      }
+    ]
   },
   "liftove": {
     "h1": "Felvonók Pamporovóban — 6 létesítmény a Snezhanka felé",
     "seoTitle": "Pamporovo felvonók 2026 | Kapacitás, útvonalak, térkép",
     "seoDescription": "Pamporovo összes felvonója: Stoykite, Studenets, Malina, Smolyan-tavak. Kapacitás és hossz. Szállás: villa 2 km-re a központtól.",
-    "seoKeywords": "Pamporovo felvonói, a Snezhanka sífelvonó, Pamporovo befogadóképessége"
+    "seoKeywords": "Pamporovo felvonói, a Snezhanka sífelvonó, Pamporovo befogadóképessége",
+    "eyebrow": "Síelés · infrastruktúra",
+    "intro": "Hat felvonó köti össze az üdülőhelyet a Snezhanka-csúccsal (1926 m). Az összkapacitás óránként több mint 13 000 síelő — tervezze meg a napját a sípályákon!",
+    "sections": [
+      {
+        "heading": "Tippek a felvonókhoz",
+        "paragraphs": [
+          "A legnagyobb felvonó a Stoykite és a Snezhanka között közlekedik — 2992 m, 2400 fő/óra. A Studenec-en átvezető fő összeköttetés reggel a legforgalmasabb — induljanak Malinából, ha déli oldalon szálltak meg.",
+          "Egy nap a sípályákon után — kandallós nyaraló 2 km-re, sorban állás nélkül a recepción."
+        ]
+      }
+    ]
   },
   "rozhen": {
     "h1": "NAO „Rozhen” — Pamporovo közelében található obszervatórium",
     "seoTitle": "A Rozen obszervatórium Pamporovóból | 18 km, látogatások",
     "seoDescription": "Hogyan juthat el a Rozeni Nemzeti Obszervatóriumhoz Pamporovóból — 25 perc autóval, 2 méteres távcső, Rozeni Fesztivál. Bázis: Pamporovo Villa.",
-    "seoKeywords": "Rozhen Obszervatórium, NAO Rozhen, Pamporovo kirándulások"
+    "seoKeywords": "Rozhen Obszervatórium, NAO Rozhen, Pamporovo kirándulások",
+    "eyebrow": "Látnivalók",
+    "intro": "Pamporovótól 18 km-re — a Balkán legnagyobb csillagászati obszervatóriuma, 1750 m magasságban. Nappali látogatások és éjszakai megfigyelések előzetes foglalás alapján.",
+    "sections": [
+      {
+        "heading": "Gyakorlati",
+        "paragraphs": [
+          "Kombinálja a Roženski-mezők látogatásával és egy ebéddel a környéken. Este — kandalló a Raykovski Livadi-ban található villában."
+        ]
+      }
+    ]
   },
   "chudnite-mostove": {
-    "h1": "A csodálatos hidak – egynapos kirándulás Pamporovóból",
+    "h1": "A csodálatos hidak — egynapos kirándulás Pamporovóból",
     "seoTitle": "Pamporovo csodálatos hídjai | 42 km, útvonal",
-    "seoDescription": "Kirándulás a Csodás hidakhoz Pamporovóból — 1 óra autóval, sétaút az ívek alatt. Nyaraló bérlése kiindulópontként — Pamporovo Villa.",
-    "seoKeywords": "A csodálatos hidak, a Rodop-hegység, kirándulás Pamporovóba"
+    "seoDescription": "Kirándulás a Csodás hidakhoz Pamporovóból — 1 óra autóval, séta az ívek alatt. Nyaraló bérlése kiindulópontként — Pamporovo Villa.",
+    "seoKeywords": "A csodálatos hidak, a Rodop-hegység, kirándulás Pamporovóba",
+    "eyebrow": "Természet · Rodopok",
+    "intro": "42 km-re található óriási márványívek – a 100 legnépszerűbb nemzeti turisztikai látványosság egyike. Tökéletes kiegészítője egy nyári vagy őszi hegyvidéki nyaralásnak.",
+    "sections": [
+      {
+        "heading": "Tanács",
+        "paragraphs": [
+          "Induljanak el korán — augusztusban gyorsan megtelik a parkoló. A hidak alatti ösvényhez jól tapadó cipőre lesz szükségük."
+        ]
+      }
+    ]
   },
   "dyavolskoto-garlo": {
     "h1": "Az Ördögtorok — 42 méteres földalatti vízesés",
     "seoTitle": "A Pamporovo-i Ördögtorok | Távolság, túra",
     "seoDescription": "Kirándulás Pamporovóból az Ördög-torokhoz — 1 óra 20 perc, 301 lépcsőfok, a Zúgóterem. Kiindulási pont: Pamporovo Villa villa.",
-    "seoKeywords": "Az Ördög-torok, Trigrad, a Rodope-hegység barlangjai"
+    "seoKeywords": "Az Ördög-torok, Trigrád, a Rodope-hegység barlangjai",
+    "eyebrow": "Barlangok · legendák",
+    "intro": "Pamporovótól 55 km-re — egy szakadékbarlang, amelyben a Balkán legmagasabb földalatti vízesése található. Orpheusz és Eurüdiké legendája.",
+    "sections": [
+      {
+        "heading": "Kombinálja a következőkkel:",
+        "paragraphs": [
+          "A Trigradi-szoros és Trigrad falu — egy egész nap az üdülőhelyen kívül, este pedig a villa kandallója mellett."
+        ]
+      }
+    ]
   },
   "trigradsko-zhdrelo": {
-    "h1": "A Trigradi-szurdok — egy látványos kanyon a Rodopokban",
+    "h1": "A Trigradi-szurdok — egy látványos kanyon a Rodop-hegységben",
     "seoTitle": "A Trigrad-szoros Pamporovóból | Útvonal, tippek",
     "seoDescription": "Hogyan juthat el a Trigradi-szurdokhoz Pamporovóból — 1 óra 15 perc, az Ördög-szurdokkal kombinálva. Pamporovo Villa.",
-    "seoKeywords": "A Trigradi-szurdok, Trigrad, a Rodope-kanyon"
+    "seoKeywords": "A Trigradi-szurdok, Trigrad, a Rodope-kanyon",
+    "eyebrow": "Kanyon · Trigrad",
+    "intro": "Egy, akár 250 méter magas meredek sziklák között kanyargó országút – Bulgária egyik legfotogénebb útvonalai közé tartozik, 53 km-re Pamporovótól.",
+    "sections": [
+      {
+        "heading": "Autóvezetés",
+        "paragraphs": [
+          "Hegyi út — vezessen óvatosan, és használja a kanyarokat. Legjobb reggel, a forgalom megnövekedése előtt."
+        ]
+      }
+    ]
   },
   "uhlovitsa": {
     "h1": "Az Uhlovica-barlang — kővízesések Pamporovo közelében",
     "seoTitle": "Az Uhloivica-barlang Pamporovóban | 32 km, körút",
-    "seoDescription": "Kirándulás Pamporovóból Uhlovica felé — 45 perc autóval, 30 perc séta. Az Agushev konakok közelében. Pamporovo Villa.",
-    "seoKeywords": "Uhlovica, a Mogilica-barlang, a Pamporovo-barlangok"
+    "seoDescription": "Kirándulás Pamporovóból Uhlovica felé — 45 perc autóval, 30 perc séta. Az Agushev-konakok közelében. Pamporovo Villa.",
+    "seoKeywords": "Uhlovica, a Mogilica-barlang, a Pamporovo-barlangok",
+    "eyebrow": "Barlangok",
+    "intro": "32 km-re — Bulgária egyik legszebb barlangja, kalcit- és korallképződményekből álló kaszkádokkal. 30 perc sétára a parkolótól.",
+    "sections": [
+      {
+        "heading": "Előkészítés",
+        "paragraphs": [
+          "Hőmérséklet ~8 °C — vékony kabát. Kényelmes cipő a parkolótól a sétányig vezető útra."
+        ]
+      }
+    ]
   },
   "kanion-vodopadi": {
     "h1": "A vízesések kanyonja — 46 vízesés Pamporovo közelében",
     "seoTitle": "A Pamporovo-i vízesések kanyonja | Ökotúra",
-    "seoDescription": "Pamporovo vízeséseinek kanyonja öko-ösvény — 6 km-es útvonal, 46 vízesés. Nyári táborhely: Pamporovo Villa villa.",
-    "seoKeywords": "Kanyon-vízesések, öko-túraútvonal, Szmoljan, Rodopok"
+    "seoDescription": "Pamporovo vízeséseinek kanyonja öko-túraút – 6 km-es útvonal, 46 vízesés. Nyári szálláshely: Pamporovo Villa villa.",
+    "seoKeywords": "Kanyon-vízesések, öko-túraútvonal, Szmoljan, Rodopok",
+    "eyebrow": "Eco · Szmolyan",
+    "intro": "Smolyan városától 15 km-re található a Rodop-hegység leglenyűgözőbb öko-túraútvonala, ahol megcsodálható a 68 méter magas „Orpheus” vízesés és a 1800 m magasságból nyíló panoráma.",
+    "sections": [
+      {
+        "heading": "Útvonal",
+        "paragraphs": [
+          "Körülbelül 4 óra egy 6 km-es körútvonalon. Vigyenek magukkal vizet, és induljanak el reggel — délután nagy lehet a forgalom."
+        ]
+      }
+    ]
   },
   "smolyanski-ezera": {
     "h1": "A szmoljáni tavak — egy könnyű séta Pamporovóból",
-    "seoTitle": "A szmolyani tavak Pamporovóból | Útvonal, tippek",
+    "seoTitle": "A smoliani tavak Pamporovóból | Útvonal, tippek",
     "seoDescription": "Ökológiai kirándulás Pamporovóból a szmolyáni tavakhoz — könnyű útvonal, családoknak, horgászat. Nyaraló bérlés — Pamporovo Villa.",
-    "seoKeywords": "A szmolyani tavak, az öko-Pamporovo, a hegyi tavak"
+    "seoKeywords": "A szmolyani tavak, az öko-Pamporovo, a hegyi tavak",
+    "eyebrow": "Öko · tavak",
+    "intro": "„A Rodopok smaragdszemű tavi” — természetes tavak a Snezhanka alatt. Családi túra, piknik és felvonóval a csúcsra.",
+    "sections": [
+      {
+        "heading": "Családok számára",
+        "paragraphs": [
+          "Gyerekeknek ideális — rövid útvonal és piknikezőhelyek a tavak között."
+        ]
+      }
+    ]
   },
   "nevyastata": {
     "h1": "„Nevyasta” ökoösvény — panoráma Smolyanra",
     "seoTitle": "A Pamporovóból induló „Nevyasta” öko-túraút | Panorama, trolibusz",
     "seoDescription": "„Nevyastata” ökoösvény Pamporovóból — 900 m-es útvonal, panoráma, trolibusz. Nyári pihenés — Pamporovo Villa.",
-    "seoKeywords": "Nevyasta, öko-túraút, Szmolyan, Rodopok"
+    "seoKeywords": "Nevyasta, öko-túraút, Szmolyan, Rodopok",
+    "eyebrow": "Öko · panoráma",
+    "intro": "Rövid túraútvonal a „Nevyastata” sziklához, alpesi kötélpályával és legendával — 12 km-re Szmolyántól, minden korosztály számára alkalmas.",
+    "sections": [
+      {
+        "heading": "Tanács",
+        "paragraphs": [
+          "Kombinálja ezt egy smoliani ebéddel és a planetárium meglátogatásával."
+        ]
+      }
+    ]
   },
   "orpheus-rocks": {
     "h1": "Orpheus-sziklák — túraútvonal a Snezhanka-csúcsról",
     "seoTitle": "Orpheus-sziklák Pamporovóban | Útvonal a Snezhanka felől",
     "seoDescription": "Hegyi útvonal: Orpheus-sziklák a Snezhanka-csúcsról — panoráma, az Iglyte-hegyek. Kiindulási pont: Pamporovo Villa.",
-    "seoKeywords": "Orpheus-sziklák, Hófehérke, hegyi túraútvonal"
+    "seoKeywords": "Orpheus-sziklák, Hófehérke, hegyi túraútvonal",
+    "eyebrow": "Eco · Hófehérke",
+    "intro": "Riolit kőzetjelenségek, kilátással a szmolyáni tavakra — jelzett ösvény a csúcsról, körülbelül 4 óra, könnyű nehézségi fokozat.",
+    "sections": [
+      {
+        "heading": "Mikor",
+        "paragraphs": [
+          "A legjobb időszak július–augusztus — az út mentén áfonya terem, és a hegygerincen stabil az időjárás."
+        ]
+      }
+    ]
   },
   "momchilovtsi": {
     "h1": "Momčilovci — a hosszú élet falva Pamporovo közelében",
-    "seoTitle": "A pamporovói Momčilovci | 25 km, falu, vendéglő",
+    "seoTitle": "A Pamporovói fiúk | 25 km, falu, vendéglő",
     "seoDescription": "Kirándulás Pamporovóból Momčilovciba — 30 perc, hosszú élet, joghurt. Nyaraló bérlés — Pamporovo Villa.",
-    "seoKeywords": "Momčilovci, a Rodop-hegység falvai, joghurt"
+    "seoKeywords": "Momčilovci, a Rodop-hegység falvai, joghurt",
+    "eyebrow": "Falvak · Rodopok",
+    "intro": "25 km-re — híres a joghurtjáról, a panorámájáról és az autentikus vendéglőiről. Augusztusban joghurtfesztivált rendeznek.",
+    "sections": [
+      {
+        "heading": "Mit érdemes kipróbálni",
+        "paragraphs": [
+          "Házi joghurt és rodópi ételek egy vendéglőben — ideális ebéd egy séta után."
+        ]
+      }
+    ]
   },
   "gela": {
     "h1": "Gela — Orpheusz faluja a Rodopokban",
     "seoTitle": "Gela Pamporovóból | Orpheus, dudás fesztivál",
     "seoDescription": "Kirándulás Pamporovóból Gela faluba — 30 perc, Orpheus, dudásfesztivál. Villa bérlés — Pamporovo Villa.",
-    "seoKeywords": "Gela, Orpheus, rodópi népdalok"
+    "seoKeywords": "Gela, Orpheus, rodópi népdalok",
+    "eyebrow": "Falvak · Orpheus",
+    "intro": "22 km-re — az egyik legrégebbi falu, Orpheusz-legenda szülőhelye. Minden augusztus első vasárnapján nemzetközi dudásfesztivál kerül megrendezésre.",
+    "sections": [
+      {
+        "heading": "Esemény",
+        "paragraphs": [
+          "Augusztus — több száz dudás a réten. Erre az időszakra érdemes időben lefoglalni a nyaralót."
+        ]
+      }
+    ]
   },
   "smolyan": {
     "h1": "Szmoljan — a Pamporovo-i planetárium és múzeumok",
     "seoTitle": "Szmoljan Pamporovóból | Planetárium, múzeumok, 20 perc",
     "seoDescription": "Kirándulás Pamporovóból Szmolyánba — planetárium, múzeumok, Rajkovo. Szállás: Pamporovo Villa 110 €/éjszaka-tól.",
-    "seoKeywords": "Szmoljan, planetárium, Rodopi Múzeum"
+    "seoKeywords": "Szmoljan, planetárium, Rodopi Múzeum",
+    "eyebrow": "Város · kultúra",
+    "intro": "15 km-re található Bulgária legnagyobb planetáriuma, a történelmi múzeum, valamint a Raikovo és Ustovo nevű régi városrészek.",
+    "sections": [
+      {
+        "heading": "Gyerekeknek",
+        "paragraphs": [
+          "A planetárium látogatása kötelező a gyermekcsoportok számára — kérjük, előre foglaljanak időpontot."
+        ]
+      }
+    ]
   },
   "nochno-karane": {
     "h1": "Éjszakai síelés Pamporovóban — a „Stenata” pálya",
     "seoTitle": "Éjszakai síelés Pamporovo 2026 | A fal, menetrend",
     "seoDescription": "Éjszakai síelés a „Stenata” pályán Pamporovóban — menetrend, sítérkép, szállás 2 km-re — Pamporovo Villa.",
-    "seoKeywords": "éjszakai síelés Pamporovóban, Éjszakai fal, éjszakai síelés"
+    "seoKeywords": "éjszakai síelés Pamporovóban, Éjszakai fal, éjszakai síelés",
+    "eyebrow": "Síelés · éjszaka",
+    "intro": "Az egyetlen kivilágított pálya az éjszakai síeléshez — a szezonban általában 17:30–22:00 között. Az üdülőhely szimbóluma a reflektorok fényében.",
+    "sections": [
+      {
+        "heading": "A pályák után",
+        "paragraphs": [
+          "Vacsora kandallós villában — 2 km-re az üdülőhelytől. Nincs szállodai zaj az éjszakai motorozás után."
+        ]
+      }
+    ]
   },
   "stenata": {
     "h1": "„A Fal” pálya — fekete pálya és éjszakai síelés",
     "seoTitle": "A Pamporovo-fal | Fekete pálya, éjszakai síelés",
-    "seoDescription": "A „Stenata” sípálya, Pamporovo — 1258 m, fekete, éjszakai síelés. Вила 2 km — Pamporovo Villa.",
-    "seoKeywords": "A fal, a fekete pálya Pamporovóban, éjszakai síelés"
+    "seoDescription": "A „Stenata” sípálya, Pamporovo — 1258 m, fekete, éjszakai síelés. Villa 2 km — Pamporovo Villa.",
+    "seoKeywords": "A fal, a fekete pálya Pamporovóban, éjszakai síelés",
+    "eyebrow": "Síelés · fekete",
+    "intro": "1258 m hosszú fekete pálya — európai versenyek helyszíne. Éjszakai síelés és Bulgária egyik legfotogénebb lesiklópályája.",
+    "sections": [
+      {
+        "heading": "Kinek",
+        "paragraphs": [
+          "Csak haladóknak — a kezdők válasszanak zöld és kék pályákat a /pamporovo/pisti táblázatból."
+        ]
+      }
+    ]
   },
   "vruh-snezhanka": {
     "h1": "A Snezhanka-csúcs — 1926 m, a sípályák legmagasabb pontja",
     "seoTitle": "Snezhanka-csúcs, Pamporovo | 1926 m, felvonó, panoráma",
     "seoDescription": "Snezhanka-csúcs, Pamporovo — 1926 m, Stoykite felvonó, fekete pályák. Nyaraló bérlés — Pamporovo Villa.",
-    "seoKeywords": "Snezhanka, Pamporovo-csúcs, síterep"
+    "seoKeywords": "Snezhanka, Pamporovo-csúcs, síterep",
+    "eyebrow": "Síelés · csúcs",
+    "intro": "A síterep legmagasabb pontja — 1926 m, kilátás a Rodop-hegységre és felvonók minden irányból.",
+    "sections": [
+      {
+        "heading": "Tanács",
+        "paragraphs": [
+          "Napkeltekor a nap kevésbé zsúfolt — kávé a csúcson, majd lefelé a Malina felé."
+        ]
+      }
+    ]
   },
   "ski-karti": {
     "h1": "Síbérletek és felvonók Pamporovóban — gyakorlati útmutató",
     "seoTitle": "Pamporovo síbérletek 2026 | Árak, hol lehet megvásárolni",
     "seoDescription": "Pamporovo síbérlet — hol lehet megvásárolni, napi és szezonbérletek, felvonók. Villa-szállás — Pamporovo Villa.",
-    "seoKeywords": "Pamporovo síbérlet, síbérlet, sífelvonó árak"
+    "seoKeywords": "Pamporovo síbérlet, síbérlet, sífelvonó árak",
+    "eyebrow": "Síelés · gyakorlati tudnivalók",
+    "intro": "A felvonójegyeket Studenecben és Malinában lehet megvásárolni. A legfrissebb árakról és a szezonbeli bérletekről a pamporovo.me oldalon tájékozódhatnak.",
+    "sections": [
+      {
+        "heading": "Takarítson meg",
+        "paragraphs": [
+          "Egy teljes, konyhával felszerelt villa bérlése csökkenti a szállásköltségeket — így több pénz marad a síelésre és az éttermekre."
+        ]
+      }
+    ]
   },
   "bunovsko-zhdrelo": {
     "h1": "A Buynovsko-szurdok — a Yagodinszka-barlang mellett",
     "seoTitle": "A Buynovsko-szurdok Pamporovótól | A Yagodinszka-barlang",
-    "seoDescription": "A Pamporovótól induló Buynovsko-szurdok — 50 km, a Yagodinszka-barlang, ökotúra. Villa bérlés — Pamporovo Villa.",
-    "seoKeywords": "A Buynovsko-szurdok, a Yagodinska-barlang, a Rodopei-szurdokok"
+    "seoDescription": "A Pamporovótól induló Buynovsko-szurdok — 50 km, a Yagodinszka-barlang, ökotúra. Nyaraló bérlés — Pamporovo Villa.",
+    "seoKeywords": "A Buynovsko-szurdok, a Yagodinska-barlang, a Rodope-szurdokok",
+    "eyebrow": "Természet · barlangok",
+    "intro": "Drámai szurdok a Jagodinszka-barlang felé vezető úton — érdemes összekötni a barlangtúrával és egy ebéddel a környéken.",
+    "sections": [
+      {
+        "heading": "Útvonal",
+        "paragraphs": [
+          "Egynapos program: Jagodinszka-barlang + Buynovsko-szurdok + visszatérés a nyaralóba estére."
+        ]
+      }
+    ]
   },
   "chepelare": {
     "h1": "Čepelare és Pamporovo – két üdülőhely, egy régió",
     "seoTitle": "Čepelare – Pamporovo | Síelés, távolság, szállás",
     "seoDescription": "Čepelare és Pamporovo — az üdülőhelyek összehasonlítása. Villa bérlés Pamporovóban 110 €-tól — Pamporovo Villa.",
-    "seoKeywords": "Čepelare, Pamporovo, síelés Bulgáriában, összehasonlítás"
+    "seoKeywords": "Čepelare, Pamporovo, síelés Bulgáriában, összehasonlítás",
+    "eyebrow": "Üdülőhelyek · szomszédok",
+    "intro": "Chepelare 10 km-re található — egy kisebb síterep, a Mechi Chal és egy nyugodt üdülőhely. Hasonlítsa össze Pamporovóval a tartózkodása tervezésekor.",
+    "sections": [
+      {
+        "heading": "Hol szállhat meg",
+        "paragraphs": [
+          "Mindkét üdülőhelyen vannak szállodák — de egy 6 fős csoport számára egy egész villa Raykovski Livadi-ban kényelmesebb és gazdaságosabb."
+        ]
+      }
+    ]
   }
 }

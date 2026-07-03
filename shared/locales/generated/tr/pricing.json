@@ -1,0 +1,26 @@
+{
+  "tableNights": "Konaklama sayısı",
+  "winterSeason": "Kış sezonu",
+  "winterRange": "Eylül – Mart",
+  "summerSeason": "Yaz sezonu",
+  "summerRange": "Nisan – Ağustos",
+  "winterShort": "Kış",
+  "summerShort": "Yaz",
+  "winterLegend": "Kış · Eylül – Mart",
+  "summerLegend": "Yaz · Nisan – Ağustos",
+  "bestValue": "Uzun süreli konaklamalarda en uygun fiyat",
+  "loading": "Fiyatlar yakında açıklanacaktır.",
+  "cta": "Müsait tarihleri kontrol edin",
+  "tiers": {
+    "up-to-3": "En fazla 3 gecelik konaklama",
+    "4-nights": "4 gecelik konaklama",
+    "5-nights": "5 gecelik konaklama",
+    "over-5": "5 geceden fazla konaklama"
+  },
+  "breakdown": {
+    "night": "geceleme",
+    "nights": "geceleme",
+    "perNightWinter": "/gece (kış)",
+    "perNightSummer": "/gece (yaz)"
+  }
+}

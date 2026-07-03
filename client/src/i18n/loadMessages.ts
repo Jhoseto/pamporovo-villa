@@ -22,7 +22,24 @@ function flattenObject(obj: NestedMessages, prefix = ""): FlatMessages {
   const out: FlatMessages = {};
   for (const [key, value] of Object.entries(obj)) {
     const fullKey = prefix ? `${prefix}.${key}` : key;
-    if (value !== null && typeof value === "object" && !Array.isArray(value)) {
+    if (Array.isArray(value)) {
+      for (let i = 0; i < value.length; i++) {
+        const item = value[i];
+        const itemKey = `${fullKey}.${i}`;
+        if (typeof item === "string") {
+          out[itemKey] = item;
+        } else if (Array.isArray(item)) {
+          for (let j = 0; j < item.length; j++) {
+            const cell = item[j];
+            if (typeof cell === "string") {
+              out[`${itemKey}.${j}`] = cell;
+            }
+          }
+        } else if (item !== null && typeof item === "object") {
+          Object.assign(out, flattenObject(item as NestedMessages, itemKey));
+        }
+      }
+    } else if (value !== null && typeof value === "object") {
       Object.assign(out, flattenObject(value as NestedMessages, fullKey));
     } else if (typeof value === "string") {
       out[fullKey] = value;
@@ -65,14 +82,14 @@ const bgFlat = loadBgFlat();
 export function loadClientMessages(locale: SiteLocale): FlatMessages {
   if (locale === SOURCE_LOCALE) return bgFlat;
 
-  const out: FlatMessages = { ...bgFlat };
+  const flat: FlatMessages = {};
   for (const ns of LOCALE_NAMESPACES) {
     const mod = findModule(generatedModules, `/generated/${locale}/${ns}.json`);
     if (mod) {
-      Object.assign(out, flattenObject(prefixNamespace(ns, mod)));
+      Object.assign(flat, flattenObject(prefixNamespace(ns, mod)));
     }
   }
-  return out;
+  return flat;
 }
 
 export function resolveMessage(messages: FlatMessages, key: string): string | undefined {

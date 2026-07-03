@@ -1,1 +1,178 @@
-{}
+{
+  "home": {
+    "book-online": {
+      "question": "Hoe kan ik online een villa reserveren?",
+      "answer": "Kies op pamporovovilla.com het tabblad „Reservering“, selecteer een villa (Villa 1, Villa 2 of Villa Deluxe), vul de data in en vul het formulier in. U ontvangt een bevestiging per e-mail. Bij vragen: +359 879 501 660."
+    },
+    "price-per-villa": {
+      "question": "Hoeveel kost het om een villa te huren?",
+      "answer": "De prijzen gelden voor de hele villa (maximaal 6 gasten), niet per persoon. Het zomerseizoen begint bij 110 € per nacht bij een verblijf van meer dan 5 nachten. In de winter liggen de prijzen tussen 120 en 160 € per nacht, afhankelijk van het aantal overnachtingen. Voor Villa Deluxe geldt een kleine toeslag. Actuele prijzen: zie de rubriek „Prijzen“ op de website."
+    },
+    "price-includes": {
+      "question": "Wat is bij de prijs inbegrepen?",
+      "answer": "Verhuur van de gehele villa, wifi, parkeerplaats, resorttoeslag. Hout voor de open haard — 10 € per zak, op aanvraag. Liftkaarten en maaltijden zijn niet inbegrepen."
+    },
+    "check-in-out": {
+      "question": "Wanneer is de aankomst en het vertrek?",
+      "answer": "Inchecken na 15.00 uur, uitchecken uiterlijk om 11.00 uur. Later uitchecken is gratis, indien mogelijk — vraag hiernaar bij het reserveren."
+    },
+    "holiday-pricing": {
+      "question": "Zijn er andere prijzen tijdens de feestdagen?",
+      "answer": "Ja — voor Kerstmis, Nieuwjaar, Pasen en de februari-vakantie gelden speciale voorwaarden en soms een minimale verblijfsduur. Neem contact met ons op of bekijk de kalender bij het reserveren."
+    },
+    "min-nights": {
+      "question": "Is er een minimum aantal overnachtingen?",
+      "answer": "In het laagseizoen geldt vaak geen minimumverblijf. Tijdens de drukke periodes (december–januari, de februari-vakantie) kan een verblijf van 3–5 nachten worden vereist. De exacte regels vindt u in de kalender."
+    },
+    "deluxe-difference": {
+      "question": "Wat is er anders aan Villa Deluxe?",
+      "answer": "Dezelfde indeling — 2 slaapkamers, 2 badkamers, open haard, barbecue — maar met extra aandacht voor detail en sfeer. De prijs is +10 € per nacht in de zomer en +20 € per nacht in de winter ten opzichte van de standaardvilla’s."
+    },
+    "max-guests": {
+      "question": "Hoeveel mensen kunnen er in één villa slapen?",
+      "answer": "Maximaal 6 gasten per villa. Voor grotere groepen kunt u twee villa’s reserveren — neem contact met ons op voor een combinatie."
+    },
+    "payment": {
+      "question": "Hoe moet de reservering worden betaald?",
+      "answer": "De voorwaarden voor de aanbetaling en de restbetaling ontvangt u bij de bevestiging. Wij accepteren bankoverschrijvingen; de gegevens ontvangt u per e-mail na uw aanvraag."
+    },
+    "cancel-policy": {
+      "question": "Wat is het beleid bij annulering?",
+      "answer": "De annuleringsvoorwaarden staan beschreven in het gedeelte „Beleid“ en in de overeenkomst bij de bevestiging. Wij raden een reisverzekering aan bij reserveringen voor de winter."
+    },
+    "firewood": {
+      "question": "Is er hout voor de open haard?",
+      "answer": "Ja — 10 € per zak, op aanvraag vóór aankomst of bij het inchecken. Elke villa heeft een houtkachel in de woonkamer."
+    },
+    "pets-home": {
+      "question": "Zijn huisdieren toegestaan?",
+      "answer": "Het huisdierenbeleid is seizoensgebonden — vraag dit alstublieft na voordat u reserveert. Niet-geregistreerde gasten zijn op het terrein niet toegestaan."
+    },
+    "distance-home": {
+      "question": "Hoe ver liggen de vakantiehuisjes van Pamporovo?",
+      "answer": "2 km naar het centrum van het vakantieoord en de skiliften — ongeveer 5–7 minuten met de auto. Adres: Raykovski Livadi, vakantieoord Pamporovo."
+    },
+    "three-villas": {
+      "question": "Moet ik alle drie de villa’s huren?",
+      "answer": "Nee — u huurt slechts één villa voor uw gezelschap. De drie villa’s staan op hetzelfde adres, maar het zijn volledig afzonderlijke huizen met een eigen ingang."
+    },
+    "vip-program": {
+      "question": "Is er korting voor terugkerende gasten?",
+      "answer": "Ja — het VIP-programma biedt 10% korting na drie verblijven binnen een jaar, plus vroeg inchecken/laat uitchecken indien mogelijk."
+    },
+    "offers": {
+      "question": "Zijn er kortingen en aanbiedingen?",
+      "answer": "We publiceren seizoensaanbiedingen (bijv. een skivakantie voor het hele gezin, „betaal 9, verblijf 10 nachten“). Bekijk de rubriek „Aanbiedingen“ op de startpagina of schrijf u in voor nieuws via het contactformulier."
+    }
+  },
+  "pamporovo": {
+    "where-is-pamporovo": {
+      "question": "Waar ligt Pamporovo?",
+      "answer": "Pamporovo is een vakantieoord in de Rodopi, in de provincie Smolyan, op ongeveer 1650 m boven zeeniveau. De dichtstbijzijnde grote stad is Smolyan (ongeveer 15 km). Vanaf Sofia is het ongeveer 240 km (3–3,5 uur met de auto)."
+    },
+    "pistes-length": {
+      "question": "Hoeveel kilometer aan skipistes zijn er in Pamporovo?",
+      "answer": "Het skigebied van Pamporovo biedt meer dan 37 km gemarkeerde pistes in alle moeilijkheidsgraden — van groene pistes voor beginners tot zwarte pistes voor gevorderden. De piste „Steната“ is het visitekaartje van het skioord en biedt de mogelijkheid om ’s nachts te skiën."
+    },
+    "night-skiing": {
+      "question": "Kan men ’s nachts in Pamporovo skiën?",
+      "answer": "Ja. De piste „Steната“ (nr. 2) is verlicht voor nachtelijk skiën — tijdens het seizoen doorgaans van 17.30 tot 22.00 uur. Bekijk het actuele schema op pamporovo.me voordat je erheen gaat."
+    },
+    "best-beginner-pistes": {
+      "question": "Welke pistes zijn geschikt voor beginnende skiërs?",
+      "answer": "Piste nr. 6 „Pamporovo (Toeristisch)“ is de langste en meest vlakke (3,3 km) — ideaal voor eerste afdalingen. De groene bypasses (nr. 1A) en de blauwe pistes nr. 7, nr. 8 en nr. 10 zijn ook een goede keuze voor gezinnen."
+    },
+    "lift-tickets": {
+      "question": "Hoeveel kosten de skiliftenkaarten in Pamporovo?",
+      "answer": "De prijzen van de skipassen worden elk seizoen bijgewerkt. De actuele prijzen voor dag-, halve dag- en weekkaarten worden gepubliceerd door de officiële exploitanten op pamporovo.me. Reserveer uw accommodatie apart — de skipassen zijn niet inbegrepen in de huurprijs van de villa."
+    },
+    "when-ski-season": {
+      "question": "Wanneer is het skiseizoen in Pamporovo?",
+      "answer": "Meestal van december tot maart–april, afhankelijk van de sneeuw. Ongeveer 90% van de pistes is voorzien van kunstmatige besneeuwing, waardoor het seizoen wordt verlengd. Het huren van een vakantiewoning in de winter is het populairst in januari en februari."
+    },
+    "summer-activities": {
+      "question": "Wat is er in de zomer te doen in Pamporovo?",
+      "answer": "Natuurwandelingen, mountainbiken, paardrijden, klimparken, paddenstoelen en kruiden plukken, grotten bezoeken en authentieke dorpjes (Shiroka Laka, Gela). De regio is ideaal voor gezinsvakanties buiten het skiseizoen."
+    },
+    "caves-nearby": {
+      "question": "Welke grotten liggen in de buurt van Pamporovo?",
+      "answer": "De Yagodinska-grot (ongeveer 30 km), de Duivelskeel (bij de Tesnite-rotsen), Uhlovitsa en andere. Voor de meeste is een tocht over het water nodig — neem warme kleding mee en reserveer een tijdstip tijdens het hoogseizoen."
+    },
+    "shiroka-luka": {
+      "question": "Hoe ver ligt Shiroka Luka van Pamporovo?",
+      "answer": "Het architecturale reservaat Shiroka Laka ligt op ongeveer 20 km van Pamporovo — zo’n 30 minuten rijden. Combineer dit met een bezoek aan het Rozen-klooster en het uitzicht vanaf Rozen."
+    },
+    "where-to-sleep": {
+      "question": "Waar kan ik overnachten in Pamporovo?",
+      "answer": "U kunt kiezen tussen hotels in het centrum van het resort en vrijstaande villa’s buiten de drukte. Pamporovo Villa biedt 3 privévilla's aan op Raykovski Livadi — op 2 km van het centrum, met open haard, barbecue en plaats voor maximaal 6 gasten per villa, vanaf 110 € per nacht."
+    },
+    "hotel-vs-villa": {
+      "question": "Een hotel of een villa in Pamporovo — wat is beter?",
+      "answer": "Het hotel is geschikt voor een kort verblijf zonder zelf te hoeven koken. De villa is een aanrader voor gezinnen en groepen: een heel huis helemaal voor jullie alleen, een open haard, een barbecue, parkeergelegenheid en een lagere prijs per persoon bij 4–6 gasten. Pamporovo Villa ligt op 2 km van de skipistes."
+    },
+    "villa-price": {
+      "question": "Hoeveel bedraagt de huurprijs van een villa in Pamporovo?",
+      "answer": "Bij Pamporovo Villa beginnen de prijzen vanaf 110 € per nacht voor een hele villa (maximaal 6 gasten) — zomerseizoen. De prijzen voor overnachtingen in de winter liggen hoger, afhankelijk van de periode. Bekijk de actuele prijzen op pamporovovilla.com/#pricing of /rent."
+    },
+    "villa-amenities": {
+      "question": "Wat is bij de huur van een villa bij Pamporovo Villa inbegrepen?",
+      "answer": "Elk van de drie villa’s beschikt over 2 slaapkamers, 2 badkamers, een volledig uitgeruste keuken, een houtkachel, een barbecue op het terras, wifi en gratis parkeergelegenheid. U huurt de hele villa — zonder deze met andere gasten te delen."
+    },
+    "fireplace-villa": {
+      "question": "Is er een villa met een open haard in Pamporovo?",
+      "answer": "Ja — alle drie de vakantiewoningen van Pamporovo Villa (Villa 1, Villa 2, Villa Deluxe) hebben een houtkachel in de woonkamer. Ideaal voor winteravonden na een dag op de piste of herfstweekenden in de bergen."
+    },
+    "group-villa": {
+      "question": "Kunnen we in Pamporovo een villa voor 6 personen huren?",
+      "answer": "Ja. Elke villa bij Pamporovo Villa biedt plaats aan maximaal 6 gasten. Reserveer één villa voor uw gezelschap of combineer twee villa’s voor grotere groepen — neem telefonisch contact op via +359 879 501 660."
+    },
+    "couple-villa": {
+      "question": "Is het vakantiehuisje geschikt voor twee personen?",
+      "answer": "Ja — stellen huren vaak een hele villa voor meer privacy en een open haard. Je betaalt de prijs voor de villa, niet per persoon; met z’n tweeën komt de prijs per persoon wel hoger uit, maar je krijgt er een privéwoning voor terug."
+    },
+    "distance-to-slopes": {
+      "question": "Hoe ver liggen de vakantiehuisjes van de skipistes?",
+      "answer": "Pamporovo Villa ligt bij Raykovski Livadi — op ongeveer 2 km van het centrum van het skioord en de skiliften. Met de auto bent u binnen 5–7 minuten bij de parkeerplaats bij de pistes. Er rijdt ook een gratis pendelbus tijdens het seizoen (bekijk de dienstregeling)."
+    },
+    "parking": {
+      "question": "Is er parkeergelegenheid bij de vakantiewoningen?",
+      "answer": "Ja — gratis privéparkeerplaats bij elke villa van Pamporovo Villa. Handig bij een winteruitstapje met skiuitrusting en voor gezinnen met kinderen."
+    },
+    "how-to-book": {
+      "question": "Hoe kan ik een villa in Pamporovo reserveren?",
+      "answer": "Online op pamporovovilla.com/#booking — kies een villa, selecteer de data en vul het formulier in. Of bel naar +359 879 501 660 / stuur een e-mail naar pamporovovilla@gmail.com."
+    },
+    "minimum-stay": {
+      "question": "Geldt er een minimale verblijfsduur bij het huren?",
+      "answer": "Tijdens het hoogseizoen (Kerstmis, Nieuwjaar, de februari-vakantie) kan een minimumverblijf van 3–5 nachten worden vereist. Raadpleeg de kalender bij het reserveren of neem contact met ons op voor de exacte voorwaarden."
+    },
+    "pets": {
+      "question": "Zijn huisdieren toegestaan?",
+      "answer": "Neem voorafgaand aan de reservering contact op — het huisdierenbeleid kan per seizoen en per villa verschillen. Ga er niet automatisch vanuit dat huisdieren zijn toegestaan."
+    },
+    "wifi": {
+      "question": "Is er wifi in de villa's?",
+      "answer": "Ja — er is draadloos internet beschikbaar in alle drie de villa's van Pamporovo Villa."
+    },
+    "winter-rental": {
+      "question": "Kan ik in de winter een vakantiewoning huren voor een skivakantie?",
+      "answer": "Ja — de vakantiehuisjes zijn het hele jaar door beschikbaar. De winter is het populairste seizoen: een open haard, de nabijheid van de skipistes en de mogelijkheid om een heel huis te huren voor uw gezin of vrienden. Reserveer vroeg voor januari en februari."
+    },
+    "summer-rental": {
+      "question": "Is het de moeite waard om in de zomer een villa te huren in Pamporovo?",
+      "answer": "Ja — de zomerprijzen zijn lager (vanaf 110 € per nacht), en de regio biedt natuurroutes, verkoeling en grotten. Dankzij het barbecue-terras en de frisse berglucht is het vakantiehuisje ideaal voor een gezinsvakantie."
+    },
+    "drive-from-sofia": {
+      "question": "Hoe kom ik van Sofia naar Pamporovo?",
+      "answer": "Via de snelweg naar Plovdiv, vervolgens via Asenovgrad en Smolyan — ongeveer 240 km, 3–3,5 uur. Neem in de winter sneeuwkettingen mee of controleer de wegomstandigheden in de Rodopi."
+    },
+    "snow-guarantee": {
+      "question": "Ligt er elk seizoen sneeuw in Pamporovo?",
+      "answer": "Het skigebied beschikt over een krachtig kunstsneeuwsysteem — dit bestrijkt ongeveer 90% van de pistes. Vanaf december ligt er vaak natuurlijke sneeuw, maar voor de zekerheid houden de exploitanten het systeem het hele seizoen in stand."
+    },
+    "restaurants": {
+      "question": "Zijn er restaurants in de buurt van Raykovski Livadi?",
+      "answer": "In het centrum van Pamporovo (2 km) zijn er eetgelegenheden, pizzeria’s en een supermarkt. De villa beschikt over een volledig uitgeruste keuken — veel gasten koken zelf of combineren dit met etentjes in het resort."
+    }
+  }
+}

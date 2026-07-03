@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Snowflake, Sun } from "lucide-react";
-import { PRICING_NOTES, VILLAS, formatPriceEur } from "@/data/siteContent";
+import { formatPriceEur } from "@/data/siteContent";
+import { useTranslation } from "@/contexts/LocaleContext";
+import { usePricingNotes, usePricingTierLabel, useVillasLocalized } from "@/i18n/contentHooks";
 import {
   getPerNightRateFromGrid,
   getVillaPricingRows,
@@ -19,6 +21,7 @@ type VillaPricingProps = {
 };
 
 function PricingDesktopTable({ villaId, rows }: VillaPricingProps) {
+  const { t } = useTranslation();
   const villaRows = getVillaPricingRows(rows, villaId);
 
   return (
@@ -26,32 +29,26 @@ function PricingDesktopTable({ villaId, rows }: VillaPricingProps) {
       <table className="w-full text-left">
         <thead>
           <tr className="border-b border-border/60 bg-muted/30">
-            <th className="px-6 py-4 font-serif text-lg font-bold">Брой нощувки</th>
             <th className="px-6 py-4 font-serif text-lg font-bold">
-              Зимен сезон
+              {t("pricing.tableNights", "Брой нощувки")}
+            </th>
+            <th className="px-6 py-4 font-serif text-lg font-bold">
+              {t("pricing.winterSeason", "Зимен сезон")}
               <span className="mt-1 block text-xs font-normal text-muted-foreground">
-                септември – март
+                {t("pricing.winterRange", "септември – март")}
               </span>
             </th>
             <th className="px-6 py-4 font-serif text-lg font-bold">
-              Летен сезон
+              {t("pricing.summerSeason", "Летен сезон")}
               <span className="mt-1 block text-xs font-normal text-muted-foreground">
-                април – август
+                {t("pricing.summerRange", "април – август")}
               </span>
             </th>
           </tr>
         </thead>
         <tbody>
           {villaRows.map(row => (
-            <tr key={row.tierKey} className="border-b border-border/40 last:border-0">
-              <td className="px-6 py-4 font-medium">{row.tierLabel}</td>
-              <td className="px-6 py-4 font-serif text-xl font-bold text-primary">
-                {formatPriceEur(getPerNightRateFromGrid(row, "winter"))}
-              </td>
-              <td className="px-6 py-4 font-serif text-xl font-bold text-primary">
-                {formatPriceEur(getPerNightRateFromGrid(row, "summer"))}
-              </td>
-            </tr>
+            <TierRow key={row.tierKey} row={row} />
           ))}
         </tbody>
       </table>
@@ -59,7 +56,23 @@ function PricingDesktopTable({ villaId, rows }: VillaPricingProps) {
   );
 }
 
+function TierRow({ row }: { row: PricingGridRow }) {
+  const tierLabel = usePricingTierLabel(row.tierKey, row.tierLabel);
+  return (
+    <tr className="border-b border-border/40 last:border-0">
+      <td className="px-6 py-4 font-medium">{tierLabel}</td>
+      <td className="px-6 py-4 font-serif text-xl font-bold text-primary">
+        {formatPriceEur(getPerNightRateFromGrid(row, "winter"))}
+      </td>
+      <td className="px-6 py-4 font-serif text-xl font-bold text-primary">
+        {formatPriceEur(getPerNightRateFromGrid(row, "summer"))}
+      </td>
+    </tr>
+  );
+}
+
 function PricingMobileCards({ villaId, rows }: VillaPricingProps) {
+  const { t } = useTranslation();
   const villaRows = getVillaPricingRows(rows, villaId);
 
   return (
@@ -67,60 +80,74 @@ function PricingMobileCards({ villaId, rows }: VillaPricingProps) {
       <div className="pricing-mobile-legend">
         <div className="pricing-mobile-legend-item">
           <Snowflake className="h-3.5 w-3.5 text-primary" strokeWidth={1.75} />
-          <span>Зима · септ. – март</span>
+          <span>{t("pricing.winterLegend", "Зима · септ. – март")}</span>
         </div>
         <div className="pricing-mobile-legend-item">
           <Sun className="h-3.5 w-3.5 text-[var(--gold)]" strokeWidth={1.75} />
-          <span>Лято · апр. – авг.</span>
+          <span>{t("pricing.summerLegend", "Лято · апр. – авг.")}</span>
         </div>
       </div>
 
       <ul className="pricing-mobile-list">
         {villaRows.map((row, index) => (
-          <li key={row.tierKey} className="pricing-mobile-card">
-            <div className="pricing-mobile-prices">
-              <div className="pricing-mobile-price pricing-mobile-price--winter">
-                <span className="pricing-mobile-price-label">
-                  <Snowflake className="h-3 w-3" strokeWidth={1.75} />
-                  Зима
-                </span>
-                <span className="pricing-mobile-price-value">
-                  {formatPriceEur(getPerNightRateFromGrid(row, "winter"))}
-                </span>
-              </div>
-              <div className="pricing-mobile-center">
-                <p className="pricing-mobile-nights">{row.tierLabel}</p>
-              </div>
-              <div className="pricing-mobile-price pricing-mobile-price--summer">
-                <span className="pricing-mobile-price-label">
-                  <Sun className="h-3 w-3" strokeWidth={1.75} />
-                  Лято
-                </span>
-                <span className="pricing-mobile-price-value">
-                  {formatPriceEur(getPerNightRateFromGrid(row, "summer"))}
-                </span>
-              </div>
-            </div>
-            {index === villaRows.length - 1 && (
-              <p className="pricing-mobile-best">Най-изгодно при по-дълъг престой</p>
-            )}
-          </li>
+          <MobileTierCard key={row.tierKey} row={row} isLast={index === villaRows.length - 1} />
         ))}
       </ul>
     </div>
   );
 }
 
+function MobileTierCard({ row, isLast }: { row: PricingGridRow; isLast: boolean }) {
+  const { t } = useTranslation();
+  const tierLabel = usePricingTierLabel(row.tierKey, row.tierLabel);
+
+  return (
+    <li className="pricing-mobile-card">
+      <div className="pricing-mobile-prices">
+        <div className="pricing-mobile-price pricing-mobile-price--winter">
+          <span className="pricing-mobile-price-label">
+            <Snowflake className="h-3 w-3" strokeWidth={1.75} />
+            {t("pricing.winterShort", "Зима")}
+          </span>
+          <span className="pricing-mobile-price-value">
+            {formatPriceEur(getPerNightRateFromGrid(row, "winter"))}
+          </span>
+        </div>
+        <div className="pricing-mobile-center">
+          <p className="pricing-mobile-nights">{tierLabel}</p>
+        </div>
+        <div className="pricing-mobile-price pricing-mobile-price--summer">
+          <span className="pricing-mobile-price-label">
+            <Sun className="h-3 w-3" strokeWidth={1.75} />
+            {t("pricing.summerShort", "Лято")}
+          </span>
+          <span className="pricing-mobile-price-value">
+            {formatPriceEur(getPerNightRateFromGrid(row, "summer"))}
+          </span>
+        </div>
+      </div>
+      {isLast && (
+        <p className="pricing-mobile-best">
+          {t("pricing.bestValue", "Най-изгодно при по-дълъг престой")}
+        </p>
+      )}
+    </li>
+  );
+}
+
 export function PricingSection() {
-  const [selectedVillaId, setSelectedVillaId] = useState(VILLAS[0]?.id ?? "villa-1");
+  const { t } = useTranslation();
+  const villas = useVillasLocalized();
+  const pricingNotes = usePricingNotes();
+  const [selectedVillaId, setSelectedVillaId] = useState(villas[0]?.id ?? "villa-1");
   const { data, isLoading } = trpc.content.getPricing.useQuery();
   const rows = (data?.rows ?? []) as PricingGridRow[];
 
   return (
     <SectionShell
-      eyebrow="Цени"
-      title="Ясни цени, без изненади"
-      subtitle="Наем на цяла вила на вечер — за до 6 гости. Колкото по-дълго останете, толкова по-изгодно"
+      eyebrow={t("home.pricing.eyebrow", "Цени")}
+      title={t("home.pricing.title", "Ясни цени, без изненади")}
+      subtitle={t("home.pricing.subtitle", "Наем на цяла вила на вечер — за до 6 гости. Колкото по-дълго останете, толкова по-изгодно")}
       overlap
       splitTitle
       perfDefer
@@ -132,7 +159,9 @@ export function PricingSection() {
             <div className="h-64 rounded-2xl bg-muted/30" />
           </div>
         ) : rows.length === 0 ? (
-          <p className="text-center text-muted-foreground">Цените скоро ще бъдат публикувани.</p>
+          <p className="text-center text-muted-foreground">
+            {t("pricing.loading", "Цените скоро ще бъдат публикувани.")}
+          </p>
         ) : (
           <Tabs
             value={selectedVillaId}
@@ -140,7 +169,7 @@ export function PricingSection() {
             className="pricing-villa-tabs mx-auto max-w-4xl gap-6"
           >
             <TabsList className="pricing-villa-tabs-list h-auto w-full">
-              {VILLAS.map(villa => (
+              {villas.map(villa => (
                 <TabsTrigger
                   key={villa.id}
                   value={villa.id}
@@ -151,7 +180,7 @@ export function PricingSection() {
               ))}
             </TabsList>
 
-            {VILLAS.map(villa => (
+            {villas.map(villa => (
               <TabsContent key={villa.id} value={villa.id} className="mt-0 outline-none">
                 <PricingMobileCards villaId={villa.id} rows={rows} />
                 <PricingDesktopTable villaId={villa.id} rows={rows} />
@@ -162,7 +191,7 @@ export function PricingSection() {
       </ScrollReveal>
 
       <ScrollReveal delay={120} className="mt-8 space-y-3">
-        {PRICING_NOTES.map(note => (
+        {pricingNotes.map(note => (
           <p key={note} className="text-center text-sm text-muted-foreground md:text-base">
             {note}
           </p>
@@ -171,7 +200,7 @@ export function PricingSection() {
 
       <ScrollReveal delay={180} className="mt-10 text-center">
         <MagneticButton className="premium-btn px-10" onClick={() => scrollToSection("booking")}>
-          Проверете свободни дати
+          {t("pricing.cta", "Проверете свободни дати")}
         </MagneticButton>
       </ScrollReveal>
     </SectionShell>

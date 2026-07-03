@@ -9,5 +9,49 @@
   "placeholderEmail": "választható",
   "placeholderPeriod": "pl. 2025. március",
   "placeholderBody": "Mit jegyeztek meg a nálunk töltött időből...",
-  "villaUnknown": "Nem vagyok biztos benne"
+  "villaUnknown": "Nem vagyok biztos benne",
+  "form": {
+    "name": "Név",
+    "email": "E-mail",
+    "rating": "Értékelés",
+    "title": "Cím",
+    "body": "Az Ön véleménye",
+    "bodyPlaceholder": "Mondjátok el, mi tetszett nektek, és mit javíthatnánk...",
+    "submit": "Vélemény elküldése",
+    "submitting": "Küldés...",
+    "namePlaceholder": "A neved",
+    "emailPlaceholder": "választható",
+    "ratingAria": "{star} csillag",
+    "villa": "Villa",
+    "villaPlaceholder": "Válasszon",
+    "villaUnknown": "Nem vagyok biztos benne",
+    "period": "Időszak",
+    "periodPlaceholder": "pl. 2025. március"
+  },
+  "toast": {
+    "success": "Köszönjük a véleményt! Áttekintés után közzétesszük.",
+    "error": "Hiba történt a vélemény elküldése közben."
+  },
+  "carousel": {
+    "readMore": "További információk",
+    "close": "Bezárás",
+    "googleSource": "Google",
+    "siteSource": "Weboldal",
+    "readFull": "A teljes vélemény",
+    "open": "Megnyitás",
+    "readFullAria": "Olvasd el a teljes véleményt",
+    "openAria": "Nyisd meg a véleményt",
+    "emptyTitle": "Még nem jelent meg vélemény",
+    "emptyBody": "Legyen Ön az első — ossza meg velünk benyomásait alább.",
+    "pause": "Az automatikus lapozás szüneteltetése",
+    "resume": "Az automatikus görgetés folytatódik",
+    "prev": "Előző vélemény",
+    "next": "Következő vélemény",
+    "navLabel": "Vélemények",
+    "reviewN": "Vélemény {n}",
+    "photoCount": "{count} fénykép"
+  },
+  "modal": {
+    "close": "Bezárás"
+  }
 }

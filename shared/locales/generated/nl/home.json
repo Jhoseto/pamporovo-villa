@@ -1,18 +1,21 @@
 {
   "hero": {
-    "eyebrow": "Smolyan · Pamporovo · 3 vakantiehuizen te huur",
+    "eyebrow": "Bulgarije · Smolyan · Pamporovo · 3 vakantiehuizen te huur",
     "titleLine1": "Pamporovo",
     "titleLine2": "Villa",
     "subtitle": "Wij bieden u drie vrijstaande villa’s te midden van de betoverende bossen van Pamporovo. Huiselijke gezelligheid in de bergen, het hele jaar door.",
     "ctaExperience": "Begin de wandeling",
-    "ctaBook": "Reserveer",
-    "scrollHint": "Bekijk"
+    "ctaBook": "Reservering",
+    "scrollHint": "Bekijk",
+    "scrollDown": "Naar beneden",
+    "scrollToExperience": "Ga verder met de wandeling"
   },
   "gallery": {
     "eyebrow": "Galerij",
     "title": "De drie villa's in beeld",
     "subtitle": "Bekijk elke villa — het interieur, de gezelligheid en het uitzicht op de bergen",
-    "pickVilla": "Kies een villa"
+    "pickVilla": "Kies een villa",
+    "photoCount": "{count} foto's"
   },
   "contact": {
     "eyebrow": "Contact",
@@ -30,8 +33,77 @@
   "location": {
     "eyebrow": "Locatie",
     "title": "Vlakbij alles, ver weg van de drukte",
-    "subtitle": "toeristenoord Pamporovo, gebied Райковски ливади — verscholen in het dennenbos",
+    "subtitle": "toeristencentrum Pamporovo, gebied Raykovski Livadi — verscholen in het dennenbos",
     "directions": "Zoek de weg naar ons",
     "info": "Pamporovo is het zonnigste bergresort van Bulgarije — op 1 650 m hoogte in het hart van de Rodopi. In de winter zijn er 37 km perfect onderhouden pistes en kunt u 's avonds skiën, en in de zomer zijn er ecologische wandelpaden, watervallen en lucht die u goed doet. En onze villa's vormen uw rustige uitvalsbasis te midden van dit alles."
-  }
+  },
+  "widgets": {
+    "weatherLoading": "Tijd instellen",
+    "weatherUnavailable": "De dienst is tijdelijk niet beschikbaar",
+    "feelsLike": "Het voelt aan als",
+    "today": "Vandaag",
+    "humidity": "Luchtvochtigheid",
+    "wind": "Wind",
+    "callUs": "Bel ons",
+    "galleryVillaTabs": "Een villa kiezen uit de galerij"
+  },
+  "about": {
+    "eyebrow": "Over ons",
+    "title": "Uw huis hoog in de Rodopi-bergen",
+    "subtitle": "Drie villa’s, één zorg: dat u zich thuis voelt",
+    "blockPlace": "De locatie",
+    "blockHome": "Thuis",
+    "blockHosts": "De gastheren",
+    "intro": "We zijn blij dat u ons hebt gevonden. Wij bieden u drie vrijstaande villa’s, genesteld in het dennenbos van Raykovski Livadi — daar waar het stadslawaai ver weg blijft en de dag begint met vogelgezang en de geur van hars.",
+    "details": "Villa 1, Villa 2 en Villa Deluxe zijn ingericht zoals we ons eigen huis in de bergen zouden willen hebben — met echt hout, zachte stoffen en die kleine details die een plek een warm gevoel geven. Hier bent u niet zomaar een gast; voel u thuis.",
+    "hosts": "Als gastheren staan we altijd voor u klaar. We helpen u graag met verrassingen en feestjes, wijzen u de weg naar de mooiste pistes en wandelpaden, geven u tips over waar u lekker kunt eten — en als u iets nodig heeft, hoeft u alleen maar te bellen. Ons doel is één: dat u vertrekt met het verlangen om terug te komen.",
+    "layout": "Elke villa bestaat uit twee verdiepingen en beschikt over twee slaapkamers, twee badkamers, een volledig uitgeruste keuken met eethoek en een ruime woonkamer met een houtgestookte open haard. Buiten wachten een terras met panoramisch uitzicht op de Rodopi en een veranda met barbecue op u – de plek waar de mooiste avonden ontstaan.",
+    "imageForestAlt": "Villa in het dennenbos van Raykovski Livadi",
+    "imageInteriorAlt": "Interieur met een stenen muur en hout",
+    "badgeLocation": "Raykovski Livadi",
+    "badgeResort": "Pamporovo"
+  },
+  "amenities": {
+    "eyebrow": "Voorzieningen",
+    "title": "Alles wat je nodig hebt voor een ontspannen verblijf",
+    "subtitle": "Wij hebben aan de kleine dingen gedacht, zodat u zich volledig op uw vakantie kunt concentreren"
+  },
+  "pricing": {
+    "eyebrow": "Prijzen",
+    "title": "Duidelijke prijzen, zonder verrassingen",
+    "subtitle": "Verhuur van een complete villa per nacht — voor maximaal 6 gasten. Hoe langer u blijft, hoe voordeliger het wordt"
+  },
+  "booking": {
+    "eyebrow": "Reservering",
+    "title": "Reserveer je plek in de bergen",
+    "subtitle": "Kies een villa en data, vul uw gegevens in — dan nemen wij persoonlijk contact met u op ter bevestiging"
+  },
+  "policy": {
+    "eyebrow": "Goed om te weten",
+    "title": "Een paar woorden voordat u langskomt",
+    "subtitle": "Korte en duidelijke regels, zodat het voor iedereen rustig en aangenaam blijft"
+  },
+  "faq": {
+    "eyebrow": "Reservering · prijzen",
+    "title": "Veelgestelde vragen",
+    "subtitle": "Antwoorden over huur, prijzen, accommodatie en reservering — voordat u het formulier invult."
+  },
+  "distances": [
+    {
+      "value": "2 km",
+      "label": "Naar het centrum van Pamporovo"
+    },
+    {
+      "value": "10 km",
+      "label": "Vanuit Smolyan"
+    },
+    {
+      "value": "85 km",
+      "label": "Vanuit Plovdiv"
+    },
+    {
+      "value": "220 km",
+      "label": "Vanuit Sofia"
+    }
+  ]
 }

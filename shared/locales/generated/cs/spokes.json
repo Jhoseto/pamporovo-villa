@@ -1,248 +1,788 @@
 {
   "pisti": {
     "h1": "Sjezdovky v Pamporově — 37+ km sjezdovek",
-    "seoTitle": "Sjezdovky Pamporovo 2026 | 37+ km, noční lyžování, mapa — Pamporovo Villa",
-    "seoDescription": "Všechny sjezdovky v Pamporově: délka, obtížnost, noční lyžování na Stěně, lanovky na Sněženku. Naplánujte si lyžařskou dovolenou – ubytování od 110 € za noc.",
-    "seoKeywords": "sjezdovky v Pamporově, lyžování v Pamporově, Stena, noční lyžování, Sněhurka, skipas"
+    "seoTitle": "Sjezdovky Pamporovo 2026 | 37+ km, noční jízda, mapa — Pamporovo Villa",
+    "seoDescription": "Všechny sjezdovky v Pamporovu: délka, obtížnost, noční lyžování na Stěně, lanovky na Sněženku. Naplánujte si lyžařskou dovolenou – ubytování od 110 € za noc.",
+    "seoKeywords": "sjezdovky v Pamporově, lyžování v Pamporově, Stena, noční lyžování, Sněhurka, skipas",
+    "eyebrow": "Lyžování · Pamporovo",
+    "intro": "Kompletní přehled lyžařského areálu Pamporovo: více než 15 sjezdovek od zelených pro začátečníky až po černou sjezdovku „Stěna“, noční lyžování a lanovky na vrchol Sněžanka (1926 m).",
+    "sections": [
+      {
+        "heading": "Lyžařský areál v kostce",
+        "paragraphs": [
+          "Pamporovo je nejstarší lyžařské středisko v Bulharsku (od roku 1933) a jedno z nejslunečnějších – v zimě zde bývá více než 120 dní s jasnou oblohou. Středisko leží v nadmořské výšce 1650 m, nejvyšší bod sjezdovek je vrchol Sněžanka ve výšce 1926 m.",
+          "Celková délka značených sjezdovek přesahuje 37 km. Přibližně 90 % z nich je vybaveno umělým zasněžováním, což zajišťuje stabilní podmínky po celou sezónu i za teplého počasí."
+        ],
+        "bullets": [
+          "15+ hlavních sjezdovek + obchvaty a funpark",
+          "6 lanovek a vleků",
+          "Noční jízda na trati č. 2 „Stěna“",
+          "Zelené, modré, červené a černé trasy"
+        ]
+      },
+      {
+        "heading": "Kultovní sjezdovky",
+        "paragraphs": [
+          "Sjezdovka č. 2 „Stěna“ (1258 m, černá) je symbolem střediska – konají se zde závody Evropského poháru a je to jediná sjezdovka, na které se pravidelně jezdí i v noci. Sjezdovka č. 3 „Arch. Petr Petrov“ (1766 m) je nejdelší černou sjezdovkou.",
+          "Pro rodiny a začátečníky nabízí sjezdovka č. 6 „Turistická“ (3343 m) dlouhý a mírný sjezd. Sjezdovka č. 5 „Malina“ (2799 m) je nejdelší červená sjezdovka – vede od vrcholu až k lyžařskému středisku Malina."
+        ]
+      },
+      {
+        "heading": "Kde se ubytovat po dni stráveném na sjezdovkách",
+        "paragraphs": [
+          "Pamporovo Villa nabízí 3 samostatné vily 2 km od centra — krb, gril a až 6 hostů na vilu. Ideální volba, pokud toužíte po klidu mimo hotelový ruch a vlastní kuchyni po celém dni stráveném na sněhu."
+        ]
+      }
+    ]
   },
   "kude-da-spim": {
     "h1": "Kde se v Pamporově ubytovat?",
     "seoTitle": "Kde se ubytovat v Pamporově | Chaty, hotely, tipy 2026",
-    "seoDescription": "Kde se ubytovat v Pamporově: hotel vs. vila, Райковски ливади, ceny od 110 € za noc za celou vilu pro až 6 hostů. Oficiální pronájem — Pamporovo Villa.",
-    "seoKeywords": "kde se ubytovat v Pamporově, ubytování v Pamporově, vila v Pamporově, hotel v Pamporově"
+    "seoDescription": "Kde se ubytovat v Pamporově: hotel vs. vila, Raykovski Livadi, ceny od 110 € za noc za celou vilu pro až 6 hostů. Oficiální pronájem — Pamporovo Villa.",
+    "seoKeywords": "kde se ubytovat v Pamporově, ubytování v Pamporově, vila v Pamporově, hotel v Pamporově",
+    "eyebrow": "Ubytování · Pamporovo",
+    "intro": "Porovnání možností ubytování v letovisku – hotely v centru, apartmány a soukromé vily. Praktický průvodce pro rodiny, skupiny a páry.",
+    "sections": [
+      {
+        "heading": "Místa k přenocování v letovisku",
+        "paragraphs": [
+          "Centrum Pamporova je pohodlně dostupné pěšky k restauracím a lanovkám, ale v sezóně tu může být hlučno. Čtvrti Malina, Stoykite a Raykovski Livadi nabízejí více klidu a parkovacích míst.",
+          "Raykovski Livadi se nachází 2 km od centra — dost blízko k sjezdovkám, dost daleko na to, aby tam v noci bylo ticho a bylo vidět hvězdy."
+        ]
+      },
+      {
+        "heading": "Komu co vyhovuje",
+        "paragraphs": [
+          "Pár na víkend – hotel nebo malá vila. Rodina s dětmi — vila s kuchyní a krbem často vyjde levněji než dva hotelové pokoje. Skupina 4–6 osob — celá vila vám nabízí společný obývací pokoj a gril, aniž byste je museli sdílet s cizími lidmi."
+        ],
+        "bullets": [
+          "Hotel: polopenze, bez vaření, centrální poloha",
+          "Vila: celý dům, krb, gril, parkoviště, více soukromí",
+          "Pamporovo Villa: 3 vily, 2 ložnice, až 6 hostů, od 110 € za noc"
+        ]
+      },
+      {
+        "heading": "Doporučení: Pamporovo Villa",
+        "paragraphs": [
+          "Tři identicky zařízené vily (Villa 1, Villa 2, Villa Deluxe) na jedné adrese – pro vaši skupinu si rezervujete pouze jednu vilu. Každá z nich má 2 ložnice, 2 koupelny, krb a verandu s grilem."
+        ]
+      }
+    ]
   },
   "hotel-vs-vila": {
     "h1": "Hotel nebo vila v Pamporově – co si vybrat?",
     "seoTitle": "Hotel nebo vila v Pamporovu | Porovnání nabídek pro lyžařskou sezónu a léto 2026",
     "seoDescription": "Hotel vs. vila v Pamporovu: ceny, výhody pro rodiny a skupiny, krb a gril. Kdy vítězí vila — Pamporovo Villa od 110 € za noc.",
-    "seoKeywords": "hotel nebo vila v Pamporovu, srovnání ubytování, vila vs. hotel"
+    "seoKeywords": "hotel nebo vila v Pamporovu, srovnání ubytování, vila vs. hotel",
+    "eyebrow": "Porovnání · ubytování",
+    "intro": "Upřímný srovnávací průvodce: cena na osobu, komfort, vaření, krb, parkování a pro jaké výlety se co vyplatí.",
+    "sections": [
+      {
+        "heading": "Kdy je hotel lepší volbou",
+        "paragraphs": [
+          "Krátký pobyt (1–2 noci), chcete snídani a večeři bez vaření, nebo cestujete sami či ve dvojici a nepotřebujete moc prostoru. Hotely v centru jsou jen pár minut od lanovek."
+        ]
+      },
+      {
+        "heading": "Kdy je chata zisková",
+        "paragraphs": [
+          "Při počtu 4–6 hostů je cena za osobu v soukromé vile často nižší než v tříhvězdičkovém hotelu s polopenzí. K dispozici máte obývací pokoj s krbem, kuchyň, gril a parkoviště – a to bez sousedů na chodbě.",
+          "Rodiny s malými dětmi oceňují pevný denní režim – spánek, vaření, odpolední spánek bez výtahů a recepcí."
+        ],
+        "bullets": [
+          "Celá vila = jen pro vaši skupinu",
+          "Krb a gril – atmosféra, kterou hotel nenabízí",
+          "Parkoviště přímo u vchodu — pohodlné pro přepravu lyžařského vybavení",
+          "Pamporovo Villa: od 110 € za noc pro až 6 osob"
+        ]
+      },
+      {
+        "heading": "Vzorový výpis",
+        "paragraphs": [
+          "Vila za 150 € za noc na 5 nocí = celkem 750 €. Pro 5 osob to činí 150 € na osobu za 5 nocí (30 € za noc na osobu) — často méně než hotel + stravování v letovisku."
+        ]
+      }
+    ]
   },
   "naem-vila": {
     "h1": "Pronájem vily v Pamporově",
     "seoTitle": "Pronájem vil v Pamporovu | 3 vily, ceny, rezervace 2026",
     "seoDescription": "Pronajměte si vilu v Pamporově — 3 samostatné vily, 2 ložnice, krb, gril, až pro 6 hostů. Od 110 € za noc. Oficiální web Pamporovo Villa.",
-    "seoKeywords": "pronájem vily v Pamporově, vila k pronájmu, pronájem domu v Pamporově, Pamporovo Villa"
+    "seoKeywords": "pronájem vily v Pamporově, vila k pronájmu, pronájem domu v Pamporově, Pamporovo Villa",
+    "eyebrow": "Pronájem · Pamporovo Villa",
+    "intro": "Jak funguje pronájem celé vily v Pamporově – co vše zahrnuje, ceny, rezervace a tři dostupné vily na Raykovski Livadi.",
+    "sections": [
+      {
+        "heading": "Co znamená „pronájem vily“",
+        "paragraphs": [
+          "V rámci balíčku Pamporovo Villa si pronajímáte celý dům – ne pokoj ve sdíleném objektu. Vila je určena výhradně pro vaši skupinu: klíče, obývací pokoj, kuchyň, terasa s grilem i parkoviště jsou k dispozici pouze vám."
+        ]
+      },
+      {
+        "heading": "Tři vily",
+        "paragraphs": [
+          "Villa 1, Villa 2 a Villa Deluxe mají stejnou kapacitu a vybavení — 2 ložnice, 2 koupelny, krb, plně vybavenou kuchyň, Wi-Fi. Výběr závisí na dostupnosti v kalendáři."
+        ],
+        "bullets": [
+          "Až 6 hostů ve vile",
+          "2 ložnice + 2 koupelny",
+          "Krb na dřevo + gril",
+          "Parkování zdarma"
+        ]
+      },
+      {
+        "heading": "Ceny a rezervace",
+        "paragraphs": [
+          "Letní sezóna začíná na 110 € za noc za celou vilu. V zimě jsou ceny vyšší v závislosti na období. Rezervujte si pobyt online na pamporovovilla.com nebo na stránce /rent."
+        ]
+      }
+    ]
   },
   "vila-s-kamina": {
     "h1": "Vila s krbem v Pamporově",
     "seoTitle": "Vila s krbem v Pamporově | Krb + gril — Pamporovo Villa",
-    "seoDescription": "Pronajměte si vilu s krbem v Pamporovu – všechny tři vily v Pamporovo Villa mají krb a gril. Až pro 6 hostů, od 110 € za noc.",
-    "seoKeywords": "vila s krbem v Pamporově, krb v horách, zimní vila, grilování v Pamporově"
+    "seoDescription": "Pronajměte si vilu s krbem v Pamporově – všechny tři vily v Pamporovo Villa mají krb a gril. Až pro 6 hostů, od 110 € za noc.",
+    "seoKeywords": "vila s krbem v Pamporovu, krb v horách, zimní vila, grilování v Pamporovu",
+    "eyebrow": "Vybavení · vila",
+    "intro": "Zimní atmosféra mimo sjezdovky — všechny tři chaty v Pamporovo Villa mají v obývacím pokoji krb na dřevo a navíc verandu s grilem pro slunečné dny.",
+    "sections": [
+      {
+        "heading": "Krb v každé vile",
+        "paragraphs": [
+          "Obývací pokoj každé vily se nachází kolem krbu na dřevo — příjemné osvětlení, vůně dřeva a místo pro rozhovory po celém dni stráveném na sjezdovce nebo na ekologické stezce."
+        ]
+      },
+      {
+        "heading": "Veranda s grilem",
+        "paragraphs": [
+          "V létě a za mírných zimních dnů je grilovací zóna na verandě hitem pro rodinné večeře. Zkombinujte to s místními produkty ze Smolyanu nebo z letoviska."
+        ]
+      },
+      {
+        "heading": "Praktické rady",
+        "paragraphs": [
+          "Dřevo do krbu si hosté připravují sami. Pokud si chcete rezervovat pobyt v lednu a únoru, rezervujte si ho včas – vily s krbem patří mezi ty, které se zaplní jako první."
+        ]
+      }
+    ]
   },
   "naem-zima": {
     "h1": "Zimní pronájem vily v Pamporově",
-    "seoTitle": "Zimní pronájem vily v Pamporově | Lyžařská dovolená 2026 — Pamporovo Villa",
+    "seoTitle": "Zimní pronájem vily v Pamporovu | Lyžařská dovolená 2026 — Pamporovo Villa",
     "seoDescription": "Vila k pronájmu v zimě v Pamporově — 2 km od sjezdovek, krb, až pro 6 hostů. Rezervujte si lyžařskou dovolenou na Pamporovo Villa.",
-    "seoKeywords": "zimní pronájem vily v Pamporovu, lyžařská dovolená ve vile, vila v zimě v Rodopech"
+    "seoKeywords": "zimní pronájem vily v Pamporovu, lyžařská dovolená ve vile, vila v zimě v Rodopech",
+    "eyebrow": "Zima · půjčovna lyží",
+    "intro": "Naplánujte si lyžařskou dovolenou v Pamporově – pronájem celé vily v blízkosti sjezdovek, s krbem, parkovištěm a cenami pro rodiny a skupiny.",
+    "sections": [
+      {
+        "heading": "Proč si pronajmout chatu na lyžařskou sezónu",
+        "paragraphs": [
+          "Lyžařské vybavení, mokré oblečení, brzké výlety – ve vaší soukromé vile máte prostor pro sušení, vaření a brzkou snídani bez ohledu na otevírací dobu restaurace. Parkoviště je přímo u vchodu."
+        ]
+      },
+      {
+        "heading": "Blízkost sjezdovek",
+        "paragraphs": [
+          "Raykovski Livadi se nachází 2 km od centra — 5–7 minut jízdy autem k lanovkám. Po nočním sjezdu na „Stěně“ se rychle dostanete k krbu."
+        ]
+      },
+      {
+        "heading": "Kdy si rezervovat",
+        "paragraphs": [
+          "Vánoce, Nový rok a únorové prázdniny se zaplňují jako první. V hlavní sezóně je třeba rezervovat minimálně 3–5 nocí – podívejte se do online kalendáře."
+        ],
+        "bullets": [
+          "Rezervace: pamporovovilla.com/#booking",
+          "Telefon: +359 879 501 660",
+          "Stránka s fakty: /rent"
+        ]
+      }
+    ]
   },
   "lato": {
     "h1": "Léto v Pamporově – ekologické stezky a chlad",
     "seoTitle": "Léto v Pamporovu 2026 | Ekologické stezky, aktivity, pronájem vil",
     "seoDescription": "Co podniknout v létě v Pamporově: ekologické stezky, Smolianská jezera, jeskyně, cyklistika. Pronájem vily od 110 € za noc — Pamporovo Villa.",
-    "seoKeywords": "léto v Pamporově, ekoturistika, letní dovolená v horách, letní vila"
+    "seoKeywords": "léto v Pamporově, ekoturistika, letní dovolená v horách, letní vila",
+    "eyebrow": "Léto · Pamporovo",
+    "intro": "Pamporovo není jen lyžařské středisko – v létě se zde můžete vydat na ekologické trasy, navštívit vodopády a jeskyně a užít si rodinnou dovolenou v nadmořské výšce 1650 m s čistým vzduchem.",
+    "sections": [
+      {
+        "heading": "Proč Pamporovo v létě",
+        "paragraphs": [
+          "Ve výšce 1650 m je vzduch svěží a teploty jsou příjemné i během veder v údolí. Tento region nabízí desítky značených tras, jeskyní a autentických vesnic, které jsou vzdálené pouhou hodinu cesty.",
+          "Pronájem vily s terasou s grilem a kuchyní činí léto finančně výhodnějším než pobyt v hotelu – zejména pro rodiny."
+        ],
+        "bullets": [
+          "Ekologické stezky a vodopády",
+          "Jízda na kole a jízda na koni",
+          "Jeskyně a vesnice",
+          "Vila od 110 € za noc"
+        ]
+      }
+    ]
   },
   "zima": {
     "h1": "Zima v Pamporově – lyžování, sníh a atmosféra",
     "seoTitle": "Zima v Pamporovu 2026 | Lyžařská sezóna, sjezdovky, ubytování",
-    "seoDescription": "Kompletní přehled zimní sezóny v Pamporovu: sjezdovky, lanovky, noční lyžování, pronájem chaty v blízkosti střediska. Pamporovo Villa od 120 €/noc.",
-    "seoKeywords": "zima v Pamporově, lyžařská sezóna, sníh v Pamporově, zimní dovolená"
+    "seoDescription": "Kompletní přehled zimní sezóny v Pamporovu: sjezdovky, lanovky, noční lyžování, pronájem vily v blízkosti střediska. Pamporovo Villa od 120 €/noc.",
+    "seoKeywords": "zima v Pamporově, lyžařská sezóna, sníh v Pamporově, zimní dovolená",
+    "eyebrow": "Zima · letovisko",
+    "intro": "Více než 37 km sjezdovek, noční lyžování, umělé zasněžování a přes 120 slunečných dní – zima v Pamporovu patří k těm nejlepším v Bulharsku.",
+    "sections": [
+      {
+        "heading": "Lyžařská sezóna",
+        "paragraphs": [
+          "Sezóna obvykle trvá od prosince do března/dubna. 90 % sjezdovek je vybaveno zasněžovacím zařízením – sníh pro lyžování je tak téměř zaručen.",
+          "Spojte den na sjezdovkách s večerem u krbu v soukromé vile – bez hluku hotelové haly."
+        ]
+      }
+    ]
   },
   "yagodinska-pechtera": {
     "h1": "Jagodinská jeskyně – nedaleko Pamporova",
     "seoTitle": "Jagodinská jeskyně u Pamporova | Vzdálenost, trasa, tipy",
-    "seoDescription": "Jak se dostat k jeskynním Yagodinska z Pamporova — 50 km, 45 minut chůze, co vidět. Ubytování: vila Райковски ливади.",
-    "seoKeywords": "Jagodinská jeskyně, jeskyně v Pamporovu, Boujnovské soutěsky"
+    "seoDescription": "Jak se dostat k jeskynním Yagodinska z Pamporova — 50 km, 45 minut chůze, co vidět. Ubytování: vila Raykovski Livadi.",
+    "seoKeywords": "Jagodinská jeskyně, jeskyně v Pamporovu, Boujnovské soutěsky",
+    "eyebrow": "Jeskyně · region",
+    "intro": "Třetí nejdelší jeskyně v Bulharsku – 10,5 km chodeb, jeskynní perly a „Novoroční sál“. Asi 50 km od Pamporova – ideální jednodenní výlet.",
+    "sections": [
+      {
+        "heading": "Praktické rady",
+        "paragraphs": [
+          "Teplota v jeskyni je kolem 6 °C – vezměte si bundu i v létě. V hlavní sezóně si rezervujte prohlídku.",
+          "Spojte to s výletem do soutěsky Buinovsko a obědem v této oblasti – strávíte tak celý den mimo letovisko."
+        ]
+      }
+    ]
   },
   "shiroka-laka": {
     "h1": "Široka Luka — architektonická památková rezervace nedaleko Pamporova",
     "seoTitle": "Široká louka u Pamporova | 16 km, co vidět",
     "seoDescription": "Široka Luka, 20 minut od Pamporova — architektura, folklór, muzeum. Zkombinujte to s přenocováním v Pamporovo Villa.",
-    "seoKeywords": "Široka Luka, Pamporovo, Rodopy, folklór"
+    "seoKeywords": "Široka Luka, Pamporovo, Rodopy, folklór",
+    "eyebrow": "Zajímavosti",
+    "intro": "16 km od Pamporova – domy z období národního obrození, škola pro hráče na dudy a každoroční festival kukerů. Nezbytná zastávka v Rodopách.",
+    "sections": [
+      {
+        "heading": "Jak si naplánovat den",
+        "paragraphs": [
+          "Ranní procházka po vesnici, oběd v taverně, pak zpátky na vilu na večerní grilování — klasický den v Rodopech."
+        ]
+      }
+    ]
   },
   "eco-pateki": {
     "h1": "Ekologické stezky v okolí Pamporova",
     "seoTitle": "Ekologické stezky v Pamporově | Kaňon, jezera, trasy 2026",
     "seoDescription": "Ekologické stezky v Pamporově: vodopády, jezera, trasy pro rodiny. Ubytování – vila s kuchyní a grilem od 110 € za noc.",
-    "seoKeywords": "ekologické stezky v Pamporově, turistika v Rodopech, vodopády"
+    "seoKeywords": "ekologické stezky v Pamporově, turistika v Rodopech, vodopády",
+    "eyebrow": "Ekologické trasy",
+    "intro": "Kaňon vodopádů, Smolianská jezera, Nevyasta, Orfeovy skály – nejlepší ekologické trasy vzdálené jeden až dva dny od letoviska.",
+    "sections": [
+      {
+        "heading": "Nejoblíbenější trasy",
+        "paragraphs": [
+          "Kaňon vodopádů — 46 vodopádů, včetně 68 metrů vysokého vodopádu Orfej. Smolianská jezera — nenáročná rodinná trasa pod horou Sněžanka."
+        ]
+      }
+    ]
   },
   "kak-da-stignem": {
     "h1": "Jak se dostat do Pamporova",
     "seoTitle": "Jak se dostat do Pamporova | Ze Sofie, Plovdivu, mapa",
-    "seoDescription": "Trasa do Pamporova autem: Sofie, Plovdiv, Smolyan. Adresa Pamporovo Villa — Райковски ливади, GPS souřadnice.",
-    "seoKeywords": "jak se dostat do Pamporova, cesta Sofia–Pamporovo, trasa"
+    "seoDescription": "Trasa do Pamporova autem: Sofie, Plovdiv, Smolyan. Adresa Pamporovo Villa — Raykovski Livadi, GPS souřadnice.",
+    "seoKeywords": "jak se dostat do Pamporova, cesta Sofia–Pamporovo, trasa",
+    "eyebrow": "Cesta",
+    "intro": "Ze Sofie ~240 km (3–3,5 hod.), z Plovdivu ~85 km, ze Smolyanu ~15 km. Trasy, tipy na zimu a navigace k Raykovski Livadi.",
+    "sections": [
+      {
+        "heading": "Autem",
+        "paragraphs": [
+          "Ze Sofie: A1/A3 směrem na Plovdiv, poté Asenovgrad–Smolyan–Pamporovo. V zimě si ověřte dopravní situaci a vezměte si sněhové řetězy.",
+          "GPS souřadnice k chatám: Raykovski Livadi, letovisko Pamporovo — Google Maps „Pamporovo Villa“."
+        ]
+      }
+    ]
   },
   "vila-za-dvoika": {
     "h1": "Vila pro dva v Pamporově",
-    "seoTitle": "Vila pro dva v Pamporově | Romantický pobyt, krb",
+    "seoTitle": "Vila pro dva v Pamporovu | Romantický pobyt, krb",
     "seoDescription": "Pronajměte si vilu pro dva v Pamporově – soukromý dům, krb, gril. Pamporovo Villa – od 110 € za noc za celou vilu.",
-    "seoKeywords": "vila pro dva v Pamporovu, romantický pobyt, vila pro pár"
+    "seoKeywords": "vila pro dva v Pamporově, romantický pobyt, vila pro pár",
+    "eyebrow": "Pronájem · páry",
+    "intro": "Romantická dovolená v horách – celá vila jen pro dva, s krbem, grilem a klidem v Raykovski Livadi, 2 km od letoviska.",
+    "sections": [
+      {
+        "heading": "Proč vila, a ne pokoj?",
+        "paragraphs": [
+          "Soukromí, krb a vlastní veranda – bez sousedů. Platíte cenu za celou vilu, ne za osobu; pro zvláštní příležitost to stojí za to."
+        ]
+      }
+    ]
   },
   "vila-za-grupa": {
     "h1": "Vila pro 6 osob v Pamporově",
     "seoTitle": "Vila pro 6 osob v Pamporově | Skupina, celý dům",
-    "seoDescription": "Pronájem vily pro 6 osob v Pamporově — Pamporovo Villa, 2 ložnice, gril, od 110 € za noc. Ideální pro skupinu přátel.",
-    "seoKeywords": "vila pro 6 osob v Pamporově, skupinová vila, dům pro přátele"
+    "seoDescription": "Pronájem vily pro 6 osob v Pamporovu — Pamporovo Villa, 2 ložnice, gril, od 110 € za noc. Ideální pro skupinu přátel.",
+    "seoKeywords": "vila pro 6 osob v Pamporově, skupinová vila, dům pro přátele",
+    "eyebrow": "Pronájem · skupiny",
+    "intro": "Celý dům pro přátele nebo rodinu – až pro 6 hostů, 2 ložnice, obývací pokoj s krbem, gril a parkoviště. V případě potřeby – dvě vily vedle sebe.",
+    "sections": [
+      {
+        "heading": "Cena za osobu",
+        "paragraphs": [
+          "Při 6 hostech a ceně 120 € za noc vychází cena za vilu na 20 € za osobu a noc – což je často výhodnější než hotel s polopenzí."
+        ]
+      }
+    ]
   },
   "naem-lqto": {
     "h1": "Letní pronájem vily v Pamporově",
     "seoTitle": "Letní pronájem vily v Pamporovu | Od 110 € za noc",
-    "seoDescription": "Pronajměte si v létě vilu v Pamporově – ekologické trasy, grilování, od 110 € za noc. Pamporovo Villa na Райковски ливади.",
-    "seoKeywords": "letní pronájem vily, letní vila v Pamporově, horská vila v létě"
+    "seoDescription": "Pronajměte si v létě vilu v Pamporově – ekologické trasy, grilování, od 110 € za noc. Pamporovo Villa na Raykovski Livadi.",
+    "seoKeywords": "letní pronájem vily, letní vila v Pamporově, horská vila v létě",
+    "eyebrow": "Letní pronájem",
+    "intro": "Nižší ceny, příjemné chladno a večery s grilováním — letní pronájem začíná na 110 € za noc za celou vilu (při pobytu na více než 5 nocí).",
+    "sections": [
+      {
+        "heading": "Co to zahrnuje",
+        "paragraphs": [
+          "2 ložnice, kuchyň, krb (pro chladné večery), veranda s grilem, Wi-Fi, parkoviště — celá vila jen pro vás."
+        ]
+      }
+    ]
   },
   "rajkovski-livadi": {
-    "h1": "Райковски ливади — pronájem vily",
-    "seoTitle": "Райковски ливади pronájem | Vily Pamporovo — Pamporovo Villa",
-    "seoDescription": "Pronájem vily v Райковски ливади, Pamporovo — 3 soukromé vily, 2 km od letoviska, krb, gril. Online rezervace.",
-    "seoKeywords": "Райковски ливади, pronájem vily, Pamporovo Villa adresa"
+    "h1": "Raykovski Livadi — pronájem vily",
+    "seoTitle": "Raykovski Livadi pronájem | Vily Pamporovo — Pamporovo Villa",
+    "seoDescription": "Pronájem vily v Raykovski Livadi, Pamporovo — 3 soukromé vily, 2 km od letoviska, krb, gril. Online rezervace.",
+    "seoKeywords": "Raykovski Livadi, pronájem vily, Pamporovo Villa adresa",
+    "eyebrow": "Umístění",
+    "intro": "Klidná borovicová lokalita 2 km od centra Pamporova — zde se nacházejí tři vily společnosti Pamporovo Villa s parkovištěm a v blízkosti sjezdovek.",
+    "sections": [
+      {
+        "heading": "Proč Raykovski Livadi",
+        "paragraphs": [
+          "Klid uprostřed borovicového lesa, bez hluku z centra, ale jen pár minut jízdy autem od lanovek a hospůdek."
+        ]
+      }
+    ]
   },
   "naem-ot-110-evro": {
     "h1": "Pronájem vily od 110 € za noc v Pamporově",
     "seoTitle": "Vila od 110 € v Pamporově | Ceny, sezóny, rezervace",
     "seoDescription": "Pronájem vily v Pamporově od 110 € za noc – celá vila až pro 6 hostů. Oficiální ceny Pamporovo Villa.",
-    "seoKeywords": "vila 110 eur, levná vila v Pamporovu, cena pronájmu"
+    "seoKeywords": "vila 110 eur, levná vila v Pamporovu, cena pronájmu",
+    "eyebrow": "Ceny · pronájem",
+    "intro": "Letní ceny začínají na 110 € za celou vilu (až pro 6 hostů) při delším pobytu. Takto funguje stanovení cen.",
+    "sections": [
+      {
+        "heading": "Cenové úrovně",
+        "paragraphs": [
+          "Do 3 nocí – vyšší noční sazba. 4–5 nocí – střední sazba. Více než 5 nocí v létě – od 110 €. V zimě – od 120 €. Deluxe +10/+20 €."
+        ]
+      }
+    ]
   },
   "semeen-otpusk": {
     "h1": "Rodinná lyžařská dovolená v Pamporově",
     "seoTitle": "Rodinná lyžařská dovolená v Pamporovu | Vila s dětmi",
     "seoDescription": "Rodinná lyžařská dovolená v Pamporově — vila se 2 ložnicemi, kuchyní, krbem, až pro 6 hostů. Nabídky a rezervace — Pamporovo Villa.",
-    "seoKeywords": "rodinná lyžařská dovolená, chata s dětmi v Pamporově, rodina v Pamporově"
+    "seoKeywords": "rodinná lyžařská dovolená, chata s dětmi v Pamporově, rodina v Pamporově",
+    "eyebrow": "Rodiny · lyžování",
+    "intro": "Zelené sjezdovky, dětská hřiště, krb po lyžování — naplánujte si rodinnou zimní dovolenou s celou vilou na Raykovski Livadi.",
+    "sections": [
+      {
+        "heading": "Proč vila pro rodiny",
+        "paragraphs": [
+          "Kuchyňka na ranní snídaně, místo na lyžařské vybavení, krb večer – hotelový pokoj je pro rodinu s dětmi příliš malý.",
+          "Sjezdovka č. 6 je ideální pro začátečníky – nachází se 2 km od vil."
+        ]
+      }
+    ]
   },
   "praznici": {
     "h1": "Vánoce a Nový rok v Pamporovu — vila s krbem",
     "seoTitle": "Vánoce a Nový rok v Pamporově 2026 | Pronájem vily s krbem",
-    "seoDescription": "Sváteční pobyt v Pamporovu — pronájem celé vily s krbem, grilem, až pro 6 hostů. Vánoce, Nový rok, Velikonoce. Pamporovo Villa od 120 €/noc.",
-    "seoKeywords": "Vánoce v Pamporovu, Nový rok ve vile, svátky v Pamporovu, vila s krbem"
+    "seoDescription": "Sváteční pobyt v Pamporově – pronájem celé vily s krbem, grilem, až pro 6 hostů. Vánoce, Nový rok, Velikonoce. Pamporovo Villa od 120 €/noc.",
+    "seoKeywords": "Vánoce v Pamporovu, Nový rok ve vile, svátky v Pamporovu, vila s krbem",
+    "eyebrow": "Sváteční dny · Pamporovo",
+    "intro": "Svátky v horách jsou kouzelné – sníh, krb a celá chata jen pro vaši skupinu. Rezervujte si včas na Vánoce, Nový rok a Velikonoce.",
+    "sections": [
+      {
+        "heading": "Proč na svátky raději chata než hotel?",
+        "paragraphs": [
+          "O svátcích jsou hotely přeplněné a hlučné. Soukromá vila nabízí krb, vlastní jídelnu a prostor pro děti i přátele – bez front u bufetu.",
+          "Pamporovo Villa nabízí 3 vily v Raykovski Livadi — 2 km od letoviska, dostatečně blízko sjezdovek a zároveň dostatečně klidné pro rodinu."
+        ],
+        "bullets": [
+          "Krb a gril",
+          "Až 6 hostů ve vile",
+          "Rezervace: pamporovovilla.com/#booking"
+        ]
+      }
+    ]
   },
   "team-building": {
     "h1": "Teambuilding v Pamporově — chaty pro skupiny až 18 osob",
     "seoTitle": "Teambuilding v Pamporově | Chaty pro skupiny do 18 osob",
     "seoDescription": "Firemní teambuilding v Pamporově — 3 vily, celkem až 18 hostů, gril, krb, parkoviště. V zimě: lyžování. V létě: ekologické trasy. Pamporovo Villa.",
-    "seoKeywords": "teambuilding v Pamporově, firemní pobyt, vila pro skupinu"
+    "seoKeywords": "teambuilding v Pamporově, firemní pobyt, vila pro skupinu",
+    "eyebrow": "Firemní · skupiny",
+    "intro": "Tři samostatné vily na jedné adrese – ideální pro firemní teambuilding, lyžařský víkend nebo letní setkání v horách. Pronajměte si 1, 2 nebo 3 vily pro celý tým.",
+    "sections": [
+      {
+        "heading": "Jak to funguje pro týmy",
+        "paragraphs": [
+          "Každá vila je samostatná – 2 ložnice, 2 koupelny, až pro 6 hostů. Spojte 2–3 vily pro jedno oddělení nebo celý tým na jedné adrese se společným parkovištěm a prostory pro grilování.",
+          "V zimě: lyžování na sjezdovkách o délce 37+ km. V létě: ekologické stezky, jeskyně a týmové aktivity v regionu."
+        ]
+      }
+    ]
   },
   "dalga-pochivka": {
     "h1": "Dlouhodobý pronájem v Pamporově — 7 a více nocí v soukromé vile",
     "seoTitle": "Dlouhodobý pronájem vily v Pamporovu | 7 a více nocí, celá vila",
-    "seoDescription": "Pronájem vily v Pamporově na 7 a více nocí — celá vila až pro 6 hostů, krb, gril. Kontaktujte nás pro individuální nabídku — Pamporovo Villa.",
-    "seoKeywords": "dlouhodobý pronájem v Pamporově, vila na týden, měsíční pronájem v horách"
+    "seoDescription": "Pronájem vily v Pamporovu na 7 a více nocí — celá vila až pro 6 hostů, krb, gril. Kontaktujte nás pro individuální nabídku — Pamporovo Villa.",
+    "seoKeywords": "dlouhodobý pronájem v Pamporově, vila na týden, měsíční pronájem v horách",
+    "eyebrow": "Pronájem · slevy",
+    "intro": "Horská dovolená na týden a déle je cenově výhodnější v celé vile – kuchyň, prostor a klid bez hotelových poplatků.",
+    "sections": [
+      {
+        "heading": "Pro koho je to vhodné",
+        "paragraphs": [
+          "Rodiny, lidé pracující na dálku a skupiny, které hledají zázemí v horách na delší dobu. Každá vila je plně vybavená a má kuchyň.",
+          "V případě pobytu delšího než 7 nocí — kontaktujte nás ohledně individuální nabídky: +359 879 501 660 nebo pamporovovilla@gmail.com."
+        ]
+      }
+    ]
   },
   "oferti": {
     "h1": "Nabídky pronájmu vil v Pamporově",
     "seoTitle": "Nabídky vil v Pamporovu 2026 | Od 110 €/noc — Pamporovo Villa",
-    "seoDescription": "Oficiální nabídky pronájmu vily v Pamporově – letní a zimní ceny, celá vila, až pro 6 hostů. Online rezervace na pamporovovilla.com.",
-    "seoKeywords": "nabídky v Pamporově, akce na vily, ceny pronájmu vil"
+    "seoDescription": "Oficiální nabídky pronájmu vily v Pamporovu – letní a zimní ceny, celá vila, až pro 6 hostů. Online rezervace na pamporovovilla.com.",
+    "seoKeywords": "nabídky v Pamporově, akce na vily, ceny pronájmu vil",
+    "eyebrow": "Nabídky · Pamporovo Villa",
+    "intro": "Aktuální ceny a sezónní podmínky pro tři vily Raykovski Livadi. V létě od 110 € za noc, v zimě od 120 € za noc – za celou vilu pro až 6 hostů.",
+    "sections": [
+      {
+        "heading": "Cenový rámec",
+        "paragraphs": [
+          "Letní sezóna: od 110 € za noc za celou vilu. Zimní sezóna: od 120 € za noc. Svátky (Vánoce, Nový rok) — na dotaz.",
+          "V ceně: celá vila, až 6 hostů, krb, gril, parkoviště, Wi-Fi."
+        ],
+        "bullets": [
+          "Rezervace: /#booking",
+          "Oficiální stránka: /rent",
+          "Telefon: +359 879 501 660"
+        ]
+      }
+    ]
   },
   "liftove": {
     "h1": "Lanovky v Pamporově — 6 zařízení vedoucích ke Sněžance",
     "seoTitle": "Lanovky v Pamporovu 2026 | Kapacita, trasy, mapa",
-    "seoDescription": "Všechny lanovky v Pamporově: Stojki, Studenec, Malina, Smoljanská jezera. Kapacita a délka. Ubytování: vila 2 km od centra.",
-    "seoKeywords": "lanovky v Pamporově, lyžařský vlek Sněžanka, kapacita v Pamporově"
+    "seoDescription": "Všechny lanovky v Pamporově: Stoykite, Studenec, Malina, Smolianská jezera. Kapacita a délka. Ubytování: vila 2 km od centra.",
+    "seoKeywords": "lanovky v Pamporově, lyžařský vlek Sněžanka, kapacita v Pamporově",
+    "eyebrow": "Lyžování · infrastruktura",
+    "intro": "Šest lanovek spojuje letovisko s vrcholem Sněžanka (1926 m). Celková přepravní kapacita přesahuje 13 000 lyžařů za hodinu – naplánujte si den na sjezdovkách.",
+    "sections": [
+      {
+        "heading": "Tipy k výtahům",
+        "paragraphs": [
+          "Největší lanovka vede ze Stoykite do Snezhanka – 2992 m, 2400 osob/hod. Hlavní spoj přes Studenec je nejvytíženější ráno – pokud jste ubytováni na jihu, vyrazte z Maliny.",
+          "Po dni stráveném na sjezdovkách – chata s krbem 2 km odtud, bez front u recepce."
+        ]
+      }
+    ]
   },
   "rozhen": {
     "h1": "NAO „Rožen“ — observatoř nedaleko Pamporova",
     "seoTitle": "Observatoř Rožen z Pamporova | 18 km, návštěvy",
     "seoDescription": "Jak se dostat k NAO Rožen z Pamporova — 25 minut autem, 2metrový dalekohled, Roženský festival. Základna: Pamporovo Villa.",
-    "seoKeywords": "Observatoř Rožen, Národní astronomická observatoř Rožen, výlety do Pamporova"
+    "seoKeywords": "Observatoř Rožen, Národní astronomická observatoř Rožen, výlety do Pamporova",
+    "eyebrow": "Zajímavosti",
+    "intro": "18 km od Pamporova — největší astronomická observatoř na Balkáně v nadmořské výšce 1750 m. Denní prohlídky a noční pozorování po předchozí rezervaci.",
+    "sections": [
+      {
+        "heading": "Praktické",
+        "paragraphs": [
+          "Zkombinujte to s výletem na Roženské louky a obědem v této oblasti. Večer — krb ve vile Raykovski Livadi."
+        ]
+      }
+    ]
   },
   "chudnite-mostove": {
     "h1": "Úžasné mosty – jednodenní výlet z Pamporova",
     "seoTitle": "Úžasné mosty v Pamporově | 42 km, trasa",
     "seoDescription": "Výlet k Úžasným mostům z Pamporova — 1 hodina autem, stezka pod oblouky. Pronájem vily jako základny — Pamporovo Villa.",
-    "seoKeywords": "Krásné mosty, Rodopy, výlet do Pamporova"
+    "seoKeywords": "Krásné mosty, Rodopy, výlet do Pamporova",
+    "eyebrow": "Příroda · Rodopy",
+    "intro": "Obrovské mramorové oblouky vzdálené 42 km – jedna ze 100 národních turistických atrakcí. Ideální kombinace s letní nebo podzimní dovolenou v horách.",
+    "sections": [
+      {
+        "heading": "Rada",
+        "paragraphs": [
+          "Vyrazte brzy – v srpnu se parkoviště rychle zaplňuje. Obuv s dobrou přilnavostí na stezku pod mosty."
+        ]
+      }
+    ]
   },
   "dyavolskoto-garlo": {
     "h1": "Ďáblovo hrdlo — 42 m dlouhý podzemní vodopád",
     "seoTitle": "Ďáblovo hrdlo v Pamporově | Vzdálenost, trasa",
     "seoDescription": "Výlet do Ďáblova hrdla z Pamporova — 1 h 20 min, 301 schodů, Hřmící síň. Výchozí bod: vila Pamporovo Villa.",
-    "seoKeywords": "Ďáblovo hrdlo, Trigrad, jeskyně v Rodopách"
+    "seoKeywords": "Ďáblovo hrdlo, Trigrad, jeskyně v Rodopách",
+    "eyebrow": "Jeskyně · legendy",
+    "intro": "55 km od Pamporova — propastná jeskyně s nejvyšším podzemním vodopádem na Balkáně. Legenda o Orfeovi a Eurydice.",
+    "sections": [
+      {
+        "heading": "Zkombinujte s",
+        "paragraphs": [
+          "Trigradské soutěsky a vesnice Trigrad – celý den mimo letovisko, večer u krbu ve vile."
+        ]
+      }
+    ]
   },
   "trigradsko-zhdrelo": {
     "h1": "Trigradské soutěsky – dramatický kaňon v Rodopách",
     "seoTitle": "Trigradské soutěsky z Pamporova | Trasa, tipy",
     "seoDescription": "Jak se dostat k Trigradskému průsmyku z Pamporova — 1 h 15 min, v kombinaci s Ďáblovým hrdlem. Pamporovo Villa.",
-    "seoKeywords": "Trigradské soutěsky, Trigrad, kaňon v pohoří Rodopy"
+    "seoKeywords": "Trigradské soutěsky, Trigrad, kaňon v pohoří Rodopy",
+    "eyebrow": "Kaňon · Trigrad",
+    "intro": "Silnice mezi strmými stěnami vysokými až 250 m — jedna z nejfotogeničtějších tras v Bulharsku, 53 km od Pamporova.",
+    "sections": [
+      {
+        "heading": "Řízení",
+        "paragraphs": [
+          "Horská silnice – jeďte opatrně a využívejte serpentin. Nejlépe ráno, než se rozjede hustý provoz."
+        ]
+      }
+    ]
   },
   "uhlovitsa": {
     "h1": "Jeskyně Uhlovica – kamenné vodopády nedaleko Pamporova",
     "seoTitle": "Jeskyně Uhlovica u Pamporova | 32 km, okruh",
-    "seoDescription": "Výlet do Uhlovice z Pamporova — 45 minut autem, 30 minut pěšky. Nedaleko Aguševých konací. Pamporovo Villa.",
-    "seoKeywords": "Uhlovica, jeskyně Mogilica, jeskyně Pamporovo"
+    "seoDescription": "Výlet do Uhlovice z Pamporova — 45 minut autem, 30 minut pěšky. Nedaleko od Agushevových konací. Pamporovo Villa.",
+    "seoKeywords": "Uhlovica, jeskyně Mogilica, jeskyně Pamporovo",
+    "eyebrow": "Jeskyně",
+    "intro": "Ve vzdálenosti 32 km se nachází jedna z nejkrásnějších jeskyní v Bulharsku s kalcitovými kaskádami a korálovými útvary. 30 minut chůze od parkoviště.",
+    "sections": [
+      {
+        "heading": "Příprava",
+        "paragraphs": [
+          "Teplota ~8 °C – lehká bunda. Pohodlná obuv na cestu od parkoviště."
+        ]
+      }
+    ]
   },
   "kanion-vodopadi": {
     "h1": "Kaňon vodopádů — 46 vodopádů nedaleko Pamporova",
     "seoTitle": "Kaňon vodopádů v Pamporovu | Ekologická trasa",
     "seoDescription": "Ekologická stezka „Kaňon vodopádů“ z Pamporova — 6 km dlouhá trasa, 46 vodopádů. Letní základna: vila Pamporovo Villa.",
-    "seoKeywords": "Kaňon s vodopády, ekologická stezka ve Smolyanu, Rodopy"
+    "seoKeywords": "Kaňon s vodopády, ekologická stezka ve Smolyanu, Rodopy",
+    "eyebrow": "Eko · Smolyan",
+    "intro": "15 km od Smolyanu — nejúchvatnější ekologická stezka v Rodopách s 68metrovým vodopádem „Orfej“ a panoramatickým výhledem v nadmořské výšce 1800 m.",
+    "sections": [
+      {
+        "heading": "Trasa",
+        "paragraphs": [
+          "Okružní trasa dlouhá 6 km zabere asi 4 hodiny. Vezměte si s sebou vodu a vyrazte ráno – odpoledne tu může být rušno."
+        ]
+      }
+    ]
   },
   "smolyanski-ezera": {
     "h1": "Smolianská jezera — lehká procházka z Pamporova",
     "seoTitle": "Smolianská jezera z Pamporova | Trasa, tipy",
     "seoDescription": "Ekologická procházka k Smolianským jezerům z Pamporova — nenáročná trasa, vhodná pro rodiny, rybaření. Pronájem chaty — Pamporovo Villa.",
-    "seoKeywords": "Smolianská jezera, ekologické Pamporovo, horská jezera"
+    "seoKeywords": "Smolianská jezera, ekologické Pamporovo, horská jezera",
+    "eyebrow": "Ekologická jezera",
+    "intro": "„Smaragdové oči Rodop“ — přírodní jezera pod Sněžankou. Rodinná trasa, piknik a možnost vyjet lanovkou na vrchol.",
+    "sections": [
+      {
+        "heading": "Pro rodiny",
+        "paragraphs": [
+          "Ideální pro děti – krátká trasa a místa na piknik mezi jezery."
+        ]
+      }
+    ]
   },
   "nevyastata": {
     "h1": "Ekologická stezka „Nevyasta“ — panoramatický výhled na Smolyan",
     "seoTitle": "Ekologická stezka „Nevyasta“ z Pamporova | Panorama, trolejbus",
-    "seoDescription": "Ekologická stezka „Nevyasta“ z Pamporova — 900 m dlouhá trasa, panoramatický výhled, lanovka. Letní dovolená — Pamporovo Villa.",
-    "seoKeywords": "Nevyasta, ekologická stezka Smolyan, Rodopy"
+    "seoDescription": "Ekologická stezka „Nevyasta“ z Pamporova — 900 m trasa, panoramatický výhled, lanovka. Letní dovolená — Pamporovo Villa.",
+    "seoKeywords": "Nevyasta, ekologická stezka Smolyan, Rodopy",
+    "eyebrow": "Eko · panorama",
+    "intro": "Krátká stezka ke skále „Nevyasta“ s alpským lanovkou a legendou — 12 km od Smolyanu, přístupná pro všechny věkové skupiny.",
+    "sections": [
+      {
+        "heading": "Rada",
+        "paragraphs": [
+          "Spojte to s obědem ve Smolyanu a návštěvou planetária."
+        ]
+      }
+    ]
   },
   "orpheus-rocks": {
     "h1": "Orfejovy skály — trasa z vrcholu Sněžanka",
     "seoTitle": "Orfeovy skály v Pamporově | Trasa ze Sněženky",
     "seoDescription": "Horská trasa Orfejovy skály z vrcholu Sněžanka – panoráma, Jehlice. Základna: Pamporovo Villa.",
-    "seoKeywords": "Orfeovy skály, Sněhurka, horská trasa"
+    "seoKeywords": "Orfeovy skály, Sněhurka, horská trasa",
+    "eyebrow": "Eko · Sněhurka",
+    "intro": "Rhyolitové skalní útvary s výhledem na Smolianská jezera — značená stezka z vrcholu, přibližně 4 hodiny s lehkou zátěží.",
+    "sections": [
+      {
+        "heading": "Kdy",
+        "paragraphs": [
+          "Nejlepší období je červenec–srpen — borůvky podél cesty a stabilní počasí na hřebeni."
+        ]
+      }
+    ]
   },
   "momchilovtsi": {
     "h1": "Momčilovci – vesnice dlouhověkých lidí nedaleko Pamporova",
     "seoTitle": "Chlapci z Pamporova | 25 km, vesnice, hospody",
     "seoDescription": "Výlet do Momčilovců z Pamporova — 30 min, dlouhověkost, jogurt. Pronájem vily — Pamporovo Villa.",
-    "seoKeywords": "Momčilovci, vesnice v Rodopách, jogurt"
+    "seoKeywords": "Momčilovci, vesnice v Rodopách, jogurt",
+    "eyebrow": "Vesnice · Rodopy",
+    "intro": "25 km odtud — místo proslulé jogurtem, panoramatickými výhledy a autentickými hostinci. V srpnu se zde koná jogurtový festival.",
+    "sections": [
+      {
+        "heading": "Co ochutnat",
+        "paragraphs": [
+          "Domácí jogurt a rodopská jídla v taverně – ideální oběd po procházce."
+        ]
+      }
+    ]
   },
   "gela": {
     "h1": "Gela – vesnice Orfea v Rodopách",
     "seoTitle": "Gela z Pamporova | Orfeus, festival dudáků",
     "seoDescription": "Výlet do vesnice Gela z Pamporova — 30 min, Orfeus, festival dudáků. Pronájem vily — Pamporovo Villa.",
-    "seoKeywords": "Gela, Orfeus, rodopský folklór"
+    "seoKeywords": "Gela, Orfeus, rodopský folklór",
+    "eyebrow": "Vesnice · Orfeus",
+    "intro": "Ve vzdálenosti 22 km se nachází jedna z nejstarších vesnic, kolébka legendy o Orfeovi. Každou první neděli v srpnu se zde koná mezinárodní festival dudáků.",
+    "sections": [
+      {
+        "heading": "Událost",
+        "paragraphs": [
+          "Srpen – stovky dudáků na louce. Na toto období si vilu rezervujte s předstihem."
+        ]
+      }
+    ]
   },
   "smolyan": {
     "h1": "Smolyan — planetárium a muzea v Pamporovu",
     "seoTitle": "Smolyan z Pamporova | Planetárium, muzea, 20 min",
     "seoDescription": "Výlet do Smolyanu z Pamporova — planetárium, muzea, Raikovo. Ubytování: Pamporovo Villa od 110 € za noc.",
-    "seoKeywords": "Smolyan, planetárium, muzeum Rodopy"
+    "seoKeywords": "Smolyan, planetárium, muzeum Rodopy",
+    "eyebrow": "Město · kultura",
+    "intro": "Ve vzdálenosti 15 km se nachází největší planetárium v Bulharsku, historické muzeum a staré čtvrti Rajkovo a Ustovo.",
+    "sections": [
+      {
+        "heading": "Pro děti",
+        "paragraphs": [
+          "Planetárium je pro skupiny dětí povinnou zastávkou — rezervujte si termín předem."
+        ]
+      }
+    ]
   },
   "nochno-karane": {
     "h1": "Noční jízda v Pamporově — sjezdovka „Stenata“",
     "seoTitle": "Noční jízda v Pamporově 2026 | Stěna, program",
     "seoDescription": "Noční jízda na sjezdovce „Stenata“ v Pamporově — rozvrh, lyžařská mapa, ubytování 2 km — Pamporovo Villa.",
-    "seoKeywords": "noční lyžování v Pamporovu, Noční stěna, noční lyžování"
+    "seoKeywords": "noční lyžování v Pamporově, Noční stěna, noční lyžování",
+    "eyebrow": "Lyžování · noc",
+    "intro": "Jediná osvětlená sjezdovka pro noční lyžování – obvykle v sezóně od 17:30 do 22:00. Symbol střediska pod světly reflektorů.",
+    "sections": [
+      {
+        "heading": "Po sjezdovkách",
+        "paragraphs": [
+          "Večeře ve vile s krbem — 2 km od letoviska. Žádný hotelový hluk po noční jízdě."
+        ]
+      }
+    ]
   },
   "stenata": {
     "h1": "Sjezdovka „Stěna“ — černá sjezdovka a noční lyžování",
     "seoTitle": "Stezka Pamporovo | Černá sjezdovka, noční lyžování",
-    "seoDescription": "Sjezdovka „Stenata“ v Pamporovu — 1258 m, černá, noční lyžování. Вила 2 km — Pamporovo Villa.",
-    "seoKeywords": "Stěna, černá sjezdovka v Pamporově, noční lyžování"
+    "seoDescription": "Sjezdovka „Stenata“ v Pamporově — 1258 m, černá, noční lyžování. Villa 2 km — Pamporovo Villa.",
+    "seoKeywords": "Stěna, černá sjezdovka v Pamporově, noční lyžování",
+    "eyebrow": "Lyže · černé",
+    "intro": "1258 m dlouhá černá sjezdovka – dějiště evropských závodů. Noční lyžování a jedna z nejfotogeničtějších sjezdovek v Bulharsku.",
+    "sections": [
+      {
+        "heading": "Pro koho",
+        "paragraphs": [
+          "Pouze pro pokročilé – začátečníci si vyberte zelené a modré sjezdovky z tabulky na /pamporovo/pisti."
+        ]
+      }
+    ]
   },
   "vruh-snezhanka": {
     "h1": "Vrchol Sněžanka – 1926 m, nejvyšší bod sjezdovek",
-    "seoTitle": "Vrchol Snezhanka v Pamporovu | 1926 m, lanovka, panoramatický výhled",
+    "seoTitle": "Vrchol Snezhanka v Pamporově | 1926 m, lanovka, panoramatický výhled",
     "seoDescription": "Vrchol Snezhanka v Pamporově — 1926 m, lanovka Stoykite, černé sjezdovky. Pronájem vily — Pamporovo Villa.",
-    "seoKeywords": "Sněhurka, vrchol Pamporovo, lyžařský areál"
+    "seoKeywords": "Sněhurka, vrchol Pamporovo, lyžařský areál",
+    "eyebrow": "Lyžování · vrchol",
+    "intro": "Nejvyšší bod lyžařského areálu – 1926 m, panoramatický výhled na Rodopy a lanovky ze všech směrů.",
+    "sections": [
+      {
+        "heading": "Rada",
+        "paragraphs": [
+          "Ráno je program méně náročný – káva na vrcholu a sestup po Malině."
+        ]
+      }
+    ]
   },
   "ski-karti": {
     "h1": "Ski pasy a lanovky v Pamporově – praktický průvodce",
     "seoTitle": "Lyžařské permanentky Pamporovo 2026 | Ceny, kde je lze zakoupit",
     "seoDescription": "Lyžařská permanentka Pamporovo – kde ji koupit, denní a sezónní permanentky, lanovky. Vila – Pamporovo Villa.",
-    "seoKeywords": "lyžařská permanentka Pamporovo, skipas, ceny lanovek"
+    "seoKeywords": "lyžařská permanentka Pamporovo, skipas, ceny lanovek",
+    "eyebrow": "Lyžování · praktické informace",
+    "intro": "Lístky na lanovky se prodávají ve Studenci a Malině. Aktuální ceny a sezónní permanentky najdete na stránkách pamporovo.me.",
+    "sections": [
+      {
+        "heading": "Ušetřete",
+        "paragraphs": [
+          "Pronájem celé vily s kuchyní snižuje náklady na ubytování – více peněz tak zbude na lyžování a restaurace."
+        ]
+      }
+    ]
   },
   "bunovsko-zhdrelo": {
     "h1": "Buinovské soutěsky – poblíž jagoďinské jeskyně",
     "seoTitle": "Buinovské soutěsky z Pamporova | Jagodinská jeskyně",
     "seoDescription": "Buinovské soutěsky z Pamporova — 50 km, jeskyně Yagodina, ekologický výlet. Pronájem vily — Pamporovo Villa.",
-    "seoKeywords": "Buinovské soutěsky, Yagodinská jeskyně, soutěsky v Rodopách"
+    "seoKeywords": "Buinovské soutěsky, Yagodinská jeskyně, soutěsky v Rodopách",
+    "eyebrow": "Příroda · jeskyně",
+    "intro": "Dramatická soutěska na cestě k jagoďinské jeskyni – spojte si to s prohlídkou jeskyně a obědem v této oblasti.",
+    "sections": [
+      {
+        "heading": "Trasa",
+        "paragraphs": [
+          "Jednodenní program: Jeskyně Jagodina + soutěska Buynovsko + návrat do vily na večer."
+        ]
+      }
+    ]
   },
   "chepelare": {
     "h1": "Čepelare a Pamporovo – dvě letoviska, jeden region",
     "seoTitle": "Čepelare vs. Pamporovo | Lyžování, vzdálenost, ubytování",
     "seoDescription": "Čepelare a Pamporovo – srovnání letovisek. Pronájem vily v Pamporovu od 110 € — Pamporovo Villa.",
-    "seoKeywords": "Čepelare, Pamporovo, lyžování v Bulharsku, srovnání"
+    "seoKeywords": "Čepelare, Pamporovo, lyžování v Bulharsku, srovnání",
+    "eyebrow": "Letoviska · sousedé",
+    "intro": "Čepelare leží 10 km daleko – jedná se o menší lyžařský areál, Mechi Chal a klidné letovisko. Porovnejte si ho s Pamporovem při plánování svého pobytu.",
+    "sections": [
+      {
+        "heading": "Kde se ubytovat",
+        "paragraphs": [
+          "V obou letoviscích jsou hotely – pro skupinu do 6 osob je však celá vila za Raykovski Livadi pohodlnější a výhodnější."
+        ]
+      }
+    ]
   }
 }

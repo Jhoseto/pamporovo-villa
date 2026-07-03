@@ -1,0 +1,90 @@
+{
+  "backToRent": "← Închiriere de vilă",
+  "featuresHeading": "Facilități și posibilități",
+  "pricingHeading": "Prețuri",
+  "pricingHeadingFor": "Prețuri pentru {villa}",
+  "pricingFrom": "din",
+  "pricingPerNight": "/ noapte",
+  "summerFrom": "Vara din",
+  "winterFrom": "Iarna din",
+  "wholeVillaNote": "O vilă întreagă · până la 6 oaspeți",
+  "bookCta": "Rezervă",
+  "bookVilla": "Rezervă {villa}",
+  "guideLink": "Ghid Pamporovo",
+  "amenitiesHeading": "Facilități",
+  "otherVillas": "Celelalte vile ale noastre",
+  "contactHeading": "Contact și rezervări",
+  "pages": {
+    "villa-1": {
+      "name": "Villa 1",
+      "tagline": "Confort pentru întreaga familie",
+      "description": "Caldă și primitoare — cu două dormitoare, două băi și un living spațios, în care focul trosnește în șemineu, iar pe verandă vă așteaptă un grătar. Preferata familiilor cu copii.",
+      "seoTitle": "Villa 1 Pamporovo, de închiriat | 2 dormitoare, șemineu — Pamporovo Villa",
+      "seoDescription": "Închiriați Villa 1 în Pamporovo — o locuință confortabilă pentru familii, cu 2 dormitoare, 2 băi, șemineu, grătar, pentru până la 6 oaspeți. Raykovski Livadi, la 2 km de pârtiile de schi. Rezervare online.",
+      "seoKeywords": "Villa 1 Pamporovo, închiriere vilă în Pamporovo, vilă pentru familie, Pamporovo Villa",
+      "h1": "Villa 1 — închiriere în Pamporovo"
+    },
+    "villa-2": {
+      "name": "Villa 2",
+      "tagline": "Soarele, de la răsărit până la apus",
+      "description": "Luminoasă și spațioasă, cu două dormitoare, două băi și un living cu vedere la munte. Veranda cu grătar este perfectă pentru serile lungi petrecute alături de prieteni.",
+      "seoTitle": "Villa 2 Pamporovo – de închiriat | 2 dormitoare, terasă cu grătar",
+      "seoDescription": "Închiriați Villa 2 în Pamporovo — o vilă luminoasă cu vedere panoramică, 2 dormitoare, șemineu, grătar, pentru până la 6 oaspeți. Cod oficial de închiriere — Pamporovo Villa.",
+      "seoKeywords": "Villa 2 Pamporovo, închiriere vilă, vilă cu grătar în Pamporovo",
+      "h1": "Villa 2 — închiriere în Pamporovo"
+    },
+    "villa-deluxe": {
+      "name": "Villa Deluxe",
+      "tagline": "Un pic mai mult lux",
+      "description": "Cea mai reprezentativă dintre cele trei — oferind același confort, cu două dormitoare, două băi și un living spațios, dar cu o atenție sporită la detalii și la atmosferă. Pentru cei care își doresc ceva special.",
+      "seoTitle": "Villa Deluxe Pamporovo | Cazare de lux, șemineu, 6 oaspeți",
+      "seoDescription": "Villa Deluxe în Pamporovo — cea mai reprezentativă dintre cele trei vile, 2 dormitoare, șemineu, grătar, până la 6 oaspeți. Rezervați online.",
+      "seoKeywords": "Villa Deluxe Pamporovo, vilă de lux în Pamporovo, închiriere de lux",
+      "h1": "Villa Deluxe — închiriere în Pamporovo"
+    }
+  },
+  "about": {
+    "intro": "Ne bucurăm că ne-ați descoperit. Vă punem la dispoziție trei vile independente, ascunse în pădurea de pini de la Raykovski Livadi — acolo unde zgomotul orașului rămâne departe, iar ziua începe cu cântecul păsărilor și parfumul rășinii.",
+    "details": "Villa 1, Villa 2 și Villa Deluxe sunt amenajate exact așa cum ne-am dori să arate propria noastră casă la munte — cu lemn natural, țesături moi și acele mici detalii care conferă unui loc o atmosferă caldă. Aici nu sunteți doar oaspeți; simțiți-vă ca acasă.",
+    "layout": "Fiecare vilă are două niveluri și dispune de două dormitoare, două băi, o bucătărie complet utilată cu sufragerie și un living spațios cu șemineu pe lemne. În exterior vă așteaptă o terasă cu vedere panoramică spre Munții Rodopi și o verandă cu grătar — locul unde se nasc cele mai frumoase seri.",
+    "hosts": "În calitate de gazde, suntem mereu la îndemână. Vă ajutăm să organizați surprize și sărbători, vă îndrumăm către cele mai frumoase pârtii și trasee, vă sugerăm unde puteți mânca bine — iar dacă aveți nevoie de ceva, nu ezitați să ne sunați. Scopul nostru este unul singur: să plecați cu dorința de a vă întoarce."
+  },
+  "contact": {
+    "phone": "+359 879 501 660",
+    "email": "pamporovovilla@gmail.com",
+    "address": "stațiunea Pamporovo, zona Raykovski Livadi"
+  },
+  "firewoodNote": "Lemn pentru șemineu — 10 € pe sac, la cerere sau la cazare.",
+  "features": [
+    "2 dormitoare pentru un somn liniștit",
+    "2 băi cu apă caldă",
+    "Un living spațios, cu șemineu",
+    "Bucătărie complet utilată",
+    "Verandă cu grătar",
+    "Până la 6 oaspeți la vilă"
+  ],
+  "pricingNotes": [
+    "Prețurile sunt pe noapte, pentru întreaga vilă (până la 6 oaspeți).",
+    "Taxa de stațiune este inclusă.",
+    "Lemn de foc — 10 € sacul, la comandă.",
+    "Biletele de schi nu sunt incluse."
+  ],
+  "distances": [
+    {
+      "value": "2 km",
+      "label": "Până în centrul stațiunii Pamporovo"
+    },
+    {
+      "value": "10 km",
+      "label": "Din Smolyan"
+    },
+    {
+      "value": "85 km",
+      "label": "Din Plovdiv"
+    },
+    {
+      "value": "220 km",
+      "label": "Din Sofia"
+    }
+  ]
+}

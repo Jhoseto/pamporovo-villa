@@ -2,7 +2,7 @@
   "routes": {
     "/": {
       "title": "Pamporovo Villa | 3 nyaraló kiadó Pamporovóban, Bulgáriában",
-      "description": "Pamporovo Villa — három önálló nyaraló kiadó Pamporovo üdülőhelyen, a Райковски ливади nevű területen. 2 hálószoba, kandalló, grillező, maximum 6 vendég. Foglaljon közvetlenül.",
+      "description": "Pamporovo Villa — három önálló nyaraló kiadó Pamporovo üdülőhelyen, a Raykovski Livadi nevű területen. 2 hálószoba, kandalló, grillező, maximum 6 vendég. Foglaljon közvetlenül.",
       "keywords": "villa kiadó Pamporovo, Pamporovo Villa, villa bérlés Pamporovo"
     },
     "/rent": {
@@ -12,7 +12,7 @@
     },
     "/pamporovo": {
       "title": "Pamporovo — teljes útmutató az üdülőhelyről és a régióról | Pamporovo Villa",
-      "description": "Több mint 37 km sípálya, 6 felvonó, öko-túraútvonalak, barlangok és nevezetességek. Szálláslehetőségek — 3 villa 110 €/éjszaka áron a Райковски ливади-nál.",
+      "description": "Több mint 37 km sípálya, 6 felvonó, öko-túraútvonalak, barlangok és nevezetességek. Szálláslehetőségek — 3 villa 110 €/éjszaka áron a Raykovski Livadi-nál.",
       "keywords": "Pamporovo idegenvezető, síelés Bulgáriában, utazás a Rodop-hegységbe"
     }
   }

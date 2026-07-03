@@ -1,0 +1,479 @@
+{
+  "nav": {
+    "ariaLabel": "Abschnitte auf der Seite",
+    "intro": "Der Ferienort",
+    "winter": "Winter",
+    "summer": "Sommer",
+    "landmarks": "Die Umgebung",
+    "caves": "Höhlen"
+  },
+  "sticky": {
+    "book": "Buchen",
+    "rent": "Miete · Preise"
+  },
+  "ui": {
+    "pisteNumber": "Nr.",
+    "pisteName": "Rennstrecke",
+    "difficulty": "Schwierigkeitsgrad",
+    "length": "Länge",
+    "note": "Anmerkung",
+    "dash": "—",
+    "meters": "m",
+    "route": "Route",
+    "liftType": "Typ",
+    "capacity": "Kapazität/Stunde",
+    "capacityPerHour": "Kapazität/Stunde"
+  },
+  "difficulty": {
+    "green": "Grün · Anfänger",
+    "blue": "Blau · mittleres Niveau",
+    "red": "Rot · Fortgeschrittene",
+    "black": "Schwarz · Experten"
+  },
+  "sections": {
+    "intro": {
+      "eyebrow": "Der Ferienort",
+      "title": "Das Herz der Rhodopen",
+      "subtitle": "Auf 1.650 m Höhe, am Fuße des Berges Snezhanka – der älteste bulgarische Skiort, gegründet im Jahr 1933.",
+      "panoramaAlt": "Winterferienort Pamporovo – Hotels und Pisten in den Rhodopen",
+      "towerAlt": "Der Schneewittchen-Turm – das Wahrzeichen von Pamporovo",
+      "p1": "Zwei große Skigebiete – Studenets und Malina – sind mit dem Gipfel Snezhanka (1926 m) verbunden. Die Pisten liegen auf einer Höhe zwischen 1400 und 1926 m und verfügen über moderne Lifte sowie über 80 Schneekanonen.",
+      "p2": "Im Sommer verwandelt sich der Ferienort in einen Ausgangspunkt für Ökotourismus – markierte Wanderwege, Radfahren, Reiten und unzählige Sehenswürdigkeiten, die 15–60 Autominuten von Smolyan entfernt liegen, Shiroka Luka, die Wunderbrücken und die unterirdischen Paläste der West-Rhodopen.",
+      "cta": "Buchen Sie eine Villa in Pamporovo"
+    },
+    "winter": {
+      "eyebrow": "Winter",
+      "title": "Skigebiet – Pisten und Lifte",
+      "subtitle": "Über 37 km markierte Pisten für Ski und Snowboard, Nachtskifahren an der „Wand“ sowie Langlaufloipen",
+      "skiAlt": "Sessellift zum Gipfel des Snezhanka – der Turm oberhalb von Pamporovo",
+      "pistesHeading": "Pisten nach Schwierigkeitsgrad",
+      "liftsHeading": "Aufzüge und Anlagen",
+      "activitiesHeading": "Winteraktivitäten"
+    },
+    "summer": {
+      "eyebrow": "Sommer",
+      "title": "Naturpfade und Natur",
+      "subtitle": "Die Wasserfallschlucht, die Smolyaner Seen, die Orpheus-Felsen – nur wenige Minuten vom Ferienort entfernt",
+      "summerAlt": "Ein Bergsee in den Rhodopen – ein ökologischer Sommerwanderweg in der Nähe von Pamporovo",
+      "activitiesHeading": "Sommeraktivitäten"
+    },
+    "landmarks": {
+      "eyebrow": "Die Umgebung",
+      "title": "Sehenswürdigkeiten und Dörfer",
+      "subtitle": "Architektonische Schutzgebiete, eine Sternwarte, ein Planetarium und authentische Folklore aus den Rhodopen"
+    },
+    "caves": {
+      "eyebrow": "Unterwelt",
+      "title": "Höhlen und Schluchten",
+      "subtitle": "Die Jagodinska-Höhle, die Teufelsschlucht, die Trigrad-Schlucht und Uhlovitsa – Schätze der Westlichen Rhodopen",
+      "footer": "Die Ferienhäuser Pamporovo Villa liegen in Raykovski Livadi – ein idealer Ausgangspunkt für Winter- und Sommerabenteuer in der gesamten Region.",
+      "cta": "Verfügbare Termine anzeigen und buchen"
+    }
+  },
+  "attractions": {
+    "canyon-waterfalls": {
+      "title": "Die Schlucht der Wasserfälle",
+      "distance": "15 km · in der Nähe von Smolyan",
+      "duration": "~4 Stunden · 6 km Rundwanderung",
+      "description": "Der beeindruckendste Naturlehrpfad in den Rhodopen – Sie wandern durch die jahrhundertealten Wälder des Naturschutzgebiets „Soskovcheto“ entlang des Flusses Gerzovska. Auf der Strecke können Sie 46 Wasserfälle bewundern, darunter den 68 Meter hohen „Orpheus“ – einer der höchsten in Bulgarien. Der Höhepunkt ist eine Aussichtsplattform auf 1.800 m Höhe mit Blick auf Smolyan und die Bergkämme der Rhodopen.",
+      "highlights": [
+        "46 Wasserfälle",
+        "Der „Orpheus“-Wasserfall – 68 m",
+        "Jahrhundertealte Fichtenwälder",
+        "Panorama auf 1800 m"
+      ]
+    },
+    "smolyan-lakes": {
+      "title": "Die Seen von Smolyan",
+      "distance": "10 km · unterhalb des Gipfels Snezhanka",
+      "duration": "~1 Stunde · leichte Route",
+      "description": "Sie werden als „die smaragdgrünen Augen der Rhodopen“ bezeichnet – natürliche Seen, die stufenförmig unterhalb des Schneewittchenbergs liegen. Ein leichter Wanderweg verbindet den Bistro-, den Matno- und den Trevisto-See, an denen es Picknickplätze und Angelmöglichkeiten gibt. Ein idealer Spaziergang für Familien mit Kindern, der sich hervorragend mit einer Besteigung des Gipfels kombinieren lässt.",
+      "highlights": [
+        "Natürliche Bergseen",
+        "Leichte Familienwanderung",
+        "Picknickplätze",
+        "Kann mit dem Gipfel „Snezhanka“ kombiniert werden"
+      ]
+    },
+    "nevyastata": {
+      "title": "Naturlehrpfad „Nevyastata“",
+      "distance": "12 km · oberhalb von Smolyan",
+      "duration": "~40 Min. · 900 m Wanderweg",
+      "description": "Ein kurzer und leicht begehbarer Wanderweg durch einen duftenden Kiefernwald zum steilen Felsen „Nevyastata“, der über Smolyan thront. Panoramapunkte und Pavillons säumen die gesamte Route, und für Adrenalinjunkies gibt es eine Hochseilbahn über den Abgrund. Die Legende erzählt von einem Mädchen, das sich von der Klippe stürzte, um ihren Glauben zu bewahren.",
+      "highlights": [
+        "Aussichtspunkte",
+        "Alpen-Troll",
+        "Die Legende von der Braut",
+        "Für alle Altersgruppen geeignet"
+      ]
+    },
+    "orpheus-rocks": {
+      "title": "Die Orpheus-Felsen und die Nadeln",
+      "distance": "6 km · vom Gipfel des Snezhanka",
+      "duration": "~4 Stunden · leichte Belastung",
+      "description": "Vom Gipfel des Snezhanka führt ein markierter Wanderweg in südöstlicher Richtung zu den Orpheus-Felsen – bizarren Rhyolithformationen mit einem unvergetlichen Blick auf die Smolyaner Seen. In der anderen Richtung liegt der Gipfel „Igite“ mit einem weiteren atemberaubenden Panoramablick. Die Route führt durch Weiden und Wälder, die im August mit Heidelbeeren übersät sind.",
+      "highlights": [
+        "Rhyolithische Gesteinsphänomene",
+        "Blick auf die Seen",
+        "Gipfel „Iglite“",
+        "Wilde Heidelbeeren im August"
+      ]
+    },
+    "shiroka-laka": {
+      "title": "Breiter Bogen",
+      "distance": "16 km · 20 Min. mit dem Auto",
+      "duration": "",
+      "description": "Architektur- und Folkloreschutzgebiet – das Dorf mit seinen Häusern aus der Zeit der Nationalen Wiedergeburt mit Erkern, den kleinen Steinbrücken und der berühmten Nationalen Schule für Volkskunst. Die Rhodopen-Dudelsackpfeife ist die Seele von Shiroka Luka: Hier findet das Volksfest „Pesponedelnik“ mit Kuker-Spielen und authentischer Folklore statt. Ein Muss für jeden Besucher von Pamporovo.",
+      "highlights": [
+        "Architektur der Nationalen Wiedergeburt",
+        "Schule für Dudelsackspieler",
+        "Ethnografisches Museum",
+        "Kuker-Fest"
+      ]
+    },
+    "rozhen-observatory": {
+      "title": "NAO „Rozhen“",
+      "distance": "18 km · 25 Min. mit dem Auto",
+      "duration": "",
+      "description": "Die größte astronomische Sternwarte auf der Balkanhalbinsel, die auf 1750 m Höhe über den Rozen-Wiesen liegt. Sie verfügt über ein 2-Meter-Teleskop – eines der größten in Südosteuropa. Es werden Tagesbesichtigungen mit einem Vortrag organisiert, und die nächtlichen Beobachtungen (nach Voranmeldung) sind unvergesslich. In der Nähe liegen die Rozen-Wiesen – Austragungsort des legendären Nationalfestes.",
+      "highlights": [
+        "2-Meter-Teleskop",
+        "Besuche mit Gespräch",
+        "Nachtbeobachtungen",
+        "Das Rozhen-Fest steht vor der Tür"
+      ]
+    },
+    "wonderful-bridges": {
+      "title": "Die wunderschönen Brücken",
+      "distance": "42 km · 1 Stunde mit dem Auto",
+      "duration": "",
+      "description": "Riesige Marmor-Felsbögen, die der Fluss Erküpriya über Jahrtausende hinweg ausgehöhlt hat. Die große Brücke ist 96 m lang und 45 m hoch – unter ihr verläuft ein Wanderweg, und die Akustik ist unglaublich. Die kleine Brücke ist 60 m lang. Die Sehenswürdigkeit gehört zu den 100 nationalen Tourismusattraktionen und lässt sich hervorragend mit einem Mittagessen im Dorf Zabardo verbinden.",
+      "highlights": [
+        "Ein 45 m hoher Bogen",
+        "100 nationale Sehenswürdigkeiten",
+        "Der Weg unter den Brücken",
+        "Hütte und Unterstand in der Nähe"
+      ]
+    },
+    "smolyan-town": {
+      "title": "Smolyan – Planetarium und Museen",
+      "distance": "15 km · 20 Min. mit dem Auto",
+      "duration": "",
+      "description": "Die Kreisstadt am Fuße des Schneewittchenbergs bewahrt den Geist der Rhodopen: Das Planetarium ist das größte in Bulgarien und bietet spektakuläre Sternenshows, während das Regionalmuseum für Geschichte „Stoyu Shishkov“ Einblicke in das Alltagsleben, die Trachten und die Musik der Bergregion gewährt. Die historischen Stadtviertel Raikovo und Ustovo bezaubern mit Häusern aus der Zeit der Nationalen Wiedergeburt und gemütlichen Gaststätten.",
+      "highlights": [
+        "Das größte Planetarium in Bulgarien",
+        "RIW „Stoyu Shishkov“",
+        "Kunstgalerie",
+        "Die Stadtteile Raikovo und Ustovo"
+      ]
+    },
+    "momchilovtsi": {
+      "title": "Momchilovtsi",
+      "distance": "25 km · 30 Min. mit dem Auto",
+      "duration": "",
+      "description": "Ein malerisches Dorf in den Rhodopen auf 1200 m Höhe, bekannt für die Langlebigkeit seiner Bewohner und den hausgemachten Joghurt, der sogar in China legendär geworden ist. Panoramawanderwege, Kapellen auf jedem Hügel und authentische, gastfreundliche Gasthäuser. Im August findet im Dorf das Joghurtfest statt.",
+      "highlights": [
+        "Das Dorf der Langlebigkeit",
+        "Joghurtfest",
+        "Kapellen mit Panoramablick",
+        "Authentische Mechanismen"
+      ]
+    },
+    "gela-village": {
+      "title": "Gela – das Dorf des Orpheus",
+      "distance": "22 km · 30 Min. mit dem Auto",
+      "duration": "",
+      "description": "Eines der ältesten Dörfer in den Rhodopen, das als Geburtsort des mythischen Orpheus gilt. Auf 1500 m Höhe inmitten endloser Wiesen gelegen, ist Gela jeden ersten Sonntag im August Gastgeber des Internationalen Dudelsackfestivals – Hunderte von Dudelsackspielern lassen ihre Musik durch die Berge erklingen. Von hier aus führen Wanderwege zu den Gipfeln Turlata und Gela.",
+      "highlights": [
+        "Die Heimat von Orpheus",
+        "Dudelsackfest im August",
+        "Thrakische Heiligtümer",
+        "Startpunkt von Bergwanderwegen"
+      ]
+    },
+    "yagodina-cave": {
+      "title": "Die Yagodinska-Höhle",
+      "distance": "50 km · 1 Stunde 15 Minuten mit dem Auto",
+      "duration": "45-minütige Rundwanderung · 1100 m Strecke",
+      "description": "Die drittlängste Höhle Bulgariens – 10,5 km lange Gänge auf drei Ebenen in der Bujnovska-Schlucht. Der Touristenweg führt vorbei an Leopardenfell, Höhlenperlen, Stalaktiten und dem berühmten „Neujahrssaal“, in dem das neue Jahr unter der Erde gefeiert wird. Die Temperatur beträgt konstant 6 °C – nehmen Sie auch im August eine Jacke mit.",
+      "highlights": [
+        "10,5 km Stollen",
+        "Höhlenperlen",
+        "Neujahrssaal",
+        "Die Buinovsko-Schlucht entlang der Straße"
+      ]
+    },
+    "devils-throat": {
+      "title": "Die Teufelsschlucht",
+      "distance": "55 km · 1 Stunde 20 Minuten mit dem Auto",
+      "duration": "30-minütige Rundfahrt",
+      "description": "Eine Schlucht-Höhle mit dem höchsten unterirdischen Wasserfall auf dem Balkan – 42 m –, in deren „Rauschender Saal“ sich der Fluss Trigradska mit tosendem Getöse in die Tiefe stürzt. Der Legende nach stieg Orpheus von hier aus ins Unterreich hinab, um Eurydike zu suchen. Nichts, was ins Wasser fällt, kommt wieder an die Oberfläche – ein Rätsel, das Wissenschaftler noch immer erforschen.",
+      "highlights": [
+        "42 m hoher unterirdischer Wasserfall",
+        "Der lärmende Saal",
+        "Die Legende von Orpheus",
+        "301 Stufen entlang des Wasserfalls"
+      ]
+    },
+    "trigrad-gorge": {
+      "title": "Die Trigrad-Schlucht",
+      "distance": "53 km · 1 Stunde 15 Minuten mit dem Auto",
+      "duration": "",
+      "description": "Ein Canyon mit steilen Marmorwänden, die sich bis zu 250 m über dem Fluss Trigradska erheben – die Straße schlängelt sich buchstäblich zwischen den Felsen hindurch. Heimat seltener Vogelarten wie der Steinkauz und Tor zur Teufelsschlucht sowie zum Dorf Trigrad. Eine der spektakulärsten Straßen Bulgariens – jede Kurve ist ein Fotomotiv.",
+      "highlights": [
+        "Wände bis zu 250 m",
+        "Eine dramatische Bergstraße",
+        "Seltene Vögel",
+        "Lässt sich mit dem „Teufelsschlund“ kombinieren"
+      ]
+    },
+    "uhlovitsa-cave": {
+      "title": "Die Uhlovitsa-Höhle",
+      "distance": "32 km · 45 Min. mit dem Auto",
+      "duration": "30-minütige Rundfahrt",
+      "description": "Eine der schönsten Höhlen Bulgariens, in der Nähe des Dorfes Mogilitsa. Sie ist berühmt für ihre steinernen „Wasserfälle“ – Kaskaden aus Kalzitformationen, die an gefrorenes Wasser erinnern, sowie für die Korallenformationen an den Gewölben. Zum Eingang führt ein malerischer Pfad durch den Wald (etwa 30 Minuten zu Fuß vom Parkplatz).",
+      "highlights": [
+        "Felswasserfälle",
+        "Korallenformationen",
+        "4 unterirdische Seen",
+        "In der Nähe der Agusche-Konak"
+      ]
+    }
+  },
+  "stats": [
+    {
+      "value": "1650 m",
+      "label": "Höhe des Ferienorts über dem Meeresspiegel"
+    },
+    {
+      "value": "1926 m",
+      "label": "Gipfel Snezhanka – der höchste Punkt des Skigebiets"
+    },
+    {
+      "value": "37+ km",
+      "label": "Skipisten aller Schwierigkeitsgrade"
+    },
+    {
+      "value": "1933",
+      "label": "gegründet – der älteste Skiort in Bulgarien"
+    },
+    {
+      "value": "~120",
+      "label": "Sonnentage in der Wintersaison"
+    },
+    {
+      "value": "90 %",
+      "label": "auf den Pisten mit künstlicher Beschneiung"
+    }
+  ],
+  "pistes": [
+    {
+      "name": "Der Stausee (Die kleine Mauer)",
+      "note": ""
+    },
+    {
+      "name": "Bypass – Die kleine Mauer",
+      "note": ""
+    },
+    {
+      "name": "Die Wand",
+      "note": "Das Wahrzeichen von Pamporovo – Austragungsort von Europacup-Rennen. Nachtskifahren von 17:30 bis 22:00 Uhr."
+    },
+    {
+      "name": "Architekt Petar Petrov (die Europäische)",
+      "note": ""
+    },
+    {
+      "name": "Schneewittchen",
+      "note": ""
+    },
+    {
+      "name": "Schneewittchen",
+      "note": ""
+    },
+    {
+      "name": "Himbeere",
+      "note": "Die längste rote Piste – vom Gipfel bis zum Skizentrum Malina."
+    },
+    {
+      "name": "Malin-Bypass",
+      "note": ""
+    },
+    {
+      "name": "Pamporovo (Tourismus)",
+      "note": "Lang und sanft abfallend – ideal für erste Abfahrten und Familienausflüge."
+    },
+    {
+      "name": "Orlovets",
+      "note": ""
+    },
+    {
+      "name": "Perelik (die südlichen)",
+      "note": ""
+    },
+    {
+      "name": "Die Seen von Smolyan",
+      "note": ""
+    },
+    {
+      "name": "Delovo Dere (Damsk)",
+      "note": ""
+    },
+    {
+      "name": "Kartola",
+      "note": ""
+    },
+    {
+      "name": "Die Ständer 1",
+      "note": ""
+    },
+    {
+      "name": "Die Ständer 2",
+      "note": ""
+    },
+    {
+      "name": "Fun Slope / Boarder Cross",
+      "note": "Eine Strecke mit Wellen, Randstreifen und Freestyle-Elementen."
+    }
+  ],
+  "skiLifts": [
+    {
+      "route": "Die Aufstiege – Gipfel Snezhanka",
+      "type": "Sessellift",
+      "note": "Die längste Strecke – mit einem Höhenunterschied von 453 m."
+    },
+    {
+      "route": "Skizentrum 1 (Busbahnhof) – Studenets",
+      "type": "4er-Sessellift",
+      "note": ""
+    },
+    {
+      "route": "Studenets – Gipfel Snezhanka",
+      "type": "4er-Sessellift",
+      "note": "Die Hauptverbindung zum Gipfel und zu den schwarzen Pisten."
+    },
+    {
+      "route": "Malina – Gipfel Snezhanka",
+      "type": "Sessellift",
+      "note": ""
+    },
+    {
+      "route": "Die Seen von Smolyan – der Gipfel Snezhanka",
+      "type": "Sessellift",
+      "note": ""
+    },
+    {
+      "route": "Malina – Studenets",
+      "type": "Sessellift",
+      "note": ""
+    }
+  ],
+  "liftFacts": [
+    {
+      "route": "Die Hütten – Gipfel Snezhanka",
+      "type": "Sessellift"
+    },
+    {
+      "route": "Skizentrum 1 – Studenets",
+      "type": "4er-Sessellift"
+    },
+    {
+      "route": "Studenets – Gipfel Snezhanka",
+      "type": "4er-Sessellift"
+    },
+    {
+      "route": "Malina – Gipfel Snezhanka",
+      "type": "Sessellift"
+    },
+    {
+      "route": "Die Seen von Smolyan – der Gipfel Snezhanka",
+      "type": "Sessellift"
+    },
+    {
+      "route": "Malina – Studenec",
+      "type": "Sessellift"
+    }
+  ],
+  "skiExtras": [
+    "Gesamtkapazität der Anlagen – über 13 000 Skifahrer pro Stunde",
+    "Ski- und Snowboardschulen mit lizenzierten Lehrern und Kinderparks",
+    "Nachtfahren auf der Rennstrecke „Steната-2“ (17:30 – 22:00 Uhr)",
+    "2 Langlaufloipen: Snezhanka Nr. 14 (25 km, bis zum Dorf Mugla) und Nr. 15 „Ardashl“ (7 km, bis zum Dorf Stoykite)",
+    "Funpark mit Snowtubing, Boardercross und Freestyle-Hindernissen",
+    "Garderoben, Serviceeinrichtungen und Skidepots in Studenets und Malina"
+  ],
+  "winterActivities": [
+    {
+      "title": "Ski und Snowboard",
+      "description": "Über 37 km Pisten für alle Schwierigkeitsgrade, moderne Liftanlagen und Schneesicherheit von Dezember bis April."
+    },
+    {
+      "title": "Nachtfahrten",
+      "description": "Die beleuchtete „Wand-2“ ist bis 22:00 Uhr zu sehen – ein unvergessliches Erlebnis."
+    },
+    {
+      "title": "Skilanglauf",
+      "description": "25 km markierte Wanderwege durch die verschneiten Wälder in Richtung Mugla und Stoykite."
+    },
+    {
+      "title": "Schneeschuhwandern und Spaziergänge",
+      "description": "Geführte Touren mit Schneeschuhen zu den Orpheus-Felsen und den Smolyaner Seen."
+    },
+    {
+      "title": "Skischulen für Kinder",
+      "description": "Zertifizierte Skilehrer, Kinderskigebiete mit Schleppliften und jede Menge Geduld."
+    },
+    {
+      "title": "Après-Ski",
+      "description": "Restaurants mit Spezialitäten aus den Rhodopen, Live-Musik und Glühwein, nur wenige Meter von den Pisten entfernt."
+    }
+  ],
+  "summerActivities": [
+    {
+      "title": "Mountainbiken",
+      "description": "Markierte MTB-Strecken vom Gipfel des Snezhanka – von leichten Waldwegen bis hin zu Abfahrten für Fortgeschrittene."
+    },
+    {
+      "title": "Öko-Wanderwege",
+      "description": "Die Wasserfallschlucht, die „Braut“, die Smolyaner Seen – Dutzende von Routen, die alle nur eine Stunde entfernt sind."
+    },
+    {
+      "title": "Seilpark und Attraktionen",
+      "description": "Ein Abenteuerpark mit Seilrutschen, einer Kletterwand und einer Seilbahn für Groß und Klein."
+    },
+    {
+      "title": "Reiten",
+      "description": "Reitställe in der Umgebung bieten Ausritte über die Wiesen von Rozen und Stoykite an."
+    },
+    {
+      "title": "Pilze und Kräuter sammeln",
+      "description": "Mantarak-Pilze, Heidelbeeren und über 300 Kräuterarten – die Rhodopen sind eine lebende Apotheke."
+    },
+    {
+      "title": "Fotografie und Stars",
+      "description": "Sonnenaufgänge über dem nebelverhangenen Meer, ein dunkler Himmel für die Astrofotografie und das NAO „Rozhen“ in der Nähe."
+    }
+  ],
+  "lists": {
+    "eco": [
+      "Schlucht-Wasserfälle",
+      "Smolyan-Seen",
+      "nevyastata",
+      "orpheus-rocks"
+    ],
+    "landmarks": [
+      "shiroka-laka",
+      "rozhen-observatory",
+      "wunderschöne Brücken",
+      "smolyan-stadt",
+      "Momchilovtsi",
+      "gela-village"
+    ],
+    "caves": [
+      "yagodina-höhle",
+      "Teufelskehle",
+      "Trigrad-Schlucht",
+      "Uhlovitsa-Höhle"
+    ]
+  }
+}

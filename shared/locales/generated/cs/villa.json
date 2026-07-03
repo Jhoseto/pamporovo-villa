@@ -1,0 +1,90 @@
+{
+  "backToRent": "← Pronájem vily",
+  "featuresHeading": "Vybavení a možnosti",
+  "pricingHeading": "Ceny",
+  "pricingHeadingFor": "Ceny za {villa}",
+  "pricingFrom": "od",
+  "pricingPerNight": "/ noc",
+  "summerFrom": "Léto od",
+  "winterFrom": "Zima od",
+  "wholeVillaNote": "Celá vila · až 6 hostů",
+  "bookCta": "Rezervovat",
+  "bookVilla": "Rezervovat {villa}",
+  "guideLink": "Průvodce Pamporovo",
+  "amenitiesHeading": "Vybavení",
+  "otherVillas": "Naše další vily",
+  "contactHeading": "Kontakt a rezervace",
+  "pages": {
+    "villa-1": {
+      "name": "Villa 1",
+      "tagline": "Pohodlí pro celou rodinu",
+      "description": "Útulný a příjemný — se dvěma ložnicemi, dvěma koupelnami a velkým obývacím pokojem, kde praská oheň v krbu, a na verandě na vás čeká gril. Oblíbený u rodin s dětmi.",
+      "seoTitle": "Villa 1 Ubytování v Pamporově | 2 ložnice, krb — Pamporovo Villa",
+      "seoDescription": "Pronajměte si Villa 1 v Pamporově — útulné ubytování pro rodiny, 2 ložnice, 2 koupelny, krb, gril, až pro 6 hostů. Raykovski Livadi, 2 km od sjezdovek. Online rezervace.",
+      "seoKeywords": "Villa 1 Pamporovo, pronájem vily v Pamporovu, vila pro rodinu, Pamporovo Villa",
+      "h1": "Villa 1 — pronájem v Pamporově"
+    },
+    "villa-2": {
+      "name": "Villa 2",
+      "tagline": "Slunce od východu do západu",
+      "description": "Světlý a prostorný byt se dvěma ložnicemi, dvěma koupelnami a obývacím pokojem s výhledem na hory. Veranda s grilem je jako stvořená pro dlouhé večery s přáteli.",
+      "seoTitle": "Villa 2 Ubytování v Pamporově | 2 ložnice, terasa s grilem",
+      "seoDescription": "Pronajměte si Villa 2 v Pamporově — světlou vilu s panoramatickým výhledem, 2 ložnicemi, krbem, grilem, až pro 6 hostů. Oficiální označení pronájmu — Pamporovo Villa.",
+      "seoKeywords": "Villa 2 Pamporovo, pronájem vily, vila s grilem v Pamporovu",
+      "h1": "Villa 2 — pronájem v Pamporově"
+    },
+    "villa-deluxe": {
+      "name": "Villa Deluxe",
+      "tagline": "Trochu více luxusu",
+      "description": "Nejreprezentativnější z těchto tří – se stejným komfortem dvou ložnic, dvou koupelen a velkého obývacího pokoje, avšak s důrazem na detaily a atmosféru. Pro ty, kteří touží po něčem výjimečném.",
+      "seoTitle": "Villa Deluxe Pamporovo | Luxusní pronájem, krb, 6 hostů",
+      "seoDescription": "Villa Deluxe v Pamporově — nejreprezentativnější ze tří vil, 2 ložnice, krb, gril, až pro 6 hostů. Rezervujte online.",
+      "seoKeywords": "Villa Deluxe Pamporovo, luxusní vila v Pamporovu, pronájem v kategorii „deluxe“",
+      "h1": "Villa Deluxe — pronájem v Pamporově"
+    }
+  },
+  "about": {
+    "intro": "Jsme rádi, že jste nás objevili. Nabízíme vám tři samostatné vily, zasazené v borovém lese v Raykovski Livadi — tam, kde je hluk města daleko a den začíná ptačím zpěvem a vůní pryskyřice.",
+    "details": "Villa 1, Villa 2 a Villa Deluxe jsou zařízeny tak, jak bychom si představovali svůj vlastní dům v horách – s pravým dřevem, měkkými textiliemi a těmi drobnými detaily, díky nimž místo působí útulně. Tady nejste jen hosté; cítíte se tu jako doma.",
+    "layout": "Každá vila je dvoupodlažní a disponuje dvěma ložnicemi, dvěma koupelnami, plně vybavenou kuchyní s jídelnou a velkým obývacím pokojem s krbem na dřevo. Venku na vás čeká terasa s panoramatickým výhledem na Rodopy a veranda s grilem – místo, kde vznikají ty nejkrásnější večery.",
+    "hosts": "Jako vaši hostitelé jsme vám vždy po ruce. Pomůžeme vám s přípravou překvapení a oslav, nasměrujeme vás na ty nejkrásnější sjezdovky a stezky, poradíme, kde se dá dobře najíst – a pokud budete něco potřebovat, stačí zavolat. Máme jediný cíl: abyste odjeli s touhou se vrátit."
+  },
+  "contact": {
+    "phone": "+359 879 501 660",
+    "email": "pamporovovilla@gmail.com",
+    "address": "rekreační středisko Pamporovo, lokalita Raykovski Livadi"
+  },
+  "firewoodNote": "Dřevo do krbu — 10 € za pytel, na vyžádání nebo při příjezdu.",
+  "features": [
+    "2 ložnice pro klidný spánek",
+    "2 koupelny s teplou vodou",
+    "Velký obývací pokoj s krbem",
+    "Plně vybavená kuchyně",
+    "Veranda s grilem",
+    "Až 6 hostů ve vile"
+  ],
+  "pricingNotes": [
+    "Ceny jsou uvedeny za noc, za celou vilu (až pro 6 hostů).",
+    "V ceně je zahrnutý rekreační poplatek.",
+    "Dřevo do krbu — 10 € za pytel, na objednávku.",
+    "Lyžařské permanentky nejsou v ceně."
+  ],
+  "distances": [
+    {
+      "value": "2 km",
+      "label": "Do centra Pamporova"
+    },
+    {
+      "value": "10 km",
+      "label": "Ze Smolyanu"
+    },
+    {
+      "value": "85 km",
+      "label": "Z Plovdivu"
+    },
+    {
+      "value": "220 km",
+      "label": "Ze Sofie"
+    }
+  ]
+}

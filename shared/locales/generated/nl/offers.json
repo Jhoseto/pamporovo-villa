@@ -1,0 +1,36 @@
+{
+  "eyebrow": "Exclusieve arrangementen",
+  "title": "Topaanbiedingen",
+  "subtitle": "Geselecteerde arrangementen voor ski- en zomervakanties tegen een speciale prijs. De periodes zijn beperkt — en de beste data zijn als eerste uitverkocht.",
+  "loading": "Bezig met laden...",
+  "empty": "Er zijn momenteel geen actieve aanbiedingen.",
+  "oldPrice": "oude prijs",
+  "includes": "Bevat",
+  "bookOffer": "Boek deze aanbieding",
+  "badge": "Aanbieding",
+  "claimCta": "Profiteer ervan",
+  "footer": "De aanbiedingen gelden voor de aangegeven periodes · om te reserveren: ga naar de rubriek „Reserveren“",
+  "items": {
+    "ski-family": {
+      "title": "Ski-vakantie met het gezin",
+      "period": "1 maart 2026 – 31 maart 2026",
+      "description": "Geef de kinderen een herinnering die ze hun hele leven zullen koesteren. Een heel huis alleen voor uw gezin, op slechts enkele minuten van de skipistes — en ’s avonds wachten de open haard en een warm avondmaal op u thuis.",
+      "includes": [
+        "Verhuur van de gehele villa per overnachting (maximaal 6 personen)",
+        "Gratis parkeergelegenheid vlak voor de deur",
+        "Gratis wifi",
+        "Toeristenbelasting inbegrepen"
+      ]
+    },
+    "pay-9-stay-10": {
+      "title": "Betaal voor 9 nachten, verblijf 10 nachten",
+      "period": "1 juni 2026 – 10 juli 2026",
+      "description": "De zomer in de bergen is heel anders: koele ochtenden, lange dagen in de natuur en avonden op het terras met een barbecue. Blijf wat langer bij ons en trakteer jezelf op een gratis overnachting.",
+      "includes": [
+        "De 10e overnachting is volledig gratis (bij 9 betaalde overnachtingen)",
+        "Hele villa: 2 slaapkamers, 2 badkamers, keuken en woonkamer",
+        "Veranda met barbecue en houtkachel"
+      ]
+    }
+  }
+}

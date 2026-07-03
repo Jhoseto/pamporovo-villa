@@ -1,0 +1,19 @@
+{
+  "bannerTitle": "Cookies en privacy",
+  "bannerBody": "We gebruiken cookies die nodig zijn voor de werking van de website. Met uw toestemming schakelen we Google Analytics en Google Maps in.",
+  "policyLink": "Cookiebeleid",
+  "settings": "Instellingen",
+  "accept": "Ik ga akkoord",
+  "manage": "Beheer van cookies",
+  "modalTitle": "Instellingen voor cookies",
+  "modalBody": "Kies welke categorieën u wilt toestaan. De noodzakelijke cookies zijn altijd actief.",
+  "necessary": "Vereist",
+  "necessaryDesc": "Deze cookies onthouden uw voorkeuren en zorgen ervoor dat de website naar behoren functioneert.",
+  "analytics": "Analytisch",
+  "analyticsDesc": "Google Analytics 4 — anonieme statistieken over bezoeken en gedrag op de website.",
+  "functional": "Functioneel / derde partijen",
+  "functionalDesc": "Google Maps — een interactieve kaart met de locaties van de vakantiehuizen.",
+  "reject": "Alleen het hoogstnodige",
+  "save": "Keuze opslaan",
+  "acceptAll": "Ik accepteer iedereen"
+}

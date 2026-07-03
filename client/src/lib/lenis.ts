@@ -32,6 +32,12 @@ export async function initLenis(): Promise<LenisInstance | null> {
     lerp: 0.1,
     smoothWheel: true,
     touchMultiplier: 1.5,
+    prevent: (node) =>
+      Boolean(
+        node.closest("[data-lenis-prevent]") ||
+          node.closest(".lang-switcher-scroll") ||
+          node.closest("[data-slot='popover-content']")
+      ),
   }) as LenisInstance;
 
   return lenisInstance;

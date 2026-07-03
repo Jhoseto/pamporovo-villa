@@ -1,0 +1,144 @@
+{
+  "sectionEyebrow": "Virtuální procházka",
+  "sectionTitle": "Vstupte, ještě než přijdete",
+  "sectionSubtitle": "Projděte si vily pokoj po pokoji",
+  "ariaLabel": "Virtuální procházka",
+  "ariaLabel3d": "Virtuální 3D prohlídka",
+  "skipUp": "Pokračujte nahoru",
+  "skipDown": "Pokračujte dolů",
+  "skipUpAria": "Přeskočit procházku nahoru",
+  "skipDownAria": "Přeskočte procházku dolů",
+  "panels": {
+    "exterior-summer": {
+      "room": "01 · Komplex",
+      "title": "Tady začíná váš příběh",
+      "subtitle": "Villa 1 · Villa 2 · Villa Deluxe",
+      "description": "Tři samostatné vily ukryté mezi borovicemi v Raykovski Livadi. Pronajmete si celou vilu jen pro sebe – bez sousedů za zdí, bez kompromisů v pohodlí. Vyberte si tu svou a zbytek nechte na nás.",
+      "imageAlt": "Exteriér vily v létě",
+      "highlights": [
+        "3 samostatné vily",
+        "Tichý borový les",
+        "Parkoviště a Wi-Fi",
+        "Celoroční pronájem"
+      ]
+    },
+    "exterior-winter": {
+      "room": "02 · Zima",
+      "title": "Až napadne sníh",
+      "subtitle": "Ráno lyžování, večer u krbu",
+      "description": "Ráno jste na sjezdovce během několika minut a večer na vás čeká teplo krbu a vůně grilovaného masa. Sníh sahá až k prahu – a vy nepotřebujete nic víc než sklenku svařeného vína a příjemnou společnost.",
+      "imageAlt": "Vila pod sněhem v Pamporově",
+      "highlights": [
+        "Jen pár minut od sjezdovek",
+        "Krb na dřevo",
+        "Sníh až k prahu",
+        "Teplá útulnost"
+      ]
+    },
+    "living-fireplace": {
+      "room": "03 · Obývací pokoj",
+      "title": "Místo, kde se schází rodina",
+      "subtitle": "Velký obývací pokoj s krbem",
+      "description": "Prostorný obývací pokoj s pravým krbem na dřevo, kde dřevo a kámen vytvářejí vřelou, domáckou atmosféru. Tady se hrají stolní hry, vyprávějí se příběhy a praská oheň – srdce každého večera.",
+      "imageAlt": "Obývací pokoj s krbem a jídelnou",
+      "highlights": [
+        "Krb na dřevo",
+        "Chytrá televize",
+        "Dřevo a kámen",
+        "Místo pro všechny"
+      ]
+    },
+    "open-plan": {
+      "room": "04 · Prostor",
+      "title": "Světlé a prostorné",
+      "subtitle": "Kuchyně · jídelna · obývací pokoj",
+      "description": "Kuchyně, jídelna a obývací pokoj tvoří jeden otevřený prostor – abyste mohli být spolu, i když jeden vaří a ostatní odpočívají. Velká okna propouštějí dovnitř horské světlo.",
+      "imageAlt": "Otevřený prostor – pohled ze schodiště",
+      "highlights": [
+        "Otevřený prostor",
+        "Velká okna",
+        "Přirozené světlo",
+        "Až 6 hostů"
+      ]
+    },
+    "dining": {
+      "room": "05 · Jídelna",
+      "title": "Stůl, kolem kterého se všechno odehrává",
+      "subtitle": "Od ranní kávy až po pozdní večeři",
+      "description": "Široký dřevěný stůl, u kterého se vejde celá společnost, a výhled přímo na borovice. Tady den začíná kávou při tlumeném světle a končí večeří, smíchem a plány na zítřek.",
+      "imageAlt": "Jídelna s výhledem na borový les",
+      "highlights": [
+        "Stůl pro 6 osob",
+        "Výhled na les",
+        "Vstup na terasu",
+        "Přirozené světlo"
+      ]
+    },
+    "kitchen": {
+      "room": "06 · Kuchyně",
+      "title": "Vaříte jako doma",
+      "subtitle": "Plně vybavená kuchyně",
+      "description": "Varná deska, trouba, lednička, mikrovlnná trouba, kávovar a kompletní sada nádobí – vše pro domácí snídani nebo slavnostní večeři. Protože někdy je to nejchutnější jídlo právě to, které si sami uvaříte v horách.",
+      "imageAlt": "Vybavená kuchyně",
+      "highlights": [
+        "Trouba a sporák",
+        "Chladnička",
+        "Kávovar",
+        "Kompletní sada nádobí"
+      ]
+    },
+    "bedrooms": {
+      "room": "07 · Ložnice",
+      "title": "Spánek, jaký jste už dlouho nezažili",
+      "subtitle": "Dvě útulné ložnice",
+      "description": "Dvě samostatné ložnice s pohodlnými postelemi a kvalitním ložním prádlem – ubytování až pro 6 hostů. Ticho lesa a čistý vzduch v nadmořské výšce 1 650 m dělají zázraky; probudíte se odpočatí, to vám slibujeme.",
+      "imageAlt": "Chodba vedoucí k oběma ložnicím",
+      "highlights": [
+        "2 ložnice",
+        "Až 6 hostů",
+        "Kvalitní spodní prádlo",
+        "Hluboké ticho"
+      ]
+    },
+    "bathroom": {
+      "room": "08 · Koupelna",
+      "title": "Koupelna s horskou atmosférou",
+      "subtitle": "Pohodlí pro celou partu",
+      "description": "Plně vybavená koupelna s teplou vodou po celou dobu — prostorná a útulná pro celou skupinu. Přírodní materiály a příjemná atmosféra.",
+      "imageAlt": "Koupelna s dřevem a obklady",
+      "highlights": [
+        "1 koupelna",
+        "Teplá voda 24 hodin denně, 7 dní v týdnu",
+        "Kvalitní materiály",
+        "Lázeňská atmosféra"
+      ]
+    },
+    "terrace": {
+      "room": "09 · Terasa",
+      "title": "Výhled, kvůli kterému se sem vracíte",
+      "subtitle": "Rodopy na dlani",
+      "description": "Terasa s panoramatickým výhledem na Rodopy a borovicové lesy. Zde si vychutnáte první kávu, zatímco slunce vychází nad vrcholky hor, a den zakončíte při zlatavém západu slunce. Okamžiky, které vám zůstanou v paměti ještě dlouho po dovolené.",
+      "imageAlt": "Zlatý západ slunce nad Rodopy",
+      "highlights": [
+        "Panoramatický výhled",
+        "Východy a západy slunce",
+        "Čistý horský vzduch",
+        "Velká terasa"
+      ]
+    },
+    "bbq-veranda": {
+      "room": "10 · Veranda",
+      "title": "Večery, které se neukvapují skončit",
+      "subtitle": "Krytá veranda s grilem",
+      "description": "Krytá veranda s grilem je oblíbeným místem, když zapadá slunce. Grilujete, povídáte si a smějete se pod širým nebem – a pokud začne pršet nebo se ochladí, zůstanete v suchu a teple, aniž byste přišli o ten pocit, že jste v horách.",
+      "imageAlt": "Veranda s grilem a výhledem na zimní krajinu",
+      "highlights": [
+        "Grilování",
+        "Krytá veranda",
+        "Pro dlouhé večery",
+        "Na čerstvém vzduchu"
+      ]
+    }
+  },
+  "highlightsLabel": "Hlavní body"
+}

@@ -1,7 +1,7 @@
 {
   "eyebrow": "Alquiler oficial · Pamporovo Villa",
   "h1": "Alquiler de una villa en Pamporovo",
-  "intro": "Tres villas independientes en Райковски ливади: alquilas la villa completa solo para tu grupo. Cada una cuenta con 2 dormitorios, 2 baños, chimenea y barbacoa, con capacidad para hasta 6 huéspedes.",
+  "intro": "Tres villas independientes en Raykovski Livadi: alquilas la villa completa solo para tu grupo. Cada una cuenta con 2 dormitorios, 2 baños, chimenea y barbacoa, con capacidad para hasta 6 huéspedes.",
   "villasHeading": "Las tres villas",
   "pricingHeading": "Precios",
   "pricingFrom": "de",
@@ -10,5 +10,10 @@
   "bookOnline": "Reserva en línea",
   "guideLink": "Guía completa de Pamporovo",
   "footerNote": "Página web oficial para el alquiler de una villa en Pamporovo, Bulgaria",
-  "villaPageLinkSuffix": "página →"
+  "villaPageLinkSuffix": "página →",
+  "villaPageLink": "Página de {villa} →",
+  "pricingNotes": [
+    "Los precios corresponden a una noche de alojamiento para toda la villa (hasta 6 huéspedes).",
+    "Para los periodos festivos, ponte en contacto con nosotros para recibir una oferta personalizada."
+  ]
 }

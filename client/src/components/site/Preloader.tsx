@@ -1,12 +1,14 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { SITE } from "@/data/siteContent";
+import { useTranslation } from "@/contexts/LocaleContext";
 
 type PreloaderProps = {
   onComplete: () => void;
 };
 
 export function Preloader({ onComplete }: PreloaderProps) {
+  const { t } = useTranslation();
   const [visible, setVisible] = useState(true);
   const [progress, setProgress] = useState(0);
 
@@ -91,7 +93,7 @@ export function Preloader({ onComplete }: PreloaderProps) {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
           >
-            {SITE.tagline} · {SITE.location}
+            {t("common.tagline", SITE.tagline)} · {t("common.location", SITE.location)}
           </motion.p>
 
           <div className="preloader-progress relative mt-12 h-0.5 w-48 overflow-hidden rounded-full bg-white/10">

@@ -1,7 +1,8 @@
 import { motion, useInView, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { ChevronDown, Sparkles } from "lucide-react";
 import { useRef } from "react";
-import { HERO_PHOTO, SITE } from "@/data/siteContent";
+import { HERO_PHOTO } from "@/data/siteContent";
+import { useTranslation } from "@/contexts/LocaleContext";
 import { useSiteReady } from "@/contexts/SiteReadyContext";
 import { scrollToSection } from "@/lib/scroll";
 import { GoldenParticles } from "./GoldenParticles";
@@ -10,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { SplitText } from "./SplitText";
 
 export function HeroSection() {
+  const { t } = useTranslation();
   const ref = useRef<HTMLElement>(null);
   const siteReady = useSiteReady();
   const reducedMotion = useReducedMotion();
@@ -113,7 +115,7 @@ export function HeroSection() {
           <p className="eyebrow mx-auto mb-4 max-w-[16rem] text-[0.65rem] leading-relaxed text-[var(--gold)] sm:mb-6 sm:max-w-none sm:text-[0.7rem]">
             <span className="inline-flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
               <Sparkles className="h-3 w-3 shrink-0 sm:h-3.5 sm:w-3.5" />
-              <span>Смолян · Пампорово · {SITE.tagline}</span>
+              <span>{t("home.hero.eyebrow", "България · Смолян · Пампорово · 3 вили под наем")}</span>
             </span>
           </p>
         </motion.div>
@@ -124,22 +126,22 @@ export function HeroSection() {
               <SplitText
                 as="span"
                 mode="word"
-                text="Pamporovo"
+                text={t("home.hero.titleLine1", "Pamporovo")}
                 className="mb-2 block w-full justify-center text-white"
                 delay={0.2}
               />
               <SplitText
                 as="span"
                 mode="char"
-                text="Villa"
+                text={t("home.hero.titleLine2", "Villa")}
                 className="block w-full justify-center text-[var(--gold)]"
                 delay={0.55}
               />
             </>
           ) : (
             <>
-              <span className="mb-2 block">Pamporovo</span>
-              <span className="block text-[var(--gold)]">Villa</span>
+              <span className="mb-2 block">{t("home.hero.titleLine1", "Pamporovo")}</span>
+              <span className="block text-[var(--gold)]">{t("home.hero.titleLine2", "Villa")}</span>
             </>
           )}
         </h1>
@@ -150,7 +152,7 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: siteReady ? 0.9 : 0, ease: [0.22, 1, 0.36, 1] }}
         >
-          Предлагаме ви три самостоятелни вили сред магическите гори на Пампорово. Домашен уют в планината, през цялата година.
+          {t("home.hero.subtitle", "Предлагаме ви три самостоятелни вили сред магическите гори на Пампорово. Домашен уют в планината, през цялата година.")}
         </motion.p>
 
         <motion.div
@@ -164,7 +166,7 @@ export function HeroSection() {
             className="premium-btn h-auto min-h-[2.875rem] w-full px-5 py-3.5 text-sm sm:w-auto sm:min-h-0 sm:px-10 sm:py-7 sm:text-lg"
             onClick={() => scrollToSection("experience")}
           >
-            Започни разходката
+            {t("home.hero.ctaExperience", "Започни разходката")}
           </Button>
           <Button
             size="lg"
@@ -172,7 +174,7 @@ export function HeroSection() {
             className="h-auto min-h-[2.875rem] w-full border-white/30 bg-white/5 px-5 py-3.5 text-sm text-white backdrop-blur-sm hover:bg-white/10 hover:text-white sm:w-auto sm:min-h-0 sm:px-10 sm:py-7 sm:text-lg"
             onClick={() => scrollToSection("booking")}
           >
-            Резервирай
+            {t("home.hero.ctaBook", "Резервация")}
           </Button>
         </motion.div>
 
@@ -197,9 +199,9 @@ export function HeroSection() {
         initial={motionInitial}
         animate={{ opacity: 1 }}
         transition={{ delay: siteReady ? 1.4 : 0 }}
-        aria-label="Продължи към разходката"
+        aria-label={t("home.hero.scrollToExperience", "Продължи към разходката")}
       >
-        <span className="eyebrow text-[10px]">Надолу</span>
+        <span className="eyebrow text-[10px]">{t("home.hero.scrollDown", "Надолу")}</span>
         <ChevronDown className="h-6 w-6 animate-bounce motion-reduce:animate-none" />
       </motion.button>
     </section>

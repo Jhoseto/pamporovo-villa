@@ -1,0 +1,126 @@
+{
+  "resortName": "Pamporovo",
+  "elevation": "1 650 m",
+  "variable": "Variable",
+  "wind": {
+    "calm": "silencieux",
+    "light": "une légère brise",
+    "gentle": "maigre",
+    "moderate": "modéré",
+    "strong": "fort"
+  },
+  "codes": {
+    "0": {
+      "label": "C'est clair",
+      "short": "C'est clair"
+    },
+    "1": {
+      "label": "Principalement dégagé",
+      "short": "C'est clair"
+    },
+    "2": {
+      "label": "Ciel partiellement nuageux",
+      "short": "Nuageux"
+    },
+    "3": {
+      "label": "Nuageux",
+      "short": "Nuageux"
+    },
+    "45": {
+      "label": "Brouillard",
+      "short": "Brouillard"
+    },
+    "48": {
+      "label": "Un épais brouillard",
+      "short": "Brouillard"
+    },
+    "51": {
+      "label": "Un léger frémissement",
+      "short": "Rumezh"
+    },
+    "53": {
+      "label": "Rumezh",
+      "short": "Rumezh"
+    },
+    "55": {
+      "label": "Un fort grondement",
+      "short": "Rumezh"
+    },
+    "56": {
+      "label": "Un léger frisson glacé",
+      "short": "Rumezh"
+    },
+    "57": {
+      "label": "Un frisson glacial",
+      "short": "Rumezh"
+    },
+    "61": {
+      "label": "Une pluie fine",
+      "short": "Pluie"
+    },
+    "63": {
+      "label": "Pluie",
+      "short": "Pluie"
+    },
+    "65": {
+      "label": "Forte pluie",
+      "short": "Pluie"
+    },
+    "66": {
+      "label": "Une légère pluie verglaçante",
+      "short": "Pluie"
+    },
+    "67": {
+      "label": "Pluie verglaçante",
+      "short": "Pluie"
+    },
+    "71": {
+      "label": "Faible enneigement",
+      "short": "Neige"
+    },
+    "73": {
+      "label": "Neige",
+      "short": "Neige"
+    },
+    "75": {
+      "label": "Fortes chutes de neige",
+      "short": "Neige"
+    },
+    "77": {
+      "label": "Flocons de neige",
+      "short": "Neige"
+    },
+    "80": {
+      "label": "Une averse de courte durée",
+      "short": "Précipitations"
+    },
+    "81": {
+      "label": "Précipitations",
+      "short": "Précipitations"
+    },
+    "82": {
+      "label": "Fortes précipitations",
+      "short": "Précipitations"
+    },
+    "85": {
+      "label": "Faible enneigement",
+      "short": "Neige"
+    },
+    "86": {
+      "label": "Fortes chutes de neige",
+      "short": "Neige"
+    },
+    "95": {
+      "label": "Orages",
+      "short": "Tempête"
+    },
+    "96": {
+      "label": "Grêle",
+      "short": "Tempête"
+    },
+    "99": {
+      "label": "Une forte averse de grêle",
+      "short": "Tempête"
+    }
+  }
+}

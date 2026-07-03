@@ -1,0 +1,25 @@
+{
+  "eyebrow": "Özel paketler",
+  "title": "En iyi teklifler",
+  "subtitle": "Özel fiyatlarla seçilmiş kayak ve yaz tatili paketleri. Dönemler sınırlıdır — en iyi tarihler ilk önce tükenir.",
+  "loading": "Yükleniyor...",
+  "empty": "Şu anda aktif teklif bulunmamaktadır.",
+  "oldPrice": "eski fiyat",
+  "includes": "İçerir",
+  "bookOffer": "Teklifi rezerve et",
+  "badge": "Teklif",
+  "claimCta": "Bu fırsattan yararlan",
+  "footer": "Teklifler belirtilen dönemler için geçerlidir · Rezervasyon için — “Rezervasyon” bölümü",
+  "items": {
+    "ski-family": {
+      "title": "Aile kayak tatili",
+      "period": "01.03.2026 – 31.03.2026",
+      "description": "Çocuklara ömür boyu unutamayacakları bir anı hediye edin. Kayak pistlerine sadece birkaç dakika uzaklıkta, sadece ailenize ait bir villa — akşamları ise evde şömine ve sıcak bir akşam yemeği sizi bekliyor."
+    },
+    "pay-9-stay-10": {
+      "title": "9 gecelik ödeme yapın, 10 gece konaklayın",
+      "period": "01.06.2026 – 10.07.2026",
+      "description": "Dağlarda yaz farklıdır — serin sabahlar, doğanın kucağında geçen uzun günler ve verandada barbekü eşliğinde geçirdiğiniz akşamlar. Bizimle biraz daha uzun kalın ve kendinize bizden bir gecelik konaklama hediye edin."
+    }
+  }
+}

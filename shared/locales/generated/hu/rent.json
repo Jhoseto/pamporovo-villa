@@ -1,7 +1,7 @@
 {
   "eyebrow": "Hivatalos bérleti díj · Pamporovo Villa",
   "h1": "Villa bérlés Pamporovóban",
-  "intro": "Három önálló villa a Райковски ливади-ban — az egész villát kizárólag a csoportjuk számára bérelhetik. Mindegyikben 2 hálószoba, 2 fürdőszoba, kandalló és grillező található, maximum 6 vendég számára.",
+  "intro": "Három önálló villa a Raykovski Livadi-ban — az egész villát kizárólag a csoportjuk számára bérelhetik. Mindegyikben 2 hálószoba, 2 fürdőszoba, kandalló és grillező található, maximum 6 vendég számára.",
   "villasHeading": "A három villa",
   "pricingHeading": "Árak",
   "pricingFrom": "tól",
@@ -10,5 +10,10 @@
   "bookOnline": "Foglaljon online",
   "guideLink": "Teljes útmutató Pamporovóhoz",
   "footerNote": "Hivatalos honlap villabérléshez Pamporovóban, Bulgáriában",
-  "villaPageLinkSuffix": "oldal →"
+  "villaPageLinkSuffix": "oldal →",
+  "villaPageLink": "{villa} oldal →",
+  "pricingNotes": [
+    "Az árak egy éjszakára vonatkoznak az egész villára (legfeljebb 6 vendég).",
+    "Ünnepi időszakokban — vegye fel velünk a kapcsolatot egyedi ajánlatért."
+  ]
 }

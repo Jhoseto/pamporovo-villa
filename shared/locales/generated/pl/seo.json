@@ -2,7 +2,7 @@
   "routes": {
     "/": {
       "title": "Pamporovo Villa | 3 domki letniskowe do wynajęcia w Pamporowie, Bułgaria",
-      "description": "Pamporovo Villa — trzy niezależne domki letniskowe do wynajęcia w kurorcie Pamporowo, w okolicy Райковски ливади. 2 sypialnie, kominek, grill, do 6 osób. Zarezerwuj bezpośrednio.",
+      "description": "Pamporovo Villa — trzy niezależne domki letniskowe do wynajęcia w kurorcie Pamporowo, w okolicy Raykovski Livadi. 2 sypialnie, kominek, grill, do 6 osób. Zarezerwuj bezpośrednio.",
       "keywords": "willa do wynajęcia w Pamporowie, Pamporovo Villa, wynajem willi w Pamporowie"
     },
     "/rent": {
@@ -12,7 +12,7 @@
     },
     "/pamporovo": {
       "title": "Pamporowo — kompletny przewodnik po kurorcie i regionie | Pamporovo Villa",
-      "description": "Ponad 37 km tras narciarskich, 6 wyciągów, ekologiczne szlaki, jaskinie i atrakcje turystyczne. Gdzie się zatrzymać — 3 wille od 110 € za noc na Райковски ливади.",
+      "description": "Ponad 37 km tras narciarskich, 6 wyciągów, ekologiczne szlaki, jaskinie i atrakcje turystyczne. Gdzie się zatrzymać — 3 wille od 110 € za noc na Raykovski Livadi.",
       "keywords": "Przewodnik po Pamporowie, narciarstwo w Bułgarii, wycieczka w Rodopy"
     }
   }

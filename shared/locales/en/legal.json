@@ -1,0 +1,653 @@
+{
+  "meta": {
+    "heroEyebrow": "Legal information",
+    "lastUpdatedLabel": "Last updated:",
+    "lastUpdated": "01.07.2026",
+    "pageTitle": "Legal information — Pamporovo Villa",
+    "controllerName": "Pamporovo Villa",
+    "controllerAddress": "Pamporovo Resort, Raykovski Livadi area, Smolyan region, Bulgaria",
+    "controllerEmail": "pamporovovilla@gmail.com",
+    "controllerPhone": "+359 879 501 660",
+    "kdpzAddress": "Commission for Personal Data Protection (CPDP), 2 Prof. Tsvetan Lazarov Blvd., 1592 Sofia",
+    "kdpzEmail": "kzld@cpdp.bg",
+    "kdpzUrl": "https://www.cpdp.bg",
+    "siteUrl": "https://pamporovovilla.com"
+  },
+  "tabs": {
+    "privacy": "Privacy Policy",
+    "terms": "Terms and Conditions",
+    "cookies": "Cookie Policy"
+  },
+  "privacy": {
+    "sections": [
+      {
+        "title": "1. Who is the data controller?",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Pamporovo Villa (hereinafter \"We\", \"us\" or \"the controller\") is a data controller within the meaning of Article 4(7) of Regulation (EU) 2016/679 (GDPR)."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Name: Pamporovo Villa",
+              "Address: Pamporovo Resort, Raykovski Livadi area, Smolyan region, Bulgaria",
+              "Email: pamporovovilla@gmail.com",
+              "Phone: +359 879 501 660",
+              "Website: https://pamporovovilla.com"
+            ]
+          },
+          {
+            "type": "p",
+            "text": "We process your personal data in accordance with Regulation (EU) 2016/679 (GDPR) and the Personal Data Protection Act (PDPA)."
+          }
+        ]
+      },
+      {
+        "title": "2. What personal data do we collect and why?",
+        "blocks": [
+          {
+            "type": "sub",
+            "title": "2.1 Booking requests",
+            "blocks": [
+              {
+                "type": "p",
+                "text": "When you submit a villa rental request, we process the following data: full name, email address, phone number, selected villa, check-in and check-out dates, number of guests, and additional notes."
+              },
+              {
+                "type": "p",
+                "text": "Legal basis: Article 6(1)(b) GDPR — performance of a contract (pre-contractual steps)."
+              },
+              {
+                "type": "p",
+                "text": "Retention period: 5 years from the last contact (obligation under the Accounting Act and Tourism Act)."
+              }
+            ]
+          },
+          {
+            "type": "sub",
+            "title": "2.2 Contact form",
+            "blocks": [
+              {
+                "type": "p",
+                "text": "When you send us a message, we process: full name, email address, phone (if provided), and the text of your enquiry."
+              },
+              {
+                "type": "p",
+                "text": "Legal basis: Article 6(1)(f) GDPR — legitimate interest (to respond to your enquiry)."
+              },
+              {
+                "type": "p",
+                "text": "Retention period: up to 1 year from the last contact or until consent is withdrawn — whichever occurs first."
+              }
+            ]
+          },
+          {
+            "type": "sub",
+            "title": "2.3 Guest reviews",
+            "blocks": [
+              {
+                "type": "p",
+                "text": "When publishing a review, we process: name (or pseudonym), email address (not shown publicly), star rating, review text, villa, and stay period."
+              },
+              {
+                "type": "p",
+                "text": "Legal basis: Article 6(1)(a) GDPR — your explicit consent when submitting the review."
+              },
+              {
+                "type": "p",
+                "text": "Retention period: until consent is withdrawn. Publicly displayed content (text, rating, pseudonym) remains visible until you request deletion."
+              }
+            ]
+          },
+          {
+            "type": "sub",
+            "title": "2.4 Technical data (cookies and logs)",
+            "blocks": [
+              {
+                "type": "p",
+                "text": "Our website may process IP address, browser type, operating system, and pages visited — for security and proper site operation. See our Cookie Policy for details."
+              },
+              {
+                "type": "p",
+                "text": "Legal basis: Article 6(1)(f) GDPR — legitimate interest (security and functionality)."
+              },
+              {
+                "type": "p",
+                "text": "Retention period: up to 12 months."
+              }
+            ]
+          },
+          {
+            "type": "sub",
+            "title": "2.5 Video surveillance on the premises",
+            "blocks": [
+              {
+                "type": "p",
+                "text": "Video surveillance is installed on the villa grounds for physical security purposes. Recordings contain video images of persons on the premises."
+              },
+              {
+                "type": "p",
+                "text": "Legal basis: Article 6(1)(f) GDPR — legitimate interest (protection of property and guest safety). A visible warning sign is posted."
+              },
+              {
+                "type": "p",
+                "text": "Retention period: up to 30 days, after which recordings are automatically deleted unless retention is required for incident investigation."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "3. Who do we share data with?",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "We do not sell or lease personal data to third parties for commercial purposes. Your data may only be shared in the following cases:"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Email service providers (for sending confirmations and correspondence) — acting as data processors under a processing agreement.",
+              "Server hosting provider — stores data within the EU.",
+              "Competent authorities — when legally required (e.g. police, tax authority, CPDP) only by due process.",
+              "Accounting/legal advisers — when necessary and only to the extent required to fulfil a legal obligation."
+            ]
+          },
+          {
+            "type": "p",
+            "text": "We do not transfer personal data outside the European Economic Area (EEA)."
+          }
+        ]
+      },
+      {
+        "title": "4. Your rights",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "As a data subject, you have the following rights under GDPR and PDPA, exercisable at any time:"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Right of access (Article 15 GDPR) — to obtain confirmation whether and what data we process about you, and a copy thereof.",
+              "Right to rectification (Article 16 GDPR) — to request correction of inaccurate or incomplete data.",
+              "Right to erasure (right to be forgotten) (Article 17 GDPR) — where grounds exist (e.g. data no longer necessary for the purpose).",
+              "Right to restriction of processing (Article 18 GDPR) — when disputing accuracy or lawfulness of processing.",
+              "Right to data portability (Article 20 GDPR) — for data processed automatically on the basis of contract or consent.",
+              "Right to object (Article 21 GDPR) — against processing based on legitimate interest or for direct marketing.",
+              "Right to withdraw consent — at any time, without affecting the lawfulness of processing before withdrawal."
+            ]
+          },
+          {
+            "type": "p",
+            "text": "You may submit requests to pamporovovilla@gmail.com or in writing to our address. We respond within 30 days (or up to 90 days in complex cases, with notice)."
+          }
+        ]
+      },
+      {
+        "title": "5. Right to lodge a complaint with the CPDP",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "If you believe we process your data unlawfully, you have the right to lodge a complaint with the supervisory authority:"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Commission for Personal Data Protection (CPDP), 2 Prof. Tsvetan Lazarov Blvd., 1592 Sofia",
+              "Email: kzld@cpdp.bg",
+              "Website: https://www.cpdp.bg"
+            ]
+          },
+          {
+            "type": "p",
+            "text": "We encourage you to contact us first so we can try to resolve the matter out of court."
+          }
+        ]
+      },
+      {
+        "title": "6. Data security",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "We apply appropriate technical and organisational measures (encryption in transit, restricted access, passwords and session authentication) to protect your personal data from unauthorised access, deletion or disclosure. In the event of a security breach posing a risk to your rights, we will notify the CPDP within 72 hours and you — without undue delay."
+          }
+        ]
+      },
+      {
+        "title": "7. Automated decision-making",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "We do not carry out automated decision-making, including profiling, that produces legal effects or similarly significantly affects data subjects."
+          }
+        ]
+      },
+      {
+        "title": "8. Changes to this policy",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "For material changes, we will update the date above and publish an updated version on this page. Where changes require new consent, we will notify you explicitly."
+          }
+        ]
+      }
+    ]
+  },
+  "terms": {
+    "sections": [
+      {
+        "title": "1. Parties and scope",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "These Terms and Conditions (\"Terms\") govern the relationship between Pamporovo Villa (\"Landlord\", \"We\") and any natural or legal person (\"Guest\", \"Client\") who rents a villa via https://pamporovovilla.com or directly by phone/email."
+          },
+          {
+            "type": "p",
+            "text": "By submitting a booking request, the Guest confirms they have read, understood and accept these Terms. Applicable law is Bulgarian legislation: Obligations and Contracts Act (OCA), Consumer Protection Act (CPA), Tourism Act (TA) and related regulations."
+          }
+        ]
+      },
+      {
+        "title": "2. Subject of rental",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Pamporovo Villa rents out three standalone villas (Villa 1, Villa 2 and Villa Deluxe) located at: Pamporovo Resort, Raykovski Livadi area, Smolyan region, Bulgaria. Each villa includes 2 bedrooms, 2 bathrooms, a living room with wood-burning fireplace, fully equipped kitchen, veranda with barbecue and terrace. Maximum capacity is 6 (six) guests per villa."
+          }
+        ]
+      },
+      {
+        "title": "3. Booking and confirmation",
+        "blocks": [
+          {
+            "type": "sub",
+            "title": "3.1 Request process",
+            "blocks": [
+              {
+                "type": "p",
+                "text": "Booking requests are submitted via the website form, by email or by phone. A request does not constitute a concluded contract. The rental contract is deemed concluded only after explicit confirmation by the Landlord."
+              }
+            ]
+          },
+          {
+            "type": "sub",
+            "title": "3.2 Deposit and payment",
+            "blocks": [
+              {
+                "type": "p",
+                "text": "Upon booking confirmation, the Guest pays an advance deposit in the amount specified by the Landlord upon confirmation. The balance of the rental price is paid at check-in or as otherwise agreed. The deposit under Article 93 OCA serves as security for performance."
+              }
+            ]
+          },
+          {
+            "type": "sub",
+            "title": "3.3 Prices",
+            "blocks": [
+              {
+                "type": "p",
+                "text": "Prices are in euros (EUR) per night for the entire villa (up to 6 guests), including resort fee and parking. Prices for public holidays and weekends may differ from those published on the site and are agreed individually. The Landlord reserves the right to update prices without affecting confirmed bookings."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "4. Check-in and check-out",
+        "blocks": [
+          {
+            "type": "ul",
+            "items": [
+              "Check-in: after 3:00 p.m. If arrival after 8:00 p.m. is not possible, the Guest must notify in advance.",
+              "Check-out: by 11:00 a.m. Late check-out without prior agreement may be charged.",
+              "At check-in, the Guest presents identification. The Landlord must register all guests under the Tourism Act.",
+              "Unregistered persons may not stay overnight at the property."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "5. House rules",
+        "blocks": [
+          {
+            "type": "sub",
+            "title": "5.1 Permitted",
+            "blocks": [
+              {
+                "type": "ul",
+                "items": [
+                  "Use of the villa for tourist accommodation by the declared number of guests.",
+                  "Smoking only on designated outdoor terraces.",
+                  "Use of the fireplace (firewood purchased separately).",
+                  "Barbecue on the veranda in compliance with fire safety rules."
+                ]
+              }
+            ]
+          },
+          {
+            "type": "sub",
+            "title": "5.2 Prohibited",
+            "blocks": [
+              {
+                "type": "ul",
+                "items": [
+                  "Smoking indoors — if a violation is found, a penalty fee applies as stated on the website.",
+                  "Accommodation of persons not listed on the booking without prior consent.",
+                  "Bringing personal electric or gas heating appliances.",
+                  "Moving furniture between rooms.",
+                  "Noisy events after 11:00 p.m. and before 7:00 a.m.",
+                  "Pets.",
+                  "Any action disturbing neighbouring villas."
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "6. Cancellation",
+        "blocks": [
+          {
+            "type": "sub",
+            "title": "6.1 Cancellation by the Guest",
+            "blocks": [
+              {
+                "type": "ul",
+                "items": [
+                  "More than 30 days before check-in: full refund of the deposit.",
+                  "14–30 days before check-in: deposit retained in full as a penalty.",
+                  "Less than 14 days before check-in or no-show: deposit retained and full rental price for the booked period may be charged."
+                ]
+              },
+              {
+                "type": "p",
+                "text": "For cancellation due to force majeure, the parties agree individually."
+              }
+            ]
+          },
+          {
+            "type": "sub",
+            "title": "6.2 Cancellation by the Landlord",
+            "blocks": [
+              {
+                "type": "p",
+                "text": "If the villa cannot be provided due to force majeure or unforeseen circumstances, the Landlord refunds all amounts paid in full within 14 days. If cancellation is due to the Landlord's fault, the Guest may claim additional compensation under the OCA."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "7. Liability and damages",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The Guest is liable for damage to villa property caused by their fault or that of accompanying persons. Established damage is paid at market value."
+          },
+          {
+            "type": "p",
+            "text": "The Landlord is not liable for: loss of the Guest's personal belongings on the premises; incidents caused by failure to comply with house rules; damage caused by natural disasters or acts of third parties beyond the Landlord's control."
+          },
+          {
+            "type": "p",
+            "text": "Video surveillance on the premises is for security purposes only and does not release the Guest from liability."
+          }
+        ]
+      },
+      {
+        "title": "8. VIP programme",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Guests who have rented a villa three or more times within one calendar year may receive a personal VIP card with benefits described on the website. The programme is voluntary, with no mandatory membership fee, and may be changed or discontinued by the Landlord with prior notice."
+          }
+        ]
+      },
+      {
+        "title": "9. Intellectual property",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "All texts, images, logos, graphics and other content on the website are owned by Pamporovo Villa or used under proper licence. Copying, distribution or publication without express written permission is prohibited."
+          }
+        ]
+      },
+      {
+        "title": "10. Changes to the Terms",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The Landlord may amend these Terms at any time. The current version is available at https://pamporovovilla.com/legal. For bookings made before an amendment takes effect, the Terms in force at the booking date apply."
+          }
+        ]
+      },
+      {
+        "title": "11. Out-of-court dispute resolution",
+        "blocks": [
+          {
+            "type": "html",
+            "html": "For disputes related to an online contract, consumers may use the EU Online Dispute Resolution platform: <a href=\"https://ec.europa.eu/consumers/odr\" target=\"_blank\" rel=\"noopener noreferrer\">https://ec.europa.eu/consumers/odr</a>. Consumers may also submit complaints to the Commission for Consumer Protection (CCP): tel. 0700 111 22, website <a href=\"https://www.kzp.bg\" target=\"_blank\" rel=\"noopener noreferrer\">kzp.bg</a>."
+          }
+        ]
+      },
+      {
+        "title": "12. Applicable law and jurisdiction",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "These Terms are governed by and construed in accordance with Bulgarian law. For all disputes not resolved out of court, the competent Bulgarian court applies under the Code of Civil Procedure; for consumer disputes, the CPA rules apply."
+          }
+        ]
+      }
+    ]
+  },
+  "cookies": {
+    "sections": [
+      {
+        "title": "1. What are cookies?",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Cookies are small text files stored in your browser when you visit a website. They cannot execute code or carry viruses. They allow the website to recognise you on return visits, save your preferences and function properly."
+          },
+          {
+            "type": "p",
+            "text": "The legal basis for using cookies is Article 5(3) of Directive 2002/58/EC (ePrivacy Directive) and Article 6(1)(a) and (f) GDPR, as transposed into national law."
+          }
+        ]
+      },
+      {
+        "title": "2. Types of cookies and local storage",
+        "blocks": [
+          {
+            "type": "sub",
+            "title": "2.1 Public site — strictly necessary",
+            "blocks": [
+              {
+                "type": "p",
+                "text": "These records are required to remember your cookie choice and cannot be disabled without showing the banner again on your next visit."
+              },
+              {
+                "type": "table",
+                "headers": [
+                  "Name",
+                  "Type",
+                  "Purpose",
+                  "Duration"
+                ],
+                "rows": [
+                  [
+                    "pamporovo_cookie_consent",
+                    "localStorage",
+                    "Stores your cookie preferences",
+                    "12 months"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "type": "sub",
+            "title": "2.2 Public site — analytics (with consent)",
+            "blocks": [
+              {
+                "type": "p",
+                "text": "Activated only after clicking \"Accept all\" or enabling the category in \"Settings\". We use Google Analytics 4 (Measurement ID: G-6W50FH0F0D) for anonymous visit and behaviour statistics."
+              },
+              {
+                "type": "table",
+                "headers": [
+                  "Cookie",
+                  "Provider",
+                  "Purpose",
+                  "Duration"
+                ],
+                "rows": [
+                  [
+                    "_ga, _ga_*",
+                    "Google Analytics",
+                    "Distinguish users and sessions",
+                    "Up to 2 years"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "type": "sub",
+            "title": "2.3 Public site — functional / third parties (with consent)",
+            "blocks": [
+              {
+                "type": "p",
+                "text": "The interactive map (Google Maps) loads only after your consent. Google may set its own cookies when the map is embedded."
+              },
+              {
+                "type": "table",
+                "headers": [
+                  "Source",
+                  "Purpose",
+                  "Duration"
+                ],
+                "rows": [
+                  [
+                    "Google Maps iframe",
+                    "Display villa location",
+                    "Per Google's policy"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "type": "sub",
+            "title": "2.4 Local storage without cookies",
+            "blocks": [
+              {
+                "type": "p",
+                "text": "The following data is stored locally in the browser and does not require separate consent, but we disclose it for transparency:"
+              },
+              {
+                "type": "table",
+                "headers": [
+                  "Key",
+                  "Type",
+                  "Purpose",
+                  "Duration"
+                ],
+                "rows": [
+                  [
+                    "pamporovo-weather-v1",
+                    "sessionStorage",
+                    "Cache weather data in the hero section",
+                    "Until the tab is closed"
+                  ],
+                  [
+                    "theme",
+                    "localStorage",
+                    "Light/dark theme preference",
+                    "1 year"
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "type": "sub",
+            "title": "2.5 Admin panel (/admin)",
+            "blocks": [
+              {
+                "type": "p",
+                "text": "Main site visitors do not receive these cookies. They are used only when logging into the admin area:"
+              },
+              {
+                "type": "table",
+                "headers": [
+                  "Cookie",
+                  "Purpose",
+                  "Duration"
+                ],
+                "rows": [
+                  [
+                    "admin_session",
+                    "Admin session authentication",
+                    "7 days"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "3. How to manage cookies",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "You can change your preferences at any time via the \"Manage cookies\" button at the bottom of the site or via the banner on first visit."
+          },
+          {
+            "type": "p",
+            "text": "You can also control and/or delete cookies through your browser settings:"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Google Chrome: Settings → Privacy and security → Cookies and site data",
+              "Mozilla Firefox: Settings → Privacy & Security → Cookies and Site Data",
+              "Safari: Preferences → Privacy → Manage Website Data",
+              "Microsoft Edge: Settings → Cookies and site permissions"
+            ]
+          },
+          {
+            "type": "p",
+            "text": "Deleting essential cookies may affect site functionality (e.g. the admin area will require logging in again)."
+          },
+          {
+            "type": "html",
+            "html": "You can express preferences regarding analytics cookies at <a href=\"https://optout.aboutads.info\" target=\"_blank\" rel=\"noopener noreferrer\">optout.aboutads.info</a> or <a href=\"https://www.youronlinechoices.eu\" target=\"_blank\" rel=\"noopener noreferrer\">youronlinechoices.eu</a>."
+          }
+        ]
+      },
+      {
+        "title": "4. Changes to this cookie policy",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "This policy may be updated when new tools or legal requirements are introduced. The current version is always available at https://pamporovovilla.com/legal."
+          }
+        ]
+      },
+      {
+        "title": "5. Contact",
+        "blocks": [
+          {
+            "type": "html",
+            "html": "For questions about cookies and data processing, email us at <a href=\"mailto:pamporovovilla@gmail.com\">pamporovovilla@gmail.com</a>."
+          }
+        ]
+      }
+    ]
+  }
+}

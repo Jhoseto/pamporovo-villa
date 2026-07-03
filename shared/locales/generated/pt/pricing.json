@@ -1,0 +1,26 @@
+{
+  "tableNights": "Número de noites",
+  "winterSeason": "Época de Inverno",
+  "winterRange": "setembro – março",
+  "summerSeason": "Época de verão",
+  "summerRange": "abril – agosto",
+  "winterShort": "Inverno",
+  "summerShort": "Verão",
+  "winterLegend": "Inverno · setembro – março",
+  "summerLegend": "Verão · abril – agosto",
+  "bestValue": "A opção mais económica para estadias mais longas",
+  "loading": "Os preços serão publicados em breve.",
+  "cta": "Verifique as datas disponíveis",
+  "tiers": {
+    "up-to-3": "Até 3 noites",
+    "4-nights": "4 noites",
+    "5-nights": "5 noites",
+    "over-5": "Mais de 5 noites"
+  },
+  "breakdown": {
+    "night": "pernoite",
+    "nights": "noites de alojamento",
+    "perNightWinter": "/noite (inverno)",
+    "perNightSummer": "/noite (verão)"
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "sectionEyebrow": "Virtuele rondleiding",
+  "sectionTitle": "Kom binnen voordat je er bent",
+  "sectionSubtitle": "Blader door de villa’s en bekijk ze kamer voor kamer",
+  "ariaLabel": "Virtuele rondleiding",
+  "ariaLabel3d": "Virtuele 3D-rondleiding",
+  "skipUp": "Ga verder naar boven",
+  "skipDown": "Lees verder",
+  "skipUpAria": "Sla de wandeling naar boven over",
+  "skipDownAria": "Sla de wandeling naar beneden over",
+  "panels": {
+    "exterior-summer": {
+      "room": "01 · Het complex",
+      "title": "Hier begint uw verhaal",
+      "subtitle": "Villa 1 · Villa 2 · Villa Deluxe",
+      "description": "Drie vrijstaande villa’s, verscholen tussen de dennenbomen van Raykovski Livadi. U huurt de hele villa helemaal voor uzelf — zonder buren achter de muur, zonder in te boeten aan gezelligheid. Kies uw villa en laat de rest maar aan ons over.",
+      "imageAlt": "De buitenkant van de villa in de zomer",
+      "highlights": [
+        "3 vrijstaande villa's",
+        "Een rustig dennenbos",
+        "Parkeergelegenheid en wifi",
+        "Verhuur het hele jaar door"
+      ]
+    },
+    "exterior-winter": {
+      "room": "02 · Winter",
+      "title": "Als de sneeuw valt",
+      "subtitle": "'s Ochtends skiën, 's avonds bij de open haard",
+      "description": "’s Ochtends staat u binnen enkele minuten op de piste, en ’s avonds wachten de warmte van de open haard en de geur van een barbecue op u. De sneeuw reikt tot aan de drempel — en u heeft niets meer nodig dan een glas glühwein en goed gezelschap.",
+      "imageAlt": "Een villa onder de sneeuw in Pamporovo",
+      "highlights": [
+        "Op slechts enkele minuten van de skipistes",
+        "Houtkachel",
+        "Sneeuw tot aan de drempel",
+        "Warme gezelligheid"
+      ]
+    },
+    "living-fireplace": {
+      "room": "03 · Woonkamer",
+      "title": "Waar de familie samenkomt",
+      "subtitle": "Grote woonkamer met open haard",
+      "description": "Een ruime woonkamer met een echte houtkachel, waar hout en steen een warme, huiselijke sfeer creëren. Hier worden bordspellen gespeeld, verhalen verteld en het vuur aangestoken — het hart van elke avond.",
+      "imageAlt": "Woonkamer met open haard en eethoek",
+      "highlights": [
+        "Houtkachel",
+        "Smart-tv",
+        "Hout en steen",
+        "Een plek voor iedereen"
+      ]
+    },
+    "open-plan": {
+      "room": "04 · Ruimte",
+      "title": "Licht en ruim",
+      "subtitle": "Keuken · eetkamer · woonkamer",
+      "description": "De keuken, de eetkamer en de woonkamer vormen één open ruimte — zodat jullie samen kunnen zijn, zelfs als de een aan het koken is en de anderen lekker aan het luieren zijn. Door de grote ramen stroomt het berglicht naar binnen.",
+      "imageAlt": "Open indeling — uitzicht vanaf de trap",
+      "highlights": [
+        "Open indeling",
+        "Grote ramen",
+        "Natuurlijk licht",
+        "Maximaal 6 gasten"
+      ]
+    },
+    "dining": {
+      "room": "05 · Eetkamer",
+      "title": "De tafel waar alles zich afspeelt",
+      "subtitle": "Van de ochtendkoffie tot het late avondeten",
+      "description": "Een brede houten tafel met plaats voor het hele gezelschap en uitzicht op de dennenbomen. Hier begint de dag met koffie bij zacht licht en eindigt hij met een avondmaaltijd, gelach en plannen voor morgen.",
+      "imageAlt": "Eetkamer met uitzicht op het dennenbos",
+      "highlights": [
+        "Tafel voor 6 personen",
+        "Uitzicht op het bos",
+        "Toegang tot het terras",
+        "Natuurlijk licht"
+      ]
+    },
+    "kitchen": {
+      "room": "06 · Keuken",
+      "title": "Koken zoals thuis",
+      "subtitle": "Volledig uitgeruste keuken",
+      "description": "Kookplaat, oven, koelkast, magnetron, koffiezetapparaat en een complete set serviesgoed — alles voor een ontbijtje thuis of een feestelijk diner. Want soms is de lekkerste maaltijd degene die je zelf klaarmaakt, in de bergen.",
+      "imageAlt": "Ingerichte keuken",
+      "highlights": [
+        "Oven en fornuis",
+        "Koelkast",
+        "Koffiezetapparaat",
+        "Volledige servieset"
+      ]
+    },
+    "bedrooms": {
+      "room": "07 · Slaapkamers",
+      "title": "Een slaap zoals u die al lang niet meer hebt gehad",
+      "subtitle": "Twee gezellige slaapkamers",
+      "description": "Twee aparte slaapkamers met comfortabele bedden en hoogwaardig beddengoed — plaats voor maximaal 6 gasten. De rust van het bos en de frisse lucht op 1 650 m doen wonderen; u zult uitgerust wakker worden, dat beloven we.",
+      "imageAlt": "Gang naar de twee slaapkamers",
+      "highlights": [
+        "2 slaapkamers",
+        "Maximaal 6 gasten",
+        "Hoogwaardig ondergoed",
+        "Diepe stilte"
+      ]
+    },
+    "bathroom": {
+      "room": "08 · Badkamer",
+      "title": "Een badkamer met een bergachtige sfeer",
+      "subtitle": "Comfort voor het hele gezelschap",
+      "description": "Een volledig uitgeruste badkamer met altijd warm water — ruim en gezellig voor het hele gezelschap. Natuurlijke materialen en een warme sfeer.",
+      "imageAlt": "Badkamer met hout en tegels",
+      "highlights": [
+        "1 badkamer",
+        "24/7 warm water",
+        "Hoogwaardige materialen",
+        "Spa-sfeer"
+      ]
+    },
+    "terrace": {
+      "room": "09 · Terras",
+      "title": "Het uitzicht waarvoor je terugkomt",
+      "subtitle": "De Rodopi in één oogopslag",
+      "description": "Een terras met een panoramisch uitzicht op de Rodopi en de dennenbossen. Hier drink je je eerste kopje koffie terwijl de zon boven de bergtoppen opkomt, en sluit je de dag af met een gouden zonsondergang. Momenten die je nog lang na je vakantie bijblijven.",
+      "imageAlt": "Een gouden zonsondergang boven de Rodopi’s",
+      "highlights": [
+        "Panoramisch uitzicht",
+        "Zonsopkomsten en zonsondergangen",
+        "Frisse berglucht",
+        "Groot terras"
+      ]
+    },
+    "bbq-veranda": {
+      "room": "10 · Veranda",
+      "title": "Avonden die maar niet voorbij willen gaan",
+      "subtitle": "Overdekte veranda met barbecue",
+      "description": "De overdekte veranda met barbecue is de favoriete plek als de zon ondergaat. Je kunt er buiten barbecueën, kletsen en lachen — en als het gaat regenen of kouder wordt, blijf je droog en warm, zonder het gevoel van de bergen te verliezen.",
+      "imageAlt": "Veranda met barbecue en uitzicht op de winterlandschap",
+      "highlights": [
+        "Barbecue",
+        "Overdekte veranda",
+        "Voor lange avonden",
+        "In de frisse lucht"
+      ]
+    }
+  },
+  "highlightsLabel": "Hoogtepunten"
+}

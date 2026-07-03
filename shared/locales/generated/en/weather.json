@@ -1,0 +1,126 @@
+{
+  "resortName": "Pamporovo",
+  "elevation": "1,650 m",
+  "variable": "Variable",
+  "wind": {
+    "calm": "quiet",
+    "light": "a gentle breeze",
+    "gentle": "thin",
+    "moderate": "moderate",
+    "strong": "strong"
+  },
+  "codes": {
+    "0": {
+      "label": "Clear",
+      "short": "Clear"
+    },
+    "1": {
+      "label": "Mostly clear",
+      "short": "Clear"
+    },
+    "2": {
+      "label": "Partly cloudy",
+      "short": "Cloudy"
+    },
+    "3": {
+      "label": "Cloudy",
+      "short": "Cloudy"
+    },
+    "45": {
+      "label": "Fog",
+      "short": "Fog"
+    },
+    "48": {
+      "label": "Heavy fog",
+      "short": "Fog"
+    },
+    "51": {
+      "label": "A slight rustle",
+      "short": "Rumezh"
+    },
+    "53": {
+      "label": "Rumezh",
+      "short": "Rumezh"
+    },
+    "55": {
+      "label": "A loud roar",
+      "short": "Rumezh"
+    },
+    "56": {
+      "label": "A light icy chill",
+      "short": "Rumezh"
+    },
+    "57": {
+      "label": "Icy Whisper",
+      "short": "Rumezh"
+    },
+    "61": {
+      "label": "Light rain",
+      "short": "Rain"
+    },
+    "63": {
+      "label": "Rain",
+      "short": "Rain"
+    },
+    "65": {
+      "label": "Heavy rain",
+      "short": "Rain"
+    },
+    "66": {
+      "label": "Light sleet",
+      "short": "Rain"
+    },
+    "67": {
+      "label": "Freezing rain",
+      "short": "Rain"
+    },
+    "71": {
+      "label": "Light snow",
+      "short": "Snow"
+    },
+    "73": {
+      "label": "Snow",
+      "short": "Snow"
+    },
+    "75": {
+      "label": "Heavy snow",
+      "short": "Snow"
+    },
+    "77": {
+      "label": "Snowflakes",
+      "short": "Snow"
+    },
+    "80": {
+      "label": "A brief shower",
+      "short": "Precipitation"
+    },
+    "81": {
+      "label": "Precipitation",
+      "short": "Precipitation"
+    },
+    "82": {
+      "label": "Heavy rainfall",
+      "short": "Precipitation"
+    },
+    "85": {
+      "label": "Light snow",
+      "short": "Snow"
+    },
+    "86": {
+      "label": "Heavy snow",
+      "short": "Snow"
+    },
+    "95": {
+      "label": "Thunderstorms",
+      "short": "Storm"
+    },
+    "96": {
+      "label": "Hail",
+      "short": "Storm"
+    },
+    "99": {
+      "label": "Heavy hailstorm",
+      "short": "Storm"
+    }
+  }
+}

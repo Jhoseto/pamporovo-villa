@@ -1,0 +1,23 @@
+{
+  "checkInLabel": "Zakwaterowanie",
+  "checkOutLabel": "Wyjście",
+  "checkIn": "Po godz. 15:00",
+  "checkOut": "Do godziny 11:00",
+  "stayHeading": "Zakwaterowanie i pobyt",
+  "stayIntro": "Chcemy, aby Państwa pobyt był przyjemny i beztroski — dlatego dbamy o to, by wszystko było proste i przejrzyste.",
+  "avoidHeading": "Prosimy o unikanie",
+  "footer": "Dziękujemy za wybranie Pamporovo Villa. Dbanie o dom to wspólna sprawa — dbając o niego, dbamy o to, by był w dobrym stanie dla każdego kolejnego gościa. Masz pytanie? Zawsze jesteśmy do Twojej dyspozycji.",
+  "highlights": [
+    "Przyjmujemy gości przez cały rok, 24 godziny na dobę, 7 dni w tygodniu. Przy zameldowaniu prosimy o okazanie dokumentu tożsamości.",
+    "Spieszysz się ostatniego dnia? Późniejsze wymeldowanie po godz. 11:00 jest bezpłatne, o ile mamy taką możliwość.",
+    "Drewno do kominka — 10 € za worek, na zamówienie lub przy zameldowaniu.",
+    "Godziny ciszy: 23:00 – 07:00, dla spokoju wszystkich gości. Palenie dozwolone jest wyłącznie na obu tarasach (kara w wysokości 50 € za palenie w pomieszczeniach).",
+    "Zakaz wprowadzania zwierząt domowych. Dla Państwa bezpieczeństwa na terenie obiektu działa monitoring."
+  ],
+  "prohibited": [
+    "Wwożenie prywatnych urządzeń elektrycznych i gazowych",
+    "Zakwaterowanie gości niezarejestrowanych",
+    "Przenoszenie mebli między pokojami",
+    "Zachowanie, które zakłóca spokój w sąsiednich willach"
+  ]
+}

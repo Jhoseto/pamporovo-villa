@@ -1,0 +1,144 @@
+{
+  "sectionEyebrow": "Plimbare virtuală",
+  "sectionTitle": "Intrați înainte de a ajunge",
+  "sectionSubtitle": "Parcurgeți și vizitați vilele, cameră cu cameră",
+  "ariaLabel": "Plimbare virtuală",
+  "ariaLabel3d": "Tur virtual în 3D",
+  "skipUp": "Continuați în sus",
+  "skipDown": "Continuați mai jos",
+  "skipUpAria": "Sari peste urcarea pe munte",
+  "skipDownAria": "Sari peste plimbarea în jos",
+  "panels": {
+    "exterior-summer": {
+      "room": "01 · Complexul",
+      "title": "Aici începe povestea voastră",
+      "subtitle": "Villa 1 · Villa 2 · Villa Deluxe",
+      "description": "Trei vile independente, ascunse printre pinii din Raykovski Livadi. Închiriați întreaga vilă doar pentru dumneavoastră — fără vecini dincolo de zid, fără compromisuri în ceea ce privește confortul. Alegeți-o pe cea potrivită și lăsați restul în seama noastră.",
+      "imageAlt": "Exteriorul vilei în timpul verii",
+      "highlights": [
+        "3 vile independente",
+        "O pădure liniștită de pini",
+        "Parcare și Wi-Fi",
+        "Închiriere pe tot parcursul anului"
+      ]
+    },
+    "exterior-winter": {
+      "room": "02 · Iarna",
+      "title": "Când va cădea zăpada",
+      "subtitle": "Schi dimineața, șemineu seara",
+      "description": "Dimineața ajungeți pe pârtie în câteva minute, iar seara vă așteaptă căldura șemineului și aroma grătarului. Zăpada ajunge chiar până la prag — iar voi nu aveți nevoie de nimic altceva decât de un pahar de vin fiert și de o companie plăcută.",
+      "imageAlt": "O vilă acoperită de zăpadă în Pamporovo",
+      "highlights": [
+        "La câteva minute de pârtii",
+        "Șemineu pe lemne",
+        "Zăpadă până la prag",
+        "Căldură și confort"
+      ]
+    },
+    "living-fireplace": {
+      "room": "03 · Camera de zi",
+      "title": "Locul unde se reunește familia",
+      "subtitle": "Un living spațios, cu șemineu",
+      "description": "Un living spațios, cu un șemineu adevărat pe lemne, în care lemnul și piatra creează o atmosferă caldă și familiară. Aici se joacă jocuri de societate, se povestesc povești și se întreține focul — inima fiecărei seri.",
+      "imageAlt": "Camera de zi cu șemineu și sufragerie",
+      "highlights": [
+        "Șemineu pe lemne",
+        "Televizor inteligent",
+        "Lemn și piatră",
+        "Un loc pentru toți"
+      ]
+    },
+    "open-plan": {
+      "room": "04 · Spațiu",
+      "title": "Luminos și spațios",
+      "subtitle": "Bucătărie · sufragerie · living",
+      "description": "Bucătăria, sufrageria și camera de zi formează un singur spațiu deschis — pentru ca voi să fiți împreună, chiar și atunci când unul dintre voi gătește, iar ceilalți se relaxează. Ferestrele mari lasă lumina munților să pătrundă în interior.",
+      "imageAlt": "Plan deschis — priveliște de pe scări",
+      "highlights": [
+        "Plan deschis",
+        "Ferestre mari",
+        "Lumină naturală",
+        "Până la 6 oaspeți"
+      ]
+    },
+    "dining": {
+      "room": "05 · Sala de mese",
+      "title": "Masa în jurul căreia se petrece totul",
+      "subtitle": "De la cafeaua de dimineață până la cina târzie",
+      "description": "O masă largă din lemn, cu loc pentru toată compania, și cu vedere directă spre pini. Aici ziua începe cu o cafea la lumina difuză și se încheie cu cina, râsete și planuri pentru mâine.",
+      "imageAlt": "Sufragerie cu vedere spre pădurea de pini",
+      "highlights": [
+        "Masă pentru 6 persoane",
+        "Priveliște spre pădure",
+        "Acces la terasă",
+        "Lumină naturală"
+      ]
+    },
+    "kitchen": {
+      "room": "06 · Bucătărie",
+      "title": "Gătiți ca acasă",
+      "subtitle": "Bucătărie complet utilată",
+      "description": "Plită, cuptor, frigider, cuptor cu microunde, mașină de cafea și un set complet de vase — tot ce-ți trebuie pentru un mic dejun acasă sau o cină festivă. Pentru că, uneori, cel mai gustos fel de mâncare este cel pe care îl pregătești singur, la munte.",
+      "imageAlt": "Bucătărie utilată",
+      "highlights": [
+        "Cuptor și aragaz",
+        "Frigider",
+        "Mașină de cafea",
+        "Set complet de vase"
+      ]
+    },
+    "bedrooms": {
+      "room": "07 · Dormitoare",
+      "title": "Un somn cum nu ați mai avut de mult timp",
+      "subtitle": "Două dormitoare confortabile",
+      "description": "Două dormitoare separate, cu paturi confortabile și lenjerie de pat de calitate — spațiu pentru până la 6 oaspeți. Liniștea pădurii și aerul curat de la 1 650 m fac minuni; vă veți trezi odihniți, vă promitem.",
+      "imageAlt": "Coridorul care duce la cele două dormitoare",
+      "highlights": [
+        "2 dormitoare",
+        "Până la 6 oaspeți",
+        "Lenjerie de calitate",
+        "O liniște profundă"
+      ]
+    },
+    "bathroom": {
+      "room": "08 · Baia",
+      "title": "O baie cu atmosferă montană",
+      "subtitle": "Confort pentru toată compania",
+      "description": "O baie complet utilată, cu apă caldă în orice moment — spațioasă și confortabilă pentru toată compania. Materiale naturale și o atmosferă caldă.",
+      "imageAlt": "Baie cu lemn și gresie",
+      "highlights": [
+        "1 baie",
+        "Apă caldă 24/7",
+        "Materiale de calitate",
+        "Atmosferă de spa"
+      ]
+    },
+    "terrace": {
+      "room": "09 · Terasă",
+      "title": "Priveliștea pentru care vă întoarceți",
+      "subtitle": "Rodopii la îndemână",
+      "description": "O terasă cu vedere panoramică spre Munții Rodopi și pinii. Aici vă savurați prima cafea, în timp ce soarele răsare deasupra vârfurilor, și vă luați rămas bun de la zi cu un apus auriu. Momente care rămân în amintire mult timp după vacanță.",
+      "imageAlt": "Un apus auriu peste Munții Rodopi",
+      "highlights": [
+        "Vedere panoramică",
+        "Răsărituri și apusuri",
+        "Aer curat de munte",
+        "O terasă mare"
+      ]
+    },
+    "bbq-veranda": {
+      "room": "10 · Verandă",
+      "title": "Seri care nu se grăbesc să se termine",
+      "subtitle": "Terasă acoperită cu grătar",
+      "description": "Terasa acoperită, dotată cu grătar, este locul preferat la apusul soarelui. Gătiți, discutați și râdeți în aer liber — iar dacă începe să plouă sau se răcește, rămâneți la adăpost și la căldură, fără a pierde senzația de a fi la munte.",
+      "imageAlt": "Verandă cu grătar și priveliște de iarnă",
+      "highlights": [
+        "Grătar",
+        "Verandă acoperită",
+        "Pentru serile lungi",
+        "În aer liber"
+      ]
+    }
+  },
+  "highlightsLabel": "Puncte forte"
+}

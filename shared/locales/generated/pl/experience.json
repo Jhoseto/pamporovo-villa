@@ -1,0 +1,144 @@
+{
+  "sectionEyebrow": "Wirtualny spacer",
+  "sectionTitle": "Wejdźcie, zanim jeszcze przyjdziecie",
+  "sectionSubtitle": "Przejrzyjcie i obejrzyjcie domy letniskowe pokój po pokoju",
+  "ariaLabel": "Wirtualny spacer",
+  "ariaLabel3d": "Wirtualny spacer w 3D",
+  "skipUp": "Przejdź wyżej",
+  "skipDown": "Przejdź dalej w dół",
+  "skipUpAria": "Pomiń spacer w górę",
+  "skipDownAria": "Pomiń spacer w dół",
+  "panels": {
+    "exterior-summer": {
+      "room": "01 · Kompleks",
+      "title": "Tutaj zaczyna się wasza historia",
+      "subtitle": "Villa 1 · Villa 2 · Villa Deluxe",
+      "description": "Trzy niezależne wille, ukryte wśród sosen w Raykovski Livadi. Wynajmujcie całą willę wyłącznie dla siebie — bez sąsiadów za ścianą, bez kompromisów w kwestii komfortu. Wybierzcie swoją willę, a resztą zajmiemy się my.",
+      "imageAlt": "Wygląd zewnętrzny willi latem",
+      "highlights": [
+        "3 wolnostojące wille",
+        "Cichy las sosnowy",
+        "Parking i Wi-Fi",
+        "Wynajem na cały rok"
+      ]
+    },
+    "exterior-winter": {
+      "room": "02 · Zima",
+      "title": "Kiedy spadnie śnieg",
+      "subtitle": "Rano na nartach, wieczorem przy kominku",
+      "description": "Rano w ciągu kilku minut jesteście już na stoku, a wieczorem czeka na was ciepło kominka i zapach grillowanych potraw. Śnieg sięga aż do progu — a wam nie potrzeba nic więcej niż kieliszek grzanego wina i dobre towarzystwo.",
+      "imageAlt": "Willa pod śniegiem w Pamporowie",
+      "highlights": [
+        "Kilka minut od stoków",
+        "Kominek opalany drewnem",
+        "Śnieg aż do progu",
+        "Ciepły, przytulny klimat"
+      ]
+    },
+    "living-fireplace": {
+      "room": "03 · Salon",
+      "title": "Miejsce, gdzie spotyka się rodzina",
+      "subtitle": "Duży salon z kominkiem",
+      "description": "Przestronny salon z prawdziwym kominkiem opalanym drewnem, w którym drewno i kamień tworzą ciepłą, domową atmosferę. Tutaj gra się w gry planszowe, opowiada się historie i rozpalany jest ogień — serce każdego wieczoru.",
+      "imageAlt": "Salon z kominkiem i jadalnią",
+      "highlights": [
+        "Kominek opalany drewnem",
+        "Telewizor Smart",
+        "Drewno i kamień",
+        "Miejsce dla wszystkich"
+      ]
+    },
+    "open-plan": {
+      "room": "04 · Przestrzeń",
+      "title": "Jasne i przestronne",
+      "subtitle": "Kuchnia · jadalnia · salon",
+      "description": "Kuchnia, jadalnia i salon tworzą jedną otwartą przestrzeń — dzięki temu możecie być razem, nawet gdy jedna osoba gotuje, a pozostali odpoczywają. Duże okna wpuszczają do środka górskie światło.",
+      "imageAlt": "Otwarta przestrzeń — widok ze schodów",
+      "highlights": [
+        "Otwarta przestrzeń",
+        "Duże okna",
+        "Światło naturalne",
+        "Do 6 gości"
+      ]
+    },
+    "dining": {
+      "room": "05 · Jadalnia",
+      "title": "Stół, wokół którego wszystko się dzieje",
+      "subtitle": "Od porannej kawy po późną kolację",
+      "description": "Szeroki drewniany stół, przy którym zmieści się cała grupa, z widokiem prosto na sosny. Tutaj dzień zaczyna się od kawy w przytłumionym świetle, a kończy kolacją, śmiechem i planami na jutro.",
+      "imageAlt": "Jadalnia z widokiem na las sosnowy",
+      "highlights": [
+        "Stół dla 6 osób",
+        "Widok na las",
+        "Dostęp do tarasu",
+        "Światło naturalne"
+      ]
+    },
+    "kitchen": {
+      "room": "06 · Kuchnia",
+      "title": "Gotuj jak w domu",
+      "subtitle": "W pełni wyposażona kuchnia",
+      "description": "Płyta kuchenna, piekarnik, lodówka, kuchenka mikrofalowa, ekspres do kawy i pełen zestaw naczyń — wszystko, czego potrzeba do domowego śniadania lub uroczystej kolacji. Bo czasami najsmaczniejsze danie to takie, które samemu się ugotuje w górach.",
+      "imageAlt": "W pełni wyposażona kuchnia",
+      "highlights": [
+        "Piekarnik i kuchenka",
+        "Lodówka",
+        "Ekspres do kawy",
+        "Komplet naczyń"
+      ]
+    },
+    "bedrooms": {
+      "room": "07 · Sypialnie",
+      "title": "Sen, jakiego dawno nie mieliście",
+      "subtitle": "Dwie przytulne sypialnie",
+      "description": "Dwie oddzielne sypialnie z wygodnymi łóżkami i wysokiej jakości pościelą — miejsce dla maksymalnie 6 osób. Cisza lasu i czyste powietrze na wysokości 1 650 m czynią cuda; obudzicie się wypoczęci, obiecujemy.",
+      "imageAlt": "Korytarz prowadzący do obu sypialni",
+      "highlights": [
+        "2 sypialnie",
+        "Do 6 gości",
+        "Bielizna wysokiej jakości",
+        "Głębka cisza"
+      ]
+    },
+    "bathroom": {
+      "room": "08 · Łazienka",
+      "title": "Łazienka w górskim stylu",
+      "subtitle": "Komfort dla całej grupy",
+      "description": "W pełni wyposażona łazienka z ciepłą wodą przez cały czas — przestronna i przytulna dla całej grupy. Naturalne materiały i ciepła atmosfera.",
+      "imageAlt": "Łazienka wykończona drewnem i płytkami",
+      "highlights": [
+        "1 łazienka",
+        "Ciepła woda 24 godziny na dobę, 7 dni w tygodniu",
+        "Wysokiej jakości materiały",
+        "Atmosfera spa"
+      ]
+    },
+    "terrace": {
+      "room": "09 · Taras",
+      "title": "Widok, dla którego tu wracacie",
+      "subtitle": "Rodopy w skrócie",
+      "description": "Taras z panoramicznym widokiem na Rodopy i lasy sosnowe. Tutaj wypijacie pierwszą kawę, gdy słońce wschodzi nad szczytami, a dzień kończycie, podziwiając złoty zachód słońca. Chwile, które pozostają w pamięci na długo po zakończeniu wypoczynku.",
+      "imageAlt": "Złoty zachód słońca nad Rodopami",
+      "highlights": [
+        "Widok panoramiczny",
+        "Wschody i zachody słońca",
+        "Czyste górskie powietrze",
+        "Duży taras"
+      ]
+    },
+    "bbq-veranda": {
+      "room": "10 · Weranda",
+      "title": "Wieczory, które nie chcą się kończyć",
+      "subtitle": "Zadaszona weranda z grillem",
+      "description": "Zadaszona weranda z grillem to ulubione miejsce po zachodzie słońca. Można tu grillować, rozmawiać i śmiać się na świeżym powietrzu — a jeśli zacznie padać lub zrobi się chłodno, pozostaje się w suchym i ciepłym miejscu, nie tracąc przy tym poczucia obecności w górach.",
+      "imageAlt": "Weranda z grillem i widokiem na zimowy krajobraz",
+      "highlights": [
+        "Grill",
+        "Zadaszona weranda",
+        "Na długie wieczory",
+        "Na świeżym powietrzu"
+      ]
+    }
+  },
+  "highlightsLabel": "Najważniejsze informacje"
+}

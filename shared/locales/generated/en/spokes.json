@@ -1,248 +1,788 @@
 {
   "pisti": {
-    "h1": "Писти в Пампорово — 37+ km ски трасе",
-    "seoTitle": "Писти Пампорово 2026 | 37+ km, нощно каране, карта — Pamporovo Villa",
-    "seoDescription": "Всички писти в Пампорово: дължина, трудност, нощно каране на Стената, лифтове до Снежанка. Планирайте ски почивката си — настаняване от 110 €/нощ.",
-    "seoKeywords": "писти Пампорово, ски Пампорово, Стената, нощно каране, Снежанка, ски карта"
+    "h1": "Ski runs in Pamporovo — 37+ km of pistes",
+    "seoTitle": "Pamporovo ski runs 2026 | 37+ km, night skiing, map — Pamporovo Villa",
+    "seoDescription": "All ski runs in Pamporovo: length, difficulty, night skiing on Stenata, lifts to Snezhanka. Plan your ski holiday — villas from €110/night.",
+    "seoKeywords": "Pamporovo ski runs, Pamporovo pistes, Stenata, night skiing, Snezhanka, ski map Bulgaria",
+    "sections": [
+      {
+        "heading": "The ski area at a glance",
+        "paragraphs": [
+          "Pamporovo is Bulgaria's oldest ski resort (since 1933) and one of the sunniest — over 120 clear-sky days each winter. The resort sits at 1,650 m; the highest marked run reaches Snezhanka at 1,926 m.",
+          "Marked pistes total more than 37 km. Around 90% have snowmaking, which stabilises the season even in mild weather."
+        ],
+        "bullets": [
+          "15+ main runs plus bypasses and fun park",
+          "6 lifts and drag lifts",
+          "Night skiing on run #2 Stenata",
+          "Green, blue, red, and black trails"
+        ]
+      },
+      {
+        "heading": "Iconic runs",
+        "paragraphs": [
+          "Run #2 Stenata (1,258 m, black) is the resort symbol — World Cup races and the only run with regular night skiing. #3 Architect Petar Petrov (1,766 m) is the longest black run.",
+          "For families and beginners, #6 Tourist Run (3,343 m) offers a long gentle descent. #5 Malina (2,799 m) is the longest red — from the summit to Malina ski centre."
+        ]
+      },
+      {
+        "heading": "Where to stay after the slopes",
+        "paragraphs": [
+          "Pamporovo Villa offers 3 private chalets 2 km from the centre — fireplace, BBQ, up to 6 guests per villa. Ideal if you want quiet away from hotel noise and your own kitchen after a day on the snow."
+        ]
+      }
+    ],
+    "eyebrow": "Ski · Pamporovo",
+    "intro": "Complete overview of the Pamporovo ski area: 15+ runs from green beginner slopes to black-diamond Stenata, night skiing, and lifts to Snezhanka peak (1,926 m)."
   },
   "kude-da-spim": {
-    "h1": "Къде да спя в Пампорово?",
-    "seoTitle": "Къде да спя в Пампорово | Вили, хотели, съвети 2026",
-    "seoDescription": "Къде да нощувате в Пампорово: хотел vs вила, Райковски ливади, цени от 110 €/нощ за цяла вила до 6 гости. Официален наем — Pamporovo Villa.",
-    "seoKeywords": "къде да спя Пампорово, настаняване Пампорово, вила Пампорово, хотел Пампорово"
+    "h1": "Where to stay in Pamporovo?",
+    "seoTitle": "Where to stay in Pamporovo | Villas, hotels, tips 2026",
+    "seoDescription": "Where to sleep in Pamporovo: hotel vs villa, Raykovski Livadi, from €110/night for a whole villa up to 6 guests. Official rental — Pamporovo Villa.",
+    "seoKeywords": "where to stay Pamporovo, Pamporovo accommodation, villa Pamporovo, hotel Pamporovo",
+    "sections": [
+      {
+        "heading": "Areas to stay in the resort",
+        "paragraphs": [
+          "Pamporovo centre is handy for restaurants and lifts but can be noisy in peak season. Malina, Stoykite, and Raykovski Livadi offer more peace and parking.",
+          "Raykovski Livadi is 2 km from the centre — close enough for the slopes, far enough for quiet nights under the stars."
+        ]
+      },
+      {
+        "heading": "What suits whom",
+        "paragraphs": [
+          "Couples on a weekend — hotel or small villa. Family with children — a villa with kitchen and fireplace is often better value than two hotel rooms. Group of 4–6 — a whole villa gives you a shared living room and BBQ without sharing with strangers."
+        ],
+        "bullets": [
+          "Hotel: half board, no cooking, central location",
+          "Villa: whole house, fireplace, BBQ, parking, more privacy",
+          "Pamporovo Villa: 3 villas, 2 bedrooms, up to 6 guests, from €110/night"
+        ]
+      },
+      {
+        "heading": "Our recommendation: Pamporovo Villa",
+        "paragraphs": [
+          "Three matching-style villas (Villa 1, Villa 2, Villa Deluxe) at one address — you book only one villa for your group. Each has 2 bedrooms, 2 bathrooms, fireplace, and BBQ terrace."
+        ]
+      }
+    ],
+    "eyebrow": "Accommodation · Pamporovo",
+    "intro": "Compare accommodation in the resort — central hotels, apartments, and private villas. A practical guide for families, groups, and couples."
   },
   "hotel-vs-vila": {
-    "h1": "Хотел или вила в Пампорово — кое да изберете?",
-    "seoTitle": "Хотел или вила Пампорово | Сравнение за ски и лято 2026",
-    "seoDescription": "Хотел vs вила в Пампорово: цени, предимства за семейства и групи, камина и BBQ. Кога вилата печели — Pamporovo Villa от 110 €/нощ.",
-    "seoKeywords": "хотел или вила Пампорово, сравнение настаняване, вила vs хотел"
+    "h1": "Hotel or villa in Pamporovo — which to choose?",
+    "seoTitle": "Hotel or villa Pamporovo | Comparison for ski & summer 2026",
+    "seoDescription": "Hotel vs villa in Pamporovo: prices, advantages for families and groups, fireplace and BBQ. When villas win — Pamporovo Villa from €110/night.",
+    "seoKeywords": "hotel or villa Pamporovo, accommodation comparison, villa vs hotel Bulgaria",
+    "sections": [
+      {
+        "heading": "When a hotel is the better choice",
+        "paragraphs": [
+          "Short stay (1–2 nights), you want breakfast and dinner without cooking, or you are solo/a couple without needing extra space. Central hotels are minutes from the lifts."
+        ]
+      },
+      {
+        "heading": "When a villa wins",
+        "paragraphs": [
+          "With 4–6 guests, per-person cost in a private villa often beats a 3-star hotel with half board. You get a living room with fireplace, kitchen, BBQ, and parking — no neighbours in the corridor.",
+          "Families with young children appreciate fixed routines — sleep, cooking, afternoon naps without lifts and reception queues."
+        ],
+        "bullets": [
+          "Whole villa = your group only",
+          "Fireplace and BBQ — atmosphere hotels cannot match",
+          "Parking at the door — easy with ski gear",
+          "Pamporovo Villa: from €110/night for up to 6 people"
+        ]
+      },
+      {
+        "heading": "Sample Invoice",
+        "paragraphs": [
+          "A villa at 150 € per night for 5 nights = 750 € total. For 5 people, that’s 150 € per person for 5 nights (30 € per night per person)—often less than a hotel plus meals at the resort."
+        ]
+      }
+    ],
+    "eyebrow": "Comparison · accommodation",
+    "intro": "An honest comparison: price per person, comfort, cooking, fireplace, parking, and which option makes sense for which trip."
   },
   "naem-vila": {
-    "h1": "Наем на вила в Пампорово",
-    "seoTitle": "Наем на вила Пампорово | 3 вили, цени, резервация 2026",
-    "seoDescription": "Наемете вила в Пампорово — 3 самостоятелни вили, 2 спални, камина, BBQ, до 6 гости. От 110 €/нощ. Официален сайт Pamporovo Villa.",
-    "seoKeywords": "наем вила Пампорово, вила под наем, наем къща Пампорово, Pamporovo Villa"
+    "h1": "Rent a villa in Pamporovo",
+    "seoTitle": "Villa rental Pamporovo | 3 villas, prices, booking 2026",
+    "seoDescription": "Rent a villa in Pamporovo — 3 private chalets, 2 bedrooms, fireplace, BBQ, up to 6 guests. From €110/night. Official site Pamporovo Villa.",
+    "seoKeywords": "rent villa Pamporovo, Pamporovo chalet rental, holiday home Pamporovo",
+    "sections": [
+      {
+        "heading": "What “rent a villa” means",
+        "paragraphs": [
+          "At Pamporovo Villa you rent the entire house — not a room in a shared building. The villa is for your group only: keys, living room, kitchen, BBQ terrace, and parking are yours."
+        ]
+      },
+      {
+        "heading": "The three villas",
+        "paragraphs": [
+          "Villa 1, Villa 2, and Villa Deluxe have the same capacity and amenities — 2 bedrooms, 2 bathrooms, fireplace, full kitchen, Wi‑Fi. Choice depends on calendar availability."
+        ],
+        "bullets": [
+          "Up to 6 guests per villa",
+          "2 bedrooms + 2 bathrooms",
+          "Wood fireplace + BBQ",
+          "Free parking"
+        ]
+      },
+      {
+        "heading": "Prices and Reservations",
+        "paragraphs": [
+          "The summer season starts at 110 € per night for the entire villa. Winter rates are higher, depending on the time of year. Book online at pamporovovilla.com or on the /rent page."
+        ]
+      }
+    ],
+    "eyebrow": "Rental · Pamporovo Villa",
+    "intro": "How whole-villa rental works in Pamporovo — what's included, prices, booking, and the three chalets on Raykovski Livadi."
   },
   "vila-s-kamina": {
-    "h1": "Вила с камина в Пампорово",
-    "seoTitle": "Вила с камина Пампорово | Камина + BBQ — Pamporovo Villa",
-    "seoDescription": "Наемете вила с камина в Пампорово — и трите вили на Pamporovo Villa имат камина и барbecue. До 6 гости, от 110 €/нощ.",
-    "seoKeywords": "вила с камина Пампорово, камина планина, зимна вила, BBQ Пампорово"
+    "h1": "Villa with fireplace in Pamporovo",
+    "seoTitle": "Villa with fireplace Pamporovo | Fireplace + BBQ — Pamporovo Villa",
+    "seoDescription": "Rent a villa with fireplace in Pamporovo — all three Pamporovo Villa chalets have fireplace and BBQ. Up to 6 guests, from €110/night.",
+    "seoKeywords": "villa with fireplace Pamporovo, mountain chalet fireplace, winter villa Bulgaria",
+    "sections": [
+      {
+        "heading": "Fireplace in every villa",
+        "paragraphs": [
+          "Each villa living room centres on a wood-burning fireplace — warm light, wood smoke, and a place to talk after a full day on the piste or an eco trail."
+        ]
+      },
+      {
+        "heading": "BBQ terrace",
+        "paragraphs": [
+          "In summer and mild winter days the terrace BBQ is perfect for family evenings. Combine with local products from Smolyan or the resort."
+        ]
+      },
+      {
+        "heading": "Practical Tips",
+        "paragraphs": [
+          "The hosts provide the firewood for the fireplace. If you’re booking in January–February, be sure to book early—the cottages with fireplaces are among the first to fill up."
+        ]
+      }
+    ],
+    "eyebrow": "Amenities · villa",
+    "intro": "Winter atmosphere after the slopes — all three Pamporovo Villa chalets have a wood fireplace in the living room plus a BBQ terrace for sunny days."
   },
   "naem-zima": {
-    "h1": "Зимен наем на вила в Пампорово",
-    "seoTitle": "Зимен наем вила Пампорово | Ски почивка 2026 — Pamporovo Villa",
-    "seoDescription": "Вила под наем зима в Пампорово — 2 km от пистите, камина, до 6 гости. Резервирайте ски почивка на Pamporovo Villa.",
-    "seoKeywords": "зимен наем вила Пампорово, ски почивка вила, вила зима Родопи"
+    "h1": "Winter villa rental in Pamporovo",
+    "seoTitle": "Winter villa rental Pamporovo | Ski holiday 2026 — Pamporovo Villa",
+    "seoDescription": "Villa for rent in winter Pamporovo — 2 km from pistes, fireplace, up to 6 guests. Book your ski break at Pamporovo Villa.",
+    "seoKeywords": "winter villa rental Pamporovo, ski holiday chalet, Pamporovo winter accommodation",
+    "sections": [
+      {
+        "heading": "Why a villa for ski season",
+        "paragraphs": [
+          "Ski gear, wet clothes, early starts — a private villa gives space to dry kit, cook, and breakfast without restaurant hours. Parking is at the door."
+        ]
+      },
+      {
+        "heading": "Close to the pistes",
+        "paragraphs": [
+          "Raykovski Livadi is 2 km from the centre — 5–7 minutes by car to the lifts. After night skiing on Stenata you are quickly back at the fireplace."
+        ]
+      },
+      {
+        "heading": "When to Book",
+        "paragraphs": [
+          "Christmas, New Year’s, and the February break are the first to fill up. A minimum stay of 3–5 nights during peak season—check the calendar online."
+        ],
+        "bullets": [
+          "Reservation: pamporovovilla.com/#booking",
+          "Phone: +359 879 501 660",
+          "Fact Sheet: /rent"
+        ]
+      }
+    ],
+    "eyebrow": "Winter · ski rental",
+    "intro": "Plan a ski holiday in Pamporovo — rent a whole villa near the runs, with fireplace, parking, and prices for families and groups."
   },
   "lato": {
-    "h1": "Лято в Пампорово — еко пътеки и прохлада",
-    "seoTitle": "Лято Пампорово 2026 | Еко пътеки, активности, наем вила",
-    "seoDescription": "Какво да правите лятом в Пампорово: еко пътеки, Смолянски езера, пещери, колоездене. Наем на вила от 110 €/нощ — Pamporovo Villa.",
-    "seoKeywords": "лято Пампорово, еко туризъм, планинска почивка лято, вила лято"
+    "h1": "Summer in Pamporovo — eco trails and cool mountain air",
+    "seoTitle": "Summer Pamporovo 2026 | Eco trails, activities, villa rental",
+    "seoDescription": "What to do in Pamporovo in summer: eco trails, Smolyan lakes, caves, cycling. Villa rental from €110/night — Pamporovo Villa.",
+    "seoKeywords": "summer Pamporovo, eco tourism Bulgaria, mountain holiday summer, Rhodope trails",
+    "sections": [
+      {
+        "heading": "Why Pamporovo in summer",
+        "paragraphs": [
+          "At 1,650 m the air stays fresh even when the lowlands are hot. The region offers dozens of marked routes, caves, and authentic villages within an hour's drive.",
+          "Renting a villa with BBQ terrace and kitchen makes summer more economical than a hotel — especially for families."
+        ],
+        "bullets": [
+          "Nature Trails and Waterfalls",
+          "Cycling and Horseback Riding",
+          "Caves and Villages",
+          "Villa starting at 110 €/night"
+        ]
+      }
+    ],
+    "eyebrow": "Summer · Pamporovo",
+    "intro": "Pamporovo is not only a ski resort — summer here means eco routes, waterfalls, caves, and family holidays at 1,650 m with clean air."
   },
   "zima": {
-    "h1": "Зима в Пампорово — ски, сняг и атмосфера",
-    "seoTitle": "Зима Пампорово 2026 | Ски сезон, писти, настаняване",
-    "seoDescription": "Пълен преглед на зимата в Пампорово: писти, лифтове, нощно каране, наем на вила близо до курорта. Pamporovo Villa от 120 €/нощ.",
-    "seoKeywords": "зима Пампорово, ски сезон, сняг Пампорово, зимна почивка"
+    "h1": "Winter in Pamporovo — skiing, snow, and atmosphere",
+    "seoTitle": "Winter Pamporovo 2026 | Ski season, runs, accommodation",
+    "seoDescription": "Winter in Pamporovo: pistes, lifts, night skiing, villa rental near the resort. Pamporovo Villa from €120/night.",
+    "seoKeywords": "winter Pamporovo, ski season Bulgaria, snow Pamporovo, winter holiday",
+    "sections": [
+      {
+        "heading": "Ski season",
+        "paragraphs": [
+          "Season is usually December–March/April. 90% of runs have snowmaking — skiing is reliable even in warm spells.",
+          "Combine a day on the pistes with an evening by the fireplace in a private villa — without hotel lobby noise."
+        ]
+      }
+    ],
+    "eyebrow": "Winter · resort",
+    "intro": "37+ km of pistes, night skiing, snowmaking, and 120+ sunny days — winter in Pamporovo is among the best in Bulgaria."
   },
   "yagodinska-pechtera": {
-    "h1": "Ягодинската пещера — близо до Пампорово",
-    "seoTitle": "Ягодинска пещера от Пампорово | Разстояние, тур, съвети",
-    "seoDescription": "Как да стигнете до Ягодинската пещера от Пампорово — 50 km, 45 min тур, какво да видите. База: вила на Райковски ливади.",
-    "seoKeywords": "Ягодинска пещера, пещери Пампорово, Буйновско ждрело"
+    "h1": "Yagodinska Cave — near Pamporovo",
+    "seoTitle": "Yagodinska Cave from Pamporovo | Distance, tour, tips",
+    "seoDescription": "How to reach Yagodinska Cave from Pamporovo — 50 km, 45 min tour. Base: villa on Raykovski Livadi.",
+    "seoKeywords": "Yagodinska Cave, caves Pamporovo, Buynovo Gorge, Rhodope caves",
+    "sections": [
+      {
+        "heading": "Practical tips",
+        "paragraphs": [
+          "Cave temperature is about 6°C — bring a jacket even in summer. Book tours in peak season.",
+          "Combine with Buynovo Gorge and lunch in the region — a full day out of the resort."
+        ]
+      }
+    ],
+    "eyebrow": "Caves · region",
+    "intro": "Bulgaria's third-longest cave — 10.5 km of galleries, cave pearls, and the New Year Hall. ~50 km from Pamporovo — ideal day trip."
   },
   "shiroka-laka": {
-    "h1": "Широка лъка — архитектурен резерват близо до Пампорово",
-    "seoTitle": "Широка лъка от Пампорово | 16 km, какво да видите",
-    "seoDescription": "Широка лъка на 20 min от Пампорово — архитектура, фолклор, музей. Комбинирайте с нощувка в Pamporovo Villa.",
-    "seoKeywords": "Широка лъка, Пампорово, Родопи, фолклор"
+    "h1": "Shiroka Laka — architectural reserve near Pamporovo",
+    "seoTitle": "Shiroka Laka from Pamporovo | 16 km, what to see",
+    "seoDescription": "Day trip to Shiroka Laka from Pamporovo — 20 min by car. Villa base on Raykovski Livadi.",
+    "seoKeywords": "Shiroka Laka, Rhodope village, Pamporovo day trip",
+    "sections": [
+      {
+        "heading": "What to see",
+        "paragraphs": [
+          "Walk the cobbled streets, visit the ethnographic museum, and time your visit for folk events if possible."
+        ]
+      }
+    ],
+    "eyebrow": "Landmarks",
+    "intro": "16 km from Pamporovo — Revival houses, the bagpipe school, and the annual kukeri festival. A must-see in the Rhodopes."
   },
   "eco-pateki": {
-    "h1": "Еко пътеки около Пампорово",
-    "seoTitle": "Еко пътеки Пампорово | Каньон, езера, маршрути 2026",
-    "seoDescription": "Еко пътеки от Пампорово: водопади, езера, семейни маршрути. База за нощувка — вила с кухня и BBQ от 110 €/нощ.",
-    "seoKeywords": "еко пътеки Пампорово, hiking Родопи, водопади"
+    "h1": "Eco trails around Pamporovo",
+    "seoTitle": "Eco trails Pamporovo | Hiking routes, Smolyan lakes",
+    "seoDescription": "Best eco trails near Pamporovo: canyon, lakes, Nevyastata. Summer villa rental from €110/night.",
+    "seoKeywords": "eco trails Pamporovo, hiking Rhodope, mountain walks Bulgaria",
+    "sections": [
+      {
+        "heading": "Where to start",
+        "paragraphs": [
+          "Smolyan lakes, Canyon of Waterfalls, and Orpheus Rocks are popular day hikes. Ask at the villa for current trail conditions."
+        ]
+      }
+    ],
+    "eyebrow": "Eco · Rhodopes",
+    "intro": "Marked routes for hiking — from easy family walks to full-day treks with panoramas, lakes, and Rhodope forests."
   },
   "kak-da-stignem": {
-    "h1": "Как да стигна до Пампорово",
-    "seoTitle": "Как да стигна до Пампорово | От София, Пловдив, карта",
-    "seoDescription": "Маршрут до Пампорово с кола: София, Пловдив, Смолян. Адрес на Pamporovo Villa — Райковски ливади, GPS координати.",
-    "seoKeywords": "как да стигна Пампорово, път София Пампорово, маршрут"
+    "h1": "How to get to Pamporovo",
+    "seoTitle": "How to get to Pamporovo | From Sofia, Plovdiv, Burgas",
+    "seoDescription": "Directions to Pamporovo: ~240 km from Sofia, ~85 km from Plovdiv. Villa address: Raykovski Livadi.",
+    "seoKeywords": "how to get to Pamporovo, drive Sofia Pamporovo, Pamporovo directions",
+    "sections": [
+      {
+        "heading": "By car",
+        "paragraphs": [
+          "From Sofia via Trakia motorway and Smolyan — about 3–3.5 hours. From Plovdiv — about 1.5 hours. Winter: snow chains may be required on the final ascent.",
+          "GPS directions to the villas: Raykovski Livadi, Pamporovo Resort — Google Maps “Pamporovo Villa”."
+        ]
+      }
+    ],
+    "eyebrow": "Travel · practical",
+    "intro": "Driving from Sofia, Plovdiv, Burgas, or abroad — distances, roads, and tips for winter driving."
   },
   "vila-za-dvoika": {
-    "h1": "Вила за двама в Пампорово",
-    "seoTitle": "Вила за двама Пампорово | Романтична почивка, камина",
-    "seoDescription": "Наемете вила за двама в Пампорово — частен дом, камина, BBQ. Pamporovo Villa — от 110 €/нощ за цяла вила.",
-    "seoKeywords": "вила двама Пампорово, романтична почивка, вила двойка"
+    "h1": "Villa for two in Pamporovo",
+    "seoTitle": "Villa for two Pamporovo | Romantic chalet rental",
+    "seoDescription": "Rent a villa for two in Pamporovo — private chalet, fireplace, BBQ. Pamporovo Villa from €110/night.",
+    "seoKeywords": "villa for two Pamporovo, romantic getaway Bulgaria, couples chalet",
+    "sections": [
+      {
+        "heading": "Why a villa for two",
+        "paragraphs": [
+          "You still get the full house — living room, fireplace, terrace — often for little more than a hotel suite. Book Villa 1 or Villa 2 for the cosiest feel."
+        ]
+      }
+    ],
+    "eyebrow": "Couples · rental",
+    "intro": "A whole private chalet for two — fireplace, mountain views, and no shared hotel corridors. Romantic winter or summer break."
   },
   "vila-za-grupa": {
-    "h1": "Вила за 6 души в Пампорово",
-    "seoTitle": "Вила за 6 души Пампорово | Група, цяла къща",
-    "seoDescription": "Наем на вила за 6 души в Пампорово — Pamporovo Villa, 2 спални, BBQ, от 110 €/нощ. Идеално за група приятели.",
-    "seoKeywords": "вила 6 души Пампорово, група вила, къща приятели"
+    "h1": "Villa for a group of up to 6 in Pamporovo",
+    "seoTitle": "Villa for 6 people Pamporovo | Group chalet rental",
+    "seoDescription": "Whole villa for up to 6 guests in Pamporovo — friends ski trip or summer hiking. Pamporovo Villa.",
+    "seoKeywords": "villa for 6 Pamporovo, group rental, friends chalet Bulgaria",
+    "sections": [
+      {
+        "heading": "For groups of 4–6",
+        "paragraphs": [
+          "One villa fits up to 6 guests comfortably. For 7–18 people book 2–3 villas at the same address — contact us for combinations."
+        ]
+      }
+    ],
+    "eyebrow": "Groups · rental",
+    "intro": "Rent a whole villa for friends — 2 bedrooms, sofa beds, BBQ, and parking for one car at the door."
   },
   "naem-lqto": {
-    "h1": "Лятен наем на вила в Пампорово",
-    "seoTitle": "Лятен наем вила Пампорово | От 110 €/нощ",
-    "seoDescription": "Наемете вила лятом в Пампорово — еко маршрути, BBQ, от 110 €/нощ. Pamporovo Villa на Райковски ливади.",
-    "seoKeywords": "лятен наем вила, вила лято Пампорово, планинска вила лято"
+    "h1": "Summer villa rental in Pamporovo",
+    "seoTitle": "Summer villa rental Pamporovo | From €110/night",
+    "seoDescription": "Rent a villa in Pamporovo for summer — eco tourism, Rhodope mountains. Pamporovo Villa official rental.",
+    "seoKeywords": "summer villa Pamporovo, mountain rental summer, Rhodope holiday",
+    "sections": [
+      {
+        "heading": "Summer at the villa",
+        "paragraphs": [
+          "Long bright evenings on the BBQ terrace, day trips to caves and villages, and no need for hotel meal times."
+        ]
+      }
+    ],
+    "eyebrow": "Summer · rental",
+    "intro": "Mountain summer from €110/night — cool air, eco trails, BBQ evenings, and a full kitchen for family holidays."
   },
   "rajkovski-livadi": {
-    "h1": "Райковски ливади — наем на вила",
-    "seoTitle": "Райковски ливади наем | Вили Пампорово — Pamporovo Villa",
-    "seoDescription": "Наем на вила на Райковски ливади, Пампорово — 3 частни вили, 2 km от курорта, камина, BBQ. Резервация онлайн.",
-    "seoKeywords": "Райковски ливади, наем вила, Pamporovo Villa адрес"
+    "h1": "Raykovski Livadi — where Pamporovo Villa is",
+    "seoTitle": "Raykovski Livadi Pamporovo | Villa rental location",
+    "seoDescription": "Villas on Raykovski Livadi, Pamporovo — 2 km from resort centre, 3 private chalets. Pamporovo Villa.",
+    "seoKeywords": "Raykovski Livadi, Pamporovo villas, where to stay Pamporovo",
+    "sections": [
+      {
+        "heading": "The location",
+        "paragraphs": [
+          "Raykovski Livadi is a residential area in the pines — peaceful at night, 5–7 minutes to lifts by car. All three Pamporovo Villa chalets are here."
+        ]
+      }
+    ],
+    "eyebrow": "Location · Raykovski Livadi",
+    "intro": "Quiet pine-forest area 2 km from Pamporovo centre — three private villas with parking, fireplace, and quick access to pistes."
   },
   "naem-ot-110-evro": {
-    "h1": "Наем на вила от 110 €/нощ в Пампорово",
-    "seoTitle": "Вила от 110 € Пампорово | Цени, сезони, резервация",
-    "seoDescription": "Наем на вила в Пампорово от 110 €/нощ — цяла вила до 6 гости. Официални цени Pamporovo Villa.",
-    "seoKeywords": "вила 110 евро, евтина вила Пампорово, цена наем"
+    "h1": "Villa rental in Pamporovo from €110/night",
+    "seoTitle": "Villa from €110/night Pamporovo | Whole chalet prices",
+    "seoDescription": "Rent a whole villa in Pamporovo from €110/night — up to 6 guests, fireplace, BBQ. Pamporovo Villa.",
+    "seoKeywords": "cheap villa Pamporovo, villa from 110 euro, Pamporovo prices",
+    "sections": [
+      {
+        "heading": "What the price includes",
+        "paragraphs": [
+          "The entire villa, Wi‑Fi, parking, full kitchen. Firewood for the fireplace — €10 per bag on request."
+        ]
+      }
+    ],
+    "eyebrow": "Prices · rental",
+    "intro": "Transparent pricing — whole villa for up to 6 guests, summer from €110/night, winter from €120/night. No per-person hotel math."
   },
   "semeen-otpusk": {
-    "h1": "Семейна ски ваканция в Пампорово",
-    "seoTitle": "Семейна ски ваканция Пампорово | Вила с деца",
-    "seoDescription": "Семейна ски почивка в Пампорово — вила с 2 спални, кухня, камина, до 6 гости. Оферти и резервация — Pamporovo Villa.",
-    "seoKeywords": "семейна ски ваканция, вила с деца Пампорово, семейство Пампорово"
+    "h1": "Family ski holiday in Pamporovo",
+    "seoTitle": "Family ski holiday Pamporovo | Villa for families",
+    "seoDescription": "Family ski trip Pamporovo — villa with 2 bedrooms, up to 6 guests, near pistes. Pamporovo Villa.",
+    "seoKeywords": "family ski Pamporovo, family villa Bulgaria, ski with children",
+    "sections": [
+      {
+        "heading": "Why families choose a villa",
+        "paragraphs": [
+          "Cook breakfast before the lifts, store ski gear in the hall, afternoon nap for toddlers — a villa beats two hotel rooms for many families.",
+          "Ski Run No. 6 is perfect for beginners—it's 2 km from the villas."
+        ]
+      }
+    ],
+    "eyebrow": "Family · ski",
+    "intro": "Green runs for beginners, gentle Tourist Run, and a private villa with kitchen and fireplace for family routines."
   },
   "praznici": {
-    "h1": "Коледа и Нова година в Пампорово — вила с камина",
-    "seoTitle": "Коледа и Нова година Пампорово 2026 | Наем вила с камина",
-    "seoDescription": "Празнична почивка в Пампорово — наем на цяла вила с камина, BBQ, до 6 гости. Коледа, Нова година, Великден. Pamporovo Villa от 120 €/нощ.",
-    "seoKeywords": "Коледа Пампорово, Нова година вила, празници Пампорово, вила камина"
+    "h1": "Christmas and New Year in Pamporovo — villa with fireplace",
+    "seoTitle": "Christmas & New Year Pamporovo 2026 | Villa with fireplace",
+    "seoDescription": "Holiday stay in Pamporovo — whole villa with fireplace, BBQ, up to 6 guests. Pamporovo Villa from €120/night.",
+    "seoKeywords": "Christmas Pamporovo, New Year villa, holiday Pamporovo, fireplace chalet",
+    "sections": [
+      {
+        "heading": "Why a villa for the holidays",
+        "paragraphs": [
+          "Hotels are crowded and noisy over the holidays. A private villa gives you a fireplace, your own dining table, and space for children and friends.",
+          "Pamporovo Villa offers 3 villas in Raykovski Livadi — 2 km from the resort, close enough to the slopes, yet quiet enough for families."
+        ],
+        "bullets": [
+          "Fireplace and BBQ",
+          "Up to 6 guests per villa",
+          "Reservation: pamporovovilla.com/#booking"
+        ]
+      }
+    ],
+    "eyebrow": "Holidays · Pamporovo",
+    "intro": "Holiday magic in the mountains — snow, fireplace, and a whole villa for your company only. Book early for Christmas, New Year, and Easter."
   },
   "team-building": {
-    "h1": "Team building в Пампорово — вили за екипи до 18 души",
-    "seoTitle": "Team building Пампорово | Вили за групи до 18 души",
-    "seoDescription": "Корпоративен team building в Пампорово — 3 вили, до 18 гости общо, BBQ, камина, паркинг. Зима: ски. Лято: еко маршрути. Pamporovo Villa.",
-    "seoKeywords": "team building Пампорово, корпоративна почивка, вила за група"
+    "h1": "Team building in Pamporovo — villas for teams up to 18",
+    "seoTitle": "Team building Pamporovo | Villas for groups up to 18",
+    "seoDescription": "Corporate team building Pamporovo — 3 villas, up to 18 guests, BBQ, fireplace, parking. Pamporovo Villa.",
+    "seoKeywords": "team building Pamporovo, corporate retreat Bulgaria, group villa",
+    "sections": [
+      {
+        "heading": "How it works for teams",
+        "paragraphs": [
+          "Each villa sleeps up to 6 — combine 2–3 for one department or the whole team. Winter: skiing. Summer: eco trails and outdoor sessions.",
+          "Winter: skiing on 37+ km of slopes. Summer: nature trails, caves, and team activities in the region."
+        ]
+      }
+    ],
+    "eyebrow": "Corporate · groups",
+    "intro": "Three standalone villas at one address — ideal for corporate retreat, ski weekend, or summer mountain meeting. Book 1, 2, or all 3."
   },
   "dalga-pochivka": {
-    "h1": "Дълъг наем в Пампорово — 7+ нощи в частна вила",
-    "seoTitle": "Дълъг наем вила Пампорово | 7+ нощи, цяла вила",
-    "seoDescription": "Наем на вила в Пампорово за 7+ нощи — цяла вила до 6 гости, камина, BBQ. Свържете се за индивидуална оферта — Pamporovo Villa.",
-    "seoKeywords": "дълъг наем Пампорово, вила седмица, месечен наем планина"
+    "h1": "Long-term villa rental in Pamporovo — 7+ nights",
+    "seoTitle": "Long villa rental Pamporovo | 7+ nights, whole chalet",
+    "seoDescription": "Rent a villa in Pamporovo for 7+ nights — whole chalet up to 6 guests. Contact for a custom quote.",
+    "seoKeywords": "long stay Pamporovo, weekly villa rental, mountain remote work",
+    "sections": [
+      {
+        "heading": "Who it suits",
+        "paragraphs": [
+          "Families, remote workers, and groups wanting a base for a longer period. Contact us for stays over 7 nights: +359 879 501 660.",
+          "For stays of more than 7 nights—please contact us for a personalized offer: +359 879 501 660 or pamporovovilla@gmail.com."
+        ]
+      }
+    ],
+    "eyebrow": "Rental · long stay",
+    "intro": "A week or more in the mountains is more economical in a whole villa — kitchen, space, and calm without hotel fees."
   },
   "oferti": {
-    "h1": "Оферти за наем на вила в Пампорово",
-    "seoTitle": "Оферти вила Пампорово 2026 | От 110 €/нощ — Pamporovo Villa",
-    "seoDescription": "Официални оферти за наем на вила в Пампорово — лятни и зимни цени, цяла вила, до 6 гости. Резервация онлайн на pamporovovilla.com.",
-    "seoKeywords": "оферти Пампорово, промоция вила, цени наем вила"
+    "h1": "Villa rental offers in Pamporovo",
+    "seoTitle": "Villa offers Pamporovo 2026 | From €110/night — Pamporovo Villa",
+    "seoDescription": "Official villa offers in Pamporovo — summer and winter rates, whole villa, up to 6 guests. Book at pamporovovilla.com.",
+    "seoKeywords": "Pamporovo offers, villa promotion, rental prices Pamporovo",
+    "sections": [
+      {
+        "heading": "Price guide",
+        "paragraphs": [
+          "Summer from €110/night, winter from €120/night for the whole villa. Peak holidays — on request.",
+          "Included in the price: the entire villa, up to 6 guests, a fireplace, a BBQ, parking, and Wi-Fi."
+        ],
+        "bullets": [
+          "Book: /#booking",
+          "Official page: /rent",
+          "Phone: +359 879 501 660"
+        ]
+      }
+    ],
+    "eyebrow": "Offers · Pamporovo Villa",
+    "intro": "Current prices and seasonal terms for the three villas on Raykovski Livadi. Summer from €110/night, winter from €120/night — whole villa up to 6 guests."
   },
   "liftove": {
-    "h1": "Лифтове в Пампорово — 6 съоружения до Снежанка",
-    "seoTitle": "Лифтове Пампорово 2026 | Капацитет, маршрути, карта",
-    "seoDescription": "Всички лифтове в Пампорово: Стойките, Студенец, Малина, Смолянски езера. Капацитет и дължина. База: вила 2 km от центъра.",
-    "seoKeywords": "лифтове Пампорово, ски лифт Снежанка, капацитет Пампорово"
+    "h1": "Lifts in Pamporovo — 6 lifts to Snezhanka",
+    "seoTitle": "Pamporovo lifts 2026 | Capacity, routes, map",
+    "seoDescription": "All lifts in Pamporovo: Stoykite, Studenets, Malina, Smolyan lakes. Villa base 2 km from centre.",
+    "seoKeywords": "Pamporovo lifts, ski lift Snezhanka, lift capacity Pamporovo",
+    "sections": [
+      {
+        "heading": "Lift tips",
+        "paragraphs": [
+          "The longest lift is Stoykite to Snezhanka — 2,992 m, 2,400/h capacity. Studenets gets busy in the morning — start from Malina if you are staying south.",
+          "After a day on the slopes—a cottage with a fireplace just 2 km away, with no lines at the front desk."
+        ]
+      }
+    ],
+    "eyebrow": "Ski · infrastructure",
+    "intro": "Six lifts connect the resort to Snezhanka peak (1,926 m). Combined capacity over 13,000 skiers per hour — plan your day on the mountain."
   },
   "rozhen": {
-    "h1": "НАО „Рожен“ — обсерватория близо до Пампорово",
-    "seoTitle": "Рожен обсерватория от Пампорово | 18 km, посещения",
-    "seoDescription": "Как да стигнете до НАО Рожен от Пампорово — 25 min с кола, телескоп 2 m, Роженски събор. База: Pamporovo Villa.",
-    "seoKeywords": "Рожен обсерватория, НАО Рожен, Пампорово екскурсии"
+    "h1": "Rozhen Observatory — near Pamporovo",
+    "seoTitle": "Rozhen Observatory from Pamporovo | 18 km, visits",
+    "seoDescription": "How to visit Rozhen Observatory from Pamporovo — 25 min drive, 2 m telescope. Base: Pamporovo Villa.",
+    "seoKeywords": "Rozhen Observatory, NAO Rozhen, Pamporovo excursions",
+    "sections": [
+      {
+        "heading": "Practical",
+        "paragraphs": [
+          "Combine with Rozhen meadows and lunch in the area. Evening back at the villa fireplace."
+        ]
+      }
+    ],
+    "eyebrow": "Landmarks",
+    "intro": "18 km from Pamporovo — the largest astronomical observatory on the Balkans at 1,750 m. Day visits and night observations by appointment."
   },
   "chudnite-mostove": {
-    "h1": "Чудните мостове — еднодневна екскурсия от Пампорово",
-    "seoTitle": "Чудните мостове от Пампорово | 42 km, маршрут",
-    "seoDescription": "Екскурсия до Чудните мостове от Пампорово — 1 h с кола, пътека под арките. Наем на вила като база — Pamporovo Villa.",
-    "seoKeywords": "Чудните мостове, Родопи, екскурсия Пампорово"
+    "h1": "Wonderful Bridges — day trip from Pamporovo",
+    "seoTitle": "Wonderful Bridges from Pamporovo | 42 km, route",
+    "seoDescription": "Trip to Wonderful Bridges from Pamporovo — 1 h drive, trail under the arches. Villa base — Pamporovo Villa.",
+    "seoKeywords": "Wonderful Bridges Bulgaria, Rhodope landmarks, Pamporovo day trip",
+    "sections": [
+      {
+        "heading": "Tip",
+        "paragraphs": [
+          "Start early — parking fills in August. Good grip shoes for the trail under the bridges."
+        ]
+      }
+    ],
+    "eyebrow": "Nature · Rhodopes",
+    "intro": "Giant marble arches 42 km away — one of Bulgaria's 100 national tourist sites. Perfect for a summer or autumn mountain break."
   },
   "dyavolskoto-garlo": {
-    "h1": "Дяволското гърло — 42 m подземен водопад",
-    "seoTitle": "Дяволското гърло от Пампорово | Разстояние, тур",
-    "seoDescription": "Екскурсия до Дяволското гърло от Пампорово — 1 h 20 min, 301 стъпала, Бучащата зала. База: вила Pamporovo Villa.",
-    "seoKeywords": "Дяволското гърло, Триград, пещери Родопи"
+    "h1": "Devil's Throat Cave — 42 m underground waterfall",
+    "seoTitle": "Devil's Throat Cave from Pamporovo | Distance, tour",
+    "seoDescription": "Trip to Devil's Throat from Pamporovo — 1 h 20 min, 301 steps. Villa base — Pamporovo Villa.",
+    "seoKeywords": "Devil's Throat cave, Trigrad, Rhodope caves",
+    "sections": [
+      {
+        "heading": "Combine with",
+        "paragraphs": [
+          "Trigrad Gorge and Trigrad village — full day out, fireplace at the villa in the evening."
+        ]
+      }
+    ],
+    "eyebrow": "Caves · legends",
+    "intro": "55 km from Pamporovo — the highest underground waterfall in the Balkans. The Orpheus legend and the Roaring Hall."
   },
   "trigradsko-zhdrelo": {
-    "h1": "Триградското ждрело — драматичен каньон в Родопите",
-    "seoTitle": "Триградско ждрело от Пампорово | Маршрут, съвети",
-    "seoDescription": "Как да стигнете до Триградското ждрело от Пампорово — 1 h 15 min, комбинация с Дяволското гърло. Pamporovo Villa.",
-    "seoKeywords": "Триградско ждрело, Триград, каньон Родопи"
+    "h1": "Trigrad Gorge — dramatic canyon in the Rhodopes",
+    "seoTitle": "Trigrad Gorge from Pamporovo | Route, tips",
+    "seoDescription": "How to reach Trigrad Gorge from Pamporovo — combine with Devil's Throat. Pamporovo Villa.",
+    "seoKeywords": "Trigrad Gorge, Trigrad, Rhodope canyon",
+    "sections": [
+      {
+        "heading": "Driving",
+        "paragraphs": [
+          "Mountain road — drive carefully. Best in the morning before traffic builds."
+        ]
+      }
+    ],
+    "eyebrow": "Canyon · Trigrad",
+    "intro": "A road between cliffs up to 250 m — one of Bulgaria's most photogenic routes, 53 km from Pamporovo."
   },
   "uhlovitsa": {
-    "h1": "Пещера Ухловица — каменни водопади близо до Пампорово",
-    "seoTitle": "Пещера Ухловица от Пампорово | 32 km, обиколка",
-    "seoDescription": "Екскурсия до Ухловица от Пампорово — 45 min с кола, 30 min тур. Близо до Агушевите конаци. Pamporovo Villa.",
-    "seoKeywords": "Ухловица, пещера Могилица, пещери Пампорово"
+    "h1": "Uhlovitsa Cave — stone waterfalls near Pamporovo",
+    "seoTitle": "Uhlovitsa Cave from Pamporovo | 32 km, tour",
+    "seoDescription": "Trip to Uhlovitsa from Pamporovo — 45 min drive, 30 min tour. Near Agushevi Konatsi. Pamporovo Villa.",
+    "seoKeywords": "Uhlovitsa cave, Mogilitsa, caves Pamporovo",
+    "sections": [
+      {
+        "heading": "Preparation",
+        "paragraphs": [
+          "Temperature ~8°C — light jacket. Comfortable shoes for the forest path from parking."
+        ]
+      }
+    ],
+    "eyebrow": "Caves",
+    "intro": "32 km — one of Bulgaria's most beautiful caves with calcite cascades and coralites. 30 min walk from the car park."
   },
   "kanion-vodopadi": {
-    "h1": "Каньонът на водопадите — 46 водопада близо до Пампорово",
-    "seoTitle": "Каньонът на водопадите от Пампорово | Еко маршрут",
-    "seoDescription": "Еко пътека Каньон на водопадите от Пампорово — 6 km маршрут, 46 водопада. Лятна база: вила Pamporovo Villa.",
-    "seoKeywords": "Каньон водопади, еко пътека Смолян, Родопи"
+    "h1": "Canyon of Waterfalls — 46 waterfalls near Pamporovo",
+    "seoTitle": "Canyon of Waterfalls from Pamporovo | Eco trail",
+    "seoDescription": "Eco trail Canyon of Waterfalls from Pamporovo — 6 km loop, 46 waterfalls. Summer villa base.",
+    "seoKeywords": "Canyon of Waterfalls, eco trail Smolyan, Rhodope hiking",
+    "sections": [
+      {
+        "heading": "The route",
+        "paragraphs": [
+          "About 4 hours for the 6 km loop. Take water and start in the morning."
+        ]
+      }
+    ],
+    "eyebrow": "Eco · Smolyan",
+    "intro": "15 km from Smolyan — the most impressive eco trail in the Rhodopes with 68 m Orpheus waterfall and panorama at 1,800 m."
   },
   "smolyanski-ezera": {
-    "h1": "Смолянските езера — лека разходка от Пампорово",
-    "seoTitle": "Смолянски езера от Пампорово | Маршрут, съвети",
-    "seoDescription": "Еко разходка до Смолянските езера от Пампорово — лек маршрут, семейства, риболов. Наем на вила — Pamporovo Villa.",
-    "seoKeywords": "Смолянски езера, еко Пампорово, планински езера"
+    "h1": "Smolyan Lakes — easy walk from Pamporovo",
+    "seoTitle": "Smolyan Lakes from Pamporovo | Route, tips",
+    "seoDescription": "Easy hike to Smolyan Lakes from Pamporovo — family friendly. Villa rental — Pamporovo Villa.",
+    "seoKeywords": "Smolyan Lakes, eco Pamporovo, mountain lakes Bulgaria",
+    "sections": [
+      {
+        "heading": "For families",
+        "paragraphs": [
+          "Ideal for children — short route and picnic spots between the lakes."
+        ]
+      }
+    ],
+    "eyebrow": "Eco · lakes",
+    "intro": "The “emerald eyes of the Rhodopes” — natural lakes below Snezhanka. Family route, picnic spots, and lift to the summit."
   },
   "nevyastata": {
-    "h1": "Еко пътека „Невястата“ — панорама над Смолян",
-    "seoTitle": "Невястата еко пътека от Пампорово | Панорама, тролей",
-    "seoDescription": "Еко пътека Невястата от Пампорово — 900 m маршрут, панорама, тролей. Лятна почивка — Pamporovo Villa.",
-    "seoKeywords": "Невястата, еко пътека Смолян, Родопи"
+    "h1": "Nevyastata eco trail — panorama over Smolyan",
+    "seoTitle": "Nevyastata trail from Pamporovo | Panorama, trolley",
+    "seoDescription": "Nevyastata eco trail from Pamporovo — 900 m route, panorama. Summer holiday — Pamporovo Villa.",
+    "seoKeywords": "Nevyastata, eco trail Smolyan, Rhodope panorama",
+    "sections": [
+      {
+        "heading": "Tip",
+        "paragraphs": [
+          "Combine with lunch in Smolyan and a visit to the planetarium."
+        ]
+      }
+    ],
+    "eyebrow": "Eco · panorama",
+    "intro": "Short trail to the Bride rock with alpine trolley and legend — 12 km from Smolyan, suitable for all ages."
   },
   "orpheus-rocks": {
-    "h1": "Орфеевите скали — маршрут от връх Снежанка",
-    "seoTitle": "Орфееви скали от Пампорово | Маршрут от Снежанка",
-    "seoDescription": "Планински маршрут Орфееви скали от връх Снежанка — панорама, Иглите. База: Pamporovo Villa.",
-    "seoKeywords": "Орфееви скали, Снежанка, планински маршрут"
+    "h1": "Orpheus Rocks — trail from Snezhanka peak",
+    "seoTitle": "Orpheus Rocks from Pamporovo | Trail from Snezhanka",
+    "seoDescription": "Hiking Orpheus Rocks from Snezhanka peak — panorama, Iglete peak. Base: Pamporovo Villa.",
+    "seoKeywords": "Orpheus Rocks, Snezhanka, hiking Pamporovo",
+    "sections": [
+      {
+        "heading": "When to go",
+        "paragraphs": [
+          "Best July–August — blueberries on the path and stable weather on the ridge."
+        ]
+      }
+    ],
+    "eyebrow": "Eco · Snezhanka",
+    "intro": "Rhyolite rock formations with views over Smolyan Lakes — marked trail from the summit, ~4 hours easy/moderate."
   },
   "momchilovtsi": {
-    "h1": "Момчиловци — село на дълголетието близо до Пампорово",
-    "seoTitle": "Момчиловци от Пампорово | 25 km, село, механи",
-    "seoDescription": "Екскурсия до Момчиловци от Пампорово — 30 min, дълголетие, кисело мляко. Наем вила — Pamporovo Villa.",
-    "seoKeywords": "Момчиловци, Родопи села, кисело мляко"
+    "h1": "Momchilovtsi — village of longevity near Pamporovo",
+    "seoTitle": "Momchilovtsi from Pamporovo | 25 km, village, mehanas",
+    "seoDescription": "Day trip to Momchilovtsi from Pamporovo — 30 min, longevity village. Villa rental — Pamporovo Villa.",
+    "seoKeywords": "Momchilovtsi, Rhodope villages, Bulgarian yoghurt",
+    "sections": [
+      {
+        "heading": "What to try",
+        "paragraphs": [
+          "Homemade yoghurt and Rhodope dishes in a mehana — perfect lunch after a walk."
+        ]
+      }
+    ],
+    "eyebrow": "Villages · Rhodopes",
+    "intro": "25 km — famous for yoghurt, panoramas, and authentic mehanas. Yogurt festival each August."
   },
   "gela": {
-    "h1": "Гела — селото на Орфей в Родопите",
-    "seoTitle": "Гела от Пампорово | Орфей, гайдарски събор",
-    "seoDescription": "Екскурсия до с. Гела от Пампорово — 30 min, Орфей, гайдарски събор. Наем вила — Pamporovo Villa.",
-    "seoKeywords": "Гела, Орфей, Родопи фолклор"
+    "h1": "Gela — Orpheus village in the Rhodopes",
+    "seoTitle": "Gela from Pamporovo | Orpheus, bagpipe festival",
+    "seoDescription": "Trip to Gela from Pamporovo — 30 min, Orpheus legend, bagpipe festival. Villa rental.",
+    "seoKeywords": "Gela village, Orpheus Rhodopes, bagpipe festival",
+    "sections": [
+      {
+        "heading": "Event",
+        "paragraphs": [
+          "August — hundreds of bagpipers on the meadow. Book a villa early for this period."
+        ]
+      }
+    ],
+    "eyebrow": "Villages · Orpheus",
+    "intro": "22 km — one of the oldest villages, birthplace of the Orpheus legend. International bagpipe festival first Sunday of August."
   },
   "smolyan": {
-    "h1": "Смолян — планетариум и музеи от Пампорово",
-    "seoTitle": "Смолян от Пампорово | Планетариум, музеи, 20 min",
-    "seoDescription": "Екскурсия до Смолян от Пампорово — планетариум, музеи, Райково. База: Pamporovo Villa от 110 €/нощ.",
-    "seoKeywords": "Смолян, планетариум, музей Родопи"
+    "h1": "Smolyan — planetarium and museums from Pamporovo",
+    "seoTitle": "Smolyan from Pamporovo | Planetarium, museums, 20 min",
+    "seoDescription": "Day trip to Smolyan from Pamporovo — planetarium, museums. Base: Pamporovo Villa from €110/night.",
+    "seoKeywords": "Smolyan, planetarium Bulgaria, Rhodope museum",
+    "sections": [
+      {
+        "heading": "For children",
+        "paragraphs": [
+          "Planetarium is a must for kids — book a show time in advance."
+        ]
+      }
+    ],
+    "eyebrow": "Town · culture",
+    "intro": "15 km — Bulgaria's largest planetarium, history museum, and old quarters Raykovo and Ustovo."
   },
   "nochno-karane": {
-    "h1": "Нощно каране в Пампорово — писта „Стената“",
-    "seoTitle": "Нощно каране Пампорово 2026 | Стената, график",
-    "seoDescription": "Нощно каране на писта Стената в Пампорово — график, ски карта, настаняване 2 km — Pamporovo Villa.",
-    "seoKeywords": "нощно каране Пампорово, Стената нощ, night skiing"
+    "h1": "Night skiing in Pamporovo — Stenata run",
+    "seoTitle": "Night skiing Pamporovo 2026 | Stenata, schedule",
+    "seoDescription": "Night skiing on Stenata Pamporovo — schedule, ski pass, villa 2 km away — Pamporovo Villa.",
+    "seoKeywords": "night skiing Pamporovo, Stenata night, Pamporovo evening ski",
+    "sections": [
+      {
+        "heading": "After the slopes",
+        "paragraphs": [
+          "Dinner at the villa fireplace — 2 km from the resort, no hotel noise after night skiing."
+        ]
+      }
+    ],
+    "eyebrow": "Ski · night",
+    "intro": "The only lit run for night skiing — usually 17:30–22:00 in season. The resort icon under floodlights."
   },
   "stenata": {
-    "h1": "Писта „Стената“ — черна писта и нощно каране",
-    "seoTitle": "Стената Пампорово | Черна писта, нощно каране",
-    "seoDescription": "Писта Стената Пампорово — 1258 m, black, night skiing. Вила 2 km — Pamporovo Villa.",
-    "seoKeywords": "Стената, черна писта Пампорово, нощно каране"
+    "h1": "Stenata run — black piste and night skiing",
+    "seoTitle": "Stenata Pamporovo | Black run, night skiing",
+    "seoDescription": "Stenata run Pamporovo — 1,258 m, black, night skiing. Villa 2 km — Pamporovo Villa.",
+    "seoKeywords": "Stenata Pamporovo, black run Bulgaria, night skiing",
+    "sections": [
+      {
+        "heading": "Who it is for",
+        "paragraphs": [
+          "Advanced skiers only — beginners should use green and blue runs on /pamporovo/pisti."
+        ]
+      }
+    ],
+    "eyebrow": "Ski · black",
+    "intro": "1,258 m black run — World Cup host and one of Bulgaria's most photogenic descents. Regular night skiing."
   },
   "vruh-snezhanka": {
-    "h1": "Връх Снежанка — 1926 m, най-високата точка на пистите",
-    "seoTitle": "Връх Снежанка Пампорово | 1926 m, лифт, панорама",
-    "seoDescription": "Връх Снежанка Пампорово — 1926 m, лифт Стойките, черни писти. Наем вила — Pamporovo Villa.",
-    "seoKeywords": "Снежанка, връх Пампорово, ски зона"
+    "h1": "Snezhanka peak — 1,926 m, highest point on the runs",
+    "seoTitle": "Snezhanka peak Pamporovo | 1,926 m, lift, panorama",
+    "seoDescription": "Snezhanka peak Pamporovo — 1,926 m, Stoykite lift, black runs. Villa rental — Pamporovo Villa.",
+    "seoKeywords": "Snezhanka peak, Pamporovo summit, ski zone Bulgaria",
+    "sections": [
+      {
+        "heading": "Tip",
+        "paragraphs": [
+          "At sunrise the area is quieter — coffee at the top and descent via Malina."
+        ]
+      }
+    ],
+    "eyebrow": "Ski · summit",
+    "intro": "The highest point of the ski area — 1,926 m, panorama over the Rhodopes and lifts from all directions."
   },
   "ski-karti": {
-    "h1": "Ски карти и лифтове в Пампорово — практичен гид",
-    "seoTitle": "Ски карти Пампорово 2026 | Цени, къде да купите",
-    "seoDescription": "Ски карта Пампорово — къде да купите, дневни и сезонни карти, лифтове. База вила — Pamporovo Villa.",
-    "seoKeywords": "ски карта Пампорово, lift pass, цени лифт"
+    "h1": "Ski passes and lifts in Pamporovo — practical guide",
+    "seoTitle": "Ski pass Pamporovo 2026 | Prices, where to buy",
+    "seoDescription": "Pamporovo ski pass — where to buy, day and season passes, lifts. Villa base — Pamporovo Villa.",
+    "seoKeywords": "Pamporovo ski pass, lift ticket, ski card Bulgaria",
+    "sections": [
+      {
+        "heading": "Save money",
+        "paragraphs": [
+          "Renting a whole villa with kitchen reduces accommodation cost — more budget for skiing and restaurants."
+        ]
+      }
+    ],
+    "eyebrow": "Ski · practical",
+    "intro": "Lift passes sold at Studenets and Malina. Check pamporovo.me for current prices and season cards."
   },
   "bunovsko-zhdrelo": {
-    "h1": "Буйновско ждрело — покрай Ягодинската пещера",
-    "seoTitle": "Буйновско ждрело от Пампорово | Ягодинска пещера",
-    "seoDescription": "Буйновско ждрело от Пампорово — 50 km, Ягодинска пещера, еко тур. Наем вила — Pamporovo Villa.",
-    "seoKeywords": "Буйновско ждрело, Ягодинска пещера, ждрела Родопи"
+    "h1": "Buynovo Gorge — on the way to Yagodinska Cave",
+    "seoTitle": "Buynovo Gorge from Pamporovo | Yagodinska Cave",
+    "seoDescription": "Buynovo Gorge from Pamporovo — 50 km, Yagodinska Cave, eco tour. Villa rental — Pamporovo Villa.",
+    "seoKeywords": "Buynovo Gorge, Yagodinska Cave, Rhodope gorges",
+    "sections": [
+      {
+        "heading": "Day plan",
+        "paragraphs": [
+          "Yagodinska Cave + Buynovo Gorge + return to the villa for dinner."
+        ]
+      }
+    ],
+    "eyebrow": "Nature · caves",
+    "intro": "Dramatic gorge on the road to Yagodinska Cave — combine with the cave tour and lunch in the region."
   },
   "chepelare": {
-    "h1": "Чепелare и Пампорово — два курорта, един регион",
-    "seoTitle": "Чепелare vs Пампорово | Ски, разстояние, настаняване",
-    "seoDescription": "Чепелare и Пампорово — сравнение на курортите. Наем вила в Пампорово от 110 € — Pamporovo Villa.",
-    "seoKeywords": "Чепелare, Пампорово, ски България, сравнение"
+    "h1": "Chepelare and Pamporovo — two resorts, one region",
+    "seoTitle": "Chepelare vs Pamporovo | Ski, distance, accommodation",
+    "seoDescription": "Chepelare and Pamporovo — resort comparison. Villa rental in Pamporovo from €110 — Pamporovo Villa.",
+    "seoKeywords": "Chepelare, Pamporovo, ski Bulgaria comparison",
+    "sections": [
+      {
+        "heading": "Where to stay",
+        "paragraphs": [
+          "Both resorts have hotels — but for a group up to 6 a whole villa on Raykovski Livadi is often more comfortable and economical."
+        ]
+      }
+    ],
+    "eyebrow": "Resorts · neighbours",
+    "intro": "Chepelare is 10 km away — smaller ski area, Mechi Chal, quieter resort. Compare with Pamporovo for your stay."
   }
 }

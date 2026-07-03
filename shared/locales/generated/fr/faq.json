@@ -1,1 +1,178 @@
-{}
+{
+  "home": {
+    "book-online": {
+      "question": "Comment réserver une villa en ligne ?",
+      "answer": "Sur pamporovovilla.com, sélectionnez la rubrique « Réservation », choisissez une villa (Villa 1, Villa 2 ou Villa Deluxe), indiquez les dates et remplissez le formulaire. Vous recevrez une confirmation par e-mail. Pour toute question : +359 879 501 660."
+    },
+    "price-per-villa": {
+      "question": "Combien coûte la location d'une villa ?",
+      "answer": "Les prix s'entendent pour la villa entière (jusqu'à 6 personnes), et non par personne. En saison estivale, les tarifs commencent à 110 € par nuit pour les séjours de plus de 5 nuits. En hiver, les tarifs varient entre 120 et 160 € par nuit en fonction du nombre de nuitées. Villa Deluxe fait l'objet d'un léger supplément. Tarifs actuels : rubrique « Tarifs » du site."
+    },
+    "price-includes": {
+      "question": "Qu'est-ce qui est compris dans le prix ?",
+      "answer": "Location de la villa entière, Wi-Fi, parking, taxe de séjour. Bois de chauffage — 10 € le sac, sur demande. Les forfaits de remontées mécaniques et les repas ne sont pas inclus."
+    },
+    "check-in-out": {
+      "question": "Quelles sont les dates d'arrivée et de départ ?",
+      "answer": "Arrivée après 15 h, départ avant 11 h. Le départ tardif est gratuit dans la mesure du possible — veuillez vous renseigner lors de la réservation."
+    },
+    "holiday-pricing": {
+      "question": "Y a-t-il des tarifs différents pendant les fêtes ?",
+      "answer": "Oui — pour Noël, le Nouvel An, Pâques et les vacances de février, des conditions spéciales s'appliquent et un séjour minimum est parfois requis. Contactez-nous ou consultez le calendrier lors de votre réservation."
+    },
+    "min-nights": {
+      "question": "Y a-t-il un nombre minimum de nuitées ?",
+      "answer": "En basse saison, il n'y a souvent pas de durée minimale de séjour. Pendant les périodes de forte affluence (décembre-janvier, vacances de février), un séjour de 3 à 5 nuits peut être exigé. Vous trouverez les règles précises dans le calendrier."
+    },
+    "deluxe-difference": {
+      "question": "En quoi le Villa Deluxe est-il différent ?",
+      "answer": "Même agencement — 2 chambres, 2 salles de bains, une cheminée, un barbecue — mais avec un soin particulier apporté aux détails et à l'ambiance. Le prix est majoré de +10 € par nuit en été et de +20 € par nuit en hiver par rapport aux villas standard."
+    },
+    "max-guests": {
+      "question": "Combien de personnes peuvent dormir dans un chalet ?",
+      "answer": "Jusqu'à 6 personnes par villa. Pour les groupes plus importants, vous pouvez réserver deux villas — contactez-nous pour une combinaison."
+    },
+    "payment": {
+      "question": "Comment régler la réservation ?",
+      "answer": "Les conditions relatives à l'acompte et au paiement du solde vous seront communiquées lors de la confirmation. Nous acceptons les virements bancaires ; les coordonnées bancaires vous seront envoyées par e-mail après votre demande."
+    },
+    "cancel-policy": {
+      "question": "Quelle est la politique en cas de refus ?",
+      "answer": "Les conditions d'annulation sont décrites dans la rubrique « Conditions générales » et dans le contrat fourni lors de la confirmation. Nous vous recommandons de souscrire une assurance voyage pour les réservations hivernales."
+    },
+    "firewood": {
+      "question": "Y a-t-il du bois pour la cheminée ?",
+      "answer": "Oui — 10 € par sac, sur demande avant l'arrivée ou lors de l'enregistrement. Chaque villa dispose d'une cheminée à bois dans le salon."
+    },
+    "pets-home": {
+      "question": "Les animaux de compagnie sont-ils autorisés ?",
+      "answer": "La politique concernant les animaux de compagnie varie selon la saison — veuillez vous renseigner avant de réserver. Les visiteurs non enregistrés ne sont pas admis sur le site."
+    },
+    "distance-home": {
+      "question": "À quelle distance se trouvent les villas de Pamporovo ?",
+      "answer": "À 2 km du centre de la station et des remontées mécaniques — environ 5 à 7 minutes en voiture. Adresse : Raykovski Livadi, station de Pamporovo."
+    },
+    "three-villas": {
+      "question": "Dois-je louer les trois villas ?",
+      "answer": "Non, vous ne louez qu'une seule villa pour votre groupe. Les trois se trouvent à la même adresse, mais ce sont des maisons totalement indépendantes, chacune disposant de sa propre entrée."
+    },
+    "vip-program": {
+      "question": "Y a-t-il une réduction pour les clients fidèles ?",
+      "answer": "Oui — le programme VIP offre une réduction de 10 % après trois séjours au cours d'une même année, ainsi qu'un enregistrement anticipé ou un départ tardif, dans la mesure du possible."
+    },
+    "offers": {
+      "question": "Y a-t-il des promotions et des offres spéciales ?",
+      "answer": "Nous publions des offres saisonnières (par exemple, des vacances de ski en famille, « payez 9 nuits, restez 10 »). Consultez la rubrique « Offres » sur la page d'accueil ou abonnez-vous à la newsletter dans la rubrique « Contact »."
+    }
+  },
+  "pamporovo": {
+    "where-is-pamporovo": {
+      "question": "Où se trouve Pamporovo ?",
+      "answer": "Pamporovo est une station de ski située dans les Rhodopes, dans la région de Smolyan, à environ 1 650 m d'altitude. La grande ville la plus proche est Smolyan (à environ 15 km). Elle se trouve à environ 240 km de Sofia (3 à 3,5 heures en voiture)."
+    },
+    "pistes-length": {
+      "question": "Combien de kilomètres de pistes y a-t-il à Pamporovo ?",
+      "answer": "Le domaine skiable de Pamporovo propose plus de 37 km de pistes balisées de tous niveaux de difficulté, des pistes vertes pour les débutants aux pistes noires pour les experts. La piste « Stenata » est l'emblème de la station et permet de skier en nocturne."
+    },
+    "night-skiing": {
+      "question": "Peut-on skier de nuit à Pamporovo ?",
+      "answer": "Oui. La piste « La Muraille » (n° 2) est éclairée pour permettre la pratique nocturne — généralement de 17 h 30 à 22 h pendant la saison. Consultez les horaires actualisés sur pamporovo.me avant votre visite."
+    },
+    "best-beginner-pistes": {
+      "question": "Quelles pistes conviennent aux skieurs débutants ?",
+      "answer": "La piste n° 6 « Pamporovo (Touristique) » est la plus longue et la plus douce (3,3 km) — idéale pour les premières descentes. Les pistes vertes (n° 1A) et les pistes bleues n° 7, n° 8 et n° 10 constituent également un bon choix pour les familles."
+    },
+    "lift-tickets": {
+      "question": "Combien coûtent les forfaits de remontées mécaniques à Pamporovo ?",
+      "answer": "Les tarifs des forfaits de remontées mécaniques sont mis à jour chaque saison. Les tarifs actuels des forfaits journaliers, demi-journaliers et hebdomadaires sont publiés par les opérateurs officiels sur pamporovo.me. Réservez votre hébergement séparément : les forfaits de remontées mécaniques ne sont pas inclus dans le loyer de la villa."
+    },
+    "when-ski-season": {
+      "question": "Quand a lieu la saison de ski à Pamporovo ?",
+      "answer": "En général, de décembre à mars-avril, en fonction de l'enneigement. Environ 90 % des pistes sont équipées d'un système d'enneigement artificiel, ce qui prolonge la saison. La location de chalets en hiver est particulièrement prisée en janvier et février."
+    },
+    "summer-activities": {
+      "question": "Que peut-on faire à Pamporovo en été ?",
+      "answer": "Sentiers écologiques, VTT, équitation, parcs d'accrobranche, cueillette de champignons et d'herbes aromatiques, visites de grottes et de villages authentiques (Shiroka Laka, Gela). La région est idéale pour des vacances en famille hors saison de ski."
+    },
+    "caves-nearby": {
+      "question": "Quelles grottes se trouvent près de Pamporovo ?",
+      "answer": "La grotte de Yagodina (à environ 30 km), la Gorge du Diable (près des Rochers Étroits), Uhlovitsa et d'autres sites. La plupart nécessitent une excursion aquatique : prévoyez des vêtements chauds et réservez à l'avance en haute saison."
+    },
+    "shiroka-luka": {
+      "question": "À quelle distance se trouve Shiroka Luka de Pamporovo ?",
+      "answer": "La réserve architecturale de Shiroka Laka se trouve à environ 20 km de Pamporovo, soit environ 30 minutes en voiture. Profitez-en pour visiter le monastère de Rozen et admirer la vue depuis Rozen."
+    },
+    "where-to-sleep": {
+      "question": "Où dormir à Pamporovo ?",
+      "answer": "Vous avez le choix entre des hôtels situés au cœur de la station et des villas indépendantes à l'écart du bruit. Pamporovo Villa propose 3 villas privées à Raykovski Livadi — à 2 km du centre, avec cheminée, barbecue et pouvant accueillir jusqu'à 6 personnes par villa, à partir de 110 € par nuit."
+    },
+    "hotel-vs-villa": {
+      "question": "Un hôtel ou une villa à Pamporovo : quelle est la meilleure option ?",
+      "answer": "Cet hôtel est idéal pour un court séjour sans avoir à cuisiner. La villa est particulièrement appréciée des familles et des groupes : une maison entière rien que pour vous, une cheminée, un barbecue, un parking et un tarif par personne plus avantageux pour 4 à 6 personnes. Pamporovo Villa se trouve à 2 km des pistes."
+    },
+    "villa-price": {
+      "question": "Combien coûte la location d'une villa à Pamporovo ?",
+      "answer": "Pour le Pamporovo Villa, les prix commencent à 110 € par nuit pour une villa entière (jusqu'à 6 personnes) — saison estivale. Les tarifs des nuitées en hiver varient en fonction de la période. Consultez les tarifs actuels sur pamporovovilla.com/#pricing ou /rent."
+    },
+    "villa-amenities": {
+      "question": "Que comprend la location d'une villa chez Pamporovo Villa ?",
+      "answer": "Chacune des trois villas dispose de 2 chambres, 2 salles de bains, d'une cuisine entièrement équipée, d'une cheminée à bois, d'un barbecue sur la terrasse, d'une connexion Wi-Fi et d'un parking gratuit. Vous louez la villa dans son intégralité, sans la partager avec d'autres clients."
+    },
+    "fireplace-villa": {
+      "question": "Y a-t-il un chalet avec une cheminée à Pamporovo ?",
+      "answer": "Oui, les trois villas de Pamporovo Villa (Villa 1, Villa 2, Villa Deluxe) disposent d'une cheminée à bois dans le salon. Idéal pour les soirées d'hiver après une journée aux pistes ou les week-ends d'automne à la montagne."
+    },
+    "group-villa": {
+      "question": "Est-il possible de louer un chalet pour 6 personnes à Pamporovo ?",
+      "answer": "Oui. Chaque villa chez Pamporovo Villa peut accueillir jusqu'à 6 personnes. Réservez une villa pour votre groupe ou combinez deux villas pour les groupes plus importants — contactez-nous par téléphone au +359 879 501 660."
+    },
+    "couple-villa": {
+      "question": "Ce chalet est-il adapté pour deux personnes ?",
+      "answer": "Oui — les couples louent souvent une villa entière pour plus d'intimité et pour profiter d'une cheminée. Vous payez le prix de la villa, et non par personne ; à deux, le prix par personne est plus élevé, mais vous disposez d'une maison privée."
+    },
+    "distance-to-slopes": {
+      "question": "À quelle distance se trouvent les villas des pistes ?",
+      "answer": "Pamporovo Villa se trouve à Raykovski Livadi, à environ 2 km du centre de la station et des remontées mécaniques. En voiture, il faut compter 5 à 7 minutes pour rejoindre le parking des pistes. Une navette gratuite est également disponible en saison (consultez les horaires)."
+    },
+    "parking": {
+      "question": "Y a-t-il un parking près des villas ?",
+      "answer": "Oui — un parking privé gratuit à proximité de chaque villa du Pamporovo Villa. Pratique pour les sorties hivernales avec du matériel de ski et pour les familles avec enfants."
+    },
+    "how-to-book": {
+      "question": "Comment réserver une villa à Pamporovo ?",
+      "answer": "En ligne sur pamporovovilla.com/#booking : choisissez une villa, sélectionnez vos dates et remplissez le formulaire. Vous pouvez également appeler le +359 879 501 660 ou envoyer un e-mail à pamporovovilla@gmail.com."
+    },
+    "minimum-stay": {
+      "question": "Y a-t-il une durée minimale de séjour pour la location ?",
+      "answer": "Pendant la haute saison (Noël, Nouvel An, vacances de février), un séjour minimum de 3 à 5 nuits peut être exigé. Pour connaître les conditions exactes, veuillez consulter le calendrier lors de la réservation ou nous contacter."
+    },
+    "pets": {
+      "question": "Les animaux de compagnie sont-ils autorisés ?",
+      "answer": "Contactez-nous avant de réserver : la politique relative aux animaux de compagnie peut varier selon la saison et le gîte. Ne partez pas du principe que les animaux sont automatiquement autorisés."
+    },
+    "wifi": {
+      "question": "Y a-t-il une connexion Wi-Fi dans les villas ?",
+      "answer": "Oui, le Wi-Fi est disponible dans les trois villas de Pamporovo Villa."
+    },
+    "winter-rental": {
+      "question": "Puis-je louer un chalet pour un séjour au ski en hiver ?",
+      "answer": "Oui, les chalets sont ouverts toute l'année. L'hiver est la saison la plus prisée : cheminée, proximité des pistes et location d'une maison entière pour votre famille ou vos amis. Réservez tôt pour janvier et février."
+    },
+    "summer-rental": {
+      "question": "Est-ce que ça vaut le coup de louer un chalet à Pamporovo en été ?",
+      "answer": "Oui — les tarifs estivaux sont plus bas (à partir de 110 € par nuit), et la région propose des circuits écologiques, de la fraîcheur et des grottes. La terrasse avec barbecue et l'air de la montagne font de ce chalet le lieu idéal pour des vacances en famille."
+    },
+    "drive-from-sofia": {
+      "question": "Comment se rendre de Sofia à Pamporovo ?",
+      "answer": "Par l'autoroute jusqu'à Plovdiv, puis en passant par Asenovgrad et Smolyan — environ 240 km, 3 à 3,5 heures. En hiver, prévoyez des chaînes ou renseignez-vous sur l'état des routes dans les Rhodopes."
+    },
+    "snow-guarantee": {
+      "question": "Y a-t-il de la neige à Pamporovo chaque saison ?",
+      "answer": "La station dispose d'un puissant système d'enneigement artificiel qui couvre environ 90 % des pistes. La neige naturelle est souvent présente dès décembre, mais par mesure de sécurité, les exploitants assurent l'enneigement tout au long de la saison."
+    },
+    "restaurants": {
+      "question": "Y a-t-il des restaurants près de Raykovski Livadi ?",
+      "answer": "Au centre de Pamporovo (à 2 km), vous trouverez des restaurants traditionnels, des pizzerias et un supermarché. La villa dispose d'une cuisine entièrement équipée : de nombreux clients choisissent de cuisiner eux-mêmes ou d'alterner avec des dîners à la station."
+    }
+  }
+}

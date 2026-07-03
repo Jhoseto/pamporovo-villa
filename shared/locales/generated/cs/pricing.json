@@ -1,0 +1,30 @@
+{
+  "tableNights": "Počet přenocování",
+  "winterSeason": "Zimní sezóna",
+  "winterRange": "září – březen",
+  "summerSeason": "Letní sezóna",
+  "summerRange": "duben – srpen",
+  "winterShort": "Zima",
+  "summerShort": "Léto",
+  "winterLegend": "Zima · září – březen",
+  "summerLegend": "Léto · duben – srpen",
+  "bestValue": "Nejvýhodnější při delším pobytu",
+  "loading": "Ceny budou brzy zveřejněny.",
+  "cta": "Zkontrolujte volné termíny",
+  "tiers": {
+    "up-to-3": "Až 3 noci",
+    "4-nights": "4 noci",
+    "5-nights": "5 nocí",
+    "over-5": "Více než 5 nocí"
+  },
+  "breakdown": {
+    "night": "přenocování",
+    "nights": "přenocování",
+    "perNightWinter": "/noc (v zimě)",
+    "perNightSummer": "/noc (v létě)"
+  },
+  "notes": [
+    "Ceny jsou uvedeny za noc, za celou vilu (až pro 6 hostů).",
+    "Ceny jsou standardní a neplatí pro svátky a víkendy. V těchto obdobích nás prosím kontaktujte – nabídneme vám to nejlepší."
+  ]
+}

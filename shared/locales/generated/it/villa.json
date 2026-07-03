@@ -1,0 +1,90 @@
+{
+  "backToRent": "← Affitto di una villa",
+  "featuresHeading": "Servizi e opportunità",
+  "pricingHeading": "Prezzi",
+  "pricingHeadingFor": "Prezzi per {villa}",
+  "pricingFrom": "da",
+  "pricingPerNight": "/ notte",
+  "summerFrom": "Estate da",
+  "winterFrom": "Inverno da",
+  "wholeVillaNote": "Villa intera · fino a 6 ospiti",
+  "bookCta": "Prenota",
+  "bookVilla": "Prenota {villa}",
+  "guideLink": "Guida di Pamporovo",
+  "amenitiesHeading": "Servizi",
+  "otherVillas": "Le nostre altre ville",
+  "contactHeading": "Contatti e prenotazioni",
+  "pages": {
+    "villa-1": {
+      "name": "Villa 1",
+      "tagline": "Un'atmosfera accogliente per tutta la famiglia",
+      "description": "Accogliente e calorosa — con due camere da letto, due bagni e un ampio soggiorno con il caminetto scoppiettante, mentre sulla veranda vi aspetta un barbecue. La preferita dalle famiglie con bambini.",
+      "seoTitle": "Villa 1 Appartamento in affitto a Pamporovo | 2 camere da letto, caminetto — Pamporovo Villa",
+      "seoDescription": "Affitta Villa 1 a Pamporovo — un alloggio accogliente per famiglie, 2 camere da letto, 2 bagni, caminetto, barbecue, fino a 6 ospiti. Raykovski Livadi, a 2 km dalle piste. Prenotazione online.",
+      "seoKeywords": "Villa 1 Pamporovo, affitto villa a Pamporovo, villa per famiglie, Pamporovo Villa",
+      "h1": "Villa 1 — affitto a Pamporovo"
+    },
+    "villa-2": {
+      "name": "Villa 2",
+      "tagline": "Il sole dall'alba al tramonto",
+      "description": "Luminosa e spaziosa, con due camere da letto, due bagni e un soggiorno affacciato sulle montagne. La veranda con barbecue è perfetta per lunghe serate in compagnia degli amici.",
+      "seoTitle": "Villa 2 Pamporovo - Appartamento in affitto | 2 camere da letto, veranda con barbecue",
+      "seoDescription": "Affitta Villa 2 a Pamporovo — villa luminosa con vista panoramica, 2 camere da letto, caminetto, barbecue, fino a 6 ospiti. Codice ufficiale di affitto — Pamporovo Villa.",
+      "seoKeywords": "Villa 2 Pamporovo, affitto villa, villa con barbecue a Pamporovo",
+      "h1": "Villa 2 — affitto a Pamporovo"
+    },
+    "villa-deluxe": {
+      "name": "Villa Deluxe",
+      "tagline": "Un po' più di lusso",
+      "description": "La più elegante delle tre: offre lo stesso comfort di due camere da letto, due bagni e un ampio soggiorno, ma con un'attenzione particolare ai dettagli e all'atmosfera. Per chi desidera qualcosa di speciale.",
+      "seoTitle": "Villa Deluxe Pamporovo | Alloggio di lusso, caminetto, 6 ospiti",
+      "seoDescription": "Villa Deluxe a Pamporovo — la più elegante delle tre ville, 2 camere da letto, caminetto, barbecue, fino a 6 ospiti. Prenotate online.",
+      "seoKeywords": "Villa Deluxe Pamporovo, villa di lusso a Pamporovo, affitto deluxe",
+      "h1": "Villa Deluxe — affitto a Pamporovo"
+    }
+  },
+  "about": {
+    "intro": "Siamo lieti che ci abbiate scoperto. Vi proponiamo tre ville indipendenti, immerse nella pineta di Raykovski Livadi — dove il rumore della città rimane lontano e la giornata inizia con il canto degli uccelli e il profumo della resina.",
+    "details": "Villa 1, Villa 2 e Villa Deluxe sono arredate proprio come vorremmo che fosse la nostra casa in montagna: con legno vero, tessuti morbidi e quei piccoli dettagli che rendono un luogo accogliente. Qui non siete semplici ospiti; sentitevi come a casa vostra.",
+    "layout": "Ogni villa è disposta su due livelli e dispone di due camere da letto, due bagni, una cucina completamente attrezzata con zona pranzo e un ampio soggiorno con camino a legna. All’esterno vi aspettano una terrazza con vista panoramica sui Monti Rodopi e una veranda con barbecue: il luogo ideale per trascorrere serate indimenticabili.",
+    "hosts": "Come padroni di casa, siamo sempre a vostra disposizione. Vi aiutiamo a organizzare sorprese e feste, vi indichiamo le piste e i sentieri più belli, vi suggeriamo dove mangiare bene — e se avete bisogno di qualcosa, basta che ci chiamiate. Il nostro obiettivo è uno solo: farvi partire con la voglia di tornare."
+  },
+  "contact": {
+    "phone": "+359 879 501 660",
+    "email": "pamporovovilla@gmail.com",
+    "address": "località turistica di Pamporovo, zona Raykovski Livadi"
+  },
+  "firewoodNote": "Legna da ardere — 10 € a sacco, su richiesta o al momento del check-in.",
+  "features": [
+    "2 camere da letto per un sonno tranquillo",
+    "2 bagni con acqua calda",
+    "Ampio soggiorno con camino",
+    "Cucina completamente attrezzata",
+    "Veranda con barbecue",
+    "Fino a 6 ospiti in villa"
+  ],
+  "pricingNotes": [
+    "I prezzi si intendono a notte, per l'intera villa (fino a 6 ospiti).",
+    "Tassa di soggiorno inclusa.",
+    "Legna da camino — 10 € a sacco, su richiesta.",
+    "Gli skipass non sono inclusi."
+  ],
+  "distances": [
+    {
+      "value": "2 km",
+      "label": "Fino al centro di Pamporovo"
+    },
+    {
+      "value": "10 km",
+      "label": "Da Smolyan"
+    },
+    {
+      "value": "85 km",
+      "label": "Da Plovdiv"
+    },
+    {
+      "value": "220 km",
+      "label": "Da Sofia"
+    }
+  ]
+}

@@ -1,11 +1,14 @@
 import { Sparkles } from "lucide-react";
-import { HERO_PHOTO, SITE } from "@/data/siteContent";
+import { HERO_PHOTO } from "@/data/siteContent";
+import { useTranslation } from "@/contexts/LocaleContext";
 import { scrollToSection } from "@/lib/scroll";
 import { HeroContactWidget, HeroGlassPanel } from "./HeroGlassWidgets";
 import { Button } from "@/components/ui/button";
 
 /** Mobile critical path — same layout, no framer-motion. Upgraded after preloader. */
 export function HeroSectionLite() {
+  const { t } = useTranslation();
+
   return (
     <section
       id="hero"
@@ -43,17 +46,17 @@ export function HeroSectionLite() {
         <p className="eyebrow mx-auto mb-4 max-w-[16rem] text-[0.65rem] leading-relaxed text-[var(--gold)] sm:mb-6 sm:max-w-none sm:text-[0.7rem]">
           <span className="inline-flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
             <Sparkles className="h-3 w-3 shrink-0 sm:h-3.5 sm:w-3.5" />
-            <span>Смолян · Пампорово · {SITE.tagline}</span>
+            <span>{t("home.hero.eyebrow", "България · Смолян · Пампорово · 3 вили под наем")}</span>
           </span>
         </p>
 
         <h1 className="mb-5 font-serif text-[2.15rem] font-bold leading-[1.08] tracking-tight sm:mb-8 sm:text-5xl md:text-7xl lg:text-8xl">
-          <span className="mb-2 block">Pamporovo</span>
-          <span className="block text-[var(--gold)]">Villa</span>
+          <span className="mb-2 block">{t("home.hero.titleLine1", "Pamporovo")}</span>
+          <span className="block text-[var(--gold)]">{t("home.hero.titleLine2", "Villa")}</span>
         </h1>
 
         <p className="hero-subtitle mx-auto mb-7 max-w-[20rem] text-[0.9375rem] font-light leading-relaxed text-white/85 sm:mb-10 sm:max-w-2xl sm:text-lg md:text-xl">
-          Предлагаме ви три самостоятелни вили сред магическите гори на Пампорово. Домашен уют в планината, през цялата година.
+          {t("home.hero.subtitle", "Предлагаме ви три самостоятелни вили сред магическите гори на Пампорово. Домашен уют в планината, през цялата година.")}
         </p>
 
         <div className="hero-actions mx-auto flex w-full max-w-xs flex-col items-stretch gap-2.5 sm:max-w-none sm:flex-row sm:flex-nowrap sm:items-center sm:justify-center sm:gap-4">
@@ -62,7 +65,7 @@ export function HeroSectionLite() {
             className="premium-btn h-auto min-h-[2.875rem] w-full px-5 py-3.5 text-sm sm:w-auto sm:min-h-0 sm:px-10 sm:py-7 sm:text-lg"
             onClick={() => scrollToSection("experience")}
           >
-            Започни разходката
+            {t("home.hero.ctaExperience", "Започни разходката")}
           </Button>
           <Button
             size="lg"
@@ -70,7 +73,7 @@ export function HeroSectionLite() {
             className="h-auto min-h-[2.875rem] w-full border-white/30 bg-white/5 px-5 py-3.5 text-sm text-white backdrop-blur-sm hover:bg-white/10 hover:text-white sm:w-auto sm:min-h-0 sm:px-10 sm:py-7 sm:text-lg"
             onClick={() => scrollToSection("booking")}
           >
-            Резервирай
+            {t("home.hero.ctaBook", "Резервация")}
           </Button>
         </div>
 

@@ -1,0 +1,36 @@
+{
+  "items": [
+    {
+      "title": "Trois villas indépendantes",
+      "description": "Villa 1, Villa 2 et Villa Deluxe : vous louez la villa entière pour vous seuls, avec 2 chambres chacune et pouvant accueillir jusqu'à 6 personnes."
+    },
+    {
+      "title": "Cheminée à bois",
+      "description": "Une véritable cheminée au cœur du salon — pour les soirées où il neige dehors."
+    },
+    {
+      "title": "Une cuisine comme à la maison",
+      "description": "Cuisine entièrement équipée avec coin repas : plaque de cuisson, four, réfrigérateur, machine à café et tout le nécessaire pour préparer un dîner maison."
+    },
+    {
+      "title": "Véranda avec barbecue",
+      "description": "Une terrasse couverte avec barbecue — pour de longues soirées en plein air, quel que soit le temps."
+    },
+    {
+      "title": "Vue sur les Rhodopes",
+      "description": "Une terrasse avec vue panoramique sur la montagne — un café le matin au soleil et des couchers de soleil à couper le souffle."
+    },
+    {
+      "title": "Plus de 260 jours d'ensoleillement",
+      "description": "Pamporovo est la station de montagne la plus ensoleillée de Bulgarie — située à 1 650 m d'altitude, elle bénéficie d'un climat doux et d'un air pur."
+    },
+    {
+      "title": "Le silence au milieu des pins",
+      "description": "Raykovski Livadi — une forêt de pins paisible, loin de la foule, mais à quelques minutes des pistes et du centre-ville."
+    },
+    {
+      "title": "Wi-Fi et parking",
+      "description": "Wi-Fi gratuit et parking juste devant la porte : vous arrivez en voiture et restez connectés."
+    }
+  ]
+}

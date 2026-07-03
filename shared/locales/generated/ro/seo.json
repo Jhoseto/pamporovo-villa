@@ -2,7 +2,7 @@
   "routes": {
     "/": {
       "title": "Pamporovo Villa | 3 vile de închiriat în Pamporovo, Bulgaria",
-      "description": "Pamporovo Villa — trei vile independente de închiriat în stațiunea Pamporovo, zona Райковски ливади. 2 dormitoare, șemineu, grătar, până la 6 oaspeți. Rezervați direct.",
+      "description": "Pamporovo Villa — trei vile independente de închiriat în stațiunea Pamporovo, zona Raykovski Livadi. 2 dormitoare, șemineu, grătar, până la 6 oaspeți. Rezervați direct.",
       "keywords": "vilă de închiriat în Pamporovo, Pamporovo Villa, închiriere vilă în Pamporovo"
     },
     "/rent": {
@@ -12,7 +12,7 @@
     },
     "/pamporovo": {
       "title": "Pamporovo — ghid complet al stațiunii și al regiunii | Pamporovo Villa",
-      "description": "Piste de schi de peste 37 km, 6 teleschiuri, trasee ecologice, peșteri și obiective turistice. Unde să vă cazați — 3 vile de la 110 €/noapte pe Райковски ливади.",
+      "description": "Piste de schi de peste 37 km, 6 teleschiuri, trasee ecologice, peșteri și obiective turistice. Unde să vă cazați — 3 vile de la 110 €/noapte pe Raykovski Livadi.",
       "keywords": "Ghid turistic în Pamporovo, schi în Bulgaria, excursie în Munții Rodopi"
     }
   }

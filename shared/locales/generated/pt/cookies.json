@@ -1,0 +1,19 @@
+{
+  "bannerTitle": "Cookies e privacidade",
+  "bannerBody": "Utilizamos cookies essenciais ao funcionamento do site. Com o seu consentimento, ativamos o Google Analytics e o Google Maps.",
+  "policyLink": "Política de cookies",
+  "settings": "Definições",
+  "accept": "Aceito",
+  "manage": "Gestão de cookies",
+  "modalTitle": "Definições de cookies",
+  "modalBody": "Selecione as categorias que pretende autorizar. Os cookies essenciais estão sempre ativos.",
+  "necessary": "Necessários",
+  "necessaryDesc": "Guardam as suas preferências em relação aos cookies e garantem o funcionamento básico do site.",
+  "analytics": "Analíticos",
+  "analyticsDesc": "Google Analytics 4 — estatísticas anónimas sobre visitas e comportamento no site.",
+  "functional": "Funcional / Terceiros",
+  "functionalDesc": "Google Maps — um mapa interativo com a localização das casas de férias.",
+  "reject": "Apenas o necessário",
+  "save": "Guardar a seleção",
+  "acceptAll": "Aceito todos"
+}

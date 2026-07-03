@@ -1,0 +1,19 @@
+{
+  "bannerTitle": "Cookies und Datenschutz",
+  "bannerBody": "Wir verwenden Cookies, die für den Betrieb der Website erforderlich sind. Mit Ihrer Zustimmung aktivieren wir Google Analytics und Google Maps.",
+  "policyLink": "Cookie-Richtlinie",
+  "settings": "Einstellungen",
+  "accept": "Ich stimme zu",
+  "manage": "Verwaltung von Cookies",
+  "modalTitle": "Einstellungen für Cookies",
+  "modalBody": "Wählen Sie aus, welche Kategorien Sie zulassen möchten. Die notwendigen Cookies sind immer aktiviert.",
+  "necessary": "Erforderlich",
+  "necessaryDesc": "Sie speichern Ihre Cookie-Einstellungen und gewährleisten den grundlegenden Betrieb der Website.",
+  "analytics": "Analytisch",
+  "analyticsDesc": "Google Analytics 4 – anonyme Statistiken zu Besuchen und Nutzerverhalten auf der Website.",
+  "functional": "Funktional / Dritte",
+  "functionalDesc": "Google Maps – eine interaktive Karte mit den Standorten der Ferienhäuser.",
+  "reject": "Nur das Nötigste",
+  "save": "Auswahl speichern",
+  "acceptAll": "Ich akzeptiere alle"
+}

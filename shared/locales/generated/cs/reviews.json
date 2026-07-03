@@ -9,5 +9,49 @@
   "placeholderEmail": "podle výběru",
   "placeholderPeriod": "např. březen 2025",
   "placeholderBody": "Co vám utkvělo v paměti z vašeho pobytu u nás...",
-  "villaUnknown": "Nejsem si jistý/á"
+  "villaUnknown": "Nejsem si jistý/á",
+  "form": {
+    "name": "Jméno",
+    "email": "E-mail",
+    "rating": "Hodnocení",
+    "title": "Nadpis",
+    "body": "Vaše recenze",
+    "bodyPlaceholder": "Sdělte nám, co se vám líbilo a co bychom mohli vylepšit...",
+    "submit": "Odeslat recenzi",
+    "submitting": "Odesílání...",
+    "namePlaceholder": "Vaše jméno",
+    "emailPlaceholder": "podle výběru",
+    "ratingAria": "{star} hvězdiček",
+    "villa": "Vila",
+    "villaPlaceholder": "Vyberte",
+    "villaUnknown": "Nejsem si jistý/á",
+    "period": "Období",
+    "periodPlaceholder": "např. březen 2025"
+  },
+  "toast": {
+    "success": "Děkujeme za recenzi! Zveřejníme ji po kontrole.",
+    "error": "Při odesílání recenze došlo k chybě."
+  },
+  "carousel": {
+    "readMore": "Přečtěte si více",
+    "close": "Zavřít",
+    "googleSource": "Google",
+    "siteSource": "Webové stránky",
+    "readFull": "Celá recenze",
+    "open": "Otevřít",
+    "readFullAria": "Přečtěte si celou recenzi",
+    "openAria": "Otevřít recenzi",
+    "emptyTitle": "Zatím nebyly zveřejněny žádné recenze",
+    "emptyBody": "Buďte první – podělte se o své dojmy níže.",
+    "pause": "Pozastavení automatického posouvání",
+    "resume": "Pokračovat v automatickém posouvání",
+    "prev": "Předchozí recenze",
+    "next": "Další recenze",
+    "navLabel": "Recenze",
+    "reviewN": "Recenze {n}",
+    "photoCount": "{count} fotografií"
+  },
+  "modal": {
+    "close": "Zavřít"
+  }
 }

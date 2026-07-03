@@ -1,4 +1,5 @@
 import { useConsent } from "@/contexts/ConsentContext";
+import { useTranslation } from "@/contexts/LocaleContext";
 import {
   Dialog,
   DialogContent,
@@ -10,7 +11,7 @@ import { Switch } from "@/components/ui/switch";
 import { CONSENT_NECESSARY_ONLY } from "@/lib/consent/types";
 import { MapPin, Shield, BarChart3 } from "lucide-react";
 import { useEffect, useState } from "react";
-import { useLocation } from "wouter";
+import { useLocalizedNav } from "@/hooks/useLocalizedNav";
 
 function CategoryRow({
   icon: Icon,
@@ -44,6 +45,7 @@ function CategoryRow({
 }
 
 function CookieSettingsModal() {
+  const { t } = useTranslation();
   const { consent, settingsOpen, closeSettings, savePreferences, acceptAll, rejectAll } =
     useConsent();
   const current = consent ?? CONSENT_NECESSARY_ONLY;
@@ -61,31 +63,31 @@ function CookieSettingsModal() {
     <Dialog open={settingsOpen} onOpenChange={open => !open && closeSettings()}>
       <DialogContent className="max-h-[90vh] overflow-y-auto border-[oklch(0_0_0/0.08)] bg-[var(--cream)] sm:max-w-lg">
         <DialogHeader>
-          <DialogTitle className="font-serif text-2xl">Настройки за бисквитки</DialogTitle>
+          <DialogTitle className="font-serif text-2xl">{t("cookies.modalTitle", "Настройки за бисквитки")}</DialogTitle>
           <DialogDescription className="text-sm leading-relaxed">
-            Изберете кои категории да разрешите. Необходимите бисквитки винаги са активни.
+            {t("cookies.modalBody", "Изберете кои категории да разрешите. Необходимите бисквитки винаги са активни.")}
           </DialogDescription>
         </DialogHeader>
 
         <div className="space-y-3 py-2">
           <CategoryRow
             icon={Shield}
-            title="Необходими"
-            description="Запазват избора ви за бисквитки и осигуряват основната работа на сайта."
+            title={t("cookies.necessary", "Необходими")}
+            description={t("cookies.necessaryDesc", "Запазват избора ви за бисквитки и осигуряват основната работа на сайта.")}
             checked
             disabled
           />
           <CategoryRow
             icon={BarChart3}
-            title="Аналитични"
-            description="Google Analytics 4 — анонимна статистика за посещения и поведение на сайта."
+            title={t("cookies.analytics", "Аналитични")}
+            description={t("cookies.analyticsDesc", "Google Analytics 4 — анонимна статистика за посещения и поведение на сайта.")}
             checked={analytics}
             onCheckedChange={setAnalytics}
           />
           <CategoryRow
             icon={MapPin}
-            title="Функционални / трети страни"
-            description="Google Maps — интерактивна карта с локацията на вилите."
+            title={t("cookies.functional", "Функционални / трети страни")}
+            description={t("cookies.functionalDesc", "Google Maps — интерактивна карта с локацията на вилите.")}
             checked={functional}
             onCheckedChange={setFunctional}
           />
@@ -97,21 +99,21 @@ function CookieSettingsModal() {
             onClick={rejectAll}
             className="rounded-full border border-[oklch(0_0_0/0.1)] px-5 py-2.5 text-sm font-medium text-foreground/70 transition hover:bg-[oklch(0_0_0/0.04)]"
           >
-            Само необходими
+            {t("cookies.reject", "Само необходими")}
           </button>
           <button
             type="button"
             onClick={() => savePreferences(analytics, functional)}
             className="premium-btn rounded-full px-5 py-2.5 text-sm"
           >
-            Запази избора
+            {t("cookies.save", "Запази избора")}
           </button>
           <button
             type="button"
             onClick={acceptAll}
             className="rounded-full bg-[var(--gold)] px-5 py-2.5 text-sm font-semibold text-white transition hover:opacity-90"
           >
-            Приемам всички
+            {t("cookies.acceptAll", "Приемам всички")}
           </button>
         </div>
       </DialogContent>
@@ -120,7 +122,8 @@ function CookieSettingsModal() {
 }
 
 export function CookieConsent() {
-  const [, setLocation] = useLocation();
+  const { t } = useTranslation();
+  const { navigate } = useLocalizedNav();
   const { showBanner, acceptAll, openSettings } = useConsent();
 
   if (!showBanner) {
@@ -138,17 +141,16 @@ export function CookieConsent() {
         <div className="mx-auto flex max-w-6xl flex-col gap-4 md:flex-row md:items-center md:justify-between md:gap-8">
           <div className="max-w-2xl">
             <p id="cookie-banner-title" className="font-serif text-lg font-semibold text-foreground">
-              Бисквитки и поверителност
+              {t("cookies.bannerTitle", "Бисквитки и поверителност")}
             </p>
             <p id="cookie-banner-desc" className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              Използваме необходими бисквитки за работа на сайта. С ваше съгласие активираме Google
-              Analytics и Google Maps.{" "}
+              {t("cookies.bannerBody", "Използваме необходими бисквитки за работа на сайта. С ваше съгласие активираме Google Analytics и Google Maps.")}{" "}
               <button
                 type="button"
-                onClick={() => setLocation("/legal?tab=cookies")}
+                onClick={() => navigate("/legal?tab=cookies")}
                 className="underline decoration-[var(--gold)] underline-offset-2 hover:text-[var(--gold)]"
               >
-                Политика за бисквитки
+                {t("cookies.policyLink", "Политика за бисквитки")}
               </button>
             </p>
           </div>
@@ -158,14 +160,14 @@ export function CookieConsent() {
               onClick={openSettings}
               className="rounded-full border border-[oklch(0_0_0/0.1)] px-5 py-2.5 text-sm font-medium text-foreground/70 transition hover:bg-[oklch(0_0_0/0.04)]"
             >
-              Настройки
+              {t("cookies.settings", "Настройки")}
             </button>
             <button
               type="button"
               onClick={acceptAll}
               className="rounded-full bg-[var(--gold)] px-5 py-2.5 text-sm font-semibold text-white transition hover:opacity-90"
             >
-              Приемам
+              {t("cookies.accept", "Приемам")}
             </button>
           </div>
         </div>
@@ -176,6 +178,7 @@ export function CookieConsent() {
 }
 
 export function CookieSettingsTrigger() {
+  const { t } = useTranslation();
   const { openSettings } = useConsent();
 
   return (
@@ -184,7 +187,7 @@ export function CookieSettingsTrigger() {
       onClick={openSettings}
       className="text-xs text-white/35 transition hover:text-[var(--gold)]"
     >
-      Управление на бисквитки
+      {t("cookies.manage", "Управление на бисквитки")}
     </button>
   );
 }

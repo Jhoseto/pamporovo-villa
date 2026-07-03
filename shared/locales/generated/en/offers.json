@@ -1,0 +1,36 @@
+{
+  "eyebrow": "Exclusive Packages",
+  "title": "Top Offers",
+  "subtitle": "Selected ski and summer vacation packages at a special price. Availability is limited—and the best dates go first.",
+  "loading": "Loading...",
+  "empty": "There are currently no active offers.",
+  "oldPrice": "old price",
+  "includes": "Includes",
+  "bookOffer": "Book this offer",
+  "badge": "Offer",
+  "claimCta": "Take advantage of this",
+  "footer": "Offers are valid for the periods listed · To make a reservation, go to the “Book” section",
+  "items": {
+    "ski-family": {
+      "title": "Family Ski Vacation",
+      "period": "March 1, 2026 – March 31, 2026",
+      "description": "Give your children a memory they’ll cherish for a lifetime. An entire villa just for your family, just minutes from the slopes—and in the evening, a cozy fire and a warm dinner await you at home.",
+      "includes": [
+        "Rent the entire villa for an overnight stay (up to 6 people)",
+        "Free parking right outside the door",
+        "Free Wi-Fi",
+        "Resort fee included"
+      ]
+    },
+    "pay-9-stay-10": {
+      "title": "Pay for 9, stay for 10 nights",
+      "period": "June 1, 2026 – July 10, 2026",
+      "description": "Summer in the mountains is something special—cool mornings, long days spent in nature, and evenings on the porch with a barbecue. Stay with us a little longer and treat yourself to a free night’s stay.",
+      "includes": [
+        "The 10th night is completely free (with 9 paid nights)",
+        "Entire villa: 2 bedrooms, 2 bathrooms, kitchen, and living room",
+        "A veranda with a barbecue and a wood-burning fireplace"
+      ]
+    }
+  }
+}

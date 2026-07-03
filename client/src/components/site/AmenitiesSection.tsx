@@ -1,13 +1,17 @@
-import { AMENITIES } from "@/data/siteContent";
+import { useTranslation } from "@/contexts/LocaleContext";
+import { useAmenities } from "@/i18n/contentHooks";
 import { SectionShell } from "./SectionShell";
 import { ScrollReveal } from "./ScrollReveal";
 
 export function AmenitiesSection() {
+  const { t } = useTranslation();
+  const amenities = useAmenities();
+
   return (
     <SectionShell
-      eyebrow="Удобства"
-      title="Всичко необходимо за един спокоен престой"
-      subtitle="Помислили сме за дребните неща, за да можете вие да мислите само за почивката"
+      eyebrow={t("home.amenities.eyebrow", "Удобства")}
+      title={t("home.amenities.title", "Всичко необходимо за един спокоен престой")}
+      subtitle={t("home.amenities.subtitle", "Помислили сме за дребните неща, за да можете вие да мислите само за почивката")}
       backgroundImage="/photos/56.jpg"
       dark
       darkOverlap
@@ -15,7 +19,7 @@ export function AmenitiesSection() {
       perfDefer
     >
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
-        {AMENITIES.map((amenity, idx) => {
+        {amenities.map((amenity, idx) => {
           const Icon = amenity.icon;
           return (
             <ScrollReveal key={amenity.title} delay={idx * 80}>

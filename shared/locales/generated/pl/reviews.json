@@ -9,5 +9,49 @@
   "placeholderEmail": "do wyboru",
   "placeholderPeriod": "np. marzec 2025 r.",
   "placeholderBody": "Co zapamiętaliście z pobytu u nas...",
-  "villaUnknown": "Nie jestem pewien/pewna"
+  "villaUnknown": "Nie jestem pewien/pewna",
+  "form": {
+    "name": "Imię",
+    "email": "E-mail",
+    "rating": "Ocena",
+    "title": "Tytuł",
+    "body": "Twoja opinia",
+    "bodyPlaceholder": "Podzielcie się z nami tym, co Wam się podobało i co moglibyśmy poprawić...",
+    "submit": "Wyślij opinię",
+    "submitting": "Wysyłanie...",
+    "namePlaceholder": "Twoje imię",
+    "emailPlaceholder": "do wyboru",
+    "ratingAria": "{star} gwiazdek",
+    "villa": "Willa",
+    "villaPlaceholder": "Wybierz",
+    "villaUnknown": "Nie jestem pewien/pewna",
+    "period": "Okres",
+    "periodPlaceholder": "np. marzec 2025 r."
+  },
+  "toast": {
+    "success": "Dziękujemy za opinię! Opublikujemy ją po sprawdzeniu.",
+    "error": "Wystąpił błąd podczas wysyłania opinii."
+  },
+  "carousel": {
+    "readMore": "Dowiedz się więcej",
+    "close": "Zamknij",
+    "googleSource": "Google",
+    "siteSource": "Strona internetowa",
+    "readFull": "Cała recenzja",
+    "open": "Otwórz",
+    "readFullAria": "Przeczytaj całą recenzję",
+    "openAria": "Otwórz recenzję",
+    "emptyTitle": "Nie ma jeszcze żadnych opublikowanych opinii",
+    "emptyBody": "Bądź pierwszy — podziel się swoimi wrażeniami poniżej.",
+    "pause": "Wstrzymanie automatycznego przewijania",
+    "resume": "Włącz automatyczne przewijanie",
+    "prev": "Poprzednia recenzja",
+    "next": "Następna recenzja",
+    "navLabel": "Opinie",
+    "reviewN": "Recenzja {n}",
+    "photoCount": "{count} zdjęć"
+  },
+  "modal": {
+    "close": "Zamknij"
+  }
 }

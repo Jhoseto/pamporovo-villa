@@ -1,18 +1,21 @@
 {
   "hero": {
-    "eyebrow": "Smolyan · Pamporovo · 3 Ferienhäuser zur Miete",
+    "eyebrow": "Bulgarien · Smolyan · Pamporovo · 3 Ferienhäuser zu vermieten",
     "titleLine1": "Pamporovo",
     "titleLine2": "Villa",
     "subtitle": "Wir bieten Ihnen drei freistehende Villen inmitten der zauberhaften Wälder von Pamporovo. Gemütliche Atmosphäre in den Bergen – das ganze Jahr über.",
     "ctaExperience": "Beginne den Spaziergang",
-    "ctaBook": "Buchen",
-    "scrollHint": "Entdecken Sie"
+    "ctaBook": "Reservierung",
+    "scrollHint": "Entdecken Sie",
+    "scrollDown": "Nach unten",
+    "scrollToExperience": "Weiter zum Spaziergang"
   },
   "gallery": {
     "eyebrow": "Galerie",
     "title": "Die drei Villen in Bildern",
-    "subtitle": "Entdecken Sie jede Villa – Innenausstattung, Gemütlichkeit und Bergpanorama",
-    "pickVilla": "Wählen Sie eine Villa aus"
+    "subtitle": "Entdecken Sie jede Villa – Innenausstattung, Gemütlichkeit und Ausblicke auf die Berge",
+    "pickVilla": "Wählen Sie eine Villa aus",
+    "photoCount": "{count} Fotos"
   },
   "contact": {
     "eyebrow": "Kontakt",
@@ -29,9 +32,78 @@
   },
   "location": {
     "eyebrow": "Standort",
-    "title": "Alles in unmittelbarer Nähe, doch weit weg vom Trubel",
-    "subtitle": "Ferienort Pamporovo, Gebiet Райковски ливади – eingebettet in den Kiefernwald",
+    "title": "Alles in unmittelbarer Nähe, doch fernab vom Trubel",
+    "subtitle": "Ferienort Pamporovo, Gebiet Raykovski Livadi – eingebettet in den Kiefernwald",
     "directions": "So finden Sie uns",
     "info": "Pamporovo ist der sonnigste Bergferienort Bulgariens – auf 1.650 m Höhe im Herzen der Rhodopen. Im Winter erwarten Sie 37 km perfekt präparierte Pisten und Nachtskifahren, im Sommer hingegen Naturpfade, Wasserfälle und heilende Luft. Und unsere Ferienhäuser sind Ihr ruhiger Rückzugsort inmitten all dessen."
-  }
+  },
+  "widgets": {
+    "weatherLoading": "Zeitladung",
+    "weatherUnavailable": "Derzeit nicht verfügbar",
+    "feelsLike": "Es fühlt sich an wie",
+    "today": "Heute",
+    "humidity": "Luftfeuchtigkeit",
+    "wind": "Wind",
+    "callUs": "Rufen Sie uns an",
+    "galleryVillaTabs": "Auswahl einer Villa in der Galerie"
+  },
+  "about": {
+    "eyebrow": "Über uns",
+    "title": "Ihr Zuhause hoch oben in den Rhodopen",
+    "subtitle": "Drei Ferienhäuser, ein Anliegen – dass Sie sich wie zu Hause fühlen",
+    "blockPlace": "Der Ort",
+    "blockHome": "Zu Hause",
+    "blockHosts": "Die Gastgeber",
+    "intro": "Wir freuen uns, dass Sie uns entdeckt haben. Wir bieten Ihnen drei freistehende Villen, eingebettet in den Kiefernwald von Raykovski Livadi – dort, wo der Lärm der Stadt weit entfernt ist und der Tag mit Vogelgezwitscher und dem Duft von Harz beginnt.",
+    "details": "Villa 1, Villa 2 und Villa Deluxe sind so eingerichtet, wie wir uns unser eigenes Zuhause in den Bergen vorstellen würden – mit echtem Holz, weichen Textilien und jenen kleinen Details, die einem Ort eine warme Atmosphäre verleihen. Hier sind Sie nicht nur Gäste; fühlen Sie sich wie zu Hause.",
+    "hosts": "Als Gastgeber sind wir immer in Ihrer Nähe. Wir helfen Ihnen bei Überraschungen und Feierlichkeiten, zeigen Ihnen die schönsten Pisten und Wanderwege und geben Ihnen Tipps, wo man gut essen kann – und wenn Sie etwas brauchen, rufen Sie uns einfach an. Wir haben nur ein Ziel: dass ihr mit dem Wunsch abreist, wiederzukommen.",
+    "layout": "Jede Villa erstreckt sich über zwei Etagen und verfügt über zwei Schlafzimmer, zwei Badezimmer, eine voll ausgestattete Küche mit Essbereich sowie ein großes Wohnzimmer mit einem Holzkamin. Im Außenbereich erwarten Sie eine Terrasse mit Panoramablick auf die Rhodopen und eine Veranda mit Grill – der Ort, an dem die schönsten Abende entstehen.",
+    "imageForestAlt": "Eine Villa im Kiefernwald von Raykovski Livadi",
+    "imageInteriorAlt": "Innenraum mit Steinwand und Holz",
+    "badgeLocation": "Raykovski Livadi",
+    "badgeResort": "Pamporovo"
+  },
+  "amenities": {
+    "eyebrow": "Ausstattung",
+    "title": "Alles, was Sie für einen entspannten Aufenthalt brauchen",
+    "subtitle": "Wir haben an die kleinen Dinge gedacht, damit Sie sich ganz auf Ihren Urlaub konzentrieren können"
+  },
+  "pricing": {
+    "eyebrow": "Preise",
+    "title": "Klare Preise, keine Überraschungen",
+    "subtitle": "Vermietung einer ganzen Villa pro Nacht – für bis zu 6 Gäste. Je länger Sie bleiben, desto günstiger wird es"
+  },
+  "booking": {
+    "eyebrow": "Reservierung",
+    "title": "Sichern Sie sich Ihren Platz in den Bergen",
+    "subtitle": "Wählen Sie eine Ferienwohnung und Ihre Reisedaten aus, geben Sie Ihre Daten an – und wir werden uns persönlich bei Ihnen melden, um die Buchung zu bestätigen"
+  },
+  "policy": {
+    "eyebrow": "Gut zu wissen",
+    "title": "Ein paar Worte, bevor Sie kommen",
+    "subtitle": "Kurze und klare Regeln, damit es für alle entspannt und angenehm ist"
+  },
+  "faq": {
+    "eyebrow": "Reservierung · Preise",
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Fragen zu Miete, Preisen, Unterkunft und Buchung – bevor Sie das Formular ausfüllen."
+  },
+  "distances": [
+    {
+      "value": "2 km",
+      "label": "Zum Zentrum von Pamporovo"
+    },
+    {
+      "value": "10 km",
+      "label": "Aus Smolyan"
+    },
+    {
+      "value": "85 km",
+      "label": "Aus Plovdiv"
+    },
+    {
+      "value": "220 km",
+      "label": "Aus Sofia"
+    }
+  ]
 }

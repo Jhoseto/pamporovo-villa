@@ -1,13 +1,17 @@
-import { HOUSE_RULES } from "@/data/siteContent";
+import { useTranslation } from "@/contexts/LocaleContext";
+import { useHouseRules } from "@/i18n/contentHooks";
 import { SectionShell } from "./SectionShell";
 import { ScrollReveal } from "./ScrollReveal";
 
 export function PolicySection() {
+  const { t } = useTranslation();
+  const rules = useHouseRules();
+
   return (
     <SectionShell
-      eyebrow="Добре е да знаете"
-      title="Няколко думи преди да дойдете"
-      subtitle="Кратки и ясни правила, за да е спокойно и приятно за всички"
+      eyebrow={t("home.policy.eyebrow", "Добре е да знаете")}
+      title={t("home.policy.title", "Няколко думи преди да дойдете")}
+      subtitle={t("home.policy.subtitle", "Кратки и ясни правила, за да е спокойно и приятно за всички")}
       dark
       darkOverlap
       perfDefer
@@ -15,16 +19,14 @@ export function PolicySection() {
       <div className="grid gap-8 lg:grid-cols-2">
         <ScrollReveal direction="left">
           <div className="policy-glass-panel rounded-3xl border border-white/10 p-8">
-            <h3 className="mb-4 font-serif text-xl font-bold text-white">Настаняване и престой</h3>
-            <p className="mb-4 text-white/65">
-              Искаме престоят ви да е лек и безгрижен — затова държим нещата прости и прозрачни.
-            </p>
+            <h3 className="mb-4 font-serif text-xl font-bold text-white">{rules.stayHeading}</h3>
+            <p className="mb-4 text-white/65">{rules.stayIntro}</p>
             <p className="mb-4 text-white/70">
-              Настаняване: <strong className="text-white">{HOUSE_RULES.checkIn}</strong> · Напускане:{" "}
-              <strong className="text-white">{HOUSE_RULES.checkOut}</strong>
+              {rules.checkInLabel}: <strong className="text-white">{rules.checkIn}</strong> ·{" "}
+              {rules.checkOutLabel}: <strong className="text-white">{rules.checkOut}</strong>
             </p>
             <ul className="space-y-3 text-white/75">
-              {HOUSE_RULES.highlights.map(rule => (
+              {rules.highlights.map(rule => (
                 <li key={rule} className="flex gap-2">
                   <span className="text-[var(--gold)]">•</span>
                   <span>{rule}</span>
@@ -36,19 +38,16 @@ export function PolicySection() {
 
         <ScrollReveal direction="right" delay={120}>
           <div className="policy-glass-panel rounded-3xl border border-white/10 p-8">
-            <h3 className="mb-4 font-serif text-xl font-bold text-white">Молим ви да избягвате</h3>
+            <h3 className="mb-4 font-serif text-xl font-bold text-white">{rules.avoidHeading}</h3>
             <ul className="space-y-3 text-white/75">
-              {HOUSE_RULES.prohibited.map(rule => (
+              {rules.prohibited.map(rule => (
                 <li key={rule} className="flex gap-2">
                   <span className="text-red-300">×</span>
                   <span>{rule}</span>
                 </li>
               ))}
             </ul>
-            <p className="mt-6 text-sm text-white/50">
-              Благодарим ви, че избрахте Pamporovo Villa. Грижата за дома е взаимна — пазейки го,
-              го пазим хубав за всеки следващ гост. Имате въпрос? Винаги сме насреща.
-            </p>
+            <p className="mt-6 text-sm text-white/50">{rules.footer}</p>
           </div>
         </ScrollReveal>
       </div>

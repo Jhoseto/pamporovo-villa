@@ -1,0 +1,23 @@
+{
+  "checkInLabel": "Accommodatie",
+  "checkOutLabel": "Vertrek",
+  "checkIn": "Na 15.00 uur",
+  "checkOut": "Tot 11.00 uur",
+  "stayHeading": "Accommodatie en verblijf",
+  "stayIntro": "We willen dat uw verblijf ontspannen en zorgeloos verloopt — daarom houden we het simpel en transparant.",
+  "avoidHeading": "Wij verzoeken u dit te vermijden",
+  "footer": "Hartelijk dank dat u voor Pamporovo Villa hebt gekozen. De zorg voor het huis is wederzijds: door er goed voor te zorgen, houden we het mooi voor elke volgende gast. Heeft u een vraag? Wij staan altijd voor u klaar.",
+  "highlights": [
+    "Wij verwelkomen het hele jaar door gasten, 24 uur per dag, 7 dagen per week. Neem bij het inchecken een identiteitsbewijs mee.",
+    "Heeft u haast op de laatste dag? Uitchecken na 11.00 uur is gratis, indien mogelijk.",
+    "Hout voor de open haard — 10 € per zak, op aanvraag of bij aankomst.",
+    "Rusttijden: 23:00 – 07:00, voor ieders rust. Roken is alleen toegestaan op de twee terrassen (boete van 50 € binnen).",
+    "Geen huisdieren toegestaan. Voor uw veiligheid is het terrein voorzien van cameratoezicht."
+  ],
+  "prohibited": [
+    "Invoer van elektrische en gasapparaten voor persoonlijk gebruik",
+    "Verblijf van niet-geregistreerde gasten",
+    "Meubels verplaatsen tussen de kamers",
+    "Gedrag dat de rust van de naburige villa’s verstoort"
+  ]
+}

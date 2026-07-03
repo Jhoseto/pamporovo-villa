@@ -1,0 +1,144 @@
+{
+  "sectionEyebrow": "Virtuális séta",
+  "sectionTitle": "Lépjen be, mielőtt ideérne",
+  "sectionSubtitle": "Görgessen lefelé, és járja végig a nyaralókat szobáról szobára",
+  "ariaLabel": "Virtuális séta",
+  "ariaLabel3d": "Virtuális 3D-s séta",
+  "skipUp": "Folytassa felfelé",
+  "skipDown": "Olvasson tovább",
+  "skipUpAria": "Hagyja ki a felfelé vezető sétát",
+  "skipDownAria": "Hagyd ki a lefelé vezető sétát",
+  "panels": {
+    "exterior-summer": {
+      "room": "01 · A komplexum",
+      "title": "Itt kezdődik a történetetek",
+      "subtitle": "Villa 1 · Villa 2 · Villa Deluxe",
+      "description": "Három önálló villa, elrejtve a Raykovski Livadi fenyőerdejében. Az egész villát kizárólag maguknak bérelhetik — nincsenek szomszédok a fal túloldalán, és nem kell lemondaniuk a kényelemről. Válasszák ki a nekik tetszőt, a többit bízzák ránk.",
+      "imageAlt": "A villa külső látképe nyáron",
+      "highlights": [
+        "3 önálló villa",
+        "Csendes fenyőerdő",
+        "Parkolás és Wi-Fi",
+        "Egész éves bérlet"
+      ]
+    },
+    "exterior-winter": {
+      "room": "02 · Tél",
+      "title": "Amikor esik a hó",
+      "subtitle": "Reggel síelés, este kandalló",
+      "description": "Reggel pár perc alatt a sípályán találja magát, este pedig a kandalló melege és a barbecue illata várja. A hó egészen a küszöbig ér – és Önnek nincs szüksége másra, csak egy pohár forralt borra és jó társaságra.",
+      "imageAlt": "Hóval borított villa Pamporovóban",
+      "highlights": [
+        "Pár percre a sípályáktól",
+        "Fatüzelésű kandalló",
+        "Hó a küszöbön",
+        "Meleg, otthonos hangulat"
+      ]
+    },
+    "living-fireplace": {
+      "room": "03 · Nappali",
+      "title": "Ahol a család összegyűlik",
+      "subtitle": "Tágas nappali kandallóval",
+      "description": "Tágas nappali valódi fatüzelésű kandallóval, ahol a fa és a kő meleg, otthonos hangulatot teremt. Itt társasjátékokat játszanak, történeteket mesélnek, és a tüzet táplálják – ez minden este középpontja.",
+      "imageAlt": "Nappali kandallóval és étkezővel",
+      "highlights": [
+        "Fatüzelésű kandalló",
+        "Okos tévé",
+        "Fa és kő",
+        "Hely mindenkinek"
+      ]
+    },
+    "open-plan": {
+      "room": "04 · Tér",
+      "title": "Világos és tágas",
+      "subtitle": "Konyha · étkező · nappali",
+      "description": "A konyha, az étkező és a nappali egy nyitott térben helyezkednek el — így együtt lehettek, még akkor is, ha az egyik főz, a többiek pedig pihennek. A nagy ablakok beengedik a hegyi fényt a szobába.",
+      "imageAlt": "Nyitott tér — kilátás a lépcsőházból",
+      "highlights": [
+        "Nyitott terv",
+        "Nagy ablakok",
+        "Természetes fény",
+        "Legfeljebb 6 vendég"
+      ]
+    },
+    "dining": {
+      "room": "05 · Étkező",
+      "title": "Az asztal, amely körül minden történik",
+      "subtitle": "A reggeli kávétól a késő esti vacsoráig",
+      "description": "Egy széles faasztal, ahol az egész társaságnak van helye, és ahonnan egyenesen a fenyőfákra nyílik a kilátás. Itt kezdődik a nap egy csésze kávéval, lágy fényben, és itt zárul le vacsorával, nevetéssel és a holnapra szóló tervekkel.",
+      "imageAlt": "Étkező, kilátással a fenyőerdőre",
+      "highlights": [
+        "6 személyes asztal",
+        "Kilátás az erdőre",
+        "Kijárat a teraszra",
+        "Természetes fény"
+      ]
+    },
+    "kitchen": {
+      "room": "06 · Konyha",
+      "title": "Úgy főzöl, mint otthon",
+      "subtitle": "Teljesen felszerelt konyha",
+      "description": "Főzőlap, sütő, hűtőszekrény, mikrohullámú sütő, kávéfőző és teljes edénykészlet – minden, ami egy otthoni reggelihez vagy ünnepi vacsorához kell. Mert néha a legfinomabb étel az, amit magad főzöl a hegyekben.",
+      "imageAlt": "Felszerelt konyha",
+      "highlights": [
+        "Sütő és főzőlap",
+        "Hűtőszekrény",
+        "Kávéfőző",
+        "Teljes edénykészlet"
+      ]
+    },
+    "bedrooms": {
+      "room": "07 · Hálószobák",
+      "title": "Olyan álom, amilyet már régóta nem láttatok",
+      "subtitle": "Két hangulatos hálószoba",
+      "description": "Két külön hálószoba kényelmes ágyakkal és kiváló minőségű ágyneművel — akár 6 vendég számára is alkalmas. Az erdő csendje és a 1 650 m magasságban lévő tiszta levegő csodákat tesz; garantáljuk, hogy kipihenten ébrednek majd.",
+      "imageAlt": "A két hálószobához vezető folyosó",
+      "highlights": [
+        "2 hálószoba",
+        "Legfeljebb 6 vendég",
+        "Kiváló minőségű fehérnemű",
+        "Mély csend"
+      ]
+    },
+    "bathroom": {
+      "room": "08 · Fürdőszoba",
+      "title": "Hegyi hangulatú fürdő",
+      "subtitle": "Kényelem az egész társaság számára",
+      "description": "Teljesen felszerelt fürdőszoba, ahol bármikor van meleg víz — tágas és hangulatos az egész társaság számára. Természetes anyagok és meleg hangulat.",
+      "imageAlt": "Fa és csempével burkolt fürdőszoba",
+      "highlights": [
+        "1 fürdőszoba",
+        "Meleg víz a nap 24 órájában",
+        "Kiváló minőségű anyagok",
+        "Spa-hangulat"
+      ]
+    },
+    "terrace": {
+      "room": "09 · Terasz",
+      "title": "Az a kilátás, amiért visszatértek",
+      "subtitle": "A Rodopok a tenyeremben",
+      "description": "Terasz, ahonnan panorámás kilátás nyílik a Rodop-hegységre és a fenyőerdőkre. Itt ihatja meg az első kávéját, miközben a nap felkel a hegycsúcsok felett, és aranyló naplementével búcsúztathatja a napot. Olyan pillanatok, amelyek még a nyaralás után is sokáig megmaradnak az emlékezetében.",
+      "imageAlt": "Aranyszínű naplemente a Rodopok felett",
+      "highlights": [
+        "Panorámás kilátás",
+        "Napfelkelték és napnyugták",
+        "Tiszta hegyi levegő",
+        "Nagy terasz"
+      ]
+    },
+    "bbq-veranda": {
+      "room": "10 · Veranda",
+      "title": "Olyan esték, amelyek nem sietnek véget érni",
+      "subtitle": "Fedett terasz grillezővel",
+      "description": "A fedett, grillezővel ellátott terasz a naplemente idején a legkedveltebb hely. A szabadban grillezhetnek, beszélgethetnek és nevethetnek — és ha esni kezd vagy lehűl az idő, szárazon és melegen maradhatnak, anélkül, hogy elveszítenék a hegyek hangulatát.",
+      "imageAlt": "Veranda grillezővel és téli kilátással",
+      "highlights": [
+        "Grill",
+        "Fedett terasz",
+        "Hosszú estékre",
+        "A szabad levegőn"
+      ]
+    }
+  },
+  "highlightsLabel": "Főbb pontok"
+}

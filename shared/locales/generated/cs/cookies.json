@@ -1,0 +1,19 @@
+{
+  "bannerTitle": "Soubory cookie a ochrana osobních údajů",
+  "bannerBody": "Používáme soubory cookie nezbytné pro fungování webových stránek. S vaším souhlasem aktivujeme služby Google Analytics a Google Maps.",
+  "policyLink": "Zásady používání souborů cookie",
+  "settings": "Nastavení",
+  "accept": "Souhlasím",
+  "manage": "Správa souborů cookie",
+  "modalTitle": "Nastavení souborů cookie",
+  "modalBody": "Vyberte, které kategorie chcete povolit. Nezbytné soubory cookie jsou vždy aktivní.",
+  "necessary": "Nezbytné",
+  "necessaryDesc": "Ukládají vaše nastavení souborů cookie a zajišťují základní fungování webu.",
+  "analytics": "Analytické",
+  "analyticsDesc": "Google Analytics 4 — anonymní statistiky o návštěvách a chování uživatelů na webu.",
+  "functional": "Funkční / třetí strany",
+  "functionalDesc": "Google Maps – interaktivní mapa s polohou vil.",
+  "reject": "Pouze nezbytné",
+  "save": "Uložit výběr",
+  "acceptAll": "Přijímám všechny"
+}

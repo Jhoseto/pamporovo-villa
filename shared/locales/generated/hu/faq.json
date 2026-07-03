@@ -1,1 +1,178 @@
-{}
+{
+  "home": {
+    "book-online": {
+      "question": "Hogyan foglalhatok villát online?",
+      "answer": "A pamporovovilla.com menüpontnál válassza ki a „Foglalás” részt, jelölje ki a villát (Villa 1, Villa 2 vagy Villa Deluxe), adja meg a dátumokat, majd töltse ki az űrlapot. A visszaigazolást e-mailben kapja meg. Kérdések esetén: +359 879 501 660."
+    },
+    "price-per-villa": {
+      "question": "Mennyibe kerül egy villa bérlése?",
+      "answer": "Az árak az egész villára vonatkoznak (legfeljebb 6 vendég), nem pedig fejenként. A nyári szezonban 5 éjszakánál hosszabb tartózkodás esetén az ár 110 €/éjszaka. Télen az ár 120–160 €/éjszaka, a tartózkodás hosszától függően. A Villa Deluxe esetében kis felár alkalmazandó. Aktuális árak: a weboldal „Árak” menüpontja."
+    },
+    "price-includes": {
+      "question": "Mit tartalmaz az ár?",
+      "answer": "A villa teljes bérlése, Wi-Fi, parkoló, üdülőhelyi illeték. Kandallófa — 10 €/zsák, kérésre. A síbérletek és az étkezés nem szerepelnek az árban."
+    },
+    "check-in-out": {
+      "question": "Mikor van a bejelentkezés és a kijelentkezés?",
+      "answer": "Bejelentkezés 15:00 után, kijelentkezés 11:00-ig. A késői kijelentkezés ingyenes, amennyiben lehetséges — kérdezzen rá a foglaláskor."
+    },
+    "holiday-pricing": {
+      "question": "Vannak-e ünnepi árak?",
+      "answer": "Igen — karácsonykor, újévkor, húsvétkor és a februári szünet idején különleges feltételek érvényesek, és esetenként minimális tartózkodási idő is előírható. Kérjük, vegye fel velünk a kapcsolatot, vagy foglaláskor ellenőrizze a naptárat."
+    },
+    "min-nights": {
+      "question": "Van-e minimális éjszakaszám?",
+      "answer": "Az alacsony szezonban gyakran nincs minimális tartózkodási idő. A csúcsidőszakokban (december–január, februári szünet) 3–5 éjszaka tartózkodás lehet előírva. A pontos szabályokat a naptárban találja meg."
+    },
+    "deluxe-difference": {
+      "question": "Mi a különbség a Villa Deluxe esetében?",
+      "answer": "Ugyanaz az elrendezés — 2 hálószoba, 2 fürdőszoba, kandalló, grillező —, de nagyobb figyelmet fordítottak a részletekre és a hangulatra. Az ár nyáron +10 €/éjszaka, télen pedig +20 €/éjszaka a standard villákhoz képest."
+    },
+    "max-guests": {
+      "question": "Hányan tudnak aludni egy nyaralóban?",
+      "answer": "A villában legfeljebb 6 vendég szállhat meg. Nagyobb csoportok számára két villát is lefoglalhatnak — vegyék fel velünk a kapcsolatot a kombinált foglalásról."
+    },
+    "payment": {
+      "question": "Hogyan kell kifizetni a foglalást?",
+      "answer": "A foglalási és kiegészítő fizetési feltételeket a visszaigazoláskor kapja meg. Banki átutalást fogadunk el; az adatokat a kérelem benyújtását követően e-mailben küldjük meg."
+    },
+    "cancel-policy": {
+      "question": "Mi a visszautasításra vonatkozó szabályzat?",
+      "answer": "A lemondási feltételek a „Szabályzat” részben, valamint a foglalás visszaigazolásakor megkötött szerződésben szerepelnek. Téli foglalások esetén utazási biztosítás megkötését javasoljuk."
+    },
+    "firewood": {
+      "question": "Van fa a kandallóhoz?",
+      "answer": "Igen — 10 € zsákonként, érkezés előtt vagy a bejelentkezéskor előzetesen igényelhető. Minden villában van egy fatüzelésű kandalló a nappaliban."
+    },
+    "pets-home": {
+      "question": "Engedélyezik-e a háziállatok tartását?",
+      "answer": "A háziállatokra vonatkozó szabályok az évszaktól függnek — kérjük, foglalás előtt érdeklődjön. A területre nem léphetnek be be nem jelentett vendégek."
+    },
+    "distance-home": {
+      "question": "Milyen messze vannak a nyaralók Pamporovótól?",
+      "answer": "2 km-re az üdülőhely központjától és a felvonóktól — autóval körülbelül 5–7 perc. Cím: Raykovski Livadi, Pamporovo üdülőhely."
+    },
+    "three-villas": {
+      "question": "Mindhárom nyaralót ki kell bérelnem?",
+      "answer": "Nem — csak egy villát bérelnek a társaságuk számára. A három villa ugyanazon a címen található, de teljesen különálló házakról van szó, saját bejárattal."
+    },
+    "vip-program": {
+      "question": "Van-e kedvezmény a visszatérő vendégek számára?",
+      "answer": "Igen — a VIP-program egy éven belül három tartózkodás után 10%-os kedvezményt biztosít, valamint – amennyiben lehetséges – korai bejelentkezést és késői kijelentkezést is."
+    },
+    "offers": {
+      "question": "Vannak-e akciók és ajánlatok?",
+      "answer": "Szezonális ajánlatokat teszünk közzé (pl. családi sínyaralás, „fizessen 9-et, maradjon 10 éjszakát”). Tekintse meg a kezdőlap „Ajánlatok” menüpontját, vagy iratkozzon fel a hírekre a Kapcsolat menüpont alatt."
+    }
+  },
+  "pamporovo": {
+    "where-is-pamporovo": {
+      "question": "Hol található Pamporovo?",
+      "answer": "Pamporovo egy üdülőhely a Rodop-hegységben, Szmolyan megyében, körülbelül 1650 m tengerszint feletti magasságban. A legközelebbi nagyváros Smolyan (kb. 15 km). Szófiától kb. 240 km-re fekszik (3–3,5 óra autóval)."
+    },
+    "pistes-length": {
+      "question": "Hány kilométernyi sípálya van Pamporovóban?",
+      "answer": "A Pamporovo síterep több mint 37 km jelölt pályát kínál minden nehézségi szinten — a kezdőknek szóló zöld pályáktól a haladóknak szóló fekete pályákig. A „Stenata” pálya az üdülőhely szimbóluma, és éjszakai síelésre is lehetőséget kínál."
+    },
+    "night-skiing": {
+      "question": "Lehet-e éjszaka autózni Pamporovóban?",
+      "answer": "Igen. A „Stenata” (2. számú) pálya kivilágított az éjszakai síeléshez — a szezonban általában 17:30 és 22:00 között. Látogatás előtt ellenőrizzék az aktuális menetrendet a pamporovo.me oldalon."
+    },
+    "best-beginner-pistes": {
+      "question": "Melyik sípályák alkalmasak a kezdő síelők számára?",
+      "answer": "A 6. számú „Pamporovo (Turisztikai)” pálya a leghosszabb és a legkevésbé meredek (3,3 km) — ideális az első lesiklásokhoz. A zöld kerülőpályák (1A-as) és a kék pályák (7-es, 8-as, 10-es) szintén jó választás családok számára."
+    },
+    "lift-tickets": {
+      "question": "Mennyibe kerülnek a sífelvonó-bérletek Pamporovóban?",
+      "answer": "A síbérletek árai minden szezonban frissülnek. Az aktuális napi, félnapi és heti bérleteket a hivatalos üzemeltetők teszik közzé a pamporovo.me oldalon. A szállást külön kell lefoglalni – a síbérletek nem szerepelnek a villa bérleti díjában."
+    },
+    "when-ski-season": {
+      "question": "Mikor van a síelési szezon Pamporovóban?",
+      "answer": "Általában decembertől március–áprilisig, a hóviszonyoktól függően. A pályák körülbelül 90%-a rendelkezik mesterséges hóágyúzással, ami meghosszabbítja a szezont. A téli nyaraló bérlésre januárban és februárban van a legnagyobb kereslet."
+    },
+    "summer-activities": {
+      "question": "Mit lehet csinálni Pamporovóban nyáron?",
+      "answer": "Ökológiai túraútvonalak, hegyikerékpározás, lovaglás, kötélpályák, gomba- és gyógynövénygyűjtés, barlanglátogatások és autentikus falvak (Shiroka Laka, Gela). A régió ideális hely családi nyaralásokhoz a síidényen kívül."
+    },
+    "caves-nearby": {
+      "question": "Melyik barlangok találhatók Pamporovo közelében?",
+      "answer": "A Jagodinszka-barlang (kb. 30 km), az Ördög-szurdok (a Tesni-sziklák közelében), Uhlovitsa és más helyek. A legtöbb helyre vízi túra szükséges – vigyenek magukkal meleg ruhát, és foglaljanak időpontot a főszezonban."
+    },
+    "shiroka-luka": {
+      "question": "Milyen messze van a Shiroka Luka Pamporovótól?",
+      "answer": "A Sziroka Laka építészeti rezervátum körülbelül 20 km-re fekszik Pamporovótól — autóval körülbelül 30 percnyire. Érdemes összekötni a látogatást a Rozheni kolostor megtekintésével és a Rozhenről nyíló kilátások megcsodálásával."
+    },
+    "where-to-sleep": {
+      "question": "Hol aludjak Pamporovóban?",
+      "answer": "Választhatnak az üdülőhely központjában található szállodák és a zajtól távol eső önálló villák között. A Pamporovo Villa 3 magánvillát kínál a Raykovski Livadi területén — 2 km-re a központtól, kandallóval, grillezővel, villánként legfeljebb 6 vendég számára, 110 €/éjszaka áron."
+    },
+    "hotel-vs-villa": {
+      "question": "Szálloda vagy villa Pamporovóban – melyik a jobb választás?",
+      "answer": "A szálloda ideális rövid, főzés nélküli tartózkodásra. A villa különösen családok és csoportok számára vonzó: egy egész ház csak az Önöké, kandallóval, grillezővel, parkolóval, valamint 4–6 vendég esetén alacsonyabb áron fejenként. A Pamporovo Villa 2 km-re fekszik a sípályáktól."
+    },
+    "villa-price": {
+      "question": "Mennyibe kerül egy nyaraló bérlése Pamporovóban?",
+      "answer": "A Pamporovo Villa esetében az árak 110 €/éjszaka-tól kezdődnek egy teljes villa esetében (legfeljebb 6 vendég) — nyári szezonban. A téli szállásárak az időszaktól függően magasabbak. Az aktuális árakat a pamporovovilla.com/#pricing vagy a /rent oldalon találja."
+    },
+    "villa-amenities": {
+      "question": "Mit tartalmaz a Pamporovo Villa-nál történő nyaraló bérlése?",
+      "answer": "A három villa mindegyike 2 hálószobával, 2 fürdőszobával, teljesen felszerelt konyhával, fatüzelésű kandallóval, a teraszon található grillezővel, Wi-Fi-vel és ingyenes parkolóval rendelkezik. Az egész villát bérelheti – más vendégekkel nem kell megosztania."
+    },
+    "fireplace-villa": {
+      "question": "Van-e kandallós nyaraló Pamporovóban?",
+      "answer": "Igen — a Pamporovo Villa-ban található mindhárom nyaraló (Villa 1, Villa 2, Villa Deluxe) nappalijában fa kandalló van. Ideális a sípályákról való hazatérés utáni téli estékre vagy az őszi hegyi hétvégékre."
+    },
+    "group-villa": {
+      "question": "Lehet-e bérelni egy 6 fős nyaralót Pamporovóban?",
+      "answer": "Igen. A Pamporovo Villa-nál található minden villa legfeljebb 6 vendéget fogad. Foglaljon egy villát a társaságának, vagy kombináljon két villát nagyobb csoportok számára — lépjen kapcsolatba velünk telefonon a +359 879 501 660 számon."
+    },
+    "couple-villa": {
+      "question": "Alkalmas-e a nyaraló két fő számára?",
+      "answer": "Igen — a párok gyakran bérelnek ki egy egész villát, hogy nagyobb magánszférájuk legyen és kandallójuk is legyen. A villa teljes árát fizetik, nem fejenként; két fő esetén az egy főre eső ár magasabb lesz, de cserébe egy saját házat kapnak."
+    },
+    "distance-to-slopes": {
+      "question": "Milyen messze vannak a nyaralók a sípályáktól?",
+      "answer": "A Pamporovo Villa a Raykovski Livadi-nál található — körülbelül 2 km-re az üdülőhely központjától és a felvonóktól. Autóval 5–7 perc alatt elérhető a sípályák parkolója. A szezonban ingyenes transzfer is közlekedik (ellenőrizze a menetrendet)."
+    },
+    "parking": {
+      "question": "Van parkoló a nyaralók mellett?",
+      "answer": "Igen — ingyenes magánparkoló minden Pamporovo Villa-beli villa mellett. Kényelmes téli síeléshez sífelszereléssel, valamint gyermekes családok számára is."
+    },
+    "how-to-book": {
+      "question": "Hogyan foglalhatok villát Pamporovóban?",
+      "answer": "Online a pamporovovilla.com/#booking oldalon — válasszon ki egy villát, adja meg a dátumokat, és töltse ki az űrlapot. Vagy hívja a +359 879 501 660 számot, illetve írjon a pamporovovilla@gmail.com címre."
+    },
+    "minimum-stay": {
+      "question": "Van-e minimális tartózkodási idő a bérlésnél?",
+      "answer": "Főszezonban (karácsony, újév, februári szünet) előfordulhat, hogy legalább 3–5 éjszakai tartózkodást kell foglalni. A pontos feltételekről a foglaláskor a naptárban tájékozódhat, vagy vegye fel velünk a kapcsolatot."
+    },
+    "pets": {
+      "question": "Megengedettek-e a háziállatok?",
+      "answer": "Foglalás előtt vegye fel velünk a kapcsolatot — a háziállatokra vonatkozó szabályok az évszaktól és a nyaralótól függően változhatnak. Ne feltételezze automatikusan, hogy engedélyezett."
+    },
+    "wifi": {
+      "question": "Van Wi-Fi a nyaralókban?",
+      "answer": "Igen — mindhárom Pamporovo Villa-villában elérhető a vezeték nélküli internet."
+    },
+    "winter-rental": {
+      "question": "Lehet-e nyaralót bérelni téli sínyaralásra?",
+      "answer": "Igen — a nyaralók egész évben nyitva tartanak. A tél a legnépszerűbb időszak: kandalló, a sípályák közelsége, valamint egy egész ház bérlése a család vagy a barátok számára. Januárra és februárra érdemes minél hamarabb lefoglalni."
+    },
+    "summer-rental": {
+      "question": "Érdemes-e nyáron nyaralót bérelni Pamporovóban?",
+      "answer": "Igen — a nyári árak alacsonyabbak (110 €/éjszaka-tól), és a régió öko-túraútvonalakat, hűvös időt és barlangokat kínál. A grillezővel ellátott terasz és a hegyi levegő miatt a nyaraló ideális hely családi nyaraláshoz."
+    },
+    "drive-from-sofia": {
+      "question": "Hogyan juthatok el Szófiából Pamporovóba?",
+      "answer": "A Plovdiv felé vezető autópályán, majd Asenovgradon és Smolyanon keresztül — körülbelül 240 km, 3–3,5 óra. Télen vigyen magával hóláncot, vagy tájékozódjon a Rodop-hegységben uralkodó útviszonyokról."
+    },
+    "snow-guarantee": {
+      "question": "Minden szezonban van hó Pamporovóban?",
+      "answer": "Az üdülőhely hatékony mesterséges hóágyúzási rendszerrel rendelkezik — ez a pályák mintegy 90%-át fedi le. A természetes hó gyakran már decembertől rendelkezésre áll, de a biztonság kedvéért az üzemeltetők az egész szezonban fenntartják a hóágyúzási rendszert."
+    },
+    "restaurants": {
+      "question": "Vannak éttermek a Raykovski Livadi közelében?",
+      "answer": "Pamporovo központjában (2 km) éttermek, pizzériák és szupermarket található. A nyaralóban teljesen felszerelt konyha van — sok vendég saját maga főz, vagy ezt az üdülőhelyen eltöltött vacsorákkal kombinálja."
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "eyebrow": "Pachete exclusive",
+  "title": "Oferte de top",
+  "subtitle": "Pachete selectate pentru vacanțe la schi și de vară, la preț special. Perioadele sunt limitate — iar cele mai bune date se epuizează primele.",
+  "loading": "Se încarcă...",
+  "empty": "În prezent nu există oferte active.",
+  "oldPrice": "prețul vechi",
+  "includes": "Include",
+  "bookOffer": "Rezervă oferta",
+  "badge": "Ofertă",
+  "claimCta": "Profită de această ocazie",
+  "footer": "Ofertele sunt valabile pentru perioadele menționate · pentru rezervări — secțiunea „Rezervă”",
+  "items": {
+    "ski-family": {
+      "title": "Vacanță de schi în familie",
+      "period": "01.03.2026 – 31.03.2026",
+      "description": "Oferiți-le copiilor o amintire pe care o vor păstra toată viața. O vilă întreagă doar pentru familia dumneavoastră, la câteva minute de pârtii — iar seara, șemineul și o cină caldă vă așteaptă acasă.",
+      "includes": [
+        "Închiriere a întregii vile pentru o noapte (până la 6 persoane)",
+        "Parcare gratuită chiar lângă ușă",
+        "Wi-Fi gratuit",
+        "Taxa de stațiune inclusă"
+      ]
+    },
+    "pay-9-stay-10": {
+      "title": "Plătiți 9, beneficiați de 10 nopți de cazare",
+      "period": "01.06.2026 – 10.07.2026",
+      "description": "Vara la munte este cu totul altfel — dimineți răcoroase, zile lungi petrecute în natură și seri pe terasă, cu grătar. Rămâneți mai mult timp la noi și oferiți-vă o noapte de cazare din partea noastră.",
+      "includes": [
+        "A 10-a noapte de cazare este complet gratuită (dacă se plătesc 9 nopți)",
+        "Vilă întreagă: 2 dormitoare, 2 băi, bucătărie și sufragerie",
+        "Terasă cu grătar și șemineu pe lemne"
+      ]
+    }
+  }
+}

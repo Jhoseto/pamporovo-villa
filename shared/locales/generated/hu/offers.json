@@ -1,0 +1,36 @@
+{
+  "eyebrow": "Exkluzív csomagok",
+  "title": "Legjobb ajánlatok",
+  "subtitle": "Kiválasztott sí- és nyári üdülési csomagok különleges áron. Az időszakok korlátozottak – és a legjobb időpontok hamar elfogynak.",
+  "loading": "Betöltés...",
+  "empty": "Jelenleg nincsenek aktív ajánlatok.",
+  "oldPrice": "régi ár",
+  "includes": "Tartalmazza",
+  "bookOffer": "Foglald le az ajánlatot",
+  "badge": "Ajánlat",
+  "claimCta": "Használd ki",
+  "footer": "Az ajánlatok a megadott időszakokra érvényesek · foglaláshoz lásd a „Foglalás” részt",
+  "items": {
+    "ski-family": {
+      "title": "Családi sínyaralás",
+      "period": "2026. március 1. – 2026. március 31.",
+      "description": "Ajándékozzon a gyerekeknek egy olyan élményt, amelyre egész életükben emlékezni fognak. Egy egész villa kizárólag a családjuk számára, pár percre a sípályáktól — este pedig a kandalló és egy meleg vacsora várja Önöket otthon.",
+      "includes": [
+        "A teljes villa bérlése éjszakára (legfeljebb 6 fő számára)",
+        "Ingyenes parkoló a bejárat mellett",
+        "Ingyenes Wi-Fi",
+        "A szállásdíj tartalmazza a helyi idegenforgalmi adót"
+      ]
+    },
+    "pay-9-stay-10": {
+      "title": "Fizessen 9 éjszakát, és 10 éjszakát maradhat",
+      "period": "2026. június 1. – 2026. július 10.",
+      "description": "A hegyekben a nyár másmilyen — hűvös reggelek, hosszú napok a természetben és esték a teraszon, grillezéssel. Maradjon nálunk tovább, és ajándékozzon magának egy éjszakai szállást tőlünk!",
+      "includes": [
+        "A 10. éjszaka teljesen ingyenes (9 fizetett éjszaka esetén)",
+        "Teljes villa: 2 hálószoba, 2 fürdőszoba, konyha és nappali",
+        "Veranda grillezővel és fatüzelésű kandallóval"
+      ]
+    }
+  }
+}

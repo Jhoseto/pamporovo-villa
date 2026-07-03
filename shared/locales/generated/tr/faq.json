@@ -1,1 +1,178 @@
-{}
+{
+  "home": {
+    "book-online": {
+      "question": "Bir villayı çevrimiçi olarak nasıl rezerve edebilirim?",
+      "answer": "pamporovovilla.com'te “Rezervasyon” bölümünü seçin, bir villayı (Villa 1, Villa 2 veya Villa Deluxe) işaretleyin, tarihleri girin ve formu doldurun. Onay e-posta ile gönderilecektir. Sorularınız için: +359 879 501 660."
+    },
+    "price-per-villa": {
+      "question": "Bir villanın kirası ne kadar?",
+      "answer": "Fiyatlar kişi başına değil, tüm villa için (en fazla 6 konuk) geçerlidir. Yaz sezonu, 5 geceden uzun konaklamalarda gecelik 110 €’dan başlar. Kış sezonu ise konaklama sayısına göre gecelik 120–160 € arasındadır. Villa Deluxe için küçük bir ek ücret uygulanır. Güncel fiyatlar: web sitesindeki “Fiyatlar” bölümü."
+    },
+    "price-includes": {
+      "question": "Fiyata neler dahildir?",
+      "answer": "Tüm villanın kiralanması, Wi-Fi, otopark, tatil köyü ücreti. Şömine odunu — talep üzerine 10 €/torba. Teleferik kartları ve yemekler fiyata dahil değildir."
+    },
+    "check-in-out": {
+      "question": "Giriş ve çıkış saatleri ne zaman?",
+      "answer": "Giriş saat 15:00'ten sonra, çıkış saat 11:00'e kadar. Mümkün olduğu durumlarda geç çıkış ücretsizdir — rezervasyon sırasında lütfen sorunuz."
+    },
+    "holiday-pricing": {
+      "question": "Tatil günlerinde farklı fiyatlar geçerli mi?",
+      "answer": "Evet — Noel, Yeni Yıl, Paskalya ve Şubat tatilleri için özel koşullar ve bazen de minimum konaklama süresi geçerlidir. Bizimle iletişime geçin veya rezervasyon sırasında takvimi kontrol edin."
+    },
+    "min-nights": {
+      "question": "Asgari konaklama sayısı var mı?",
+      "answer": "Düşük sezonda genellikle minimum konaklama süresi yoktur. Yoğun dönemlerde (Aralık–Ocak, Şubat tatili) 3–5 gecelik konaklama şartı getirilebilir. Kesin kuralları takvimde görebilirsiniz."
+    },
+    "deluxe-difference": {
+      "question": "Villa Deluxe’ün farkı nedir?",
+      "answer": "Aynı yerleşim planı — 2 yatak odası, 2 banyo, şömine, barbekü — ancak detaylara ve atmosfere daha fazla özen gösterilmiştir. Fiyat, standart villalara kıyasla yazın gecelik +10 €, kışın ise gecelik +20 € daha yüksektir."
+    },
+    "max-guests": {
+      "question": "Bir villada kaç kişi kalabilir?",
+      "answer": "Villada en fazla 6 konuk konaklayabilir. Daha büyük gruplar için iki villa rezervasyonu yapabilirsiniz — kombinasyon seçenekleri hakkında bizimle iletişime geçin."
+    },
+    "payment": {
+      "question": "Rezervasyonun ödemesi nasıl yapılır?",
+      "answer": "Depozito ve ek ödeme koşullarını, rezervasyon onayında alacaksınız. Banka havalesi kabul ediyoruz; ayrıntılar, talebinizin ardından e-posta ile gönderilecektir."
+    },
+    "cancel-policy": {
+      "question": "İade durumunda uygulanan politika nedir?",
+      "answer": "İptal koşulları, “Politika” bölümünde ve rezervasyon onayı sırasında sunulan sözleşmede belirtilmiştir. Kış aylarında yapılan rezervasyonlarda seyahat sigortası yaptırmanızı tavsiye ederiz."
+    },
+    "firewood": {
+      "question": "Şömine için odun var mı?",
+      "answer": "Evet — çanta başına 10 €, varıştan önce veya check-in sırasında talep edilmesi halinde. Her villanın oturma odasında odun şöminesi bulunmaktadır."
+    },
+    "pets-home": {
+      "question": "Evcil hayvanlara izin veriyor musunuz?",
+      "answer": "Evcil hayvan politikası mevsime göre değişir — lütfen rezervasyon yapmadan önce sorunuz. Tesis alanına kayıtlı olmayan misafirler kabul edilmez."
+    },
+    "distance-home": {
+      "question": "Pamporovo'daki yazlık evler ne kadar uzakta?",
+      "answer": "Tatil beldesinin merkezine ve teleferiklere 2 km uzaklıkta — arabayla yaklaşık 5–7 dakika. Adres: Raykovski Livadi, Pamporovo Tatil Belde."
+    },
+    "three-villas": {
+      "question": "Üç villayı da kiralamam mı gerekiyor?",
+      "answer": "Hayır — grubunuz için sadece bir villa kiralıyorsunuz. Üçü de aynı adreste bulunuyor, ancak her biri kendi girişi olan tamamen ayrı evlerdir."
+    },
+    "vip-program": {
+      "question": "Tekrar gelen misafirler için indirim var mı?",
+      "answer": "Evet — VIP programı, bir yıl içinde üç konaklamadan sonra %10 indirim sağlar; ayrıca, imkân olduğu durumlarda erken giriş/geç çıkış imkânı da sunar."
+    },
+    "offers": {
+      "question": "Herhangi bir promosyon veya teklif var mı?",
+      "answer": "Sezonluk tekliflerimizi yayınlıyoruz (örn. aile kayak tatili, “9 gece ödeyin, 10 gece kalın”). Ana sayfadaki “Teklifler” bölümüne göz atın veya iletişim sayfasından haber bültenine abone olun."
+    }
+  },
+  "pamporovo": {
+    "where-is-pamporovo": {
+      "question": "Pamporovo nerede bulunur?",
+      "answer": "Pamporovo, Rodop Dağları’nda, Smolyan ilinde, deniz seviyesinden yaklaşık 1650 m yükseklikte bulunan bir tatil beldesidir. En yakın büyük şehir Smolyan'dır (yaklaşık 15 km). Sofya'dan yaklaşık 240 km uzaklıktadır (arabayla 3–3,5 saat)."
+    },
+    "pistes-length": {
+      "question": "Pamporovo'da kaç kilometre kayak pisti var?",
+      "answer": "Pamporovo kayak merkezi, yeni başlayanlar için yeşil pistlerden uzmanlar için siyah pistlere kadar her zorluk seviyesinde 37 km’den fazla işaretlenmiş pist sunmaktadır. “Steната” pisti, tesisin simgesi olup gece kayak imkanı da sunmaktadır."
+    },
+    "night-skiing": {
+      "question": "Pamporovo'da gece sürüşü var mı?",
+      "answer": "Evet. „Duvar“ (No. 2) pisti, gece kayak için aydınlatılmıştır — sezon boyunca genellikle 17:30 ile 22:00 saatleri arasında. Ziyaret etmeden önce pamporovo.me adresinden güncel programı kontrol edin."
+    },
+    "best-beginner-pistes": {
+      "question": "Hangi pistler yeni başlayan kayakçılar için uygundur?",
+      "answer": "6 numaralı „Pamporovo (Turistik)“ pisti, en uzun ve en hafif eğimli olanıdır (3,3 km) — ilk kayışlar için idealdir. Yeşil baypaslar (1A) ve mavi pistler 7, 8 ve 10 numaralı pistler de aileler için iyi bir seçimdir."
+    },
+    "lift-tickets": {
+      "question": "Pamporovo’da teleferik biletleri ne kadar?",
+      "answer": "Teleferik kartlarının fiyatları her sezon güncellenir. Güncel günlük, yarım günlük ve haftalık kart fiyatları, pamporovo.me adresindeki resmi operatörler tarafından yayınlanmaktadır. Konaklamanızı ayrı olarak rezerve edin — teleferik kartları villa kirasına dahil değildir."
+    },
+    "when-ski-season": {
+      "question": "Pamporovo'da kayak sezonu ne zaman başlar?",
+      "answer": "Genellikle Aralık ayından Mart–Nisan aylarına kadar, kar durumuna bağlı olarak. Pistlerin yaklaşık %90'ında yapay kar sistemi bulunmakta olup, bu da sezonu uzatmaktadır. Kış aylarında villa kiralama, en çok Ocak ve Şubat aylarında rağbet görmektedir."
+    },
+    "summer-activities": {
+      "question": "Yaz aylarında Pamporovo'da neler yapılabilir?",
+      "answer": "Doğa yürüyüşü parkurları, dağ bisikleti, binicilik, macera parkları, mantar ve şifalı bitki toplama, mağara gezileri ve otantik köyler (Şiroka Laka, Gela). Bu bölge, kayak sezonu dışında aile tatilleri için idealdir."
+    },
+    "caves-nearby": {
+      "question": "Pamporovo'nun yakınında hangi mağaralar var?",
+      "answer": "Yagodinska Mağarası (yaklaşık 30 km), Şeytan Boğazı (Tesnite Kayalıkları yakınında), Uhlovitsa ve diğerleri. Çoğu yer için su turu gereklidir — sıcak giysiler giyin ve yoğun sezonda randevu alın."
+    },
+    "shiroka-luka": {
+      "question": "Shiroka Luka, Pamporovo’dan ne kadar uzakta?",
+      "answer": "Şiroka Laka Mimari Koruma Alanı, Pamporovo'dan yaklaşık 20 km uzaklıkta — arabayla yaklaşık 30 dakika mesafededir. Burayı, Rozen Manastırı'nı ziyaret etmek ve Rozen'den manzarayı seyretmekle birleştirin."
+    },
+    "where-to-sleep": {
+      "question": "Pamporovo'da nerede kalabilirim?",
+      "answer": "Tatil beldesinin merkezindeki oteller ile gürültüden uzak müstakil villalar arasında seçim yapabilirsiniz. Pamporovo Villa, Raykovski Livadi'te 3 özel villa sunmaktadır — merkezden 2 km uzaklıkta, şömine ve barbekü olanakları ile villa başına en fazla 6 konuk kapasiteli, gecelik 110 €'dan başlayan fiyatlarla."
+    },
+    "hotel-vs-villa": {
+      "question": "Pamporovo'da otel mi, villa mı — hangisi daha iyi?",
+      "answer": "Otel, yemek pişirmeye gerek kalmadan kısa süreli konaklamalar için idealdir. Villa, aileler ve gruplar için daha caziptir: sadece size ait bir ev, şömine, barbekü, otopark ve 4–6 konuk olduğunda kişi başı daha düşük fiyat. Pamporovo Villa, kayak pistlerine 2 km uzaklıktadır."
+    },
+    "villa-price": {
+      "question": "Pamporovo'da bir villanın kirası ne kadar?",
+      "answer": "Pamporovo Villa'da fiyatlar yaz sezonunda tüm villa için (en fazla 6 konuk) gecelik 110 €'dan başlar. Kış aylarında konaklama ücretleri döneme göre daha yüksektir. pamporovovilla.com/#pricing veya /rent sayfalarından güncel fiyatları inceleyin."
+    },
+    "villa-amenities": {
+      "question": "Pamporovo Villa’da bir villanın kiralanması neleri içerir?",
+      "answer": "Üç villanın her birinde 2 yatak odası, 2 banyo, tam donanımlı mutfak, odun şöminesi, verandada barbekü, Wi-Fi ve ücretsiz otopark bulunmaktadır. Villanın tamamını kiralıyorsunuz — diğer konuklarla paylaşım yok."
+    },
+    "fireplace-villa": {
+      "question": "Pamporovo'da şömineli bir yazlık var mı?",
+      "answer": "Evet — Pamporovo Villa’daki üç villanın hepsinde (Villa 1, Villa 2, Villa Deluxe) oturma odasında odun şöminesi bulunmaktadır. Kayak pistlerinden sonra geçireceğiniz kış akşamları ya da dağda geçireceğiniz sonbahar hafta sonları için ideal."
+    },
+    "group-villa": {
+      "question": "Pamporovo'da 6 kişilik bir villa kiralayabilir miyiz?",
+      "answer": "Evet. Pamporovo Villa'daki her villa en fazla 6 misafir ağırlayabilir. Grubunuz için bir villa rezerve edin veya daha büyük gruplar için iki villayı birleştirin — +359 879 501 660 numaralı telefondan bize ulaşın."
+    },
+    "couple-villa": {
+      "question": "Bu yazlık iki kişi için uygun mu?",
+      "answer": "Evet — çiftler genellikle daha fazla mahremiyet ve şömine için bütün bir villayı kiralarlar. Kişi başına değil, villanın toplam ücretini ödersiniz; iki kişi olduğunda kişi başına düşen fiyat daha yüksek olur, ancak karşılığında özel bir ev elde edersiniz."
+    },
+    "distance-to-slopes": {
+      "question": "Villalar kayak pistlerinden ne kadar uzakta?",
+      "answer": "Pamporovo Villa, Raykovski Livadi'de yer almaktadır — tatil beldesinin merkezi ve teleferiklere yaklaşık 2 km uzaklıktadır. Araba ile pistlerin otoparkına 5–7 dakikada ulaşabilirsiniz. Sezon boyunca ücretsiz servis de mevcuttur (sefer saatlerini kontrol edin)."
+    },
+    "parking": {
+      "question": "Villaların yanında otopark var mı?",
+      "answer": "Evet — Pamporovo Villa’daki her villanın yanında ücretsiz özel otopark bulunmaktadır. Kışın kayak ekipmanlarıyla seyahat edenler ve çocuklu aileler için çok kullanışlıdır."
+    },
+    "how-to-book": {
+      "question": "Pamporovo'da bir villa rezervasyonu nasıl yapılır?",
+      "answer": "pamporovovilla.com/#booking adresinden çevrimiçi olarak — bir villa ve tarihleri seçin ve formu doldurun. Ya da +359 879 501 660 numaralı telefonu arayın veya pamporovovilla@gmail.com adresine mesaj gönderin."
+    },
+    "minimum-stay": {
+      "question": "Kiralama için asgari konaklama süresi var mı?",
+      "answer": "Yoğun sezonda (Noel, Yeni Yıl, Şubat tatili) en az 3–5 gecelik konaklama şartı getirilebilir. Kesin koşullar için rezervasyon sırasında takvimi kontrol edin veya bizimle iletişime geçin."
+    },
+    "pets": {
+      "question": "Evcil hayvanlara izin veriliyor mu?",
+      "answer": "Rezervasyon yapmadan önce iletişime geçin — evcil hayvan politikası mevsime ve villaya göre değişiklik gösterebilir. Otomatik olarak izin verildiğini varsaymayın."
+    },
+    "wifi": {
+      "question": "Villalarda Wi-Fi var mı?",
+      "answer": "Evet — Pamporovo Villa’daki üç villanın hepsinde kablosuz internet mevcuttur."
+    },
+    "winter-rental": {
+      "question": "Kışın kayak tatili için bir villa kiralayabilir miyim?",
+      "answer": "Evet — villalar yıl boyunca hizmet vermektedir. Kış, en çok rağbet gören mevsimdir: şömine, kayak pistlerine yakınlık ve aileniz ya da arkadaşlarınız için tüm evi kiralama imkânı. Ocak ve Şubat ayları için erken rezervasyon yaptırın."
+    },
+    "summer-rental": {
+      "question": "Pamporovo'da yaz aylarında bir villa kiralamaya değer mi?",
+      "answer": "Evet — yaz fiyatları daha düşük (110 €/gece'den itibaren) ve bölge doğa yürüyüşü rotaları, serin hava ve mağaralar sunuyor. Barbekü terası ve dağ havası, bu villayı aile tatili için ideal kılıyor."
+    },
+    "drive-from-sofia": {
+      "question": "Sofya'dan Pamporovo'ya nasıl gidebilirim?",
+      "answer": "Plovdiv'e giden otoyoldan, ardından Asenovgrad ve Smolyan üzerinden — yaklaşık 240 km, 3–3,5 saat. Kışın zincir takın ya da Rodop Dağları'ndaki yol durumunu kontrol edin."
+    },
+    "snow-guarantee": {
+      "question": "Pamporovo'da her sezon kar yağar mı?",
+      "answer": "Tatil beldesi, pistlerin yaklaşık %90’ını kapsayan güçlü bir yapay kar sistemine sahiptir. Doğal kar genellikle Aralık ayından itibaren mevcuttur, ancak her ihtimale karşı işletmeciler sezon boyunca sistemi çalışır durumda tutmaktadır."
+    },
+    "restaurants": {
+      "question": "Raykovski Livadi'nin yakınında restoran var mı?",
+      "answer": "Pamporovo'nun merkezinde (2 km) lokantalar, pizzacılar ve bir süpermarket bulunmaktadır. Villada tam donanımlı bir mutfak vardır — birçok misafir kendi yemeklerini pişiriyor ya da bunu tatil beldesinde akşam yemekleriyle birleştiriyor."
+    }
+  }
+}

@@ -1,18 +1,21 @@
 {
   "hero": {
-    "eyebrow": "Smolyan · Pamporovo · 3 vile de închiriat",
+    "eyebrow": "Bulgaria · Smolyan · Pamporovo · 3 vile de închiriat",
     "titleLine1": "Pamporovo",
     "titleLine2": "Vilă",
     "subtitle": "Vă oferim trei vile independente situate în mijlocul pădurilor fermecătoare din Pamporovo. Confortul de acasă la munte, pe tot parcursul anului.",
     "ctaExperience": "Începe plimbarea",
-    "ctaBook": "Rezervă",
-    "scrollHint": "Explorați"
+    "ctaBook": "Rezervare",
+    "scrollHint": "Explorați",
+    "scrollDown": "Mai jos",
+    "scrollToExperience": "Continuă plimbarea"
   },
   "gallery": {
     "eyebrow": "Galerie",
     "title": "Cele trei vile în imagini",
     "subtitle": "Explorați fiecare vilă — interiorul, atmosfera confortabilă și priveliștile montane",
-    "pickVilla": "Alegeți o vilă"
+    "pickVilla": "Alegeți o vilă",
+    "photoCount": "{count} fotografii"
   },
   "contact": {
     "eyebrow": "Contact",
@@ -30,8 +33,77 @@
   "location": {
     "eyebrow": "Locație",
     "title": "La un pas de toate, departe de zgomot",
-    "subtitle": "stațiunea Pamporovo, zona Райковски ливади — ascunse în pădurea de pini",
+    "subtitle": "stațiunea Pamporovo, zona Raykovski Livadi — ascunse în pădurea de pini",
     "directions": "Găsește-ne",
     "info": "Pamporovo este cea mai însorită stațiune montană din Bulgaria — situată la 1 650 m, în inima Munților Rodopi. Iarna oferă 37 km de pârtii perfect întreținute și schi nocturn, iar vara — trasee ecologice, cascade și un aer cu proprietăți curative. Iar vilele noastre sunt refugiul vostru liniștit în mijlocul tuturor acestor frumuseți."
-  }
+  },
+  "widgets": {
+    "weatherLoading": "Încărcarea timpului",
+    "weatherUnavailable": "Serviciul este temporar indisponibil",
+    "feelsLike": "Se simte ca și cum",
+    "today": "Astăzi",
+    "humidity": "Umiditate",
+    "wind": "Vânt",
+    "callUs": "Sunați",
+    "galleryVillaTabs": "Alegerea unei vile din galerie"
+  },
+  "about": {
+    "eyebrow": "Despre noi",
+    "title": "Casa dumneavoastră, situată la înălțime în Munții Rodopi",
+    "subtitle": "Trei vile, o singură grijă — să vă simțiți ca acasă",
+    "blockPlace": "Locul",
+    "blockHome": "Acasă",
+    "blockHosts": "Gazdele",
+    "intro": "Ne bucurăm că ne-ați descoperit. Vă punem la dispoziție trei vile independente, ascunse în pădurea de pini de la Raykovski Livadi — acolo unde zgomotul orașului rămâne departe, iar ziua începe cu cântecul păsărilor și parfumul rășinii.",
+    "details": "Villa 1, Villa 2 și Villa Deluxe sunt amenajate exact așa cum ne-am dori să arate propria noastră casă la munte — cu lemn natural, țesături moi și acele mici detalii care conferă unui loc o atmosferă caldă. Aici nu sunteți doar oaspeți; simțiți-vă ca acasă.",
+    "hosts": "În calitate de gazde, suntem mereu la îndemână. Vă ajutăm să organizați surprize și sărbători, vă îndrumăm către cele mai frumoase pârtii și trasee, vă sugerăm unde puteți mânca bine — iar dacă aveți nevoie de ceva, nu ezitați să ne sunați. Scopul nostru este unul singur: să plecați cu dorința de a vă întoarce.",
+    "layout": "Fiecare vilă are două niveluri și dispune de două dormitoare, două băi, o bucătărie complet utilată cu zonă de luat masa și un living spațios cu șemineu pe lemne. În exterior vă așteaptă o terasă cu vedere panoramică spre Munții Rodopi și o verandă cu grătar — locul unde se petrec cele mai frumoase seri.",
+    "imageForestAlt": "O vilă în pădurea de pini de la Raykovski Livadi",
+    "imageInteriorAlt": "Interior cu perete din piatră și lemn",
+    "badgeLocation": "Raykovski Livadi",
+    "badgeResort": "Pamporovo"
+  },
+  "amenities": {
+    "eyebrow": "Facilități",
+    "title": "Tot ce este necesar pentru un sejur liniștit",
+    "subtitle": "Ne-am gândit la detaliile mărunte, pentru ca voi să vă puteți concentra exclusiv pe vacanță"
+  },
+  "pricing": {
+    "eyebrow": "Prețuri",
+    "title": "Prețuri clare, fără surprize",
+    "subtitle": "Închiriere a întregii vile pe noapte — pentru până la 6 oaspeți. Cu cât stați mai mult, cu atât este mai avantajos"
+  },
+  "booking": {
+    "eyebrow": "Rezervare",
+    "title": "Rezervați-vă locul în munți",
+    "subtitle": "Alegeți o vilă și datele de sejur, lăsați-ne datele dvs. — iar noi vă vom contacta personal pentru confirmare"
+  },
+  "policy": {
+    "eyebrow": "Este bine să știți",
+    "title": "Câteva cuvinte înainte de a veni",
+    "subtitle": "Reguli scurte și clare, pentru ca toată lumea să se simtă în largul său și să se simtă bine"
+  },
+  "faq": {
+    "eyebrow": "Rezervare · prețuri",
+    "title": "Întrebări frecvente",
+    "subtitle": "Întrebări privind închirierea, prețurile, cazarea și rezervarea — înainte de a completa formularul."
+  },
+  "distances": [
+    {
+      "value": "2 km",
+      "label": "Până în centrul stațiunii Pamporovo"
+    },
+    {
+      "value": "10 km",
+      "label": "Din Smolyan"
+    },
+    {
+      "value": "85 km",
+      "label": "Din Plovdiv"
+    },
+    {
+      "value": "220 km",
+      "label": "Din Sofia"
+    }
+  ]
 }

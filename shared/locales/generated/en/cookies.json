@@ -1,0 +1,19 @@
+{
+  "bannerTitle": "Cookies and Privacy",
+  "bannerBody": "We use cookies that are necessary for the website to function. With your consent, we enable Google Analytics and Google Maps.",
+  "policyLink": "Cookie Policy",
+  "settings": "Settings",
+  "accept": "I accept",
+  "manage": "Cookie Management",
+  "modalTitle": "Cookie Settings",
+  "modalBody": "Select which categories to allow. Essential cookies are always enabled.",
+  "necessary": "Required",
+  "necessaryDesc": "These cookies save your cookie preferences and ensure the basic functionality of the website.",
+  "analytics": "Analytical",
+  "analyticsDesc": "Google Analytics 4 — anonymous statistics on website visits and user behavior.",
+  "functional": "Functional / Third Parties",
+  "functionalDesc": "Google Maps — an interactive map showing the locations of the vacation homes.",
+  "reject": "Only the essentials",
+  "save": "Save your selection",
+  "acceptAll": "I accept everyone"
+}

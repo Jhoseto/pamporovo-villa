@@ -1,0 +1,36 @@
+{
+  "eyebrow": "Exklusive Pakete",
+  "title": "Top-Angebote",
+  "subtitle": "Ausgewählte Pauschalangebote für Ski- und Sommerurlaube zum Sonderpreis. Die Zeiträume sind begrenzt – und die besten Termine sind schnell vergriffen.",
+  "loading": "Wird geladen...",
+  "empty": "Derzeit gibt es keine aktiven Angebote.",
+  "oldPrice": "alter Preis",
+  "includes": "Umfasst",
+  "bookOffer": "Das Angebot buchen",
+  "badge": "Angebot",
+  "claimCta": "Nutze die Gelegenheit",
+  "footer": "Die Angebote gelten für die angegebenen Zeiträume · zur Buchung – Abschnitt „Buchen“",
+  "items": {
+    "ski-family": {
+      "title": "Skiurlaub mit der Familie",
+      "period": "01.03.2026 – 31.03.2026",
+      "description": "Schenken Sie Ihren Kindern eine Erinnerung, die sie ihr ganzes Leben lang begleiten wird. Eine ganze Ferienvilla nur für Ihre Familie, nur wenige Minuten von den Pisten entfernt – und am Abend erwarten Sie zu Hause der Kamin und ein warmes Abendessen.",
+      "includes": [
+        "Vermietung der gesamten Villa für eine Übernachtung (bis zu 6 Personen)",
+        "Kostenlose Parkplätze direkt vor der Tür",
+        "Kostenloses WLAN",
+        "Kurtaxe inbegriffen"
+      ]
+    },
+    "pay-9-stay-10": {
+      "title": "Zahlen Sie für 9 Übernachtungen, bleiben Sie 10 Nächte",
+      "period": "01.06.2026 – 10.07.2026",
+      "description": "Der Sommer in den Bergen ist etwas ganz Besonderes – kühle Morgenstunden, lange Tage in der Natur und Abende auf der Terrasse mit Grill. Bleiben Sie länger bei uns und gönnen Sie sich eine Übernachtung auf unsere Kosten.",
+      "includes": [
+        "Die 10. Übernachtung ist völlig kostenlos (bei 9 bezahlten Übernachtungen)",
+        "Ganze Villa: 2 Schlafzimmer, 2 Badezimmer, Küche und Wohnzimmer",
+        "Veranda mit Grill und Holzkamin"
+      ]
+    }
+  }
+}

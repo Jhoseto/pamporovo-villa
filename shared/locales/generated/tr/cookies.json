@@ -1,0 +1,19 @@
+{
+  "bannerTitle": "Çerezler ve gizlilik",
+  "bannerBody": "Sitenin çalışması için gerekli çerezleri kullanıyoruz. Onayınızla Google Analytics ve Google Maps’i etkinleştiriyoruz.",
+  "policyLink": "Çerez Politikası",
+  "settings": "Ayarlar",
+  "accept": "Kabul ediyorum",
+  "manage": "Çerez Yönetimi",
+  "modalTitle": "Çerez Ayarları",
+  "modalBody": "Hangi kategorileri izin vereceğinizi seçin. Gerekli çerezler her zaman etkindir.",
+  "necessary": "Gerekli",
+  "necessaryDesc": "Çerez tercihleriniz kaydedilir ve web sitesinin temel işleyişi sağlanır.",
+  "analytics": "Analitik",
+  "analyticsDesc": "Google Analytics 4 — web sitesine yapılan ziyaretler ve kullanıcı davranışlarına ilişkin anonim istatistikler.",
+  "functional": "İşlevsel / üçüncü taraflar",
+  "functionalDesc": "Google Haritalar — villaların konumlarını gösteren etkileşimli bir harita.",
+  "reject": "Sadece gerekli olanlar",
+  "save": "Seçimi kaydet",
+  "acceptAll": "Hepsini kabul ediyorum"
+}

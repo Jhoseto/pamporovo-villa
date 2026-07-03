@@ -1,0 +1,479 @@
+{
+  "nav": {
+    "ariaLabel": "Az oldal szakaszai",
+    "intro": "Az üdülőhely",
+    "winter": "Tél",
+    "summer": "Nyár",
+    "landmarks": "A környék",
+    "caves": "Barlangok"
+  },
+  "sticky": {
+    "book": "Foglalás",
+    "rent": "Bérlés · árak"
+  },
+  "ui": {
+    "pisteNumber": "sz.",
+    "pisteName": "Pálya",
+    "difficulty": "Nehézség",
+    "length": "Hossz",
+    "note": "Megjegyzés",
+    "dash": "—",
+    "meters": "m",
+    "route": "Útvonal",
+    "liftType": "Típus",
+    "capacity": "Kapacitás/óra",
+    "capacityPerHour": "Kapacitás/óra"
+  },
+  "difficulty": {
+    "green": "Zöld · kezdők",
+    "blue": "Kék · középfokú",
+    "red": "Piros · haladók",
+    "black": "Fekete · szakértők"
+  },
+  "sections": {
+    "intro": {
+      "eyebrow": "Az üdülőhely",
+      "title": "A Rodopok szíve",
+      "subtitle": "1650 méteres tengerszint feletti magasságban, a Snezhanka-csúcs lábánál — a legrégebbi bolgár síközpont, amelyet 1933-ban alapítottak.",
+      "panoramaAlt": "Pamporovo téli üdülőhely — szállodák és sípályák a Rodop-hegységben",
+      "towerAlt": "A Hófehérke-torony – Pamporovo szimbóluma",
+      "p1": "Két fő síközpont — Studenec és Malina — kapcsolódik a Snezhanka-csúcshoz (1926 m). A sípályák 1400 és 1926 m közötti magasságban helyezkednek el, modern felvonókkal és több mint 80 hóágyúval rendelkeznek.",
+      "p2": "Nyáron az üdülőhely ökoturisztikai központtá válik — jelzett túraútvonalak, kerékpározás, lovaglás és számtalan látnivaló várja az ide látogatókat, mindössze 15–60 perces autóútra Smolyan városától, Shiroka Luka, a Csodálatos hidak és a Nyugati Rodopok földalatti palotái.",
+      "cta": "Foglaljon villát Pamporovóban"
+    },
+    "winter": {
+      "eyebrow": "Tél",
+      "title": "Síterep — sípályák és felvonók",
+      "subtitle": "Több mint 37 km jelzett sí- és snowboardpálya, éjszakai síelés a „Falon” és sífutó pályák",
+      "skiAlt": "Személyszállító felvonó a Snezhanka-csúcsra — a Pamporovo feletti torony",
+      "pistesHeading": "Pályák nehézségi fokozat szerint",
+      "liftsHeading": "Lift és berendezések",
+      "activitiesHeading": "Téli programok"
+    },
+    "summer": {
+      "eyebrow": "Nyár",
+      "title": "Ökológiai túraútvonalak és természet",
+      "subtitle": "A vízesések kanyonja, a szmolyáni tavak, az Orpheus-sziklák — mindössze pár percre az üdülőhelytől",
+      "summerAlt": "Hegyi tó a Rodopokban — nyári öko-túraút Pamporovo közelében",
+      "activitiesHeading": "Nyári programok"
+    },
+    "landmarks": {
+      "eyebrow": "A környék",
+      "title": "Látnivalók és falvak",
+      "subtitle": "Építészeti rezervátumok, csillagvizsgáló, planetárium és hiteles rodópi népkultúra"
+    },
+    "caves": {
+      "eyebrow": "A föld alatti világ",
+      "title": "Barlangok és szurdokok",
+      "subtitle": "A Jagodinszka-barlang, az Ördög-szoros, a Trigradszki-szoros és az Uhloivica — a Nyugati Rodopok kincsei",
+      "footer": "A Pamporovo Villa villák a Raykovski Livadi területén találhatók — ideális kiindulópont téli és nyári kalandokhoz az egész régióban.",
+      "cta": "Nézd meg a szabad időpontokat, és foglalj helyet"
+    }
+  },
+  "attractions": {
+    "canyon-waterfalls": {
+      "title": "A vízesések kanyonja",
+      "distance": "15 km · Smolyan közelében",
+      "duration": "~4 óra · 6 km-es körútvonal",
+      "description": "A Rodop-hegység leglenyűgözőbb öko-túraútvonala — a „Soskovcse” természetvédelmi terület évszázados erdein halad át a Gerzovska folyó mentén. Az útvonalon 46 vízesést számolhatunk össze, köztük a 68 méter magas, gyönyörű „Orpheus” vízesést – amely Bulgária egyik legmagasabb vízesése. A túra csúcspontja egy 1800 méteres magasságban található kilátó, ahonnan kilátás nyílik Szmolyanra és a Rodop-hegység gerinceire.",
+      "highlights": [
+        "46 vízesés",
+        "„Orpheus” vízesés — 68 m",
+        "Évszázados fenyőerdők",
+        "1800 méteres magasságból nyíló panoráma"
+      ]
+    },
+    "smolyan-lakes": {
+      "title": "A szmolyani tavak",
+      "distance": "10 km · a Snezhanka-csúcs alatt",
+      "duration": "~1 óra · könnyű útvonal",
+      "description": "A „Rodopok smaragdszemei” néven ismert természetes tavak lépcsőzetesen helyezkednek el a Snezhanka alatt. Egy könnyű túraútvonal köti össze a Bistro, a Mutno és a Trevisto tavakat, ahol piknikezési és horgászási lehetőségek is vannak. Ideális kirándulás gyermekes családok számára, remekül kombinálható a csúcs megmászásával.",
+      "highlights": [
+        "Természetes hegyi tavak",
+        "Könnyű családi túraútvonal",
+        "Piknikhelyek",
+        "A Snezhanka-csúccsal kombinálható"
+      ]
+    },
+    "nevyastata": {
+      "title": "„A menyasszony” ökoösvény",
+      "distance": "12 km · Smolyan felett",
+      "duration": "~40 perc · 900 m-es ösvény",
+      "description": "Rövid és könnyen járható ösvény egy illatos fenyőerdőn át a Smolyan felett magasodó „Nevyastata” nevű meredek szikla felé. Az egész útvonal mentén kilátóhelyek és pavilonok találhatók, az adrenalinra vágyók számára pedig alpesi kötélpálya vezet át a szakadék felett. A legenda egy leányról szól, aki a szikláról vetette magát a mélybe, hogy megőrizze hitét.",
+      "highlights": [
+        "Panorámás kilátópontok",
+        "Alpesi trolibusz",
+        "A Menyasszony legendája",
+        "Minden korosztály számára elérhető"
+      ]
+    },
+    "orpheus-rocks": {
+      "title": "Orpheusz-sziklák és a Tűk",
+      "distance": "6 km · a Snezhanka-csúcstól",
+      "duration": "~4 óra · könnyű terhelés",
+      "description": "A Snezhanka-csúcsról egy jelzett ösvény vezet délkeleti irányba az Orpheus-sziklák felé — ezek különleges riolit képződmények, ahonnan csodálatos kilátás nyílik a szmolyáni tavakra. A másik irányban található az Iglite-csúcs, ahonnan szintén lélegzetelállító panoráma nyílik. Az útvonal legelőkön és erdőkön halad át, amelyek augusztusban áfonyával tarkítottak.",
+      "highlights": [
+        "Riolit kőzetjelenségek",
+        "Kilátás a tavakra",
+        "Az Iglite-csúcs",
+        "Vad áfonya augusztusban"
+      ]
+    },
+    "shiroka-laka": {
+      "title": "Széles íj",
+      "distance": "16 km · 20 perc autóval",
+      "duration": "",
+      "description": "Építészeti és népművészeti rezervátum — a nemzeti újjászületés korszakából származó, erkélyes házakkal, kőhidakkal és a híres Nemzeti Népművészeti Iskolával rendelkező falu. A rodopi duda a Sziroka Laka lelke: itt rendezik meg a „Pesponedelnik” fesztivált, kuker-játékokkal és autentikus népművészettel. Kihagyhatatlan megálló minden Pamporovo-ba látogató számára.",
+      "highlights": [
+        "A nemzeti újjászületés kori építészet",
+        "Dudásiskola",
+        "Néprajzi Múzeum",
+        "Kukerski Fesztivál"
+      ]
+    },
+    "rozhen-observatory": {
+      "title": "NAO „Rozhen”",
+      "distance": "18 km · 25 perc autóval",
+      "duration": "",
+      "description": "A Balkán-félsziget legnagyobb csillagászati obszervatóriuma, amely 1750 méteres magasságban fekszik a Roženi-mezők felett. Egy 2 méteres távcsővel rendelkezik, amely Délkelet-Európa legnagyobbjai közé tartozik. Nappali látogatásokat szerveznek előadásokkal, az éjszakai megfigyelések (előzetes foglalás alapján) pedig felejthetetlen élményt nyújtanak. A közelben találhatók a Roženski-mezők, ahol a legendás nemzeti fesztivált rendezik.",
+      "highlights": [
+        "2 méteres távcső",
+        "Látogatások beszélgetéssel",
+        "Éjszakai megfigyelések",
+        "A Roženski-ünnepség a közelben"
+      ]
+    },
+    "wonderful-bridges": {
+      "title": "A csodálatos hidak",
+      "distance": "42 km · 1 óra autóval",
+      "duration": "",
+      "description": "Óriási márvány sziklaívek, amelyeket az Erküpriya folyó évezredek alatt vájt ki. A nagy híd 96 m hosszú és 45 m magas – alatta egy ösvény halad át, és az akusztika egyszerűen hihetetlen. A kis híd hossza 60 m. A helyszín a 100 legnépszerűbb nemzeti turisztikai látványosság közé tartozik, és kiválóan ötvözhető egy ebéddel Zabardo faluban.",
+      "highlights": [
+        "45 méter magas boltív",
+        "100 nemzeti látnivaló",
+        "Ösvény a hidak alatt",
+        "Közeli menedékház és pihenőhely"
+      ]
+    },
+    "smolyan-town": {
+      "title": "Szmoljan — planetárium és múzeumok",
+      "distance": "15 km · 20 perc autóval",
+      "duration": "",
+      "description": "A Hófehérke-hegy lábánál fekvő megyei székhely őrzi a Rodopok szellemét: A planetárium Bulgária legnagyobbja, látványos csillagászati előadásokkal, míg a „Stoyu Shishkov” Regionális Történeti Múzeum a hegyvidéki életmódról, viseletekről és zenéről mesél. A Raikovo és Ustovo nevű ősi városrészek a nemzeti újjászületés korszakából származó házakkal és hangulatos vendéglőkkel varázsolják el a látogatókat.",
+      "highlights": [
+        "Bulgária legnagyobb planetáriuma",
+        "„Stoyu Shishkov” RIM",
+        "Művészeti galéria",
+        "Rajkovo és Ustovo városrészek"
+      ]
+    },
+    "momchilovtsi": {
+      "title": "Momčilovci",
+      "distance": "25 km · 30 perc autóval",
+      "duration": "",
+      "description": "Egy festői rodópi falu 1200 méteres tengerszint feletti magasságban, amely lakóinak hosszú élettartamáról és házi joghurtjáról híres, amely egészen Kínáig eljutott. Panorámás ösvények, minden dombon kápolnák és autentikus, vendégszerető vendéglők. Augusztusban a falu ad otthont a joghurtfesztiválnak.",
+      "highlights": [
+        "A hosszú élet faluja",
+        "A joghurt ünnepe",
+        "Panorámás kápolnák",
+        "Hiteles mechanizmusok"
+      ]
+    },
+    "gela-village": {
+      "title": "Gela — Orpheusz faluja",
+      "distance": "22 km · 30 perc autóval",
+      "duration": "",
+      "description": "A Rodop-hegység egyik legrégebbi falva, amelyet a mitikus Orpheus szülőhelyének tartanak. 1500 méteres tengerszint feletti magasságban, végtelen rétek között fekvő Gela minden augusztus első vasárnapján otthont ad a Nemzetközi Dudafesztiválnak – ekkor több száz dudás hangja visszhangzik a hegyekben. Innen indulnak az ösvények a Turlata és a Gela csúcsok felé.",
+      "highlights": [
+        "Orpheusz szülőföldje",
+        "Gajdár-fesztivál augusztusban",
+        "Trák szentélyek",
+        "Hegyi túraútvonalak kezdete"
+      ]
+    },
+    "yagodina-cave": {
+      "title": "A Jagodinská-barlang",
+      "distance": "50 km · 1 óra 15 perc autóval",
+      "duration": "45 perces túra · 1100 m-es útvonal",
+      "description": "Bulgária harmadik leghosszabb barlangja — 10,5 km-es, három szinten elterülő járatok a Buynovsko-szurdokban. A túraútvonal elhalad a leopárdbőr, a barlangi gyöngyök, a cseppkövek és a híres „Újévi terem” mellett, ahol a föld alatt ünneplik az újévet. Az állandó hőmérséklet 6 °C – még augusztusban is érdemes kabátot vinni.",
+      "highlights": [
+        "10,5 km-es alagutak",
+        "Barlangi gyöngyszemek",
+        "Újévi terem",
+        "A Buinovsko-szurdok az út mentén"
+      ]
+    },
+    "devils-throat": {
+      "title": "Az Ördög-torok",
+      "distance": "55 km · 1 óra 20 perc autóval",
+      "duration": "30 perces túra",
+      "description": "Egy mély barlang, amelyben a Balkán legmagasabb földalatti vízesése található – 42 m –, és amelynek „Zúgó termében” a Trigradska folyó dübörögve zuhan a föld alá. A legenda szerint Orfeusz innen ereszkedett le az alvilágba Eurüdikéért. Semmi, ami a vízbe esik, nem kerül fel a felszínre — ez egy rejtély, amelyet a tudósok még mindig vizsgálnak.",
+      "highlights": [
+        "42 méter mély földalatti vízesés",
+        "A zúgó terem",
+        "Orpheusz legendája",
+        "301 lépcsőfok a vízesés mellett"
+      ]
+    },
+    "trigrad-gorge": {
+      "title": "A Trigradi-szoros",
+      "distance": "53 km · 1 óra 15 perc autóval",
+      "duration": "",
+      "description": "Egy kanyon meredek márványfalakkal, amelyek 250 méter magasságig emelkednek a Trigradska folyó felett — az út szó szerint kanyarog a sziklák között. Ritka madárfajok, például a sziklamászó madár otthona, valamint a Ördög-szurdok és Trigrad falu felé vezető kapu. Bulgária egyik leglátványosabb országútja – minden kanyar fotózásra érdemes kilátást nyújt.",
+      "highlights": [
+        "Akár 250 m-es falak",
+        "Drámai hegyi út",
+        "Ritka madarak",
+        "A „Ördögtorok” nevű helyszínnel kombinálható"
+      ]
+    },
+    "uhlovitsa-cave": {
+      "title": "Uhlovica-barlang",
+      "distance": "32 km · 45 perc autóval",
+      "duration": "30 perces túra",
+      "description": "Bulgária egyik legszebb barlangja, Mogilica falu közelében. Híres a kőből álló „vízeséseiről” — a befagyott vízre emlékeztető kalcitképződményekből álló kaszkádokról —, valamint a boltíveken található korallokról. A bejáratig egy festői ösvény vezet az erdőn keresztül (kb. 30 perc sétára a parkolótól).",
+      "highlights": [
+        "Kővízesések",
+        "Korallképződmények",
+        "4 földalatti tó",
+        "Az Agushev-család kúriái közelében"
+      ]
+    }
+  },
+  "stats": [
+    {
+      "value": "1650 m",
+      "label": "az üdülőhely tengerszint feletti magassága"
+    },
+    {
+      "value": "1926 m",
+      "label": "a Snezhanka-csúcs — a síterep legmagasabb pontja"
+    },
+    {
+      "value": "37+ km",
+      "label": "sípályák minden nehézségi szinten"
+    },
+    {
+      "value": "1933",
+      "label": "alapítva — Bulgária legrégebbi síközpontja"
+    },
+    {
+      "value": "~120",
+      "label": "napos napok a téli szezonban"
+    },
+    {
+      "value": "90%",
+      "label": "a mesterséges hóval ellátott sípályákról"
+    }
+  ],
+  "pistes": [
+    {
+      "name": "A víztározó (a Kis fal)",
+      "note": ""
+    },
+    {
+      "name": "Bypass — A kis fal",
+      "note": ""
+    },
+    {
+      "name": "A fal",
+      "note": "Pamporovo emblémája — az Európai Kupa versenyeinek házigazdája. Éjszakai síelés 17:30-tól 22:00-ig."
+    },
+    {
+      "name": "Péter Petrov építész (Európai)",
+      "note": ""
+    },
+    {
+      "name": "Hófehérke",
+      "note": ""
+    },
+    {
+      "name": "Hófehérke",
+      "note": ""
+    },
+    {
+      "name": "Málna",
+      "note": "A leghosszabb piros pálya — a csúcstól a Malina síközpontig."
+    },
+    {
+      "name": "Malina-kerülőút",
+      "note": ""
+    },
+    {
+      "name": "Pamporovo (turisztikai)",
+      "note": "Hosszú és enyhén lejtős — ideális az első lesiklásokhoz és a családi síeléshez."
+    },
+    {
+      "name": "Orlovec",
+      "note": ""
+    },
+    {
+      "name": "Perelik (Déli)",
+      "note": ""
+    },
+    {
+      "name": "A szmolyani tavak",
+      "note": ""
+    },
+    {
+      "name": "Deljovo-völgy (Damka)",
+      "note": ""
+    },
+    {
+      "name": "Kartola",
+      "note": ""
+    },
+    {
+      "name": "Árak 1",
+      "note": ""
+    },
+    {
+      "name": "Árak 2",
+      "note": ""
+    },
+    {
+      "name": "Fun Slope / Border Cross",
+      "note": "Hullámokkal, felüljárókkal és freestyle-figurákkal tarkított pálya."
+    }
+  ],
+  "skiLifts": [
+    {
+      "route": "A táblák — a Snezhanka-csúcs",
+      "type": "Személyszállító felvonó",
+      "note": "A leghosszabb pálya — 453 m szintkülönbséget leküzd."
+    },
+    {
+      "route": "1. síközpont (autóbuszpályaudvar) — Studenec",
+      "type": "4-üléses felvonó",
+      "note": ""
+    },
+    {
+      "route": "Studenec — Snezhanka-csúcs",
+      "type": "4-üléses felvonó",
+      "note": "A fő összeköttetés a csúcshoz és a fekete pályákhoz."
+    },
+    {
+      "route": "Malina — Snezhanka-csúcs",
+      "type": "Személyszállító felvonó",
+      "note": ""
+    },
+    {
+      "route": "A szmolyani tavak — a Snezhanka-csúcs",
+      "type": "Személyszállító felvonó",
+      "note": ""
+    },
+    {
+      "route": "Malina — Studenec",
+      "type": "Személyszállító felvonó",
+      "note": ""
+    }
+  ],
+  "liftFacts": [
+    {
+      "route": "A táblák — a Snezhanka-csúcs",
+      "type": "Személyszállító felvonó"
+    },
+    {
+      "route": "1. síközpont — Studenec",
+      "type": "4-üléses felvonó"
+    },
+    {
+      "route": "Studenec — Snezhanka-csúcs",
+      "type": "4-üléses felvonó"
+    },
+    {
+      "route": "Malina — Snezhanka-csúcs",
+      "type": "Személyszállító felvonó"
+    },
+    {
+      "route": "A szmolyani tavak — a Snezhanka-csúcs",
+      "type": "Személyszállító felvonó"
+    },
+    {
+      "route": "Malina — Studenec",
+      "type": "Személyszállító felvonó"
+    }
+  ],
+  "skiExtras": [
+    "A létesítmények összkapacitása — óránként több mint 13 000 síelő",
+    "Sí- és snowboardiskolák engedéllyel rendelkező oktatókkal és gyermekparkokkal",
+    "Éjszakai vezetés a „Stenata-2” pályán (17:30 – 22:00)",
+    "2 sífutó pálya: Snezhanka 14. számú (25 km, Mugla faluig) és 15. számú „Ardashlú” (7 km, Stoykite faluig)",
+    "Funpark snow tubinggal, boardercrossszal és freestyle-akadályokkal",
+    "Ruhásszekrények, étkészletek és sífelszerelés-tárolók Studenecben és Malinában"
+  ],
+  "winterActivities": [
+    {
+      "title": "Síelés és snowboard",
+      "description": "37+ km sípálya minden szintű síelő számára, modern felvonók és garantált hó decembertől áprilisig."
+    },
+    {
+      "title": "Éjszakai vezetés",
+      "description": "A kivilágított Fal-2 22:00 óráig nyitva tart — ez egy felejthetetlen élmény."
+    },
+    {
+      "title": "Sífutás",
+      "description": "25 km jelzett túraútvonal a havas erdőkön át Mugla és Stoykite felé."
+    },
+    {
+      "title": "Hótalpak és séták",
+      "description": "Vezetett túrák hótalpakon az Orpheus-sziklákhoz és a szmolyáni tavakhoz."
+    },
+    {
+      "title": "Síiskolák gyerekeknek",
+      "description": "Minősített oktatók, gyermekparkok sífelvonókkal és rengeteg türelem."
+    },
+    {
+      "title": "Síelés után",
+      "description": "A sípályáktól csupán néhány méterre található vendéglők, ahol rodópi specialitásokat, élő zenét és forralt bort kínálnak."
+    }
+  ],
+  "summerActivities": [
+    {
+      "title": "Hegyi kerékpározás",
+      "description": "A Snezhanka-csúcsról induló, jelzett MTB-útvonalak – a könnyű erdei ösvényektől a haladóknak szóló lejtőkig."
+    },
+    {
+      "title": "Ökológiai ösvények",
+      "description": "A vízesések kanyonja, a Menyasszony, a szmolyáni tavak — tucatnyi útvonal egy órányi távolságra."
+    },
+    {
+      "title": "Kötélpályás park és szórakoztató attrakciók",
+      "description": "Kalandpark kötélpályákkal, mászófallal és kötélpályával kicsiknek és nagyoknak egyaránt."
+    },
+    {
+      "title": "Lovaglás",
+      "description": "A környék lovasbázisai túrákat kínálnak a Rozen és a Stoykite réteken keresztül."
+    },
+    {
+      "title": "Gomba- és gyógynövénygyűjtés",
+      "description": "Mantarok, áfonya és több mint 300 gyógynövényfaj — a Rodopok egy igazi élő gyógyszertár."
+    },
+    {
+      "title": "Fotózás és sztárok",
+      "description": "A ködös tenger felett felkelő nap, az asztrofotózáshoz ideális sötét égbolt, valamint a közeli „Rozhen” Nemzeti Obszervatórium."
+    }
+  ],
+  "lists": {
+    "eco": [
+      "kanyonok és vízesések",
+      "smolyan-tavak",
+      "nevyastata",
+      "orpheus-rocks"
+    ],
+    "landmarks": [
+      "shiroka-laka",
+      "rozhen-obszervatórium",
+      "csodálatos hidak",
+      "Smolyan város",
+      "Momchilovtsi",
+      "gela-falu"
+    ],
+    "caves": [
+      "yagodina-barlang",
+      "ördögtorok",
+      "Trigrad-szurdok",
+      "uhlovitsa-barlang"
+    ]
+  }
+}

@@ -2,17 +2,17 @@
   "routes": {
     "/": {
       "title": "Pamporovo Villa | 3 chaty k pronájmu v Pamporově, Bulharsko",
-      "description": "Pamporovo Villa — tři samostatné vily k pronájmu v letovisku Pamporovo, lokalita Райковски ливади. 2 ložnice, krb, gril, až pro 6 hostů. Rezervujte přímo.",
+      "description": "Pamporovo Villa — tři samostatné vily k pronájmu v letovisku Pamporovo, lokalita Raykovski Livadi. 2 ložnice, krb, gril, až pro 6 hostů. Rezervujte přímo.",
       "keywords": "vila k pronájmu v Pamporově, Pamporovo Villa, pronájem vily v Pamporově"
     },
     "/rent": {
       "title": "Pronájem vily v Pamporově | 3 vily od 110 €/noc — Pamporovo Villa",
-      "description": "Oficiální stránka pro pronájem: 3 samostatné vily v Pamporovu. Celá vila pro vaši skupinu – krb, gril, 2 km od centra. Rezervujte online.",
+      "description": "Oficiální stránka pro pronájem: 3 samostatné vily v Pamporově. Celá vila pro vaši skupinu – krb, gril, 2 km od centra. Rezervujte online.",
       "keywords": "pronájem vily v Pamporovu, vila v Pamporovu, dovolená v Rodopech"
     },
     "/pamporovo": {
       "title": "Pamporovo – kompletní průvodce po letovisku a okolí | Pamporovo Villa",
-      "description": "Více než 37 km sjezdovek, 6 vleků, ekologické stezky, jeskyně a zajímavá místa. Kde se ubytovat – 3 vily od 110 € za noc na Райковски ливади.",
+      "description": "Více než 37 km sjezdovek, 6 vleků, ekologické stezky, jeskyně a zajímavosti. Kde se ubytovat – 3 vily od 110 € za noc na Raykovski Livadi.",
       "keywords": "Průvodce po Pamporově, lyžování v Bulharsku, výlet do Rodop"
     }
   }

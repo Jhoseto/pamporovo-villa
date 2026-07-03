@@ -1,0 +1,23 @@
+{
+  "checkInLabel": "Cazare",
+  "checkOutLabel": "Plecare",
+  "checkIn": "După ora 15:00",
+  "checkOut": "Până la ora 11:00",
+  "stayHeading": "Cazare și ședere",
+  "stayIntro": "Ne dorim ca șederea dumneavoastră să fie plăcută și fără griji — de aceea ne străduim ca totul să fie simplu și transparent.",
+  "avoidHeading": "Vă rugăm să evitați",
+  "footer": "Vă mulțumim că ați ales Pamporovo Villa. Grija pentru casă este reciprocă — având grijă de ea, o menținem frumoasă pentru fiecare oaspete care va urma. Aveți vreo întrebare? Suntem întotdeauna la dispoziția dumneavoastră.",
+  "highlights": [
+    "Primim oaspeți pe tot parcursul anului, 24 de ore din 24, 7 zile din 7. La cazare, vă rugăm să prezentați un act de identitate.",
+    "Vă grăbiți în ultima zi? Plecarea târzie, după ora 11:00, este gratuită, în măsura în care avem posibilitatea.",
+    "Lemn pentru șemineu — 10 € pe sac, la cerere sau la cazare.",
+    "Ore de liniște: 23:00 – 07:00, pentru liniștea tuturor. Fumatul este permis doar pe cele două terase (amendă de 50 € în interior).",
+    "Nu sunt permise animalele de companie. Pentru siguranța dumneavoastră, pe teren există un sistem de supraveghere video."
+  ],
+  "prohibited": [
+    "Importul de aparate electrice și pe gaz de uz personal",
+    "Cazarea oaspeților neînregistrați",
+    "Mutarea mobilierului între camere",
+    "Un comportament care tulbură liniștea vilelor învecinate"
+  ]
+}

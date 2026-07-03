@@ -1,7 +1,5 @@
 import { ExternalLink, Star } from "lucide-react";
 import { GBP } from "@shared/gbpLinks";
-import { gbpUi } from "@shared/gbpUi";
-import { SOURCE_LOCALE } from "@shared/i18n/locales";
 import { useTranslation } from "@/contexts/LocaleContext";
 import { trackGoogleReviewClick } from "@/lib/analytics/events";
 import { cn } from "@/lib/utils";
@@ -13,8 +11,7 @@ type GoogleReviewCtaProps = {
 };
 
 export function GoogleReviewCta({ source, variant = "banner", className }: GoogleReviewCtaProps) {
-  const { locale, t } = useTranslation();
-  const gbp = gbpUi(locale);
+  const { t } = useTranslation();
 
   const banner = {
     eyebrow: t("gbp.banner.eyebrow", "Google отзиви"),
@@ -41,7 +38,7 @@ export function GoogleReviewCta({ source, variant = "banner", className }: Googl
         )}
       >
         <Star className="h-4 w-4 fill-[var(--gold)] text-[var(--gold)]" />
-        {locale === SOURCE_LOCALE ? t("gbp.reviewLink", gbp.reviewLink) : gbp.reviewLink}
+        {t("gbp.reviewLink", "Оставете отзив в Google")}
         <ExternalLink className="h-3.5 w-3.5 opacity-60" />
       </a>
     );
@@ -70,7 +67,7 @@ export function GoogleReviewCta({ source, variant = "banner", className }: Googl
           className="premium-btn inline-flex items-center gap-2 px-5 py-2.5 text-sm"
         >
           <Star className="h-4 w-4 fill-current" />
-          {t("gbp.reviewLink", gbp.reviewLink)}
+          {t("gbp.reviewLink", "Оставете отзив в Google")}
           <ExternalLink className="h-3.5 w-3.5 opacity-70" />
         </a>
         <a

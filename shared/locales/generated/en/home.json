@@ -1,37 +1,109 @@
 {
   "hero": {
-    "eyebrow": "Смолян · Пампорово · 3 вили под наем",
+    "eyebrow": "Bulgaria · Smolyan · Pamporovo · 3 vacation rentals",
     "titleLine1": "Pamporovo",
     "titleLine2": "Villa",
-    "subtitle": "Предлагаме ви три самостоятелни вили сред магическите гори на Пампорово. Домашен уют в планината, през цялата година.",
-    "ctaExperience": "Започни разходката",
-    "ctaBook": "Резервирай",
-    "scrollHint": "Разгледайте"
+    "subtitle": "We offer you three private villas nestled in the enchanting forests of Pamporovo. A cozy, home-like atmosphere in the mountains, all year round.",
+    "ctaExperience": "Start the walk",
+    "ctaBook": "Reservation",
+    "scrollHint": "Take a look",
+    "scrollDown": "Down",
+    "scrollToExperience": "Continue on the walk"
   },
   "gallery": {
-    "eyebrow": "Галерия",
-    "title": "Трите вили в кадри",
-    "subtitle": "Разгледайте всяка вила — интериор, уют и планински гледки",
-    "pickVilla": "Изберете вила"
+    "eyebrow": "Gallery",
+    "title": "The Three Villas in Pictures",
+    "subtitle": "Take a look at each villa—the interior, the cozy atmosphere, and the mountain views",
+    "pickVilla": "Select a villa",
+    "photoCount": "{count} photos"
   },
   "contact": {
-    "eyebrow": "Контакт",
-    "title": "Да поговорим за вашата почивка",
-    "subtitle": "Имате въпрос или специално желание? Звъннете или ни пишете — отговаряме лично и с удоволствие"
+    "eyebrow": "Contact",
+    "title": "Let's talk about your vacation",
+    "subtitle": "Do you have a question or a special request? Give us a call or send us a message—we’ll respond personally and with pleasure"
   },
   "reviews": {
-    "eyebrow": "Отзиви",
-    "title": "Какво казват нашите гости",
-    "subtitle": "Истински впечатления от хора, които вече са спали край боровете ни",
-    "formTitle": "Споделете вашия опит",
-    "submit": "Изпрати отзив",
-    "submitting": "Изпращане..."
+    "eyebrow": "Reviews",
+    "title": "What Our Guests Say",
+    "subtitle": "Real experiences from people who have already camped among our pine trees",
+    "formTitle": "Share your experience",
+    "submit": "Submit a review",
+    "submitting": "Sending..."
   },
   "location": {
-    "eyebrow": "Локация",
-    "title": "На крачка от всичко, далеч от шума",
-    "subtitle": "к.к. Пампорово, местност Райковски ливади — сгушени в боровата гора",
-    "directions": "Навигирай до нас",
-    "info": "Пампорово е най-слънчевият планински курорт в България — на 1 650 м в сърцето на Родопите. Зимата носи 37 км перфектно поддържани писти и нощно каране, а лятото — еко пътеки, водопади и въздух, който лекува. А нашите вили са вашата тиха база сред всичко това."
-  }
+    "eyebrow": "Location",
+    "title": "Just a stone's throw from everything, yet far from the noise",
+    "subtitle": "Pamporovo Resort, Raykovski Livadi area — nestled in the pine forest",
+    "directions": "Find Us",
+    "info": "Pamporovo is the sunniest mountain resort in Bulgaria—at 1,650 m in the heart of the Rhodopes. Winter brings 37 km of perfectly groomed slopes and night skiing, while summer offers nature trails, waterfalls, and healing fresh air. And our villas are your peaceful retreat in the midst of it all."
+  },
+  "widgets": {
+    "weatherLoading": "Time Loading",
+    "weatherUnavailable": "Time is temporarily unavailable",
+    "feelsLike": "It feels like",
+    "today": "Today",
+    "humidity": "Humidity",
+    "wind": "Wind",
+    "callUs": "Give us a call",
+    "galleryVillaTabs": "Selecting a villa from the gallery"
+  },
+  "about": {
+    "eyebrow": "About Us",
+    "title": "Your home high in the Rhodopes",
+    "subtitle": "Three villas, one goal—to make you feel right at home",
+    "blockPlace": "The Place",
+    "blockHome": "At home",
+    "blockHosts": "The Hosts",
+    "intro": "We’re glad you’ve found us. We offer three detached villas nestled in the pine forest of Raykovski Livadi—where the noise of the city remains far away, and the day begins with birdsong and the scent of pine resin.",
+    "details": "Villa 1, Villa 2 and Villa Deluxe are furnished just as we would like our own mountain home to look—with real wood, soft textiles, and those little details that make a place feel warm. Here, you’re not just guests; make yourself at home.",
+    "hosts": "As your hosts, we’re just a stone’s throw away. We help plan surprises and celebrations, point you toward the best slopes and trails, and recommend great places to eat—and if you need anything, just give us a call. We have one goal: for you to leave wanting to come back.",
+    "layout": "Each villa is on two levels and features two bedrooms, two bathrooms, a fully equipped kitchen with a dining area, and a large living room with a wood-burning fireplace. Outside, you’ll find a terrace with panoramic views of the Rhodope Mountains and a veranda with a barbecue—the perfect spot for the best evenings.",
+    "imageForestAlt": "A villa in the pine forest at Raykovski Livadi",
+    "imageInteriorAlt": "Interior with a stone wall and wood",
+    "badgeLocation": "Raykovski Livadi",
+    "badgeResort": "Pamporovo"
+  },
+  "amenities": {
+    "eyebrow": "Amenities",
+    "title": "Everything you need for a relaxing stay",
+    "subtitle": "We've taken care of the little things so you can focus solely on your vacation"
+  },
+  "pricing": {
+    "eyebrow": "Prices",
+    "title": "Clear prices, no surprises",
+    "subtitle": "Entire villa rental per night — for up to 6 guests. The longer you stay, the better the deal"
+  },
+  "booking": {
+    "eyebrow": "Reservation",
+    "title": "Reserve your spot in the mountains",
+    "subtitle": "Choose a villa and your dates, provide your information—and we'll contact you personally to confirm"
+  },
+  "policy": {
+    "eyebrow": "It's good to know",
+    "title": "A Few Words Before You Arrive",
+    "subtitle": "Simple and clear rules to ensure a peaceful and pleasant experience for everyone"
+  },
+  "faq": {
+    "eyebrow": "Booking · prices",
+    "title": "Frequently asked questions",
+    "subtitle": "Answers on rental, prices, check-in, and booking — before you fill in the form."
+  },
+  "distances": [
+    {
+      "value": "2 km",
+      "label": "To the center of Pamporovo"
+    },
+    {
+      "value": "10 km",
+      "label": "From Smolyan"
+    },
+    {
+      "value": "85 km",
+      "label": "From Plovdiv"
+    },
+    {
+      "value": "220 km",
+      "label": "From Sofia"
+    }
+  ]
 }

@@ -1,0 +1,23 @@
+{
+  "checkInLabel": "Ubytování",
+  "checkOutLabel": "Odchod",
+  "checkIn": "Po 15:00",
+  "checkOut": "Do 11:00",
+  "stayHeading": "Ubytování a pobyt",
+  "stayIntro": "Chceme, aby váš pobyt byl příjemný a bezstarostný – proto se snažíme, aby vše bylo jednoduché a přehledné.",
+  "avoidHeading": "Prosíme vás, abyste se tomu vyhýbali",
+  "footer": "Děkujeme, že jste si vybrali Pamporovo Villa. Péče o dům je vzájemná – tím, že se o něj staráme, udržujeme ho v dobrém stavu pro každého dalšího hosta. Máte nějaký dotaz? Jsme vám vždy k dispozici.",
+  "highlights": [
+    "Hosty přijímáme po celý rok, 24 hodin denně, 7 dní v týdnu. Při ubytování si prosím přineste doklad totožnosti.",
+    "Spěcháte poslední den? Pozdní odhlášení po 11:00 je zdarma, pokud to naše možnosti dovolí.",
+    "Dřevo do krbu — 10 € za pytel, na vyžádání nebo při příjezdu.",
+    "Klidové hodiny: 23:00 – 07:00, v zájmu klidu všech. Kouření je povoleno pouze na obou terasách (pokuta 50 € za kouření v interiéru).",
+    "Domácí mazlíčci nejsou povoleni. Pro vaši bezpečnost je areál vybaven kamerovým systémem."
+  ],
+  "prohibited": [
+    "Dovoz osobních elektrických a plynových spotřebičů",
+    "Ubytování neregistrovaných hostů",
+    "Přesun nábytku mezi místnostmi",
+    "Chování, které narušuje klid sousedních vil"
+  ]
+}

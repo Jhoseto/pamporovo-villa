@@ -1,0 +1,19 @@
+{
+  "bannerTitle": "Sütik és adatvédelem",
+  "bannerBody": "A weboldal működéséhez szükséges cookie-kat használunk. Az Ön hozzájárulásával aktiváljuk a Google Analytics és a Google Maps szolgáltatásokat.",
+  "policyLink": "Sütikre vonatkozó irányelvek",
+  "settings": "Beállítások",
+  "accept": "Elfogadom",
+  "manage": "A cookie-k kezelése",
+  "modalTitle": "Sütik beállításai",
+  "modalBody": "Válassza ki, mely kategóriákat engedélyezi. A szükséges cookie-k mindig aktívak.",
+  "necessary": "Szükséges",
+  "necessaryDesc": "Ezek tárolják a cookie-kkal kapcsolatos beállításait, és biztosítják a weboldal alapvető működését.",
+  "analytics": "Elemző",
+  "analyticsDesc": "Google Analytics 4 — névtelen statisztikák a weboldal látogatásairól és a felhasználói viselkedésről.",
+  "functional": "Funkcionális / harmadik felek",
+  "functionalDesc": "Google Maps — interaktív térkép a nyaralók helyszíneivel.",
+  "reject": "Csak a szükségesek",
+  "save": "A választás megőrzése",
+  "acceptAll": "Mindenkit elfogadok"
+}

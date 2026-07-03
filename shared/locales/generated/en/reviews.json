@@ -1,13 +1,57 @@
 {
-  "formName": "Име",
-  "formEmail": "Имейл",
-  "formRating": "Оценка",
-  "formVilla": "Вила",
-  "formPeriod": "Период",
-  "formBody": "Вашият отзив",
-  "placeholderName": "Вашето име",
-  "placeholderEmail": "по избор",
-  "placeholderPeriod": "напр. Март 2025",
-  "placeholderBody": "Какво запомнихте от престоя си при нас...",
-  "villaUnknown": "Не съм сигурен/а"
+  "formName": "Name",
+  "formEmail": "Email",
+  "formRating": "Rating",
+  "formVilla": "Villa",
+  "formPeriod": "Period",
+  "formBody": "Your Review",
+  "placeholderName": "Your name",
+  "placeholderEmail": "optional",
+  "placeholderPeriod": "e.g., March 2025",
+  "placeholderBody": "What do you remember from your stay with us...",
+  "villaUnknown": "I'm not sure",
+  "form": {
+    "name": "Name",
+    "email": "Email",
+    "rating": "Rating",
+    "title": "Title",
+    "body": "Your Review",
+    "bodyPlaceholder": "Please let us know what you liked and what we could improve...",
+    "submit": "Submit a review",
+    "submitting": "Sending...",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "optional",
+    "ratingAria": "{star} stars",
+    "villa": "Villa",
+    "villaPlaceholder": "Select",
+    "villaUnknown": "I'm not sure",
+    "period": "Period",
+    "periodPlaceholder": "e.g., March 2025"
+  },
+  "toast": {
+    "success": "Thank you for your review! We'll publish it after we review it.",
+    "error": "An error occurred while submitting the review."
+  },
+  "carousel": {
+    "readMore": "Read more",
+    "close": "Close",
+    "googleSource": "Google",
+    "siteSource": "Website",
+    "readFull": "The full review",
+    "open": "Open",
+    "readFullAria": "Read the full review",
+    "openAria": "Open the review",
+    "emptyTitle": "There are no reviews yet.",
+    "emptyBody": "Be the first — share your thoughts below.",
+    "pause": "Pause Auto-Scroll",
+    "resume": "Continue auto-scrolling",
+    "prev": "Previous review",
+    "next": "Next review",
+    "navLabel": "Reviews",
+    "reviewN": "Review {n}",
+    "photoCount": "{count} photos"
+  },
+  "modal": {
+    "close": "Close"
+  }
 }

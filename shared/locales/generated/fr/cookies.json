@@ -1,0 +1,19 @@
+{
+  "bannerTitle": "Cookies et confidentialité",
+  "bannerBody": "Nous utilisons des cookies indispensables au bon fonctionnement du site. Avec votre accord, nous activons Google Analytics et Google Maps.",
+  "policyLink": "Politique en matière de cookies",
+  "settings": "Paramètres",
+  "accept": "J'accepte",
+  "manage": "Gestion des cookies",
+  "modalTitle": "Paramètres relatifs aux cookies",
+  "modalBody": "Sélectionnez les catégories que vous souhaitez autoriser. Les cookies indispensables sont toujours activés.",
+  "necessary": "Requis",
+  "necessaryDesc": "Ils enregistrent vos préférences en matière de cookies et assurent le fonctionnement de base du site.",
+  "analytics": "Analytiques",
+  "analyticsDesc": "Google Analytics 4 — statistiques anonymes sur les visites et le comportement des utilisateurs sur le site.",
+  "functional": "Fonctionnels / tiers",
+  "functionalDesc": "Google Maps — une carte interactive indiquant l'emplacement des villas.",
+  "reject": "Uniquement les éléments indispensables",
+  "save": "Enregistrer la sélection",
+  "acceptAll": "J'accepte tout"
+}

@@ -1,0 +1,26 @@
+{
+  "tableNights": "Количество ночевок",
+  "winterSeason": "Зимний сезон",
+  "winterRange": "сентябрь — март",
+  "summerSeason": "Летний сезон",
+  "summerRange": "апрель — август",
+  "winterShort": "Зима",
+  "summerShort": "Лето",
+  "winterLegend": "Зима · сентябрь – март",
+  "summerLegend": "Лето · апрель – август",
+  "bestValue": "Наиболее выгодно при длительном пребывании",
+  "loading": "Цены будут опубликованы в ближайшее время.",
+  "cta": "Проверьте свободные даты",
+  "tiers": {
+    "up-to-3": "До 3 ночей",
+    "4-nights": "4 ночи",
+    "5-nights": "5 ночей",
+    "over-5": "Более 5 ночей"
+  },
+  "breakdown": {
+    "night": "ночлег",
+    "nights": "ночёвки",
+    "perNightWinter": "/ночь (зима)",
+    "perNightSummer": "/ночь (лето)"
+  }
+}

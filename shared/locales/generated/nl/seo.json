@@ -1,18 +1,18 @@
 {
   "routes": {
     "/": {
-      "title": "Pamporovo Villa | 3 vakantiehuizen te huur in Pamporovo, Bulgarije",
-      "description": "Pamporovo Villa — drie vrijstaande vakantiehuisjes te huur in het vakantieoord Pamporovo, in de omgeving van Райковски ливади. 2 slaapkamers, open haard, barbecue, geschikt voor maximaal 6 gasten. Reserveer rechtstreeks.",
+      "title": "Pamporovo Villa | 3 vakantiehuisjes te huur in Pamporovo, Bulgarije",
+      "description": "Pamporovo Villa — drie vrijstaande vakantiehuisjes te huur in het vakantieoord Pamporovo, in de omgeving van Raykovski Livadi. 2 slaapkamers, open haard, barbecue, geschikt voor maximaal 6 gasten. Reserveer rechtstreeks.",
       "keywords": "villa te huur in Pamporovo, Pamporovo Villa, villa huren in Pamporovo"
     },
     "/rent": {
       "title": "Villa’s te huur in Pamporovo | 3 villa’s vanaf 110 € per nacht — Pamporovo Villa",
-      "description": "Officiële verhuurpagina: 3 vrijstaande villa's in Pamporovo. Een hele villa voor uw groep — open haard, barbecue, op 2 km van het centrum. Reserveer online.",
+      "description": "Officiële verhuurwebsite: 3 vrijstaande villa’s in Pamporovo. Een hele villa voor uw groep — open haard, barbecue, op 2 km van het centrum. Reserveer online.",
       "keywords": "villa huren in Pamporovo, villa in Pamporovo, vakantie in de Rodopi"
     },
     "/pamporovo": {
       "title": "Pamporovo — complete gids voor het resort en de regio | Pamporovo Villa",
-      "description": "Meer dan 37 km skipistes, 6 liften, natuurpaden, grotten en bezienswaardigheden. Overnachtingsmogelijkheden — 3 villa’s vanaf 110 € per nacht op Райковски ливади.",
+      "description": "Meer dan 37 km skipistes, 6 skiliften, natuurpaden, grotten en bezienswaardigheden. Overnachtingsmogelijkheden — 3 villa’s vanaf 110 € per nacht op Raykovski Livadi.",
       "keywords": "Gids voor Pamporovo, skiën in Bulgarije, reis naar de Rodopi"
     }
   }

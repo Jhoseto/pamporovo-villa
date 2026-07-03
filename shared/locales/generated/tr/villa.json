@@ -1,0 +1,58 @@
+{
+  "backToRent": "← Villa kiralama",
+  "featuresHeading": "Olanaklar ve imkanlar",
+  "pricingHeading": "Fiyatlar",
+  "pricingHeadingFor": "{villa} fiyatları",
+  "pricingFrom": "tarafından",
+  "pricingPerNight": "/ gece",
+  "summerFrom": "Yazdan",
+  "winterFrom": "Kış",
+  "wholeVillaNote": "Tüm villa · en fazla 6 misafir",
+  "bookCta": "Rezervasyon yap",
+  "bookVilla": "{villa} için rezervasyon yapın",
+  "guideLink": "Pamporovo Rehberi",
+  "amenitiesHeading": "Olanaklar",
+  "otherVillas": "Diğer villalarımız",
+  "contactHeading": "İletişim ve Rezervasyon",
+  "pages": {
+    "villa-1": {
+      "name": "Villa 1",
+      "tagline": "Tüm aile için rahatlık",
+      "description": "Sıcak ve samimi — iki yatak odası, iki banyo ve şöminenin çıtırdadığı geniş bir oturma odası ile verandada sizi bekleyen bir barbekü. Çocuklu ailelerin gözdesi.",
+      "seoTitle": "Villa 1 Pamporovo kiralık | 2 yatak odası, şömine — Pamporovo Villa",
+      "seoDescription": "Pamporovo'da Villa 1'i kiralayın — aileler için konforlu bir konaklama, 2 yatak odası, 2 banyo, şömine, barbekü, en fazla 6 konuk. Raykovski Livadi, kayak pistlerine 2 km uzaklıkta. Online rezervasyon.",
+      "seoKeywords": "Villa 1 Pamporovo, Pamporovo'da villa kiralama, aile villası, Pamporovo Villa",
+      "h1": "Villa 1 — Pamporovo’da kiralık daire"
+    },
+    "villa-2": {
+      "name": "Villa 2",
+      "tagline": "Güneşin doğuşundan batışına kadar",
+      "description": "Aydınlık ve ferah, iki yatak odası, iki banyo ve dağa bakan bir oturma odası bulunan bu daire, barbekü alanına sahip verandasıyla arkadaşlarla geçireceğiniz uzun akşamlar için biçilmiş kaftandır.",
+      "seoTitle": "Villa 2 Pamporovo'da kiralık | 2 yatak odalı, barbekü teraslı",
+      "seoDescription": "Pamporovo'da Villa 2'yi kiralayın — panoramik manzaralı, aydınlık bir villa; 2 yatak odası, şömine, barbekü, en fazla 6 konuk. Resmi kiralama kodu — Pamporovo Villa.",
+      "seoKeywords": "Villa 2 Pamporovo, villa kiralama, barbekülü villa Pamporovo",
+      "h1": "Villa 2 — Pamporovo’da kiralık daire"
+    },
+    "villa-deluxe": {
+      "name": "Villa Deluxe",
+      "tagline": "Biraz daha lüks",
+      "description": "Üçü arasında en gösterişli olanı — iki yatak odası, iki banyo ve geniş bir oturma odasından oluşan aynı konforu sunarken, detaylara ve atmosfere daha fazla özen gösterilmiştir. Özel bir şey arayanlar için.",
+      "seoTitle": "Villa Deluxe Pamporovo | Lüks kiralık daire, şömine, 6 kişi",
+      "seoDescription": "Pamporovo'daki Villa Deluxe — üç villadan en şık olanı, 2 yatak odası, şömine, barbekü, en fazla 6 konuk. Online rezervasyon yapın.",
+      "seoKeywords": "Villa Deluxe Pamporovo, lüks villa Pamporovo, deluxe kiralama",
+      "h1": "Villa Deluxe — Pamporovo’da kiralık daire"
+    }
+  },
+  "about": {
+    "intro": "Bizi keşfettiğiniz için mutluyuz. Raykovski Livadi’nin çam ormanının içinde yer alan üç müstakil villa sunuyoruz — şehir gürültüsünün çok uzaklarda kaldığı, günün kuş cıvıltıları ve reçine kokusuyla başladığı bir yer.",
+    "details": "Villa 1, Villa 2 ve Villa Deluxe, dağda kendi evimizin olmasını istediğimiz gibi döşenmiştir — gerçek ahşap, yumuşak kumaşlar ve bir mekana sıcaklık katan o küçük detaylarla. Burada sadece misafir değilsiniz; kendinizi evinizde hissedin.",
+    "layout": "Her villa iki katlı olup, iki yatak odası, iki banyo, yemek köşesi bulunan tam donanımlı bir mutfak ve odun şömineli geniş bir oturma odasına sahiptir. Dışarıda ise Rodop Dağları'nın panoramik manzarasına sahip bir teras ve barbekü bulunan bir veranda sizi bekliyor — en güzel akşamların yaşandığı yer.",
+    "hosts": "Ev sahipleriniz olarak her zaman elinizin altındayız. Sürprizler ve kutlamalar için yardımcı oluyoruz, sizi en güzel kayak pistlerine ve yürüyüş yollarına yönlendiriyoruz, nerede lezzetli yemekler yiyebileceğinizi öneriyoruz — ve bir şeye ihtiyacınız olursa, sadece bizi arayın. Amacımız tek bir şey: buradan ayrılırken tekrar gelmek isteyeceksiniz."
+  },
+  "contact": {
+    "phone": "+359 879 501 660",
+    "email": "pamporovovilla@gmail.com",
+    "address": "Pamporovo Tatil Köyü, Raykovski Livadi bölgesi"
+  },
+  "firewoodNote": "Şömine odunu — torba başına 10 €, talep üzerine veya konaklama sırasında temin edilir."
+}

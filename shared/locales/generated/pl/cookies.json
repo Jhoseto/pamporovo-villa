@@ -1,0 +1,19 @@
+{
+  "bannerTitle": "Pliki cookie i polityka prywatności",
+  "bannerBody": "Wykorzystujemy pliki cookie niezbędne do działania strony. Za Państwa zgodą aktywujemy Google Analytics i Google Maps.",
+  "policyLink": "Polityka dotycząca plików cookie",
+  "settings": "Ustawienia",
+  "accept": "Zgadzam się",
+  "manage": "Zarządzanie plikami cookie",
+  "modalTitle": "Ustawienia plików cookie",
+  "modalBody": "Wybierz, które kategorie chcesz zezwolić. Niezbędne pliki cookie są zawsze aktywne.",
+  "necessary": "Wymagane",
+  "necessaryDesc": "Zapisują Twoje preferencje dotyczące plików cookie i zapewniają podstawowe funkcjonowanie strony.",
+  "analytics": "Analityczne",
+  "analyticsDesc": "Google Analytics 4 — anonimowe statystyki dotyczące odwiedzin i zachowań użytkowników na stronie.",
+  "functional": "Funkcjonalne / strony trzecie",
+  "functionalDesc": "Google Maps — interaktywna mapa z lokalizacją domków letniskowych.",
+  "reject": "Tylko niezbędne",
+  "save": "Zapisz wybór",
+  "acceptAll": "Akceptuję wszystkie"
+}

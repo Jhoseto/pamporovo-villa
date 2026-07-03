@@ -1,13 +1,45 @@
 {
-  "formName": "Име",
-  "formEmail": "Имейл",
-  "formRating": "Оценка",
-  "formVilla": "Вила",
-  "formPeriod": "Период",
-  "formBody": "Вашият отзив",
-  "placeholderName": "Вашето име",
-  "placeholderEmail": "по избор",
-  "placeholderPeriod": "напр. Март 2025",
-  "placeholderBody": "Какво запомнихте от престоя си при нас...",
-  "villaUnknown": "Не съм сигурен/а"
+  "form": {
+    "name": "Име",
+    "namePlaceholder": "Вашето име",
+    "email": "Имейл",
+    "emailPlaceholder": "по избор",
+    "rating": "Оценка",
+    "ratingAria": "{star} звезди",
+    "villa": "Вила",
+    "villaPlaceholder": "Изберете",
+    "villaUnknown": "Не съм сигурен/а",
+    "period": "Период",
+    "periodPlaceholder": "напр. Март 2025",
+    "body": "Вашият отзив",
+    "bodyPlaceholder": "Какво запомнихте от престоя си при нас...",
+    "submit": "Изпрати отзив",
+    "submitting": "Изпращане..."
+  },
+  "toast": {
+    "success": "Благодарим за отзива! Ще го публикуваме след преглед.",
+    "error": "Възникна грешка при изпращане на отзива."
+  },
+  "carousel": {
+    "readMore": "Прочети повече",
+    "readFull": "Целият отзив",
+    "open": "Отвори",
+    "readFullAria": "Прочети целия отзив",
+    "openAria": "Отвори отзива",
+    "close": "Затвори",
+    "emptyTitle": "Все още няма публикувани отзиви",
+    "emptyBody": "Бъдете първи — споделете впечатленията си отдолу.",
+    "pause": "Пауза на автоматичното превъртане",
+    "resume": "Продължи автоматичното превъртане",
+    "prev": "Предишен отзив",
+    "next": "Следващ отзив",
+    "navLabel": "Отзиви",
+    "reviewN": "Отзив {n}",
+    "photoCount": "{count} снимки",
+    "googleSource": "Google",
+    "siteSource": "Сайт"
+  },
+  "modal": {
+    "close": "Затвори"
+  }
 }

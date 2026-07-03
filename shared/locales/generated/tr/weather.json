@@ -1,0 +1,126 @@
+{
+  "resortName": "Pamporovo",
+  "elevation": "1 650 m",
+  "variable": "Değişken",
+  "wind": {
+    "calm": "sessiz",
+    "light": "hafif bir esinti",
+    "gentle": "zayıf",
+    "moderate": "ılımlı",
+    "strong": "güçlü"
+  },
+  "codes": {
+    "0": {
+      "label": "Anlaşıldı",
+      "short": "Anlaşıldı"
+    },
+    "1": {
+      "label": "Çoğunlukla açık",
+      "short": "Anlaşıldı"
+    },
+    "2": {
+      "label": "Kısmen bulutlu",
+      "short": "Bulutlu"
+    },
+    "3": {
+      "label": "Bulutlu",
+      "short": "Bulutlu"
+    },
+    "45": {
+      "label": "Sis",
+      "short": "Sis"
+    },
+    "48": {
+      "label": "Yoğun sis",
+      "short": "Sis"
+    },
+    "51": {
+      "label": "Hafif bir esinti",
+      "short": "Rumezh"
+    },
+    "53": {
+      "label": "Rumezh",
+      "short": "Rumezh"
+    },
+    "55": {
+      "label": "Güçlü bir uğultu",
+      "short": "Rumezh"
+    },
+    "56": {
+      "label": "Hafif bir buzlu çığlık",
+      "short": "Rumezh"
+    },
+    "57": {
+      "label": "Buzlu çığlık",
+      "short": "Rumezh"
+    },
+    "61": {
+      "label": "Hafif yağmur",
+      "short": "Yağmur"
+    },
+    "63": {
+      "label": "Yağmur",
+      "short": "Yağmur"
+    },
+    "65": {
+      "label": "Şiddetli yağmur",
+      "short": "Yağmur"
+    },
+    "66": {
+      "label": "Hafif buzlu yağmur",
+      "short": "Yağmur"
+    },
+    "67": {
+      "label": "Buzlu yağmur",
+      "short": "Yağmur"
+    },
+    "71": {
+      "label": "Hafif kar",
+      "short": "Kar"
+    },
+    "73": {
+      "label": "Kar",
+      "short": "Kar"
+    },
+    "75": {
+      "label": "Yoğun kar yağışı",
+      "short": "Kar"
+    },
+    "77": {
+      "label": "Kar taneleri",
+      "short": "Kar"
+    },
+    "80": {
+      "label": "Kısa süreli yağmur",
+      "short": "Yağışlar"
+    },
+    "81": {
+      "label": "Yağışlar",
+      "short": "Yağışlar"
+    },
+    "82": {
+      "label": "Şiddetli yağışlar",
+      "short": "Yağışlar"
+    },
+    "85": {
+      "label": "Hafif kar",
+      "short": "Kar"
+    },
+    "86": {
+      "label": "Yoğun kar yağışı",
+      "short": "Kar"
+    },
+    "95": {
+      "label": "Fırtınalar",
+      "short": "Fırtına"
+    },
+    "96": {
+      "label": "Dolu",
+      "short": "Fırtına"
+    },
+    "99": {
+      "label": "Şiddetli dolu",
+      "short": "Fırtına"
+    }
+  }
+}

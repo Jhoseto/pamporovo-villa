@@ -1,7 +1,7 @@
 {
   "eyebrow": "Închiriere oficială · Pamporovo Villa",
   "h1": "Închiriere de vilă în Pamporovo",
-  "intro": "Trei vile independente la Райковски ливади — închiriați întreaga vilă exclusiv pentru grupul dumneavoastră. Fiecare vilă are 2 dormitoare, 2 băi, șemineu, grătar, și poate găzdui până la 6 oaspeți.",
+  "intro": "Trei vile independente la Raykovski Livadi — închiriați întreaga vilă exclusiv pentru grupul dumneavoastră. Fiecare vilă are 2 dormitoare, 2 băi, șemineu, grătar, cu o capacitate de până la 6 oaspeți.",
   "villasHeading": "Cele trei vile",
   "pricingHeading": "Prețuri",
   "pricingFrom": "din",
@@ -10,5 +10,10 @@
   "bookOnline": "Rezervați online",
   "guideLink": "Ghid complet pentru Pamporovo",
   "footerNote": "Site oficial pentru închirierea unei vile în Pamporovo, Bulgaria",
-  "villaPageLinkSuffix": "pagină →"
+  "villaPageLinkSuffix": "pagină →",
+  "villaPageLink": "{villa} pagină →",
+  "pricingNotes": [
+    "Prețurile sunt pe noapte pentru întreaga vilă (până la 6 oaspeți).",
+    "În perioadele de sărbători — contactați-ne pentru o ofertă personalizată."
+  ]
 }

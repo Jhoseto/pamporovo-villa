@@ -1,7 +1,7 @@
 {
   "eyebrow": "Officiële huur · Pamporovo Villa",
   "h1": "Vakantiehuis huren in Pamporovo",
-  "intro": "Drie vrijstaande villa's op Райковски ливади — u huurt de hele villa exclusief voor uw groep. Elk met 2 slaapkamers, 2 badkamers, een open haard, een barbecue en plaats voor maximaal 6 gasten.",
+  "intro": "Drie vrijstaande villa's op Raykovski Livadi — u huurt de hele villa exclusief voor uw groep. Elk met 2 slaapkamers, 2 badkamers, een open haard, een barbecue en plaats voor maximaal 6 gasten.",
   "villasHeading": "De drie villa's",
   "pricingHeading": "Prijzen",
   "pricingFrom": "van",
@@ -10,5 +10,10 @@
   "bookOnline": "Online reserveren",
   "guideLink": "Een complete gids voor Pamporovo",
   "footerNote": "Officiële website voor het huren van een villa in Pamporovo, Bulgarije",
-  "villaPageLinkSuffix": "pagina →"
+  "villaPageLinkSuffix": "pagina →",
+  "villaPageLink": "{villa} pagina →",
+  "pricingNotes": [
+    "De prijzen gelden per overnachting voor de gehele villa (maximaal 6 gasten).",
+    "Tijdens de feestdagen — neem contact op voor een offerte op maat."
+  ]
 }

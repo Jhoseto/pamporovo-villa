@@ -2,17 +2,17 @@
   "routes": {
     "/": {
       "title": "Pamporovo Villa | Pamporovo, Bulgaristan'da kiralık 3 villa",
-      "description": "Pamporovo Villa — Pamporovo tatil beldesinin Райковски ливади bölgesinde kiralık üç müstakil villa. 2 yatak odası, şömine, barbekü, en fazla 6 konuk. Doğrudan rezervasyon yapın.",
+      "description": "Pamporovo Villa — Pamporovo tatil beldesinin Raykovski Livadi bölgesinde kiralık üç müstakil villa. 2 yatak odası, şömine, barbekü, en fazla 6 konuk. Doğrudan rezervasyon yapın.",
       "keywords": "Pamporovo'da kiralık villa, Pamporovo Villa, Pamporovo'da villa kiralama"
     },
     "/rent": {
       "title": "Pamporovo'da villa kiralama | 110 €/gecelik 3 villa — Pamporovo Villa",
-      "description": "Resmi kiralama sayfası: Pamporovo'da 3 müstakil villa. Grubunuz için tam bir villa — şömine, barbekü, merkezden 2 km uzaklıkta. Online rezervasyon yapın.",
-      "keywords": "Pamporovo'da villa kiralama, Pamporovo'daki villalar, Rodop Dağları'nda tatil"
+      "description": "Resmi kiralama sayfası: Pamporovo'da 3 müstakil villa. Grubunuz için tam bir villa — şömine, barbekü, merkezden 2 km uzaklıkta. Çevrimiçi rezervasyon yapın.",
+      "keywords": "Pamporovo'da villa kiralama, Pamporovo villaları, Rodop Dağları'nda tatil"
     },
     "/pamporovo": {
       "title": "Pamporovo — Tatil Köyü ve Bölge İçin Kapsamlı Rehber | Pamporovo Villa",
-      "description": "37+ km kayak pisti, 6 teleferik, doğa yürüyüş parkurları, mağaralar ve turistik yerler. Konaklama seçenekleri — Райковски ливади'de gecelik 110 €'dan başlayan 3 villa.",
+      "description": "37+ km kayak pisti, 6 teleferik, doğa yürüyüş yolları, mağaralar ve turistik yerler. Konaklama seçenekleri — Raykovski Livadi’de gecelik 110 €’dan başlayan 3 villa.",
       "keywords": "Pamporovo rehberi, Bulgaristan’da kayak, Rodoplar gezisi"
     }
   }

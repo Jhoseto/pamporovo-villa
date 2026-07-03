@@ -1,0 +1,126 @@
+{
+  "resortName": "Pamporovo",
+  "elevation": "1 650 m",
+  "variable": "Variabil",
+  "wind": {
+    "calm": "liniștit",
+    "light": "o adiere ușoară",
+    "gentle": "slab",
+    "moderate": "moderat",
+    "strong": "puternic"
+  },
+  "codes": {
+    "0": {
+      "label": "Clar",
+      "short": "Clar"
+    },
+    "1": {
+      "label": "În general senin",
+      "short": "Clar"
+    },
+    "2": {
+      "label": "Cer parțial înnorat",
+      "short": "Noros"
+    },
+    "3": {
+      "label": "Noros",
+      "short": "Noros"
+    },
+    "45": {
+      "label": "Ceață",
+      "short": "Ceață"
+    },
+    "48": {
+      "label": "Ceață densă",
+      "short": "Ceață"
+    },
+    "51": {
+      "label": "Un ușor murmur",
+      "short": "Rumezh"
+    },
+    "53": {
+      "label": "Rumezh",
+      "short": "Rumezh"
+    },
+    "55": {
+      "label": "Un zgomot puternic",
+      "short": "Rumezh"
+    },
+    "56": {
+      "label": "Un ușor șuierat de gheață",
+      "short": "Rumezh"
+    },
+    "57": {
+      "label": "Zgomot de gheață",
+      "short": "Rumezh"
+    },
+    "61": {
+      "label": "Ploaie slabă",
+      "short": "Ploaie"
+    },
+    "63": {
+      "label": "Ploaie",
+      "short": "Ploaie"
+    },
+    "65": {
+      "label": "Ploaie puternică",
+      "short": "Ploaie"
+    },
+    "66": {
+      "label": "O ploaie ușoară cu gheață",
+      "short": "Ploaie"
+    },
+    "67": {
+      "label": "Ploaie înghețată",
+      "short": "Ploaie"
+    },
+    "71": {
+      "label": "Zăpadă subțire",
+      "short": "Zăpadă"
+    },
+    "73": {
+      "label": "Zăpadă",
+      "short": "Zăpadă"
+    },
+    "75": {
+      "label": "Ninsori abundente",
+      "short": "Zăpadă"
+    },
+    "77": {
+      "label": "Fulgi de zăpadă",
+      "short": "Zăpadă"
+    },
+    "80": {
+      "label": "O ploaie scurtă",
+      "short": "Precipitații"
+    },
+    "81": {
+      "label": "Precipitații",
+      "short": "Precipitații"
+    },
+    "82": {
+      "label": "Precipitații abundente",
+      "short": "Precipitații"
+    },
+    "85": {
+      "label": "Zăpadă subțire",
+      "short": "Zăpadă"
+    },
+    "86": {
+      "label": "Ninsori abundente",
+      "short": "Zăpadă"
+    },
+    "95": {
+      "label": "Furtuni cu fulgere",
+      "short": "Furtună"
+    },
+    "96": {
+      "label": "Grindină",
+      "short": "Furtună"
+    },
+    "99": {
+      "label": "Grindină puternică",
+      "short": "Furtună"
+    }
+  }
+}

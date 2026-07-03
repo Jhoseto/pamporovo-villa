@@ -1,0 +1,90 @@
+{
+  "backToRent": "← Wynajem willi",
+  "featuresHeading": "Udogodnienia i możliwości",
+  "pricingHeading": "Ceny",
+  "pricingHeadingFor": "Ceny za {villa}",
+  "pricingFrom": "z",
+  "pricingPerNight": "/ noc",
+  "summerFrom": "Lato z",
+  "winterFrom": "Zima od",
+  "wholeVillaNote": "Cały dom wakacyjny · do 6 osób",
+  "bookCta": "Zarezerwuj",
+  "bookVilla": "Zarezerwuj {villa}",
+  "guideLink": "Przewodnik po Pamporowie",
+  "amenitiesHeading": "Udogodnienia",
+  "otherVillas": "Nasze pozostałe domki letniskowe",
+  "contactHeading": "Kontakt i rezerwacja",
+  "pages": {
+    "villa-1": {
+      "name": "Villa 1",
+      "tagline": "Komfort dla całej rodziny",
+      "description": "Ciepła i przytulna — z dwiema sypialniami, dwiema łazienkami i dużym salonem, w którym trzaska ogień w kominku, a na werandzie czeka na Państwa grill. Ulubione miejsce rodzin z dziećmi.",
+      "seoTitle": "Villa 1 Pamporowo – wynajem | 2 sypialnie, kominek — Pamporovo Villa",
+      "seoDescription": "Wynajmij Villa 1 w Pamporowie — przytulny dom dla rodzin, 2 sypialnie, 2 łazienki, kominek, grill, do 6 osób. Raykovski Livadi, 2 km od stoków. Rezerwacja online.",
+      "seoKeywords": "Villa 1 Pamporowo, wynajem willi w Pamporowie, willa rodzinna, Pamporovo Villa",
+      "h1": "Villa 1 — wynajem w Pamporowie"
+    },
+    "villa-2": {
+      "name": "Villa 2",
+      "tagline": "Słońce od wschodu do zachodu",
+      "description": "Jasne i przestronne mieszkanie z dwiema sypialniami, dwiema łazienkami oraz salonem z widokiem na góry. Weranda z grillem idealnie nadaje się na długie wieczory w gronie przyjaciół.",
+      "seoTitle": "Villa 2 Pamporowo – wynajem | 2 sypialnie, weranda z grillem",
+      "seoDescription": "Wynajmij Villa 2 w Pamporowie — jasną willę z panoramicznym widokiem, 2 sypialniami, kominkiem, grillem, dla maksymalnie 6 osób. Oficjalny numer obiektu — Pamporovo Villa.",
+      "seoKeywords": "Villa 2 Pamporowo, wynajem willi, willa z grillem w Pamporowo",
+      "h1": "Villa 2 — wynajem w Pamporowie"
+    },
+    "villa-deluxe": {
+      "name": "Villa Deluxe",
+      "tagline": "Trochę więcej luksusu",
+      "description": "Najbardziej reprezentatywny z tych trzech — oferujący ten sam komfort dzięki dwóm sypialniom, dwóm łazienkom i dużemu salonowi, ale z dodatkową dbałością o szczegóły i atmosferę. Dla tych, którzy pragną czegoś wyjątkowego.",
+      "seoTitle": "Villa Deluxe Pamporowo | Luksusowy obiekt do wynajęcia, kominek, 6 osób",
+      "seoDescription": "Villa Deluxe w Pamporowie — najbardziej reprezentacyjna z trzech willi, 2 sypialnie, kominek, grill, do 6 osób. Zarezerwuj online.",
+      "seoKeywords": "Villa Deluxe Pamporowo, luksusowa willa w Pamporowie, wynajem w standardzie deluxe",
+      "h1": "Villa Deluxe — wynajem w Pamporowie"
+    }
+  },
+  "about": {
+    "intro": "Cieszymy się, że nas znaleźliście. Oferujemy wam trzy niezależne wille, położone w sosnowym lesie w Raykovski Livadi — tam, gdzie zgiełk miasta pozostaje daleko, a dzień zaczyna się od śpiewu ptaków i zapachu żywicy.",
+    "details": "Villa 1, Villa 2 oraz Villa Deluxe są urządzone tak, jak chcielibyśmy, aby wyglądał nasz własny dom w górach — z prawdziwego drewna, miękkich tkanin i tych drobnych detali, które sprawiają, że miejsce to wydaje się przytulne. Tutaj nie jesteście tylko gośćmi; czujcie się jak w domu.",
+    "layout": "Każda willa jest dwupoziomowa i dysponuje dwiema sypialniami, dwiema łazienkami, w pełni wyposażoną kuchnią z jadalnią oraz dużym salonem z kominkiem opalanym drewnem. Na zewnątrz czeka na Państwa taras z panoramicznym widokiem na Rodopy oraz weranda z grillem — miejsce, w którym rodzą się najpiękniejsze wieczory.",
+    "hosts": "Jako gospodarze jesteśmy zawsze pod ręką. Pomagamy w organizacji niespodzianek i uroczystości, wskazujemy najpiękniejsze trasy i szlaki, podpowiadamy, gdzie można zjeść coś pysznego — a jeśli czegoś potrzebujecie, po prostu zadzwońcie. Mamy jeden cel: abyście wyjechali z chęcią powrotu."
+  },
+  "contact": {
+    "phone": "+359 879 501 660",
+    "email": "pamporovovilla@gmail.com",
+    "address": "ośrodek wypoczynkowy Pamporowo, obszar Raykovski Livadi"
+  },
+  "firewoodNote": "Drewno do kominka — 10 € za worek, na zamówienie lub przy zameldowaniu.",
+  "features": [
+    "2 sypialnie zapewniające spokojny sen",
+    "2 łazienki z ciepłą wodą",
+    "Duży salon z kominkiem",
+    "W pełni wyposażona kuchnia",
+    "Weranda z grillem",
+    "Do 6 gości w willi"
+  ],
+  "pricingNotes": [
+    "Ceny podane są za noc, za cały domek (do 6 osób).",
+    "Opłata klimatyczna wliczona w cenę.",
+    "Drewno kominkowe — 10 € za worek, na zamówienie.",
+    "Karty narciarskie nie są wliczone w cenę."
+  ],
+  "distances": [
+    {
+      "value": "2 km",
+      "label": "Do centrum Pamporowa"
+    },
+    {
+      "value": "10 km",
+      "label": "Ze Smoliana"
+    },
+    {
+      "value": "85 km",
+      "label": "Z Płowdiwu"
+    },
+    {
+      "value": "220 km",
+      "label": "Z Sofii"
+    }
+  ]
+}

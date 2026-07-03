@@ -1,0 +1,126 @@
+{
+  "resortName": "Pamporowo",
+  "elevation": "1 650 m",
+  "variable": "Zmienne",
+  "wind": {
+    "calm": "cichy",
+    "light": "lekki powiew",
+    "gentle": "chudy",
+    "moderate": "umiarkowany",
+    "strong": "silny"
+  },
+  "codes": {
+    "0": {
+      "label": "Jasne",
+      "short": "Jasne"
+    },
+    "1": {
+      "label": "Przeważnie bezchmurnie",
+      "short": "Jasne"
+    },
+    "2": {
+      "label": "Częściowe zachmurzenie",
+      "short": "Pochmurno"
+    },
+    "3": {
+      "label": "Pochmurno",
+      "short": "Pochmurno"
+    },
+    "45": {
+      "label": "Mgła",
+      "short": "Mgła"
+    },
+    "48": {
+      "label": "Gęsta mgła",
+      "short": "Mgła"
+    },
+    "51": {
+      "label": "Lekki szmer",
+      "short": "Rumeż"
+    },
+    "53": {
+      "label": "Rumeż",
+      "short": "Rumeż"
+    },
+    "55": {
+      "label": "Silny szum",
+      "short": "Rumeż"
+    },
+    "56": {
+      "label": "Lekki lodowy szron",
+      "short": "Rumeż"
+    },
+    "57": {
+      "label": "Lodowy szum",
+      "short": "Rumeż"
+    },
+    "61": {
+      "label": "Lekki deszcz",
+      "short": "Deszcz"
+    },
+    "63": {
+      "label": "Deszcz",
+      "short": "Deszcz"
+    },
+    "65": {
+      "label": "Ulewny deszcz",
+      "short": "Deszcz"
+    },
+    "66": {
+      "label": "Lekki deszcz ze śniegiem",
+      "short": "Deszcz"
+    },
+    "67": {
+      "label": "Lodowy deszcz",
+      "short": "Deszcz"
+    },
+    "71": {
+      "label": "Lekki śnieg",
+      "short": "Śnieg"
+    },
+    "73": {
+      "label": "Śnieg",
+      "short": "Śnieg"
+    },
+    "75": {
+      "label": "Obfite opady śniegu",
+      "short": "Śnieg"
+    },
+    "77": {
+      "label": "Płatki śniegu",
+      "short": "Śnieg"
+    },
+    "80": {
+      "label": "Krótka ulewa",
+      "short": "Opady"
+    },
+    "81": {
+      "label": "Opady",
+      "short": "Opady"
+    },
+    "82": {
+      "label": "Obfite opady deszczu",
+      "short": "Opady"
+    },
+    "85": {
+      "label": "Lekki śnieg",
+      "short": "Śnieg"
+    },
+    "86": {
+      "label": "Obfite opady śniegu",
+      "short": "Śnieg"
+    },
+    "95": {
+      "label": "Burze z piorunami",
+      "short": "Burza"
+    },
+    "96": {
+      "label": "Grad",
+      "short": "Burza"
+    },
+    "99": {
+      "label": "Silny grad",
+      "short": "Burza"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "backToRent": "← Aluguer de moradia",
+  "featuresHeading": "Conveniências e possibilidades",
+  "pricingHeading": "Preços",
+  "pricingHeadingFor": "Preços para {villa}",
+  "pricingFrom": "de",
+  "pricingPerNight": "/ por noite",
+  "summerFrom": "Verão de",
+  "winterFrom": "Inverno de",
+  "wholeVillaNote": "Casa de férias inteira · até 6 hóspedes",
+  "bookCta": "Reservar",
+  "bookVilla": "Reservar {villa}",
+  "guideLink": "Guia de Pamporovo",
+  "amenitiesHeading": "Comodidades",
+  "otherVillas": "As nossas outras moradias",
+  "contactHeading": "Contacto e reservas",
+  "pages": {
+    "villa-1": {
+      "name": "Villa 1",
+      "tagline": "Conforto para toda a família",
+      "description": "Aconchegante e acolhedora — com dois quartos, duas casas de banho e uma ampla sala de estar, onde a lareira crepita, e na varanda espera por si uma churrasqueira. A preferida das famílias com crianças.",
+      "seoTitle": "Villa 1 Pamporovo para alugar | 2 quartos, lareira — Pamporovo Villa",
+      "seoDescription": "Alugue o Villa 1 em Pamporovo — um espaço acolhedor para famílias, com 2 quartos, 2 casas de banho, lareira, churrasqueira e capacidade para até 6 hóspedes. Raykovski Livadi, a 2 km das pistas. Reservas online.",
+      "seoKeywords": "Villa 1 Pamporovo, aluguer de moradia em Pamporovo, moradia familiar, Pamporovo Villa",
+      "h1": "Villa 1 — aluguer em Pamporovo"
+    },
+    "villa-2": {
+      "name": "Villa 2",
+      "tagline": "O sol, do nascer ao pôr do sol",
+      "description": "Luminosa e espaçosa, com dois quartos, duas casas de banho e uma sala de estar com vista para a montanha. A varanda com churrasqueira foi concebida para longas noites com amigos.",
+      "seoTitle": "Villa 2 Pamporovo para alugar | 2 quartos, varanda com churrasqueira",
+      "seoDescription": "Alugue a Villa 2 em Pamporovo — uma villa luminosa com vista panorâmica, 2 quartos, lareira, churrasqueira, para até 6 hóspedes. Referência oficial de aluguer — Pamporovo Villa.",
+      "seoKeywords": "Villa 2 Pamporovo, aluguer de moradia, moradia com churrasqueira em Pamporovo",
+      "h1": "Villa 2 — aluguer em Pamporovo"
+    },
+    "villa-deluxe": {
+      "name": "Villa Deluxe",
+      "tagline": "Um pouco mais de luxo",
+      "description": "A mais representativa das três — com o mesmo conforto de dois quartos, duas casas de banho e uma ampla sala de estar, mas com uma atenção especial aos detalhes e ao ambiente. Para quem procura algo especial.",
+      "seoTitle": "Villa Deluxe Pamporovo | Alojamento de luxo, lareira, 6 hóspedes",
+      "seoDescription": "Villa Deluxe em Pamporovo — a mais representativa das três vilas, 2 quartos, lareira, churrasqueira, até 6 hóspedes. Reserve online.",
+      "seoKeywords": "Villa Deluxe Pamporovo, villa de luxo em Pamporovo, aluguer de luxo",
+      "h1": "Villa Deluxe — aluguer em Pamporovo"
+    }
+  },
+  "about": {
+    "intro": "Estamos felizes por nos terem descoberto. Oferecemos-vos três moradias independentes, aninhadas na floresta de pinheiros de Raykovski Livadi — onde o barulho da cidade fica longe e o dia começa com o canto dos pássaros e o aroma da resina.",
+    "details": "Villa 1, Villa 2 e Villa Deluxe estão decorados tal como gostaríamos que fosse a nossa própria casa na montanha — com madeira verdadeira, tecidos suaves e aqueles pequenos detalhes que fazem com que um lugar pareça acolhedor. Aqui não são apenas hóspedes; sintam-se em casa.",
+    "layout": "Cada villa tem dois andares e dispõe de dois quartos, duas casas de banho, uma cozinha totalmente equipada com sala de jantar e uma ampla sala de estar com lareira a lenha. No exterior, espera-vos um terraço com vista panorâmica para os montes Ródopi e uma varanda com churrasqueira — o local onde se vivem as melhores noites.",
+    "hosts": "Como anfitriões, estamos sempre à vossa disposição. Ajudamos a organizar surpresas e celebrações, indicamos-vos as melhores pistas e trilhos, sugerimos onde se come bem — e, se precisarem de alguma coisa, basta ligarem-nos. O nosso objetivo é único: que partam com vontade de voltar."
+  },
+  "contact": {
+    "phone": "+359 879 501 660",
+    "email": "pamporovovilla@gmail.com",
+    "address": "Resort de Pamporovo, zona Raykovski Livadi"
+  },
+  "firewoodNote": "Lenha para a lareira — 10 € por saco, mediante pedido ou no momento do check-in."
+}

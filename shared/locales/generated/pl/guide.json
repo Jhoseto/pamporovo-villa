@@ -1,0 +1,479 @@
+{
+  "nav": {
+    "ariaLabel": "Sekcje na stronie",
+    "intro": "Ośrodek wypoczynkowy",
+    "winter": "Zima",
+    "summer": "Lato",
+    "landmarks": "Okolica",
+    "caves": "Jaskinie"
+  },
+  "sticky": {
+    "book": "Zarezerwuj",
+    "rent": "Wynajem · ceny"
+  },
+  "ui": {
+    "pisteNumber": "nr",
+    "pisteName": "Tor",
+    "difficulty": "Poziom trudności",
+    "length": "Długość",
+    "note": "Uwaga",
+    "dash": "—",
+    "meters": "m",
+    "route": "Trasa",
+    "liftType": "Typ",
+    "capacity": "Wydajność/godz.",
+    "capacityPerHour": "Wydajność/godzina"
+  },
+  "difficulty": {
+    "green": "Zielona · początkujący",
+    "blue": "Niebieski · poziom średniozaawansowany",
+    "red": "Czerwona · zaawansowani",
+    "black": "Czarna · eksperci"
+  },
+  "sections": {
+    "intro": {
+      "eyebrow": "Ośrodek wypoczynkowy",
+      "title": "Serce Rodopów",
+      "subtitle": "Na wysokości 1650 m n.p.m., u podnóża szczytu Śnieżanka — najstarszy bułgarski ośrodek narciarski, założony w 1933 r.",
+      "panoramaAlt": "Ośrodek narciarski Pamporowo — hotele i stoki w Rodopach",
+      "towerAlt": "Wieża Śnieżka — symbol Pamporowa",
+      "p1": "Dwa główne ośrodki narciarskie — Studenec i Malina — połączone ze szczytem Śnieżanka (1926 m). Trasy narciarskie znajdują się na wysokości od 1400 do 1926 m n.p.m., wyposażone są w nowoczesne wyciągi oraz ponad 80 armatek śnieżnych.",
+      "p2": "Latem kurort staje się bazą wypadową dla ekoturystyki — oznakowane szlaki, jazda na rowerze, jazda konna oraz niezliczone atrakcje turystyczne w odległości 15–60 minut jazdy samochodem od Smoliana, Shiroka Łuka, Cudowne Mosty i podziemne pałace w Zachodnich Rodopach.",
+      "cta": "Zarezerwuj willę w Pamporowie"
+    },
+    "winter": {
+      "eyebrow": "Zima",
+      "title": "Ośrodek narciarski — trasy i wyciągi",
+      "subtitle": "Ponad 37 km oznakowanych tras narciarskich i snowboardowych, jazda nocą na „Ścianie” oraz trasy do narciarstwa biegowego",
+      "skiAlt": "Kolejka krzesełkowa na szczyt Śnieżanka — wieża nad Pamporowem",
+      "pistesHeading": "Trasy według stopnia trudności",
+      "liftsHeading": "Windy i urządzenia",
+      "activitiesHeading": "Zimowe atrakcje"
+    },
+    "summer": {
+      "eyebrow": "Lato",
+      "title": "Ekologiczne szlaki i przyroda",
+      "subtitle": "Kanion Wodospadów, Jeziora Smoliańskie, Skały Orfeusza — zaledwie kilka minut od kurortu",
+      "summerAlt": "Górskie jezioro w Rodopach — letni szlak ekologiczny w pobliżu Pamporowa",
+      "activitiesHeading": "Letnie zajęcia"
+    },
+    "landmarks": {
+      "eyebrow": "Okolica",
+      "title": "Atrakcje turystyczne i wioski",
+      "subtitle": "Rezerwaty architektoniczne, obserwatorium, planetarium oraz autentyczny folklor rodopski"
+    },
+    "caves": {
+      "eyebrow": "Podziemny świat",
+      "title": "Jaskinie i wąwozy",
+      "subtitle": "Jaskinia Jagodinska, Diabelskie Gardło, Wąwóz Trigradski i Uhlovica — skarby Zachodnich Rodopów",
+      "footer": "Wille Pamporovo Villa znajdują się w Raykovski Livadi — to idealna baza wypadowa do zimowych i letnich przygód w całym regionie.",
+      "cta": "Sprawdź dostępne terminy i zarezerwuj"
+    }
+  },
+  "attractions": {
+    "canyon-waterfalls": {
+      "title": "Kanion wodospadów",
+      "distance": "15 km · w pobliżu Smoliana",
+      "duration": "~4 godziny · trasa okrężna o długości 6 km",
+      "description": "Najbardziej imponująca ścieżka ekologiczna w Rodopach — prowadzi przez wiekowe lasy rezerwatu „Soskovczeto” wzdłuż rzeki Gerzowskiej. Na trasie można podziwiać 46 wodospadów, w tym przepiękny, 68-metrowy wodospad „Orfeusz” — jeden z najwyższych w Bułgarii. Punktem kulminacyjnym jest punkt widokowy na wysokości 1800 m n.p.m., z którego rozciąga się widok na Smolian i grzbiety Rodopów.",
+      "highlights": [
+        "46 wodospadów",
+        "Wodospad „Orfeusz” — 68 m",
+        "Wiekowe lasy świerkowe",
+        "Panorama z wysokości 1800 m"
+      ]
+    },
+    "smolyan-lakes": {
+      "title": "Jeziora w Smolianie",
+      "distance": "10 km · u podnóża szczytu Śnieżanka",
+      "duration": "~1 godzina · łatwa trasa",
+      "description": "Nazywane „Szmaragdowymi oczami Rodopów” — naturalne jeziora położone schodkowo u podnóża Śnieżanki. Łatwa trasa łączy jeziora Bistro, Mętno i Trawiaste, oferując miejsca na piknik i wędkowanie. Idealna wycieczka dla rodzin z dziećmi, którą świetnie można połączyć ze wspinaczką na szczyt.",
+      "highlights": [
+        "Naturalne jeziora górskie",
+        "Łatwa trasa rodzinna",
+        "Miejsca na piknik",
+        "Można połączyć z szczytem Snieżanka"
+      ]
+    },
+    "nevyastata": {
+      "title": "Ścieżka ekologiczna „Nevyasta”",
+      "distance": "12 km · nad Smolianem",
+      "duration": "~40 min · 900 m szlaku",
+      "description": "Krótka i łatwa trasa przez pachnący las sosnowy do stromej skały „Nevyastata”, górującej nad Smolyanem. Na całej trasie znajdują się punkty widokowe i altanki, a dla poszukiwaczy adrenaliny — alpejska tyrolka nad przepaścią. Legenda opowiada o dziewczynie, która rzuciła się ze skały, by zachować swoją wiarę.",
+      "highlights": [
+        "Punkty widokowe",
+        "Trolej alpejski",
+        "Legenda o Pannie Młodej",
+        "Dostępne dla wszystkich grup wiekowych"
+      ]
+    },
+    "orpheus-rocks": {
+      "title": "Skały Orfeusza i Igły",
+      "distance": "6 km · od szczytu Śnieżanka",
+      "duration": "~4 godziny · niewielkie obciążenie",
+      "description": "Ze szczytu Śnieżanki oznakowany szlak prowadzi na południowy wschód w kierunku Skał Orfeusza — fantazyjnych formacji riolitowych, z których rozciąga się charakterystyczny widok na jeziora smoliańskie. W przeciwnym kierunku znajduje się szczyt Igły, z którego rozciąga się kolejna oszałamiająca panorama. Trasa przebiega przez pastwiska i lasy, w sierpniu usiane borówkami.",
+      "highlights": [
+        "Zjawiska skalne związane z ryolitami",
+        "Widok na jeziora",
+        "Szczyt Igły",
+        "Dzikie borówki w sierpniu"
+      ]
+    },
+    "shiroka-laka": {
+      "title": "Szeroka Łuka",
+      "distance": "16 km · 20 min samochodem",
+      "duration": "",
+      "description": "Rezerwat architektoniczno-folklorystyczny — wieś z domami z okresu Odrodzenia z wykuszami, kamiennymi mostkami i słynną Narodową Szkołą Sztuk Folklorystycznych. Gajda rodopska to dusza Szerokiej Łuki: tutaj odbywa się festiwal „Pesponedelnik” z zabawami kukerskimi i autentycznym folklorem. Obowiązkowy przystanek dla każdego gościa Pamporowa.",
+      "highlights": [
+        "Architektura okresu odrodzenia",
+        "Szkoła dla grających na dudach",
+        "Muzeum Etnograficzne",
+        "Festiwal Kukerów"
+      ]
+    },
+    "rozhen-observatory": {
+      "title": "NAO „Rozhen”",
+      "distance": "18 km · 25 min samochodem",
+      "duration": "",
+      "description": "Największa obserwatorium astronomiczne na Półwyspie Bałkańskim, położone na wysokości 1750 m n.p.m. nad łąkami Rożen. Dysponuje 2-metrowym teleskopem — jednym z największych w Europie Południowo-Wschodniej. Organizowane są dzienne wizyty połączone z wykładem, a nocne obserwacje (po wcześniejszej rezerwacji) są niezapomniane. W pobliżu znajdują się łąki Rożen – miejsce, gdzie odbywa się legendarny festiwal narodowy.",
+      "highlights": [
+        "2-metrowy teleskop",
+        "Wizyty połączone z rozmową",
+        "Obserwacje nocne",
+        "Zbliża się festiwal w Rożenie"
+      ]
+    },
+    "wonderful-bridges": {
+      "title": "Cudowne mosty",
+      "distance": "42 km · 1 godzina jazdy samochodem",
+      "duration": "",
+      "description": "Gigantyczne marmurowe łuki skalne, wyrzeźbione przez rzekę Erküpriya na przestrzeni tysiącleci. Duży most ma 96 m długości i 45 m wysokości — pod nim przebiega ścieżka, a akustyka jest niesamowita. Mały most ma długość 60 m. Obiekt ten znajduje się na liście 100 krajowych atrakcji turystycznych i doskonale łączy się z obiadem we wsi Zabardo.",
+      "highlights": [
+        "Łuk o wysokości 45 m",
+        "100 obiektów o znaczeniu krajowym",
+        "Ścieżka pod mostami",
+        "Schronisko i wiata w pobliżu"
+      ]
+    },
+    "smolyan-town": {
+      "title": "Smoljan — planetarium i muzea",
+      "distance": "15 km · 20 min samochodem",
+      "duration": "",
+      "description": "Miasto powiatowe u podnóża góry Śnieżanka zachowuje ducha Rodopów: Planetarium jest największym w Bułgarii i oferuje spektakularne pokazy gwiazd, a Regionalne Muzeum Historyczne im. Stoyu Shishkova opowiada o życiu codziennym, strojach i muzyce górskiej. Zabytkowe dzielnice Rajkowo i Ustowo urzekają domami z okresu Odrodzenia i przytulnymi gospodami.",
+      "highlights": [
+        "Największe planetarium w Bułgarii",
+        "RIM „Stoyu Shishkov”",
+        "Galeria sztuki",
+        "Dzielnice Rajkowo i Ustowo"
+      ]
+    },
+    "momchilovtsi": {
+      "title": "Momchilowcy",
+      "distance": "25 km · 30 min samochodem",
+      "duration": "",
+      "description": "Urokliwa wioska w Rodopach, położona na wysokości 1200 m n.p.m., znana z długowieczności swoich mieszkańców oraz domowego jogurtu, który stał się legendą nawet w Chinach. Panoramiczne szlaki, kapliczki na każdym wzgórzu i autentyczne, gościnne gospody. W sierpniu we wsi odbywa się festiwal jogurtu.",
+      "highlights": [
+        "Wioska długowieczności",
+        "Święto jogurtu",
+        "Kaplice panoramiczne",
+        "Autentyczne mechanizmy"
+      ]
+    },
+    "gela-village": {
+      "title": "Gela — wioska Orfeusza",
+      "distance": "22 km · 30 min samochodem",
+      "duration": "",
+      "description": "Jedna z najstarszych wsi w Rodopach, uważana za miejsce narodzin mitycznego Orfeusza. Położona na wysokości 1500 m n.p.m. pośród bezkresnych łąk, Gela jest gospodarzem Międzynarodowego Festiwalu Dudziarzy w każdą pierwszą niedzielę sierpnia — setki dudziarzy rozbrzmiewają echem w górach. Stąd rozchodzą się szlaki prowadzące na szczyty Turlata i Gela.",
+      "highlights": [
+        "Ojczyzna Orfeusza",
+        "Festiwal dudziarski w sierpniu",
+        "Świątynie trackie",
+        "Początek szlaków górskich"
+      ]
+    },
+    "yagodina-cave": {
+      "title": "Jaskinia w Jagodinie",
+      "distance": "50 km · 1 godz. 15 min samochodem",
+      "duration": "45 min spacer · trasa o długości 1100 m",
+      "description": "Trzecia pod względem długości jaskinia w Bułgarii — 10,5 km korytarzy na trzech poziomach w wąwozie Buinowskim. Trasa turystyczna prowadzi obok formacji przypominającej skórę lamparta, jaskiniowych pereł, stalaktytów oraz słynnej „Sali Noworocznej”, gdzie pod ziemią świętuje się nadejście Nowego Roku. Stała temperatura wynosi 6°C — nawet w sierpniu warto zabrać ze sobą kurtkę.",
+      "highlights": [
+        "10,5 km korytarzy",
+        "Perły jaskiniowe",
+        "Sala noworoczna",
+        "Wąwóz Buinowski przy drodze"
+      ]
+    },
+    "devils-throat": {
+      "title": "Diabelskie Gardło",
+      "distance": "55 km · 1 godz. 20 min. samochodem",
+      "duration": "30-minutowa wycieczka",
+      "description": "Jaskinia przepastna z najwyższym podziemnym wodospadem na Bałkanach — 42 m, w której „Sali Szumu” rzeka Trigradska z hukiem wpada pod ziemię. Według legendy to właśnie stąd Orfeusz zstąpił do królestwa podziemnego po Eurydykę. Nic, co wpadnie do wody, nie wypływa na powierzchnię — to tajemnica, którą naukowcy wciąż badają.",
+      "highlights": [
+        "42-metrowy podziemny wodospad",
+        "Hucząca sala",
+        "Legenda o Orfeuszu",
+        "301 stopni wzdłuż wodospadu"
+      ]
+    },
+    "trigrad-gorge": {
+      "title": "Wąwóz Trigradski",
+      "distance": "53 km · 1 godz. 15 min samochodem",
+      "duration": "",
+      "description": "Kanion o stromych marmurowych ścianach, wznoszących się na wysokość 250 m nad rzeką Trigradską — droga dosłownie wije się między skałami. Siedlisko rzadkich ptaków, takich jak skalnica, oraz brama prowadząca do Diabelskiego Gardła i miejscowości Trigrad. Jedna z najbardziej spektakularnych tras w Bułgarii — każdy zakręt to widok wart uwiecznienia na zdjęciu.",
+      "highlights": [
+        "Ściany o długości do 250 m",
+        "Dramatyczna górska droga",
+        "Rzadkie ptaki",
+        "Można połączyć z Diabelskim Gardłem"
+      ]
+    },
+    "uhlovitsa-cave": {
+      "title": "Jaskinia Uhlovica",
+      "distance": "32 km · 45 min samochodem",
+      "duration": "30-minutowa wycieczka",
+      "description": "Jedna z najpiękniejszych jaskiń w Bułgarii, położona w pobliżu wsi Mogilica. Słynie z kamiennych „wodospadów” — kaskad utworów wapiennych przypominających zamarzniętą wodę oraz z koralowców pokrywających sklepienia. Do wejścia prowadzi malownicza ścieżka przez las (około 30 minut spacerem od parkingu).",
+      "highlights": [
+        "Kamienne wodospady",
+        "Formacje koralowe",
+        "4 podziemne jeziora",
+        "W pobliżu rezydencji rodziny Agushevów"
+      ]
+    }
+  },
+  "stats": [
+    {
+      "value": "1650 m",
+      "label": "wysokość nad poziomem morza kurortu"
+    },
+    {
+      "value": "1926 m",
+      "label": "szczyt Śnieżanka — najwyższy szczyt ośrodka narciarskiego"
+    },
+    {
+      "value": "37+ km",
+      "label": "trasy narciarskie o wszystkich stopniach trudności"
+    },
+    {
+      "value": "1933 r.",
+      "label": "założony — najstarszy ośrodek narciarski w Bułgarii"
+    },
+    {
+      "value": "~120",
+      "label": "słoneczne dni w sezonie zimowym"
+    },
+    {
+      "value": "90%",
+      "label": "na stokach ze sztucznym naśnieżaniem"
+    }
+  ],
+  "pistes": [
+    {
+      "name": "Zbiornik wodny (Mała ściana)",
+      "note": ""
+    },
+    {
+      "name": "Objazd — Mała ściana",
+      "note": ""
+    },
+    {
+      "name": "Ściana",
+      "note": "Logo Pamporowa — gospodarza zawodów Pucharu Europy. Jazda nocna od godz. 17:30 do 22:00."
+    },
+    {
+      "name": "Arch. Piotr Petrow (Europejska)",
+      "note": ""
+    },
+    {
+      "name": "Królewna Śnieżka",
+      "note": ""
+    },
+    {
+      "name": "Królewna Śnieżka",
+      "note": ""
+    },
+    {
+      "name": "Malina",
+      "note": "Najdłuższy czerwony stok — od szczytu do ośrodka narciarskiego Malina."
+    },
+    {
+      "name": "Obwodnica Maliny",
+      "note": ""
+    },
+    {
+      "name": "Pamporowo (turystyczne)",
+      "note": "Długa i łagodna — idealna na pierwsze zjazdy i jazdę z rodziną."
+    },
+    {
+      "name": "Orłowiec",
+      "note": ""
+    },
+    {
+      "name": "Perelik (Południowe)",
+      "note": ""
+    },
+    {
+      "name": "Jeziora w Smolianie",
+      "note": ""
+    },
+    {
+      "name": "Delovo Dere (Damsko)",
+      "note": ""
+    },
+    {
+      "name": "Kartola",
+      "note": ""
+    },
+    {
+      "name": "Stojaki 1",
+      "note": ""
+    },
+    {
+      "name": "Stojaki 2",
+      "note": ""
+    },
+    {
+      "name": "Fun Slope / Border Cross",
+      "note": "Trasa z falami, bandami i elementami do freestyle’u."
+    }
+  ],
+  "skiLifts": [
+    {
+      "route": "Stoki — szczyt Śnieżanka",
+      "type": "Wyciąg krzesełkowy",
+      "note": "Najdłuższa trasa — pokonuje 453 m różnicy wysokości."
+    },
+    {
+      "route": "Ośrodek narciarski nr 1 (Dworzec autobusowy) — Studenec",
+      "type": "4-osobowa kolejka linowa",
+      "note": ""
+    },
+    {
+      "route": "Studenec — szczyt Śnieżanka",
+      "type": "4-osobowa kolejka linowa",
+      "note": "Główna trasa prowadząca na szczyt i na czarne stoki."
+    },
+    {
+      "route": "Malina — szczyt Śnieżanka",
+      "type": "Wyciąg krzesełkowy",
+      "note": ""
+    },
+    {
+      "route": "Jeziora Smoliańskie — szczyt Śnieżanka",
+      "type": "Wyciąg krzesełkowy",
+      "note": ""
+    },
+    {
+      "route": "Malina — Studenec",
+      "type": "Wyciąg krzesełkowy",
+      "note": ""
+    }
+  ],
+  "liftFacts": [
+    {
+      "route": "Stoki — szczyt Śnieżanka",
+      "type": "Wyciąg krzesełkowy"
+    },
+    {
+      "route": "Ośrodek narciarski nr 1 — Studenec",
+      "type": "4-osobowa kolejka linowa"
+    },
+    {
+      "route": "Studenec — szczyt Śnieżanka",
+      "type": "4-osobowa kolejka linowa"
+    },
+    {
+      "route": "Malina — szczyt Śnieżanka",
+      "type": "Wyciąg krzesełkowy"
+    },
+    {
+      "route": "Jeziora Smoliańskie — szczyt Śnieżanka",
+      "type": "Wyciąg krzesełkowy"
+    },
+    {
+      "route": "Malina — Studenec",
+      "type": "Wyciąg krzesełkowy"
+    }
+  ],
+  "skiExtras": [
+    "Łączna przepustowość obiektów — ponad 13 000 narciarzy na godzinę",
+    "Szkoły narciarskie i snowboardowe z licencjonowanymi instruktorami oraz parki dla dzieci",
+    "Nocna jazda na torze „Ściana-2” (17:30 – 22:00)",
+    "2 trasy do narciarstwa biegowego: Snieżanka nr 14 (25 km, do wsi Mugla) i nr 15 „Ardaszlu” (7 km, do wsi Stojkite)",
+    "Park rozrywki z zjeżdżalniami na dmuchanych oponach, trasą do boardercrossu i przeszkodami do freestyle’u",
+    "Szafy, zestawy i przechowalnie nart w Studenec i Malina"
+  ],
+  "winterActivities": [
+    {
+      "title": "Narty i snowboard",
+      "description": "Ponad 37 km tras narciarskich dla narciarzy na każdym poziomie zaawansowania, nowoczesne wyciągi i gwarancja śniegu od grudnia do kwietnia."
+    },
+    {
+      "title": "Jazda nocą",
+      "description": "Oświetlona Ściana-2 działa do godziny 22:00 — to wrażenie, którego się nie zapomina."
+    },
+    {
+      "title": "Narciarstwo biegowe",
+      "description": "25 km oznakowanych tras przez ośnieżone lasy w kierunku Mugli i Stojki."
+    },
+    {
+      "title": "Wędrówki w śniegu i spacery",
+      "description": "Wycieczki z przewodnikiem na rakietach śnieżnych do Skał Orfeusza i Jezior Smoliańskich."
+    },
+    {
+      "title": "Szkoły narciarskie dla dzieci",
+      "description": "Licencjonowani instruktorzy, parki dla dzieci z wyciągiem oraz cała armia cierpliwości."
+    },
+    {
+      "title": "Après-ski",
+      "description": "Gospody z rodopskimi specjałami, muzyką na żywo i grzanym winem, zaledwie kilka metrów od stoków."
+    }
+  ],
+  "summerActivities": [
+    {
+      "title": "Kolarstwo górskie",
+      "description": "Oznakowane trasy MTB na szczycie Śnieżanka — od łatwych leśnych ścieżek po zjazdy dla zaawansowanych."
+    },
+    {
+      "title": "Ścieżki ekologiczne",
+      "description": "Kanion Wodospadów, Neviasta, Jeziora Smoliańskie — dziesiątki tras w odległości godziny drogi."
+    },
+    {
+      "title": "Park linowy i atrakcje",
+      "description": "Park rozrywki z trasami linowymi, ścianką wspinaczkową i kolejką linową dla małych i dużych."
+    },
+    {
+      "title": "Jazda konna",
+      "description": "Ośrodki jeździeckie w okolicy oferują wycieczki po łąkach Rożen i Stojki."
+    },
+    {
+      "title": "Zbieranie grzybów i ziół",
+      "description": "Manatarki, borówki i ponad 300 gatunków ziół — Rodopy to prawdziwa apteka natury."
+    },
+    {
+      "title": "Fotografia i gwiazdy",
+      "description": "Wschody słońca nad morzem spowitym mgłą, ciemne niebo sprzyjające astrofotografii oraz pobliska stacja obserwacyjna „Rożen”."
+    }
+  ],
+  "lists": {
+    "eco": [
+      "kanion-wodospady",
+      "jeziora w Smolianie",
+      "niejasna",
+      "orpheus-rocks"
+    ],
+    "landmarks": [
+      "shiroka-laka",
+      "obserwatorium w Rozhenie",
+      "wonderful-bridges",
+      "miasto Smolyan",
+      "Momchilovtsi",
+      "gela-village"
+    ],
+    "caves": [
+      "jaskinia Yagodina",
+      "gardło diabła",
+      "Wąwóz Trigrad",
+      "jaskinia Uhlovitsa"
+    ]
+  }
+}

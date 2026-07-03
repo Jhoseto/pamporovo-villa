@@ -1,0 +1,36 @@
+{
+  "items": [
+    {
+      "title": "Tres chalés independientes",
+      "description": "Villa 1, Villa 2 y Villa Deluxe: alquilas la villa completa solo para ti, con 2 dormitorios cada una y capacidad para hasta 6 huéspedes."
+    },
+    {
+      "title": "Chimenea de leña",
+      "description": "Una chimenea de verdad en el corazón del salón, para esas noches en las que nieva fuera."
+    },
+    {
+      "title": "Una cocina como en casa",
+      "description": "Cocina totalmente equipada con comedor: fogones, horno, nevera, cafetera y todo lo necesario para una cena casera."
+    },
+    {
+      "title": "Terraza con barbacoa",
+      "description": "Porche cubierto con barbacoa: para disfrutar de largas veladas al aire libre, independientemente del tiempo que haga fuera."
+    },
+    {
+      "title": "Vista de los Ródopes",
+      "description": "Terraza con vistas panorámicas a la montaña: café matutino al sol y puestas de sol que te dejan sin aliento."
+    },
+    {
+      "title": "Más de 260 días de sol",
+      "description": "Pamporovo es la estación de montaña más soleada de Bulgaria: se encuentra a 1 650 m de altitud, tiene un clima templado y el aire es puro."
+    },
+    {
+      "title": "Silencio entre los pinos",
+      "description": "Raykovski Livadi — Un tranquilo bosque de pinos, lejos de las multitudes, pero a solo unos minutos de las pistas y del centro."
+    },
+    {
+      "title": "Wi-Fi y aparcamiento",
+      "description": "Conexión a Internet inalámbrica gratuita y aparcamiento justo al lado de la puerta: llega en coche y mantente conectado."
+    }
+  ]
+}

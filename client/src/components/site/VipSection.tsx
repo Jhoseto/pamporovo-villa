@@ -1,14 +1,16 @@
 import { Crown, Sparkles } from "lucide-react";
-import { VIP_PROGRAM } from "@/data/siteContent";
+import { useVipProgram } from "@/i18n/contentHooks";
 import { SectionShell } from "./SectionShell";
 import { ScrollReveal } from "./ScrollReveal";
 
 export function VipSection() {
+  const vip = useVipProgram();
+
   return (
     <SectionShell
-      eyebrow="VIP програма"
-      title={VIP_PROGRAM.title}
-      subtitle={VIP_PROGRAM.intro}
+      eyebrow={vip.eyebrow}
+      title={vip.title}
+      subtitle={vip.intro}
       overlap
       splitTitle
       perfDefer
@@ -26,7 +28,7 @@ export function VipSection() {
           <div className="relative text-center">
             <p className="eyebrow mb-6 inline-flex items-center gap-2 text-[var(--gold)]">
               <Sparkles className="h-3.5 w-3.5" />
-              Ексклузивни привилегии
+              {vip.badge}
             </p>
 
             <div className="mx-auto mb-8 flex h-20 w-20 items-center justify-center rounded-full border border-[var(--gold)]/35 bg-[var(--gold)]/10 shadow-[0_0_40px_-8px_oklch(0.72_0.14_75/0.55)] md:h-24 md:w-24">
@@ -34,7 +36,7 @@ export function VipSection() {
             </div>
 
             <ul className="space-y-5 text-left md:mx-auto md:max-w-xl">
-              {VIP_PROGRAM.benefits.map(benefit => (
+              {vip.benefits.map(benefit => (
                 <li
                   key={benefit}
                   className="flex gap-4 border-b border-white/10 pb-5 last:border-0 last:pb-0"

@@ -1,7 +1,7 @@
 {
   "eyebrow": "Oficiální pronájem · Pamporovo Villa",
   "h1": "Pronájem vily v Pamporově",
-  "intro": "Tři samostatné vily v Райковски ливади — pronajímáte si celou vilu pouze pro vaši skupinu. Každá má 2 ložnice, 2 koupelny, krb, gril, až pro 6 hostů.",
+  "intro": "Tři samostatné vily v Raykovski Livadi — pronajímáte si celou vilu pouze pro vaši skupinu. Každá má 2 ložnice, 2 koupelny, krb, gril, až pro 6 hostů.",
   "villasHeading": "Tři vily",
   "pricingHeading": "Ceny",
   "pricingFrom": "od",
@@ -10,5 +10,10 @@
   "bookOnline": "Rezervujte si místo online",
   "guideLink": "Kompletní průvodce po Pamporovu",
   "footerNote": "Oficiální webové stránky pro pronájem vily v Pamporově, Bulharsko",
-  "villaPageLinkSuffix": "stránka →"
+  "villaPageLinkSuffix": "stránka →",
+  "villaPageLink": "{villa} stránka →",
+  "pricingNotes": [
+    "Ceny se vztahují na jednu noc za celou vilu (až pro 6 hostů).",
+    "V období svátků – kontaktujte nás ohledně individuální nabídky."
+  ]
 }

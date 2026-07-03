@@ -1,0 +1,19 @@
+{
+  "bannerTitle": "Cookies y privacidad",
+  "bannerBody": "Utilizamos las cookies necesarias para el funcionamiento de la página web. Con su consentimiento, activamos Google Analytics y Google Maps.",
+  "policyLink": "Política de cookies",
+  "settings": "Configuración",
+  "accept": "Acepto",
+  "manage": "Gestión de cookies",
+  "modalTitle": "Configuración de cookies",
+  "modalBody": "Elige qué categorías quieres permitir. Las cookies necesarias siempre están activas.",
+  "necessary": "Requisitos",
+  "necessaryDesc": "Guardan tu configuración de cookies y garantizan el funcionamiento básico de la web.",
+  "analytics": "Analíticos",
+  "analyticsDesc": "Google Analytics 4: estadísticas anónimas sobre las visitas y el comportamiento en la web.",
+  "functional": "Funcionales / terceros",
+  "functionalDesc": "Google Maps: un mapa interactivo con la ubicación de las casas de campo.",
+  "reject": "Solo lo imprescindible",
+  "save": "Guardar la selección",
+  "acceptAll": "Acepto a todos"
+}
