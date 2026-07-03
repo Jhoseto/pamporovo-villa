@@ -72,7 +72,7 @@ export function SiteHeader() {
         </button>
 
         <nav
-          className="site-header-nav hidden items-center gap-4 xl:gap-5 lg:flex"
+          className="site-header-nav hidden items-center gap-2 lg:gap-2.5 xl:gap-3 lg:flex"
           aria-label="Основна навигация"
         >
           {NAV_LINKS.map(link => (
@@ -81,7 +81,7 @@ export function SiteHeader() {
               type="button"
               onClick={() => handleNavClick(link.href, link.page)}
               className={cn(
-                "nav-link lg:text-[0.8125rem] xl:text-[0.9375rem] hover:text-[var(--gold)]",
+                "nav-link hover:text-[var(--gold)]",
                 scrolled ? "text-white/75" : "text-white/90",
                 isActiveLink(link.href, link.page) && "text-[var(--gold)]"
               )}
@@ -92,14 +92,15 @@ export function SiteHeader() {
         </nav>
 
         <div className="site-header-end">
-          <LangSwitcher variant="header" className="hidden lg:flex" />
           <MagneticButton
             size="sm"
-            className="premium-btn nav-cta hidden px-5 lg:inline-flex"
+            className="premium-btn nav-cta hidden lg:inline-flex"
             onClick={() => openOffers()}
           >
             Топ оферти
           </MagneticButton>
+
+          <LangSwitcher variant="header" className="site-header-lang hidden lg:flex" />
 
           <div className="site-header-menu lg:hidden">
             <Sheet open={open} onOpenChange={setOpen}>

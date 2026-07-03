@@ -71,7 +71,11 @@ export function HeroSection() {
       {siteReady && (
         <>
           <motion.div
-            className="hero-glass-float-left absolute left-[6%] top-[18%] z-[5] hidden w-[14.75rem] lg:block"
+            className="hero-glass-float-left absolute z-[5] hidden w-[var(--hero-widget-width-left)] lg:block"
+            style={{
+              left: "var(--hero-widget-inset-left)",
+              top: "18%",
+            }}
             initial={motionInitial ?? { opacity: 0, x: -40, rotateY: -12 }}
             animate={{ opacity: 1, x: 0, rotateY: 0 }}
             transition={{ duration: 1.2, delay: reducedMotion ? 0 : 0.6, ease: [0.22, 1, 0.36, 1] }}
@@ -81,7 +85,11 @@ export function HeroSection() {
             </HeroGlassPanel>
           </motion.div>
           <motion.div
-            className="hero-glass-float-right absolute bottom-[22%] right-[5%] z-[5] hidden w-[16.5rem] lg:block"
+            className="hero-glass-float-right absolute z-[5] hidden w-[var(--hero-widget-width-right)] lg:block"
+            style={{
+              right: "var(--hero-widget-inset-right)",
+              bottom: "22%",
+            }}
             initial={motionInitial ?? { opacity: 0, x: 40, rotateY: 12 }}
             animate={{ opacity: 1, x: 0, rotateY: 0 }}
             transition={{ duration: 1.2, delay: reducedMotion ? 0 : 0.9, ease: [0.22, 1, 0.36, 1] }}
