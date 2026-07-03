@@ -4,9 +4,27 @@ import { PAMPOROVO_SPOKES_EN } from "./en/pamporovoSpokesEn";
 import { VILLA_PAGE_CONFIGS, villaPath } from "./villaPages";
 import { VILLA_PAGES_EN } from "./en/villaPagesEn";
 
-/** English SEO overrides for hreflang + ?lang=en */
+export {
+  parseSiteLocale,
+  parseSiteLocale as parseSeoLang,
+} from "./i18n/parseLocale";
 
-export type SeoLang = "bg" | "en";
+export type { SiteLocale, SiteLocale as SeoLang } from "./i18n/locales";
+
+export {
+  HREFLANG_PATHS,
+  localizedUrl,
+  hreflangTagsForPath,
+  ogLocaleFor,
+  allLocalizedSitemapUrls,
+} from "./i18n/localeMeta";
+
+/** English SEO overrides — seeded into generated/en via i18n-sync */
+export type EnSeoEntry = {
+  title: string;
+  description: string;
+  keywords?: string;
+};
 
 const CORE_EN_SEO: Record<string, EnSeoEntry> = {
   "/": {
@@ -57,38 +75,8 @@ function buildVillaEnSeo(): Record<string, EnSeoEntry> {
   return entries;
 }
 
-export type EnSeoEntry = {
-  title: string;
-  description: string;
-  keywords?: string;
-};
-
 export const EN_SEO: Record<string, EnSeoEntry> = {
   ...CORE_EN_SEO,
   ...buildSpokeEnSeo(),
   ...buildVillaEnSeo(),
 };
-
-/** All public content routes with full EN copy — used for hreflang + sitemap ?lang=en */
-export const HREFLANG_PATHS = new Set([
-  "/",
-  "/rent",
-  "/pamporovo",
-  ...PAMPOROVO_SPOKES.map((s) => spokePath(s.slug)),
-  ...VILLA_PAGE_CONFIGS.map((v) => villaPath(v.id)),
-]);
-
-export function parseSeoLang(search: string): SeoLang {
-  try {
-    const params = new URLSearchParams(search.startsWith("?") ? search.slice(1) : search);
-    return params.get("lang") === "en" ? "en" : "bg";
-  } catch {
-    return "bg";
-  }
-}
-
-export function localizedUrl(pathname: string, lang: SeoLang): string {
-  const base = pathname === "/" ? absoluteUrl("/") : absoluteUrl(pathname);
-  if (lang === "bg") return base;
-  return `${base}${base.includes("?") ? "&" : "?"}lang=en`;
-}

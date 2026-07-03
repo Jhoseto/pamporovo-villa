@@ -1,0 +1,13 @@
+{
+  "formName": "Ad",
+  "formEmail": "E-posta",
+  "formRating": "Değerlendirme",
+  "formVilla": "Vila",
+  "formPeriod": "Dönem",
+  "formBody": "Görüşünüz",
+  "placeholderName": "Adınız",
+  "placeholderEmail": "isteğe bağlı",
+  "placeholderPeriod": "örn. Mart 2025",
+  "placeholderBody": "Bizimle geçirdiğiniz zamandan ne hatırlıyorsunuz...",
+  "villaUnknown": "Emin değilim"
+}

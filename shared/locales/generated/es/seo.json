@@ -1,0 +1,19 @@
+{
+  "routes": {
+    "/": {
+      "title": "Pamporovo Villa | 3 chalés en alquiler en Pamporovo, Bulgaria",
+      "description": "Pamporovo Villa — tres chalés independientes en alquiler en el complejo turístico de Pamporovo, en la zona de Райковски ливади. 2 dormitorios, chimenea, barbacoa, capacidad para hasta 6 huéspedes. Reserva directamente.",
+      "keywords": "Villa en alquiler en Pamporovo, Pamporovo Villa, alquiler de villa en Pamporovo"
+    },
+    "/rent": {
+      "title": "Alquiler de villas en Pamporovo | 3 villas desde 110 €/noche — Pamporovo Villa",
+      "description": "Página web oficial de alquiler: 3 villas independientes en Pamporovo. Una villa completa para tu grupo: chimenea, barbacoa, a 2 km del centro. Reserva online.",
+      "keywords": "alquiler de villas en Pamporovo, villas en Pamporovo, vacaciones en los Ródopi"
+    },
+    "/pamporovo": {
+      "title": "Pamporovo: guía completa de la estación y la región | Pamporovo Villa",
+      "description": "Más de 37 km de pistas de esquí, 6 remontes, senderos ecológicos, cuevas y lugares de interés. Dónde alojarse: 3 chalés desde 110 € por noche en Райковски ливади.",
+      "keywords": "Guía de Pamporovo, esquí en Bulgaria, viaje a los Ródopes"
+    }
+  }
+}

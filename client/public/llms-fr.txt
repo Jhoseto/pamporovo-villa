@@ -1,0 +1,6 @@
+# Pamporovo Villa — FR index for AI assistants
+
+[Homepage](https://pamporovovilla.com/?lang=fr)
+[Rent a villa](https://pamporovovilla.com/rent?lang=fr)
+[Pamporovo guide](https://pamporovovilla.com/pamporovo?lang=fr)
+[Facts JSON](https://pamporovovilla.com/facts.json?lang=fr)

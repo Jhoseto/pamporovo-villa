@@ -3,13 +3,27 @@ import { useState } from "react";
 import { useLocation } from "wouter";
 import { CONTACT, NAV_LINKS, SITE } from "@/data/siteContent";
 import { useOffersModal } from "@/contexts/OffersModalContext";
+import { useTranslation } from "@/contexts/LocaleContext";
 import { useHeaderScroll } from "@/hooks/useHeaderScroll";
 import { useScrollProgress } from "@/hooks/useScrollProgress";
+import { usePageSearch } from "@/hooks/usePageLang";
 import { navigateSiteLink } from "@/lib/siteNav";
 import { cn } from "@/lib/utils";
 import { LangSwitcher } from "./LangSwitcher";
 import { MagneticButton } from "./MagneticButton";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+
+const NAV_I18N_KEYS: Record<string, string> = {
+  "#about": "about",
+  "#experience": "experience",
+  "#gallery": "gallery",
+  "#amenities": "amenities",
+  "#location": "location",
+  "#pricing": "pricing",
+  "#contact": "contact",
+  "#reviews": "reviews",
+  "/pamporovo": "pamporovo",
+};
 
 function SiteLogo({ variant = "header" }: { variant?: "header" | "menu" }) {
   return (
@@ -30,10 +44,17 @@ export function SiteHeader() {
   const scrollProgress = useScrollProgress();
   const [open, setOpen] = useState(false);
   const [location, setLocation] = useLocation();
+  const search = usePageSearch();
   const { openOffers } = useOffersModal();
+  const { t } = useTranslation();
+
+  const navLabel = (href: string, fallback: string) => {
+    const key = NAV_I18N_KEYS[href];
+    return key ? t(`nav.${key}`, fallback) : fallback;
+  };
 
   const handleNavClick = (href: string, page?: boolean) => {
-    navigateSiteLink({ href, label: "", page }, setLocation, location);
+    navigateSiteLink({ href, label: "", page }, setLocation, location, search);
     setOpen(false);
   };
 
@@ -73,7 +94,7 @@ export function SiteHeader() {
 
         <nav
           className="site-header-nav hidden items-center gap-2 lg:gap-2.5 xl:gap-3 lg:flex"
-          aria-label="Основна навигация"
+          aria-label={t("common.mainNav", "Основна навигация")}
         >
           {NAV_LINKS.map(link => (
             <button
@@ -86,7 +107,7 @@ export function SiteHeader() {
                 isActiveLink(link.href, link.page) && "text-[var(--gold)]"
               )}
             >
-              {link.label}
+              {navLabel(link.href, link.label)}
             </button>
           ))}
         </nav>
@@ -97,7 +118,7 @@ export function SiteHeader() {
             className="premium-btn nav-cta hidden lg:inline-flex"
             onClick={() => openOffers()}
           >
-            Топ оферти
+            {t("common.offersCta", "Топ оферти")}
           </MagneticButton>
 
           <LangSwitcher variant="header" className="site-header-lang hidden lg:flex" />
@@ -107,7 +128,7 @@ export function SiteHeader() {
               <SheetTrigger asChild>
                 <button
                   type="button"
-                  aria-label="Отвори меню"
+                  aria-label={t("common.openMenu", "Отвори меню")}
                   className="mobile-menu-trigger"
                 >
                   <Menu className="h-5 w-5" strokeWidth={1.75} />
@@ -132,7 +153,7 @@ export function SiteHeader() {
 
                   <p className="eyebrow mt-3 text-[var(--gold)]/80">{SITE.tagline}</p>
 
-                  <nav className="mt-8 flex flex-1 flex-col" aria-label="Мобилна навигация">
+                  <nav className="mt-8 flex flex-1 flex-col" aria-label={t("common.mobileNav", "Мобилна навигация")}>
                     {NAV_LINKS.map((link, index) => (
                       <button
                         key={link.href}
@@ -141,7 +162,7 @@ export function SiteHeader() {
                         className="mobile-nav-link group"
                         style={{ animationDelay: `${index * 45}ms` }}
                       >
-                        <span>{link.label}</span>
+                        <span>{navLabel(link.href, link.label)}</span>
                         <ChevronRight className="mobile-nav-link-icon h-4 w-4 shrink-0 opacity-0 transition-all duration-300 group-hover:translate-x-0.5 group-hover:opacity-100" />
                       </button>
                     ))}
@@ -156,13 +177,13 @@ export function SiteHeader() {
                         setOpen(false);
                       }}
                     >
-                      Топ оферти
+                      {t("common.offersCta", "Топ оферти")}
                     </MagneticButton>
                     <MagneticButton
                       className="premium-btn nav-cta h-12 w-full"
                       onClick={() => handleNavClick("#booking")}
                     >
-                      Резервирай
+                      {t("common.book", "Резервирай")}
                     </MagneticButton>
                     <a
                       href={`tel:${CONTACT.phone}`}

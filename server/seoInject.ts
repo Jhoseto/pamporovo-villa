@@ -1,5 +1,6 @@
 import { getRouteSeo, normalizePathname, type RouteSeoBundle } from "./seoMeta";
-import { HREFLANG_PATHS, localizedUrl, parseSeoLang } from "../shared/seoEnMeta";
+import { hreflangTagsForPath } from "../shared/i18n/localeMeta";
+import { parseSiteLocale } from "../shared/i18n/parseLocale";
 import { getSiteUrl } from "../shared/seoConstants";
 
 const STRIP_PATTERNS = [
@@ -23,14 +24,9 @@ function escapeHtml(value: string): string {
 }
 
 function hreflangTags(pathname: string): string {
-  if (!HREFLANG_PATHS.has(pathname)) return "";
-  const bg = localizedUrl(pathname, "bg");
-  const en = localizedUrl(pathname, "en");
-  return [
-    `<link rel="alternate" hreflang="bg" href="${escapeHtml(bg)}" />`,
-    `<link rel="alternate" hreflang="en" href="${escapeHtml(en)}" />`,
-    `<link rel="alternate" hreflang="x-default" href="${escapeHtml(bg)}" />`,
-  ].join("\n    ");
+  return hreflangTagsForPath(pathname)
+    .map(({ lang, href }) => `<link rel="alternate" hreflang="${lang}" href="${escapeHtml(href)}" />`)
+    .join("\n    ");
 }
 
 function buildHeadInjection(bundle: RouteSeoBundle, pathname: string): string {
@@ -80,7 +76,7 @@ export function injectSeoIntoHtml(html: string, rawUrl: string): string {
   const { pathname, search } = parseRequestUrl(rawUrl);
   if (pathname.startsWith("/admin")) return html;
 
-  const lang = parseSeoLang(search);
+  const lang = parseSiteLocale(search);
   const bundle = getRouteSeo(pathname, lang);
   let result = html;
   for (const pattern of STRIP_PATTERNS) {

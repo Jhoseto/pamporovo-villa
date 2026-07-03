@@ -20,7 +20,10 @@ import {
   type VillaPageConfig,
 } from "../shared/villaPages";
 import { VILLA_LABELS } from "../shared/villas";
-import { EN_SEO, HREFLANG_PATHS, localizedUrl, type SeoLang } from "../shared/seoEnMeta";
+import { EN_SEO, HREFLANG_PATHS, localizedUrl, type EnSeoEntry } from "../shared/seoEnMeta";
+import { loadAllMessages, resolveMessage } from "../shared/i18n/messages";
+import { SOURCE_LOCALE, TARGET_LOCALES, type SiteLocale } from "../shared/i18n/locales";
+import { ogLocaleFor } from "../shared/i18n/localeMeta";
 import type { PamporovoSpokeSlug } from "../shared/pamporovoSpokeTypes";
 import { localizeSpoke } from "../shared/en/localizeSpoke";
 import { getVillaPageEn } from "../shared/en/villaPagesEn";
@@ -707,26 +710,43 @@ const ROUTES: Record<string, Omit<RouteSeoBundle, "canonical" | "ogImage" | "ogL
   ...buildVillaRouteEntries(),
 };
 
-export function getRouteSeo(pathname: string, lang: SeoLang = "bg"): RouteSeoBundle {
+function seoFromLocale(pathname: string, lang: SiteLocale): Partial<EnSeoEntry> | null {
+  const messages = loadAllMessages(lang);
+  const title = resolveMessage(messages, `seo.routes.${pathname}.title`);
+  const description = resolveMessage(messages, `seo.routes.${pathname}.description`);
+  const keywords = resolveMessage(messages, `seo.routes.${pathname}.keywords`);
+  if (!title || !description) return null;
+  return { title, description, keywords };
+}
+
+export function getRouteSeo(pathname: string, lang: SiteLocale = SOURCE_LOCALE): RouteSeoBundle {
   const route = ROUTES[pathname] ?? ROUTES["/"];
-  const en = EN_SEO[pathname];
-  const useEn = lang === "en" && en;
+  const localized = lang !== SOURCE_LOCALE ? seoFromLocale(pathname, lang) : null;
+  const enFallback = lang === "en" && !localized ? EN_SEO[pathname] : null;
+  const useLocalized = localized ?? enFallback;
   const canonical =
-    useEn ? localizedUrl(pathname, "en") : pathname === "/" ? absoluteUrl("/") : absoluteUrl(pathname);
+    lang !== SOURCE_LOCALE && useLocalized
+      ? localizedUrl(pathname, lang)
+      : pathname === "/"
+        ? absoluteUrl("/")
+        : absoluteUrl(pathname);
 
   return {
-    title: useEn ? en.title : route.title,
-    description: useEn ? en.description : route.description,
-    keywords: useEn ? en.keywords : route.keywords,
+    title: useLocalized?.title ?? route.title,
+    description: useLocalized?.description ?? route.description,
+    keywords: useLocalized?.keywords ?? route.keywords,
     canonical,
     ogType: route.ogType,
     ogImage: ogImageUrl(route.ogImagePath),
     ogImageWidth: route.ogImageWidth,
     ogImageHeight: route.ogImageHeight,
-    ogImageAlt: useEn ? en.title : route.ogImageAlt,
-    ogLocale: useEn ? "en_GB" : "bg_BG",
+    ogImageAlt: useLocalized?.title ?? route.ogImageAlt,
+    ogLocale: ogLocaleFor(lang),
     jsonLd: applyDynamicJsonLd(pathname, route.jsonLd),
-    noscriptHtml: useEn ? (buildEnNoscript(pathname) ?? route.noscriptHtml) : route.noscriptHtml,
+    noscriptHtml:
+      lang !== SOURCE_LOCALE && useLocalized
+        ? (buildEnNoscript(pathname) ?? route.noscriptHtml)
+        : route.noscriptHtml,
   };
 }
 
@@ -760,11 +780,13 @@ export function getSitemapEntries(): Array<{
     ],
   }));
 
-  const enEntries = Array.from(HREFLANG_PATHS).map((p) => ({
-    loc: localizedUrl(p, "en"),
-    changefreq: "monthly",
-    priority: p === "/rent" ? "0.94" : p === "/" ? "0.98" : "0.84",
-  }));
+  const localizedEntries = Array.from(HREFLANG_PATHS).flatMap((p) =>
+    TARGET_LOCALES.map((lang) => ({
+      loc: localizedUrl(p, lang),
+      changefreq: "monthly",
+      priority: p === "/rent" ? "0.94" : p === "/" ? "0.98" : "0.84",
+    }))
+  );
 
   return [
     {
@@ -794,6 +816,6 @@ export function getSitemapEntries(): Array<{
     ...spokeEntries,
     ...villaEntries,
     { loc: absoluteUrl(SEO_PATHS.legal), changefreq: "monthly", priority: "0.3" },
-    ...enEntries,
+    ...localizedEntries,
   ];
 }

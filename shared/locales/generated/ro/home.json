@@ -1,0 +1,37 @@
+{
+  "hero": {
+    "eyebrow": "Smolyan · Pamporovo · 3 vile de închiriat",
+    "titleLine1": "Pamporovo",
+    "titleLine2": "Vilă",
+    "subtitle": "Vă oferim trei vile independente situate în mijlocul pădurilor fermecătoare din Pamporovo. Confortul de acasă la munte, pe tot parcursul anului.",
+    "ctaExperience": "Începe plimbarea",
+    "ctaBook": "Rezervă",
+    "scrollHint": "Explorați"
+  },
+  "gallery": {
+    "eyebrow": "Galerie",
+    "title": "Cele trei vile în imagini",
+    "subtitle": "Explorați fiecare vilă — interiorul, atmosfera confortabilă și priveliștile montane",
+    "pickVilla": "Alegeți o vilă"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Să vorbim despre vacanța dumneavoastră",
+    "subtitle": "Aveți o întrebare sau o solicitare specială? Sunați-ne sau scrieți-ne — vă răspundem personal și cu plăcere"
+  },
+  "reviews": {
+    "eyebrow": "Recenzii",
+    "title": "Ce spun oaspeții noștri",
+    "subtitle": "Impresii autentice ale unor oameni care au dormit deja lângă pinii noștri",
+    "formTitle": "Împărtășiți-vă experiența",
+    "submit": "Trimite un comentariu",
+    "submitting": "Se trimite..."
+  },
+  "location": {
+    "eyebrow": "Locație",
+    "title": "La un pas de toate, departe de zgomot",
+    "subtitle": "stațiunea Pamporovo, zona Райковски ливади — ascunse în pădurea de pini",
+    "directions": "Găsește-ne",
+    "info": "Pamporovo este cea mai însorită stațiune montană din Bulgaria — situată la 1 650 m, în inima Munților Rodopi. Iarna oferă 37 km de pârtii perfect întreținute și schi nocturn, iar vara — trasee ecologice, cascade și un aer cu proprietăți curative. Iar vilele noastre sunt refugiul vostru liniștit în mijlocul tuturor acestor frumuseți."
+  }
+}

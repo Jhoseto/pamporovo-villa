@@ -13,6 +13,7 @@ import { LIFT_FACTS } from "@shared/pamporovoSkiData";
 import { formatPriceEur, PRICING_TIERS } from "@/data/siteContent";
 import { navigateToHomeSection } from "@/lib/siteNav";
 import { usePageLang } from "@/hooks/usePageLang";
+import { SOURCE_LOCALE, type SiteLocale } from "@shared/i18n/locales";
 import { withLang } from "@/lib/localizedNav";
 import { EN_UI } from "@shared/en/commonUi";
 import { localizeSpoke } from "@shared/en/localizeSpoke";
@@ -54,8 +55,8 @@ function VillaCtaBlock({ en }: { en: boolean }) {
   );
 }
 
-function RelatedSpokes({ slugs, lang }: { slugs: PamporovoSpokeSlug[]; lang: "bg" | "en" }) {
-  const en = lang === "en";
+function RelatedSpokes({ slugs, lang }: { slugs: PamporovoSpokeSlug[]; lang: SiteLocale }) {
+  const en = lang !== SOURCE_LOCALE;
   const related = slugs
     .map((slug) => {
       const bg = PAMPOROVO_SPOKES.find((s) => s.slug === slug);
@@ -89,7 +90,7 @@ export default function PamporovoSpokePage() {
   const [, params] = useRoute("/pamporovo/:slug");
   const [location, setLocation] = useLocation();
   const lang = usePageLang();
-  const en = lang === "en";
+  const en = lang !== SOURCE_LOCALE;
   const bgSpoke = getSpokeBySlug(params?.slug ?? "");
   const spoke = useMemo(
     () => (bgSpoke ? localizeSpoke(bgSpoke, lang) : undefined),

@@ -1,0 +1,239 @@
+{
+  "routes": {
+    "/": {
+      "title": "Pamporovo Villa | 3 Private Villas for Rent in Pamporovo, Bulgaria",
+      "description": "Rent a whole villa in Pamporovo — 3 private chalets on Raykovski Livadi. 2 bedrooms, fireplace, BBQ, up to 6 guests. Book direct.",
+      "keywords": "Pamporovo villa rental, Bulgaria ski chalet, Rhodope mountains"
+    },
+    "/rent": {
+      "title": "Rent a Villa in Pamporovo | 3 Villas from €110/night — Pamporovo Villa",
+      "description": "Official rental page: 3 private villas in Pamporovo, Bulgaria. Whole villa for your group — fireplace, BBQ, 2 km from ski center. Book online.",
+      "keywords": "rent villa Pamporovo, Pamporovo chalet rental, Bulgaria holiday home"
+    },
+    "/pamporovo": {
+      "title": "Pamporovo Travel Guide 2026 | Ski, Hiking, Caves — Pamporovo Villa",
+      "description": "Complete guide to Pamporovo resort: 37+ km ski runs, eco trails, caves, villages. Where to stay — 3 villas from €110/night.",
+      "keywords": "Pamporovo guide, ski Bulgaria, Rhodope travel"
+    },
+    "/pamporovo/pisti": {
+      "title": "Pamporovo ski runs 2026 | 37+ km, night skiing, map — Pamporovo Villa",
+      "description": "All ski runs in Pamporovo: length, difficulty, night skiing on Stenata, lifts to Snezhanka. Plan your ski holiday — villas from €110/night.",
+      "keywords": "Pamporovo ski runs, Pamporovo pistes, Stenata, night skiing, Snezhanka, ski map Bulgaria"
+    },
+    "/pamporovo/kude-da-spim": {
+      "title": "Where to stay in Pamporovo | Villas, hotels, tips 2026",
+      "description": "Where to sleep in Pamporovo: hotel vs villa, Raykovski Livadi, from €110/night for a whole villa up to 6 guests. Official rental — Pamporovo Villa.",
+      "keywords": "where to stay Pamporovo, Pamporovo accommodation, villa Pamporovo, hotel Pamporovo"
+    },
+    "/pamporovo/hotel-vs-vila": {
+      "title": "Hotel or villa Pamporovo | Comparison for ski & summer 2026",
+      "description": "Hotel vs villa in Pamporovo: prices, advantages for families and groups, fireplace and BBQ. When villas win — Pamporovo Villa from €110/night.",
+      "keywords": "hotel or villa Pamporovo, accommodation comparison, villa vs hotel Bulgaria"
+    },
+    "/pamporovo/naem-vila": {
+      "title": "Villa rental Pamporovo | 3 villas, prices, booking 2026",
+      "description": "Rent a villa in Pamporovo — 3 private chalets, 2 bedrooms, fireplace, BBQ, up to 6 guests. From €110/night. Official site Pamporovo Villa.",
+      "keywords": "rent villa Pamporovo, Pamporovo chalet rental, holiday home Pamporovo"
+    },
+    "/pamporovo/vila-s-kamina": {
+      "title": "Villa with fireplace Pamporovo | Fireplace + BBQ — Pamporovo Villa",
+      "description": "Rent a villa with fireplace in Pamporovo — all three Pamporovo Villa chalets have fireplace and BBQ. Up to 6 guests, from €110/night.",
+      "keywords": "villa with fireplace Pamporovo, mountain chalet fireplace, winter villa Bulgaria"
+    },
+    "/pamporovo/naem-zima": {
+      "title": "Winter villa rental Pamporovo | Ski holiday 2026 — Pamporovo Villa",
+      "description": "Villa for rent in winter Pamporovo — 2 km from pistes, fireplace, up to 6 guests. Book your ski break at Pamporovo Villa.",
+      "keywords": "winter villa rental Pamporovo, ski holiday chalet, Pamporovo winter accommodation"
+    },
+    "/pamporovo/lato": {
+      "title": "Summer Pamporovo 2026 | Eco trails, activities, villa rental",
+      "description": "What to do in Pamporovo in summer: eco trails, Smolyan lakes, caves, cycling. Villa rental from €110/night — Pamporovo Villa.",
+      "keywords": "summer Pamporovo, eco tourism Bulgaria, mountain holiday summer, Rhodope trails"
+    },
+    "/pamporovo/zima": {
+      "title": "Winter Pamporovo 2026 | Ski season, runs, accommodation",
+      "description": "Winter in Pamporovo: pistes, lifts, night skiing, villa rental near the resort. Pamporovo Villa from €120/night.",
+      "keywords": "winter Pamporovo, ski season Bulgaria, snow Pamporovo, winter holiday"
+    },
+    "/pamporovo/yagodinska-pechtera": {
+      "title": "Yagodinska Cave from Pamporovo | Distance, tour, tips",
+      "description": "How to reach Yagodinska Cave from Pamporovo — 50 km, 45 min tour. Base: villa on Raykovski Livadi.",
+      "keywords": "Yagodinska Cave, caves Pamporovo, Buynovo Gorge, Rhodope caves"
+    },
+    "/pamporovo/shiroka-laka": {
+      "title": "Shiroka Laka from Pamporovo | 16 km, what to see",
+      "description": "Day trip to Shiroka Laka from Pamporovo — 20 min by car. Villa base on Raykovski Livadi.",
+      "keywords": "Shiroka Laka, Rhodope village, Pamporovo day trip"
+    },
+    "/pamporovo/eco-pateki": {
+      "title": "Eco trails Pamporovo | Hiking routes, Smolyan lakes",
+      "description": "Best eco trails near Pamporovo: canyon, lakes, Nevyastata. Summer villa rental from €110/night.",
+      "keywords": "eco trails Pamporovo, hiking Rhodope, mountain walks Bulgaria"
+    },
+    "/pamporovo/kak-da-stignem": {
+      "title": "How to get to Pamporovo | From Sofia, Plovdiv, Burgas",
+      "description": "Directions to Pamporovo: ~240 km from Sofia, ~85 km from Plovdiv. Villa address: Raykovski Livadi.",
+      "keywords": "how to get to Pamporovo, drive Sofia Pamporovo, Pamporovo directions"
+    },
+    "/pamporovo/vila-za-dvoika": {
+      "title": "Villa for two Pamporovo | Romantic chalet rental",
+      "description": "Rent a villa for two in Pamporovo — private chalet, fireplace, BBQ. Pamporovo Villa from €110/night.",
+      "keywords": "villa for two Pamporovo, romantic getaway Bulgaria, couples chalet"
+    },
+    "/pamporovo/vila-za-grupa": {
+      "title": "Villa for 6 people Pamporovo | Group chalet rental",
+      "description": "Whole villa for up to 6 guests in Pamporovo — friends ski trip or summer hiking. Pamporovo Villa.",
+      "keywords": "villa for 6 Pamporovo, group rental, friends chalet Bulgaria"
+    },
+    "/pamporovo/naem-lqto": {
+      "title": "Summer villa rental Pamporovo | From €110/night",
+      "description": "Rent a villa in Pamporovo for summer — eco tourism, Rhodope mountains. Pamporovo Villa official rental.",
+      "keywords": "summer villa Pamporovo, mountain rental summer, Rhodope holiday"
+    },
+    "/pamporovo/rajkovski-livadi": {
+      "title": "Raykovski Livadi Pamporovo | Villa rental location",
+      "description": "Villas on Raykovski Livadi, Pamporovo — 2 km from resort centre, 3 private chalets. Pamporovo Villa.",
+      "keywords": "Raykovski Livadi, Pamporovo villas, where to stay Pamporovo"
+    },
+    "/pamporovo/naem-ot-110-evro": {
+      "title": "Villa from €110/night Pamporovo | Whole chalet prices",
+      "description": "Rent a whole villa in Pamporovo from €110/night — up to 6 guests, fireplace, BBQ. Pamporovo Villa.",
+      "keywords": "cheap villa Pamporovo, villa from 110 euro, Pamporovo prices"
+    },
+    "/pamporovo/semeen-otpusk": {
+      "title": "Family ski holiday Pamporovo | Villa for families",
+      "description": "Family ski trip Pamporovo — villa with 2 bedrooms, up to 6 guests, near pistes. Pamporovo Villa.",
+      "keywords": "family ski Pamporovo, family villa Bulgaria, ski with children"
+    },
+    "/pamporovo/praznici": {
+      "title": "Christmas & New Year Pamporovo 2026 | Villa with fireplace",
+      "description": "Holiday stay in Pamporovo — whole villa with fireplace, BBQ, up to 6 guests. Pamporovo Villa from €120/night.",
+      "keywords": "Christmas Pamporovo, New Year villa, holiday Pamporovo, fireplace chalet"
+    },
+    "/pamporovo/team-building": {
+      "title": "Team building Pamporovo | Villas for groups up to 18",
+      "description": "Corporate team building Pamporovo — 3 villas, up to 18 guests, BBQ, fireplace, parking. Pamporovo Villa.",
+      "keywords": "team building Pamporovo, corporate retreat Bulgaria, group villa"
+    },
+    "/pamporovo/dalga-pochivka": {
+      "title": "Long villa rental Pamporovo | 7+ nights, whole chalet",
+      "description": "Rent a villa in Pamporovo for 7+ nights — whole chalet up to 6 guests. Contact for a custom quote.",
+      "keywords": "long stay Pamporovo, weekly villa rental, mountain remote work"
+    },
+    "/pamporovo/oferti": {
+      "title": "Villa offers Pamporovo 2026 | From €110/night — Pamporovo Villa",
+      "description": "Official villa offers in Pamporovo — summer and winter rates, whole villa, up to 6 guests. Book at pamporovovilla.com.",
+      "keywords": "Pamporovo offers, villa promotion, rental prices Pamporovo"
+    },
+    "/pamporovo/liftove": {
+      "title": "Pamporovo lifts 2026 | Capacity, routes, map",
+      "description": "All lifts in Pamporovo: Stoykite, Studenets, Malina, Smolyan lakes. Villa base 2 km from centre.",
+      "keywords": "Pamporovo lifts, ski lift Snezhanka, lift capacity Pamporovo"
+    },
+    "/pamporovo/rozhen": {
+      "title": "Rozhen Observatory from Pamporovo | 18 km, visits",
+      "description": "How to visit Rozhen Observatory from Pamporovo — 25 min drive, 2 m telescope. Base: Pamporovo Villa.",
+      "keywords": "Rozhen Observatory, NAO Rozhen, Pamporovo excursions"
+    },
+    "/pamporovo/chudnite-mostove": {
+      "title": "Wonderful Bridges from Pamporovo | 42 km, route",
+      "description": "Trip to Wonderful Bridges from Pamporovo — 1 h drive, trail under the arches. Villa base — Pamporovo Villa.",
+      "keywords": "Wonderful Bridges Bulgaria, Rhodope landmarks, Pamporovo day trip"
+    },
+    "/pamporovo/dyavolskoto-garlo": {
+      "title": "Devil's Throat Cave from Pamporovo | Distance, tour",
+      "description": "Trip to Devil's Throat from Pamporovo — 1 h 20 min, 301 steps. Villa base — Pamporovo Villa.",
+      "keywords": "Devil's Throat cave, Trigrad, Rhodope caves"
+    },
+    "/pamporovo/trigradsko-zhdrelo": {
+      "title": "Trigrad Gorge from Pamporovo | Route, tips",
+      "description": "How to reach Trigrad Gorge from Pamporovo — combine with Devil's Throat. Pamporovo Villa.",
+      "keywords": "Trigrad Gorge, Trigrad, Rhodope canyon"
+    },
+    "/pamporovo/uhlovitsa": {
+      "title": "Uhlovitsa Cave from Pamporovo | 32 km, tour",
+      "description": "Trip to Uhlovitsa from Pamporovo — 45 min drive, 30 min tour. Near Agushevi Konatsi. Pamporovo Villa.",
+      "keywords": "Uhlovitsa cave, Mogilitsa, caves Pamporovo"
+    },
+    "/pamporovo/kanion-vodopadi": {
+      "title": "Canyon of Waterfalls from Pamporovo | Eco trail",
+      "description": "Eco trail Canyon of Waterfalls from Pamporovo — 6 km loop, 46 waterfalls. Summer villa base.",
+      "keywords": "Canyon of Waterfalls, eco trail Smolyan, Rhodope hiking"
+    },
+    "/pamporovo/smolyanski-ezera": {
+      "title": "Smolyan Lakes from Pamporovo | Route, tips",
+      "description": "Easy hike to Smolyan Lakes from Pamporovo — family friendly. Villa rental — Pamporovo Villa.",
+      "keywords": "Smolyan Lakes, eco Pamporovo, mountain lakes Bulgaria"
+    },
+    "/pamporovo/nevyastata": {
+      "title": "Nevyastata trail from Pamporovo | Panorama, trolley",
+      "description": "Nevyastata eco trail from Pamporovo — 900 m route, panorama. Summer holiday — Pamporovo Villa.",
+      "keywords": "Nevyastata, eco trail Smolyan, Rhodope panorama"
+    },
+    "/pamporovo/orpheus-rocks": {
+      "title": "Orpheus Rocks from Pamporovo | Trail from Snezhanka",
+      "description": "Hiking Orpheus Rocks from Snezhanka peak — panorama, Iglete peak. Base: Pamporovo Villa.",
+      "keywords": "Orpheus Rocks, Snezhanka, hiking Pamporovo"
+    },
+    "/pamporovo/momchilovtsi": {
+      "title": "Momchilovtsi from Pamporovo | 25 km, village, mehanas",
+      "description": "Day trip to Momchilovtsi from Pamporovo — 30 min, longevity village. Villa rental — Pamporovo Villa.",
+      "keywords": "Momchilovtsi, Rhodope villages, Bulgarian yoghurt"
+    },
+    "/pamporovo/gela": {
+      "title": "Gela from Pamporovo | Orpheus, bagpipe festival",
+      "description": "Trip to Gela from Pamporovo — 30 min, Orpheus legend, bagpipe festival. Villa rental.",
+      "keywords": "Gela village, Orpheus Rhodopes, bagpipe festival"
+    },
+    "/pamporovo/smolyan": {
+      "title": "Smolyan from Pamporovo | Planetarium, museums, 20 min",
+      "description": "Day trip to Smolyan from Pamporovo — planetarium, museums. Base: Pamporovo Villa from €110/night.",
+      "keywords": "Smolyan, planetarium Bulgaria, Rhodope museum"
+    },
+    "/pamporovo/nochno-karane": {
+      "title": "Night skiing Pamporovo 2026 | Stenata, schedule",
+      "description": "Night skiing on Stenata Pamporovo — schedule, ski pass, villa 2 km away — Pamporovo Villa.",
+      "keywords": "night skiing Pamporovo, Stenata night, Pamporovo evening ski"
+    },
+    "/pamporovo/stenata": {
+      "title": "Stenata Pamporovo | Black run, night skiing",
+      "description": "Stenata run Pamporovo — 1,258 m, black, night skiing. Villa 2 km — Pamporovo Villa.",
+      "keywords": "Stenata Pamporovo, black run Bulgaria, night skiing"
+    },
+    "/pamporovo/vruh-snezhanka": {
+      "title": "Snezhanka peak Pamporovo | 1,926 m, lift, panorama",
+      "description": "Snezhanka peak Pamporovo — 1,926 m, Stoykite lift, black runs. Villa rental — Pamporovo Villa.",
+      "keywords": "Snezhanka peak, Pamporovo summit, ski zone Bulgaria"
+    },
+    "/pamporovo/ski-karti": {
+      "title": "Ski pass Pamporovo 2026 | Prices, where to buy",
+      "description": "Pamporovo ski pass — where to buy, day and season passes, lifts. Villa base — Pamporovo Villa.",
+      "keywords": "Pamporovo ski pass, lift ticket, ski card Bulgaria"
+    },
+    "/pamporovo/bunovsko-zhdrelo": {
+      "title": "Buynovo Gorge from Pamporovo | Yagodinska Cave",
+      "description": "Buynovo Gorge from Pamporovo — 50 km, Yagodinska Cave, eco tour. Villa rental — Pamporovo Villa.",
+      "keywords": "Buynovo Gorge, Yagodinska Cave, Rhodope gorges"
+    },
+    "/pamporovo/chepelare": {
+      "title": "Chepelare vs Pamporovo | Ski, distance, accommodation",
+      "description": "Chepelare and Pamporovo — resort comparison. Villa rental in Pamporovo from €110 — Pamporovo Villa.",
+      "keywords": "Chepelare, Pamporovo, ski Bulgaria comparison"
+    },
+    "/villa/villa-1": {
+      "title": "Villa 1 for Rent in Pamporovo | 2 Bedrooms, Fireplace — Pamporovo Villa",
+      "description": "Rent Villa 1 in Pamporovo — cosy family chalet, 2 bedrooms, 2 bathrooms, fireplace, BBQ, up to 6 guests. Raykovski Livadi, 2 km from pistes. Book online.",
+      "keywords": "Villa 1 Pamporovo, family chalet Bulgaria, Pamporovo Villa rental"
+    },
+    "/villa/villa-2": {
+      "title": "Villa 2 for Rent in Pamporovo | 2 Bedrooms, BBQ Terrace",
+      "description": "Rent Villa 2 in Pamporovo — bright villa with panorama, 2 bedrooms, fireplace, BBQ, up to 6 guests. Official rental — Pamporovo Villa.",
+      "keywords": "Villa 2 Pamporovo, chalet rental, BBQ terrace Pamporovo"
+    },
+    "/villa/villa-deluxe": {
+      "title": "Villa Deluxe Pamporovo | Premium Chalet Rental",
+      "description": "Villa Deluxe in Pamporovo — our finest chalet, 2 bedrooms, fireplace, BBQ, up to 6 guests. Book online at Pamporovo Villa.",
+      "keywords": "Villa Deluxe Pamporovo, luxury chalet Bulgaria, premium rental"
+    }
+  }
+}

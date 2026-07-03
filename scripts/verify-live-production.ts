@@ -56,13 +56,15 @@ async function main() {
       };
       check("facts.json villas=3", j.villas?.length === 3, `units=${j.units}`);
       check("facts.json languages bg+en", Boolean(j.languages?.includes("bg") && j.languages?.includes("en")));
+      check("facts.json languages 15 total", j.languages?.length === 15, `count=${j.languages?.length}`);
       check("facts.json googleReviewUrl", Boolean(j.googleReviewUrl?.includes("google.com/maps")));
       check("facts.json googleMapsUrl", Boolean(j.googleMapsUrl?.includes("google.com/maps")));
     }
     if (path === "/sitemap.xml") {
       const urlCount = (text.match(/<loc>/g) ?? []).length;
-      check("sitemap >= 90 URLs", urlCount >= 90, `count=${urlCount}`);
+      check("sitemap >= 600 URLs", urlCount >= 600, `count=${urlCount}`);
       check("sitemap has lang=en URLs", text.includes("lang=en"));
+      check("sitemap has lang=de URLs", text.includes("lang=de"));
       check("sitemap image namespace", text.includes("xmlns:image"));
     }
     if (path === "/llms-en.txt") check("llms-en rent EN URL", text.includes("/rent?lang=en"));

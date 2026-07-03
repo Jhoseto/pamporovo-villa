@@ -1,0 +1,37 @@
+{
+  "hero": {
+    "eyebrow": "Szmoljan · Pamporovo · 3 kiadó nyaraló",
+    "titleLine1": "Pamporovo",
+    "titleLine2": "Villa",
+    "subtitle": "Három önálló villát kínálunk Önöknek Pamporovo varázslatos erdeinek közepén. Otthoni kényelem a hegyekben, egész évben.",
+    "ctaExperience": "Kezdd el a sétát",
+    "ctaBook": "Foglalás",
+    "scrollHint": "Tekintse meg"
+  },
+  "gallery": {
+    "eyebrow": "Galéria",
+    "title": "A három villa képeken",
+    "subtitle": "Fedezze fel az egyes villákat — a belső teret, a hangulatos légkört és a hegyi kilátást",
+    "pickVilla": "Válasszon nyaralót"
+  },
+  "contact": {
+    "eyebrow": "Kapcsolat",
+    "title": "Beszéljünk az Ön nyaralásáról",
+    "subtitle": "Van kérdése vagy különleges kívánsága? Hívjon fel minket vagy írjon nekünk — személyesen és örömmel válaszolunk"
+  },
+  "reviews": {
+    "eyebrow": "Vélemények",
+    "title": "Mit mondanak a vendégeink",
+    "subtitle": "Valódi benyomások olyan emberektől, akik már aludtak a fenyőfáink mellett",
+    "formTitle": "Ossza meg tapasztalatait",
+    "submit": "Vélemény elküldése",
+    "submitting": "Küldés..."
+  },
+  "location": {
+    "eyebrow": "Helyszín",
+    "title": "Mindenhez közel, mégis távol a nyüzsgéstől",
+    "subtitle": "Pamporovo üdülőhely, Райковски ливади nevű terület — a fenyőerdő mélyén megbújva",
+    "directions": "Találj meg minket",
+    "info": "Pamporovo Bulgária legnaposabb hegyi üdülőhelye — 1 650 méteres tengerszint feletti magasságban, a Rodop-hegység szívében. Télen 37 km tökéletesen karbantartott sípálya és éjszakai síelés várja az ide látogatókat, nyáron pedig öko-túraútvonalak, vízesések és gyógyító levegő. Villáink pedig mindezek közepette a nyugodt bázisotok lesznek."
+  }
+}

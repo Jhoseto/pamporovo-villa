@@ -1,0 +1,37 @@
+{
+  "hero": {
+    "eyebrow": "Smolyan · Pamporovo · 3 ville in affitto",
+    "titleLine1": "Pamporovo",
+    "titleLine2": "Villa",
+    "subtitle": "Vi proponiamo tre ville indipendenti immerse nei magici boschi di Pamporovo. Il calore di casa in montagna, tutto l'anno.",
+    "ctaExperience": "Inizia la passeggiata",
+    "ctaBook": "Prenota",
+    "scrollHint": "Scopri"
+  },
+  "gallery": {
+    "eyebrow": "Galleria",
+    "title": "Le tre ville nelle immagini",
+    "subtitle": "Scoprite ogni villa: interni, atmosfera accogliente e panorami montani",
+    "pickVilla": "Scegli una villa"
+  },
+  "contact": {
+    "eyebrow": "Contatti",
+    "title": "Parliamo della vostra vacanza",
+    "subtitle": "Avete una domanda o una richiesta particolare? Chiamateci o scriveteci: vi risponderemo personalmente e con piacere"
+  },
+  "reviews": {
+    "eyebrow": "Recensioni",
+    "title": "Cosa dicono i nostri ospiti",
+    "subtitle": "Esperienze autentiche di persone che hanno già dormito tra i nostri pini",
+    "formTitle": "Condividete la vostra esperienza",
+    "submit": "Invia un commento",
+    "submitting": "Invio..."
+  },
+  "location": {
+    "eyebrow": "Ubicazione",
+    "title": "A due passi da tutto, lontano dal trambusto",
+    "subtitle": "località turistica di Pamporovo, zona Райковски ливади — immersi nella pineta",
+    "directions": "Come raggiungerci",
+    "info": "Pamporovo è la località montana più soleggiata della Bulgaria — a 1 650 m nel cuore dei Rodopi. L’inverno offre 37 km di piste perfettamente curate e sci notturno, mentre l’estate propone sentieri ecologici, cascate e un’aria che fa bene alla salute. E le nostre ville sono il vostro rifugio tranquillo in mezzo a tutto questo."
+  }
+}

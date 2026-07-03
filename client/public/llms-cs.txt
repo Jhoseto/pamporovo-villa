@@ -1,0 +1,6 @@
+# Pamporovo Villa — CS index for AI assistants
+
+[Homepage](https://pamporovovilla.com/?lang=cs)
+[Rent a villa](https://pamporovovilla.com/rent?lang=cs)
+[Pamporovo guide](https://pamporovovilla.com/pamporovo?lang=cs)
+[Facts JSON](https://pamporovovilla.com/facts.json?lang=cs)

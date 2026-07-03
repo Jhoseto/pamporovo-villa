@@ -1,0 +1,13 @@
+{
+  "formName": "Jméno",
+  "formEmail": "E-mail",
+  "formRating": "Hodnocení",
+  "formVilla": "Vila",
+  "formPeriod": "Období",
+  "formBody": "Vaše recenze",
+  "placeholderName": "Vaše jméno",
+  "placeholderEmail": "podle výběru",
+  "placeholderPeriod": "např. březen 2025",
+  "placeholderBody": "Co vám utkvělo v paměti z vašeho pobytu u nás...",
+  "villaUnknown": "Nejsem si jistý/á"
+}

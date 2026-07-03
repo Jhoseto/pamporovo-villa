@@ -5,7 +5,8 @@ import { gbpUi } from "@shared/gbpUi";
 import { CONTACT, NAV_LINKS, SITE, SOCIAL } from "@/data/siteContent";
 import { useOffersModal } from "@/contexts/OffersModalContext";
 import { CookieSettingsTrigger } from "@/components/site/CookieConsent";
-import { usePageLang } from "@/hooks/usePageLang";
+import { usePageLang, usePageSearch } from "@/hooks/usePageLang";
+import { useTranslation } from "@/contexts/LocaleContext";
 import { trackGoogleReviewClick, trackPhoneClick } from "@/lib/analytics/events";
 import { navigateSiteLink } from "@/lib/siteNav";
 
@@ -28,11 +29,31 @@ const FOOTER_NAV = [
 export function SiteFooter() {
   const { openOffers } = useOffersModal();
   const [location, setLocation] = useLocation();
+  const search = usePageSearch();
   const lang = usePageLang();
+  const { t } = useTranslation();
   const gbp = gbpUi(lang);
 
+  const footerNavLabel = (href: string, fallback: string) => {
+    const keyMap: Record<string, string> = {
+      "#booking": "booking",
+      "#policy": "policy",
+      "#about": "about",
+      "#experience": "experience",
+      "#gallery": "gallery",
+      "#amenities": "amenities",
+      "#location": "location",
+      "#pricing": "pricing",
+      "#contact": "contact",
+      "#reviews": "reviews",
+      "/pamporovo": "pamporovo",
+    };
+    const key = keyMap[href];
+    return key ? t(`nav.${key}`, fallback) : fallback;
+  };
+
   const handleNavClick = (href: string, page?: boolean) => {
-    navigateSiteLink({ href, label: "", page }, setLocation, location);
+    navigateSiteLink({ href, label: "", page }, setLocation, location, search);
   };
 
   return (
@@ -47,7 +68,7 @@ export function SiteFooter() {
 
         <div className="grid gap-12 md:grid-cols-3 md:gap-10 lg:gap-16">
           <div>
-            <h3 className="premium-form-heading mb-6 text-[var(--gold)]">Контакт</h3>
+            <h3 className="premium-form-heading mb-6 text-[var(--gold)]">{t("footer.contactHeading", "Контакт")}</h3>
             <ul className="space-y-4">
               <li>
                 <a
@@ -95,7 +116,7 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <h3 className="premium-form-heading mb-6 text-[var(--gold)]">Навигация</h3>
+            <h3 className="premium-form-heading mb-6 text-[var(--gold)]">{t("footer.navHeading", "Навигация")}</h3>
             <ul className="grid grid-cols-2 gap-x-4 gap-y-3">
               {FOOTER_NAV.map(link => (
                 <li key={link.href}>
@@ -104,7 +125,7 @@ export function SiteFooter() {
                     onClick={() => handleNavClick(link.href, "page" in link ? link.page : undefined)}
                     className="nav-link text-left text-sm text-white/65 transition hover:text-[var(--gold)]"
                   >
-                    {link.label}
+                    {footerNavLabel(link.href, link.label)}
                   </button>
                 </li>
               ))}
@@ -114,16 +135,16 @@ export function SiteFooter() {
                   onClick={openOffers}
                   className="nav-link text-left text-sm text-white/65 transition hover:text-[var(--gold)]"
                 >
-                  Оферти
+                  {t("nav.offers", "Оферти")}
                 </button>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="premium-form-heading mb-6 text-[var(--gold)]">Социални мрежи</h3>
+            <h3 className="premium-form-heading mb-6 text-[var(--gold)]">{t("footer.socialHeading", "Социални мрежи")}</h3>
             <p className="mb-6 font-display text-base leading-relaxed tracking-wide text-white/65">
-              Елате с нас в планината и онлайн — снимки, сезонни оферти и моменти от Pamporovo Villa.
+              {t("footer.socialBody", "Елате с нас в планината и онлайн — снимки, сезонни оферти и моменти от Pamporovo Villa.")}
             </p>
             <div className="flex flex-wrap gap-3">
               {SOCIAL_LINKS.map(({ href, label, icon: Icon }) => (
@@ -147,7 +168,7 @@ export function SiteFooter() {
 
         <div className="grid grid-cols-3 items-center gap-4">
           <p className="text-sm text-white/45">
-            &copy; {new Date().getFullYear()} {SITE.name}. Всички права запазени.
+            &copy; {new Date().getFullYear()} {SITE.name}. {t("footer.copyright", "Всички права запазени.")}
           </p>
           <div className="flex items-center justify-center gap-x-4">
             <button
@@ -155,7 +176,7 @@ export function SiteFooter() {
               onClick={() => setLocation("/legal?tab=privacy")}
               className="text-xs text-white/35 transition hover:text-[var(--gold)]"
             >
-              Поверителност
+              {t("nav.privacy", "Поверителност")}
             </button>
             <span className="text-white/20 text-xs">·</span>
             <button
@@ -163,7 +184,7 @@ export function SiteFooter() {
               onClick={() => setLocation("/legal?tab=terms")}
               className="text-xs text-white/35 transition hover:text-[var(--gold)]"
             >
-              Общи условия
+              {t("nav.terms", "Общи условия")}
             </button>
             <span className="text-white/20 text-xs">·</span>
             <button
@@ -171,7 +192,7 @@ export function SiteFooter() {
               onClick={() => setLocation("/legal?tab=cookies")}
               className="text-xs text-white/35 transition hover:text-[var(--gold)]"
             >
-              Бисквитки
+              {t("nav.cookies", "Бисквитки")}
             </button>
             <span className="text-white/20 text-xs">·</span>
             <CookieSettingsTrigger />

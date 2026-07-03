@@ -1,24 +1,10 @@
 import { ExternalLink, Star } from "lucide-react";
 import { GBP } from "@shared/gbpLinks";
 import { gbpUi } from "@shared/gbpUi";
-import { usePageLang } from "@/hooks/usePageLang";
+import { SOURCE_LOCALE } from "@shared/i18n/locales";
+import { useTranslation } from "@/contexts/LocaleContext";
 import { trackGoogleReviewClick } from "@/lib/analytics/events";
 import { cn } from "@/lib/utils";
-
-const BANNER_COPY = {
-  bg: {
-    eyebrow: "Google отзиви",
-    title: "Харесахте престоя? Споделете в Google",
-    body: "Отзивите в Google Business Profile помагат на други гости да ни открият в Пампорово. Отнема под минута.",
-    maps: "Вижте в Google Maps",
-  },
-  en: {
-    eyebrow: "Google reviews",
-    title: "Enjoyed your stay? Share on Google",
-    body: "Google Business Profile reviews help other guests find us in Pamporovo. It takes under a minute.",
-    maps: "View on Google Maps",
-  },
-} as const;
 
 type GoogleReviewCtaProps = {
   source: string;
@@ -27,9 +13,18 @@ type GoogleReviewCtaProps = {
 };
 
 export function GoogleReviewCta({ source, variant = "banner", className }: GoogleReviewCtaProps) {
-  const lang = usePageLang();
-  const gbp = gbpUi(lang);
-  const t = BANNER_COPY[lang];
+  const { locale, t } = useTranslation();
+  const gbp = gbpUi(locale);
+
+  const banner = {
+    eyebrow: t("gbp.banner.eyebrow", "Google отзиви"),
+    title: t("gbp.banner.title", "Харесахте престоя? Споделете в Google"),
+    body: t(
+      "gbp.banner.body",
+      "Отзивите в Google Business Profile помагат на други гости да ни открият в Пампорово. Отнема под минута."
+    ),
+    maps: t("gbp.maps", "Вижте в Google Maps"),
+  };
 
   const handleClick = () => trackGoogleReviewClick(source);
 
@@ -46,7 +41,7 @@ export function GoogleReviewCta({ source, variant = "banner", className }: Googl
         )}
       >
         <Star className="h-4 w-4 fill-[var(--gold)] text-[var(--gold)]" />
-        {gbp.reviewLink}
+        {locale === SOURCE_LOCALE ? t("gbp.reviewLink", gbp.reviewLink) : gbp.reviewLink}
         <ExternalLink className="h-3.5 w-3.5 opacity-60" />
       </a>
     );
@@ -59,12 +54,12 @@ export function GoogleReviewCta({ source, variant = "banner", className }: Googl
         className
       )}
     >
-      <p className="eyebrow mb-2 text-[var(--gold)]">{t.eyebrow}</p>
+      <p className="eyebrow mb-2 text-[var(--gold)]">{banner.eyebrow}</p>
       <h3 className="font-serif text-xl font-bold tracking-tight text-foreground md:text-2xl">
-        {t.title}
+        {banner.title}
       </h3>
       <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted-foreground md:text-base">
-        {t.body}
+        {banner.body}
       </p>
       <div className="mt-4 flex flex-wrap items-center gap-3">
         <a
@@ -75,7 +70,7 @@ export function GoogleReviewCta({ source, variant = "banner", className }: Googl
           className="premium-btn inline-flex items-center gap-2 px-5 py-2.5 text-sm"
         >
           <Star className="h-4 w-4 fill-current" />
-          {gbp.reviewLink}
+          {t("gbp.reviewLink", gbp.reviewLink)}
           <ExternalLink className="h-3.5 w-3.5 opacity-70" />
         </a>
         <a
@@ -84,7 +79,7 @@ export function GoogleReviewCta({ source, variant = "banner", className }: Googl
           rel="noopener noreferrer"
           className="text-sm text-muted-foreground underline-offset-4 transition hover:text-[var(--gold)] hover:underline"
         >
-          {t.maps}
+          {banner.maps}
         </a>
       </div>
     </div>

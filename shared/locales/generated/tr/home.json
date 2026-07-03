@@ -1,0 +1,37 @@
+{
+  "hero": {
+    "eyebrow": "Smolyan · Pamporovo · Kiralık 3 villa",
+    "titleLine1": "Pamporovo",
+    "titleLine2": "Villa",
+    "subtitle": "Pamporovo’nun büyülü ormanlarının ortasında yer alan üç müstakil villa sunuyoruz. Dağda, yıl boyunca ev konforu.",
+    "ctaExperience": "Yürüyüşe başla",
+    "ctaBook": "Rezervasyon yap",
+    "scrollHint": "Göz atın"
+  },
+  "gallery": {
+    "eyebrow": "Galeri",
+    "title": "Fotoğraflardaki üç villa",
+    "subtitle": "Her villayı inceleyin — iç mekan, konfor ve dağ manzaraları",
+    "pickVilla": "Bir villa seçin"
+  },
+  "contact": {
+    "eyebrow": "İletişim",
+    "title": "Tatiliniz hakkında konuşalım",
+    "subtitle": "Bir sorunuz mu var ya da özel bir isteğiniz mi var? Bizi arayın ya da mesaj gönderin — size bizzat ve memnuniyetle cevap vereceğiz"
+  },
+  "reviews": {
+    "eyebrow": "Yorumlar",
+    "title": "Misafirlerimiz ne diyor?",
+    "subtitle": "Çam ağaçlarımızın yanında konaklamış olan insanların gerçek izlenimleri",
+    "formTitle": "Deneyimlerinizi paylaşın",
+    "submit": "Geri bildirim gönder",
+    "submitting": "Gönderiliyor..."
+  },
+  "location": {
+    "eyebrow": "Konum",
+    "title": "Her şeye bir adım uzaklıkta, gürültüden uzakta",
+    "subtitle": "Pamporovo Tatil Köyü, Райковски ливади bölgesi — çam ormanının içinde saklanmış",
+    "directions": "Bize ulaşın",
+    "info": "Pamporovo, Bulgaristan’ın en güneşli dağ tatil beldesidir — Rodop Dağları’nın kalbinde, 1 650 m yükseklikte yer alır. Kışın 37 km'lik mükemmel bakımlı kayak pistleri ve gece kayağı, yazın ise doğa yürüyüşü parkurları, şelaleler ve iyileştirici bir hava sizi bekliyor. Ve villalarımız, tüm bunların ortasında sizin sakin sığınağınız olacak."
+  }
+}

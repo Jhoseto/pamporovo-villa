@@ -1,0 +1,37 @@
+{
+  "hero": {
+    "eyebrow": "Smolyan · Pamporovo · 3 villas à louer",
+    "titleLine1": "Pamporovo",
+    "titleLine2": "Villa",
+    "subtitle": "Nous vous proposons trois villas indépendantes au cœur des forêts enchantées de Pamporovo. Une ambiance chaleureuse et conviviale à la montagne, tout au long de l'année.",
+    "ctaExperience": "Commence la balade",
+    "ctaBook": "Réserver",
+    "scrollHint": "Découvrez"
+  },
+  "gallery": {
+    "eyebrow": "Galerie",
+    "title": "Les trois villas en images",
+    "subtitle": "Découvrez chaque villa : son intérieur, son confort et ses vues sur les montagnes",
+    "pickVilla": "Choisissez une villa"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Parlons de vos vacances",
+    "subtitle": "Vous avez une question ou une demande particulière ? Appelez-nous ou écrivez-nous : nous vous répondrons personnellement et avec plaisir."
+  },
+  "reviews": {
+    "eyebrow": "Avis",
+    "title": "Ce qu'en disent nos clients",
+    "subtitle": "Des témoignages authentiques de personnes qui ont déjà passé la nuit près de nos pins",
+    "formTitle": "Partagez votre expérience",
+    "submit": "Envoyer un avis",
+    "submitting": "Envoi..."
+  },
+  "location": {
+    "eyebrow": "Lieu",
+    "title": "À deux pas de tout, loin du bruit",
+    "subtitle": "station de Pamporovo, site Райковски ливади — nichés dans la forêt de pins",
+    "directions": "Venez nous rendre visite",
+    "info": "Pamporovo est la station de montagne la plus ensoleillée de Bulgarie — à 1 650 m d'altitude, au cœur des Rhodopes. L'hiver, elle offre 37 km de pistes parfaitement entretenues et des descentes nocturnes, tandis que l'été, elle propose des sentiers écologiques, des cascades et un air vivifiant. Et nos villas constituent votre havre de paix au cœur de tout cela."
+  }
+}

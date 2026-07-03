@@ -1,0 +1,13 @@
+{
+  "formName": "Név",
+  "formEmail": "E-mail",
+  "formRating": "Értékelés",
+  "formVilla": "Villa",
+  "formPeriod": "Időszak",
+  "formBody": "Az Ön véleménye",
+  "placeholderName": "A neved",
+  "placeholderEmail": "választható",
+  "placeholderPeriod": "pl. 2025. március",
+  "placeholderBody": "Mit jegyeztek meg a nálunk töltött időből...",
+  "villaUnknown": "Nem vagyok biztos benne"
+}

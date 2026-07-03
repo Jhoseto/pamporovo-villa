@@ -1,0 +1,37 @@
+{
+  "hero": {
+    "eyebrow": "Smolyan · Pamporowo · 3 domki do wynajęcia",
+    "titleLine1": "Pamporovo",
+    "titleLine2": "Willa",
+    "subtitle": "Oferujemy Państwu trzy niezależne wille położone wśród magicznych lasów Pamporowa. Domowa atmosfera w górach przez cały rok.",
+    "ctaExperience": "Rozpocznij spacer",
+    "ctaBook": "Zarezerwuj",
+    "scrollHint": "Zapoznaj się z"
+  },
+  "gallery": {
+    "eyebrow": "Galeria",
+    "title": "Trzy wille na zdjęciach",
+    "subtitle": "Zapoznaj się z każdą willą — wnętrzami, atmosferą i widokami na góry",
+    "pickVilla": "Wybierz willę"
+  },
+  "contact": {
+    "eyebrow": "Kontakt",
+    "title": "Porozmawiajmy o Państwa urlopie",
+    "subtitle": "Mają Państwo pytanie lub specjalną prośbę? Prosimy o kontakt telefoniczny lub mailowy — odpowiadamy osobiście i z przyjemnością"
+  },
+  "reviews": {
+    "eyebrow": "Opinie",
+    "title": "Co mówią nasi goście",
+    "subtitle": "Prawdziwe wrażenia osób, które już nocowały wśród naszych sosen",
+    "formTitle": "Podziel się swoim doświadczeniem",
+    "submit": "Wyślij opinię",
+    "submitting": "Wysyłanie..."
+  },
+  "location": {
+    "eyebrow": "Lokalizacja",
+    "title": "W zasięgu ręki od wszystkiego, z dala od zgiełku",
+    "subtitle": "kurort Pamporowo, obszar Райковски ливади — schowane w sosnowym lesie",
+    "directions": "Jak do nas dojechać",
+    "info": "Pamporowo to najbardziej nasłoneczniony górski kurort w Bułgarii — położony na wysokości 1 650 m n.p.m. w samym sercu Rodopów. Zimą oferuje 37 km doskonale utrzymanych tras narciarskich oraz jazdę nocną, a latem — ekologiczne szlaki, wodospady i lecznicze powietrze. A nasze domki letniskowe to Państwa spokojna baza pośród tego wszystkiego."
+  }
+}

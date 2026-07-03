@@ -1,0 +1,13 @@
+{
+  "formName": "Nume",
+  "formEmail": "E-mail",
+  "formRating": "Evaluare",
+  "formVilla": "Vilă",
+  "formPeriod": "Perioadă",
+  "formBody": "Părerea dumneavoastră",
+  "placeholderName": "Numele dumneavoastră",
+  "placeholderEmail": "la alegere",
+  "placeholderPeriod": "de exemplu, martie 2025",
+  "placeholderBody": "Ce v-a rămas în memorie din șederea dumneavoastră la noi...",
+  "villaUnknown": "Nu sunt sigur/ă"
+}

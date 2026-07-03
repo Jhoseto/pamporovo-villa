@@ -1,0 +1,13 @@
+{
+  "formName": "Naam",
+  "formEmail": "E-mail",
+  "formRating": "Beoordeling",
+  "formVilla": "Villa",
+  "formPeriod": "Periode",
+  "formBody": "Uw beoordeling",
+  "placeholderName": "Uw naam",
+  "placeholderEmail": "naar keuze",
+  "placeholderPeriod": "bijv. maart 2025",
+  "placeholderBody": "Wat is u bijgebleven van uw verblijf bij ons...",
+  "villaUnknown": "Ik weet het niet zeker"
+}

@@ -27,6 +27,7 @@
     "seo:verify": "tsx scripts/verify-seo-sprint1.ts",
     "seo:alt-audit": "tsx scripts/audit-image-alt.ts",
     "seo:alt-check": "tsx scripts/audit-image-alt.ts --check",
+    "i18n:sync": "tsx scripts/i18n-sync.ts",
     "db:tunnel": "db-tunnel.bat"
   },
   "dependencies": {

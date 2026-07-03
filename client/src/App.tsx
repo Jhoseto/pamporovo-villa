@@ -11,6 +11,7 @@ import { isMobileViewport } from "./lib/mobilePerf";
 import { SiteReadyProvider } from "./contexts/SiteReadyContext";
 import { OffersModalProvider } from "./contexts/OffersModalContext";
 import { ConsentProvider } from "./contexts/ConsentContext";
+import { LocaleProvider } from "./contexts/LocaleContext";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { CookieConsent } from "./components/site/CookieConsent";
 import { trackAiReferralOnce, trackPublicPageView } from "./lib/analytics/events";
@@ -68,10 +69,12 @@ function PublicApp() {
         <SiteReadyProvider ready={appReady}>
           <ConsentProvider>
             <ThemeProvider defaultTheme="light">
-              <OffersModalProvider>
-                <SiteRouter />
-                <CookieConsent />
-              </OffersModalProvider>
+              <LocaleProvider>
+                <OffersModalProvider>
+                  <SiteRouter />
+                  <CookieConsent />
+                </OffersModalProvider>
+              </LocaleProvider>
             </ThemeProvider>
           </ConsentProvider>
         </SiteReadyProvider>

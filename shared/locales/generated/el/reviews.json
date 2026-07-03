@@ -1,0 +1,13 @@
+{
+  "formName": "Όνομα",
+  "formEmail": "Ηλεκτρονικό ταχυδρομείο",
+  "formRating": "Αξιολόγηση",
+  "formVilla": "Βίλα",
+  "formPeriod": "Περίοδος",
+  "formBody": "Η γνώμη σας",
+  "placeholderName": "Το όνομά σας",
+  "placeholderEmail": "κατ’ επιλογή",
+  "placeholderPeriod": "π.χ. Μάρτιος 2025",
+  "placeholderBody": "Τι σας έμεινε από τη διαμονή σας μαζί μας...",
+  "villaUnknown": "Δεν είμαι σίγουρος/η"
+}

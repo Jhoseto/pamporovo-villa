@@ -1,5 +1,7 @@
 import { preloadSection, scrollToSection } from "./scroll";
 import { trackBookStart } from "./analytics/events";
+import { parseSiteLocale } from "@shared/i18n/parseLocale";
+import { withLang } from "./localizedNav";
 
 export type SiteNavLink = {
   href: string;
@@ -11,13 +13,16 @@ export type SiteNavLink = {
 export function navigateSiteLink(
   link: SiteNavLink,
   setLocation: (path: string) => void,
-  currentPath: string
+  currentPath: string,
+  currentSearch?: string
 ) {
+  const search = currentSearch ?? (typeof window !== "undefined" ? window.location.search : "");
+  const lang = parseSiteLocale(search);
   const isRoutePage =
     link.page || (link.href.startsWith("/") && !link.href.startsWith("/#"));
 
   if (isRoutePage) {
-    setLocation(link.href);
+    setLocation(withLang(link.href, lang));
     window.scrollTo(0, 0);
     return;
   }
@@ -29,7 +34,7 @@ export function navigateSiteLink(
   }
 
   if (currentPath !== "/") {
-    window.location.href = `/#${sectionId}`;
+    window.location.href = withLang(`/#${sectionId}`, lang);
     return;
   }
 

@@ -1,0 +1,37 @@
+{
+  "hero": {
+    "eyebrow": "Smolyan · Pamporovo · 3 moradias para alugar",
+    "titleLine1": "Pamporovo",
+    "titleLine2": "Villa",
+    "subtitle": "Apresentamos-lhe três moradias independentes no meio das florestas mágicas de Pamporovo. O conforto de casa na montanha, durante todo o ano.",
+    "ctaExperience": "Começa o passeio",
+    "ctaBook": "Reservar",
+    "scrollHint": "Explore"
+  },
+  "gallery": {
+    "eyebrow": "Galeria",
+    "title": "As três moradias em imagens",
+    "subtitle": "Explore cada villa — o interior, o ambiente acolhedor e as vistas para a montanha",
+    "pickVilla": "Escolha uma moradia"
+  },
+  "contact": {
+    "eyebrow": "Contacto",
+    "title": "Vamos falar sobre as suas férias",
+    "subtitle": "Tem alguma dúvida ou algum pedido específico? Ligue-nos ou escreva-nos — respondemos pessoalmente e com todo o gosto"
+  },
+  "reviews": {
+    "eyebrow": "Comentários",
+    "title": "O que dizem os nossos hóspedes",
+    "subtitle": "Impressões genuínas de pessoas que já dormiram junto aos nossos pinheiros",
+    "formTitle": "Partilhe a sua experiência",
+    "submit": "Enviar comentário",
+    "submitting": "A enviar..."
+  },
+  "location": {
+    "eyebrow": "Localização",
+    "title": "A um passo de tudo, longe do barulho",
+    "subtitle": "Resort de Pamporovo, zona Райковски ливади — aninhados na floresta de pinheiros",
+    "directions": "Encontre-nos",
+    "info": "Pamporovo é a estância de montanha mais ensolarada da Bulgária — a 1 650 m, no coração dos Ródopes. O inverno oferece 37 km de pistas perfeitamente mantidas e esqui noturno, enquanto o verão proporciona trilhos ecológicos, cascatas e um ar revigorante. E as nossas vilas são o seu refúgio tranquilo no meio de tudo isto."
+  }
+}

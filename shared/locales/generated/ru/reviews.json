@@ -1,0 +1,13 @@
+{
+  "formName": "Имя",
+  "formEmail": "Электронная почта",
+  "formRating": "Оценка",
+  "formVilla": "Вилла",
+  "formPeriod": "Период",
+  "formBody": "Ваш отзыв",
+  "placeholderName": "Ваше имя",
+  "placeholderEmail": "по выбору",
+  "placeholderPeriod": "например, март 2025 года",
+  "placeholderBody": "Что вам запомнилось из вашего пребывания у нас...",
+  "villaUnknown": "Я не уверен(а)"
+}

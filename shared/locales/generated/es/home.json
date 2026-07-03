@@ -1,0 +1,37 @@
+{
+  "hero": {
+    "eyebrow": "Smolyan · Pamporovo · 3 chalés en alquiler",
+    "titleLine1": "Pamporovo",
+    "titleLine2": "Villa",
+    "subtitle": "Te ofrecemos tres villas independientes en medio de los mágicos bosques de Pamporovo. La calidez de un hogar en la montaña, durante todo el año.",
+    "ctaExperience": "Empieza el paseo",
+    "ctaBook": "Reservar",
+    "scrollHint": "Echa un vistazo a"
+  },
+  "gallery": {
+    "eyebrow": "Galería",
+    "title": "Las tres villas en imágenes",
+    "subtitle": "Descubre cada villa: su interior, su ambiente acogedor y sus vistas a la montaña",
+    "pickVilla": "Elige una villa"
+  },
+  "contact": {
+    "eyebrow": "Contacto",
+    "title": "Hablemos de tus vacaciones",
+    "subtitle": "¿Tienes alguna pregunta o alguna petición especial? Llámanos o escríbenos: te responderemos personalmente y con mucho gusto."
+  },
+  "reviews": {
+    "eyebrow": "Opiniones",
+    "title": "¿Qué opinan nuestros huéspedes?",
+    "subtitle": "Impresiones reales de personas que ya han dormido junto a nuestros pinos",
+    "formTitle": "Comparte tu experiencia",
+    "submit": "Enviar comentario",
+    "submitting": "Enviando..."
+  },
+  "location": {
+    "eyebrow": "Ubicación",
+    "title": "A un paso de todo, lejos del bullicio",
+    "subtitle": "Complejo turístico de Pamporovo, zona Райковски ливади — enclavados en el bosque de pinos",
+    "directions": "Cómo llegar hasta nosotros",
+    "info": "Pamporovo es la estación de montaña más soleada de Bulgaria, situada a 1 650 m en el corazón de los Ródopes. En invierno ofrece 37 km de pistas perfectamente cuidadas y esquí nocturno, y en verano, senderos ecológicos, cascadas y un aire que te revitaliza. Y nuestras villas son tu refugio tranquilo en medio de todo esto."
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "hero": {
+    "eyebrow": "Smolyan · Pamporovo · 3 vily k pronájmu",
+    "titleLine1": "Pamporovo",
+    "titleLine2": "Vila",
+    "subtitle": "Nabízíme vám tři samostatné vily uprostřed kouzelných lesů v Pamporovu. Domácí pohodlí v horách po celý rok.",
+    "ctaExperience": "Začni procházku",
+    "ctaBook": "Rezervovat",
+    "scrollHint": "Prohlédněte si"
+  },
+  "gallery": {
+    "eyebrow": "Galerie",
+    "title": "Tři vily na fotografiích",
+    "subtitle": "Prohlédněte si každou vilu – interiér, útulnost a výhledy na hory",
+    "pickVilla": "Vyberte si vilu"
+  },
+  "contact": {
+    "eyebrow": "Kontakt",
+    "title": "Pojďme si promluvit o vaší dovolené",
+    "subtitle": "Máte dotaz nebo konkrétní přání? Zavolejte nám nebo nám napište – rádi vám osobně odpovíme"
+  },
+  "reviews": {
+    "eyebrow": "Recenze",
+    "title": "Co říkají naši hosté",
+    "subtitle": "Skutečné zážitky lidí, kteří už u našich borovic přespali",
+    "formTitle": "Podělte se o své zkušenosti",
+    "submit": "Odeslat recenzi",
+    "submitting": "Odesílání..."
+  },
+  "location": {
+    "eyebrow": "Umístění",
+    "title": "Všechno na dosah, daleko od hluku",
+    "subtitle": "rekreační středisko Pamporovo, lokalita Райковски ливади — ukryté v borovém lese",
+    "directions": "Jak se k nám dostat",
+    "info": "Pamporovo je nejslunečnější horské letovisko v Bulharsku – leží v nadmořské výšce 1 650 m v srdci Rodop. V zimě zde najdete 37 km perfektně upravených sjezdovek a noční lyžování, v létě pak ekologické stezky, vodopády a vzduch, který léčí. A naše vily jsou vaší klidnou základnou uprostřed toho všeho."
+  }
+}

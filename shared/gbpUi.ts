@@ -1,16 +1,15 @@
-import type { SeoLang } from "./seoEnMeta";
+import type { SiteLocale } from "./i18n/locales";
+import { SOURCE_LOCALE } from "./i18n/locales";
 
-/** UI copy for GBP review CTAs — shared between site components */
-export const GBP_UI: Record<
-  SeoLang,
-  {
-    reviewLink: string;
-    reviewShort: string;
-    reviewToast: string;
-    reviewToastAction: string;
-    directions: string;
-  }
-> = {
+type GbpUiCopy = {
+  reviewLink: string;
+  reviewShort: string;
+  reviewToast: string;
+  reviewToastAction: string;
+  directions: string;
+};
+
+const GBP_UI: Record<"bg" | "en", GbpUiCopy> = {
   bg: {
     reviewLink: "Оставете отзив в Google",
     reviewShort: "Google отзив",
@@ -27,6 +26,9 @@ export const GBP_UI: Record<
   },
 };
 
-export function gbpUi(lang: SeoLang) {
-  return GBP_UI[lang];
+export function gbpUi(lang: SiteLocale): GbpUiCopy {
+  if (lang === SOURCE_LOCALE) return GBP_UI.bg;
+  return GBP_UI.en;
 }
+
+export { GBP_UI };

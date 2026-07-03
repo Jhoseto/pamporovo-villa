@@ -1,0 +1,13 @@
+{
+  "formName": "Imię",
+  "formEmail": "E-mail",
+  "formRating": "Ocena",
+  "formVilla": "Willa",
+  "formPeriod": "Okres",
+  "formBody": "Twoja opinia",
+  "placeholderName": "Twoje imię",
+  "placeholderEmail": "do wyboru",
+  "placeholderPeriod": "np. marzec 2025 r.",
+  "placeholderBody": "Co zapamiętaliście z pobytu u nas...",
+  "villaUnknown": "Nie jestem pewien/pewna"
+}

@@ -1,5 +1,6 @@
 import type { PamporovoSpoke, PamporovoSpokeSlug } from "../pamporovoSpokeTypes";
-import type { SeoLang } from "../seoEnMeta";
+import type { SiteLocale } from "../i18n/locales";
+import { SOURCE_LOCALE } from "../i18n/locales";
 import { PAMPOROVO_SPOKES_EN, type SpokeEnBundle } from "./pamporovoSpokesEn";
 
 export type { SpokeEnBundle };
@@ -8,8 +9,9 @@ export function getSpokeEn(slug: PamporovoSpokeSlug): SpokeEnBundle | undefined 
   return PAMPOROVO_SPOKES_EN[slug];
 }
 
-export function localizeSpoke(spoke: PamporovoSpoke, lang: SeoLang): PamporovoSpoke {
-  if (lang !== "en") return spoke;
+/** Uses EN bundle as fallback for all non-BG locales until generated spokes.json is wired in UI. */
+export function localizeSpoke(spoke: PamporovoSpoke, lang: SiteLocale): PamporovoSpoke {
+  if (lang === SOURCE_LOCALE) return spoke;
   const en = getSpokeEn(spoke.slug);
   if (!en) return spoke;
   return {
@@ -24,12 +26,12 @@ export function localizeSpoke(spoke: PamporovoSpoke, lang: SeoLang): PamporovoSp
   };
 }
 
-export function spokeSeoTitle(spoke: PamporovoSpoke, lang: SeoLang): string {
-  if (lang === "en") return getSpokeEn(spoke.slug)?.seoTitle ?? spoke.seoTitle;
-  return spoke.seoTitle;
+export function spokeSeoTitle(spoke: PamporovoSpoke, lang: SiteLocale): string {
+  if (lang === SOURCE_LOCALE) return spoke.seoTitle;
+  return getSpokeEn(spoke.slug)?.seoTitle ?? spoke.seoTitle;
 }
 
-export function spokeSeoDescription(spoke: PamporovoSpoke, lang: SeoLang): string {
-  if (lang === "en") return getSpokeEn(spoke.slug)?.seoDescription ?? spoke.seoDescription;
-  return spoke.seoDescription;
+export function spokeSeoDescription(spoke: PamporovoSpoke, lang: SiteLocale): string {
+  if (lang === SOURCE_LOCALE) return spoke.seoDescription;
+  return getSpokeEn(spoke.slug)?.seoDescription ?? spoke.seoDescription;
 }

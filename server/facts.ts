@@ -7,21 +7,23 @@ import {
   SEO_SITE,
   SEO_SOCIAL,
 } from "../shared/seoConstants";
-import { parseSeoLang } from "../shared/seoEnMeta";
+import { parseSiteLocale } from "../shared/i18n/parseLocale";
+import { ALL_LOCALES, SOURCE_LOCALE } from "../shared/i18n/locales";
+import { localizedUrl } from "../shared/i18n/localeMeta";
 import { GBP } from "../shared/gbpLinks";
 
 export function handleFactsJson(req: Request, res: Response): void {
   const rawUrl = req.url ?? "";
-  const lang = parseSeoLang(rawUrl.includes("?") ? rawUrl.slice(rawUrl.indexOf("?")) : "");
-  const en = lang === "en";
+  const lang = parseSiteLocale(rawUrl.includes("?") ? rawUrl.slice(rawUrl.indexOf("?")) : "");
+  const en = lang !== SOURCE_LOCALE;
 
   const payload = {
     business: SEO_SITE.name,
     type: "vacation_rental",
     website: getSiteUrl(),
-    rentPage: en ? absoluteUrl(`${SEO_PATHS.rent}?lang=en`) : absoluteUrl(SEO_PATHS.rent),
+    rentPage: en ? localizedUrl(SEO_PATHS.rent, lang) : absoluteUrl(SEO_PATHS.rent),
     bookingUrl: absoluteUrl(SEO_PATHS.booking),
-    guideUrl: en ? absoluteUrl(`${SEO_PATHS.pamporovo}?lang=en`) : absoluteUrl(SEO_PATHS.pamporovo),
+    guideUrl: en ? localizedUrl(SEO_PATHS.pamporovo, lang) : absoluteUrl(SEO_PATHS.pamporovo),
     pricingUrl: absoluteUrl(SEO_PATHS.pricing),
     villas: getSeoVillaFacts(),
     units: getSeoVillaFacts().length,
@@ -73,7 +75,7 @@ export function handleFactsJson(req: Request, res: Response): void {
     ],
     googleReviewUrl: GBP.reviewUrl,
     googleMapsUrl: GBP.mapsUrl,
-    languages: ["bg", "en"],
+    languages: ALL_LOCALES,
     lang,
     updatedAt: new Date().toISOString(),
   };
