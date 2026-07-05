@@ -26,7 +26,7 @@
     },
     "deluxe-difference": {
       "question": "En quoi le Villa Deluxe est-il différent ?",
-      "answer": "Même agencement — 2 chambres, 2 salles de bains, une cheminée, un barbecue — mais avec un soin particulier apporté aux détails et à l'ambiance. Le prix est majoré de +10 € par nuit en été et de +20 € par nuit en hiver par rapport aux villas standard."
+      "answer": "Même agencement — 2 chambres, 1 salle de bains, une cheminée, un barbecue — mais avec un soin particulier apporté aux détails et à l'ambiance. Le prix est majoré de +10 € par nuit en été et de +20 € par nuit en hiver par rapport aux villas standard."
     },
     "max-guests": {
       "question": "Combien de personnes peuvent dormir dans un chalet ?",
@@ -116,7 +116,7 @@
     },
     "villa-amenities": {
       "question": "Que comprend la location d'une villa chez Pamporovo Villa ?",
-      "answer": "Chacune des trois villas dispose de 2 chambres, 2 salles de bains, d'une cuisine entièrement équipée, d'une cheminée à bois, d'un barbecue sur la terrasse, d'une connexion Wi-Fi et d'un parking gratuit. Vous louez la villa dans son intégralité, sans la partager avec d'autres clients."
+      "answer": "Chacune des trois villas dispose de 2 chambres, 1 salle de bains, d'une cuisine entièrement équipée, d'une cheminée à bois, d'un barbecue sur la terrasse, d'une connexion Wi-Fi et d'un parking gratuit. Vous louez la villa dans son intégralité, sans la partager avec d'autres clients."
     },
     "fireplace-villa": {
       "question": "Y a-t-il un chalet avec une cheminée à Pamporovo ?",

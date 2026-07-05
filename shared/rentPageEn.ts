@@ -4,7 +4,7 @@ export const RENT_PAGE_EN = {
   eyebrow: "Official rental · Pamporovo Villa",
   h1: "Rent a Villa in Pamporovo",
   intro:
-    "Three private villas on Raykovski Livadi — rent the whole chalet for your group only. Each has 2 bedrooms, 2 bathrooms, fireplace, BBQ, up to 6 guests.",
+    "Three private villas on Raykovski Livadi — rent the whole chalet for your group only. Each has 2 bedrooms, 1 bathroom, fireplace, BBQ, up to 6 guests.",
   villasHeading: "The three villas",
   pricingHeading: "Prices",
   pricingFrom: "from",

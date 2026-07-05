@@ -26,7 +26,7 @@
     },
     "deluxe-difference": {
       "question": "O que é que o Villa Deluxe tem de diferente?",
-      "answer": "A mesma disposição — 2 quartos, 2 casas de banho, lareira, churrasqueira — mas com um cuidado especial nos detalhes e no ambiente. O preço é de +10 €/noite no verão e +20 €/noite no inverno, em comparação com as vilas padrão."
+      "answer": "A mesma disposição — 2 quartos, 1 casa de banho, lareira, churrasqueira — mas com um cuidado especial nos detalhes e no ambiente. O preço é de +10 €/noite no verão e +20 €/noite no inverno, em comparação com as vilas padrão."
     },
     "max-guests": {
       "question": "Quantas pessoas cabem numa villa?",
@@ -116,7 +116,7 @@
     },
     "villa-amenities": {
       "question": "O que está incluído no aluguer de uma villa na Pamporovo Villa?",
-      "answer": "Cada uma das três moradias dispõe de 2 quartos, 2 casas de banho, cozinha totalmente equipada, lareira a lenha, churrasqueira na varanda, Wi-Fi e estacionamento gratuito. Aluga-se a moradia na totalidade — sem partilha com outros hóspedes."
+      "answer": "Cada uma das três moradias dispõe de 2 quartos, 1 casa de banho, cozinha totalmente equipada, lareira a lenha, churrasqueira na varanda, Wi-Fi e estacionamento gratuito. Aluga-se a moradia na totalidade — sem partilha com outros hóspedes."
     },
     "fireplace-villa": {
       "question": "Há alguma casa de férias com lareira em Pamporovo?",

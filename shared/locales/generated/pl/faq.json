@@ -26,7 +26,7 @@
     },
     "deluxe-difference": {
       "question": "Czym wyróżnia się Villa Deluxe?",
-      "answer": "Ten sam układ — 2 sypialnie, 2 łazienki, kominek, grill — ale z większą dbałością o szczegóły i atmosferę. Cena jest o +10 € za noc w sezonie letnim i +20 € za noc w sezonie zimowym wyższa od cen standardowych willi."
+      "answer": "Ten sam układ — 2 sypialnie, 1 łazienka, kominek, grill — ale z większą dbałością o szczegóły i atmosferę. Cena jest o +10 € za noc w sezonie letnim i +20 € za noc w sezonie zimowym wyższa od cen standardowych willi."
     },
     "max-guests": {
       "question": "Ile osób może nocować w jednym domku letniskowym?",
@@ -116,7 +116,7 @@
     },
     "villa-amenities": {
       "question": "Co obejmuje wynajem willi w Pamporovo Villa?",
-      "answer": "Każda z trzech willi posiada 2 sypialnie, 2 łazienki, w pełni wyposażoną kuchnię, kominek opalany drewnem, grill na werandzie, Wi-Fi oraz bezpłatny parking. Wynajmujecie całą willę — bez konieczności dzielenia jej z innymi gośćmi."
+      "answer": "Każda z trzech willi posiada 2 sypialnie, 1 łazienka, w pełni wyposażoną kuchnię, kominek opalany drewnem, grill na werandzie, Wi-Fi oraz bezpłatny parking. Wynajmujecie całą willę — bez konieczności dzielenia jej z innymi gośćmi."
     },
     "fireplace-villa": {
       "question": "Czy w Pamporowie jest domek letniskowy z kominkiem?",

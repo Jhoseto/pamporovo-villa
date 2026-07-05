@@ -26,7 +26,7 @@
     },
     "deluxe-difference": {
       "question": "Mi a különbség a Villa Deluxe esetében?",
-      "answer": "Ugyanaz az elrendezés — 2 hálószoba, 2 fürdőszoba, kandalló, grillező —, de nagyobb figyelmet fordítottak a részletekre és a hangulatra. Az ár nyáron +10 €/éjszaka, télen pedig +20 €/éjszaka a standard villákhoz képest."
+      "answer": "Ugyanaz az elrendezés — 2 hálószoba, 1 fürdőszoba, kandalló, grillező —, de nagyobb figyelmet fordítottak a részletekre és a hangulatra. Az ár nyáron +10 €/éjszaka, télen pedig +20 €/éjszaka a standard villákhoz képest."
     },
     "max-guests": {
       "question": "Hányan tudnak aludni egy nyaralóban?",
@@ -116,7 +116,7 @@
     },
     "villa-amenities": {
       "question": "Mit tartalmaz a Pamporovo Villa-nál történő nyaraló bérlése?",
-      "answer": "A három villa mindegyike 2 hálószobával, 2 fürdőszobával, teljesen felszerelt konyhával, fatüzelésű kandallóval, a teraszon található grillezővel, Wi-Fi-vel és ingyenes parkolóval rendelkezik. Az egész villát bérelheti – más vendégekkel nem kell megosztania."
+      "answer": "A három villa mindegyike 2 hálószobával, 1 fürdőszobával, teljesen felszerelt konyhával, fatüzelésű kandallóval, a teraszon található grillezővel, Wi-Fi-vel és ingyenes parkolóval rendelkezik. Az egész villát bérelheti – más vendégekkel nem kell megosztania."
     },
     "fireplace-villa": {
       "question": "Van-e kandallós nyaraló Pamporovóban?",

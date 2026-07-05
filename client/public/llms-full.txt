@@ -28,9 +28,9 @@ Each villa is rented as a **whole private home** (not shared with other guests):
 
 | Villa | Guests max | Bedrooms | Bathrooms |
 |-------|------------|----------|-----------|
-| Villa 1 (Вила 1) | 6 | 2 | 2 |
-| Villa 2 (Вила 2) | 6 | 2 | 2 |
-| Villa Deluxe (Вила Deluxe) | 6 | 2 | 2 |
+| Villa 1 (Вила 1) | 6 | 2 | 1 |
+| Villa 2 (Вила 2) | 6 | 2 | 1 |
+| Villa Deluxe (Вила Deluxe) | 6 | 2 | 1 |
 
 ## Amenities (all villas)
 - Fireplace (wood-burning)

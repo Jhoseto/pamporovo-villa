@@ -26,7 +26,7 @@
     },
     "deluxe-difference": {
       "question": "Villa Deluxe’ün farkı nedir?",
-      "answer": "Aynı yerleşim planı — 2 yatak odası, 2 banyo, şömine, barbekü — ancak detaylara ve atmosfere daha fazla özen gösterilmiştir. Fiyat, standart villalara kıyasla yazın gecelik +10 €, kışın ise gecelik +20 € daha yüksektir."
+      "answer": "Aynı yerleşim planı — 2 yatak odası, 1 banyo, şömine, barbekü — ancak detaylara ve atmosfere daha fazla özen gösterilmiştir. Fiyat, standart villalara kıyasla yazın gecelik +10 €, kışın ise gecelik +20 € daha yüksektir."
     },
     "max-guests": {
       "question": "Bir villada kaç kişi kalabilir?",
@@ -116,7 +116,7 @@
     },
     "villa-amenities": {
       "question": "Pamporovo Villa’da bir villanın kiralanması neleri içerir?",
-      "answer": "Üç villanın her birinde 2 yatak odası, 2 banyo, tam donanımlı mutfak, odun şöminesi, verandada barbekü, Wi-Fi ve ücretsiz otopark bulunmaktadır. Villanın tamamını kiralıyorsunuz — diğer konuklarla paylaşım yok."
+      "answer": "Üç villanın her birinde 2 yatak odası, 1 banyo, tam donanımlı mutfak, odun şöminesi, verandada barbekü, Wi-Fi ve ücretsiz otopark bulunmaktadır. Villanın tamamını kiralıyorsunuz — diğer konuklarla paylaşım yok."
     },
     "fireplace-villa": {
       "question": "Pamporovo'da şömineli bir yazlık var mı?",

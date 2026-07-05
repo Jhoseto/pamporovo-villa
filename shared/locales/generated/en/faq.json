@@ -26,7 +26,7 @@
     },
     "deluxe-difference": {
       "question": "What is different about Villa Deluxe?",
-      "answer": "Same layout — 2 bedrooms, 2 bathrooms, fireplace, BBQ — with extra attention to detail and atmosphere. +€10/night summer and +€20/night winter vs standard villas."
+      "answer": "Same layout — 2 bedrooms, 1 bathroom, fireplace, BBQ — with extra attention to detail and atmosphere. +€10/night summer and +€20/night winter vs standard villas."
     },
     "max-guests": {
       "question": "How many people can sleep in one villa?",
@@ -116,7 +116,7 @@
     },
     "villa-amenities": {
       "question": "What is included when renting at Pamporovo Villa?",
-      "answer": "Each of the three villas has 2 bedrooms, 2 bathrooms, fully equipped kitchen, wood fireplace, BBQ on the veranda, Wi‑Fi, and free parking. You rent the whole villa — no sharing with other guests."
+      "answer": "Each of the three villas has 2 bedrooms, 1 bathroom, fully equipped kitchen, wood fireplace, BBQ on the veranda, Wi‑Fi, and free parking. You rent the whole villa — no sharing with other guests."
     },
     "fireplace-villa": {
       "question": "Is there a villa with a fireplace in Pamporovo?",

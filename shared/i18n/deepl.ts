@@ -63,18 +63,42 @@ async function mymemoryTranslateOne(text: string, target: TargetLocale): Promise
 
 async function mymemoryRequest(text: string, targetLang: string): Promise<string> {
   const url = `${MYMEMORY}?q=${encodeURIComponent(text)}&langpair=bg|${targetLang}`;
-  const res = await fetch(url);
-  if (!res.ok) {
-    throw new Error(`MyMemory API ${res.status}`);
+  const retries = [2000, 5000, 12000];
+  let lastErr: Error | undefined;
+
+  for (let attempt = 0; attempt <= retries.length; attempt++) {
+    const res = await fetch(url);
+    if (res.status === 429 || res.status === 403) {
+      lastErr = new Error(`MyMemory API ${res.status}`);
+      if (attempt < retries.length) {
+        const wait = retries[attempt];
+        console.warn(`[i18n] MyMemory ${res.status} — retry in ${wait / 1000}s (${attempt + 1}/${retries.length})`);
+        await sleep(wait);
+        continue;
+      }
+      throw lastErr;
+    }
+    if (!res.ok) {
+      throw new Error(`MyMemory API ${res.status}`);
+    }
+    const data = (await res.json()) as {
+      responseData?: { translatedText?: string };
+      responseStatus?: number;
+    };
+    if (data.responseStatus && data.responseStatus !== 200) {
+      lastErr = new Error(`MyMemory status ${data.responseStatus}`);
+      if (attempt < retries.length && (data.responseStatus === 429 || data.responseStatus === 403)) {
+        const wait = retries[attempt];
+        console.warn(`[i18n] MyMemory status ${data.responseStatus} — retry in ${wait / 1000}s`);
+        await sleep(wait);
+        continue;
+      }
+      throw lastErr;
+    }
+    return data.responseData?.translatedText ?? text;
   }
-  const data = (await res.json()) as {
-    responseData?: { translatedText?: string };
-    responseStatus?: number;
-  };
-  if (data.responseStatus && data.responseStatus !== 200) {
-    throw new Error(`MyMemory status ${data.responseStatus}`);
-  }
-  return data.responseData?.translatedText ?? text;
+
+  throw lastErr ?? new Error("MyMemory request failed");
 }
 
 /** Translate batch of strings BG → target locale. Preserves order. */
@@ -115,7 +139,7 @@ export async function deeplTranslateBatch(
       const results: string[] = [];
       for (const t of texts) {
         results.push(await mymemoryTranslateOne(t, target));
-        await sleep(300);
+        await sleep(800);
       }
       return results;
     }

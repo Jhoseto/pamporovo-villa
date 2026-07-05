@@ -26,7 +26,7 @@
     },
     "deluxe-difference": {
       "question": "Cosa c'è di diverso in Villa Deluxe?",
-      "answer": "Stessa disposizione — 2 camere da letto, 2 bagni, camino, barbecue — ma con una maggiore cura dei dettagli e dell'atmosfera. Il prezzo è di +10 € a notte in estate e +20 € a notte in inverno rispetto alle ville standard."
+      "answer": "Stessa disposizione — 2 camere da letto, 1 bagno, camino, barbecue — ma con una maggiore cura dei dettagli e dell'atmosfera. Il prezzo è di +10 € a notte in estate e +20 € a notte in inverno rispetto alle ville standard."
     },
     "max-guests": {
       "question": "Quante persone possono dormire in una villa?",
@@ -116,7 +116,7 @@
     },
     "villa-amenities": {
       "question": "Cosa comprende l'affitto di una villa presso Pamporovo Villa?",
-      "answer": "Ciascuna delle tre ville dispone di 2 camere da letto, 2 bagni, una cucina completamente attrezzata, un caminetto a legna, un barbecue sulla veranda, Wi-Fi e parcheggio gratuito. Si affitta l'intera villa, senza doverla condividere con altri ospiti."
+      "answer": "Ciascuna delle tre ville dispone di 2 camere da letto, 1 bagno, una cucina completamente attrezzata, un caminetto a legna, un barbecue sulla veranda, Wi-Fi e parcheggio gratuito. Si affitta l'intera villa, senza doverla condividere con altri ospiti."
     },
     "fireplace-villa": {
       "question": "C'è una villa con camino a Pamporovo?",

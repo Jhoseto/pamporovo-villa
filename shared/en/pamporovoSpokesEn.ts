@@ -95,7 +95,7 @@ export const PAMPOROVO_SPOKES_EN: Record<PamporovoSpokeSlug, SpokeEnBundle> = {
       {
         heading: "Our recommendation: Pamporovo Villa",
         paragraphs: [
-          "Three matching-style villas (Villa 1, Villa 2, Villa Deluxe) at one address — you book only one villa for your group. Each has 2 bedrooms, 2 bathrooms, fireplace, and BBQ terrace.",
+          "Three matching-style villas (Villa 1, Villa 2, Villa Deluxe) at one address — you book only one villa for your group. Each has 2 bedrooms, 1 bathroom, fireplace, and BBQ terrace.",
         ],
       },
     ]
@@ -154,9 +154,9 @@ export const PAMPOROVO_SPOKES_EN: Record<PamporovoSpokeSlug, SpokeEnBundle> = {
       {
         heading: "The three villas",
         paragraphs: [
-          "Villa 1, Villa 2, and Villa Deluxe have the same capacity and amenities — 2 bedrooms, 2 bathrooms, fireplace, full kitchen, Wi‑Fi. Choice depends on calendar availability.",
+          "Villa 1, Villa 2, and Villa Deluxe have the same capacity and amenities — 2 bedrooms, 1 bathroom, fireplace, full kitchen, Wi‑Fi. Choice depends on calendar availability.",
         ],
-        bullets: ["Up to 6 guests per villa", "2 bedrooms + 2 bathrooms", "Wood fireplace + BBQ", "Free parking"],
+        bullets: ["Up to 6 guests per villa", "2 bedrooms + 1 bathroom", "Wood fireplace + BBQ", "Free parking"],
       },
     ]
   ),

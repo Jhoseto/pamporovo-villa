@@ -89,7 +89,7 @@ export const PAMPOROVO_FAQ_EN: PamporovoFaqItem[] = [
     id: "villa-amenities",
     question: "What is included when renting at Pamporovo Villa?",
     answer:
-      "Each of the three villas has 2 bedrooms, 2 bathrooms, fully equipped kitchen, wood fireplace, BBQ on the veranda, Wi‑Fi, and free parking. You rent the whole villa — no sharing with other guests.",
+      "Each of the three villas has 2 bedrooms, 1 bathroom, fully equipped kitchen, wood fireplace, BBQ on the veranda, Wi‑Fi, and free parking. You rent the whole villa — no sharing with other guests.",
     tags: ["rent"],
   },
   {

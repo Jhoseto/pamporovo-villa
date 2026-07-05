@@ -6,7 +6,7 @@ export const SEO_SITE = {
   nameBg: "Pamporovo Villa",
   tagline: "3 вили под наем",
   description:
-    "Pamporovo Villa — три самостоятелни вили под наем в к.к. Пампорово, местност Райковски ливади. 2 спални, 2 бани, камина, барбекю, до 6 гости.",
+    "Pamporovo Villa — три самостоятелни вили под наем в к.к. Пампорово, местност Райковски ливади. 2 спални, 1 баня, камина, барбекю, до 6 гости.",
   email: "pamporovovilla@gmail.com",
   phone: "+359879501660",
   phoneDisplay: "+359 879 501 660",
@@ -22,8 +22,18 @@ export const SEO_SITE = {
   priceCurrency: "EUR",
   maxGuestsPerVilla: 6,
   bedrooms: 2,
-  bathrooms: 2,
+  bathrooms: 1,
 } as const;
+
+/** Grammatically correct bathroom count for SEO copy (BG/EN). */
+export function formatBathroomsLabel(lang: "en" | "bg"): string {
+  if (SEO_SITE.bathrooms === 1) {
+    return lang === "bg" ? "1 баня" : "1 bathroom";
+  }
+  return lang === "bg"
+    ? `${SEO_SITE.bathrooms} бани`
+    : `${SEO_SITE.bathrooms} bathrooms`;
+}
 
 export function getSiteUrl(): string {
   const fromEnv = process.env.SITE_URL?.replace(/\/$/, "");

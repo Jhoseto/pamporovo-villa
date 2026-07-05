@@ -1,5 +1,6 @@
 import {
   absoluteUrl,
+  formatBathroomsLabel,
   getSeoVillaFacts,
   getSiteUrl,
   SEO_OG,
@@ -154,7 +155,7 @@ function rentNoscript(): string {
     .join(". ");
   return `<article>
 <h1>Наем на вила в Пампорово — ${escapeHtml(SEO_SITE.name)}</h1>
-<p>3 самостоятелни вили под наем в к.к. Пампорово, местност Райковски ливади. Всяка вила: ${SEO_SITE.bedrooms} спални, ${SEO_SITE.bathrooms} бани, камина на дърва, барbecue, Wi-Fi, паркинг. ${villas}.</p>
+<p>3 самостоятелни вили под наем в к.к. Пампорово, местност Райковски ливади. Всяка вила: ${SEO_SITE.bedrooms} спални, ${formatBathroomsLabel("bg")}, камина на дърва, барbecue, Wi-Fi, паркинг. ${villas}.</p>
 <p>Цени: ${SEO_SITE.priceMinEur}–${SEO_SITE.priceMaxEur} €/нощ за цяла вила (до ${SEO_SITE.maxGuestsPerVilla} гости). 2 км от центъра на Пампорово.</p>
 <p>Резервирайте онлайн: ${escapeHtml(absoluteUrl(SEO_PATHS.booking))}</p>
 <p>Телефон: ${escapeHtml(SEO_SITE.phoneDisplay)} · Имейл: ${escapeHtml(SEO_SITE.email)}</p>
@@ -187,7 +188,7 @@ function rentEnNoscript(): string {
     .join(". ");
   return `<article>
 <h1>Rent a villa in Pamporovo — ${escapeHtml(SEO_SITE.name)}</h1>
-<p>3 private chalets for rent in Pamporovo, Raykovski Livadi. Each villa: ${SEO_SITE.bedrooms} bedrooms, ${SEO_SITE.bathrooms} bathrooms, wood fireplace, BBQ, Wi‑Fi, parking. ${villas}.</p>
+<p>3 private chalets for rent in Pamporovo, Raykovski Livadi. Each villa: ${SEO_SITE.bedrooms} bedrooms, ${formatBathroomsLabel("en")}, wood fireplace, BBQ, Wi‑Fi, parking. ${villas}.</p>
 <p>Prices: ${SEO_SITE.priceMinEur}–${SEO_SITE.priceMaxEur} €/night for whole villa (up to ${SEO_SITE.maxGuestsPerVilla} guests). 2 km from resort centre.</p>
 <p>Book online: ${escapeHtml(absoluteUrl(SEO_PATHS.booking))}</p>
 <p>Phone: ${escapeHtml(SEO_SITE.phoneDisplay)} · Email: ${escapeHtml(SEO_SITE.email)}</p>
@@ -220,7 +221,7 @@ function villaEnNoscript(config: VillaPageConfig): string {
   return `<article>
 <h1>${escapeHtml(h1)}</h1>
 <p>${escapeHtml(desc)}</p>
-<p>${escapeHtml(VILLA_LABELS[config.id])} — 2 bedrooms, 2 bathrooms, fireplace, BBQ, up to ${SEO_SITE.maxGuestsPerVilla} guests.</p>
+<p>${escapeHtml(VILLA_LABELS[config.id])} — ${SEO_SITE.bedrooms} bedrooms, ${formatBathroomsLabel("en")}, fireplace, BBQ, up to ${SEO_SITE.maxGuestsPerVilla} guests.</p>
 <p>Book: ${escapeHtml(absoluteUrl(SEO_PATHS.booking))}</p>
 <p>Phone: ${escapeHtml(SEO_SITE.phoneDisplay)}</p>
 </article>`;
@@ -532,7 +533,7 @@ function villaNoscript(config: VillaPageConfig): string {
   return `<article>
 <h1>${escapeHtml(config.h1)}</h1>
 <p>${escapeHtml(config.seoDescription)}</p>
-<p>${escapeHtml(VILLA_LABELS[config.id])} — 2 спални, 2 бани, камина, BBQ, до ${SEO_SITE.maxGuestsPerVilla} гости.</p>
+<p>${escapeHtml(VILLA_LABELS[config.id])} — ${SEO_SITE.bedrooms} спални, ${formatBathroomsLabel("bg")}, камина, BBQ, до ${SEO_SITE.maxGuestsPerVilla} гости.</p>
 <p>Резервация: ${escapeHtml(absoluteUrl(SEO_PATHS.booking))}</p>
 <p>Телефон: ${escapeHtml(SEO_SITE.phoneDisplay)}</p>
 </article>`;

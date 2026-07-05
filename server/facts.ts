@@ -37,7 +37,7 @@ export function handleFactsJson(req: Request, res: Response): void {
     amenities: en
       ? [
           "2 bedrooms",
-          "2 bathrooms",
+          "1 bathroom",
           "fireplace",
           "BBQ veranda",
           "fully equipped kitchen",
@@ -46,7 +46,7 @@ export function handleFactsJson(req: Request, res: Response): void {
         ]
       : [
           "2 спални",
-          "2 бани",
+          "1 баня",
           "камина",
           "BBQ веранда",
           "оборудвана кухня",

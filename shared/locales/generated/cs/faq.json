@@ -26,7 +26,7 @@
     },
     "deluxe-difference": {
       "question": "V čem se liší model Villa Deluxe?",
-      "answer": "Stejné uspořádání – 2 ložnice, 2 koupelny, krb, gril – ale s větším důrazem na detaily a atmosféru. Cena je o +10 € za noc v létě a o +20 € za noc v zimě vyšší než u standardních vil."
+      "answer": "Stejné uspořádání – 2 ložnice, 1 koupelna, krb, gril – ale s větším důrazem na detaily a atmosféru. Cena je o +10 € za noc v létě a o +20 € za noc v zimě vyšší než u standardních vil."
     },
     "max-guests": {
       "question": "Kolik lidí se vejde na jednu vilu?",
@@ -116,7 +116,7 @@
     },
     "villa-amenities": {
       "question": "Co zahrnuje pronájem vily u Pamporovo Villa?",
-      "answer": "Každá ze tří vil má 2 ložnice, 2 koupelny, plně vybavenou kuchyň, krb na dřevo, gril na verandě, Wi-Fi a bezplatné parkoviště. Pronajímáte si celou vilu – bez sdílení s ostatními hosty."
+      "answer": "Každá ze tří vil má 2 ložnice, 1 koupelna, plně vybavenou kuchyň, krb na dřevo, gril na verandě, Wi-Fi a bezplatné parkoviště. Pronajímáte si celou vilu – bez sdílení s ostatními hosty."
     },
     "fireplace-villa": {
       "question": "Je v Pamporově k dispozici chata s krbem?",

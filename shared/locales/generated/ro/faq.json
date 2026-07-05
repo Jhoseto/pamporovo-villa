@@ -26,7 +26,7 @@
     },
     "deluxe-difference": {
       "question": "Ce are Villa Deluxe diferit?",
-      "answer": "Aceeași dispunere — 2 dormitoare, 2 băi, șemineu, grătar — dar cu o atenție sporită la detalii și la atmosferă. Prețul este cu +10 €/noapte vara și +20 €/noapte iarna față de vilele standard."
+      "answer": "Aceeași dispunere — 2 dormitoare, 1 baie, șemineu, grătar — dar cu o atenție sporită la detalii și la atmosferă. Prețul este cu +10 €/noapte vara și +20 €/noapte iarna față de vilele standard."
     },
     "max-guests": {
       "question": "Câte persoane pot dormi într-o vilă?",
@@ -116,7 +116,7 @@
     },
     "villa-amenities": {
       "question": "Ce include închirierea unei vile la Pamporovo Villa?",
-      "answer": "Fiecare dintre cele trei vile dispune de 2 dormitoare, 2 băi, o bucătărie complet utilată, șemineu cu lemne, grătar pe terasă, Wi-Fi și parcare gratuită. Închiriați întreaga vilă — fără a o împărți cu alți oaspeți."
+      "answer": "Fiecare dintre cele trei vile dispune de 2 dormitoare, 1 baie, o bucătărie complet utilată, șemineu cu lemne, grătar pe terasă, Wi-Fi și parcare gratuită. Închiriați întreaga vilă — fără a o împărți cu alți oaspeți."
     },
     "fireplace-villa": {
       "question": "Există vreo vilă cu șemineu în Pamporovo?",

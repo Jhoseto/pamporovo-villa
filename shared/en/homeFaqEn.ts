@@ -41,7 +41,7 @@ export const HOME_FAQ_EN: HomeFaqItem[] = [
     id: "deluxe-difference",
     question: "What is different about Villa Deluxe?",
     answer:
-      "Same layout — 2 bedrooms, 2 bathrooms, fireplace, BBQ — with extra attention to detail and atmosphere. +€10/night summer and +€20/night winter vs standard villas.",
+      "Same layout — 2 bedrooms, 1 bathroom, fireplace, BBQ — with extra attention to detail and atmosphere. +€10/night summer and +€20/night winter vs standard villas.",
   },
   {
     id: "max-guests",

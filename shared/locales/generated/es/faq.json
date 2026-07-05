@@ -26,7 +26,7 @@
     },
     "deluxe-difference": {
       "question": "¿En qué se diferencia el Villa Deluxe?",
-      "answer": "La misma distribución —2 dormitorios, 2 baños, chimenea, barbacoa—, pero con un mayor cuidado por los detalles y el ambiente. El precio es de +10 €/noche en verano y +20 €/noche en invierno respecto a las villas estándar."
+      "answer": "La misma distribución —2 dormitorios, 1 baño, chimenea, barbacoa—, pero con un mayor cuidado por los detalles y el ambiente. El precio es de +10 €/noche en verano y +20 €/noche en invierno respecto a las villas estándar."
     },
     "max-guests": {
       "question": "¿Cuántas personas pueden dormir en una casa de campo?",
@@ -116,7 +116,7 @@
     },
     "villa-amenities": {
       "question": "¿Qué incluye el alquiler de una villa en Pamporovo Villa?",
-      "answer": "Cada una de las tres villas cuenta con 2 dormitorios, 2 baños, una cocina totalmente equipada, una chimenea de leña, una barbacoa en la terraza, wifi y aparcamiento gratuito. Alquilarás la villa completa, sin tener que compartirla con otros huéspedes."
+      "answer": "Cada una de las tres villas cuenta con 2 dormitorios, 1 baño, una cocina totalmente equipada, una chimenea de leña, una barbacoa en la terraza, wifi y aparcamiento gratuito. Alquilarás la villa completa, sin tener que compartirla con otros huéspedes."
     },
     "fireplace-villa": {
       "question": "¿Hay alguna casa de campo con chimenea en Pamporovo?",

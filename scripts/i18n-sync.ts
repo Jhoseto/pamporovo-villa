@@ -315,49 +315,61 @@ async function main(): Promise<void> {
     process.exit(1);
   }
 
+  const failedLocales: TargetLocale[] = [];
+
   for (const locale of localesToSync) {
     console.log(`[i18n] Syncing ${locale}...`);
-    let merged = loadExistingGenerated(locale);
+    try {
+      let merged = loadExistingGenerated(locale);
 
-    const keysToTranslate = (force
-      ? Object.keys(bgFlat)
-      : changedKeys.length > 0
-        ? changedKeys
-        : Object.keys(bgFlat).filter((k) => !(k in merged))
-    )
-      .filter((k) => !k.startsWith("legal."))
-      .filter((k) => (prefixArg ? k.startsWith(prefixArg) : true));
+      const keysToTranslate = (force
+        ? Object.keys(bgFlat)
+        : changedKeys.length > 0
+          ? changedKeys
+          : Object.keys(bgFlat).filter((k) => !(k in merged))
+      )
+        .filter((k) => !k.startsWith("legal."))
+        .filter((k) => (prefixArg ? k.startsWith(prefixArg) : true));
 
-    if (prefixArg) {
-      console.log(`[i18n] ${locale}: prefix "${prefixArg}" → ${keysToTranslate.length} keys`);
-    }
-
-    if (keysToTranslate.length === 0) {
-      console.log(`[i18n] ${locale}: up to date`);
-      continue;
-    }
-
-    const texts = keysToTranslate.map((k) => bgFlat[k] ?? "");
-
-    if (dryRun) {
-      for (let i = 0; i < keysToTranslate.length; i++) {
-        merged[keysToTranslate[i]] = `[${locale.toUpperCase()}] ${texts[i]}`;
+      if (prefixArg) {
+        console.log(`[i18n] ${locale}: prefix "${prefixArg}" → ${keysToTranslate.length} keys`);
       }
-    } else {
-      const translated = await deeplTranslateAll(texts, locale, { apiKey: apiKey! }, prefixArg?.startsWith("legal") ? 10 : 40);
-      for (let i = 0; i < keysToTranslate.length; i++) {
-        merged[keysToTranslate[i]] = translated[i];
+
+      if (keysToTranslate.length === 0) {
+        console.log(`[i18n] ${locale}: up to date`);
+        continue;
       }
+
+      const texts = keysToTranslate.map((k) => bgFlat[k] ?? "");
+
+      if (dryRun) {
+        for (let i = 0; i < keysToTranslate.length; i++) {
+          merged[keysToTranslate[i]] = `[${locale.toUpperCase()}] ${texts[i]}`;
+        }
+      } else {
+        const translated = await deeplTranslateAll(texts, locale, { apiKey: apiKey! }, prefixArg?.startsWith("legal") ? 10 : 40);
+        for (let i = 0; i < keysToTranslate.length; i++) {
+          merged[keysToTranslate[i]] = translated[i];
+        }
+      }
+
+      merged = finalizeLocaleFlat(merged, locale);
+
+      writeAllGenerated(locale, merged);
+      console.log(`[i18n] ${locale}: updated ${keysToTranslate.length} keys`);
+    } catch (err) {
+      failedLocales.push(locale);
+      console.error(`[i18n] ${locale}: FAILED — ${err instanceof Error ? err.message : err}`);
     }
-
-    merged = finalizeLocaleFlat(merged, locale);
-
-    writeAllGenerated(locale, merged);
-    console.log(`[i18n] ${locale}: updated ${keysToTranslate.length} keys`);
   }
 
   writeManifest(newManifest);
   generateLlmsFiles();
+  if (failedLocales.length > 0) {
+    console.error(`[i18n] Sync finished with errors: ${failedLocales.join(", ")}`);
+    console.error("[i18n] Retry later: .\\i18n-sync.bat --locale=ru (or tr, pt)");
+    process.exit(1);
+  }
   console.log("[i18n] Sync complete.");
 }
 
