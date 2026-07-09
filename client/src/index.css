@@ -596,7 +596,43 @@
   }
 
   .lang-switcher-panel {
+    position: relative;
+    overflow: hidden;
+    /* Dark frosted glass — lighter tint, stronger blur for readability on cream */
+    background: linear-gradient(
+      155deg,
+      oklch(0.17 0.028 58 / 0.48),
+      oklch(0.12 0.022 62 / 0.56)
+    );
+    backdrop-filter: blur(34px) saturate(1.55);
+    -webkit-backdrop-filter: blur(34px) saturate(1.55);
+    border: 1px solid oklch(1 0 0 / 0.2);
     border-radius: 1rem;
+    box-shadow:
+      0 18px 48px -14px oklch(0 0 0 / 0.5),
+      0 8px 24px -8px oklch(0 0 0 / 0.28),
+      inset 0 1px 0 oklch(1 0 0 / 0.18),
+      inset 0 -1px 0 oklch(0 0 0 / 0.14);
+    isolation: isolate;
+  }
+
+  .lang-switcher-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(
+      180deg,
+      oklch(1 0 0 / 0.1) 0%,
+      transparent 42%,
+      oklch(0 0 0 / 0.18) 100%
+    );
+    pointer-events: none;
+  }
+
+  .lang-switcher-panel > * {
+    position: relative;
+    z-index: 1;
   }
 
   .lang-switcher-scroll {
@@ -622,6 +658,7 @@
   }
 
   .lang-switcher-item {
+    text-shadow: 0 1px 4px oklch(0 0 0 / 0.35);
     transition:
       background-color 0.18s ease,
       color 0.18s ease;
@@ -732,6 +769,56 @@
     box-shadow:
       0 1px 0 oklch(1 0 0 / 0.8) inset,
       0 32px 80px -32px oklch(0 0 0 / 0.14);
+  }
+
+  .contact-cards-grid {
+    display: grid;
+    width: 100%;
+    max-width: 82rem;
+    margin-inline: auto;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 640px) {
+    .contact-cards-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.25rem;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .contact-cards-grid {
+      grid-template-columns: repeat(4, minmax(16.5rem, 1fr));
+      gap: 1.5rem;
+    }
+  }
+
+  .contact-card {
+    min-width: 0;
+    min-height: 9.5rem;
+  }
+
+  .contact-card-body {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .contact-card-value {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.0625rem;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: oklch(0.28 0.02 55);
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    hyphens: none;
+  }
+
+  @media (min-width: 1200px) {
+    .contact-card-value {
+      font-size: 1.125rem;
+    }
   }
 
   .premium-form-heading {
@@ -1189,12 +1276,17 @@
     -webkit-user-select: none;
   }
 
-  .reviews-carousel-shell.is-dragging .review-card-expand {
-    pointer-events: none;
-  }
-
   .reviews-carousel-shell.is-dragging .review-card:hover {
     transform: none;
+  }
+
+  .review-card--clickable {
+    cursor: pointer;
+  }
+
+  .review-card--clickable:focus-visible {
+    outline: 2px solid oklch(0.72 0.14 75 / 0.55);
+    outline-offset: 2px;
   }
 
   .review-card-expand {
@@ -1312,12 +1404,12 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: oklch(0.45 0.05 65);
+    cursor: pointer;
     transition:
       border-color 0.25s ease,
       background 0.25s ease,
       color 0.25s ease,
       transform 0.25s ease;
-    cursor: pointer;
   }
 
   .review-card-expand:hover {
@@ -1327,10 +1419,17 @@
     transform: translateY(-1px);
   }
 
+  .review-card--clickable:hover .review-card-expand {
+    border-color: oklch(0.72 0.14 75 / 0.5);
+    background: oklch(0.72 0.14 75 / 0.12);
+    color: oklch(0.35 0.04 55);
+    transform: translateY(-1px);
+  }
+
   .review-detail-overlay {
     position: fixed;
     inset: 0;
-    z-index: 190;
+    z-index: 220;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -44,14 +44,21 @@ function StarRow({ rating, size = "sm" }: { rating: number; size?: "sm" | "xs" }
   );
 }
 
+const DRAG_CLICK_THRESHOLD_PX = 12;
+
 const ReviewCard = memo(function ReviewCard({
   review,
   onExpand,
+  onStopCarousel,
 }: {
   review: ReviewItem;
   onExpand: (review: ReviewItem) => void;
+  onStopCarousel: () => void;
 }) {
   const { t } = useTranslation();
+  const pointerStart = useRef<{ x: number; y: number } | null>(null);
+  const wasDragged = useRef(false);
+
   const villas = useMemo(
     () =>
       VILLAS.map(v => ({
@@ -69,8 +76,79 @@ const ReviewCard = memo(function ReviewCard({
   const preview = truncateReviewPreview(review.body, REVIEW_BODY_PREVIEW);
   const showExpand = reviewNeedsExpand(review.body, REVIEW_BODY_PREVIEW);
 
+  const openReview = () => onExpand(review);
+
+  const beginPointer = (clientX: number, clientY: number) => {
+    onStopCarousel();
+    pointerStart.current = { x: clientX, y: clientY };
+    wasDragged.current = false;
+  };
+
+  const trackPointer = (clientX: number, clientY: number) => {
+    if (!pointerStart.current) return;
+    const dx = Math.abs(clientX - pointerStart.current.x);
+    const dy = Math.abs(clientY - pointerStart.current.y);
+    if (dx > DRAG_CLICK_THRESHOLD_PX || dy > DRAG_CLICK_THRESHOLD_PX) {
+      wasDragged.current = true;
+    }
+  };
+
+  const tryOpenFromTap = () => {
+    if (wasDragged.current) return;
+    openReview();
+  };
+
+  const endPointer = () => {
+    pointerStart.current = null;
+  };
+
+  const handlePointerDownCapture = (e: React.PointerEvent<HTMLElement>) => {
+    if (e.button !== 0) return;
+    beginPointer(e.clientX, e.clientY);
+  };
+
+  const handlePointerMove = (e: React.PointerEvent<HTMLElement>) => {
+    trackPointer(e.clientX, e.clientY);
+  };
+
+  const handlePointerUp = (e: React.PointerEvent<HTMLElement>) => {
+    if (e.button !== 0) return;
+    tryOpenFromTap();
+    endPointer();
+  };
+
+  const handlePointerCancel = () => {
+    endPointer();
+  };
+
+  const handleCardKeyDown = (e: React.KeyboardEvent<HTMLElement>) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      onStopCarousel();
+      openReview();
+    }
+  };
+
   return (
-    <article className="review-card group h-full select-none">
+    <article
+      className="review-card review-card--clickable group h-full select-none"
+      role="button"
+      tabIndex={0}
+      aria-label={
+        showExpand
+          ? interpolate(t("reviews.carousel.openFullAria", "Прочети целия отзив от {name}"), {
+              name: review.guestName,
+            })
+          : interpolate(t("reviews.carousel.openAriaNamed", "Отвори отзива от {name}"), {
+              name: review.guestName,
+            })
+      }
+      onPointerDownCapture={handlePointerDownCapture}
+      onPointerMove={handlePointerMove}
+      onPointerUp={handlePointerUp}
+      onPointerCancel={handlePointerCancel}
+      onKeyDown={handleCardKeyDown}
+    >
       <div className="review-card-accent" aria-hidden />
       <StarRow rating={review.rating} />
       <blockquote className="review-card-quote">„{preview}"</blockquote>
@@ -79,27 +157,22 @@ const ReviewCard = memo(function ReviewCard({
           <p className="review-card-name">{review.guestName}</p>
           {meta && <p className="review-card-meta">{meta}</p>}
         </div>
-        <button
-          type="button"
-          className="review-card-expand"
-          onPointerDown={e => e.stopPropagation()}
-          onClick={e => {
-            e.stopPropagation();
-            onExpand(review);
-          }}
-          aria-label={
-            showExpand
-              ? t("reviews.carousel.readFullAria", "Прочети целия отзив")
-              : t("reviews.carousel.openAria", "Отвори отзива")
-          }
-        >
-          <Expand className="h-3.5 w-3.5" />
-          <span>
-            {showExpand
-              ? t("reviews.carousel.readFull", "Целият отзив")
-              : t("reviews.carousel.open", "Отвори")}
-          </span>
-        </button>
+        {showExpand && (
+          <button
+            type="button"
+            className="review-card-expand"
+            onPointerDown={e => e.stopPropagation()}
+            onClick={e => {
+              e.stopPropagation();
+              onStopCarousel();
+              openReview();
+            }}
+            aria-label={t("reviews.carousel.readFullAria", "Прочети целия отзив")}
+          >
+            <Expand className="h-3.5 w-3.5" />
+            <span>{t("reviews.carousel.readFull", "Целият отзив")}</span>
+          </button>
+        )}
       </footer>
     </article>
   );
@@ -136,6 +209,7 @@ export function ReviewsCarousel({ reviews, isLoading }: ReviewsCarouselProps) {
       dragFree: true,
       skipSnaps: false,
       duration: 28,
+      dragThreshold: 14,
       watchDrag: () => !expandedRef.current,
     }),
     []
@@ -245,12 +319,16 @@ export function ReviewsCarousel({ reviews, isLoading }: ReviewsCarouselProps) {
     emblaApi?.scrollNext();
   }, [emblaApi]);
 
-  const handleExpand = useCallback((review: ReviewItem) => {
+  const stopCarousel = useCallback(() => {
     scrollCtrlRef.current?.stop();
     setIsScrolling(false);
+  }, []);
+
+  const handleExpand = useCallback((review: ReviewItem) => {
+    stopCarousel();
     setExpandedReview(review);
     setPaused(true);
-  }, []);
+  }, [stopCarousel]);
 
   const handleCloseExpand = useCallback(() => {
     setExpandedReview(null);
@@ -369,7 +447,11 @@ export function ReviewsCarousel({ reviews, isLoading }: ReviewsCarouselProps) {
             <div className="reviews-carousel-track">
               {reviews.map(review => (
                 <div key={review.id} className="reviews-carousel-slide">
-                  <ReviewCard review={review} onExpand={handleExpand} />
+                  <ReviewCard
+                    review={review}
+                    onExpand={handleExpand}
+                    onStopCarousel={stopCarousel}
+                  />
                 </div>
               ))}
             </div>

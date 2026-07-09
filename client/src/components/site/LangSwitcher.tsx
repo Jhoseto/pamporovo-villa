@@ -88,7 +88,7 @@ export function LangSwitcher({ className, variant = "pill" }: LangSwitcherProps)
         className="lang-switcher-content z-[60] w-auto border-0 bg-transparent p-0 shadow-none outline-none"
         onOpenAutoFocus={(e) => e.preventDefault()}
       >
-        <div className="glass-panel hero-glass-panel lang-switcher-panel w-[12.75rem] overflow-hidden">
+        <div className="hero-glass-panel lang-switcher-panel w-[12.75rem]">
           <div className="border-b border-white/10 px-4 py-2.5">
             <p className="font-display text-[0.58rem] tracking-[0.18em] text-[var(--gold)] uppercase">
               {t("common.langLabel", "Език")}
@@ -112,7 +112,7 @@ export function LangSwitcher({ className, variant = "pill" }: LangSwitcherProps)
                     "lang-switcher-item mx-1.5 flex w-[calc(100%-0.75rem)] cursor-pointer items-center gap-2.5 rounded-xl px-3 py-2.5 text-left text-sm outline-none transition-colors",
                     active
                       ? "bg-[var(--gold)]/14 text-[var(--gold)]"
-                      : "text-white/82 hover:bg-white/8 hover:text-white"
+                      : "text-white/88 hover:bg-white/10 hover:text-white"
                   )}
                 >
                   <span
