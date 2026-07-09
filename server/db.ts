@@ -230,6 +230,12 @@ export async function updateBooking(
   await db.update(bookingRequests).set(patch).where(eq(bookingRequests.id, id));
 }
 
+export async function deleteBooking(id: number): Promise<boolean> {
+  const db = await requireDb();
+  const result = await db.delete(bookingRequests).where(eq(bookingRequests.id, id));
+  return Number(result[0].affectedRows ?? 0) > 0;
+}
+
 export async function getAllConfirmedBookings(villaId?: string): Promise<BookingRequest[]> {
   const db = await requireDb();
   const conditions = [eq(bookingRequests.status, "confirmed")];

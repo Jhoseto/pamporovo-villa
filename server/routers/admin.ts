@@ -506,6 +506,16 @@ export const adminRouter = router({
         });
         return { success: true as const };
       }),
+
+    delete: masterProcedure
+      .input(z.object({ id: z.number().int().positive() }))
+      .mutation(async ({ input }) => {
+        const existing = await db.getBookingById(input.id);
+        if (!existing) throw new TRPCError({ code: "NOT_FOUND", message: "Резервацията не е намерена" });
+        const deleted = await db.deleteBooking(input.id);
+        if (!deleted) throw new TRPCError({ code: "NOT_FOUND", message: "Резервацията не е намерена" });
+        return { success: true as const };
+      }),
   }),
 
   contacts: router({

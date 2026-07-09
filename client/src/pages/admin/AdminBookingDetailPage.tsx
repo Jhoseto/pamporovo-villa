@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
-import { Link, useRoute } from "wouter";
-import { Phone, ArrowLeft, Copy, MessageCircle, Printer } from "lucide-react";
+import { Link, useLocation, useRoute } from "wouter";
+import { Phone, ArrowLeft, Copy, MessageCircle, Printer, Trash2 } from "lucide-react";
 import { AdminBookingPrintSheet } from "@/components/admin/AdminBookingPrintSheet";
 import { GuestNameWithVip } from "@/components/admin/ContactVipBadge";
 import { BookingConfirmDialog } from "@/components/admin/BookingConfirmDialog";
@@ -20,8 +20,11 @@ import { VILLA_LABELS, type VillaId } from "@shared/villas";
 
 export default function AdminBookingDetailPage() {
   const [, params] = useRoute("/admin/bookings/:id");
+  const [, setLocation] = useLocation();
   const id = Number(params?.id);
   const utils = trpc.useUtils();
+
+  const { data: me } = trpc.admin.auth.me.useQuery();
 
   const { data: booking, isLoading, isError } = trpc.admin.bookings.getById.useQuery(
     { id },
@@ -114,6 +117,18 @@ export default function AdminBookingDetailPage() {
     onError: err => toast.error(err.message),
   });
 
+  const remove = trpc.admin.bookings.delete.useMutation({
+    onSuccess: () => {
+      toast.success("Резервацията е изтрита");
+      utils.admin.bookings.list.invalidate();
+      utils.admin.bookings.calendar.invalidate();
+      utils.admin.bookings.stats.invalidate();
+      utils.admin.bookings.overview.invalidate();
+      setLocation("/admin/bookings");
+    },
+    onError: err => toast.error(err.message),
+  });
+
   if (!Number.isFinite(id) || id <= 0) {
     return (
       <div className="admin-glass-card mx-auto max-w-lg p-6 text-center">
@@ -141,7 +156,7 @@ export default function AdminBookingDetailPage() {
   }
 
   const villaName = VILLAS.find(v => v.id === booking.villaId)?.name ?? booking.villaId;
-  const busy = update.isPending || confirm.isPending || reject.isPending;
+  const busy = update.isPending || confirm.isPending || reject.isPending || remove.isPending;
   const isConfirmedLike = booking.status === "confirmed" || booking.status === "completed";
   const cardData: ConfirmationCardData | null =
     isConfirmedLike && booking.totalAmountEur != null
@@ -429,6 +444,27 @@ export default function AdminBookingDetailPage() {
         {booking.status === "confirmed" && (
           <Button variant="destructive" disabled={busy} onClick={() => reject.mutate({ id, adminNote: booking.adminNote ?? undefined })}>
             Отмени резервацията
+          </Button>
+        )}
+        {me?.isMaster && (
+          <Button
+            type="button"
+            variant="destructive"
+            className="admin-glass-btn border-red-500/40"
+            disabled={busy}
+            onClick={() => {
+              if (
+                !window.confirm(
+                  `Изтриване на резервация #${booking.id} за „${booking.guestName}"? Действието е необратимо.`
+                )
+              ) {
+                return;
+              }
+              remove.mutate({ id });
+            }}
+          >
+            <Trash2 className="mr-2 h-4 w-4" />
+            Изтрий резервацията
           </Button>
         )}
       </div>
