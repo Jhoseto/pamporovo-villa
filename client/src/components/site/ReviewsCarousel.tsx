@@ -129,16 +129,21 @@ const ReviewCard = memo(function ReviewCard({
     }
   };
 
+  const interactiveProps = showExpand
+    ? {}
+    : {
+        role: "button" as const,
+        tabIndex: 0,
+        onKeyDown: handleCardKeyDown,
+      };
+
   return (
     <article
       className="review-card review-card--clickable group h-full select-none"
-      role="button"
-      tabIndex={0}
+      {...interactiveProps}
       aria-label={
         showExpand
-          ? interpolate(t("reviews.carousel.openFullAria", "Прочети целия отзив от {name}"), {
-              name: review.guestName,
-            })
+          ? undefined
           : interpolate(t("reviews.carousel.openAriaNamed", "Отвори отзива от {name}"), {
               name: review.guestName,
             })
@@ -147,7 +152,6 @@ const ReviewCard = memo(function ReviewCard({
       onPointerMove={handlePointerMove}
       onPointerUp={handlePointerUp}
       onPointerCancel={handlePointerCancel}
-      onKeyDown={handleCardKeyDown}
     >
       <div className="review-card-accent" aria-hidden />
       <StarRow rating={review.rating} />

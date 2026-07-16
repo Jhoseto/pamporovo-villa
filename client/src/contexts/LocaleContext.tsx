@@ -1,6 +1,11 @@
-import { createContext, useContext, useMemo, type ReactNode } from "react";
+import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
 import { HOME_FAQ } from "@shared/homeFaq";
-import { loadClientMessages, resolveMessage } from "@/i18n/loadMessages";
+import {
+  loadClientMessages,
+  loadClientMessagesAsync,
+  resolveMessage,
+  type FlatMessages,
+} from "@/i18n/loadMessages";
 import { SOURCE_LOCALE, type SiteLocale } from "@shared/i18n/locales";
 import { usePageLang } from "@/hooks/usePageLang";
 
@@ -13,13 +18,33 @@ const LocaleContext = createContext<LocaleContextValue | null>(null);
 
 export function LocaleProvider({ children }: { children: ReactNode }) {
   const locale = usePageLang();
+  const [localeMessages, setLocaleMessages] = useState<FlatMessages>(() =>
+    loadClientMessages(locale)
+  );
+
+  useEffect(() => {
+    if (locale === SOURCE_LOCALE) {
+      setLocaleMessages(loadClientMessages(SOURCE_LOCALE));
+      return;
+    }
+    let cancelled = false;
+    void loadClientMessagesAsync(locale).then((messages) => {
+      if (!cancelled) setLocaleMessages(messages);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [locale]);
+
   const value = useMemo(() => {
-    const messages = loadClientMessages(locale);
     const bgMessages = loadClientMessages(SOURCE_LOCALE);
     const t = (key: string, fallback?: string) =>
-      resolveMessage(messages, key) ?? resolveMessage(bgMessages, key) ?? fallback ?? key;
+      resolveMessage(localeMessages, key) ??
+      resolveMessage(bgMessages, key) ??
+      fallback ??
+      key;
     return { locale, t };
-  }, [locale]);
+  }, [locale, localeMessages]);
 
   return <LocaleContext.Provider value={value}>{children}</LocaleContext.Provider>;
 }

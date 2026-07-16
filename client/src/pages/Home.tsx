@@ -1,7 +1,7 @@
 import { lazy, Suspense, useEffect, type ReactNode } from "react";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { scrollToSection } from "@/lib/scroll";
-import { HeroSection } from "@/components/site/HeroSection";
+import { HeroSectionLite } from "@/components/site/HeroSectionLite";
 import { HomeBelowFoldSections } from "@/components/site/HomeBelowFoldSections";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { useSiteReady } from "@/contexts/SiteReadyContext";
@@ -38,6 +38,10 @@ const ReviewsSection = lazy(() =>
 );
 const HomeFaqSection = lazy(() =>
   import("@/components/site/HomeFaqSection").then(m => ({ default: m.HomeFaqSection }))
+);
+
+const HeroSection = lazy(() =>
+  import("@/components/site/HeroSection").then(m => ({ default: m.HeroSection }))
 );
 
 // Minimal fallback — invisible placeholder that holds layout height
@@ -82,7 +86,13 @@ export default function Home() {
     <div className="relative min-h-screen bg-[var(--cream)]">
       <SiteHeader />
       <main id="main-content">
-        <HeroSection />
+        {isMobile ? (
+          <HeroSectionLite />
+        ) : (
+          <Suspense fallback={<div className="min-h-[100dvh] bg-[var(--ink)]" aria-hidden />}>
+            <HeroSection />
+          </Suspense>
+        )}
         <HomeBelowFoldSections />
         <LazySection id="gallery" fallback={<DarkSectionFallback />}>
           <GallerySection />

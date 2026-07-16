@@ -28,13 +28,6 @@
 
         if (!isAdmin) {
           var isMobile = window.matchMedia("(max-width: 767px)").matches;
-          var preload = document.createElement("link");
-          preload.rel = "preload";
-          preload.as = "image";
-          preload.href = isMobile ? "/photos/hero-mobile.webp" : "/photos/hero.webp";
-          preload.type = "image/webp";
-          preload.setAttribute("fetchpriority", "high");
-          document.head.appendChild(preload);
 
           if (isMobile) {
             var fonts = document.createElement("link");
@@ -46,6 +39,16 @@
               fonts.media = "all";
             };
             document.head.appendChild(fonts);
+          } else {
+            var desktopFonts = document.createElement("link");
+            desktopFonts.rel = "stylesheet";
+            desktopFonts.href =
+              "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap";
+            desktopFonts.media = "print";
+            desktopFonts.onload = function () {
+              desktopFonts.media = "all";
+            };
+            document.head.appendChild(desktopFonts);
           }
           return;
         }
@@ -143,18 +146,20 @@
       type="image/webp"
       fetchpriority="high"
       media="(max-width: 767px)" />
+    <link
+      rel="preload"
+      as="image"
+      href="/photos/hero.webp"
+      type="image/webp"
+      fetchpriority="high"
+      media="(min-width: 768px)" />
     <!-- seo:server-inject -->
-    <link rel="alternate" type="text/plain" href="https://pamporovovilla.com/llms.txt" title="LLMs summary for AI agents" />
     <!-- DNS prefetch for external resources -->
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
     <link rel="dns-prefetch" href="https://maps.googleapis.com" />
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      media="(min-width: 768px)"
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet" />
   </head>
 
   <body>

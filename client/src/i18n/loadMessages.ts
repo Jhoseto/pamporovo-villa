@@ -13,10 +13,12 @@ const bgModules = import.meta.glob<NestedMessages>("@shared/locales/bg/*.json", 
   import: "default",
 });
 
-const generatedModules = import.meta.glob<NestedMessages>(
+const generatedLoaders = import.meta.glob<NestedMessages>(
   "@shared/locales/generated/*/*.json",
-  { eager: true, import: "default" }
+  { import: "default" }
 );
+
+const localeCache = new Map<SiteLocale, FlatMessages>();
 
 function flattenObject(obj: NestedMessages, prefix = ""): FlatMessages {
   const out: FlatMessages = {};
@@ -66,6 +68,16 @@ function findModule(
   return undefined;
 }
 
+function findLoader(
+  loaders: Record<string, () => Promise<NestedMessages>>,
+  suffix: string
+): (() => Promise<NestedMessages>) | undefined {
+  for (const [path, loader] of Object.entries(loaders)) {
+    if (path.replace(/\\/g, "/").endsWith(suffix)) return loader;
+  }
+  return undefined;
+}
+
 function loadBgFlat(): FlatMessages {
   let flat: FlatMessages = {};
   for (const ns of LOCALE_NAMESPACES) {
@@ -79,17 +91,30 @@ function loadBgFlat(): FlatMessages {
 
 const bgFlat = loadBgFlat();
 
-export function loadClientMessages(locale: SiteLocale): FlatMessages {
+export async function loadClientMessagesAsync(locale: SiteLocale): Promise<FlatMessages> {
   if (locale === SOURCE_LOCALE) return bgFlat;
 
+  const cached = localeCache.get(locale);
+  if (cached) return cached;
+
   const flat: FlatMessages = {};
-  for (const ns of LOCALE_NAMESPACES) {
-    const mod = findModule(generatedModules, `/generated/${locale}/${ns}.json`);
-    if (mod) {
+  await Promise.all(
+    LOCALE_NAMESPACES.map(async (ns) => {
+      const loader = findLoader(generatedLoaders, `/generated/${locale}/${ns}.json`);
+      if (!loader) return;
+      const mod = await loader();
       Object.assign(flat, flattenObject(prefixNamespace(ns, mod)));
-    }
-  }
+    })
+  );
+
+  localeCache.set(locale, flat);
   return flat;
+}
+
+/** Sync access — BG only; other locales use cache after async load. */
+export function loadClientMessages(locale: SiteLocale): FlatMessages {
+  if (locale === SOURCE_LOCALE) return bgFlat;
+  return localeCache.get(locale) ?? {};
 }
 
 export function resolveMessage(messages: FlatMessages, key: string): string | undefined {

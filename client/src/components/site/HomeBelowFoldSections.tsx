@@ -1,8 +1,18 @@
+import { lazy, Suspense } from "react";
 import { useSiteReady } from "@/contexts/SiteReadyContext";
 import { EXPERIENCE_PANELS } from "@/data/experiencePanels";
 import { isMobileViewport } from "@/lib/mobilePerf";
-import { PropertyDetailsSection } from "@/components/site/PropertyDetailsSection";
-import { ScrollPanelExperience } from "@/components/site/ScrollPanelExperience";
+
+const PropertyDetailsSection = lazy(() =>
+  import("@/components/site/PropertyDetailsSection").then(m => ({
+    default: m.PropertyDetailsSection,
+  }))
+);
+const ScrollPanelExperience = lazy(() =>
+  import("@/components/site/ScrollPanelExperience").then(m => ({
+    default: m.ScrollPanelExperience,
+  }))
+);
 
 function MobileDeferredPlaceholder() {
   const experienceHeight = `${EXPERIENCE_PANELS.length * 100}dvh`;
@@ -28,9 +38,24 @@ export function HomeBelowFoldSections() {
   }
 
   return (
-    <>
+    <Suspense
+      fallback={
+        <>
+          <div id="about" className="section-scroll-target">
+            <div className="min-h-[50dvh] bg-[var(--cream)]" aria-hidden />
+          </div>
+          <div id="experience" className="section-scroll-target">
+            <div
+              className="bg-[var(--ink)]"
+              style={{ minHeight: `${EXPERIENCE_PANELS.length * 100}dvh` }}
+              aria-hidden
+            />
+          </div>
+        </>
+      }
+    >
       <PropertyDetailsSection />
       <ScrollPanelExperience />
-    </>
+    </Suspense>
   );
 }

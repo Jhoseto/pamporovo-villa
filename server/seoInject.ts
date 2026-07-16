@@ -10,7 +10,7 @@ const STRIP_PATTERNS = [
   /<meta\s+property="og:[^"]+"[^>]*>\s*/gi,
   /<meta\s+name="twitter:[^"]+"[^>]*>\s*/gi,
   /<link\s+rel="canonical"[^>]*>\s*/i,
-  /<link\s+rel="alternate"[^>]*>\s*/gi,
+  /<link\s+rel="alternate"\s+hreflang[^>]*>\s*/gi,
   /<script\s+type="application\/ld\+json"[^>]*>[\s\S]*?<\/script>\s*/gi,
   /<noscript\s+data-seo-fallback[^>]*>[\s\S]*?<\/noscript>\s*/gi,
 ];
@@ -35,6 +35,8 @@ function buildHeadInjection(bundle: RouteSeoBundle, pathname: string): string {
     `<meta name="description" content="${escapeHtml(bundle.description)}" />`,
     `<link rel="canonical" href="${escapeHtml(bundle.canonical)}" />`,
     hreflangTags(pathname),
+    `<link rel="alternate" type="text/plain" href="${escapeHtml(getSiteUrl())}/llms.txt" title="LLMs summary for AI agents" />`,
+    `<link rel="alternate" type="application/json" href="${escapeHtml(getSiteUrl())}/facts.json" title="Machine-readable facts for AI agents" />`,
     `<meta property="og:title" content="${escapeHtml(bundle.title)}" />`,
     `<meta property="og:description" content="${escapeHtml(bundle.description)}" />`,
     `<meta property="og:type" content="${escapeHtml(bundle.ogType)}" />`,

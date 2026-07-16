@@ -41,7 +41,7 @@ export default function HomeMobile({ onNavigateRequest }: HomeMobileProps) {
   return (
     <div className="relative min-h-screen bg-[var(--cream)]">
       <SiteHeader />
-      <main>
+      <main id="main-content">
         <HeroSectionLite />
         <MobileScrollDeferredBelowFold />
       </main>
