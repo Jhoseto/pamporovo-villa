@@ -40,18 +40,22 @@ export function PropertyDetailsSection() {
               <div className="about-premium-gallery__frame" aria-hidden />
               <div className="about-premium-gallery__main overflow-hidden rounded-[1.25rem] shadow-[0_28px_70px_-28px_rgba(0,0,0,0.35)]">
                 <img
-                  src="/photos/11.jpg"
+                  src="/photos/villa-2/01.jpg"
                   alt={t("home.about.imageForestAlt", "Вила в боровата гора на Райковски ливади")}
                   className="aspect-[4/5] h-full w-full object-cover object-center transition duration-700 hover:scale-[1.03]"
+                  width={800}
+                  height={1000}
                   loading="lazy"
                   decoding="async"
                 />
               </div>
               <div className="about-premium-gallery__accent overflow-hidden rounded-xl border border-[var(--gold)]/35 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.4)]">
                 <img
-                  src="/photos/01.jpg"
+                  src="/photos/villa-deluxe/08.jpg"
                   alt={t("home.about.imageInteriorAlt", "Интериор с каменна стена и дърво")}
                   className="aspect-[4/3] h-full w-full object-cover object-center"
+                  width={800}
+                  height={600}
                   loading="lazy"
                   decoding="async"
                 />

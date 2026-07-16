@@ -3,6 +3,7 @@ import { SiteHeader } from "@/components/site/SiteHeader";
 import { scrollToSection } from "@/lib/scroll";
 import { HeroSectionLite } from "@/components/site/HeroSectionLite";
 import { HomeBelowFoldSections } from "@/components/site/HomeBelowFoldSections";
+import { MobileScrollDeferredBelowFold } from "@/components/site/MobileScrollDeferredBelowFold";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { useSiteReady } from "@/contexts/SiteReadyContext";
 import { isMobileViewport } from "@/lib/mobilePerf";
@@ -93,7 +94,7 @@ export default function Home() {
             <HeroSection />
           </Suspense>
         )}
-        <HomeBelowFoldSections />
+        {isMobile ? <MobileScrollDeferredBelowFold /> : <HomeBelowFoldSections />}
         <LazySection id="gallery" fallback={<DarkSectionFallback />}>
           <GallerySection />
         </LazySection>

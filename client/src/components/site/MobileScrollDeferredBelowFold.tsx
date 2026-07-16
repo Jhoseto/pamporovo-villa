@@ -34,8 +34,17 @@ export function MobileScrollDeferredBelowFold({ fallback }: { fallback?: ReactNo
     const onScroll = () => {
       if (window.scrollY > 80) setActive(true);
     };
+    const onHashNav = () => {
+      const hash = window.location.hash;
+      if (hash === "#about" || hash === "#experience") setActive(true);
+    };
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    window.addEventListener("hashchange", onHashNav);
+    onHashNav();
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("hashchange", onHashNav);
+    };
   }, []);
 
   if (!active) {
