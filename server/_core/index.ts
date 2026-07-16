@@ -14,6 +14,7 @@ import { registerLegacyRedirects } from "../redirects";
 import { registerFactsRoute } from "../facts";
 import { registerSitemapRoute } from "../sitemap";
 import { initReviewSchemaCache } from "../seoReviewsCache";
+import { applySecurityHeaders } from "./securityHeaders";
 
 async function startServer() {
   validateEnv();
@@ -25,6 +26,7 @@ async function startServer() {
   if (process.env.TRUST_PROXY === "1" || process.env.NODE_ENV === "production") {
     app.set("trust proxy", 1);
   }
+  applySecurityHeaders(app);
   app.use(express.json({ limit: "50mb" }));
   app.use(express.urlencoded({ limit: "50mb", extended: true }));
 
