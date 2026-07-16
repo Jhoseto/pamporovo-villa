@@ -54,7 +54,6 @@ export default defineConfig({
             return match ? `i18n-${match[1]}` : "i18n";
           }
           if (!id.includes("node_modules")) return;
-          if (id.includes("react-dom") || id.includes("/react/")) return "vendor-react";
           if (id.includes("framer-motion")) return "vendor-framer";
           if (id.includes("lenis")) return "vendor-lenis";
           if (id.includes("@radix-ui")) return "vendor-radix";

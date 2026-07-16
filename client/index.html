@@ -29,6 +29,16 @@
         if (!isAdmin) {
           var isMobile = window.matchMedia("(max-width: 767px)").matches;
 
+          if (!isMobile) {
+            var heroPreload = document.createElement("link");
+            heroPreload.rel = "preload";
+            heroPreload.as = "image";
+            heroPreload.href = "/photos/hero.webp";
+            heroPreload.type = "image/webp";
+            heroPreload.setAttribute("fetchpriority", "high");
+            document.head.appendChild(heroPreload);
+          }
+
           if (isMobile) {
             var fonts = document.createElement("link");
             fonts.rel = "stylesheet";
@@ -146,13 +156,6 @@
       type="image/webp"
       fetchpriority="high"
       media="(max-width: 767px)" />
-    <link
-      rel="preload"
-      as="image"
-      href="/photos/hero.webp"
-      type="image/webp"
-      fetchpriority="high"
-      media="(min-width: 768px)" />
     <!-- seo:server-inject -->
     <!-- DNS prefetch for external resources -->
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
