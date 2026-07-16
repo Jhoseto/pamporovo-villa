@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { VILLA_GALLERIES } from "../client/src/data/galleryContent";
 import { absoluteUrl, getSiteUrl } from "./seoConstants";
 
 /** Pamporovo guide + hero assets */
@@ -55,25 +56,18 @@ export function loadVillaGalleryPhotos(): Array<{ path: string; title: string }>
   }
 }
 
-function chunk<T>(items: T[], parts: number): T[][] {
-  const size = Math.ceil(items.length / parts);
-  return Array.from({ length: parts }, (_, i) => items.slice(i * size, (i + 1) * size));
-}
-
-const VILLA_IDS = ["villa-1", "villa-2", "villa-deluxe"] as const;
-
 export function villaGalleryImagesForSitemap(villaId: string): Array<{ loc: string; title: string }> {
-  const photos = loadVillaGalleryPhotos();
-  const index = VILLA_IDS.indexOf(villaId as (typeof VILLA_IDS)[number]);
-  if (index < 0) return [];
-  const slice = chunk(photos, 3)[index] ?? [];
-  return slice.map((img) => ({ loc: absoluteUrl(img.path), title: img.title }));
+  const gallery = VILLA_GALLERIES.find(g => g.id === villaId);
+  return (gallery?.images ?? []).map(img => ({ loc: absoluteUrl(img.src), title: img.alt }));
 }
 
 export function galleryImagesForSitemap(): Array<{ loc: string; title: string }> {
-  const villa = loadVillaGalleryPhotos();
-  const merged = [...SEO_GALLERY_IMAGES, ...villa];
-  return merged.map((img) => ({
+  const villaAlbums = VILLA_GALLERIES.flatMap(g =>
+    g.images.map(img => ({ path: img.src, title: img.alt }))
+  );
+  const legacy = loadVillaGalleryPhotos();
+  const merged = [...SEO_GALLERY_IMAGES, ...legacy, ...villaAlbums];
+  return merged.map(img => ({
     loc: absoluteUrl(img.path),
     title: img.title,
   }));
