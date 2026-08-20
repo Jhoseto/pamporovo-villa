@@ -150,7 +150,7 @@ export function AdminLayout({ children }: { children: React.ReactNode }) {
                 <div className="flex-1 overflow-y-auto p-3">
                   <NavLinks onNavigate={() => setOpen(false)} />
                 </div>
-                <div className="admin-sheet-divider mt-auto border-t p-4">
+                <div className="admin-sheet-divider mt-auto border-t p-4 pb-[max(1rem,env(safe-area-inset-bottom))]">
                   <div className="mb-3 flex items-center gap-3">
                     <span className="admin-user-avatar">{userInitials(me?.username)}</span>
                     <div className="min-w-0">
@@ -184,6 +184,17 @@ export function AdminLayout({ children }: { children: React.ReactNode }) {
               <CalendarDays className="h-3.5 w-3.5 opacity-60" />
               <span>{me?.username}</span>
             </div>
+            <Button
+              variant="outline"
+              size="sm"
+              className="admin-glass-btn lg:hidden"
+              onClick={() => logout.mutate()}
+              disabled={logout.isPending}
+              aria-label="Изход"
+            >
+              <LogOut className="h-4 w-4" />
+              <span className="ml-1.5 hidden min-[380px]:inline">Изход</span>
+            </Button>
           </div>
         </header>
 
@@ -220,7 +231,10 @@ export function AdminLayout({ children }: { children: React.ReactNode }) {
                 Още
               </button>
             </SheetTrigger>
-            <SheetContent side="bottom" className="admin-sheet rounded-t-2xl p-4">
+            <SheetContent
+              side="bottom"
+              className="admin-sheet max-h-[85dvh] overflow-y-auto rounded-t-2xl p-4 pb-[max(1.25rem,env(safe-area-inset-bottom))]"
+            >
               <SheetHeader className="mb-3 p-0">
                 <SheetTitle className="text-sm font-semibold text-[var(--admin-fg)]">Още секции</SheetTitle>
                 <SheetDescription className="sr-only">Допълнителни admin раздели</SheetDescription>
