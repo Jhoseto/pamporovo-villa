@@ -139,7 +139,7 @@ export function AdminLayout({ children }: { children: React.ReactNode }) {
                   <Menu className="h-4 w-4" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="left" className="admin-sheet w-[300px] p-0">
+              <SheetContent side="left" className="admin-sheet flex w-[300px] flex-col p-0">
                 <SheetHeader className="sr-only">
                   <SheetTitle>Admin навигация</SheetTitle>
                   <SheetDescription>Меню с раздели на admin панела</SheetDescription>
@@ -147,8 +147,30 @@ export function AdminLayout({ children }: { children: React.ReactNode }) {
                 <div className="admin-sheet-divider border-b px-5 py-7">
                   <AdminMenuLogo />
                 </div>
-                <div className="p-3">
+                <div className="flex-1 overflow-y-auto p-3">
                   <NavLinks onNavigate={() => setOpen(false)} />
+                </div>
+                <div className="admin-sheet-divider mt-auto border-t p-4">
+                  <div className="mb-3 flex items-center gap-3">
+                    <span className="admin-user-avatar">{userInitials(me?.username)}</span>
+                    <div className="min-w-0">
+                      <p className="truncate text-sm font-semibold text-[var(--admin-fg)]">{me?.username}</p>
+                      <p className="text-xs text-[var(--admin-muted)]">{adminRoleLabel(!!me?.isMaster)}</p>
+                    </div>
+                  </div>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="admin-glass-btn w-full"
+                    onClick={() => {
+                      setOpen(false);
+                      logout.mutate();
+                    }}
+                    disabled={logout.isPending}
+                  >
+                    <LogOut className="mr-2 h-4 w-4" />
+                    Изход
+                  </Button>
                 </div>
               </SheetContent>
             </Sheet>
@@ -223,6 +245,19 @@ export function AdminLayout({ children }: { children: React.ReactNode }) {
                   );
                 })}
               </div>
+              <Button
+                variant="outline"
+                size="sm"
+                className="admin-glass-btn mt-4 w-full"
+                onClick={() => {
+                  setMoreOpen(false);
+                  logout.mutate();
+                }}
+                disabled={logout.isPending}
+              >
+                <LogOut className="mr-2 h-4 w-4" />
+                Изход
+              </Button>
             </SheetContent>
           </Sheet>
         </nav>

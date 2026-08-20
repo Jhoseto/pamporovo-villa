@@ -367,6 +367,21 @@ export default function AdminSettingsPage() {
           </Button>
         </div>
       </section>
+
+      <section className="admin-glass-card p-6">
+        <h2 className="font-serif text-xl font-semibold">Изход</h2>
+        <p className="mt-2 text-sm text-[var(--admin-muted)]">
+          Излезте от админ панела на това устройство. Ще трябва да влезете отново с потребител и парола.
+        </p>
+        <Button
+          variant="outline"
+          className="admin-glass-btn mt-4"
+          onClick={() => logout.mutate()}
+          disabled={logout.isPending}
+        >
+          Изход от профила
+        </Button>
+      </section>
     </div>
   );
 }
