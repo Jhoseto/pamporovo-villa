@@ -21,7 +21,9 @@
     "night": "overnight stay",
     "nights": "overnight stays",
     "perNightWinter": "/night (winter)",
-    "perNightSummer": "/night (summer)"
+    "perNightSummer": "/night (summer)",
+    "perNightSpecial": "/night",
+    "specialSuffix": " (special)"
   },
   "notes": [
     "Prices are per night, for the entire villa (up to 6 guests).",

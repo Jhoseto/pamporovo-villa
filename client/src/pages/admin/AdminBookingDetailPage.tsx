@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button";
 import { trpc } from "@/lib/trpc";
 import { toast } from "sonner";
 import { VILLAS, formatPriceEur } from "@/data/siteContent";
-import { calculateStayPriceFromGrid, type PricingGridRow } from "@/lib/pricing";
+import { calculateStayPriceFromGrid, type PricingGridRow, type SpecialRatePeriod } from "@/lib/pricing";
 import { bookingStatusLabel, bookingSourceLabel, type BookingStatusKey } from "@/lib/adminLabels";
 import { copyBookingSummary, formatBookingSummary, whatsAppUrl } from "@/lib/adminBooking";
 import { bookingBalanceDue } from "@shared/bookingPayment";
@@ -44,7 +44,8 @@ export default function AdminBookingDetailPage() {
       new Date(booking.checkInDate),
       new Date(booking.checkOutDate),
       booking.villaId,
-      pricingData.rows as PricingGridRow[]
+      pricingData.rows as PricingGridRow[],
+      (pricingData.specialRates ?? []) as SpecialRatePeriod[]
     );
   }, [booking, pricingData]);
 

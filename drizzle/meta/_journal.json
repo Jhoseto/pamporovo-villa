@@ -36,6 +36,13 @@
       "when": 1782999265720,
       "tag": "0004_sudden_oracle",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1783600000000,
+      "tag": "0005_villa_special_rates",
+      "breakpoints": true
     }
   ]
 }

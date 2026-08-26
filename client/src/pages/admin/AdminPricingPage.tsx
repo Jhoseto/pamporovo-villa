@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { AdminSpecialRatesPanel } from "@/components/admin/AdminSpecialRatesPanel";
 import { trpc } from "@/lib/trpc";
 import { toast } from "sonner";
 
@@ -128,6 +129,8 @@ export default function AdminPricingPage() {
           </TabsContent>
         ))}
       </Tabs>
+
+      <AdminSpecialRatesPanel />
 
       <div className="admin-glass-card p-5">
         <h3 className="font-serif text-xl font-semibold">Допълнителни такси</h3>

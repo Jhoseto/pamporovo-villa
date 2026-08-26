@@ -71,6 +71,38 @@ export function formatBlockedDates(rows: Awaited<ReturnType<typeof db.listBlocke
   }));
 }
 
+export function formatSpecialRates(rows: Awaited<ReturnType<typeof db.listSpecialRates>>) {
+  return rows.map(row => ({
+    id: row.id,
+    villaId: row.villaId,
+    startDate: formatDateOnly(row.startDate),
+    endDate: formatDateOnly(row.endDate),
+    pricePerNight: row.pricePerNight,
+    label: row.label,
+  }));
+}
+
+export function specialRateOverlapsExisting(
+  villaId: string,
+  startDate: string,
+  endDate: string,
+  existing: Awaited<ReturnType<typeof db.getSpecialRatesForVilla>>
+): boolean {
+  for (const rate of existing) {
+    if (
+      datesOverlap(
+        startDate,
+        endDate,
+        formatDateOnly(rate.startDate),
+        formatDateOnly(rate.endDate)
+      )
+    ) {
+      return true;
+    }
+  }
+  return false;
+}
+
 export function blockedOverlapsExisting(
   villaId: string,
   startDate: string,

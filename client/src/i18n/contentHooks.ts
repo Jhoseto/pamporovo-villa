@@ -280,12 +280,28 @@ export function useSpokeContent(slug: PamporovoSpokeSlug): LocalizedSpoke | unde
 export function useFormatStayBreakdown() {
   const { t } = useTranslation();
   return (quote: StayPriceQuote) => {
-    const { nights, winterNights, summerNights, winterRate, summerRate } = quote;
+    const {
+      nights,
+      winterNights,
+      summerNights,
+      winterRate,
+      summerRate,
+      specialBreakdown,
+    } = quote;
     const nightWord =
       nights === 1
         ? t("pricing.breakdown.night", "нощувка")
         : t("pricing.breakdown.nights", "нощувки");
     const parts: string[] = [`${nights} ${nightWord}`];
+
+    for (const special of specialBreakdown) {
+      const labelSuffix = special.label
+        ? ` (${special.label})`
+        : t("pricing.breakdown.specialSuffix", " (спец.)");
+      parts.push(
+        `${formatPriceEur(special.rate)}${t("pricing.breakdown.perNightSpecial", "/нощ")}${labelSuffix} × ${special.nights}`
+      );
+    }
 
     if (winterNights > 0) {
       parts.push(

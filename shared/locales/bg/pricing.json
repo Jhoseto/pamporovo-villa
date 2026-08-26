@@ -25,6 +25,8 @@
     "night": "нощувка",
     "nights": "нощувки",
     "perNightWinter": "/нощ (зима)",
-    "perNightSummer": "/нощ (лято)"
+    "perNightSummer": "/нощ (лято)",
+    "perNightSpecial": "/нощ",
+    "specialSuffix": " (спец.)"
   }
 }

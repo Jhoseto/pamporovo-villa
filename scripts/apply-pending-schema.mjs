@@ -233,6 +233,27 @@ try {
     steps.push("blocked_dates index");
   }
 
+  if (!(await tableExists(conn, "villa_special_rates"))) {
+    await conn.query(`
+      CREATE TABLE villa_special_rates (
+        id int NOT NULL AUTO_INCREMENT,
+        villa_id varchar(32) NOT NULL,
+        start_date date NOT NULL,
+        end_date date NOT NULL,
+        price_per_night int NOT NULL,
+        label varchar(128) DEFAULT NULL,
+        created_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        updated_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        PRIMARY KEY (id),
+        KEY special_villa_dates_idx (villa_id, start_date)
+      )
+    `);
+    steps.push("villa_special_rates table");
+  } else if (!(await indexExists(conn, "villa_special_rates", "special_villa_dates_idx"))) {
+    await conn.query("CREATE INDEX special_villa_dates_idx ON villa_special_rates (villa_id, start_date)");
+    steps.push("villa_special_rates index");
+  }
+
   if (!(await tableExists(conn, "admin_reminder_log"))) {
     await conn.query(`
       CREATE TABLE admin_reminder_log (

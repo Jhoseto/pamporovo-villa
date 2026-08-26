@@ -49,6 +49,8 @@ import {
   blockedOverlapsExisting,
   buildDashboardOverview,
   formatBlockedDates,
+  formatSpecialRates,
+  specialRateOverlapsExisting,
 } from "../dashboardHelpers";
 import * as db from "../db";
 import type { CustomerReview } from "../../drizzle/schema";
@@ -720,6 +722,95 @@ export const adminRouter = router({
       }),
   }),
 
+  specialRates: router({
+    list: adminProcedure
+      .input(
+        z
+          .object({
+            villaId: villaIdSchema.optional(),
+            fromDate: z.string().date().optional(),
+          })
+          .optional()
+      )
+      .query(async ({ input }) => formatSpecialRates(await db.listSpecialRates(input ?? {}))),
+
+    create: adminProcedure
+      .input(
+        z.object({
+          villaId: villaIdSchema,
+          startDate: z.string().date(),
+          endDate: z.string().date(),
+          pricePerNight: z.number().int().min(0).max(10000),
+          label: z.string().max(128).optional(),
+        })
+      )
+      .mutation(async ({ input }) => {
+        validateAdminStayDates(input.startDate, input.endDate);
+        const existing = await db.getSpecialRatesForVilla(input.villaId);
+        if (specialRateOverlapsExisting(input.villaId, input.startDate, input.endDate, existing)) {
+          throw new TRPCError({
+            code: "CONFLICT",
+            message: "Периодът се припокрива с друга специална цена за тази вила",
+          });
+        }
+        const id = await db.insertSpecialRate({
+          villaId: input.villaId,
+          startDate: input.startDate,
+          endDate: input.endDate,
+          pricePerNight: input.pricePerNight,
+          label: input.label?.trim() || null,
+        });
+        return { id };
+      }),
+
+    update: adminProcedure
+      .input(
+        z.object({
+          id: z.number().int().positive(),
+          villaId: villaIdSchema,
+          startDate: z.string().date(),
+          endDate: z.string().date(),
+          pricePerNight: z.number().int().min(0).max(10000),
+          label: z.string().max(128).optional(),
+        })
+      )
+      .mutation(async ({ input }) => {
+        validateAdminStayDates(input.startDate, input.endDate);
+        const current = await db.getSpecialRateById(input.id);
+        if (!current) {
+          throw new TRPCError({ code: "NOT_FOUND", message: "Специалната цена не е намерена" });
+        }
+        const existing = await db.getSpecialRatesForVilla(input.villaId, input.id);
+        if (specialRateOverlapsExisting(input.villaId, input.startDate, input.endDate, existing)) {
+          throw new TRPCError({
+            code: "CONFLICT",
+            message: "Периодът се припокрива с друга специална цена за тази вила",
+          });
+        }
+        const updated = await db.updateSpecialRate(input.id, {
+          villaId: input.villaId,
+          startDate: input.startDate,
+          endDate: input.endDate,
+          pricePerNight: input.pricePerNight,
+          label: input.label?.trim() || null,
+        });
+        if (!updated) {
+          throw new TRPCError({ code: "NOT_FOUND", message: "Специалната цена не е намерена" });
+        }
+        return { success: true as const };
+      }),
+
+    delete: adminProcedure
+      .input(z.object({ id: z.number().int().positive() }))
+      .mutation(async ({ input }) => {
+        const deleted = await db.deleteSpecialRate(input.id);
+        if (!deleted) {
+          throw new TRPCError({ code: "NOT_FOUND", message: "Специалната цена не е намерена" });
+        }
+        return { success: true as const };
+      }),
+  }),
+
   offers: router({
     list: adminProcedure.query(async () => {
       const rows = await db.listOffers();
@@ -1056,7 +1147,12 @@ export const adminRouter = router({
 
 export const publicContentRouter = router({
   getPricing: publicProcedure.query(async () => {
-    const [rows, extras] = await Promise.all([db.getAllVillaPricing(), db.getPricingExtras()]);
+    const today = formatDateOnly(new Date());
+    const [rows, extras, specialRates] = await Promise.all([
+      db.getAllVillaPricing(),
+      db.getPricingExtras(),
+      db.listSpecialRates({ fromDate: today }),
+    ]);
     if (rows.length === 0) return null;
     return {
       rows: rows.map(r => ({
@@ -1068,6 +1164,7 @@ export const publicContentRouter = router({
         sortOrder: r.sortOrder,
       })),
       extras: extras.map(e => ({ key: e.key, label: e.label, amountEur: e.amountEur })),
+      specialRates: formatSpecialRates(specialRates),
     };
   }),
 

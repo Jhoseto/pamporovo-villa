@@ -13,7 +13,9 @@ import {
 import { trpc } from "@/lib/trpc";
 import {
   calculateStayPriceFromGrid,
+  isDateInSpecialRatePeriod,
   type PricingGridRow,
+  type SpecialRatePeriod,
 } from "@/lib/pricing";
 import { isSameCalendarDay, updateBookingDateRange } from "@/lib/bookingDates";
 import { formatDateForApi } from "@/lib/scroll";
@@ -93,6 +95,11 @@ export function BookingSection() {
   const bookingMutation = trpc.booking.createRequest.useMutation();
 
   const pricingRows = (pricingData?.rows ?? []) as PricingGridRow[];
+  const specialRates = (pricingData?.specialRates ?? []) as SpecialRatePeriod[];
+  const villaSpecialRates = useMemo(
+    () => specialRates.filter(rate => rate.villaId === formData.villaId),
+    [specialRates, formData.villaId]
+  );
 
   // Switching villa loads a different occupancy set — drop a range that is no longer free.
   useEffect(() => {
@@ -121,9 +128,10 @@ export function BookingSection() {
       dateRange.from,
       dateRange.to,
       formData.villaId,
-      pricingRows
+      pricingRows,
+      villaSpecialRates
     );
-  }, [dateRange, formData.villaId, pricingRows]);
+  }, [dateRange, formData.villaId, pricingRows, villaSpecialRates]);
 
   /**
    * Hotel-style day availability [checkIn, checkOut): the checkout day of an
@@ -170,6 +178,13 @@ export function BookingSection() {
     return isDateOccupied(date, occupiedDates);
   };
 
+  const isDaySpecialRate = (date: Date): boolean => {
+    const today = startOfDay(new Date());
+    if (date < today) return false;
+    if (isDayMarkedOccupied(date)) return false;
+    return isDateInSpecialRatePeriod(date, formData.villaId, villaSpecialRates);
+  };
+
   const currentVilla = villas.find(v => v.id === formData.villaId);
   const currentVillaName = currentVilla?.name ?? t("booking.thisVilla", "тази вила");
 
@@ -187,6 +202,16 @@ export function BookingSection() {
         { duration: 6000 }
       );
       return;
+    }
+
+    if (isDateInSpecialRatePeriod(triggerDate, formData.villaId, villaSpecialRates)) {
+      toast.message(
+        t(
+          "booking.toast.specialRateDay",
+          "Тази дата е със специална тарифа — цената може да се различава от стандартната."
+        ),
+        { duration: 5000 }
+      );
     }
 
     const nextRange = updateBookingDateRange(dateRange, triggerDate);
@@ -308,8 +333,14 @@ export function BookingSection() {
                 numberOfMonths={1}
                 min={2}
                 disabled={date => date < startOfDay(new Date())}
-                modifiers={{ occupied: isDayMarkedOccupied }}
-                modifiersClassNames={{ occupied: "booking-calendar-day-occupied" }}
+                modifiers={{
+                  occupied: isDayMarkedOccupied,
+                  specialRate: isDaySpecialRate,
+                }}
+                modifiersClassNames={{
+                  occupied: "booking-calendar-day-occupied",
+                  specialRate: "booking-calendar-day-special",
+                }}
                 classNames={{ today: "booking-calendar-day-today" }}
                 className="booking-calendar mx-auto rounded-none bg-transparent p-0 [--cell-size:2.5rem]"
               />
@@ -344,6 +375,39 @@ export function BookingSection() {
                 "дати са заети — проверете дали друга вила е свободна за същия период."
               )}
             </p>
+            <p className="mt-2 font-display text-xs leading-relaxed tracking-wide text-muted-foreground">
+              <span className="rounded-sm bg-[oklch(0.94_0.04_290/0.55)] px-1.5 py-0.5 text-[oklch(0.42_0.12_290)]">
+                {t("booking.specialRateHintMarker", "Оцветените")}
+              </span>{" "}
+              {t(
+                "booking.specialRateHint",
+                "дни са със специална тарифа за избраната вила."
+              )}
+            </p>
+
+            {stayQuote?.hasSpecialRates && (
+              <div
+                className="mt-4 rounded-xl border border-[oklch(0.58_0.14_290/0.35)] bg-[oklch(0.96_0.03_290/0.45)] px-4 py-3 text-sm leading-relaxed text-[oklch(0.32_0.08_290)]"
+                role="status"
+              >
+                {interpolate(
+                  t(
+                    "booking.specialRateNotice",
+                    "Избраният период включва {count} {countLabel} със специална тарифа{labels}."
+                  ),
+                  {
+                    count: String(stayQuote.specialNights),
+                    countLabel:
+                      stayQuote.specialNights === 1
+                        ? t("booking.specialRateNightSingular", "нощ")
+                        : t("booking.specialRateNightPlural", "нощи"),
+                    labels: stayQuote.specialLabels.length
+                      ? ` (${stayQuote.specialLabels.join(", ")})`
+                      : "",
+                  }
+                )}
+              </div>
+            )}
 
             <div className="booking-price-quote mt-6">
               <p className="booking-price-quote-label">{t("booking.priceLabel", "Цена")}</p>
@@ -353,10 +417,15 @@ export function BookingSection() {
                   <p className="booking-price-quote-breakdown">{formatBreakdown(stayQuote)}</p>
                   <p className="booking-price-quote-note">
                     {interpolate(
-                      t(
-                        "booking.priceNote",
-                        "Цяла вила · до 6 гости · без изхранване · тарифа „{tier}“"
-                      ),
+                      stayQuote.hasSpecialRates
+                        ? t(
+                            "booking.priceNoteWithSpecial",
+                            "Цяла вила · до 6 гости · без изхранване · включва специална тарифа · тарифа „{tier}“"
+                          )
+                        : t(
+                            "booking.priceNote",
+                            "Цяла вила · до 6 гости · без изхранване · тарифа „{tier}“"
+                          ),
                       { tier: stayQuote.tier.label.toLowerCase() }
                     )}
                   </p>

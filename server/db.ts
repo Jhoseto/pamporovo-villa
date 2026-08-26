@@ -11,6 +11,7 @@ import {
   pricingExtras,
   pushSubscriptions,
   villaPricing,
+  villaSpecialRates,
   type AdminUser,
   type BlockedDate,
   type BookingRequest,
@@ -23,8 +24,10 @@ import {
   type InsertCustomerReview,
   type InsertOffer,
   type InsertVillaPricing,
+  type InsertVillaSpecialRate,
   type Offer,
   type VillaPricing,
+  type VillaSpecialRate,
 } from "../drizzle/schema";
 import { contactFieldsFromGuest, guestPhoneNormalized, buildVipLookup } from "./contactHelpers";
 import { normalizeEmail, phoneSearchPatterns, storedPhoneDigits } from "@shared/phoneNormalize";
@@ -402,6 +405,85 @@ export async function insertBlockedDate(
 export async function deleteBlockedDate(id: number): Promise<boolean> {
   const db = await requireDb();
   const result = await db.delete(blockedDates).where(eq(blockedDates.id, id));
+  return Number(result[0].affectedRows ?? 0) > 0;
+}
+
+// --- Special rates ---
+
+export async function listSpecialRates(filters?: {
+  villaId?: string;
+  fromDate?: string;
+}): Promise<VillaSpecialRate[]> {
+  const db = await requireDb();
+  const conditions = [];
+  if (filters?.villaId) conditions.push(eq(villaSpecialRates.villaId, filters.villaId));
+  if (filters?.fromDate) {
+    conditions.push(gte(villaSpecialRates.endDate, parseDateOnly(filters.fromDate)));
+  }
+  const query = db.select().from(villaSpecialRates).orderBy(asc(villaSpecialRates.startDate));
+  if (conditions.length > 0) {
+    return query.where(and(...conditions));
+  }
+  return query;
+}
+
+export async function getSpecialRatesForVilla(
+  villaId: string,
+  excludeId?: number
+): Promise<VillaSpecialRate[]> {
+  const db = await requireDb();
+  const conditions = [eq(villaSpecialRates.villaId, villaId)];
+  if (excludeId != null) {
+    conditions.push(ne(villaSpecialRates.id, excludeId));
+  }
+  return db.select().from(villaSpecialRates).where(and(...conditions));
+}
+
+export async function getSpecialRateById(id: number): Promise<VillaSpecialRate | undefined> {
+  const db = await requireDb();
+  const rows = await db.select().from(villaSpecialRates).where(eq(villaSpecialRates.id, id)).limit(1);
+  return rows[0];
+}
+
+export async function insertSpecialRate(
+  data: Omit<InsertVillaSpecialRate, "startDate" | "endDate"> & {
+    startDate: string | Date;
+    endDate: string | Date;
+  }
+): Promise<number> {
+  const db = await requireDb();
+  const result = await db.insert(villaSpecialRates).values({
+    ...data,
+    startDate: parseDateOnly(data.startDate),
+    endDate: parseDateOnly(data.endDate),
+  });
+  return Number(result[0].insertId);
+}
+
+export async function updateSpecialRate(
+  id: number,
+  data: Omit<InsertVillaSpecialRate, "startDate" | "endDate" | "id"> & {
+    startDate: string | Date;
+    endDate: string | Date;
+  }
+): Promise<boolean> {
+  const db = await requireDb();
+  const result = await db
+    .update(villaSpecialRates)
+    .set({
+      villaId: data.villaId,
+      startDate: parseDateOnly(data.startDate),
+      endDate: parseDateOnly(data.endDate),
+      pricePerNight: data.pricePerNight,
+      label: data.label ?? null,
+    })
+    .where(eq(villaSpecialRates.id, id));
+  return Number(result[0].affectedRows ?? 0) > 0;
+}
+
+export async function deleteSpecialRate(id: number): Promise<boolean> {
+  const db = await requireDb();
+  const result = await db.delete(villaSpecialRates).where(eq(villaSpecialRates.id, id));
   return Number(result[0].affectedRows ?? 0) > 0;
 }
 

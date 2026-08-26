@@ -89,6 +89,24 @@ export const pricingExtras = mysqlTable("pricing_extras", {
 
 export type PricingExtra = typeof pricingExtras.$inferSelect;
 
+export const villaSpecialRates = mysqlTable(
+  "villa_special_rates",
+  {
+    id: int("id").autoincrement().primaryKey(),
+    villaId: varchar("villa_id", { length: 32 }).notNull(),
+    startDate: date("start_date").notNull(),
+    endDate: date("end_date").notNull(),
+    pricePerNight: int("price_per_night").notNull(),
+    label: varchar("label", { length: 128 }),
+    createdAt: timestamp("created_at").defaultNow().notNull(),
+    updatedAt: timestamp("updated_at").defaultNow().onUpdateNow().notNull(),
+  },
+  table => [index("special_villa_dates_idx").on(table.villaId, table.startDate)]
+);
+
+export type VillaSpecialRate = typeof villaSpecialRates.$inferSelect;
+export type InsertVillaSpecialRate = typeof villaSpecialRates.$inferInsert;
+
 export const offers = mysqlTable("offers", {
   id: int("id").autoincrement().primaryKey(),
   slug: varchar("slug", { length: 64 }).notNull().unique(),
