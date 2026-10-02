@@ -7,6 +7,8 @@ import { Switch } from "@/components/ui/switch";
 import { trpc } from "@/lib/trpc";
 import { toast } from "sonner";
 import { formatPriceEur } from "@/data/siteContent";
+import { slugifyOfferTitle } from "@/lib/offerSlug";
+import { formatTrpcErrorMessage } from "@/lib/trpcErrorMessage";
 
 type OfferDraft = {
   slug: string;
@@ -56,30 +58,54 @@ function OfferFormFields({
   draft,
   setDraft,
   idPrefix,
+  autoSlugFromTitle = false,
+  slugTouched = false,
+  onSlugTouched,
 }: {
   draft: OfferDraft;
   setDraft: React.Dispatch<React.SetStateAction<OfferDraft>>;
   idPrefix: string;
+  autoSlugFromTitle?: boolean;
+  slugTouched?: boolean;
+  onSlugTouched?: () => void;
 }) {
   return (
     <div className="grid gap-4 md:grid-cols-2">
-      <div className="space-y-2">
-        <Label htmlFor={`${idPrefix}-slug`}>URL идентификатор</Label>
-        <Input
-          id={`${idPrefix}-slug`}
-          value={draft.slug}
-          onChange={e => setDraft(d => ({ ...d, slug: e.target.value }))}
-          className="admin-input"
-        />
-      </div>
-      <div className="space-y-2">
+      <div className="space-y-2 md:col-span-2">
         <Label htmlFor={`${idPrefix}-title`}>Заглавие</Label>
         <Input
           id={`${idPrefix}-title`}
           value={draft.title}
-          onChange={e => setDraft(d => ({ ...d, title: e.target.value }))}
+          onChange={e => {
+            const title = e.target.value;
+            setDraft(d => {
+              const next = { ...d, title };
+              if (autoSlugFromTitle && !slugTouched) {
+                next.slug = slugifyOfferTitle(title);
+              }
+              return next;
+            });
+          }}
           className="admin-input"
         />
+      </div>
+      <div className="space-y-2 md:col-span-2">
+        <Label htmlFor={`${idPrefix}-slug`}>URL идентификатор</Label>
+        <Input
+          id={`${idPrefix}-slug`}
+          value={draft.slug}
+          onChange={e => {
+            onSlugTouched?.();
+            setDraft(d => ({ ...d, slug: e.target.value }));
+          }}
+          placeholder="koleda-villa-2026"
+          className="admin-input"
+        />
+        {autoSlugFromTitle && !slugTouched && (
+          <p className="text-xs text-[var(--admin-muted)]">
+            Генерира се автоматично от заглавието. Можете да го промените ръчно.
+          </p>
+        )}
       </div>
       <div className="space-y-2">
         <Label htmlFor={`${idPrefix}-price`}>Цена €</Label>
@@ -143,6 +169,7 @@ export default function AdminOffersPage() {
   const utils = trpc.useUtils();
   const { data: offers = [], isLoading } = trpc.admin.offers.list.useQuery();
   const [draft, setDraft] = useState(emptyDraft());
+  const [newSlugTouched, setNewSlugTouched] = useState(false);
   const [editingId, setEditingId] = useState<number | null>(null);
   const [editDraft, setEditDraft] = useState<OfferDraft>(emptyDraft());
 
@@ -156,8 +183,9 @@ export default function AdminOffersPage() {
       toast.success("Офертата е създадена");
       invalidateOffers();
       setDraft(emptyDraft());
+      setNewSlugTouched(false);
     },
-    onError: err => toast.error(err.message),
+    onError: err => toast.error(formatTrpcErrorMessage(err.message)),
   });
 
   const update = trpc.admin.offers.update.useMutation({
@@ -166,7 +194,7 @@ export default function AdminOffersPage() {
       invalidateOffers();
       setEditingId(null);
     },
-    onError: err => toast.error(err.message),
+    onError: err => toast.error(formatTrpcErrorMessage(err.message)),
   });
 
   const remove = trpc.admin.offers.delete.useMutation({
@@ -175,7 +203,7 @@ export default function AdminOffersPage() {
       invalidateOffers();
       if (editingId != null) setEditingId(null);
     },
-    onError: err => toast.error(err.message),
+    onError: err => toast.error(formatTrpcErrorMessage(err.message)),
   });
 
   const startEdit = (offer: (typeof offers)[number]) => {
@@ -185,10 +213,28 @@ export default function AdminOffersPage() {
 
   const saveEdit = () => {
     if (editingId == null) return;
+    const slug = editDraft.slug.trim() || slugifyOfferTitle(editDraft.title);
     update.mutate({
       id: editingId,
       ...editDraft,
+      slug,
       includes: editDraft.includes
+        .split("\n")
+        .map(s => s.trim())
+        .filter(Boolean),
+    });
+  };
+
+  const submitNewOffer = () => {
+    const slug = draft.slug.trim() || slugifyOfferTitle(draft.title);
+    if (slug.length < 2) {
+      toast.error("Задайте заглавие или URL идентификатор (минимум 2 символа).");
+      return;
+    }
+    create.mutate({
+      ...draft,
+      slug,
+      includes: draft.includes
         .split("\n")
         .map(s => s.trim())
         .filter(Boolean),
@@ -275,19 +321,18 @@ export default function AdminOffersPage() {
       <div className="admin-glass-card p-6">
         <h3 className="font-serif text-xl font-semibold">Нова оферта</h3>
         <div className="mt-4">
-          <OfferFormFields draft={draft} setDraft={setDraft} idPrefix="new" />
+          <OfferFormFields
+            draft={draft}
+            setDraft={setDraft}
+            idPrefix="new"
+            autoSlugFromTitle
+            slugTouched={newSlugTouched}
+            onSlugTouched={() => setNewSlugTouched(true)}
+          />
         </div>
         <Button
           className="admin-btn-primary mt-4"
-          onClick={() =>
-            create.mutate({
-              ...draft,
-              includes: draft.includes
-                .split("\n")
-                .map(s => s.trim())
-                .filter(Boolean),
-            })
-          }
+          onClick={submitNewOffer}
           disabled={create.isPending}
         >
           Създай оферта
