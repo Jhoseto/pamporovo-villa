@@ -18,7 +18,9 @@ import {
   isEmailConfigured,
   sendBookingConfirmationById,
   sendBookingConfirmationCardEmail,
+  sendOfferEmail,
 } from "../_core/email";
+import { mailFromAddress } from "../_core/mailSend";
 import { getVapidPublicKey, notifyAdminUser, notifyManualBooking, notifyNewWebsiteBooking } from "../_core/push";
 import {
   createNotificationSoundToken,
@@ -270,10 +272,15 @@ export const adminRouter = router({
       pending: await db.countPendingBookings(),
     })),
 
-    emailStatus: adminProcedure.query(() => ({
-      configured: isEmailConfigured(),
-      provider: getEmailProvider(),
-    })),
+    emailStatus: adminProcedure.query(() => {
+      const from = mailFromAddress();
+      return {
+        configured: isEmailConfigured(),
+        provider: getEmailProvider(),
+        fromEmail: from.email,
+        fromName: from.name,
+      };
+    }),
 
     create: adminProcedure
       .input(
@@ -454,6 +461,7 @@ export const adminRouter = router({
         z.object({
           id: z.number().int().positive(),
           imageBase64: z.string().min(100).max(6_000_000),
+          personalMessage: z.string().max(4000).optional(),
         })
       )
       .mutation(async ({ input }) => {
@@ -472,7 +480,11 @@ export const adminRouter = router({
           });
         }
         const imageJpeg = Buffer.from(input.imageBase64, "base64");
-        const sent = await sendBookingConfirmationCardEmail(booking, imageJpeg);
+        const sent = await sendBookingConfirmationCardEmail(
+          booking,
+          imageJpeg,
+          input.personalMessage
+        );
         return { success: true as const, sent };
       }),
 
@@ -904,6 +916,42 @@ export const adminRouter = router({
         const deleted = await db.deleteOffer(input.id);
         if (!deleted) throw new TRPCError({ code: "NOT_FOUND", message: "Офертата не е намерена" });
         return { success: true as const };
+      }),
+
+    sendByEmail: adminProcedure
+      .input(
+        z.object({
+          id: z.number().int().positive(),
+          to: z.string().email(),
+          guestName: z.string().max(120).optional(),
+          personalMessage: z.string().max(4000).optional(),
+        })
+      )
+      .mutation(async ({ input }) => {
+        if (!isEmailConfigured()) {
+          throw new TRPCError({
+            code: "PRECONDITION_FAILED",
+            message: "Имейл не е конфигуриран — добавете SMTP_USER и SMTP_PASS (JetHost) в .env на сървъра",
+          });
+        }
+        const offer = await db.getOfferById(input.id);
+        if (!offer) throw new TRPCError({ code: "NOT_FOUND", message: "Офертата не е намерена" });
+        try {
+          const sent = await sendOfferEmail(
+            offer,
+            input.to,
+            input.guestName,
+            input.personalMessage
+          );
+          if (!sent) {
+            throw new TRPCError({ code: "BAD_REQUEST", message: "Имейлът не бе изпратен" });
+          }
+          return { success: true as const, sent: true as const };
+        } catch (err) {
+          if (err instanceof TRPCError) throw err;
+          const message = err instanceof Error ? err.message : "Грешка при изпращане";
+          throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message });
+        }
       }),
   }),
 

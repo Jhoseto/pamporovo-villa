@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Generates missing production secrets into .env (single app config file).
- * Preserves existing values (DATABASE_URL, Mailjet keys, etc.).
+ * Preserves existing values (DATABASE_URL, SMTP, etc.).
  *
  * Usage: node scripts/generate-production-secrets.mjs [--print]
  */
@@ -101,6 +101,6 @@ console.log("Verify these in .env before deploy:");
 console.log(`  DATABASE_URL`);
 console.log(`  SITE_URL`);
 console.log(`  MASTER_ADMIN_PASSWORD=${generated.MASTER_ADMIN_PASSWORD}`);
-console.log(`  MAILJET_API_KEY / MAILJET_API_SECRET (for email)`);
+console.log(`  SMTP_HOST / SMTP_USER / SMTP_PASS (JetHost mailbox, for email)`);
 console.log("");
 console.log("SSH deploy: fill .deploy.env (copy from .deploy.env.example)");

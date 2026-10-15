@@ -1,5 +1,4 @@
 import { ENV } from "./env";
-import { sendMailjetMail } from "./mailjetSend";
 import { sendSmtpMail } from "./smtpSend";
 
 export type MailAttachment = {
@@ -15,9 +14,10 @@ export type SendMailPayload = {
   html?: string;
   replyTo?: string;
   attachments?: MailAttachment[];
+  bcc?: string[];
 };
 
-export type EmailProvider = "mailjet" | "smtp" | null;
+export type EmailProvider = "smtp" | null;
 
 export function parseMailAddress(value: string): { email: string; name: string } {
   const match = value.match(/^(.+?)\s*<([^>]+)>$/);
@@ -32,16 +32,11 @@ export function mailFromAddress(): { email: string; name: string } {
   return parseMailAddress(ENV.smtpFrom);
 }
 
-export function isMailjetConfigured(): boolean {
-  return Boolean(ENV.mailjetApiKey && ENV.mailjetApiSecret && mailFromAddress().email);
-}
-
 export function isSmtpConfigured(): boolean {
-  return Boolean(ENV.smtpHost && ENV.smtpUser && ENV.smtpPass && ENV.smtpFrom);
+  return Boolean(ENV.smtpHost && ENV.smtpUser && ENV.smtpPass && mailFromAddress().email);
 }
 
 export function getEmailProvider(): EmailProvider {
-  if (isMailjetConfigured()) return "mailjet";
   if (isSmtpConfigured()) return "smtp";
   return null;
 }
@@ -50,37 +45,56 @@ export function isEmailConfigured(): boolean {
   return getEmailProvider() !== null;
 }
 
+function mergeBcc(to: string, extra?: string[]): string[] {
+  const seen = new Set<string>([to.trim().toLowerCase()]);
+  const out: string[] = [];
+  const add = (raw: string) => {
+    const email = raw.trim();
+    if (!email) return;
+    const key = email.toLowerCase();
+    if (seen.has(key)) return;
+    seen.add(key);
+    out.push(email);
+  };
+  for (const e of extra ?? []) add(e);
+  if (ENV.mailBcc) add(ENV.mailBcc);
+  if (ENV.smtpUser) add(ENV.smtpUser);
+  return out;
+}
+
 export async function sendMail(payload: SendMailPayload): Promise<void> {
+  if (!isSmtpConfigured()) {
+    throw new Error("Email provider not configured");
+  }
+
   const from = mailFromAddress();
   const replyTo = payload.replyTo ?? ENV.smtpReplyTo;
+  const fromHeader = from.name ? `${from.name} <${from.email}>` : from.email;
+  const envelopeFrom = ENV.smtpUser;
+  const fromEmailLower = from.email.toLowerCase();
+  const userLower = ENV.smtpUser.toLowerCase();
+  const sender =
+    fromEmailLower !== userLower
+      ? from.name
+        ? `${from.name} <${ENV.smtpUser}>`
+        : ENV.smtpUser
+      : undefined;
 
-  if (isMailjetConfigured()) {
-    await sendMailjetMail({
-      ...payload,
-      from,
-      replyTo,
-    });
-    return;
-  }
-
-  if (isSmtpConfigured()) {
-    const fromHeader = from.name ? `${from.name} <${from.email}>` : from.email;
-    await sendSmtpMail({
-      host: ENV.smtpHost,
-      port: ENV.smtpPort,
-      secure: ENV.smtpSecure,
-      user: ENV.smtpUser,
-      pass: ENV.smtpPass,
-      from: fromHeader,
-      replyTo,
-      to: payload.to,
-      subject: payload.subject,
-      text: payload.text,
-      html: payload.html,
-      attachments: payload.attachments,
-    });
-    return;
-  }
-
-  throw new Error("Email provider not configured");
+  await sendSmtpMail({
+    host: ENV.smtpHost,
+    port: ENV.smtpPort,
+    secure: ENV.smtpSecure,
+    user: ENV.smtpUser,
+    pass: ENV.smtpPass,
+    from: fromHeader,
+    envelopeFrom,
+    sender,
+    replyTo,
+    to: payload.to,
+    bcc: mergeBcc(payload.to, payload.bcc),
+    subject: payload.subject,
+    text: payload.text,
+    html: payload.html,
+    attachments: payload.attachments,
+  });
 }

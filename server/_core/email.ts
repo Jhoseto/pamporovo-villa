@@ -1,8 +1,8 @@
 import { bookingBalanceDue, formatAmountEur } from "../../shared/bookingPayment";
 import { confirmationCardFilename } from "../../shared/confirmationCardFilename";
 import { VILLA_LABELS, type VillaId } from "../../shared/villas";
-import { bookingDatesFromRow } from "../bookingHelpers";
-import type { BookingRequest } from "../../drizzle/schema";
+import { bookingDatesFromRow, parseOfferIncludes } from "../bookingHelpers";
+import type { BookingRequest, Offer } from "../../drizzle/schema";
 import { ENV } from "./env";
 import { getEmailProvider, isEmailConfigured, sendMail } from "./mailSend";
 
@@ -71,8 +71,24 @@ function escapeHtml(value: string): string {
   return value
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
+    .replace(/"/g, "&quot;")
+    .replace(/>/g, "&gt;");
+}
+
+function formatPlainParagraphs(value: string): string[] {
+  return value
+    .split(/\r?\n/)
+    .map(line => line.trimEnd())
+    .join("\n")
+    .split(/\n{2,}/)
+    .map(block => block.trim())
+    .filter(Boolean);
+}
+
+function personalMessageHtml(value: string): string {
+  return formatPlainParagraphs(value)
+    .map(p => `<p style="margin:12px 0">${escapeHtml(p).replace(/\n/g, "<br>")}</p>`)
+    .join("");
 }
 
 export { getEmailProvider, isEmailConfigured };
@@ -111,17 +127,24 @@ export async function sendBookingConfirmationById(bookingId: number): Promise<bo
   }
 }
 
-function buildCardEmailContent(booking: BookingRequest) {
+function buildCardEmailContent(booking: BookingRequest, personalMessage?: string) {
   const dates = bookingDatesFromRow(booking);
   const villa = VILLA_LABELS[booking.villaId as VillaId] ?? booking.villaId;
   const total = booking.totalAmountEur ?? 0;
   const deposit = booking.depositPaidEur ?? 0;
   const balance = bookingBalanceDue(total, deposit) ?? 0;
   const subject = `\u041f\u043e\u0442\u0432\u044a\u0440\u0434\u0435\u043d\u0430 \u0440\u0435\u0437\u0435\u0440\u0432\u0430\u0446\u0438\u044f \u2014 ${SITE_NAME}`;
+  const extra = personalMessage?.trim() ?? "";
 
-  const text = [
+  const textParts = [
     `\u0417\u0434\u0440\u0430\u0432\u0435\u0439\u0442\u0435, ${booking.guestName}!`,
     "",
+  ];
+  if (extra) {
+    textParts.push(...extra.split(/\r?\n/), "");
+  }
+  const text = [
+    ...textParts,
     "\u0420\u0435\u0437\u0435\u0440\u0432\u0430\u0446\u0438\u044f\u0442\u0430 \u0432\u0438 \u0435 \u043f\u043e\u0442\u0432\u044a\u0440\u0434\u0435\u043d\u0430. \u041f\u0440\u0438\u043a\u0430\u0447\u0435\u043d\u0430 \u0435 \u043a\u0430\u0440\u0442\u0430 \u0441 \u0434\u0435\u0442\u0430\u0439\u043b\u0438\u0442\u0435.",
     "",
     `${villa}`,
@@ -136,6 +159,7 @@ function buildCardEmailContent(booking: BookingRequest) {
   const html = `
     <div style="font-family:Arial,sans-serif;line-height:1.6;color:#1a1a1a;max-width:560px">
       <p>\u0417\u0434\u0440\u0430\u0432\u0435\u0439\u0442\u0435, <strong>${escapeHtml(booking.guestName)}</strong>!</p>
+      ${extra ? personalMessageHtml(extra) : ""}
       <p>\u0420\u0435\u0437\u0435\u0440\u0432\u0430\u0446\u0438\u044f\u0442\u0430 \u0432\u0438 \u0435 <strong>\u043f\u043e\u0442\u0432\u044a\u0440\u0434\u0435\u043d\u0430</strong>. \u041f\u0440\u0438\u043a\u0430\u0447\u0435\u043d\u0430 \u0435 \u043a\u0430\u0440\u0442\u0430 \u0441 \u0434\u0435\u0442\u0430\u0439\u043b\u0438\u0442\u0435 (JPG).</p>
       <p><strong>${escapeHtml(villa)}</strong><br>
       ${formatBgDate(dates.checkIn)} \u2192 ${formatBgDate(dates.checkOut)}</p>
@@ -152,12 +176,13 @@ function buildCardEmailContent(booking: BookingRequest) {
 
 export async function sendBookingConfirmationCardEmail(
   booking: BookingRequest,
-  imageJpeg: Buffer
+  imageJpeg: Buffer,
+  personalMessage?: string
 ): Promise<boolean> {
   const to = booking.guestEmail?.trim();
   if (!to) return false;
 
-  const { subject, text, html } = buildCardEmailContent(booking);
+  const { subject, text, html } = buildCardEmailContent(booking, personalMessage);
   const dates = bookingDatesFromRow(booking);
 
   if (!isEmailConfigured()) {
@@ -185,5 +210,91 @@ export async function sendBookingConfirmationCardEmail(
   });
 
   console.info(`[Email] Confirmation card sent to ${to} for booking #${booking.id} via ${getEmailProvider()}`);
+  return true;
+}
+
+function buildOfferEmailContent(offer: Offer, guestName?: string, personalMessage?: string) {
+  const includes = parseOfferIncludes(offer.includesJson);
+  const greeting = guestName?.trim() ? `Здравейте, ${guestName.trim()}!` : "Здравейте!";
+  const subject = `Специална оферта — ${offer.title} | ${SITE_NAME}`;
+  const bookUrl = `${ENV.siteUrl.replace(/\/$/, "")}/#booking`;
+  const extra = personalMessage?.trim() ?? "";
+
+  const lines = [greeting, ""];
+  if (extra) {
+    lines.push(...extra.split(/\r?\n/));
+    lines.push("");
+  }
+  lines.push(
+    "Имаме специална оферта за вас:",
+    "",
+    offer.title,
+    offer.period,
+    `Цена: ${formatAmountEur(offer.priceEur)} (преди ${formatAmountEur(offer.oldPriceEur)})`,
+    "",
+    offer.description,
+    "",
+    "Включва:",
+    ...includes.map(item => `• ${item}`),
+    "",
+    `Резервация: ${bookUrl}`,
+    `Телефон: +359 879 501 660`,
+    `Имейл: ${supportEmail()}`,
+    "",
+    SITE_NAME
+  );
+
+  const text = lines.join("\n");
+  const includesHtml = includes.map(item => `<li>${escapeHtml(item)}</li>`).join("");
+  const html = `
+    <div style="font-family:Arial,sans-serif;line-height:1.6;color:#1a1a1a;max-width:560px">
+      <p>${escapeHtml(greeting)}</p>
+      ${extra ? personalMessageHtml(extra) : ""}
+      <p>Имаме <strong>специална оферта</strong> за вас:</p>
+      <h2 style="margin:16px 0 8px;font-size:20px">${escapeHtml(offer.title)}</h2>
+      <p style="color:#666;margin:0 0 12px">${escapeHtml(offer.period)}</p>
+      <p style="font-size:18px">
+        <strong>${formatAmountEur(offer.priceEur)}</strong>
+        <span style="color:#888;text-decoration:line-through;margin-left:8px">${formatAmountEur(offer.oldPriceEur)}</span>
+      </p>
+      <p>${escapeHtml(offer.description)}</p>
+      <p><strong>Включва:</strong></p>
+      <ul>${includesHtml}</ul>
+      <p><a href="${escapeHtml(bookUrl)}" style="color:#1a5f4a">Резервирайте онлайн</a></p>
+      <p style="font-size:14px;color:#444">
+        Телефон: +359 879 501 660<br>
+        Имейл: <a href="mailto:${supportEmail()}">${supportEmail()}</a>
+      </p>
+      <p><strong>${SITE_NAME}</strong></p>
+    </div>
+  `.trim();
+
+  return { subject, text, html };
+}
+
+export async function sendOfferEmail(
+  offer: Offer,
+  to: string,
+  guestName?: string,
+  personalMessage?: string
+): Promise<boolean> {
+  const recipient = to.trim();
+  if (!recipient) return false;
+
+  const { subject, text, html } = buildOfferEmailContent(offer, guestName, personalMessage);
+
+  if (!isEmailConfigured()) {
+    console.info("[Email] Provider not configured — offer preview:\n", text);
+    return false;
+  }
+
+  await sendMail({
+    to: recipient,
+    subject,
+    text,
+    html,
+    replyTo: ENV.smtpReplyTo,
+  });
+  console.info(`[Email] Offer #${offer.id} sent to ${recipient} via ${getEmailProvider()}`);
   return true;
 }

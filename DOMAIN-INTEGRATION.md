@@ -1,6 +1,6 @@
 # План: свързване на pamporovovilla.com с JetHost
 
-Сайтът вече работи на JetHost на временен URL. Този документ описва как да насочиш **реалния домейн** към новия хостинг и какво да направиш след това (SSL, Mailjet, deploy).
+Сайтът вече работи на JetHost на временен URL. Този документ описва как да насочиш **реалния домейн** към новия хостинг и какво да направиш след това (SSL, поща/SMTP, deploy).
 
 ---
 
@@ -11,7 +11,7 @@
 2. Човекът (Namecheap)   → смени DNS да сочи към JetHost
 3. Изчакване             → 1–24 часа (DNS propagation)
 4. Ти (JetHost)          → SSL + Node.js URL + restart
-5. Ти (код)              → SITE_URL + deploy + Mailjet
+5. Ти (код)              → SITE_URL + deploy + JetHost SMTP
 ```
 
 **Текущи данни (JetHost):**
@@ -158,55 +158,32 @@ CNAME www    pamporovovilla.com.
 
 ---
 
-## ЧАСТ 3 — Mailjet (след като домейнът работи)
+## ЧАСТ 3 — Имейл през JetHost (след като домейнът работи)
 
-Докато домейнът не сочи към JetHost, **не** можеш да верифицираш `pamporovovilla.com` в Mailjet.  
+Приложението изпраща имейли **само за потвърдени резервации** (не за „оферти“) чрез **SMTP** към пощенска кутия в JetHost cPanel.
+
 След като `https://pamporovovilla.com` отваря сайта:
 
-### Опция 1 — Файл на сайта (по-лесно)
-
-1. В Mailjet → **Senders & Domains** → **Domains** → `pamporovovilla.com`
-2. Качи **празен** файл в cPanel File Manager → `public_html/`:
-   ```
-   c44c93bef9b888fb4839174b0cb67d91.txt
-   ```
-   *(името идва от Mailjet — при теб може да е различно; копирай точното от екрана)*
-3. Провери в браузър: `https://pamporovovilla.com/c44c93bef9b888fb4839174b0cb67d91.txt`
-4. Mailjet → **Validate my domain**
-5. След успех — изтрий временния файл
-
-### Опция 2 — DNS TXT (по-добре за deliverability)
-
-В Namecheap → **Advanced DNS**:
-
-| Type | Host | Value |
-|------|------|-------|
-| TXT | `mailjet._c44c93be` | `c44c93bef9b888fb4839174b0cb67d91` |
-
-*(Host/Value — копирай точните от Mailjet екрана.)*
-
-След domain validation Mailjet ще покаже **SPF** и **DKIM** — добави ги също в Namecheap.
-
-### .env след Mailjet
+1. **cPanel → Email Accounts → Create** — напр. `noreply@pamporovovilla.com`
+2. Запиши паролата на кутията
+3. В `.env` на сървъра (и GitHub Actions secrets при CI deploy):
 
 ```env
-MAILJET_API_KEY=...
-MAILJET_API_SECRET=...
+SMTP_HOST=mail.pamporovovilla.com
+SMTP_PORT=465
+SMTP_SECURE=1
+SMTP_USER=noreply@pamporovovilla.com
+SMTP_PASS=паролата_на_кутията
 MAIL_FROM_EMAIL=noreply@pamporovovilla.com
 MAIL_FROM_NAME=Pamporovo Villa
-SUPPORT_EMAIL=pamporovovillasupport@gmail.com
 SMTP_REPLY_TO=pamporovovillasupport@gmail.com
 ```
 
-Deploy / GitHub secrets → тествай от admin: **Изпрати карта по имейл**.
+4. Deploy / рестарт на Node app → тест от admin: **Изпрати карта по имейл**
 
-### Временен workaround (преди домейн)
+JetHost настройки: [Set up email](https://jethost.com/kb/set-up-email-on-your-device/) · SMTP порт **465** (SSL) или **587** (STARTTLS).
 
-Ако трябва имейл **преди** DNS:
-
-1. Mailjet → **Sender addresses** → verify `pamporovovillasupport@gmail.com`
-2. В `.env`: `MAIL_FROM_EMAIL=pamporovovillasupport@gmail.com`
-3. След domain validation → върни `noreply@pamporovovilla.com`
+SPF/DKIM за по-добра доставимост се управляват от cPanel за домейна (обикновено автоматично при JetHost поща).
 
 ---
 
@@ -218,8 +195,8 @@ Deploy / GitHub secrets → тествай от admin: **Изпрати карт
 | `www` не работи | Липсва CNAME | Namecheap: CNAME `www` → `pamporovovilla.com` |
 | HTTPS / certificate error | SSL още не е издаден | cPanel → SSL/TLS → Run AutoSSL (след DNS) |
 | 503 Service Unavailable | Node app не е стартиран | Setup Node.js App → Restart |
-| Mailjet validation fail | Домейн не сочи към JetHost | Първо DNS, после validation |
-| Имейл в Spam | Липсва DKIM/SPF | Добави DNS записите от Mailjet |
+| SMTP грешка при изпращане | Грешен host/порт/парола | cPanel → Connect Devices; порт 465 + SMTP_SECURE=1 |
+| Имейл в Spam | SPF/DKIM | cPanel → Email Deliverability за домейна |
 
 ---
 
@@ -241,8 +218,7 @@ Deploy / GitHub secrets → тествай от admin: **Изпрати карт
 ### Код и имейл
 - [ ] `SITE_URL=https://pamporovovilla.com` в `.env`
 - [ ] Deploy или GitHub Secrets обновени
-- [ ] Mailjet domain validated
-- [ ] SPF + DKIM в Namecheap
+- [ ] Пощенска кутия в cPanel + SMTP_* в `.env`
 - [ ] Тест: имейл с confirmation card от admin
 
 ### Финал

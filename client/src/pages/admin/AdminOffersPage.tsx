@@ -1,5 +1,7 @@
 import { useState } from "react";
+import { Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { OfferSendEmailDialog } from "@/components/admin/OfferSendEmailDialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
@@ -171,6 +173,7 @@ export default function AdminOffersPage() {
   const [draft, setDraft] = useState(emptyDraft());
   const [newSlugTouched, setNewSlugTouched] = useState(false);
   const [editingId, setEditingId] = useState<number | null>(null);
+  const [emailOffer, setEmailOffer] = useState<{ id: number; title: string } | null>(null);
   const [editDraft, setEditDraft] = useState<OfferDraft>(emptyDraft());
 
   const invalidateOffers = () => {
@@ -301,6 +304,15 @@ export default function AdminOffersPage() {
                     Редактирай
                   </Button>
                   <Button
+                    variant="outline"
+                    size="sm"
+                    className="admin-glass-btn"
+                    onClick={() => setEmailOffer({ id: offer.id, title: offer.title })}
+                  >
+                    <Mail className="mr-1.5 h-4 w-4" />
+                    Изпрати по имейл
+                  </Button>
+                  <Button
                     variant="destructive"
                     size="sm"
                     onClick={() => {
@@ -338,6 +350,17 @@ export default function AdminOffersPage() {
           Създай оферта
         </Button>
       </div>
+
+      {emailOffer ? (
+        <OfferSendEmailDialog
+          open
+          onOpenChange={open => {
+            if (!open) setEmailOffer(null);
+          }}
+          offerId={emailOffer.id}
+          offerTitle={emailOffer.title}
+        />
+      ) : null}
     </div>
   );
 }

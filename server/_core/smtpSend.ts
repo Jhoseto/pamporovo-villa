@@ -14,7 +14,10 @@ type SendMailOptions = {
   user: string;
   pass: string;
   from: string;
+  envelopeFrom: string;
+  sender?: string;
   to: string;
+  bcc?: string[];
   replyTo?: string;
   subject: string;
   text: string;
@@ -33,6 +36,7 @@ function buildMessage(options: SendMailOptions): string {
 
   const headers = [
     `From: ${options.from}`,
+    ...(options.sender ? [`Sender: ${options.sender}`] : []),
     `To: ${options.to}`,
     ...(options.replyTo ? [`Reply-To: ${options.replyTo}`] : []),
     `Subject: =?UTF-8?B?${encodeBase64(options.subject)}?=`,
@@ -155,8 +159,11 @@ export async function sendSmtpMail(options: SendMailOptions): Promise<void> {
   await sendCommand(socket, "AUTH LOGIN");
   await sendCommand(socket, encodeBase64(options.user));
   await sendCommand(socket, encodeBase64(options.pass));
-  await sendCommand(socket, `MAIL FROM:<${extractAddress(options.from)}>`);
+  await sendCommand(socket, `MAIL FROM:<${extractAddress(options.envelopeFrom)}>`);
   await sendCommand(socket, `RCPT TO:<${options.to}>`);
+  for (const bcc of options.bcc ?? []) {
+    await sendCommand(socket, `RCPT TO:<${bcc}>`);
+  }
   await sendCommand(socket, "DATA");
 
   const message = buildMessage(options);

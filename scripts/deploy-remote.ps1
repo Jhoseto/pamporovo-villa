@@ -199,7 +199,7 @@ $deployCmd = 'cd "RP" && chmod +x scripts/*.sh && bash scripts/deploy.sh'.Replac
 Invoke-SSH $sshBase $remote $deployCmd
 
 Write-Host ""
-Write-Host "==> IndexNow (optional — notifies Bing/Copilot)"
+Write-Host "==> IndexNow (optional - notifies Bing/Copilot)"
 try {
   pnpm indexnow
 } catch {

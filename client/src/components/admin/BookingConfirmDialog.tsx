@@ -112,7 +112,7 @@ export function BookingConfirmDialog({
         <DialogHeader>
           <DialogTitle>Потвърждение на резервация</DialogTitle>
           <DialogDescription>
-            Въведете общата сума и платеното капаро. Клиентът ще получи картата по имейл (ако има адрес и Mailjet е
+            Въведете общата сума и платеното капаро. Клиентът ще получи картата по имейл (ако има адрес и SMTP е
             настроен).
           </DialogDescription>
         </DialogHeader>

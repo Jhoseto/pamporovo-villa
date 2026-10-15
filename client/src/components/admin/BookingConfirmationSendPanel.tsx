@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { Download, Mail, MessageCircle, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { BookingSendCardEmailDialog } from "@/components/admin/BookingSendCardEmailDialog";
 import { BookingConfirmationCardPreview } from "@/components/admin/BookingConfirmationCardPreview";
 import {
   blobToBase64,
@@ -25,11 +26,13 @@ type Props = {
 
 export function BookingConfirmationSendPanel({ bookingId, guestPhone, guestEmail, cardData }: Props) {
   const [busy, setBusy] = useState(false);
+  const [emailDialogOpen, setEmailDialogOpen] = useState(false);
   const { data: emailStatus } = trpc.admin.bookings.emailStatus.useQuery();
 
   const sendEmail = trpc.admin.bookings.sendConfirmationCard.useMutation({
     onSuccess: res => {
       toast.success(res.sent ? "Картата е изпратена по имейл" : "Имейлът не е конфигуриран — изтеглете JPG");
+      setEmailDialogOpen(false);
     },
     onError: err => toast.error(err.message),
   });
@@ -59,20 +62,24 @@ export function BookingConfirmationSendPanel({ bookingId, guestPhone, guestEmail
     }
   };
 
-  const handleEmail = async () => {
+  const openEmailDialog = () => {
     if (!guestEmail?.trim()) {
       toast.error("Няма имейл на госта");
       return;
     }
     if (!emailStatus?.configured) {
-      toast.error("Имейл не е конфигуриран — добавете Mailjet ключове в .env на сървъра");
+      toast.error("Имейл не е конфигуриран — добавете SMTP настройки (JetHost) в .env на сървъра");
       return;
     }
+    setEmailDialogOpen(true);
+  };
+
+  const handleEmailSend = async (personalMessage: string | undefined) => {
     setBusy(true);
     try {
       const blob = await generate();
       const imageBase64 = await blobToBase64(blob);
-      await sendEmail.mutateAsync({ id: bookingId, imageBase64 });
+      await sendEmail.mutateAsync({ id: bookingId, imageBase64, personalMessage });
     } catch (err) {
       if (!(err instanceof Error && err.message.includes("mutation"))) {
         toast.error(err instanceof Error ? err.message : "Грешка");
@@ -146,11 +153,14 @@ export function BookingConfirmationSendPanel({ bookingId, guestPhone, guestEmail
         </p>
         {emailStatus && !emailStatus.configured && (
           <p className="mt-2 text-xs text-amber-700 dark:text-amber-300">
-            За изпращане по имейл настройте Mailjet (безплатно до 6000/мес.) — вижте .env.example.
+            За изпращане по имейл създайте пощенска кутия в JetHost cPanel и попълнете SMTP_* в .env — вижте .env.example.
           </p>
         )}
-        {emailStatus?.configured && emailStatus.provider === "mailjet" && (
-          <p className="mt-2 text-xs text-[var(--admin-muted)]">Имейл доставчик: Mailjet</p>
+        {emailStatus?.configured && emailStatus.provider === "smtp" && (
+          <p className="mt-2 text-xs text-[var(--admin-muted)]">
+            Изпращане: SMTP (JetHost)
+            {emailStatus?.fromEmail ? ` · От: ${emailStatus.fromEmail}` : null}
+          </p>
         )}
       </div>
 
@@ -160,7 +170,7 @@ export function BookingConfirmationSendPanel({ bookingId, guestPhone, guestEmail
           <Button className="admin-btn-primary justify-start" disabled={disabled} onClick={handleDownload}>
             <Download className="mr-2 h-4 w-4" /> Изтегли JPG
           </Button>
-          <Button variant="outline" className="admin-glass-btn justify-start" disabled={disabled || !guestEmail} onClick={handleEmail}>
+          <Button variant="outline" className="admin-glass-btn justify-start" disabled={disabled || !guestEmail} onClick={openEmailDialog}>
             <Mail className="mr-2 h-4 w-4" /> Изпрати по имейл
           </Button>
           <Button variant="outline" className="admin-glass-btn justify-start" disabled={disabled || !guestPhone} onClick={handleWhatsApp}>
@@ -179,6 +189,18 @@ export function BookingConfirmationSendPanel({ bookingId, guestPhone, guestEmail
           )}
         </div>
       </div>
+
+      {guestEmail?.trim() ? (
+        <BookingSendCardEmailDialog
+          open={emailDialogOpen}
+          onOpenChange={setEmailDialogOpen}
+          guestEmail={guestEmail.trim()}
+          guestName={cardData.guestName}
+          fromEmail={emailStatus?.fromEmail}
+          busy={busy || sendEmail.isPending}
+          onSend={handleEmailSend}
+        />
+      ) : null}
     </div>
   );
 }

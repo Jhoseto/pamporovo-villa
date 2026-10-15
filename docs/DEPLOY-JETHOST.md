@@ -4,7 +4,7 @@
 
 | Файл | Какво съдържа |
 |------|----------------|
-| **`.env`** | Всичко за app-а: DB, пароли, Mailjet, VAPID, SITE_URL |
+| **`.env`** | Всичко за app-а: DB, пароли, SMTP (JetHost поща), VAPID, SITE_URL |
 | **`.deploy.env`** | Само SSH: host, user, port, ключ |
 
 Шаблони: `.env.example` и `.deploy.env.example`
@@ -50,7 +50,7 @@ deploy.sh
 ```bash
 copy .env.example .env
 copy .deploy.env.example .deploy.env
-# .env → DATABASE_URL, SITE_URL, Mailjet, admin password
+# .env → DATABASE_URL, SITE_URL, SMTP (JetHost), admin password
 # .deploy.env → JETHOST_SSH_HOST, JETHOST_SSH_USER, JETHOST_SSH_KEY
 ```
 
@@ -103,7 +103,36 @@ pnpm deploy:github-secrets:print # без gh — показва какво да 
 | `JWT_SECRET` | `.env` |
 | `MASTER_ADMIN_PASSWORD` | `.env` |
 | `VAPID_*` | `.env` |
-| `MAILJET_*`, `MAIL_FROM_*`, `SUPPORT_EMAIL` | `.env` (optional) |
+| `SMTP_*`, `MAIL_FROM_*`, `SUPPORT_EMAIL`, `MAIL_BCC` | `.env` (резервации + оферти от админ) |
+
+---
+
+## Имейл (JetHost cPanel)
+
+Изпращане през **SMTP** (кутия в JetHost). Клиентът вижда **`pamporovovilla@gmail.com`** като From/Reply-To.
+
+1. **cPanel → Email Accounts → Create** — напр. `oferta@pamporovovilla.com` + силна парола  
+2. **Forwarders** (по избор): пренасочване към `pamporovovilla@gmail.com`  
+3. В **`.env`** на сървъра (и GitHub Secrets при CI deploy):
+
+   ```env
+   SMTP_HOST=pamporovovilla.com
+   SMTP_PORT=465
+   SMTP_SECURE=1
+   SMTP_USER=oferta@pamporovovilla.com
+   SMTP_PASS=паролата_на_кутията
+   MAIL_FROM_EMAIL=pamporovovilla@gmail.com
+   MAIL_FROM_NAME=Pamporovo Villa
+   SUPPORT_EMAIL=pamporovovilla@gmail.com
+   SMTP_REPLY_TO=pamporovovilla@gmail.com
+   MAIL_BCC=pamporovovilla@gmail.com
+   ```
+
+В админ: **Топ оферти → Изпрати по имейл**; при резервации — **Изпрати по имейл** (карта).
+
+4. Ако домейнът още не сочи към JetHost, в cPanel → **Connect Devices** може да видите алтернативен hostname (напр. `*.jethosting.com`) вместо `mail.pamporovovilla.com`.
+
+Официални настройки: [Set up email on your device](https://jethost.com/kb/set-up-email-on-your-device/) · портове: [Common hosting ports](https://jethost.com/kb/common-hosting-ports-on-jethost/).
 
 ---
 

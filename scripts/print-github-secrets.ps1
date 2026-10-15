@@ -48,12 +48,17 @@ $secrets = [ordered]@{
   MASTER_ADMIN_PASSWORD    = $envMap["MASTER_ADMIN_PASSWORD"]
   VAPID_PUBLIC_KEY         = $envMap["VAPID_PUBLIC_KEY"]
   VAPID_PRIVATE_KEY        = $envMap["VAPID_PRIVATE_KEY"]
-  MAILJET_API_KEY          = $envMap["MAILJET_API_KEY"]
-  MAILJET_API_SECRET       = $envMap["MAILJET_API_SECRET"]
+  SMTP_HOST                = $envMap["SMTP_HOST"]
+  SMTP_PORT                = $envMap["SMTP_PORT"]
+  SMTP_SECURE              = $envMap["SMTP_SECURE"]
+  SMTP_USER                = $envMap["SMTP_USER"]
+  SMTP_PASS                = $envMap["SMTP_PASS"]
+  SMTP_FROM                = $envMap["SMTP_FROM"]
   MAIL_FROM_EMAIL          = $envMap["MAIL_FROM_EMAIL"]
   MAIL_FROM_NAME           = $envMap["MAIL_FROM_NAME"]
   SUPPORT_EMAIL            = $envMap["SUPPORT_EMAIL"]
   SMTP_REPLY_TO            = $envMap["SMTP_REPLY_TO"]
+  MAIL_BCC                 = $envMap["MAIL_BCC"]
 }
 
 Write-Host ""

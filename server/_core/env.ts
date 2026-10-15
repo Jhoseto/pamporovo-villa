@@ -3,27 +3,31 @@ import { envFilePath } from "./paths";
 
 dotenv.config({ path: envFilePath(), quiet: true });
 
+/** Public contact address shown on the site and in outgoing mail headers. */
+export const CONTACT_EMAIL = "pamporovovilla@gmail.com";
+
 export const ENV = {
   databaseUrl: process.env.DATABASE_URL ?? "",
   jwtSecret: process.env.JWT_SECRET ?? "",
   isProduction: process.env.NODE_ENV === "production",
   vapidPublicKey: process.env.VAPID_PUBLIC_KEY ?? "",
   vapidPrivateKey: process.env.VAPID_PRIVATE_KEY ?? "",
-  vapidSubject: process.env.VAPID_SUBJECT ?? "mailto:pamporovovilla@gmail.com",
+  vapidSubject: process.env.VAPID_SUBJECT ?? `mailto:${CONTACT_EMAIL}`,
   masterAdminUsername: process.env.MASTER_ADMIN_USERNAME ?? "Rado",
   masterAdminPassword: process.env.MASTER_ADMIN_PASSWORD ?? "",
-  mailjetApiKey: process.env.MAILJET_API_KEY ?? "",
-  mailjetApiSecret: process.env.MAILJET_API_SECRET ?? "",
-  mailFromEmail: process.env.MAIL_FROM_EMAIL ?? "",
+  /** Visible From address (JetHost SMTP auth uses smtpUser). */
+  mailFromEmail: process.env.MAIL_FROM_EMAIL ?? CONTACT_EMAIL,
   mailFromName: process.env.MAIL_FROM_NAME ?? "Pamporovo Villa",
-  smtpHost: process.env.SMTP_HOST ?? "",
-  smtpPort: Number(process.env.SMTP_PORT ?? "587"),
-  smtpSecure: process.env.SMTP_SECURE === "1" || process.env.SMTP_PORT === "465",
+  smtpHost: process.env.SMTP_HOST ?? "pamporovovilla.com",
+  smtpPort: Number(process.env.SMTP_PORT ?? "465"),
+  smtpSecure: process.env.SMTP_SECURE === "1" || (process.env.SMTP_PORT ?? "465") === "465",
   smtpUser: process.env.SMTP_USER ?? "",
   smtpPass: process.env.SMTP_PASS ?? "",
-  smtpFrom: process.env.SMTP_FROM ?? "Pamporovo Villa <pamporovovillasupport@gmail.com>",
-  smtpReplyTo: process.env.SMTP_REPLY_TO ?? "pamporovovillasupport@gmail.com",
-  supportEmail: process.env.SUPPORT_EMAIL ?? "pamporovovillasupport@gmail.com",
+  smtpFrom: process.env.SMTP_FROM ?? `Pamporovo Villa <${CONTACT_EMAIL}>`,
+  smtpReplyTo: process.env.SMTP_REPLY_TO ?? CONTACT_EMAIL,
+  supportEmail: process.env.SUPPORT_EMAIL ?? CONTACT_EMAIL,
+  /** BCC copy of outbound mail (e.g. contact inbox). Empty = no extra BCC. */
+  mailBcc: process.env.MAIL_BCC ?? CONTACT_EMAIL,
   siteUrl: process.env.SITE_URL ?? "http://localhost:3000",
 };
 
