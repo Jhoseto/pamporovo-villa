@@ -24,6 +24,20 @@ async function main() {
   console.log(`IndexNow response: ${res.status} ${res.statusText}`);
   if (!res.ok) {
     const body = await res.text().catch(() => "");
+    const soft = process.env.INDEXNOW_SOFT === "1";
+    if (
+      res.status === 403 &&
+      (body.includes("SiteVerificationNotCompleted") || body.includes("site verification"))
+    ) {
+      console.warn(
+        "IndexNow: Bing still verifying the site/key — not an deploy error. Retry in a few hours or in Bing Webmaster Tools."
+      );
+      process.exit(0);
+    }
+    if (soft) {
+      console.warn("IndexNow failed (ignored):", body || res.statusText);
+      process.exit(0);
+    }
     console.error(body || "(empty body)");
     process.exit(1);
   }

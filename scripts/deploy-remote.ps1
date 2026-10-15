@@ -71,7 +71,7 @@ function Invoke-SSH([string[]]$SshArgs, [string]$Remote, [string]$Cmd) {
   if ($LASTEXITCODE -ne 0) { throw "SSH command failed" }
 }
 
-# ── Load .deploy.env (SSH only) ───────────────────────────────────────────────
+# -- Load .deploy.env (SSH only) ───────────────────────────────────────────────
 $deployEnvPath = Join-Path $Root ".deploy.env"
 if (-not (Test-Path $deployEnvPath)) {
   Write-Host "ERROR: .deploy.env not found." -ForegroundColor Red
@@ -112,7 +112,7 @@ if ([string]::IsNullOrWhiteSpace($siteUrl) -or $siteUrl -match 'YOUR-TEMP|CHANGE
   exit 1
 }
 
-# ── SSH params ────────────────────────────────────────────────────────────────
+# -- SSH params ────────────────────────────────────────────────────────────────
 $sshHost  = $cfg["JETHOST_SSH_HOST"]
 $sshUser  = $cfg["JETHOST_SSH_USER"]
 $sshPort  = if ($cfg["JETHOST_SSH_PORT"]) { $cfg["JETHOST_SSH_PORT"] } else { "1022" }
@@ -128,7 +128,7 @@ if ($sshKey -and (Test-Path $sshKey)) {
   $sshBase = @("-i", $sshKey) + $sshBase
 }
 
-# ── Generate missing secrets into .env ────────────────────────────────────────
+# -- Generate missing secrets into .env ────────────────────────────────────────
 if (-not $SkipSecrets) {
   Write-Host "==> Filling missing secrets in .env"
   & node (Join-Path $Root "scripts/generate-production-secrets.mjs")
@@ -137,7 +137,7 @@ if (-not $SkipSecrets) {
 
 $prodEnvContent = Build-ProductionEnvContent $appEnvPath $overrides
 
-# ── Build locally (avoids OOM on shared hosting) ─────────────────────────────
+# -- Build locally (avoids OOM on shared hosting) ─────────────────────────────
 if (-not $SkipBuild) {
   Write-Host "==> Building locally (vite + esbuild)"
   $env:NODE_ENV = "production"
@@ -153,7 +153,7 @@ if (-not $SkipBuild) {
 $distPath = Join-Path $Root "dist"
 if (-not (Test-Path $distPath)) { throw "dist/ not found - build failed" }
 
-# ── Test SSH ──────────────────────────────────────────────────────────────────
+# -- Test SSH ──────────────────────────────────────────────────────────────────
 Write-Host "==> Testing SSH to ${remote} (port ${sshPort})"
 & ssh @sshBase $remote "echo OK"
 if ($LASTEXITCODE -ne 0) { throw "SSH connection failed" }
@@ -163,19 +163,19 @@ if (-not $homeDir) { $homeDir = "/home/${sshUser}" }
 $remotePath = "${homeDir}/${appDir}"
 Write-Host "    Remote: $remotePath"
 
-# ── Clone or update repo ──────────────────────────────────────────────────────
+# -- Clone or update repo ──────────────────────────────────────────────────────
 Write-Host "==> Syncing repo on server"
 $cloneCmd = 'if [ -d "RP/.git" ]; then cd "RP" && git fetch origin main && git reset --hard origin/main; else git clone "REPO" "RP"; fi'
 $cloneCmd = $cloneCmd.Replace("RP", $remotePath).Replace("REPO", $repo)
 Invoke-SSH $sshBase $remote $cloneCmd
 
-# ── Upload .env (production snapshot — local .env stays unchanged) ─────────────
+# -- Upload .env (production snapshot - local .env stays unchanged) --
 Write-Host "==> Uploading .env"
 $envDest = 'cat > "RP/.env"'.Replace("RP", $remotePath)
 $prodEnvContent | & ssh @sshBase $remote $envDest
 if ($LASTEXITCODE -ne 0) { throw "Upload .env failed" }
 
-# ── Upload dist/ via scp (binary-safe, no pipe corruption) ───────────────────
+# -- Upload dist/ via scp (binary-safe, no pipe corruption) ───────────────────
 Write-Host "==> Uploading dist/ (tar + scp)"
 $tmpTar = [System.IO.Path]::Combine([System.IO.Path]::GetTempPath(), "pamporovo-dist.tar.gz")
 & tar -czf $tmpTar -C $Root dist
@@ -193,20 +193,25 @@ $extractCmd = $extractCmd.Replace("RP", $remotePath)
 Invoke-SSH $sshBase $remote $extractCmd
 Write-Host "    dist/ uploaded OK"
 
-# ── Server-side deploy (prod deps + db sync + restart) ───────────────────────
+# -- Server-side deploy (prod deps + db sync + restart) ───────────────────────
 Write-Host "==> Running server-side deploy"
 $deployCmd = 'cd "RP" && chmod +x scripts/*.sh && bash scripts/deploy.sh'.Replace("RP", $remotePath)
 Invoke-SSH $sshBase $remote $deployCmd
 
 Write-Host ""
 Write-Host "==> IndexNow (optional - notifies Bing/Copilot)"
-try {
-  pnpm indexnow
-} catch {
-  Write-Host "    IndexNow skipped or failed (site must be live with key file)" -ForegroundColor Yellow
+$env:INDEXNOW_SOFT = "1"
+$prevEap = $ErrorActionPreference
+$ErrorActionPreference = "Continue"
+& pnpm indexnow *>&1 | Out-Host
+$indexNowExit = $LASTEXITCODE
+$ErrorActionPreference = $prevEap
+Remove-Item Env:INDEXNOW_SOFT -ErrorAction SilentlyContinue
+if ($indexNowExit -ne 0) {
+  Write-Host "    IndexNow skipped or failed (deploy OK - verify key file on site or Bing later)" -ForegroundColor Yellow
 }
 
-# ── Done ──────────────────────────────────────────────────────────────────────
+# -- Done ──────────────────────────────────────────────────────────────────────
 Write-Host ""
 Write-Host "Deploy finished!" -ForegroundColor Green
 Write-Host "  Site:   ${siteUrl}/" -ForegroundColor Cyan
@@ -214,3 +219,4 @@ Write-Host "  Admin:  ${siteUrl}/admin" -ForegroundColor Cyan
 Write-Host "  Health: ${siteUrl}/health" -ForegroundColor Cyan
 Write-Host ""
 Write-Host "If site shows 503: cPanel > Setup Node.js App > pamporovo-villa > Restart" -ForegroundColor Yellow
+exit 0
